@@ -1,0 +1,19 @@
+h2, .footer {
+    text-align: center;
+}
+
+.table, .table-striped, td {
+    text-align: center;
+}
+
+input {
+    border: none;
+    background-color: transparent;
+    text-align: center;
+}
+
+.container {
+    padding: 1%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
