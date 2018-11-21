@@ -1,4 +1,4 @@
-h2, .footer {
+h2, h4, .footer {
     text-align: center;
 }
 
@@ -16,4 +16,32 @@ input {
     padding: 1%;
     overflow: hidden;
     font-family: Arial, sans-serif;
+}
+
+img {
+    margin: -21.875% 0;
+}
+
+.foo {
+    float: left;
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.yellow {
+    background: #ffff00;
+}
+
+.green {
+    background: #40ff00;
+}
+
+.blue {
+    background: #00ccff;
+}
+
+.red {
+    background: #ff3333;
 }
