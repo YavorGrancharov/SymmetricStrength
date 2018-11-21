@@ -24,19 +24,17 @@
     <table class="table">
         <thead>
         <tr>
-            <td style="text-align: right">Sex:</td>
             <td>
                 <label for="sex">
-                    <select class="custom-select" onchange="movementsController.calculateLevels()" id="sex">
+                    Sex <select class="btn-sm" onchange="movementsController.calculateLevels()" id="sex">
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select>
                 </label>
             </td>
-            <td style="text-align: right">Height:</td>
             <td>
                 <label for="height">
-                    <select class="custom-select" onchange="movementsController.calculateLevels()" id="height">
+                    Height <select  class="btn-sm" onchange="movementsController.calculateLevels()" id="height">
                         <option value="140">140</option>
                         <option value="141">141</option>
                         <option value="142">142</option>
@@ -107,10 +105,9 @@
                     </select>
                 </label>
             </td>
-            <td style="text-align: right">Weight:</td>
             <td>
                 <label for="weight">
-                    <select class="custom-select" onchange="movementsController.calculateLevels()" id="weight">
+                    Weight <select  class="btn-sm" onchange="movementsController.calculateLevels()" id="weight">
                         <option value="40">40</option>
                         <option value="41">41</option>
                         <option value="42">42</option>
@@ -196,10 +193,9 @@
                     </select>
                 </label>
             </td>
-            <td style="text-align: right">Age:</td>
             <td>
                 <label for="age">
-                    <select class="custom-select" onchange="movementsController.calculateLevels()" id="age">
+                    Age <select  class="btn-sm" onchange="movementsController.calculateLevels()" id="age">
                         <option value="14">14</option>
                         <option value="15">15</option>
                         <option value="16">16</option>
@@ -270,12 +266,18 @@
                     </select>
                 </label>
             </td>
-            <td style="text-align: right">Name:</td>
             <td>
                 <label for="name">
-                    <input type="text" id="name">
+                    Name <input type="text" id="name">
                 </label>
             </td>
+        </tr>
+        <tr>
+            <td>Strength Score <input type="text" size="2" value="0" readonly></td>
+            <td>Athletic Score <input type="text" size="2" value="0" readonly></td>
+            <td>Equilibrium Score <input type="text" size="2" value="0" readonly></td>
+            <td>Equilibrium Level <input type="text" size="10" value="Beginner L1" readonly></td>
+            <td></td>
         </tr>
         </thead>
     </table>
