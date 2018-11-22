@@ -556,6 +556,17 @@ let movementsController = (() => {
             document.getElementById("sb8").innerHTML = (Math.round(maleRealDeadlift * 0.35 * 0.85)).toString();
             document.getElementById("sb9").innerHTML = (Math.round(maleRealDeadlift * 0.35 * 0.925)).toString();
             document.getElementById("sb10").innerHTML = (Math.round(maleRealDeadlift * 0.35)).toString();
+
+            document.getElementById("cp1").innerHTML = (Math.round(maleRealDeadlift * 0.35 * 0.25)).toString();
+            document.getElementById("cp2").innerHTML = (Math.round(maleRealDeadlift * 0.35 * 0.3375)).toString();
+            document.getElementById("cp3").innerHTML = (Math.round(maleRealDeadlift * 0.35 * 0.425)).toString();
+            document.getElementById("cp4").innerHTML = (Math.round(maleRealDeadlift * 0.35 * 0.5125)).toString();
+            document.getElementById("cp5").innerHTML = (Math.round(maleRealDeadlift * 0.35 * 0.60)).toString();
+            document.getElementById("cp6").innerHTML = (Math.round(maleRealDeadlift * 0.35 * 0.68333333)).toString();
+            document.getElementById("cp7").innerHTML = (Math.round(maleRealDeadlift * 0.35 * 0.76666667)).toString();
+            document.getElementById("cp8").innerHTML = (Math.round(maleRealDeadlift * 0.35 * 0.85)).toString();
+            document.getElementById("cp9").innerHTML = (Math.round(maleRealDeadlift * 0.35 * 0.925)).toString();
+            document.getElementById("cp10").innerHTML = (Math.round(maleRealDeadlift * 0.35)).toString();
         } else {
             document.getElementById("dl1").innerHTML = (Math.round(femaleRealDeadlift * 0.25)).toString();
             document.getElementById("dl2").innerHTML = (Math.round(femaleRealDeadlift * 0.3375)).toString();
