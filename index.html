@@ -11,17 +11,22 @@
 </head>
 <body>
 <div class="container">
+    <div class="company">
+        <a href="index.html"><img src="static/images/gs_logo_crop.png" id="logo"></a>
+    </div>
     <h2>Symmetric Strength</h2>
     <h4><sup>real strength is to know your weakness</sup></h4>
     <ul class="nav float-left">
         <li class="nav-item"><a class="nav-link" href="index.html">Equalizer</a></li>
-        <li class="nav-item"><a class="nav-link" href="views/about.html">About</a></li>
+        <li>&#9733;</li>
+        <li class="nav-item"><a class="nav-link" href="views/about.html">Report</a></li>
     </ul>
     <ul class="nav float-right">
-        <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Boot Up</a></li>
+        <li>&#9733;</li>
+        <li class="nav-item"><a class="nav-link" href="#">Join the Army</a></li>
     </ul>
-    <table class="table">
+    <table class="table" id="information">
         <thead>
         <tr>
             <td>
@@ -268,7 +273,7 @@
             </td>
             <td>
                 <label for="name">
-                    <input type="text" id="name" placeholder="Name" autofocus>
+                    <input type="text" id="name" placeholder="Soldier" autofocus>
                 </label>
             </td>
         </tr>
@@ -332,7 +337,7 @@
             <td id="dl10"></td>
         </tr>
         <tr>
-            <td id="dip">Dip</td>
+            <td id="dip" title="Weighted Dip">Dip</td>
             <!--<td><input type="text" size="1" id="actual2" onchange="movementsController.calculateLevels()" oninput="movementsController.calculateLevels()"></td>
             <td id="ideal2"></td>-->
             <td id="dip1"></td>
@@ -347,7 +352,7 @@
             <td id="dip10"></td>
         </tr>
         <tr>
-            <td id="mp">MP</td>
+            <td id="mp" title="Military Press">MP</td>
             <!--<td><input type="text" size="1" id="actual3" onchange="movementsController.calculateLevels()" oninput="movementsController.calculateLevels()"></td>
             <td id="ideal3"></td>-->
             <td id="mp1"></td>
@@ -362,7 +367,7 @@
             <td id="mp10"></td>
         </tr>
         <tr>
-            <td id="sdl">SDl</td>
+            <td id="sdl" title="Sumo Deadlift">SDl</td>
             <!--<td><input type="text" size="1" id="actual5"></td>
             <td id="ideal5"></td>-->
             <td id="sdl1"></td>
@@ -377,7 +382,7 @@
             <td id="sdl10"></td>
         </tr>
         <tr>
-            <td id="sq">Sq</td>
+            <td id="sq" title="High-bar Squat">Sq</td>
             <!--<td><input type="text" size="1" id="actual6"></td>
             <td id="ideal6"></td>-->
             <td id="sq1"></td>
@@ -392,7 +397,7 @@
             <td id="sq10"></td>
         </tr>
         <tr>
-            <td id="lng">Lng</td>
+            <td id="lng" title="Barbell Lunge">Lng</td>
             <!--<td><input type="text" size="1" id="actual7"></td>
             <td id="ideal7"></td>-->
             <td id="lng1"></td>
@@ -407,7 +412,7 @@
             <td id="lng10"></td>
         </tr>
         <tr>
-            <td id="pup">PUp</td>
+            <td id="pup" title="Weighted Pull-Up">PUp</td>
             <!--<td><input type="text" size="1" id="actual8"></td>
             <td id="ideal8"></td>-->
             <td id="pup1"></td>
@@ -422,7 +427,7 @@
             <td id="pup10"></td>
         </tr>
         <tr>
-            <td id="fsq">FSq</td>
+            <td id="fsq" title="Barbell Front Squat">FSq</td>
             <!--<td><input type="text" size="1" id="actual9"></td>
             <td id="ideal9"></td>-->
             <td id="fsq1"></td>
@@ -437,7 +442,7 @@
             <td id="fsq10"></td>
         </tr>
         <tr>
-            <td id="bp">BP</td>
+            <td id="bp" title="Flat Bench Press">BP</td>
             <!--<td><input type="text" size="1" id="actual11"></td>
             <td id="ideal11"></td>-->
             <td id="bp1"></td>
@@ -452,7 +457,7 @@
             <td id="bp10"></td>
         </tr>
         <tr>
-            <td id="pp">PP</td>
+            <td id="pp" title="Push Press">PP</td>
             <!--<td><input type="text" size="1" id="actual12"></td>
             <td id="ideal12"></td>-->
             <td id="pp1"></td>
@@ -467,7 +472,7 @@
             <td id="pp10"></td>
         </tr>
         <tr>
-            <td id="ohsq">OhSq</td>
+            <td id="ohsq" title="Barbell Overhead Squat">OhSq</td>
             <!--<td><input type="text" size="1" id="actual13"></td>
             <td id="ideal13"></td>-->
             <td id="ohsq1"></td>
@@ -482,7 +487,7 @@
             <td id="ohsq10"></td>
         </tr>
         <tr>
-            <td id="ablng">AbLNG</td>
+            <td id="ablng" title="Airborne Squat">AbSq</td>
             <!--<td><input type="text" size="1"></td>
             <td id="ideal15"></td>-->
             <td id="ablng1"></td>
@@ -539,7 +544,7 @@
         </thead>
         <tbody>
         <tr>
-            <td id="gm">GM</td>
+            <td id="gm" title="Barbell Good Morning">GM</td>
             <!--<td><input type="text" size="1" id="actual4" onchange="movementsController.calculateLevels()" oninput="movementsController.calculateLevels()"></td>
             <td id="ideal4"></td>-->
             <td id="gm1"></td>
@@ -554,7 +559,7 @@
             <td id="gm10"></td>
         </tr>
         <tr>
-            <td id="bor">BOR</td>
+            <td id="bor" title="Bent Over Row">BOR</td>
             <!--<td><input type="text" size="1" id="actual14"></td>
             <td id="ideal14"></td>-->
             <td id="bor1"></td>
@@ -569,7 +574,7 @@
             <td id="bor10"></td>
         </tr>
         <tr>
-            <td id="rdl">RDL</td>
+            <td id="rdl" title="Romanian Deadlift">RDL</td>
             <!--<td><input type="text" size="1" id="actual10"></td>
             <td id="ideal10"></td>-->
             <td id="rdl1"></td>
@@ -584,7 +589,7 @@
             <td id="rdl10"></td>
         </tr>
         <tr>
-            <td id="fct">FCT</td>
+            <td id="fct" title="Full Contact Twist">FCT</td>
             <!--<td><input type="text" size="1"></td>
             <td id="ideal16"></td>-->
             <td id="fct1"></td>
@@ -599,7 +604,7 @@
             <td id="fct10"></td>
         </tr>
         <tr>
-            <td id="sb">SB</td>
+            <td id="sb" title="Barbell Side Bend">SB</td>
             <!--<td><input type="text" size="1"></td>
             <td id="ideal17"></td>-->
             <td id="sb1"></td>
@@ -614,7 +619,7 @@
             <td id="sb10"></td>
         </tr>
         <tr>
-            <td id="mbp">MBP</td>
+            <td id="mbp" title="Milko Bench Press">MBP</td>
             <!--<td><input type="text" size="1"></td>
             <td id="ideal18"></td>-->
             <td id="mbp1"></td>
@@ -629,7 +634,7 @@
             <td id="mbp10"></td>
         </tr>
         <tr>
-            <td id="rr">RR</td>
+            <td id="rr" title="Renegade Row">RR</td>
             <!--<td><input type="text" size="1"></td>
             <td id="ideal19"></td>-->
             <td id="rr1"></td>
@@ -644,7 +649,7 @@
             <td id="rr10"></td>
         </tr>
         <tr>
-            <td id="frr">FRR</td>
+            <td id="frr" title="Flying Renegade Row">FRR</td>
             <!--<td><input type="text" size="1"></td>
             <td id="ideal20"></td>-->
             <td id="frr1"></td>
@@ -659,7 +664,7 @@
             <td id="frr10"></td>
         </tr>
         <tr>
-            <td id="saw">Saw</td>
+            <td id="saw" title="Saw">Saw</td>
             <!--<td><input type="text" size="1"></td>
             <td id="ideal21"></td>-->
             <td id="saw1"></td>
@@ -674,7 +679,7 @@
             <td id="saw10"></td>
         </tr>
         <tr>
-            <td id="cp">C&P</td>
+            <td id="cp" title="Curl & Press">C&P</td>
             <!--<td><input type="text" size="1"></td>
             <td id="ideal22"></td>-->
             <td id="cp1"></td>
@@ -689,7 +694,7 @@
             <td id="cp10"></td>
         </tr>
         <tr>
-            <td id="sp">SP</td>
+            <td id="sp" title="Side Press">SP</td>
             <!--<td><input type="text" size="1"></td>
             <td id="ideal23"></td>-->
             <td id="sp1"></td>
@@ -704,7 +709,7 @@
             <td id="sp10"></td>
         </tr>
         <tr>
-            <td id="sw">Sw</td>
+            <td id="sw" title="Swing">Sw</td>
             <!--<td><input type="text" size="1"></td>
             <td id="ideal24"></td>-->
             <td id="sw1"></td>
@@ -719,7 +724,7 @@
             <td id="sw10"></td>
         </tr>
         <tr>
-            <td id="trsw">TripSw</td>
+            <td id="trsw" title="Triple Extension Swing">TripSw</td>
             <!--<td><input type="text" size="1"></td>
             <td id="ideal25"></td>-->
             <td id="trsw1"></td>

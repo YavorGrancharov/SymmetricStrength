@@ -14,6 +14,21 @@ body {
     font-size: 100%;
 }
 
+/*.company {
+    width: 80px;
+    height: 92px;
+    background: gold;
+    margin-bottom: -62px;
+}*/
+
+#logo {
+    -webkit-filter: drop-shadow(2px 2px 2px #696969);
+    filter: drop-shadow(2px 2px 2px #696969);
+    margin-bottom: -62px;
+    width: 80px;
+    height: auto;
+}
+
 input {
     border: none;
     background-color: transparent;
@@ -34,6 +49,13 @@ input {
 img {
     width: 20px;
     height: auto;
+}
+
+#information {
+    border-bottom: 1px solid;
+    border-bottom-color: lightgray;
+    border: 1px solid;
+    border-color: lightgray;
 }
 
 #main {
