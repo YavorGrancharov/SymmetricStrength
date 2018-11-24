@@ -6,21 +6,42 @@ h2, h4, .footer {
     text-align: center;
 }
 
+#sex, #height, #weight, #age, #name {
+    font-size: 100%;
+}
+
 input {
     border: none;
     background-color: transparent;
     text-align: center;
 }
 
+@font-face {
+    font-family: MKStencilsansBlack;
+    src: url('./static/fonts/MKStencilsansBlack.ttf') format('truetype');
+}
+
 .container {
     padding: 1%;
     overflow: hidden;
-    font-family: Arial, sans-serif;
+    font-family: MKStencilsansBlack;
 }
 
 img {
     width: 20px;
     height: auto;
+}
+
+#main {
+    border-bottom: 1px solid;
+    border-bottom-color: lightgray;
+    border: 1px solid;
+    border-color: lightgray;
+}
+
+#secondary {
+    border: 1px solid;
+    border-color: lightgray;
 }
 
 .foo {
@@ -49,4 +70,143 @@ img {
 
 p {
     text-align: justify;
+}
+
+#beginner, #trained, #skilled, #master {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#beginner2, #trained2, #skilled2, #master2 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#dl1, #dl5, #dl8, #dl10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#dip1, #dip5, #dip8, #dip10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#mp1, #mp5, #mp8, #mp10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#sdl1, #sdl5, #sdl8, #sdl10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#sq1, #sq5, #sq8, #sq10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#lng1, #lng5, #lng8, #lng10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#pup1, #pup5, #pup8, #pup10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#fsq1, #fsq5, #fsq8, #fsq10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#bp1, #bp5, #bp8, #bp10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#pp1, #pp5, #pp8, #pp10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#ohsq1, #ohsq5, #ohsq8, #ohsq10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#ablng1, #ablng5, #ablng8, #ablng10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#gm1, #gm5, #gm8, #gm10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#bor1, #bor5, #bor8, #bor10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#rdl1, #rdl5, #rdl8, #rdl10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#fct1, #fct5, #fct8, #fct10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#sb1, #sb5, #sb8, #sb10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#mbp1, #mbp5, #mbp8, #mbp10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#rr1, #rr5, #rr8, #rr10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#frr1, #frr5, #frr8, #frr10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#saw1, #saw5, #saw8, #saw10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#cp1, #cp5, #cp8, #cp10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#sp1, #sp5, #sp8, #sp10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#sw1, #sw5, #sw8, #sw10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+#trsw1, #trsw5, #trsw8, #trsw10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+
+.footer {
+    margin-top: 10%;
 }
