@@ -6,6 +6,10 @@ h2, h4, .footer {
     text-align: center;
 }
 
+body {
+    font-size: 107%;
+}
+
 #sex, #height, #weight, #age, #name {
     font-size: 100%;
 }
@@ -209,4 +213,5 @@ p {
 
 .footer {
     margin-top: 10%;
+    font-family: MKStencilsansBlack;
 }
