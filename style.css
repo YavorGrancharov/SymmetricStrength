@@ -51,6 +51,11 @@ img {
     height: auto;
 }
 
+#harpenden {
+    width: 10%;
+    height: auto;
+}
+
 #information {
     border-bottom: 1px solid;
     border-bottom-color: lightgray;

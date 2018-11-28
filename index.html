@@ -8,27 +8,34 @@
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./style.css">
     <script src="scripts/controller/movementsController.js"></script>
+    <script src="scripts/controller/viewController.js"></script>
 </head>
 <body>
 <div class="container">
     <div class="company">
         <img src="static/images/gs_logo_crop.png" id="logo">
     </div>
-    <h2>Symmetric Strength</h2>
+    <h2>General Strength System</h2>
     <h4><sup>real strength is to know your weakness</sup></h4>
     <ul class="nav float-left">
         <li class="nav-item"><a class="nav-link" href="index.html">Equalizer</a></li>
         <li>&#9733;</li>
-        <li class="nav-item"><a class="nav-link" href="index.html">AntiGrav</a></li>
+        <!--<li class="nav-item"><a class="nav-link" href="#">Grinder</a></li>
+        <li>&#9733;</li>-->
+        <li class="nav-item"><a class="nav-link" href="./views/martialLaw.html">Martial Law</a></li>
         <li>&#9733;</li>
-        <li class="nav-item"><a class="nav-link" href="#">Martial Law</a></li>
+        <li class="nav-item"><a class="nav-link" href="views/about.html">FAQtory</a></li>
         <li>&#9733;</li>
-        <li class="nav-item"><a class="nav-link" href="views/about.html">Report</a></li>
+        <li class="nav-item"><a class="nav-link" href="./views/reports.html">Reports</a></li>
     </ul>
     <ul class="nav float-right">
-        <li class="nav-item"><a class="nav-link" href="#">Boot Up</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Charge</a></li>
         <li>&#9733;</li>
-        <li class="nav-item"><a class="nav-link" href="#">Join the Army</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Generals</a></li>
+        <li>&#9733;</li>
+        <!--<li class="nav-item"><a class="nav-link" href="#">Boot Up</a></li>
+        <li>&#9733;</li>
+        <li class="nav-item"><a class="nav-link" href="#">Join the Army</a></li>-->
     </ul>
     <table class="table" id="information">
         <thead>
@@ -286,7 +293,7 @@
             <td>Athletic Score <input type="text" size="2" placeholder="0" readonly></td>
             <td>Equilibrium Score <input type="text" size="2" placeholder="0" readonly></td>
             <td>Equilibrium Level <input type="text" size="10" placeholder="Recruit" readonly></td>
-            <td>Version v17</td>
+            <td>Version v20</td>
         </tr>
         </thead>
     </table>
@@ -303,8 +310,8 @@
             <th><img src="static/images/4.png"></th>
             <th><img src="static/images/5.png"></th>
             <th><img src="static/images/6.png"></th>
-            <th><img src="static/images/7.png"></th>
             <th><img src="static/images/8.png"></th>
+            <th><img src="static/images/7.png"></th>
             <th><img src="static/images/9.png"></th>
             <th><img src="static/images/10.png"></th>
         </tr>
@@ -312,16 +319,16 @@
             <th>Ranks</th>
             <!--<th>Actual</th>
             <th>Ideal</th>-->
-            <th id="beginner">O-1</th>
+            <th id="beginner">E-1</th>
+            <th>E-2</th>
+            <th>E-3</th>
+            <th>E-4</th>
+            <th id="trained">E-5</th>
+            <th>O-1</th>
             <th>O-2</th>
-            <th>O-3</th>
+            <th id="skilled">O-3</th>
             <th>O-4</th>
-            <th id="trained">O-5</th>
-            <th>O-6</th>
-            <th>O-7</th>
-            <th id="skilled">O-8</th>
-            <th>O-9</th>
-            <th id="master">O-10</th>
+            <th id="master">O-5</th>
         </tr>
         </thead>
         <tbody>
@@ -508,8 +515,8 @@
         </tbody>
     </table>
     <br>
-    <img src="static/images/1.png"> Recruit <img src="static/images/2.png"> Rookie <img src="static/images/3.png"> Private <img src="static/images/4.png"> Corporal <img src="static/images/5.png"> Sergeant <br>
-    <img src="static/images/6.png"> Lieutenant <img src="static/images/7.png"> Captain <img src="static/images/8.png"> Major <img src="static/images/9.png"> Colonel <img src="static/images/10.png"> General <br>
+    ENLISTED: <img src="static/images/1.png"> Recruit <img src="static/images/2.png"> Rookie <img src="static/images/3.png"> Private <img src="static/images/4.png"> Corporal <img src="static/images/5.png"> Sergeant <br>
+    OFFICERS: <img src="static/images/6.png"> Lieutenant <img src="static/images/8.png"> Captain <img src="static/images/7.png"> Major <img src="static/images/9.png"> Colonel <img src="static/images/10.png"> General <br>
     <br>
     <br>
     <strong>Secondary</strong>
@@ -525,8 +532,8 @@
             <th><img src="static/images/4.png"></th>
             <th><img src="static/images/5.png"></th>
             <th><img src="static/images/6.png"></th>
-            <th><img src="static/images/7.png"></th>
             <th><img src="static/images/8.png"></th>
+            <th><img src="static/images/7.png"></th>
             <th><img src="static/images/9.png"></th>
             <th><img src="static/images/10.png"></th>
         </tr>
@@ -534,16 +541,16 @@
             <th>Ranks</th>
             <!--<th>Actual</th>
             <th>Ideal</th>-->
-            <th id="beginner2">O-1</th>
+            <th id="beginner2">E-1</th>
+            <th>E-2</th>
+            <th>E-3</th>
+            <th>E-4</th>
+            <th id="trained2">E-5</th>
+            <th>O-1</th>
             <th>O-2</th>
-            <th>O-3</th>
+            <th id="skilled2">O-3</th>
             <th>O-4</th>
-            <th id="trained2">O-5</th>
-            <th>O-6</th>
-            <th>O-7</th>
-            <th id="skilled2">O-8</th>
-            <th>O-9</th>
-            <th id="master2">O-10</th>
+            <th id="master2">O-5</th>
         </tr>
         </thead>
         <tbody>
@@ -745,8 +752,8 @@
         </tbody>
     </table>
     <br>
-    <img src="static/images/1.png"> Recruit <img src="static/images/2.png"> Rookie <img src="static/images/3.png"> Private <img src="static/images/4.png"> Corporal <img src="static/images/5.png"> Sergeant <br>
-    <img src="static/images/6.png"> Lieutenant <img src="static/images/7.png"> Captain <img src="static/images/8.png"> Major <img src="static/images/9.png"> Colonel <img src="static/images/10.png"> General
+    ENLISTED: <img src="static/images/1.png"> Recruit <img src="static/images/2.png"> Rookie <img src="static/images/3.png"> Private <img src="static/images/4.png"> Corporal <img src="static/images/5.png"> Sergeant <br>
+    OFFICERS: <img src="static/images/6.png"> Lieutenant <img src="static/images/8.png"> Captain <img src="static/images/7.png"> Major <img src="static/images/9.png"> Colonel <img src="static/images/10.png"> General
     <!--<div class="foo green"></div>&nbsp;Trained: you have become better [slow adaptation]<br>
     <div class="foo blue"></div>&nbsp;Skilled: you have grown to a more advanced state [very slow adaptation]<br>
     <div class="foo red"></div>&nbsp;Master: you have reached mastery [potential limit]-->

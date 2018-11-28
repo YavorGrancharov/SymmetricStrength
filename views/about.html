@@ -8,59 +8,99 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../style.css">
     <script src="../scripts/controller/movementsController.js"></script>
+    <script src="../scripts/controller/viewController.js"></script>
 </head>
 <body>
 <div class="container">
-    <h2>About Calculator</h2>
-    <ul class="nav">
+    <div class="company">
+        <img src="../static/images/gs_logo_crop.png" id="logo">
+    </div>
+    <h2>The Equalizer</h2>
+    <h4><sup>you are as strong as your weakest muscle group</sup></h4>
+    <ul class="nav float-left">
         <li class="nav-item"><a class="nav-link" href="../index.html">Equalizer</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li>&#9733;</li>
+        <!--<li class="nav-item"><a class="nav-link" href="#">Grinder</a></li>
+        <li>&#9733;</li>-->
+        <li class="nav-item"><a class="nav-link" href="../views/martialLaw.html">Martial Law</a></li>
+        <li>&#9733;</li>
+        <li class="nav-item"><a class="nav-link" href="../views/about.html">FAQtory</a></li>
+        <li>&#9733;</li>
+        <li class="nav-item"><a class="nav-link" href="../views/reports.html">Reports</a></li>
     </ul>
-    <div class="accordion md-accordion" id="accordionEx1" role="tablist" aria-multiselectable="true">
+    <ul class="nav float-right">
+        <li class="nav-item"><a class="nav-link" href="#">Charge</a></li>
+        <li>&#9733;</li>
+        <li class="nav-item"><a class="nav-link" href="#">Generals</a></li>
+        <li>&#9733;</li>
+        <!--<li class="nav-item"><a class="nav-link" href="#">Boot Up</a></li>
+        <li>&#9733;</li>
+        <li class="nav-item"><a class="nav-link" href="#">Join the Army</a></li>-->
+    </ul>
+
+</div>
+<div class="container">
+    <div id="accordion" onclick="viewController.toggle()">
         <div class="card">
-            <div class="card-header" role="tab" id="headingTwo1">
-                <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseTwo1"
-                   aria-expanded="false" aria-controls="collapseTwo1">
-                    <h5 class="mb-0">
-                        Collapsible Group Item #1 <i class="fa fa-angle-down rotate-icon"></i>
-                    </h5>
-                </a>
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link">
+                        Какво е S.A.S. "Stength Score" и как се определя?
+                    </button>
+                </h5>
             </div>
-            <div id="collapseTwo1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1" data-parent="#accordionEx1">
+            <div id="collapseOne" style="display: none">
                 <div class="card-body">
-                    Equalizer is statistic based calculator used to evaluate one's strength balance between certain
-                    compound free weight exercises. At the top of all exercises we choose to put conventional deadlift
-                    as it is the exercise with highest strength potential over time. All other exercises are connected
-                    with coefficients to the deadlift. The coefficients of correlation are developed by observing
-                    trainees
-                    who had at least six months of strength training experience with a personal trainer, has developed
-                    some
-                    strength and are familiar with exercises technique requirements. The Equalizer is the only strength
-                    balance calculator who is taking height into account. The main idea is for one to know which are the
-                    movements that are too strong and which ones need more work, as from one point on your strongest
-                    lifts
-                    are going to represent not your strength but your imbalances instead. The Equalizer has one major
-                    limitation and that is taking only strength into account, but we fixed that by developing skill
-                    specific
-                    coefficients for each exercise. This way we can differentiate between two people who are training an
-                    equal amount of exercises but different types. So if one is doing mostly basic exercises like
-                    deadlift,
-                    squat, overhead press, and the other one is doing muscle cleans, pull-ups and overhead squats the
-                    second
-                    one has higher level of athleticism. The system now breaks into two major parts. The first part is
-                    Strength Assessment System and the second part is Skill Assessment System. They are separate and yet
-                    connected as you can reach your highest strength requirements on your chosen movements but you want
-                    be
-                    able to reach your highest athletic requirements if don't add all of the exercises involved in the
-                    Equalizer.
-                    This way the Equalizer can improve ones physical culture by making him involve new exercises in his
-                    routine.
-                    In the original version of the Equalizer their was no difference between one who is doing five
-                    exercises
-                    and one who is doing fifteen, and that's not fair as the second one is spreading his effort to a
-                    wider range
-                    of movements. Now we are giving a bonus first for the amount and second for the types of movements
-                    one is doing.
+                    Полето "Strength Score" показва къде се намирате в момента спрямо вашият силов генетичен потенциал.
+                    В него се взема предвид чистата стойност в килограми на избраните от Вас движения и се съпоставя
+                    с тази, определена в полето О-5, която се смята за вашият потенциал във времето.
+                    Ако стойностите в полето О-5 Ви се струват прекалено високи, то причина за това най-вероятно е
+                    или ниско ниво на физическа култура или висок процент неактивна телесна маса (висок процент
+                    телесни мазнини). Два са начините да повишите точките си в това поле. Първо регулярни тренировки с
+                    постепенна и правилна прогресия с цел увеличаване на мускулната сила. Второ, тъй като стойностите за
+                    всяко ниво са пряко свързани с вашите височина, общо тегло и пол, промени в общото тегло ще доведат и до
+                    промени в изискванията Ви за ниво. Ако загубите тегло и загубеното е предимно от неактивната телесна маса,
+                    то няма да загубите силата си, по вероятно е тя да се вдигне, защото тялото ни (мускулите) преместват
+                    почти 100% от неактивната част на теглото ни.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link">
+                        Какво е "Athletic Score" и как се определя?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" style="display: none">
+                <div class="card-body">
+                    За разлика от "Strength Score", където не взимаме предвид нито броя движения, които се изпълняват нито
+                    нивото им на сложност, в определянето на "Athletic Score" това вече не е така. Всяко от движенията в
+                    главната "Main" таблица има коефициент за сложност изведен по емпиричен път чрез изследване на трениращи,
+                    обучавани минимум шест месеца. Тези коефициенти ни дават възможността да разграничим трениращите един от
+                    друг не само на база абсолютната сила но и на база сложност, защото вече вземаме предвид и броя, и вида
+                    на изпълняваните движения. Трниращ изпълняващ само част от заложените в калкулатора движения ще вземе
+                    пълен брой точки, но за сметка на повече сила на изпълняваните от него движения, за да може да компенсира
+                    разликата
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-link">
+                        Какво е "Athletic Score" и как се определя?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" style="display: none">
+                <div class="card-body">
+                    За разлика от "Strength Score", където не взимаме предвид нито броя движения, които се изпълняват нито
+                    нивото им на сложност, в определянето на "Athletic Score" това вече не е така. Чрез изведените емпирично
+                    коефициенти на трудност на всяко едно от движенията участващи в определянето на текущо ниво, имаме
+                    възможността да разграничим трениращите един от друг не само на база абсолютната сила но и на база
+                    сложност на изпълняваните от тях движения.
                 </div>
             </div>
         </div>
