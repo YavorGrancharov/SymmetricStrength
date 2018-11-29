@@ -56,6 +56,15 @@ img {
     height: 300px;
 }
 
+.list-group-item {
+    text-align: left;
+}
+
+.price {
+    font-size: 125%;
+    color: #4b5320;
+}
+
 .rounded-circle {
     width: 40%;
     height: auto;
