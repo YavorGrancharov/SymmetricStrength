@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Symmetric Strength</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../scripts/controller/movementsController.js"></script>
+    <script src="../scripts/controller/viewController.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="company">
+        <a href="../views/equalizer.html"><img src="../static/images/gs_logo_crop.png" id="logo"></a>
+    </div>
+    <h2>General System</h2>
+    <h4><sup>real strength is to know your weakness</sup></h4>
+    <ul class="nav float-left">
+        <li class="nav-item"><a class="nav-link" href="../views/equalizer.html">Equalizer</a></li>
+        <li style="color: #4b5320;">&#9733;</li>
+        <!--<li class="nav-item"><a class="nav-link" href="#">Grinder</a></li>
+        <li>&#9733;</li>-->
+        <li class="nav-item"><a class="nav-link" href="../views/martialLaw.html">Martial Law</a></li>
+        <li style="color: #4b5320;">&#9733;</li>
+        <li class="nav-item"><a class="nav-link" href="../views/about.html">FAQtory</a>
+            <ul class="dropdown-menu">
+                <li class="nav-item"><a class="nav-link" href="../views/reports.html">Reports</a></li>
+            </ul>
+        </li>
+        <li style="color: #4b5320;">&#9733;</li>
+
+    </ul>
+    <ul class="nav float-right">
+        <li class="nav-item"><a class="nav-link" href="../views/charge.html">Charge</a></li>
+        <li style="color: #4b5320;">&#9733;</li>
+        <li class="nav-item"><a class="nav-link" href="../views/generals.html">Generals</a></li>
+        <li style="color: #4b5320;">&#9733;</li>
+        <li class="nav-item"><a class="nav-link" href="../views/headquarter.html">Headquarter</a></li>
+        <li style="color: #4b5320;">&#9733;</li>
+        <li class="nav-item"><a class="nav-link" href="#">Bullet-In</a></li>
+        <li>&#9733;</li>
+        <li class="nav-item"><a class="nav-link" href="../views/gallery.html">Gallery</a></li>
+        <!--<li class="nav-item"><a class="nav-link" href="#">Boot Up</a></li>
+        <li>&#9733;</li>
+        <li class="nav-item"><a class="nav-link" href="#">Join the Army</a></li>-->
+    </ul>
+</div>
+<div class="container">
+    <table class="table" id="information">
+        <thead>
+        <tr>
+            <td>
+                <label for="sex">
+                    Sex <select class="btn-sm" onchange="movementsController.calculateLevels()" id="sex">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                </label>
+            </td>
+            <td>
+                <label for="height">
+                    Height <select class="btn-sm" onchange="movementsController.calculateLevels()" id="height">
+                    <option value="140">140</option>
+                    <option value="141">141</option>
+                    <option value="142">142</option>
+                    <option value="143">143</option>
+                    <option value="144">144</option>
+                    <option value="145">145</option>
+                    <option value="146">146</option>
+                    <option value="147">147</option>
+                    <option value="148">148</option>
+                    <option value="149">149</option>
+                    <option value="150">150</option>
+                    <option value="151">151</option>
+                    <option value="152">152</option>
+                    <option value="153">153</option>
+                    <option value="154">154</option>
+                    <option value="155">155</option>
+                    <option value="156">156</option>
+                    <option value="157">157</option>
+                    <option value="158">158</option>
+                    <option value="159">159</option>
+                    <option value="160">160</option>
+                    <option value="161">161</option>
+                    <option value="162">162</option>
+                    <option value="163">163</option>
+                    <option value="164">164</option>
+                    <option value="165">165</option>
+                    <option value="166" selected>166</option>
+                    <option value="167">167</option>
+                    <option value="168">168</option>
+                    <option value="169">169</option>
+                    <option value="170">170</option>
+                    <option value="171">171</option>
+                    <option value="172">172</option>
+                    <option value="173">173</option>
+                    <option value="174">174</option>
+                    <option value="175">175</option>
+                    <option value="176">176</option>
+                    <option value="177">177</option>
+                    <option value="178">178</option>
+                    <option value="179">179</option>
+                    <option value="180">180</option>
+                    <option value="181">181</option>
+                    <option value="182">182</option>
+                    <option value="183">183</option>
+                    <option value="184">184</option>
+                    <option value="185">185</option>
+                    <option value="186">186</option>
+                    <option value="187">187</option>
+                    <option value="188">188</option>
+                    <option value="189">189</option>
+                    <option value="190">190</option>
+                    <option value="191">191</option>
+                    <option value="192">192</option>
+                    <option value="193">193</option>
+                    <option value="194">194</option>
+                    <option value="195">195</option>
+                    <option value="196">196</option>
+                    <option value="197">197</option>
+                    <option value="198">198</option>
+                    <option value="199">199</option>
+                    <option value="200">200</option>
+                    <option value="201">201</option>
+                    <option value="202">202</option>
+                    <option value="203">203</option>
+                    <option value="204">204</option>
+                    <option value="205">205</option>
+                    <option value="206">206</option>
+                </select>
+                </label>
+            </td>
+            <td>
+                <label for="weight">
+                    Weight <select class="btn-sm" onchange="movementsController.calculateLevels()" id="weight">
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                    <option value="45">45</option>
+                    <option value="46">46</option>
+                    <option value="47">47</option>
+                    <option value="48">48</option>
+                    <option value="49">49</option>
+                    <option value="50">50</option>
+                    <option value="51">51</option>
+                    <option value="52">52</option>
+                    <option value="53">53</option>
+                    <option value="54">54</option>
+                    <option value="55">55</option>
+                    <option value="56">56</option>
+                    <option value="57">57</option>
+                    <option value="58">58</option>
+                    <option value="59">59</option>
+                    <option value="60">60</option>
+                    <option value="61">61</option>
+                    <option value="62">62</option>
+                    <option value="63">63</option>
+                    <option value="64">64</option>
+                    <option value="65" selected>65</option>
+                    <option value="66">66</option>
+                    <option value="67">67</option>
+                    <option value="68">68</option>
+                    <option value="69">69</option>
+                    <option value="70">70</option>
+                    <option value="71">71</option>
+                    <option value="72">72</option>
+                    <option value="73">73</option>
+                    <option value="74">74</option>
+                    <option value="75">75</option>
+                    <option value="76">76</option>
+                    <option value="77">77</option>
+                    <option value="78">78</option>
+                    <option value="79">79</option>
+                    <option value="80">80</option>
+                    <option value="81">81</option>
+                    <option value="82">82</option>
+                    <option value="83">83</option>
+                    <option value="84">84</option>
+                    <option value="85">85</option>
+                    <option value="86">86</option>
+                    <option value="87">87</option>
+                    <option value="88">88</option>
+                    <option value="89">89</option>
+                    <option value="90">90</option>
+                    <option value="91">91</option>
+                    <option value="92">92</option>
+                    <option value="93">93</option>
+                    <option value="94">94</option>
+                    <option value="95">95</option>
+                    <option value="96">96</option>
+                    <option value="97">97</option>
+                    <option value="98">98</option>
+                    <option value="99">99</option>
+                    <option value="100">100</option>
+                    <option value="101">102</option>
+                    <option value="103">103</option>
+                    <option value="104">104</option>
+                    <option value="105">105</option>
+                    <option value="106">106</option>
+                    <option value="107">107</option>
+                    <option value="108">108</option>
+                    <option value="109">109</option>
+                    <option value="110">110</option>
+                    <option value="111">111</option>
+                    <option value="112">112</option>
+                    <option value="113">113</option>
+                    <option value="114">114</option>
+                    <option value="115">115</option>
+                    <option value="116">116</option>
+                    <option value="117">117</option>
+                    <option value="118">118</option>
+                    <option value="119">119</option>
+                    <option value="120">120</option>
+                    <option value="121">121</option>
+                    <option value="122">122</option>
+                </select>
+                </label>
+            </td>
+            <td>
+                <label for="age">
+                    Age <select class="btn-sm" onchange="movementsController.calculateLevels()" id="age">
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23" selected>23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>
+                    <option value="33">33</option>
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                    <option value="45">45</option>
+                    <option value="46">46</option>
+                    <option value="47">47</option>
+                    <option value="48">48</option>
+                    <option value="49">49</option>
+                    <option value="50">50</option>
+                    <option value="51">51</option>
+                    <option value="52">52</option>
+                    <option value="53">53</option>
+                    <option value="54">54</option>
+                    <option value="55">55</option>
+                    <option value="56">56</option>
+                    <option value="57">57</option>
+                    <option value="58">58</option>
+                    <option value="59">59</option>
+                    <option value="60">60</option>
+                    <option value="61">61</option>
+                    <option value="62">62</option>
+                    <option value="63">63</option>
+                    <option value="64">64</option>
+                    <option value="65">65</option>
+                    <option value="66">66</option>
+                    <option value="67">67</option>
+                    <option value="68">68</option>
+                    <option value="69">69</option>
+                    <option value="70">70</option>
+                    <option value="71">71</option>
+                    <option value="72">72</option>
+                    <option value="73">73</option>
+                    <option value="74">74</option>
+                    <option value="75">75</option>
+                    <option value="76">76</option>
+                    <option value="77">77</option>
+                    <option value="78">78</option>
+                    <option value="79">79</option>
+                    <option value="80">80</option>
+                </select>
+                </label>
+            </td>
+            <td>
+                <label for="name">
+                    <input type="text" id="name" placeholder="Soldier" autofocus>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>Strength Score <input type="text" size="2" placeholder="0" readonly></td>
+            <td>Athletic Score <input type="text" size="2" placeholder="0" readonly></td>
+            <td>Equilibrium Score <input type="text" size="2" placeholder="0" readonly></td>
+            <td>Equilibrium Level <input type="text" size="10" placeholder="Recruit" readonly></td>
+            <td>Version v20</td>
+        </tr>
+        </thead>
+    </table>
+    <strong>Main</strong>
+    <table class="table table-striped" id="main">
+        <thead>
+        <tr>
+            <th>Insignia</th>
+            <!--<th></th>
+            <th></th>-->
+            <th><img src="static/images/1.png"></th>
+            <th><img src="static/images/2.png"></th>
+            <th><img src="static/images/3.png"></th>
+            <th><img src="static/images/4.png"></th>
+            <th><img src="static/images/5.png"></th>
+            <th><img src="static/images/6.png"></th>
+            <th><img src="static/images/8.png"></th>
+            <th><img src="static/images/7.png"></th>
+            <th><img src="static/images/9.png"></th>
+            <th><img src="static/images/10.png"></th>
+        </tr>
+        <tr>
+            <th>Ranks</th>
+            <!--<th>Actual</th>
+            <th>Ideal</th>-->
+            <th id="beginner">E-1</th>
+            <th>E-2</th>
+            <th>E-3</th>
+            <th>E-4</th>
+            <th id="trained">E-5</th>
+            <th>O-1</th>
+            <th>O-2</th>
+            <th id="skilled">O-3</th>
+            <th>O-4</th>
+            <th id="master">O-5</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td id="bp" title="Flat Bench Press">BP</td>
+            <!--<td><input type="text" size="1" id="actual11"></td>
+            <td id="ideal11"></td>-->
+            <td id="bp1"></td>
+            <td id="bp2"></td>
+            <td id="bp3"></td>
+            <td id="bp4"></td>
+            <td id="bp5"></td>
+            <td id="bp6"></td>
+            <td id="bp7"></td>
+            <td id="bp8"></td>
+            <td id="bp9"></td>
+            <td id="bp10"></td>
+        </tr>
+        <tr>
+            <td id="dl" title="Deadlift">Dl</td>
+            <!--<td><input type="text" size="1" id="actual1" onchange="movementsController.calculateLevels()" oninput="movementsController.calculateLevels()"></td>
+            <td id="ideal1"></td>-->
+            <td id="dl1"></td>
+            <td id="dl2"></td>
+            <td id="dl3"></td>
+            <td id="dl4"></td>
+            <td id="dl5"></td>
+            <td id="dl6"></td>
+            <td id="dl7"></td>
+            <td id="dl8"></td>
+            <td id="dl9"></td>
+            <td id="dl10"></td>
+        </tr>
+        <tr>
+            <td id="dip" title="Weighted Dip">Dip</td>
+            <!--<td><input type="text" size="1" id="actual2" onchange="movementsController.calculateLevels()" oninput="movementsController.calculateLevels()"></td>
+            <td id="ideal2"></td>-->
+            <td id="dip1"></td>
+            <td id="dip2"></td>
+            <td id="dip3"></td>
+            <td id="dip4"></td>
+            <td id="dip5"></td>
+            <td id="dip6"></td>
+            <td id="dip7"></td>
+            <td id="dip8"></td>
+            <td id="dip9"></td>
+            <td id="dip10"></td>
+        </tr>
+        <tr>
+            <td id="mp" title="Military Press">MP</td>
+            <!--<td><input type="text" size="1" id="actual3" onchange="movementsController.calculateLevels()" oninput="movementsController.calculateLevels()"></td>
+            <td id="ideal3"></td>-->
+            <td id="mp1"></td>
+            <td id="mp2"></td>
+            <td id="mp3"></td>
+            <td id="mp4"></td>
+            <td id="mp5"></td>
+            <td id="mp6"></td>
+            <td id="mp7"></td>
+            <td id="mp8"></td>
+            <td id="mp9"></td>
+            <td id="mp10"></td>
+        </tr>
+        <tr>
+            <td id="sdl" title="Sumo Deadlift">SDl</td>
+            <!--<td><input type="text" size="1" id="actual5"></td>
+            <td id="ideal5"></td>-->
+            <td id="sdl1"></td>
+            <td id="sdl2"></td>
+            <td id="sdl3"></td>
+            <td id="sdl4"></td>
+            <td id="sdl5"></td>
+            <td id="sdl6"></td>
+            <td id="sdl7"></td>
+            <td id="sdl8"></td>
+            <td id="sdl9"></td>
+            <td id="sdl10"></td>
+        </tr>
+        <tr>
+            <td id="sq" title="High-bar Squat">Sq</td>
+            <!--<td><input type="text" size="1" id="actual6"></td>
+            <td id="ideal6"></td>-->
+            <td id="sq1"></td>
+            <td id="sq2"></td>
+            <td id="sq3"></td>
+            <td id="sq4"></td>
+            <td id="sq5"></td>
+            <td id="sq6"></td>
+            <td id="sq7"></td>
+            <td id="sq8"></td>
+            <td id="sq9"></td>
+            <td id="sq10"></td>
+        </tr>
+        <tr>
+            <td id="lng" title="Barbell Lunge">Lng</td>
+            <!--<td><input type="text" size="1" id="actual7"></td>
+            <td id="ideal7"></td>-->
+            <td id="lng1"></td>
+            <td id="lng2"></td>
+            <td id="lng3"></td>
+            <td id="lng4"></td>
+            <td id="lng5"></td>
+            <td id="lng6"></td>
+            <td id="lng7"></td>
+            <td id="lng8"></td>
+            <td id="lng9"></td>
+            <td id="lng10"></td>
+        </tr>
+        <tr>
+            <td id="pup" title="Weighted Pull-Up">PUp</td>
+            <!--<td><input type="text" size="1" id="actual8"></td>
+            <td id="ideal8"></td>-->
+            <td id="pup1"></td>
+            <td id="pup2"></td>
+            <td id="pup3"></td>
+            <td id="pup4"></td>
+            <td id="pup5"></td>
+            <td id="pup6"></td>
+            <td id="pup7"></td>
+            <td id="pup8"></td>
+            <td id="pup9"></td>
+            <td id="pup10"></td>
+        </tr>
+        <tr>
+            <td id="fsq" title="Barbell Front Squat">FSq</td>
+            <!--<td><input type="text" size="1" id="actual9"></td>
+            <td id="ideal9"></td>-->
+            <td id="fsq1"></td>
+            <td id="fsq2"></td>
+            <td id="fsq3"></td>
+            <td id="fsq4"></td>
+            <td id="fsq5"></td>
+            <td id="fsq6"></td>
+            <td id="fsq7"></td>
+            <td id="fsq8"></td>
+            <td id="fsq9"></td>
+            <td id="fsq10"></td>
+        </tr>
+        <tr>
+            <td id="pp" title="Push Press">PP</td>
+            <!--<td><input type="text" size="1" id="actual12"></td>
+            <td id="ideal12"></td>-->
+            <td id="pp1"></td>
+            <td id="pp2"></td>
+            <td id="pp3"></td>
+            <td id="pp4"></td>
+            <td id="pp5"></td>
+            <td id="pp6"></td>
+            <td id="pp7"></td>
+            <td id="pp8"></td>
+            <td id="pp9"></td>
+            <td id="pp10"></td>
+        </tr>
+        <tr>
+            <td id="ohsq" title="Barbell Overhead Squat">OhSq</td>
+            <!--<td><input type="text" size="1" id="actual13"></td>
+            <td id="ideal13"></td>-->
+            <td id="ohsq1"></td>
+            <td id="ohsq2"></td>
+            <td id="ohsq3"></td>
+            <td id="ohsq4"></td>
+            <td id="ohsq5"></td>
+            <td id="ohsq6"></td>
+            <td id="ohsq7"></td>
+            <td id="ohsq8"></td>
+            <td id="ohsq9"></td>
+            <td id="ohsq10"></td>
+        </tr>
+        <tr>
+            <td id="ablng" title="Airborne Squat">AirSq</td>
+            <!--<td><input type="text" size="1"></td>
+            <td id="ideal15"></td>-->
+            <td id="ablng1"></td>
+            <td id="ablng2"></td>
+            <td id="ablng3"></td>
+            <td id="ablng4"></td>
+            <td id="ablng5"></td>
+            <td id="ablng6"></td>
+            <td id="ablng7"></td>
+            <td id="ablng8"></td>
+            <td id="ablng9"></td>
+            <td id="ablng10"></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    ENLISTED: <img src="static/images/1.png"> Recruit <img src="static/images/2.png"> Rookie <img
+        src="static/images/3.png"> Private <img src="static/images/4.png"> Corporal <img src="static/images/5.png">
+    Sergeant <br>
+    OFFICERS: <img src="static/images/6.png"> Lieutenant <img src="static/images/8.png"> Captain <img
+        src="static/images/7.png"> Major <img src="static/images/9.png"> Colonel <img src="static/images/10.png">
+    General <br>
+    <br>
+    <br>
+    <strong>Secondary</strong>
+    <table class="table table-striped" id="secondary">
+        <thead>
+        <tr>
+            <th>Insignia</th>
+            <!--<th></th>
+            <th></th>-->
+            <th><img src="static/images/1.png"></th>
+            <th><img src="static/images/2.png"></th>
+            <th><img src="static/images/3.png"></th>
+            <th><img src="static/images/4.png"></th>
+            <th><img src="static/images/5.png"></th>
+            <th><img src="static/images/6.png"></th>
+            <th><img src="static/images/8.png"></th>
+            <th><img src="static/images/7.png"></th>
+            <th><img src="static/images/9.png"></th>
+            <th><img src="static/images/10.png"></th>
+        </tr>
+        <tr>
+            <th>Ranks</th>
+            <!--<th>Actual</th>
+            <th>Ideal</th>-->
+            <th id="beginner2">E-1</th>
+            <th>E-2</th>
+            <th>E-3</th>
+            <th>E-4</th>
+            <th id="trained2">E-5</th>
+            <th>O-1</th>
+            <th>O-2</th>
+            <th id="skilled2">O-3</th>
+            <th>O-4</th>
+            <th id="master2">O-5</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td id="gm" title="Barbell Good Morning">GM</td>
+            <!--<td><input type="text" size="1" id="actual4" onchange="movementsController.calculateLevels()" oninput="movementsController.calculateLevels()"></td>
+            <td id="ideal4"></td>-->
+            <td id="gm1"></td>
+            <td id="gm2"></td>
+            <td id="gm3"></td>
+            <td id="gm4"></td>
+            <td id="gm5"></td>
+            <td id="gm6"></td>
+            <td id="gm7"></td>
+            <td id="gm8"></td>
+            <td id="gm9"></td>
+            <td id="gm10"></td>
+        </tr>
+        <tr>
+            <td id="bor" title="Bent Over Row">BOR</td>
+            <!--<td><input type="text" size="1" id="actual14"></td>
+            <td id="ideal14"></td>-->
+            <td id="bor1"></td>
+            <td id="bor2"></td>
+            <td id="bor3"></td>
+            <td id="bor4"></td>
+            <td id="bor5"></td>
+            <td id="bor6"></td>
+            <td id="bor7"></td>
+            <td id="bor8"></td>
+            <td id="bor9"></td>
+            <td id="bor10"></td>
+        </tr>
+        <tr>
+            <td id="rdl" title="Romanian Deadlift">RDL</td>
+            <!--<td><input type="text" size="1" id="actual10"></td>
+            <td id="ideal10"></td>-->
+            <td id="rdl1"></td>
+            <td id="rdl2"></td>
+            <td id="rdl3"></td>
+            <td id="rdl4"></td>
+            <td id="rdl5"></td>
+            <td id="rdl6"></td>
+            <td id="rdl7"></td>
+            <td id="rdl8"></td>
+            <td id="rdl9"></td>
+            <td id="rdl10"></td>
+        </tr>
+        <tr>
+            <td id="fct" title="Full Contact Twist">FCT</td>
+            <!--<td><input type="text" size="1"></td>
+            <td id="ideal16"></td>-->
+            <td id="fct1"></td>
+            <td id="fct2"></td>
+            <td id="fct3"></td>
+            <td id="fct4"></td>
+            <td id="fct5"></td>
+            <td id="fct6"></td>
+            <td id="fct7"></td>
+            <td id="fct8"></td>
+            <td id="fct9"></td>
+            <td id="fct10"></td>
+        </tr>
+        <tr>
+            <td id="sb" title="Barbell Side Bend">SB</td>
+            <!--<td><input type="text" size="1"></td>
+            <td id="ideal17"></td>-->
+            <td id="sb1"></td>
+            <td id="sb2"></td>
+            <td id="sb3"></td>
+            <td id="sb4"></td>
+            <td id="sb5"></td>
+            <td id="sb6"></td>
+            <td id="sb7"></td>
+            <td id="sb8"></td>
+            <td id="sb9"></td>
+            <td id="sb10"></td>
+        </tr>
+        <tr>
+            <td id="mbp" title="Milko Bench Press">MBP</td>
+            <!--<td><input type="text" size="1"></td>
+            <td id="ideal18"></td>-->
+            <td id="mbp1"></td>
+            <td id="mbp2"></td>
+            <td id="mbp3"></td>
+            <td id="mbp4"></td>
+            <td id="mbp5"></td>
+            <td id="mbp6"></td>
+            <td id="mbp7"></td>
+            <td id="mbp8"></td>
+            <td id="mbp9"></td>
+            <td id="mbp10"></td>
+        </tr>
+        <tr>
+            <td id="rr" title="Renegade Row">RR</td>
+            <!--<td><input type="text" size="1"></td>
+            <td id="ideal19"></td>-->
+            <td id="rr1"></td>
+            <td id="rr2"></td>
+            <td id="rr3"></td>
+            <td id="rr4"></td>
+            <td id="rr5"></td>
+            <td id="rr6"></td>
+            <td id="rr7"></td>
+            <td id="rr8"></td>
+            <td id="rr9"></td>
+            <td id="rr10"></td>
+        </tr>
+        <tr>
+            <td id="frr" title="Flying Renegade Row">FRR</td>
+            <!--<td><input type="text" size="1"></td>
+            <td id="ideal20"></td>-->
+            <td id="frr1"></td>
+            <td id="frr2"></td>
+            <td id="frr3"></td>
+            <td id="frr4"></td>
+            <td id="frr5"></td>
+            <td id="frr6"></td>
+            <td id="frr7"></td>
+            <td id="frr8"></td>
+            <td id="frr9"></td>
+            <td id="frr10"></td>
+        </tr>
+        <tr>
+            <td id="saw" title="Saw">Saw</td>
+            <!--<td><input type="text" size="1"></td>
+            <td id="ideal21"></td>-->
+            <td id="saw1"></td>
+            <td id="saw2"></td>
+            <td id="saw3"></td>
+            <td id="saw4"></td>
+            <td id="saw5"></td>
+            <td id="saw6"></td>
+            <td id="saw7"></td>
+            <td id="saw8"></td>
+            <td id="saw9"></td>
+            <td id="saw10"></td>
+        </tr>
+        <tr>
+            <td id="cp" title="Curl & Press">C&P</td>
+            <!--<td><input type="text" size="1"></td>
+            <td id="ideal22"></td>-->
+            <td id="cp1"></td>
+            <td id="cp2"></td>
+            <td id="cp3"></td>
+            <td id="cp4"></td>
+            <td id="cp5"></td>
+            <td id="cp6"></td>
+            <td id="cp7"></td>
+            <td id="cp8"></td>
+            <td id="cp9"></td>
+            <td id="cp10"></td>
+        </tr>
+        <tr>
+            <td id="sp" title="Side Press">SP</td>
+            <!--<td><input type="text" size="1"></td>
+            <td id="ideal23"></td>-->
+            <td id="sp1"></td>
+            <td id="sp2"></td>
+            <td id="sp3"></td>
+            <td id="sp4"></td>
+            <td id="sp5"></td>
+            <td id="sp6"></td>
+            <td id="sp7"></td>
+            <td id="sp8"></td>
+            <td id="sp9"></td>
+            <td id="sp10"></td>
+        </tr>
+        <tr>
+            <td id="sw" title="Swing">Sw</td>
+            <!--<td><input type="text" size="1"></td>
+            <td id="ideal24"></td>-->
+            <td id="sw1"></td>
+            <td id="sw2"></td>
+            <td id="sw3"></td>
+            <td id="sw4"></td>
+            <td id="sw5"></td>
+            <td id="sw6"></td>
+            <td id="sw7"></td>
+            <td id="sw8"></td>
+            <td id="sw9"></td>
+            <td id="sw10"></td>
+        </tr>
+        <tr>
+            <td id="trsw" title="Triple Extension Swing">TripSw</td>
+            <!--<td><input type="text" size="1"></td>
+            <td id="ideal25"></td>-->
+            <td id="trsw1"></td>
+            <td id="trsw2"></td>
+            <td id="trsw3"></td>
+            <td id="trsw4"></td>
+            <td id="trsw5"></td>
+            <td id="trsw6"></td>
+            <td id="trsw7"></td>
+            <td id="trsw8"></td>
+            <td id="trsw9"></td>
+            <td id="trsw10"></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    ENLISTED: <img src="static/images/1.png"> Recruit <img src="static/images/2.png"> Rookie <img
+        src="static/images/3.png"> Private <img src="static/images/4.png"> Corporal <img src="static/images/5.png">
+    Sergeant <br>
+    OFFICERS: <img src="static/images/6.png"> Lieutenant <img src="static/images/8.png"> Captain <img
+        src="static/images/7.png"> Major <img src="static/images/9.png"> Colonel <img src="static/images/10.png">
+    General
+    <!--<div class="foo green"></div>&nbsp;Trained: you have become better [slow adaptation]<br>
+    <div class="foo blue"></div>&nbsp;Skilled: you have grown to a more advanced state [very slow adaptation]<br>
+    <div class="foo red"></div>&nbsp;Master: you have reached mastery [potential limit]-->
+</div>
+<footer class="footer">&copy;2015-2019 Yavor Grancharov</footer>
+</body>
+</html>
