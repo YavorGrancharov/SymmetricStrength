@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 h2, h4, .footer {
     text-align: center;
 }
@@ -44,11 +48,23 @@ input {
     padding: 1%;
     overflow: hidden;
     font-family: MKStencilsansBlack;
+    /*background-image: url("static/images/army_green_background.jpg");*/
+}
+
+#sex:hover, #height:hover, #weight:hover, #age:hover, #name:hover {
+    cursor: pointer;
 }
 
 img {
     width: 20px;
     height: auto;
+}
+
+#welcome {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
 }
 
 .card-img-top {
@@ -265,3 +281,60 @@ p {
 ul li {
     font-size: 112%;
 }
+
+ul.nav li a {
+    display: block;
+    text-decoration: none;
+    color: #4b5320;
+    padding: 5px;
+    border: 1px solid #fff;
+}
+
+ul.nav li a:hover {
+    background: #d8cfb7;
+    border: 1px solid #999;
+    border-radius: 20%;
+}
+
+ul.nav > li {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #fff;
+}
+
+ul.nav > li ul {
+    display: none;
+    position: absolute;
+    left: -1px;
+    margin-top: 1px;
+}
+
+ul.nav > li:hover ul {
+    display: block;
+    z-index:100;
+}
+
+ul.nav > li ul li {
+    display: block;
+    z-index:100;
+}
+
+ul.nav > li ul li {
+    display: inline-block;
+    z-index:100;
+}
+
+.hide-bullets {
+    list-style:none;
+    margin-left: -40px;
+    margin-top:20px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    width: 100%;
+}
+
