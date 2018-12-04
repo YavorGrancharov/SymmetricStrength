@@ -25,11 +25,15 @@ body {
     margin-bottom: -62px;
 }*/
 
+.btn .btn-primary .btn-form{
+    color: #d8cfb7;
+}
+
 #logo {
     -webkit-filter: drop-shadow(2px 2px 2px #696969);
     filter: drop-shadow(2px 2px 2px #696969);
-    margin-bottom: -62px;
-    width: 80px;
+    /*margin-bottom: -62px;*/
+    width: 100%;
     height: auto;
 }
 
@@ -291,9 +295,8 @@ ul.nav li a {
 }
 
 ul.nav li a:hover {
-    background: #d8cfb7;
-    border: 1px solid #999;
-    border-radius: 20%;
+    border-radius: 26%;
+    transform: scale(1.1)
 }
 
 ul.nav > li {
