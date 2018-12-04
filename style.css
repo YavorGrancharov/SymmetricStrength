@@ -12,6 +12,7 @@ h2, h4, .footer {
 
 body {
     font-size: 107%;
+    color: #424756;
 }
 
 #sex, #height, #weight, #age, #name {
@@ -25,16 +26,14 @@ body {
     margin-bottom: -62px;
 }*/
 
-.btn .btn-primary .btn-form{
-    color: #d8cfb7;
-}
-
 #logo {
     -webkit-filter: drop-shadow(2px 2px 2px #696969);
     filter: drop-shadow(2px 2px 2px #696969);
-    /*margin-bottom: -62px;*/
     width: 100%;
     height: auto;
+    /*-webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 0% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+    background-color: #6ea171;*/
 }
 
 input {
@@ -52,23 +51,24 @@ input {
     padding: 1%;
     overflow: hidden;
     font-family: MKStencilsansBlack;
-    /*background-image: url("static/images/army_green_background.jpg");*/
 }
 
-#sex:hover, #height:hover, #weight:hover, #age:hover, #name:hover {
+#sex:hover, #height:hover, #weight:hover, #age:hover {
     cursor: pointer;
 }
 
 img {
-    width: 20px;
+    width: 100%;
     height: auto;
 }
 
 #welcome {
     width: 100%;
     height: auto;
-    border-top-left-radius: 50%;
-    border-bottom-right-radius: 50%;
+    /*border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;*/
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
 }
 
 .card-img-top {
@@ -82,7 +82,7 @@ img {
 
 .price {
     font-size: 125%;
-    color: #4b5320;
+    color: #4d784e;
 }
 
 .rounded-circle {
@@ -289,20 +289,21 @@ ul li {
 ul.nav li a {
     display: block;
     text-decoration: none;
-    color: #4b5320;
+    color: #424756;
     padding: 5px;
-    border: 1px solid #fff;
 }
 
 ul.nav li a:hover {
-    border-radius: 26%;
-    transform: scale(1.1)
+    transform: scale(1.1);
+    background-color: #d8cfb7;
+    overflow: hidden;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 ul.nav > li {
     display: inline-block;
     position: relative;
-    border: 1px solid #fff;
 }
 
 ul.nav > li ul {
@@ -314,30 +315,31 @@ ul.nav > li ul {
 
 ul.nav > li:hover ul {
     display: block;
-    z-index:100;
+    z-index: 100;
 }
 
 ul.nav > li ul li {
     display: block;
-    z-index:100;
+    z-index: 100;
 }
 
 ul.nav > li ul li {
     display: inline-block;
-    z-index:100;
+    z-index: 100;
 }
 
 .hide-bullets {
-    list-style:none;
+    list-style: none;
     margin-left: -40px;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 .thumbnail {
     padding: 0;
 }
 
-.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
     width: 100%;
 }
+
 
