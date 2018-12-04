@@ -22,8 +22,6 @@ let viewController = (() => {
         }
     }
 
-
-
     return {
         toggle
     }

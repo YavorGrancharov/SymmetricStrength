@@ -294,8 +294,9 @@ ul.nav li a {
 }
 
 ul.nav li a:hover {
+    color: whitesmoke;
     transform: scale(1.1);
-    background-color: #d8cfb7;
+    background-color: #6ea171;
     overflow: hidden;
     -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
@@ -328,18 +329,28 @@ ul.nav > li ul li {
     z-index: 100;
 }
 
-.hide-bullets {
-    list-style: none;
-    margin-left: -40px;
-    margin-top: 20px;
+.carousel-item {
+    height: 400px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-.thumbnail {
-    padding: 0;
+.carousel-item img {
+    height: 100%;
+    width: auto;
 }
 
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-    width: 100%;
+.display-4:hover, .list-group-item:hover {
+    transform: scale(1.1);
 }
 
+#chevron {
+    display: inline-block;
+    text-align: justify;
+    /*-webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);*/
+}
 
