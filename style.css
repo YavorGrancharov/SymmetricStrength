@@ -30,7 +30,8 @@ body {
     margin: 10px auto;
     /*-webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 0% 100%, 0% 100%);
     clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
-    background-color: #6ea171;*/
+    background-color: transparent;
+    border: 1px solid #6ea171;*/
 }
 
 input {
