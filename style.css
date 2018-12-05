@@ -19,13 +19,6 @@ body {
     font-size: 100%;
 }
 
-/*.company {
-    width: 80px;
-    height: 92px;
-    background: gold;
-    margin-bottom: -62px;
-}*/
-
 #logo {
     -webkit-filter: drop-shadow(2px 2px 2px #696969);
     filter: drop-shadow(2px 2px 2px #696969);
@@ -57,11 +50,6 @@ input {
     cursor: pointer;
 }
 
-img {
-    width: 100%;
-    height: auto;
-}
-
 #welcome {
     width: 100%;
     height: auto;
@@ -69,11 +57,6 @@ img {
     border-bottom-right-radius: 50%;*/
     -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-}
-
-.card-img-top {
-    width: 750px;
-    height: 300px;
 }
 
 .list-group-item {
@@ -114,29 +97,13 @@ img {
     border-color: lightgray;
 }
 
-.foo {
+/*.foo {
     float: left;
     width: 20px;
     height: 20px;
 
     border: 1px solid rgba(0, 0, 0, .2);
-}
-
-.yellow {
-    background: #ffff00;
-}
-
-.green {
-    background: #40ff00;
-}
-
-.blue {
-    background: #00ccff;
-}
-
-.red {
-    background: #ff3333;
-}
+}*/
 
 p {
     text-align: justify;
@@ -291,6 +258,11 @@ ul.nav li a {
     text-decoration: none;
     color: #424756;
     padding: 5px;
+}
+
+img {
+    width: 20px;
+    height: auto;
 }
 
 ul.nav li a:hover {

@@ -318,478 +318,484 @@ clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80
         </table>
     </div>
     <strong>Main</strong>
-    <table class="table table-striped" id="main">
-        <thead>
-        <tr>
-            <th>Insignia</th>
-            <!--<th></th>
-            <th></th>-->
-            <th><img src="../static/images/1.png"></th>
-            <th><img src="../static/images/2.png"></th>
-            <th><img src="../static/images/3.png"></th>
-            <th><img src="../static/images/4.png"></th>
-            <th><img src="../static/images/5.png"></th>
-            <th><img src="../static/images/6.png"></th>
-            <th><img src="../static/images/8.png"></th>
-            <th><img src="../static/images/7.png"></th>
-            <th><img src="../static/images/9.png"></th>
-            <th><img src="../static/images/10.png"></th>
-        </tr>
-        <tr>
-            <th>Ranks</th>
-            <!--<th>Actual</th>
-            <th>Ideal</th>-->
-            <th id="beginner">E-1</th>
-            <th>E-2</th>
-            <th>E-3</th>
-            <th>E-4</th>
-            <th id="trained">E-5</th>
-            <th>O-1</th>
-            <th>O-2</th>
-            <th id="skilled">O-3</th>
-            <th>O-4</th>
-            <th id="master">O-5</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td id="bp" title="Flat Bench Press">BP</td>
-            <!--<td><input type="text" size="1" id="actual11"></td>
-            <td id="ideal11"></td>-->
-            <td id="bp1"></td>
-            <td id="bp2"></td>
-            <td id="bp3"></td>
-            <td id="bp4"></td>
-            <td id="bp5"></td>
-            <td id="bp6"></td>
-            <td id="bp7"></td>
-            <td id="bp8"></td>
-            <td id="bp9"></td>
-            <td id="bp10"></td>
-        </tr>
-        <tr>
-            <td id="dl" title="Deadlift">Dl</td>
-            <!--<td><input type="text" size="1" id="actual1" onchange="movementsController.calculateLevels()" oninput="movementsController.calculateLevels()"></td>
-            <td id="ideal1"></td>-->
-            <td id="dl1"></td>
-            <td id="dl2"></td>
-            <td id="dl3"></td>
-            <td id="dl4"></td>
-            <td id="dl5"></td>
-            <td id="dl6"></td>
-            <td id="dl7"></td>
-            <td id="dl8"></td>
-            <td id="dl9"></td>
-            <td id="dl10"></td>
-        </tr>
-        <tr>
-            <td id="dip" title="Weighted Dip">Dip</td>
-            <!--<td><input type="text" size="1" id="actual2" onchange="movementsController.calculateLevels()" oninput="movementsController.calculateLevels()"></td>
-            <td id="ideal2"></td>-->
-            <td id="dip1"></td>
-            <td id="dip2"></td>
-            <td id="dip3"></td>
-            <td id="dip4"></td>
-            <td id="dip5"></td>
-            <td id="dip6"></td>
-            <td id="dip7"></td>
-            <td id="dip8"></td>
-            <td id="dip9"></td>
-            <td id="dip10"></td>
-        </tr>
-        <tr>
-            <td id="mp" title="Military Press">MP</td>
-            <!--<td><input type="text" size="1" id="actual3" onchange="movementsController.calculateLevels()" oninput="movementsController.calculateLevels()"></td>
-            <td id="ideal3"></td>-->
-            <td id="mp1"></td>
-            <td id="mp2"></td>
-            <td id="mp3"></td>
-            <td id="mp4"></td>
-            <td id="mp5"></td>
-            <td id="mp6"></td>
-            <td id="mp7"></td>
-            <td id="mp8"></td>
-            <td id="mp9"></td>
-            <td id="mp10"></td>
-        </tr>
-        <tr>
-            <td id="sdl" title="Sumo Deadlift">SDl</td>
-            <!--<td><input type="text" size="1" id="actual5"></td>
-            <td id="ideal5"></td>-->
-            <td id="sdl1"></td>
-            <td id="sdl2"></td>
-            <td id="sdl3"></td>
-            <td id="sdl4"></td>
-            <td id="sdl5"></td>
-            <td id="sdl6"></td>
-            <td id="sdl7"></td>
-            <td id="sdl8"></td>
-            <td id="sdl9"></td>
-            <td id="sdl10"></td>
-        </tr>
-        <tr>
-            <td id="sq" title="High-bar Squat">Sq</td>
-            <!--<td><input type="text" size="1" id="actual6"></td>
-            <td id="ideal6"></td>-->
-            <td id="sq1"></td>
-            <td id="sq2"></td>
-            <td id="sq3"></td>
-            <td id="sq4"></td>
-            <td id="sq5"></td>
-            <td id="sq6"></td>
-            <td id="sq7"></td>
-            <td id="sq8"></td>
-            <td id="sq9"></td>
-            <td id="sq10"></td>
-        </tr>
-        <tr>
-            <td id="lng" title="Barbell Lunge">Lng</td>
-            <!--<td><input type="text" size="1" id="actual7"></td>
-            <td id="ideal7"></td>-->
-            <td id="lng1"></td>
-            <td id="lng2"></td>
-            <td id="lng3"></td>
-            <td id="lng4"></td>
-            <td id="lng5"></td>
-            <td id="lng6"></td>
-            <td id="lng7"></td>
-            <td id="lng8"></td>
-            <td id="lng9"></td>
-            <td id="lng10"></td>
-        </tr>
-        <tr>
-            <td id="pup" title="Weighted Pull-Up">PUp</td>
-            <!--<td><input type="text" size="1" id="actual8"></td>
-            <td id="ideal8"></td>-->
-            <td id="pup1"></td>
-            <td id="pup2"></td>
-            <td id="pup3"></td>
-            <td id="pup4"></td>
-            <td id="pup5"></td>
-            <td id="pup6"></td>
-            <td id="pup7"></td>
-            <td id="pup8"></td>
-            <td id="pup9"></td>
-            <td id="pup10"></td>
-        </tr>
-        <tr>
-            <td id="fsq" title="Barbell Front Squat">FSq</td>
-            <!--<td><input type="text" size="1" id="actual9"></td>
-            <td id="ideal9"></td>-->
-            <td id="fsq1"></td>
-            <td id="fsq2"></td>
-            <td id="fsq3"></td>
-            <td id="fsq4"></td>
-            <td id="fsq5"></td>
-            <td id="fsq6"></td>
-            <td id="fsq7"></td>
-            <td id="fsq8"></td>
-            <td id="fsq9"></td>
-            <td id="fsq10"></td>
-        </tr>
-        <tr>
-            <td id="pp" title="Push Press">PP</td>
-            <!--<td><input type="text" size="1" id="actual12"></td>
-            <td id="ideal12"></td>-->
-            <td id="pp1"></td>
-            <td id="pp2"></td>
-            <td id="pp3"></td>
-            <td id="pp4"></td>
-            <td id="pp5"></td>
-            <td id="pp6"></td>
-            <td id="pp7"></td>
-            <td id="pp8"></td>
-            <td id="pp9"></td>
-            <td id="pp10"></td>
-        </tr>
-        <tr>
-            <td id="ohsq" title="Barbell Overhead Squat">OhSq</td>
-            <!--<td><input type="text" size="1" id="actual13"></td>
-            <td id="ideal13"></td>-->
-            <td id="ohsq1"></td>
-            <td id="ohsq2"></td>
-            <td id="ohsq3"></td>
-            <td id="ohsq4"></td>
-            <td id="ohsq5"></td>
-            <td id="ohsq6"></td>
-            <td id="ohsq7"></td>
-            <td id="ohsq8"></td>
-            <td id="ohsq9"></td>
-            <td id="ohsq10"></td>
-        </tr>
-        <tr>
-            <td id="ablng" title="Airborne Squat">AirSq</td>
-            <!--<td><input type="text" size="1"></td>
-            <td id="ideal15"></td>-->
-            <td id="ablng1"></td>
-            <td id="ablng2"></td>
-            <td id="ablng3"></td>
-            <td id="ablng4"></td>
-            <td id="ablng5"></td>
-            <td id="ablng6"></td>
-            <td id="ablng7"></td>
-            <td id="ablng8"></td>
-            <td id="ablng9"></td>
-            <td id="ablng10"></td>
-        </tr>
-        </tbody>
-    </table>
-    <br>
-    ENLISTED: <img src="../static/images/1.png"> Recruit <img src="../static/images/2.png"> Rookie <img
-        src="../static/images/3.png"> Private <img src="../static/images/4.png"> Corporal <img
-        src="../static/images/5.png">
-    Sergeant <br>
-    OFFICERS: <img src="../static/images/6.png"> Lieutenant <img src="../static/images/8.png"> Captain <img
-        src="../static/images/7.png"> Major <img src="../static/images/9.png"> Colonel <img
-        src="../static/images/10.png">
-    General <br>
+    <div class="table-responsive">
+        <table class="table table-striped" id="main">
+            <thead>
+            <tr>
+                <th>Insignia</th>
+                <!--<th></th>
+                <th></th>-->
+                <th><img src="../static/images/1.png"></th>
+                <th><img src="../static/images/2.png"></th>
+                <th><img src="../static/images/3.png"></th>
+                <th><img src="../static/images/4.png"></th>
+                <th><img src="../static/images/5.png"></th>
+                <th><img src="../static/images/6.png"></th>
+                <th><img src="../static/images/8.png"></th>
+                <th><img src="../static/images/7.png"></th>
+                <th><img src="../static/images/9.png"></th>
+                <th><img src="../static/images/10.png"></th>
+            </tr>
+            <tr>
+                <th>Ranks</th>
+                <!--<th>Actual</th>
+                <th>Ideal</th>-->
+                <th id="beginner">E-1</th>
+                <th>E-2</th>
+                <th>E-3</th>
+                <th>E-4</th>
+                <th id="trained">E-5</th>
+                <th>O-1</th>
+                <th>O-2</th>
+                <th id="skilled">O-3</th>
+                <th>O-4</th>
+                <th id="master">O-5</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td id="bp" title="Flat Bench Press">BP</td>
+                <!--<td><input type="text" size="1" id="actual11"></td>
+                <td id="ideal11"></td>-->
+                <td id="bp1"></td>
+                <td id="bp2"></td>
+                <td id="bp3"></td>
+                <td id="bp4"></td>
+                <td id="bp5"></td>
+                <td id="bp6"></td>
+                <td id="bp7"></td>
+                <td id="bp8"></td>
+                <td id="bp9"></td>
+                <td id="bp10"></td>
+            </tr>
+            <tr>
+                <td id="dl" title="Deadlift">Dl</td>
+                <!--<td><input type="text" size="1" id="actual1" onchange="movementsController.calculateLevels()" oninput="movementsController.calculateLevels()"></td>
+                <td id="ideal1"></td>-->
+                <td id="dl1"></td>
+                <td id="dl2"></td>
+                <td id="dl3"></td>
+                <td id="dl4"></td>
+                <td id="dl5"></td>
+                <td id="dl6"></td>
+                <td id="dl7"></td>
+                <td id="dl8"></td>
+                <td id="dl9"></td>
+                <td id="dl10"></td>
+            </tr>
+            <tr>
+                <td id="dip" title="Weighted Dip">Dip</td>
+                <!--<td><input type="text" size="1" id="actual2" onchange="movementsController.calculateLevels()" oninput="movementsController.calculateLevels()"></td>
+                <td id="ideal2"></td>-->
+                <td id="dip1"></td>
+                <td id="dip2"></td>
+                <td id="dip3"></td>
+                <td id="dip4"></td>
+                <td id="dip5"></td>
+                <td id="dip6"></td>
+                <td id="dip7"></td>
+                <td id="dip8"></td>
+                <td id="dip9"></td>
+                <td id="dip10"></td>
+            </tr>
+            <tr>
+                <td id="mp" title="Military Press">MP</td>
+                <!--<td><input type="text" size="1" id="actual3" onchange="movementsController.calculateLevels()" oninput="movementsController.calculateLevels()"></td>
+                <td id="ideal3"></td>-->
+                <td id="mp1"></td>
+                <td id="mp2"></td>
+                <td id="mp3"></td>
+                <td id="mp4"></td>
+                <td id="mp5"></td>
+                <td id="mp6"></td>
+                <td id="mp7"></td>
+                <td id="mp8"></td>
+                <td id="mp9"></td>
+                <td id="mp10"></td>
+            </tr>
+            <tr>
+                <td id="sdl" title="Sumo Deadlift">SDl</td>
+                <!--<td><input type="text" size="1" id="actual5"></td>
+                <td id="ideal5"></td>-->
+                <td id="sdl1"></td>
+                <td id="sdl2"></td>
+                <td id="sdl3"></td>
+                <td id="sdl4"></td>
+                <td id="sdl5"></td>
+                <td id="sdl6"></td>
+                <td id="sdl7"></td>
+                <td id="sdl8"></td>
+                <td id="sdl9"></td>
+                <td id="sdl10"></td>
+            </tr>
+            <tr>
+                <td id="sq" title="High-bar Squat">Sq</td>
+                <!--<td><input type="text" size="1" id="actual6"></td>
+                <td id="ideal6"></td>-->
+                <td id="sq1"></td>
+                <td id="sq2"></td>
+                <td id="sq3"></td>
+                <td id="sq4"></td>
+                <td id="sq5"></td>
+                <td id="sq6"></td>
+                <td id="sq7"></td>
+                <td id="sq8"></td>
+                <td id="sq9"></td>
+                <td id="sq10"></td>
+            </tr>
+            <tr>
+                <td id="lng" title="Barbell Lunge">Lng</td>
+                <!--<td><input type="text" size="1" id="actual7"></td>
+                <td id="ideal7"></td>-->
+                <td id="lng1"></td>
+                <td id="lng2"></td>
+                <td id="lng3"></td>
+                <td id="lng4"></td>
+                <td id="lng5"></td>
+                <td id="lng6"></td>
+                <td id="lng7"></td>
+                <td id="lng8"></td>
+                <td id="lng9"></td>
+                <td id="lng10"></td>
+            </tr>
+            <tr>
+                <td id="pup" title="Weighted Pull-Up">PUp</td>
+                <!--<td><input type="text" size="1" id="actual8"></td>
+                <td id="ideal8"></td>-->
+                <td id="pup1"></td>
+                <td id="pup2"></td>
+                <td id="pup3"></td>
+                <td id="pup4"></td>
+                <td id="pup5"></td>
+                <td id="pup6"></td>
+                <td id="pup7"></td>
+                <td id="pup8"></td>
+                <td id="pup9"></td>
+                <td id="pup10"></td>
+            </tr>
+            <tr>
+                <td id="fsq" title="Barbell Front Squat">FSq</td>
+                <!--<td><input type="text" size="1" id="actual9"></td>
+                <td id="ideal9"></td>-->
+                <td id="fsq1"></td>
+                <td id="fsq2"></td>
+                <td id="fsq3"></td>
+                <td id="fsq4"></td>
+                <td id="fsq5"></td>
+                <td id="fsq6"></td>
+                <td id="fsq7"></td>
+                <td id="fsq8"></td>
+                <td id="fsq9"></td>
+                <td id="fsq10"></td>
+            </tr>
+            <tr>
+                <td id="pp" title="Push Press">PP</td>
+                <!--<td><input type="text" size="1" id="actual12"></td>
+                <td id="ideal12"></td>-->
+                <td id="pp1"></td>
+                <td id="pp2"></td>
+                <td id="pp3"></td>
+                <td id="pp4"></td>
+                <td id="pp5"></td>
+                <td id="pp6"></td>
+                <td id="pp7"></td>
+                <td id="pp8"></td>
+                <td id="pp9"></td>
+                <td id="pp10"></td>
+            </tr>
+            <tr>
+                <td id="ohsq" title="Barbell Overhead Squat">OhSq</td>
+                <!--<td><input type="text" size="1" id="actual13"></td>
+                <td id="ideal13"></td>-->
+                <td id="ohsq1"></td>
+                <td id="ohsq2"></td>
+                <td id="ohsq3"></td>
+                <td id="ohsq4"></td>
+                <td id="ohsq5"></td>
+                <td id="ohsq6"></td>
+                <td id="ohsq7"></td>
+                <td id="ohsq8"></td>
+                <td id="ohsq9"></td>
+                <td id="ohsq10"></td>
+            </tr>
+            <tr>
+                <td id="ablng" title="Airborne Squat">AirSq</td>
+                <!--<td><input type="text" size="1"></td>
+                <td id="ideal15"></td>-->
+                <td id="ablng1"></td>
+                <td id="ablng2"></td>
+                <td id="ablng3"></td>
+                <td id="ablng4"></td>
+                <td id="ablng5"></td>
+                <td id="ablng6"></td>
+                <td id="ablng7"></td>
+                <td id="ablng8"></td>
+                <td id="ablng9"></td>
+                <td id="ablng10"></td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+    </div>
+    <div class="table-responsive">
+        ENLISTED: <img src="../static/images/1.png"> Recruit <img src="../static/images/2.png"> Rookie <img
+            src="../static/images/3.png"> Private <img src="../static/images/4.png"> Corporal <img
+            src="../static/images/5.png">
+        Sergeant <br>
+        OFFICERS: <img src="../static/images/6.png"> Lieutenant <img src="../static/images/8.png"> Captain <img
+            src="../static/images/7.png"> Major <img src="../static/images/9.png"> Colonel <img
+            src="../static/images/10.png">
+        General
+    </div>
     <br>
     <br>
     <strong>Secondary</strong>
-    <table class="table table-striped" id="secondary">
-        <thead>
-        <tr>
-            <th>Insignia</th>
-            <!--<th></th>
-            <th></th>-->
-            <th><img src="../static/images/1.png"></th>
-            <th><img src="../static/images/2.png"></th>
-            <th><img src="../static/images/3.png"></th>
-            <th><img src="../static/images/4.png"></th>
-            <th><img src="../static/images/5.png"></th>
-            <th><img src="../static/images/6.png"></th>
-            <th><img src="../static/images/8.png"></th>
-            <th><img src="../static/images/7.png"></th>
-            <th><img src="../static/images/9.png"></th>
-            <th><img src="../static/images/10.png"></th>
-        </tr>
-        <tr>
-            <th>Ranks</th>
-            <!--<th>Actual</th>
-            <th>Ideal</th>-->
-            <th id="beginner2">E-1</th>
-            <th>E-2</th>
-            <th>E-3</th>
-            <th>E-4</th>
-            <th id="trained2">E-5</th>
-            <th>O-1</th>
-            <th>O-2</th>
-            <th id="skilled2">O-3</th>
-            <th>O-4</th>
-            <th id="master2">O-5</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td id="gm" title="Barbell Good Morning">GM</td>
-            <!--<td><input type="text" size="1" id="actual4" onchange="movementsController.calculateLevels()" oninput="movementsController.calculateLevels()"></td>
-            <td id="ideal4"></td>-->
-            <td id="gm1"></td>
-            <td id="gm2"></td>
-            <td id="gm3"></td>
-            <td id="gm4"></td>
-            <td id="gm5"></td>
-            <td id="gm6"></td>
-            <td id="gm7"></td>
-            <td id="gm8"></td>
-            <td id="gm9"></td>
-            <td id="gm10"></td>
-        </tr>
-        <tr>
-            <td id="bor" title="Bent Over Row">BOR</td>
-            <!--<td><input type="text" size="1" id="actual14"></td>
-            <td id="ideal14"></td>-->
-            <td id="bor1"></td>
-            <td id="bor2"></td>
-            <td id="bor3"></td>
-            <td id="bor4"></td>
-            <td id="bor5"></td>
-            <td id="bor6"></td>
-            <td id="bor7"></td>
-            <td id="bor8"></td>
-            <td id="bor9"></td>
-            <td id="bor10"></td>
-        </tr>
-        <tr>
-            <td id="rdl" title="Romanian Deadlift">RDL</td>
-            <!--<td><input type="text" size="1" id="actual10"></td>
-            <td id="ideal10"></td>-->
-            <td id="rdl1"></td>
-            <td id="rdl2"></td>
-            <td id="rdl3"></td>
-            <td id="rdl4"></td>
-            <td id="rdl5"></td>
-            <td id="rdl6"></td>
-            <td id="rdl7"></td>
-            <td id="rdl8"></td>
-            <td id="rdl9"></td>
-            <td id="rdl10"></td>
-        </tr>
-        <tr>
-            <td id="fct" title="Full Contact Twist">FCT</td>
-            <!--<td><input type="text" size="1"></td>
-            <td id="ideal16"></td>-->
-            <td id="fct1"></td>
-            <td id="fct2"></td>
-            <td id="fct3"></td>
-            <td id="fct4"></td>
-            <td id="fct5"></td>
-            <td id="fct6"></td>
-            <td id="fct7"></td>
-            <td id="fct8"></td>
-            <td id="fct9"></td>
-            <td id="fct10"></td>
-        </tr>
-        <tr>
-            <td id="sb" title="Barbell Side Bend">SB</td>
-            <!--<td><input type="text" size="1"></td>
-            <td id="ideal17"></td>-->
-            <td id="sb1"></td>
-            <td id="sb2"></td>
-            <td id="sb3"></td>
-            <td id="sb4"></td>
-            <td id="sb5"></td>
-            <td id="sb6"></td>
-            <td id="sb7"></td>
-            <td id="sb8"></td>
-            <td id="sb9"></td>
-            <td id="sb10"></td>
-        </tr>
-        <tr>
-            <td id="mbp" title="Milko Bench Press">MBP</td>
-            <!--<td><input type="text" size="1"></td>
-            <td id="ideal18"></td>-->
-            <td id="mbp1"></td>
-            <td id="mbp2"></td>
-            <td id="mbp3"></td>
-            <td id="mbp4"></td>
-            <td id="mbp5"></td>
-            <td id="mbp6"></td>
-            <td id="mbp7"></td>
-            <td id="mbp8"></td>
-            <td id="mbp9"></td>
-            <td id="mbp10"></td>
-        </tr>
-        <tr>
-            <td id="rr" title="Renegade Row">RR</td>
-            <!--<td><input type="text" size="1"></td>
-            <td id="ideal19"></td>-->
-            <td id="rr1"></td>
-            <td id="rr2"></td>
-            <td id="rr3"></td>
-            <td id="rr4"></td>
-            <td id="rr5"></td>
-            <td id="rr6"></td>
-            <td id="rr7"></td>
-            <td id="rr8"></td>
-            <td id="rr9"></td>
-            <td id="rr10"></td>
-        </tr>
-        <tr>
-            <td id="frr" title="Flying Renegade Row">FRR</td>
-            <!--<td><input type="text" size="1"></td>
-            <td id="ideal20"></td>-->
-            <td id="frr1"></td>
-            <td id="frr2"></td>
-            <td id="frr3"></td>
-            <td id="frr4"></td>
-            <td id="frr5"></td>
-            <td id="frr6"></td>
-            <td id="frr7"></td>
-            <td id="frr8"></td>
-            <td id="frr9"></td>
-            <td id="frr10"></td>
-        </tr>
-        <tr>
-            <td id="saw" title="Saw">Saw</td>
-            <!--<td><input type="text" size="1"></td>
-            <td id="ideal21"></td>-->
-            <td id="saw1"></td>
-            <td id="saw2"></td>
-            <td id="saw3"></td>
-            <td id="saw4"></td>
-            <td id="saw5"></td>
-            <td id="saw6"></td>
-            <td id="saw7"></td>
-            <td id="saw8"></td>
-            <td id="saw9"></td>
-            <td id="saw10"></td>
-        </tr>
-        <tr>
-            <td id="cp" title="Curl & Press">C&P</td>
-            <!--<td><input type="text" size="1"></td>
-            <td id="ideal22"></td>-->
-            <td id="cp1"></td>
-            <td id="cp2"></td>
-            <td id="cp3"></td>
-            <td id="cp4"></td>
-            <td id="cp5"></td>
-            <td id="cp6"></td>
-            <td id="cp7"></td>
-            <td id="cp8"></td>
-            <td id="cp9"></td>
-            <td id="cp10"></td>
-        </tr>
-        <tr>
-            <td id="sp" title="Side Press">SP</td>
-            <!--<td><input type="text" size="1"></td>
-            <td id="ideal23"></td>-->
-            <td id="sp1"></td>
-            <td id="sp2"></td>
-            <td id="sp3"></td>
-            <td id="sp4"></td>
-            <td id="sp5"></td>
-            <td id="sp6"></td>
-            <td id="sp7"></td>
-            <td id="sp8"></td>
-            <td id="sp9"></td>
-            <td id="sp10"></td>
-        </tr>
-        <tr>
-            <td id="sw" title="Swing">Sw</td>
-            <!--<td><input type="text" size="1"></td>
-            <td id="ideal24"></td>-->
-            <td id="sw1"></td>
-            <td id="sw2"></td>
-            <td id="sw3"></td>
-            <td id="sw4"></td>
-            <td id="sw5"></td>
-            <td id="sw6"></td>
-            <td id="sw7"></td>
-            <td id="sw8"></td>
-            <td id="sw9"></td>
-            <td id="sw10"></td>
-        </tr>
-        <tr>
-            <td id="trsw" title="Triple Extension Swing">TripSw</td>
-            <!--<td><input type="text" size="1"></td>
-            <td id="ideal25"></td>-->
-            <td id="trsw1"></td>
-            <td id="trsw2"></td>
-            <td id="trsw3"></td>
-            <td id="trsw4"></td>
-            <td id="trsw5"></td>
-            <td id="trsw6"></td>
-            <td id="trsw7"></td>
-            <td id="trsw8"></td>
-            <td id="trsw9"></td>
-            <td id="trsw10"></td>
-        </tr>
-        </tbody>
-    </table>
-    <br>
-    ENLISTED: <img src="../static/images/1.png"> Recruit <img src="../static/images/2.png"> Rookie <img
-        src="../static/images/3.png"> Private <img src="../static/images/4.png"> Corporal <img
-        src="../static/images/5.png">
-    Sergeant <br>
-    OFFICERS: <img src="../static/images/6.png"> Lieutenant <img src="../static/images/8.png"> Captain <img
-        src="../static/images/7.png"> Major <img src="../static/images/9.png"> Colonel <img
-        src="../static/images/10.png">
-    General
+    <div class="table-responsive">
+        <table class="table table-striped" id="secondary">
+            <thead>
+            <tr>
+                <th>Insignia</th>
+                <!--<th></th>
+                <th></th>-->
+                <th><img src="../static/images/1.png"></th>
+                <th><img src="../static/images/2.png"></th>
+                <th><img src="../static/images/3.png"></th>
+                <th><img src="../static/images/4.png"></th>
+                <th><img src="../static/images/5.png"></th>
+                <th><img src="../static/images/6.png"></th>
+                <th><img src="../static/images/8.png"></th>
+                <th><img src="../static/images/7.png"></th>
+                <th><img src="../static/images/9.png"></th>
+                <th><img src="../static/images/10.png"></th>
+            </tr>
+            <tr>
+                <th>Ranks</th>
+                <!--<th>Actual</th>
+                <th>Ideal</th>-->
+                <th id="beginner2">E-1</th>
+                <th>E-2</th>
+                <th>E-3</th>
+                <th>E-4</th>
+                <th id="trained2">E-5</th>
+                <th>O-1</th>
+                <th>O-2</th>
+                <th id="skilled2">O-3</th>
+                <th>O-4</th>
+                <th id="master2">O-5</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td id="gm" title="Barbell Good Morning">GM</td>
+                <!--<td><input type="text" size="1" id="actual4" onchange="movementsController.calculateLevels()" oninput="movementsController.calculateLevels()"></td>
+                <td id="ideal4"></td>-->
+                <td id="gm1"></td>
+                <td id="gm2"></td>
+                <td id="gm3"></td>
+                <td id="gm4"></td>
+                <td id="gm5"></td>
+                <td id="gm6"></td>
+                <td id="gm7"></td>
+                <td id="gm8"></td>
+                <td id="gm9"></td>
+                <td id="gm10"></td>
+            </tr>
+            <tr>
+                <td id="bor" title="Bent Over Row">BOR</td>
+                <!--<td><input type="text" size="1" id="actual14"></td>
+                <td id="ideal14"></td>-->
+                <td id="bor1"></td>
+                <td id="bor2"></td>
+                <td id="bor3"></td>
+                <td id="bor4"></td>
+                <td id="bor5"></td>
+                <td id="bor6"></td>
+                <td id="bor7"></td>
+                <td id="bor8"></td>
+                <td id="bor9"></td>
+                <td id="bor10"></td>
+            </tr>
+            <tr>
+                <td id="rdl" title="Romanian Deadlift">RDL</td>
+                <!--<td><input type="text" size="1" id="actual10"></td>
+                <td id="ideal10"></td>-->
+                <td id="rdl1"></td>
+                <td id="rdl2"></td>
+                <td id="rdl3"></td>
+                <td id="rdl4"></td>
+                <td id="rdl5"></td>
+                <td id="rdl6"></td>
+                <td id="rdl7"></td>
+                <td id="rdl8"></td>
+                <td id="rdl9"></td>
+                <td id="rdl10"></td>
+            </tr>
+            <tr>
+                <td id="fct" title="Full Contact Twist">FCT</td>
+                <!--<td><input type="text" size="1"></td>
+                <td id="ideal16"></td>-->
+                <td id="fct1"></td>
+                <td id="fct2"></td>
+                <td id="fct3"></td>
+                <td id="fct4"></td>
+                <td id="fct5"></td>
+                <td id="fct6"></td>
+                <td id="fct7"></td>
+                <td id="fct8"></td>
+                <td id="fct9"></td>
+                <td id="fct10"></td>
+            </tr>
+            <tr>
+                <td id="sb" title="Barbell Side Bend">SB</td>
+                <!--<td><input type="text" size="1"></td>
+                <td id="ideal17"></td>-->
+                <td id="sb1"></td>
+                <td id="sb2"></td>
+                <td id="sb3"></td>
+                <td id="sb4"></td>
+                <td id="sb5"></td>
+                <td id="sb6"></td>
+                <td id="sb7"></td>
+                <td id="sb8"></td>
+                <td id="sb9"></td>
+                <td id="sb10"></td>
+            </tr>
+            <tr>
+                <td id="mbp" title="Milko Bench Press">MBP</td>
+                <!--<td><input type="text" size="1"></td>
+                <td id="ideal18"></td>-->
+                <td id="mbp1"></td>
+                <td id="mbp2"></td>
+                <td id="mbp3"></td>
+                <td id="mbp4"></td>
+                <td id="mbp5"></td>
+                <td id="mbp6"></td>
+                <td id="mbp7"></td>
+                <td id="mbp8"></td>
+                <td id="mbp9"></td>
+                <td id="mbp10"></td>
+            </tr>
+            <tr>
+                <td id="rr" title="Renegade Row">RR</td>
+                <!--<td><input type="text" size="1"></td>
+                <td id="ideal19"></td>-->
+                <td id="rr1"></td>
+                <td id="rr2"></td>
+                <td id="rr3"></td>
+                <td id="rr4"></td>
+                <td id="rr5"></td>
+                <td id="rr6"></td>
+                <td id="rr7"></td>
+                <td id="rr8"></td>
+                <td id="rr9"></td>
+                <td id="rr10"></td>
+            </tr>
+            <tr>
+                <td id="frr" title="Flying Renegade Row">FRR</td>
+                <!--<td><input type="text" size="1"></td>
+                <td id="ideal20"></td>-->
+                <td id="frr1"></td>
+                <td id="frr2"></td>
+                <td id="frr3"></td>
+                <td id="frr4"></td>
+                <td id="frr5"></td>
+                <td id="frr6"></td>
+                <td id="frr7"></td>
+                <td id="frr8"></td>
+                <td id="frr9"></td>
+                <td id="frr10"></td>
+            </tr>
+            <tr>
+                <td id="saw" title="Saw">Saw</td>
+                <!--<td><input type="text" size="1"></td>
+                <td id="ideal21"></td>-->
+                <td id="saw1"></td>
+                <td id="saw2"></td>
+                <td id="saw3"></td>
+                <td id="saw4"></td>
+                <td id="saw5"></td>
+                <td id="saw6"></td>
+                <td id="saw7"></td>
+                <td id="saw8"></td>
+                <td id="saw9"></td>
+                <td id="saw10"></td>
+            </tr>
+            <tr>
+                <td id="cp" title="Curl & Press">C&P</td>
+                <!--<td><input type="text" size="1"></td>
+                <td id="ideal22"></td>-->
+                <td id="cp1"></td>
+                <td id="cp2"></td>
+                <td id="cp3"></td>
+                <td id="cp4"></td>
+                <td id="cp5"></td>
+                <td id="cp6"></td>
+                <td id="cp7"></td>
+                <td id="cp8"></td>
+                <td id="cp9"></td>
+                <td id="cp10"></td>
+            </tr>
+            <tr>
+                <td id="sp" title="Side Press">SP</td>
+                <!--<td><input type="text" size="1"></td>
+                <td id="ideal23"></td>-->
+                <td id="sp1"></td>
+                <td id="sp2"></td>
+                <td id="sp3"></td>
+                <td id="sp4"></td>
+                <td id="sp5"></td>
+                <td id="sp6"></td>
+                <td id="sp7"></td>
+                <td id="sp8"></td>
+                <td id="sp9"></td>
+                <td id="sp10"></td>
+            </tr>
+            <tr>
+                <td id="sw" title="Swing">Sw</td>
+                <!--<td><input type="text" size="1"></td>
+                <td id="ideal24"></td>-->
+                <td id="sw1"></td>
+                <td id="sw2"></td>
+                <td id="sw3"></td>
+                <td id="sw4"></td>
+                <td id="sw5"></td>
+                <td id="sw6"></td>
+                <td id="sw7"></td>
+                <td id="sw8"></td>
+                <td id="sw9"></td>
+                <td id="sw10"></td>
+            </tr>
+            <tr>
+                <td id="trsw" title="Triple Extension Swing">TripSw</td>
+                <!--<td><input type="text" size="1"></td>
+                <td id="ideal25"></td>-->
+                <td id="trsw1"></td>
+                <td id="trsw2"></td>
+                <td id="trsw3"></td>
+                <td id="trsw4"></td>
+                <td id="trsw5"></td>
+                <td id="trsw6"></td>
+                <td id="trsw7"></td>
+                <td id="trsw8"></td>
+                <td id="trsw9"></td>
+                <td id="trsw10"></td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        ENLISTED: <img src="../static/images/1.png"> Recruit <img src="../static/images/2.png"> Rookie <img
+            src="../static/images/3.png"> Private <img src="../static/images/4.png"> Corporal <img
+            src="../static/images/5.png">
+        Sergeant <br>
+        OFFICERS: <img src="../static/images/6.png"> Lieutenant <img src="../static/images/8.png"> Captain <img
+            src="../static/images/7.png"> Major <img src="../static/images/9.png"> Colonel <img
+            src="../static/images/10.png">
+        General
+    </div>
     <!--<div class="foo green"></div>&nbsp;Trained: you have become better [slow adaptation]<br>
     <div class="foo blue"></div>&nbsp;Skilled: you have grown to a more advanced state [very slow adaptation]<br>
     <div class="foo red"></div>&nbsp;Master: you have reached mastery [potential limit]-->
+    <footer class="footer">&copy;2015-2019 Yavor Grancharov</footer>
 </div>
-<footer class="footer">&copy;2015-2019 Yavor Grancharov</footer>
 </body>
 </html>
