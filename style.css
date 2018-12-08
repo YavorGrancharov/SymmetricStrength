@@ -2,12 +2,57 @@
     box-sizing: border-box;
 }
 
-h2, h4, .footer {
+.col-sm-11 h2 {
     text-align: center;
+    color: #424756;
+}
+
+.col-lg-6 h3 {
+    color: #424756;
+}
+
+.icon-block h4 {
+    color: #424756;
+}
+
+.icon-contacts h5 {
+    text-align: center;
+    color: #424756;
+}
+
+.container h2 {
+    color: #424756;
+}
+
+.container h4 {
+    text-align: center;
+    color: #424756;
+}
+
+#navbarMain {
+    background-color: #e1d798;
+}
+
+.navbar a .navbar-brand {
+    color: #424756;
+}
+
+.footer {
+    text-align: center;
+    color: #424756;
+}
+
+strong {
+    color: #424756;
+}
+
+.table-responsive {
+    color: #424756;
 }
 
 .table, .table-striped, td {
     text-align: center;
+    color: #424756;
 }
 
 body {
@@ -110,8 +155,13 @@ input {
     border: 1px solid rgba(0, 0, 0, .2);
 }*/
 
+small {
+    color: #424756;
+}
+
 p {
     text-align: justify;
+    color: #424756;
 }
 
 #beginner, #trained, #skilled, #master {
@@ -254,15 +304,15 @@ p {
     font-family: MKStencilsansBlack;
 }
 
-ul li {
-    font-size: 112%;
-}
-
-ul.nav li a {
+ul.navbar-nav li a {
     display: block;
     text-decoration: none;
     color: #424756;
-    padding: 5px;
+    font-size: 112%;
+}
+
+ul li {
+    color: #424756;
 }
 
 img {
@@ -291,8 +341,16 @@ ul.navbar-nav li a:hover {
     width: auto;
 }
 
-@media (min-width: 992px) {
+.card-header .display-4 {
+    color: #424756;
+}
 
+.card-block .card-title {
+    color: #424756;
+}
+
+.list-group li {
+    color: #424756;
 }
 
 .display-4:hover, .list-group-item:hover {
@@ -302,10 +360,16 @@ ul.navbar-nav li a:hover {
 #chevron {
     display: inline-block;
     text-align: justify;
+    color: #424756;
     /*-webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);*/
 }
 
-.navbar {
+.navbar .navbar-expand-lg .navbar-light .bg-light {
+    background-color: #e1d798;
+    color: #424756;
+}
+
+.navbar-default {
     background-color: #e1d798;
 }
