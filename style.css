@@ -24,16 +24,16 @@
     color: #424756;
 }
 
-.container h4 {
-    text-align: center;
+.container h5 {
     color: #424756;
 }
 
-#navbarMain {
-    background-color: #e1d798;
+.container h1 {
+    color: #424756;
 }
 
-.navbar a .navbar-brand {
+.container h4 {
+    text-align: center;
     color: #424756;
 }
 
@@ -91,7 +91,7 @@ input {
 }
 
 .container {
-    padding: 1%;
+    padding: 0.5%;
     font-family: MKStencilsansBlack;
 }
 
@@ -300,6 +300,7 @@ p {
 }
 
 .footer {
+    background-color: #424756;
     margin-top: 10%;
     font-family: MKStencilsansBlack;
 }
@@ -309,10 +310,6 @@ ul.navbar-nav li a {
     text-decoration: none;
     color: #424756;
     font-size: 112%;
-}
-
-ul li {
-    color: #424756;
 }
 
 img {
@@ -337,6 +334,8 @@ ul.navbar-nav li a:hover {
 }
 
 .carousel-item img {
+    z-index: 1;
+    position: fixed;
     height: 100%;
     width: auto;
 }
@@ -365,11 +364,10 @@ ul.navbar-nav li a:hover {
     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);*/
 }
 
-.navbar .navbar-expand-lg .navbar-light .bg-light {
-    background-color: #e1d798;
-    color: #424756;
+.navbar-toggler {
+    color: whitesmoke;
 }
 
-.navbar-default {
-    background-color: #e1d798;
+.footer p {
+    text-align: center;
 }

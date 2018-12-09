@@ -1,0 +1,27 @@
+.footers a {color:#424756;}
+.footers p {color:#424756;}
+.footers ul {line-height:30px;}
+#social-fb:hover {
+    color: #3b5998;
+    transition:all .001s;
+}
+#social-tw:hover {
+    color: #ff0000;
+    transition:all .001s;
+}
+#social-gp:hover {
+    color: #dd4b39;
+    transition:all .001s;
+}
+#social-em:hover {
+    color: #3f729b;
+    transition:all .001s;
+}
+
+.disclaimer {
+    text-align: justify;
+}
+
+.list-unstyled a:hover {
+    color: #6ea171;
+}
