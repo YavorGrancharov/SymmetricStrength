@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-.col-sm-11 h2 {
+.col-sm-12 h2 {
     text-align: center;
     color: #424756;
 }
@@ -66,9 +66,9 @@ body {
 }
 
 #logo {
-    -webkit-filter: drop-shadow(2px 2px 2px #696969);
-    filter: drop-shadow(2px 2px 2px #696969);
-    max-width: 105px;
+    /*-webkit-filter: drop-shadow(2px 2px 2px #696969);
+    filter: drop-shadow(2px 2px 2px #696969);*/
+    max-width: 80px;
     width: 100%;
     height: auto;
     display: block;
@@ -99,6 +99,10 @@ input {
     cursor: pointer;
 }
 
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
 #welcome {
     width: 100%;
     height: auto;
@@ -119,7 +123,7 @@ input {
 }
 
 .rounded-circle {
-    width: 40%;
+    width: 60%;
     height: auto;
 }
 
