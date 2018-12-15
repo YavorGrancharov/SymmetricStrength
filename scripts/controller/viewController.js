@@ -22,7 +22,14 @@ let viewController = (() => {
         }
     }
 
+    function popover() {
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();
+        });
+    }
+
     return {
-        toggle
+        toggle,
+        popover
     }
 })();

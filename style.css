@@ -118,6 +118,29 @@ input {
     text-align: left;
 }
 
+#ranks .list-group-item {
+    -webkit-transform : scale(1.0);
+}
+
+#slogans .list-group-item {
+    -webkit-transform : scale(1.0);
+}
+
+a {
+    color: #4d784e;
+}
+
+.popover-body {
+    font-weight: 200;
+    color: #4d784e;
+    font-size: 125%;
+    font-family: MKStencilsansBlack;
+}
+
+.mb-4 img {
+    display: block;
+}
+
 .price {
     font-size: 125%;
     color: #4d784e;
