@@ -61,7 +61,7 @@ body {
     color: #424756;
 }
 
-#sex, #height, #weight, #age, #name {
+#sex, #height, #weight, #age, #name, #round, #reps {
     font-size: 100%;
     color: #424756;
 }
@@ -96,7 +96,7 @@ input {
     font-family: MKStencilsansBlack;
 }
 
-#sex:hover, #height:hover, #weight:hover, #age:hover {
+#sex:hover, #height:hover, #weight:hover, #age:hover, #round, #reps {
     cursor: pointer;
 }
 
