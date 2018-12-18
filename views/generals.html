@@ -19,9 +19,7 @@
             crossorigin="anonymous"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script><!--for popups to work-->
-
     <script src="../scripts/controller/movementsController.js" async></script>
-    <script src="../scripts/controller/viewController.js" async></script>
 </head>
 <body class="bg-light">
 <div class="container">
@@ -120,7 +118,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-4 footers-one">
                     <div class="footers-logo">
-                        <img src="../static/images/letter-s-logo-1_burned_crop.png" alt="Logo">
+                        <img src="../static/images/logo.png" alt="Logo">
                     </div>
                     <div class="footers-info mt-3">
                         <p>Cras sociis natoque penatibus et magnis Lorem Ipsum tells about the compmany right now
@@ -170,7 +168,9 @@
     </section>
 </div>
 <script>
-    viewController.popover();
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+    });
 </script>
 </body>
 </html>
