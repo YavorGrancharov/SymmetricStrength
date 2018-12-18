@@ -7,8 +7,9 @@ let viewController = (() => {
         el.style.display = "none";
     }
 
-    function toggle(el) {
-        el = document.getElementById("accordion").children;
+    function toggle() {
+        let el = document.getElementsByClassName("card-header")[1].children;
+        console.log(el)
         for (let index in el) {
             if(el.hasOwnProperty(index)) {
                 if (el[index].children[1].style.display === "none") {

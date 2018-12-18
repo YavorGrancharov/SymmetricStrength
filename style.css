@@ -4,66 +4,31 @@
 
 .col-sm-12 h2 {
     text-align: center;
-    color: #424756;
-}
-
-.col-lg-6 h3 {
-    color: #424756;
-}
-
-.icon-block h4 {
-    color: #424756;
 }
 
 .icon-contacts h5 {
     text-align: center;
-    color: #424756;
-}
-
-.container h2 {
-    color: #424756;
-}
-
-.container h5 {
-    color: #424756;
-}
-
-.container h1 {
-    color: #424756;
 }
 
 .container h4 {
     text-align: center;
-    color: #424756;
 }
 
 .footer {
     text-align: center;
-    color: #424756;
-}
-
-strong {
-    color: #424756;
-}
-
-.table-responsive {
-    color: #424756;
 }
 
 .table, .table-striped, td {
     text-align: center;
-    color: #424756;
 }
 
 body {
     padding-top: 1em;
     font-size: 107%;
-    color: #424756;
 }
 
 #sex, #height, #weight, #age, #name, #round, #reps {
     font-size: 100%;
-    color: #424756;
 }
 
 #logo {
@@ -89,6 +54,11 @@ input {
 @font-face {
     font-family: MKStencilsansBlack;
     src: url('./static/fonts/MKStencilsansBlack.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Sgt_Gorila-demo-FFP;
+    src: url('./static/fonts/Sgt_Gorila-demo-FFP.ttf') format('truetype');
 }
 
 .container {
@@ -128,6 +98,10 @@ input {
 
 a {
     color: #4d784e;
+}
+
+#mainHeader {
+    font-family: Sgt_Gorila-demo-FFP;
 }
 
 .popover-body {
@@ -175,21 +149,8 @@ a {
     border-color: lightgray;
 }
 
-/*.foo {
-    float: left;
-    width: 20px;
-    height: 20px;
-
-    border: 1px solid rgba(0, 0, 0, .2);
-}*/
-
-small {
-    color: #424756;
-}
-
 p {
     text-align: justify;
-    color: #424756;
 }
 
 #beginner, #trained, #skilled, #master {
@@ -328,7 +289,6 @@ p {
 }
 
 .footer {
-    background-color: #424756;
     margin-top: 10%;
     font-family: MKStencilsansBlack;
 }
@@ -336,7 +296,6 @@ p {
 ul.navbar-nav li a {
     display: block;
     text-decoration: none;
-    color: #424756;
     font-size: 112%;
 }
 
@@ -368,18 +327,6 @@ ul.navbar-nav li a:hover {
     width: auto;
 }
 
-.card-header .display-4 {
-    color: #424756;
-}
-
-.card-block .card-title {
-    color: #424756;
-}
-
-.list-group li {
-    color: #424756;
-}
-
 .display-4:hover, .list-group-item:hover {
     transform: scale(1.1);
 }
@@ -387,7 +334,6 @@ ul.navbar-nav li a:hover {
 #chevron {
     display: inline-block;
     text-align: justify;
-    color: #424756;
     /*-webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);*/
 }
@@ -399,3 +345,4 @@ ul.navbar-nav li a:hover {
 .footer p {
     text-align: center;
 }
+

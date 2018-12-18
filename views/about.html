@@ -88,16 +88,16 @@
     <hr>
 </div>
 <div class="container">
-    <div id="accordion" onclick="viewController.toggle()">
+    <div id="accordion">
         <div class="card">
             <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
-                    <button class="btn btn-link">
-                        Какво е S.A.S. "Stength Score" и как се определя?
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is Stength Score
                     </button>
                 </h5>
             </div>
-            <div id="collapseOne" style="display: none">
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                 <div class="card-body">
                     Полето "Strength Score" показва къде се намирате в момента спрямо вашият силов генетичен потенциал.
                     В него се взема предвид чистата стойност в килограми на избраните от Вас движения и се съпоставя
@@ -119,12 +119,12 @@
         <div class="card">
             <div class="card-header" id="headingTwo">
                 <h5 class="mb-0">
-                    <button class="btn btn-link">
-                        Какво е "Athletic Score" и как се определя?
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What is Athletic Score
                     </button>
                 </h5>
             </div>
-            <div id="collapseTwo" style="display: none">
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                 <div class="card-body">
                     За разлика от "Strength Score", където не взимаме предвид нито броя движения, които се изпълняват
                     нито
@@ -146,12 +146,12 @@
         <div class="card">
             <div class="card-header" id="headingThree">
                 <h5 class="mb-0">
-                    <button class="btn btn-link">
-                        Какво е "Athletic Score" и как се определя?
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        ?
                     </button>
                 </h5>
             </div>
-            <div id="collapseThree" style="display: none">
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                 <div class="card-body">
                     За разлика от "Strength Score", където не взимаме предвид нито броя движения, които се изпълняват
                     нито
@@ -166,12 +166,12 @@
         <div class="card">
             <div class="card-header" id="headingFour">
                 <h5 class="mb-0">
-                    <button class="btn btn-link">
-                        Какво е "Athletic Score" и как се определя?
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        ?
                     </button>
                 </h5>
             </div>
-            <div id="collapseFour" style="display: none">
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                 <div class="card-body">
                     1. Измерване на процент подкожни мазнини чрез метода на калипометрията. Измерването се извършва на
                     място,
@@ -243,5 +243,8 @@
         </div>
     </section>
 </div>
+<script>
+    viewController.toggle();
+</script>
 </body>
 </html>
