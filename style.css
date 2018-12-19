@@ -61,9 +61,14 @@ input {
     src: url('./static/fonts/Sgt_Gorila-demo-FFP.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: Mont-HeavyDEMO;
+    src: url('./static/fonts/Mont-HeavyDEMO.otf') format('opentype');
+}
+
 .container {
     padding: 0.5%;
-    font-family: MKStencilsansBlack;
+    font-family: Mont-HeavyDEMO;
 }
 
 #sex:hover, #height:hover, #weight:hover, #age:hover, #round, #reps {
@@ -104,11 +109,19 @@ a {
     font-family: Sgt_Gorila-demo-FFP;
 }
 
+.footers-three h5 {
+    font-family: Sgt_Gorila-demo-FFP;
+}
+
+.footers-four h5 {
+    font-family: Sgt_Gorila-demo-FFP;
+}
+
 .popover-body {
     font-weight: 200;
     color: #4d784e;
     font-size: 125%;
-    font-family: MKStencilsansBlack;
+    font-family: Mont-HeavyDEMO;
 }
 
 .mb-4 img {
