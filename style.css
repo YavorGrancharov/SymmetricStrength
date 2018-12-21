@@ -14,6 +14,16 @@
     text-align: center;
 }
 
+.border-0 img {
+    -webkit-filter: drop-shadow(4px 4px 4px #696969);
+    filter: drop-shadow(6px 6px 6px #696969);
+}
+
+.card-img-top {
+    width: 20%;
+    height: auto;
+}
+
 .footer {
     text-align: center;
 }
@@ -107,6 +117,11 @@ a {
 
 #mainHeader {
     font-family: Sgt_Gorila-demo-FFP;
+}
+
+.thumb-contenido img {
+    width: 100%;
+    height: auto;
 }
 
 .footers-three h5 {
