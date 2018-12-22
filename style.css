@@ -81,11 +81,6 @@ input {
     src: url('./static/fonts/Mont-HeavyDEMO.otf') format('opentype');
 }
 
-@font-face {
-    font-family: Walkway UltraBold;
-    src: url('./static/fonts/Walkway UltraBold.ttf') format('truetype');
-}
-
 .container {
     padding: 0.5%;
     font-family: Mont-HeavyDEMO;
@@ -95,9 +90,7 @@ input {
     cursor: pointer;
 }
 
-.dropdown:hover > .dropdown-menu {
-    display: block;
-}
+
 
 #welcome {
     width: 100%;
@@ -142,7 +135,7 @@ nav ul li:hover > ul {
 .popover-body {
     font-weight: 200;
     color: #4d784e;
-    font-size: 125%;
+    font-size: 107%;
     font-family: Mont-HeavyDEMO;
 }
 
@@ -326,23 +319,17 @@ p {
     font-family: MKStencilsansBlack;
 }
 
-ul.navbar-nav li a {
-    display: block;
-    text-decoration: none;
-    font-size: 112%;
-}
-
 img {
     width: 20px;
     height: auto;
 }
 
-ul.navbar-nav li a:hover {
+/*ul.navbar-nav li a:hover {
     transform: scale(1.1);
     background-color: transparent;
     -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-}
+}*/
 
 .carousel-item {
     height: 400px;
