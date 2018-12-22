@@ -19,7 +19,7 @@
     filter: drop-shadow(6px 6px 6px #696969);
 }
 
-#pepsi_logo, #army_logo {
+#pepsi_logo, #army_logo, #pepsi, #camo {
     -webkit-filter: drop-shadow(0px 0px 0px #696969);
     filter: drop-shadow(0px 0px 0px #696969);
 }
@@ -81,6 +81,11 @@ input {
     src: url('./static/fonts/Mont-HeavyDEMO.otf') format('opentype');
 }
 
+@font-face {
+    font-family: Walkway UltraBold;
+    src: url('./static/fonts/Walkway UltraBold.ttf') format('truetype');
+}
+
 .container {
     padding: 0.5%;
     font-family: Mont-HeavyDEMO;
@@ -129,12 +134,9 @@ a {
     height: auto;
 }
 
-.footers-three h5 {
-    font-family: Sgt_Gorila-demo-FFP;
-}
-
-.footers-four h5 {
-    font-family: Sgt_Gorila-demo-FFP;
+nav ul li:hover > ul {
+    position: absolute;
+    display: block;
 }
 
 .popover-body {
@@ -164,10 +166,8 @@ a {
 }
 
 #information {
-    border-bottom: 1px solid;
-    border-bottom-color: lightgray;
-    border: 1px solid;
-    border-color: lightgray;
+    border: 1px solid lightgray;
+    border-bottom: 5px solid lightgray;
 }
 
 #main {
