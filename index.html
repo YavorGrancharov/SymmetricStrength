@@ -29,7 +29,7 @@
             <h4><sup>home of the strong on the road to might</sup></h4>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.html">Squad Bay</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,9 +39,23 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="col-md-6">
                 <ul class="navbar-nav mr-auto float-left">
-                    <li class="nav-item">
-                        <a class="nav-link" href="views/equalizer.html">Grid</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PDA
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <a class="dropdown-item" href="views/equalizer.html">Iron Grid</a>
+                            <a class="dropdown-item" href="calcs/endurance_calculator.html">Endurance</a>
+                            <a class="dropdown-item" href="calcs/strength_calculator.html">Strength</a>
+                            <a class="dropdown-item" href="calcs/lbm_calculator.html">LBM</a>
+                            <a class="dropdown-item" href="calcs/fat_calculator.html">Fat</a>
+                            <a class="dropdown-item" href="calcs/nutrition_calculator.html">Nutrition</a>
+                        </div>
                     </li>
+                    <!--<li class="nav-item">
+                        <a class="nav-link" href="views/equalizer.html">Grid</a>
+                    </li>-->
                     <li style="color: #6ea171;">&#9733;</li>
                     <li class="nav-item">
                         <a class="nav-link" href="views/reports.html">Reports</a>
@@ -131,6 +145,34 @@
             amet..", comes from a line in section 1.10.32.</p>
     </section>
     <hr>
+    <nav class="navbar fixed-bottom navbar-expand-sm bg-light border border-top-secondary">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Brand -->
+        <img style="width: 30px; height: auto" src="static/images/logo_transparent_black_web%20copy.png">
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="nav-content">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="calcs/endurance_calculator.html">Endurance Calculator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calcs/strength_calculator.html">Strength Endurance Calculator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calcs/lbm_calculator.html">Ideal LBM (lean body mass)</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calcs/fat_calculator.html">Fat Mass Calculator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calcs/nutrition_calculator.html">Nutrition Calculator</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="row">
         <div class="col-xs-8 col-sm-6 col-md-4 footers-one">
             <div class="footers-logo">
@@ -219,6 +261,7 @@
             </div>
         </div>
     </section>
+    <br><br>
 </div>
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>

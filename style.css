@@ -14,12 +14,12 @@
     text-align: center;
 }
 
-.border-0 img {
+/*.border-0 img {
     -webkit-filter: drop-shadow(4px 4px 4px #696969);
     filter: drop-shadow(6px 6px 6px #696969);
-}
+}*/
 
-#pepsi_logo, #army_logo, #pepsi, #camo {
+#pepsi_logo, #army_logo, #pepsi, #camo, #cs {
     -webkit-filter: drop-shadow(0px 0px 0px #696969);
     filter: drop-shadow(0px 0px 0px #696969);
 }
@@ -63,10 +63,15 @@ input {
     src: url('./static/fonts/Mont-HeavyDEMO.otf') format('opentype');
 }
 
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('./static/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
 .container {
     width: 100%;
     padding: 0.5%;
-    font-family: Mont-HeavyDEMO;
+    font-family: Roboto-Regular;
 }
 
 #sex:hover, #height:hover, #weight:hover, #age:hover, #round, #reps {
@@ -78,11 +83,11 @@ input {
 }
 
 #ranks .list-group-item {
-    -webkit-transform : scale(1.0);
+    -webkit-transform: scale(1.0);
 }
 
 #slogans .list-group-item {
-    -webkit-transform : scale(1.0);
+    -webkit-transform: scale(1.0);
 }
 
 a {
@@ -108,7 +113,7 @@ nav ul li:hover > ul {
     font-weight: 200;
     color: #4d784e;
     font-size: 107%;
-    font-family: Mont-HeavyDEMO;
+    font-family: Roboto-Regular;
 }
 
 .mb-4 img {
@@ -135,7 +140,7 @@ nav ul li:hover > ul {
     border-bottom: 5px solid lightgray;
 }
 
-#main {
+#main, #main2, #main3 {
     border-bottom: 1px solid;
     border-bottom-color: lightgray;
     border: 1px solid;
@@ -149,6 +154,10 @@ nav ul li:hover > ul {
 
 p {
     text-align: justify;
+}
+
+#bp, #dl, #dip, #mp, #sdl, #sq, #lng, #pup {
+    width: 5%;
 }
 
 #beginner, #trained, #skilled, #master {
@@ -328,8 +337,6 @@ img {
     height: auto;
 }
 
-
-
 /* Sticky footer style and color
 -------------------------------------------------- */
 footer {
@@ -339,12 +346,12 @@ footer {
 
 footer a {
     color: #999;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 footer a:hover, footer a:focus {
     color: #aaa;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 footer .form-control {
@@ -354,6 +361,3 @@ footer .form-control {
     color: #d1d2d2;
     padding: 0.7em 1em;
 }
-
-
-
