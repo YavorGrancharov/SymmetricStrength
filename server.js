@@ -9,7 +9,7 @@ app.use("/scripts", express.static(__dirname + '/scripts'));
 
 // viewed at based directory http://localhost:8080/
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + 'views/equalizer.html'));
+    res.sendFile(path.join(__dirname + 'views/symmetric_strength.html'));
 });
 
 // add other routes below

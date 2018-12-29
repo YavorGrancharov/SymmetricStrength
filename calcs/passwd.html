@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    function passwd() {
+        let source = '../password';
+        let pass = prompt("Enter Password", "");
+        $.ajax({
+            type: "GET",
+            url: source
+        }).then(function (res) {
+            //res = res.substring(1, res.length - 1);
+            if (pass.toLowerCase() === res) {
+                alert("Enjoy");
+                window.location.href = ("../calcs/endurance_calculator.html");
+            } else {
+                prompt("Access denied! Password is incorrect, try again!", "");
+            }
+        });
+    }
+    passwd();
+</script>
+</body>
+</html>
