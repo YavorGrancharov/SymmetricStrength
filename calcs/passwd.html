@@ -13,9 +13,7 @@
             type: "GET",
             url: source
         }).then(function (res) {
-            //res = res.substring(1, res.length - 1);
             if (pass.toLowerCase() === res) {
-                alert("Enjoy");
                 window.location.href = ("../calcs/endurance_calculator.html");
             } else {
                 prompt("Access denied! Password is incorrect, try again!", "");
