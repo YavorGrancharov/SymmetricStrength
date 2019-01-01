@@ -56,16 +56,6 @@ input {
 }
 
 @font-face {
-    font-family: MKStencilsansBlack;
-    src: url('./static/fonts/MKStencilsansBlack.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: Sgt_Gorila-demo-FFP;
-    src: url('./static/fonts/Sgt_Gorila-demo-FFP.ttf') format('truetype');
-}
-
-@font-face {
     font-family: Mont-HeavyDEMO;
     src: url('./static/fonts/Mont-HeavyDEMO.otf') format('opentype');
 }
@@ -102,7 +92,7 @@ a {
 }
 
 #mainHeader {
-    font-family: Sgt_Gorila-demo-FFP;
+    font-family: Mont-HeavyDEMO;
     text-align: center;
 }
 

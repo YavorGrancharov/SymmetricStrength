@@ -1,29 +1,39 @@
 .footers a {color:#000000;}
+
 .footers p {color:#000000;}
+
 .footers ul {line-height:30px;}
-#social-fb:hover {
+
+/*.fa-facebook:hover {
     color: #3b5998;
     transition:all .001s;
 }
-#social-tw:hover {
+
+.fa-youtube:hover {
     color: #ff0000;
     transition:all .001s;
 }
+
+.blogger:hover {
+    color: #dd4b39;
+}
+
 #social-gp:hover {
     color: #dd4b39;
     transition:all .001s;
 }
-#social-em:hover {
+
+.fa-instagram:hover {
     color: #3f729b;
     transition:all .001s;
-}
+}*/
 
 .disclaimer {
     text-align: justify;
 }
 
 .list-unstyled a:hover {
-    color: #6ea171;
+    color: #aaa;
 }
 
 .footers-logo img {

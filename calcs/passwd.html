@@ -2,24 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
 <script type="text/javascript">
     function passwd() {
-        let source = '../password';
-        let pass = prompt("Enter Password", "");
+        let source = "../password";
         $.ajax({
             type: "GET",
             url: source
         }).then(function (res) {
-            if (pass.toLowerCase() === res) {
-                window.location.href = ("../calcs/endurance_calculator.html");
-            } else {
-                prompt("Access denied! Password is incorrect, try again!", "");
+            let secret;
+            while (secret !== res) {
+                secret = prompt("Access denied. Enter Password!", "");
+                if (secret === res) {
+                    window.location.href = ("../calcs/endurance_calculator.html");
+                    break;
+                }
             }
+        }).catch(function (err) {
+            console.log(err);
         });
     }
+
     passwd();
 </script>
 </body>
