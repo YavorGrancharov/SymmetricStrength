@@ -65,6 +65,11 @@ input {
     src: url('./static/fonts/Roboto-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: Sgt_Gorila-demo-FFP;
+    src: url('./static/fonts/Sgt_Gorila-demo-FFP.ttf') format('truetype');
+}
+
 .container {
     width: 100%;
     padding: 0.5%;
@@ -92,7 +97,7 @@ a {
 }
 
 #mainHeader {
-    font-family: Mont-HeavyDEMO;
+    font-family: Sgt_Gorila-demo-FFP;
     text-align: center;
 }
 

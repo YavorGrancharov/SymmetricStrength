@@ -7,7 +7,7 @@
 </head>
 <body>
 <script type="text/javascript">
-    function passwd(location) {
+    function passwd() {
         let source = "../password";
         $.ajax({
             type: "GET",
@@ -26,7 +26,7 @@
                 rounds++;
             }
         }).catch(function (err) {
-            console.log(err);
+            console.log(err.name + " " + err.message);
         });
     }
 
