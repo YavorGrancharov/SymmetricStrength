@@ -8,9 +8,46 @@
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link href="../node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
     <style type="text/css">
-        .error-template {padding: 40px 15px;text-align: center;}
-        .error-actions {margin-top:15px;margin-bottom:15px;}
-        .error-actions .btn { margin-right:10px; }
+        .error-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+
+        .error-actions {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .error-actions .btn {
+            margin-right: 10px;
+        }
+
+        @font-face {
+            font-family: Crass;
+            src: url('../static/fonts/Crass.ttf') format('truetype');
+        }
+
+        h2 {
+            font-family: Crass;
+            color: orangered;
+        }
+
+        #warrior {
+            width: 170px;
+            height: auto;
+        }
+
+        h2 {
+            -ms-transform: rotate(20deg); /* IE 9 */
+            -webkit-transform: rotate(20deg); /* Safari */
+            transform: rotate(20deg);
+            position: relative;
+            z-index: 1;
+        }
+
+        p {
+            z-index: 3;
+        }
     </style>
 </head>
 <body>
@@ -18,16 +55,17 @@
     <div class="row">
         <div class="col-md-12">
             <div class="error-template">
-                <h1>
-                    <!--Oops!-->Оппаа!</h1>
-                <h2>
-                    404 Грешка<!--Not Found--></h2>
+                <img src="../static/images/wounded_warrior.png" id="warrior">
+                <h1><!--Oops!-->Оппаа!</h1>
+                <h2>404 ERROR</h2>
                 <div class="error-details">
-                    Съжаляваме, но страницата, която търсихте не беше намерена! <!--Sorry, an error has occured, Requested page not found!-->
+                    <p>Съжаляваме, но страницата, която търсихте не беше намерена!</p>
+                    <!--Sorry, an error has occured, Requested page not found!-->
                 </div>
                 <div class="error-actions">
                     <a href="../index.html" class="btn btn-primary btn-lg">
-                        Начало </a><a href="../views/headquarter.html" class="btn btn-outline-secondary btn-lg"> Свържи се </a>
+                        Начало </a><a href="../views/headquarter.html" class="btn btn-outline-secondary btn-lg"> Свържи
+                    се </a>
                 </div>
             </div>
         </div>
