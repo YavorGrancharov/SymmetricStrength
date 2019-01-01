@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link href="../node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
     <style type="text/css">
+        .container {
+            font-family: Roboto-Regular;
+        }
+
         .error-template {
-            padding: 40px 15px;
+            padding: 22px 15px;
             text-align: center;
         }
 
@@ -27,6 +31,11 @@
             src: url('../static/fonts/Crass.ttf') format('truetype');
         }
 
+        @font-face {
+            font-family: Roboto-Regular;
+            src: url('../static/fonts/Roboto-Regular.ttf') format('truetype');
+        }
+
         h2 {
             font-family: Crass;
             color: orangered;
@@ -42,11 +51,22 @@
             -webkit-transform: rotate(20deg); /* Safari */
             transform: rotate(20deg);
             position: relative;
-            z-index: 1;
+            z-index: -1;
         }
 
         p {
-            z-index: 3;
+            font-weight: 500;
+            z-index: 1;
+        }
+
+        span {
+            font-weight: 400;
+            border: 1px dashed orangered;
+            border-radius: 2px;
+        }
+
+        .text-muted {
+            font-family: Roboto-Regular;
         }
     </style>
 </head>
@@ -59,19 +79,41 @@
                 <h1><!--Oops!-->Оппаа!</h1>
                 <h2>404 ERROR</h2>
                 <div class="error-details">
-                    <p>Съжаляваме, но страницата, която търсихте не беше намерена!</p>
+                    <p>Страницата, която търсите не беше намерена!</p>
                     <!--Sorry, an error has occured, Requested page not found!-->
                 </div>
                 <div class="error-actions">
                     <a href="../index.html" class="btn btn-primary btn-lg">
-                        Начало </a><a href="../views/headquarter.html" class="btn btn-outline-secondary btn-lg"> Свържи
-                    се </a>
+                        Начало </a><a href="../views/headquarter.html" class="btn btn-outline-secondary btn-lg"> Заяви допуск </a>
                 </div>
+                <p>В полето "Съобщение" въведете текст със съдържание: <span title="Click to copy">givemepass</span></p>
             </div>
         </div>
     </div>
+    <section class="copyright">
+        <div class="row text-center">
+            <div class="col-md-12 pt-3">
+                <p class="text-muted text-center">Copyright &copy;2015-2019 A.R.M.Y. STRONG</p>
+            </div>
+        </div>
+    </section>
 </div>
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    const span = document.querySelector("span");
+
+    span.onclick = function () {
+        document.execCommand("copy");
+    };
+
+    span.addEventListener("copy", function(event) {
+        event.preventDefault();
+        if (event.clipboardData) {
+            event.clipboardData.setData("text/plain", span.textContent);
+            console.log(event.clipboardData.getData("text"));
+        }
+    });
+</script>
 </body>
 </html>
