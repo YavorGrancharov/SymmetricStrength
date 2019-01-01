@@ -51,12 +51,14 @@
             -webkit-transform: rotate(20deg); /* Safari */
             transform: rotate(20deg);
             position: relative;
-            z-index: 1;
+            z-index: -1;
+            opacity: 0.5;
+            width: 103%;
         }
 
         p {
             font-weight: 500;
-            z-index: -1;
+            z-index: 1;
         }
 
         span {
@@ -72,10 +74,10 @@
         <div class="col-md-12">
             <div class="error-template">
                 <img src="../static/images/wounded_warrior.png" id="warrior">
-                <h1><!--Oops!-->:БЕЗ ДОСТЪП</h1>
+                <h1><!--Oops!-->БЕЗ ДОСТЪП</h1>
                 <h2>403 FORBIDDEN</h2>
                 <div class="error-details">
-                    <p>Достъпът Ви до търсената страница бе ограничен!</p>
+                    <p>Достъпът Ви до тази страница бе ограничен!</p>
                     <!--Sorry, an error has occured, Requested page not found!-->
                 </div>
                 <div class="error-actions">
