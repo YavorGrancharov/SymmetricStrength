@@ -7,19 +7,23 @@
 </head>
 <body>
 <script type="text/javascript">
-    function passwd() {
+    function passwd(location) {
         let source = "../password";
         $.ajax({
             type: "GET",
             url: source
         }).then(function (res) {
             let secret;
-            while (secret !== res) {
+            let rounds = 1;
+            while (secret !== res && rounds < 4) {
                 secret = prompt("Access denied. Enter Password!", "");
                 if (secret === res) {
                     window.location.href = ("../calcs/endurance_calculator.html");
                     break;
+                } else {
+                    window.location.href = ("../views/notFound.html");
                 }
+                rounds++;
             }
         }).catch(function (err) {
             console.log(err);
