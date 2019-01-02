@@ -167,8 +167,8 @@
                         <ul class="list-unstyled">
                             <li><a href="views/terms.html">Общи условия</a></li>
                             <li><a href="views/policy.html">Принципи</a></li>
-                            <li><a href="#/">Съглашение</a></li>
-                            <li><a href="#/">Атестати</a></li>
+                            <li><a href="views/missing.html">Съглашение</a></li>
+                            <li><a href="views/missing.html">Атестати</a></li>
                         </ul>
                     </div>
                     <div class="col-6">
@@ -176,9 +176,9 @@
                         <ul class="list-unstyled">
                             <li><a href="views/gear.html"><!--Gear-->Униформа</a></li>
                             <li><a href="views/drills.html"><!--Drills-->Система</a></li>
-                            <li><a href="#">Видео</a></li>
+                            <li><a href="views/missing.html">Видео</a></li>
                             <li><a href="views/brainwash.html">Стани вербовчик</a></li>
-                            <li><a href="#">Тапети</a></li>
+                            <li><a href="views/missing.html">Тапети</a></li>
                         </ul>
                     </div>
                 </div>
@@ -191,7 +191,7 @@
                 <br>
             </div>
             <div class="col-md-2">
-                <h5 class="text-md-right">Свържи се с нас</h5>
+                <h5 class="text-md-right">Свръзка</h5>
                 <hr>
             </div>
             <div class="col-md-5">
@@ -229,7 +229,7 @@
     <section class="copyright">
         <div class="row text-center">
             <div class="col-md-12 pt-3">
-                <p class="text-muted text-center">Copyright &copy;2015-2019 A.R.M.Y. STRONG</p>
+                <p class="text-muted text-center">Copyright &copy;2015-2019 <span class="foot">A.R.M.Y. STRONG</span></p>
             </div>
         </div>
     </section>
@@ -238,5 +238,20 @@
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        //setup ajax error handling
+        $.ajaxSetup({
+            error: function (x, status, error) {
+                if (x.status === 404) {
+                    window.location.href ="../views/missing.html";
+                }
+                else {
+                    alert("An error occurred: " + status + "nError: " + error);
+                }
+            }
+        });
+    });
+</script>
 </body>
 </html>

@@ -66,8 +66,8 @@ input {
 }
 
 @font-face {
-    font-family: Sgt_Gorila-demo-FFP;
-    src: url('./static/fonts/Sgt_Gorila-demo-FFP.ttf') format('truetype');
+    font-family: Top Secret;
+    src: url('./static/fonts/Top Secret.ttf') format('truetype');
 }
 
 .container {
@@ -97,8 +97,12 @@ a {
 }
 
 #mainHeader {
-    font-family: Sgt_Gorila-demo-FFP;
+    font-family: Top Secret;
     text-align: center;
+}
+
+.foot {
+    font-family: Mont-HeavyDEMO;
 }
 
 .thumb-contenido img {
