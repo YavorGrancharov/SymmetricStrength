@@ -14,30 +14,36 @@
 
         gtag('config', 'UA-131327406-1');
     </script>
+    <script>
+        window.addEventListener('error', function (e) {
+            e.preventDefault();
+            window.location.href = ("../views/missing");
+        }, true);
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>GO STRONG</title>
-    <link rel="icon" type="image/x-icon" href="static/images/logo.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/testimonials.css">
-    <link rel="stylesheet" href="styles/timeline.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link href="node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
-    <script language="JavaScript1.3" type="text/javascript" src="scripts/engines/jse_form.js"></script>
+    <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/testimonials.css">
+    <link rel="stylesheet" href="../styles/timeline.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="../node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <script language="JavaScript1.3" type="text/javascript" src="../scripts/engines/jse_form.js"></script>
 </head>
 <body style="background-color: #f9f9f9">
 <div class="nav-wrap">
     <div id="lang-selector">
-        <a href="index.html" class="active">BG</a>
+        <a href="../index.html" class="">BG</a>
          | 
-        <a href="en/index.html" class="">EN</a>
+        <a href="../en/index.html" class="active">EN</a>
     </div>
 </div>
 <div class="container" id="wrapper">
     <div class="jumbotron bg-light">
-        <div class="float-left"><img src="static/images/logo.png" id="logo" alt="main-logo"></div>
+        <div class="float-left"><img src="../static/images/logo.png" id="logo" alt="main-logo"></div>
         <div class="row">
             <!--<div class="col-md-1">
                 <img id="logo" src="static/images/logo_transparent_camo%20copy.png">
@@ -49,31 +55,31 @@
         </div>
         <!--<div class="text-center"><img src="static/images/logo.png" id="logo" alt="logo"></div>-->
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="index.html">Начало
-            </a>
+            <a class="navbar-brand" href="index.html">Bay</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span><img style="opacity: 0.5" src="static/images/drop_btn.png" alt="sergeant-dropdown-icon"></span>
+                <span><img style="opacity: 0.5" src="../static/images/drop_btn.png" alt="sergeant-dropdown-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="col-md-6">
                     <ul class="navbar-nav mr-auto float-left">
                         <li class="nav-item">
-                            <a class="nav-link" href="views/reports.html">Блог</a>
+                            <a class="nav-link" href="views/reports.html">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="views/charge.html">Цени</a>
+                            <a class="nav-link " href="views/charge.html">Charge</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Мешка
+                                Mesh
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="nav-link" href="views/martialLaw.html">Устав</a>
-                                <a class="nav-link" href="views/about.html">ЧЗВ</a>
-                                <a class="nav-link" href="views/platoon.html">Пехота</a>
+                                <a class="nav-link" href="views/martialLaw.html"><!--Martial Law-->Rules</a>
+                                <a class="nav-link" href="views/about.html">FAQ</a>
+                                <!--<a class="dropdown-item" href="#"><!--Reports За сведение</a>-->
+                                <a class="nav-link" href="views/platoon.html">Foot Soldiers</a>
                             </div>
                         </li>
                     </ul>
@@ -81,21 +87,21 @@
                 <div class="col-md-6">
                     <ul class="navbar-nav mr-auto float-right">
                         <li class="nav-item">
-                            <a class="nav-link" href="views/generals.html">Офицери</a>
+                            <a class="nav-link" href="views/generals.html">Murphys</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="views/gallery.html">Галерия</a>
+                            <a class="nav-link" href="views/gallery.html">Gallery</a>
                         </li>
                         <!--<li style="color: #6ea171;">&#9733;</li>-->
                         <li class="nav-item">
-                            <a class="nav-link" href="views/headquarter.html">Щаб квартира</a>
+                            <a class="nav-link" href="views/headquarter.html">Head Quarter</a>
                         </li>
                         <!--<li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
-                               aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe" aria-hidden="true"></i> Language<span class="caret"></span></a>
+                               aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe" aria-hidden="true"></i><span class="caret"></span></a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">EN</a>
-                                <a class="dropdown-item" href="#">BG</a>
+                                <a class="dropdown-item" href="../index.html">bg</a>
+                                <a class="dropdown-item active" href="../en/index.html">en</a>
                             </div>
                         </li>-->
                     </ul>
@@ -107,24 +113,22 @@
 
     <br>
 
-    <h4 class="text-left">Хронология на тренировъчният процес</h4>
-
+    <h4 class="text-left">Chronology of the training process</h4>
     <br>
-
+    <!--first section-->
     <div class="row align-items-center how-it-works d-flex">
         <div class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center">
             <div class="circle font-weight-bold">1</div>
         </div>
         <div class="col-8 text-justify">
-            <h5 class="text-left">Първа сесия</h5>
-            <h6>Първоначален тест за определяне на функционална подвижност (ТФП) на
-                горната и долна половина на тялото. Запознаване с основни движения и
-                техническите изисквания за тяхното правилно и безопасно изпълнение.
-                Контрол на тялото и външни обекти. Запознаване с метода по който се
-                провеждат тренировките, тяхната цел, както и с някои основни понятия
-                и тяхното значение в контекста на силовите сесии.</h6>
+            <h5 class="text-left">First session</h5>
+            <h6>Initial test for determining functional mobility (FMT) of the upper and lower half of the body.
+                Introduction on basic movements and technical requirements for their proper and safe execution.
+                Body control and control of the external objects. Understanding the method of training, its purpose,
+                as well as some basic concepts and their meaning in the context of the free weight training.</h6>
         </div>
     </div>
+    <!--path between 1-2-->
     <div class="row timeline">
         <div class="col-2">
             <div class="corner top-right"></div>
@@ -136,19 +140,20 @@
             <div class="corner left-bottom"></div>
         </div>
     </div>
+    <!--second section-->
     <div class="row align-items-center justify-content-end how-it-works d-flex">
         <div class="col-8 text-justify">
-            <h5 class="text-right">Втора сесия</h5>
-            <h6>Измерване на процент подкожни мазнини чрез метода на калиперометрията.
-                Определяне границите на идеалното активно тегло спрямо пол, височина
-                и костна структура. Набелязване на конкретни цели спрямо резултатите
-                от горните измервания. Задаване на максимален и минимален ежедневен
-                калориен прием. Повтаряне на движенията научени на първа тренировка. </h6>
+            <h5 class="text-right">Second session</h5>
+            <h6>Measuring subcutaneous fat percentage by caliperometry method. Determining the limits of the
+                ideal active weight depending on sex, height and bone structure. Identifying specific targets
+                according to results of the above measurements. Setting maximum and minimum daily calorie intake.
+                Repeat the movements learned at the first training session.</h6>
         </div>
         <div class="col-2 text-center full d-inline-flex justify-content-center align-items-center">
             <div class="circle font-weight-bold">2</div>
         </div>
     </div>
+    <!--path between 2-3-->
     <div class="row timeline">
         <div class="col-2">
             <div class="corner right-bottom"></div>
@@ -160,28 +165,63 @@
             <div class="corner top-left"></div>
         </div>
     </div>
+    <!--third section-->
     <div class="row align-items-center how-it-works d-flex">
         <div class="col-2 text-center top d-inline-flex justify-content-center align-items-center">
             <div class="circle font-weight-bold">3</div>
         </div>
         <div class="col-8">
-            <h5>Четвърто посещение</h5>
-            <h6>Научаване на ново движение. Установени са базовите тежести на научените
-                досега. Наясно сте вече какво е сила, как се развива и защо</h6>
+            <h5>Fourth session</h5>
+            <h6>Learning a new movement. Base weights of the moves learned so far have been established.
+                You are already aware of what power is, how it develops, and why</h6>
         </div>
     </div>
 
     <br>
 
+
+    <!--<nav class="navbar navbar-light bottom navbar-expand-xl border-top-secondary">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content"
+                aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span><img style="opacity: 0.5" src="static/images/drop_btn.png" alt="icon"></span>
+        </button>
+        <h3 class="navbar-brand">Calcs</h3>
+
+
+        <div class="collapse navbar-collapse justify-content-center" id="nav-content">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="calcs/symmetric_strength.html">symmetric strength |</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calcs/passwd.html">endurance |</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="views/missing.html">strength endurance |</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="views/missing.html">ideal lbm </a>
+                </li>
+            </ul>
+        </div>
+    </nav>-->
+
     <hr>
 
-    <h4 class="text-left">Атестати</h4>
+    <h4 class="text-left">Testimonials</h4>
     <div class="row">
         <div class="carousel col-md-6 text-center" data-ride="carousel" data-interval="10000">
+            <!-- Carousel indicators -->
+            <!--<ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>-->
+            <!-- Wrapper for carousel items -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="img-box"
-                         style="background-image: url('static/images/zdravko_raichev.jpg')"></div>
+                         style="background-image: url('../static/images/zdravko_raichev.jpg')"></div>
                     <h6 class="testimonial text-justify">Здравейте! Много Ви благодаря за вниманието и коректното
                         отношение!
                         С удоволствие отново ще бъда Ваш клиент!</h6>
@@ -198,7 +238,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="img-box"
-                         style="background-image: url('static/images/lubomir_krustev.jpg')"></div>
+                         style="background-image: url('../static/images/lubomir_krustev.jpg')"></div>
                     <h6 class="testimonial text-justify">
                         Коректен магазин отнасящ се отговорно и с уважение към клиентите си.
                         Това особено си пролича в случая на рекламация, който имах заради фабричен
@@ -217,7 +257,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="img-box"
-                         style="background-image: url('static/images/daniela_kenanova.jpg')"></div>
+                         style="background-image: url('../static/images/daniela_kenanova.jpg')"></div>
                     <h6 class="testimonial text-justify">Благодаря Ви много за вниманието и за активното съдействие.
                         Аз съм човек, който изключително много цени този тип отношение. Искрено ви благодаря
                         за всичко и бъдете сигурни, че ще имате моите препоръки!</h6>
@@ -239,7 +279,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="img-box"
-                         style="background-image: url('static/images/maria_georgieva.jpg')"></div>
+                         style="background-image: url('../static/images/maria_georgieva.jpg')"></div>
                     <h6 class="testimonial text-justify">Здравейте! Много Ви благодаря за вниманието и коректното
                         отношение!
                         С удоволствие отново ще бъда Ваш клиент!</h6>
@@ -256,7 +296,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="img-box"
-                         style="background-image: url('static/images/georgi_simeonov.jpg')"></div>
+                         style="background-image: url('../static/images/georgi_simeonov.jpg')"></div>
                     <h6 class="testimonial text-justify">
                         Коректен магазин отнасящ се отговорно и с уважение към клиентите си.
                         Това особено си пролича в случая на рекламация, който имах заради фабричен
@@ -275,7 +315,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="img-box"
-                         style="background-image: url('static/images/deyan_vasilev.jpg')"></div>
+                         style="background-image: url('../static/images/deyan_vasilev.jpg')"></div>
                     <h6 class="testimonial text-justify">Благодаря Ви много за вниманието и за активното съдействие.
                         Аз съм човек, който изключително много цени този тип отношение. Искрено ви благодаря
                         за всичко и бъдете сигурни, че ще имате моите препоръки!</h6>
@@ -294,65 +334,63 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-xs-8 col-sm-6 col-md-4 footers-one">
-            <div class="footers-logo">
-                <h5>Карта на сайта</h5>
-            </div>
-        </div>
-    </div>
-    <footer class="footer">
-        <div class="row">
-            <div class="col-md-5">
-                <div class="row">
-                    <div class="col-6">
-                        <h5>Документация </h5>
-                        <ul class="list-unstyled">
-                            <li><a href="views/terms.html">Условия</a></li>
-                            <li><a href="views/policy.html">Политика</a></li>
-                            <li><a href="views/missing.html">Правила</a></li>
-                            <li><a href="views/codeOfEthics.html">Етичен кодекс</a></li>
-                            <li><a href="views/missing.html">Брошура</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-6">
-                        <h5>Занималня </h5>
-                        <ul class="list-unstyled">
-                            <li><a href="views/drills.html">Движения</a></li>
-                            <li><a href="views/missing.html">Видео</a></li>
-                            <li><a href="views/missing.html">GROW Strong</a></li>
-                            <li><a href="views/brainwash.html">Стани вербовчик</a></li>
-                            <li><a href="views/hallOfStrength.html">Зала на Силата</a></li>
-                            <li><a href="views/gear.html">Униформа</a></li>
-                            <li><a href="views/missing.html">Toddler</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <br>
-
-            </div>
-
-            <div class="col-md-6" id="contact">
-                <h5 class="">Вътрешно търсене</h5>
-                <div data-form-type="formoid">
-                    <form name="jse_Form" onsubmit="search_form(jse_Form); return false" method="post">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <input type="text" class="form-control input border" data-form-field="Search"
-                                       placeholder="ключова дума" name="d"> 
-                            </div>
-                            <div class="input-group-btn col-md-4">
-                                <button type="button" class="btn btn-outline-secondary btn-block" onclick="search_form(jse_Form)">
-                                    ТЪРСИ
-                                </button>
-                            </div>
+    <fieldset class="scheduler-border">
+        <legend class="scheduler-border">Sitemap</legend>
+        <footer class="footer">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-6">
+                            <h5>Documentation </h5>
+                            <ul class="list-unstyled">
+                                <li><a href="views/missing.html">Terms</a></li>
+                                <li><a href="views/missing.html">Policy</a></li>
+                                <li><a href="views/missing.html">Rules</a></li>
+                                <li><a href="../views/codeOfEthics.html">Code of ethics</a></li>
+                                <li><a href="views/missing.html">Common standard</a></li>
+                                <li><a href="views/missing.html">Brochure</a></li>
+                            </ul>
                         </div>
-                    </form>
+                        <div class="col-6">
+                            <h5>Explore </h5>
+                            <ul class="list-unstyled">
+                                <li><a href="views/missing.html">Drills</a></li>
+                                <li><a href="views/missing.html">Records</a></li>
+                                <li><a href="views/missing.html">GROW Strong</a></li>
+                                <li><a href="views/missing.html">Be a recruiter</a></li>
+                                <li><a href="../views/hallOfStrength.html">Hall of Strength</a></li>
+                                <li><a href="views/missing.html">Gear</a></li>
+                                <li><a href="views/missing.html">Toddler</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <br>
+
+                </div>
+
+                <div class="col-md-6" id="contact">
+                    <h5 class="">Internal search</h5>
+                    <div data-form-type="formoid">
+                        <form name="jse_Form" onsubmit="search_form(jse_Form); return false" method="post">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control input border" data-form-field="Search"
+                                           placeholder="keyword" name="d"> 
+                                </div>
+                                <div class="input-group-btn col-md-4">
+                                    <button type="button" class="btn btn-outline-secondary btn-block"
+                                            onclick="search_form(jse_Form)">
+                                        SEARCH
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </fieldset>
 
     <section class="copyright">
         <div class="row text-center">
@@ -360,13 +398,15 @@
                 <div class="icons-container col-md-12">
                     <a href="https://www.facebook.com/Army-Strong-1106393462855586/?modal=admin_todo_tour"
                        target="_blank" class="btn azm-social azm-size-32 azm-circle"><img
-                            src="static/images/facebook.png"></a>
+                            src="../static/images/facebook.png" alt="facebook-social-icon"></a>
                     <a href="#/" target="_blank" class="btn azm-social azm-size-32 azm-circle"><img
-                            src="static/images/youtube.png"></a>
+                            src="../static/images/youtube.png" alt="youtube-social-icon"></a>
                     <a href="http://leanonfat.blogspot.com/" target="_blank"
-                       class="btn azm-social azm-size-32 azm-circle"><img src="static/images/blogger.png"></a>
+                       class="btn azm-social azm-size-32 azm-circle"><img src="../static/images/blogger.png"
+                                                                          alt="blogger-social-icon"></a>
                     <a href="https://www.instagram.com/gostrongbg/" target="_blank"
-                       class="btn azm-social azm-size-32 azm-circle"><img src="static/images/instagram.png"></a>
+                       class="btn azm-social azm-size-32 azm-circle"><img src="../static/images/instagram.png"
+                                                                          alt="instagram-social-icon"></a>
                 </div>
 
                 <br>
@@ -376,16 +416,16 @@
                         <div class="row">
                             <div class="col-md-12" data-for="email">
                                 <div class="col-md-8">
-                                    <h6>Абонирай се за новини</h6>
+                                    <h6>Subscribe to our newsletter</h6>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-8">
                                         <input type="text" class="form-control input" name="email"
-                                               data-form-field="Email" placeholder="електронна поща" required="">
+                                               data-form-field="Email" placeholder="email" required="">
                                     </div>
                                     <br><br>
                                     <div class="input-group-btn col-md-4">
-                                        <button type="submit" class="btn btn-outline-secondary btn-block">ИЗПРАТИ</button>
+                                        <button type="submit" class="btn btn-outline-secondary btn-block">SEND</button>
                                     </div>
                                 </div>
                             </div>
@@ -402,8 +442,8 @@
         </div>
     </section>
 </div>
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

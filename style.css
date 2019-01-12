@@ -2,8 +2,21 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #f9f9f9;
+}
+
 .col-md-12 h2 {
     text-align: center;
+}
+
+.mb-4 {
+    font-size: 80%;
+}
+
+#name-form4-6x, #phone-form4-6x, #email-form4-6x, #message-form4-6x {
+    border: 1px solid;
+    background-color: transparent;
 }
 
 .icon-contacts h5 {
@@ -12,6 +25,14 @@
 
 .container h4 {
     text-align: center;
+}
+
+.container h4 sup {
+    font-family: MullerNarrow-ExtraBold;
+}
+
+.container {
+    background-color: white;
 }
 
 /*.border-0 img {
@@ -34,14 +55,37 @@
     height: auto;
 }
 
+.azm-circle img {
+    height: 15px;
+    width: auto;
+}
+
 .table, .table-striped, td {
     text-align: center;
 }
 
-body {
-    padding-top: 1em;
-    padding-bottom: 50px;
-    font-size: 107%;
+#lang-selector {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    right: 25px;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+#lang-selector a {
+    color: #bbb;
+    z-index: 2;
+}
+
+#lang-selector a.active{
+    color: #ff2400;
+}
+
+#logo {
+    width: 50px;
+    height: auto;
+    opacity: 0.8;
 }
 
 #sex, #height, #weight, #age, #name, #round, #reps {
@@ -56,11 +100,6 @@ input {
 }
 
 @font-face {
-    font-family: Mont-HeavyDEMO;
-    src: url('./static/fonts/Mont-HeavyDEMO.otf') format('opentype');
-}
-
-@font-face {
     font-family: Roboto-Regular;
     src: url('./static/fonts/Roboto-Regular.ttf') format('truetype');
 }
@@ -71,14 +110,18 @@ input {
 }
 
 @font-face {
-    font-family: Sgt_Gorila-demo-FFP;
-    src: url('./static/fonts/Sgt_Gorila-demo-FFP.ttf') format('truetype');
+    font-family: Intro Inline;
+    src: url('./static/fonts/Intro Inline.otf') format('opentype');
 }
 
-.container {
-    width: 100%;
-    padding: 0.5%;
-    font-family: Roboto-Regular;
+@font-face {
+    font-family: MullerNarrow-ExtraBold;
+    src: url('./static/fonts/MullerNarrow-ExtraBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: MullerNarrow-Light;
+    src: url('./static/fonts/MullerNarrow-Light.otf') format('opentype');
 }
 
 #sex:hover, #height:hover, #weight:hover, #age:hover, #round, #reps {
@@ -102,8 +145,12 @@ a {
 }
 
 #mainHeader {
-    font-family: Mont-HeavyDEMO;
+    font-family: Intro Inline;
     text-align: center;
+}
+
+.star {
+    font-size: 40px;
 }
 
 .thumb-contenido img {
@@ -125,6 +172,7 @@ nav ul li:hover > ul {
 
 .mb-4 img {
     display: block;
+    opacity: 0.8;
 }
 
 .price {
@@ -133,7 +181,7 @@ nav ul li:hover > ul {
 }
 
 .rounded-circle {
-    width: 70%;
+    width: 50%;
     height: auto;
 }
 
@@ -304,6 +352,23 @@ p {
 
 .copyright {
     margin-top: 5%;
+    align-items: center;
+    font-family: MullerNarrow-Light;
+    background-color: #f9f9f9;
+}
+
+tr {
+    min-height: 10px;
+    height: 10px;
+}
+
+td {
+    min-height: 8px;
+    height: 8px;
+}
+
+.level {
+    transform: rotate(-90deg);
 }
 
 img {
@@ -350,11 +415,11 @@ img {
 -------------------------------------------------- */
 footer {
     padding-top: 30px;
-    color: #bbb;
+    color: #191919;
 }
 
 footer a {
-    color: #999;
+    color: #191919;
     text-decoration: none;
 }
 
@@ -369,4 +434,129 @@ footer .form-control {
     resize: none;
     color: #d1d2d2;
     padding: 0.7em 1em;
+}
+
+fieldset.scheduler-border {
+    border: 1px solid #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    border-radius: 2px;
+}
+
+legend.scheduler-border {
+    text-align: left !important;
+    width:inherit; /* Or auto */
+    padding:0 10px; /* To give a bit of padding on the left and right */
+    border-bottom:none;
+}
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+    #wrapper {
+        background-image: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8));
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        font-size: 90%;
+        font-weight: 500;
+        width: 62%;
+        margin:0 auto;
+        padding: 0.5%;
+        font-family: Roboto-Regular;
+        color: #191919;
+    }
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    #wrapper {
+        width: 62%;
+        margin:0 auto;
+        font-family: MullerNarrow-Light;
+        color: #191919;
+    }
+    #navbarSupportedContent {
+        color: #191919;
+    }
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #wrapper {
+        font-size: 90%;
+        width: 80%;
+        margin:0 auto;
+        padding: 0.5%;
+        font-family: Roboto-Regular;
+        color: #191919;
+    }
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #wrapper {
+        background-image: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8));
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        font-size: 90%;
+        width: 85%;
+        margin:0 auto;
+        padding: 0.5%;
+        font-family: Roboto-Regular;
+        color: #191919;
+    }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #wrapper {
+        background-image: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8));
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        font-size: 90%;
+        width: 90%;
+        margin:0 auto;
+        padding: 0.5%;
+        font-family: TTWPGOTT;
+        color: #191919;
+    }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    #wrapper {
+        font-size: 100%;
+        width: 100%;
+        margin:0 auto;
+        padding-top: 8%;
+        font-family: MullerNarrow-Light;
+        color: #191919;
+    }
 }

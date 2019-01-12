@@ -1,8 +1,14 @@
-.footers a {color:#000000;}
+.footers a {
+    color: #000000;
+}
 
-.footers p {color:#000000;}
+.footers p {
+    color: #000000;
+}
 
-.footers ul {line-height:30px;}
+.footers ul {
+    line-height: 30px;
+}
 
 /*.fa-facebook:hover {
     color: #3b5998;
