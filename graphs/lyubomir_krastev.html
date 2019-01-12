@@ -18,26 +18,40 @@
     <title>GO STRONG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link href="../node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
-    <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
-    <script src="../node_modules/chart.js/dist/Chart.bundle.js"></script>
-    <script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
     <style>
 
     </style>
 </head>
 <body>
-<div class="container text-center">
+<div class="nav-wrap text-center">
+    <div id="balance-selector">
+        <a href="../graphs/lyubomir_krastev.html" class="">Идеален баланс</a>
+         | 
+        <a href="../en/index.html" class="active">Перфектен баланс</a>
+    </div>
+</div>
+<div class="container">
     <div class="row">
-        <div class="col-md-6">
-            <h4 class="text-center">Любомир Кръстев</h4>
-            <canvas id="bar-chart-horizontal"></canvas>
+        <div class="col-md-12">
+            <h5>Любомир Кръстев <small> [157см. 58кг. 19г.]</small></h5>
+            <h5><small>най-силно движение: Кофи с тежест</small></h5>
+            <h5><small>най-слабо движение: Клек с тежест над глава</small></h5>
+            <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения спрямо текущото най-силно</small>
+
+            <canvas class="text-center" id="bar-chart-horizontal"></canvas>
         </div>
     </div>
 </div>
-
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+<script src="../node_modules/chart.js/dist/Chart.bundle.js"></script>
+<script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
 <script type="text/javascript">
     let chart = document.getElementById("bar-chart-horizontal");
     chart.style.height = "500px";
@@ -57,16 +71,15 @@
         },
         options: {
             responsive: false,
-            legend: {display: false},
+            legend: {
+                display: false
+            },
             title: {
-                display: true,
-                text: 'графично изразен силов баланс'
+                display: false,
+                text: ''
             }
         }
     });
 </script>
-<script src="../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

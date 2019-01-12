@@ -11,7 +11,7 @@ body {
 }
 
 .mb-4 {
-    font-size: 80%;
+
 }
 
 #name-form4-6x, #phone-form4-6x, #email-form4-6x, #message-form4-6x {
@@ -62,6 +62,14 @@ body {
 
 .table, .table-striped, td {
     text-align: center;
+}
+
+#balance-selector {
+    top: 10px;
+    bottom: 10px;
+    right: 25px;
+    font-weight: bold;
+    font-size: 11px;
 }
 
 #lang-selector {
@@ -172,7 +180,6 @@ nav ul li:hover > ul {
 
 .mb-4 img {
     display: block;
-    opacity: 0.8;
 }
 
 .price {
@@ -365,6 +372,10 @@ tr {
 td {
     min-height: 8px;
     height: 8px;
+}
+
+td, a {
+    z-index: 100 !important;
 }
 
 .level {
