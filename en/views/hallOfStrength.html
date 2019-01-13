@@ -14,12 +14,6 @@
 
         gtag('config', 'UA-131327406-1');
     </script>
-    <script>
-        window.addEventListener('error', function (e) {
-            e.preventDefault();
-            window.location.href = ("../views/missing");
-        }, true);
-    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -27,6 +21,7 @@
     <link rel="icon" type="image/x-icon" href="../../static/images/logo.png">
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../../styles/footer.css">
+    <link rel="stylesheet" href="../../styles/fieldset.css">
     <link rel="stylesheet" href="../../styles/testimonials.css">
     <link rel="stylesheet" href="../../styles/timeline.css">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -36,9 +31,9 @@
 <body style="background-color: #f9f9f9">
 <div class="nav-wrap">
     <div id="lang-selector">
-        <a href="../../views/platoon.html" class="">BG</a>
+        <a href="../../views/hallOfStrength.html" class="">BG</a>
          | 
-        <a href="../../en/views/platoon.html" class="active">EN</a>
+        <a href="hallOfStrength.html" class="active">EN</a>
     </div>
 </div>
 <div class="container" id="wrapper">
@@ -46,8 +41,8 @@
         <div class="float-left"><img src="../../static/images/logo.png" id="logo" alt="main-logo"></div>
         <div class="row">
             <div class="col-md-12">
-                <h3 id="mainHeader">ATHLETIC STANDARD</h3>
-                <h4 class="text-muted"><sup>GO STRONG</sup></h4>
+                <h3 class="text-center">Hall of Strength</h3>
+                <h5 class="text-muted text-center"><sup>you are as strong as your weakest lift</sup></h5>
             </div>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -61,7 +56,7 @@
                 <div class="col-md-6">
                     <ul class="navbar-nav mr-auto float-left">
                         <li class="nav-item">
-                            <a class="nav-link" href="views/reports.html">Blog</a>
+                            <a class="nav-link" href="../views/reports.html">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " href="charge.html">Charge</a>
@@ -72,8 +67,8 @@
                                 Mesh
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="nav-link" href="views/martialLaw.html">Martial Law</a>
-                                <a class="nav-link" href="views/about.html">FAQ</a>
+                                <a class="nav-link" href="../views/martialLaw.html">Martial law</a>
+                                <a class="nav-link" href="../views/about.html">FAQ</a>
                                 <a class="nav-link" href="platoon.html">Platoon</a>
                             </div>
                         </li>
@@ -82,10 +77,10 @@
                 <div class="col-md-6">
                     <ul class="navbar-nav mr-auto float-right">
                         <li class="nav-item">
-                            <a class="nav-link" href="views/generals.html">Murphys</a>
+                            <a class="nav-link" href="../views/generals.html">Murphys</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="views/gallery.html">Gallery</a>
+                            <a class="nav-link" href="../views/gallery.html">Gallery</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="headquarter.html">Head Quarter</a>
@@ -96,72 +91,113 @@
         </nav>
     </div>
 
-    <div class="row">
-        <div class="col-lg-12">
-            <h2 class="my-4 text-center">Our Platoon</h2>
-        </div>
-        <div class="col-lg-4 col-sm-6 text-center mb-4">
-            <img class="rounded-circle img-fluid d-block mx-auto" src="../../static/images/deyan_vasilev.jpg"
-                 alt="Deyan Vasilev">
-            <h3>Deyan Vasilev</h3>
-            <h5>civil Job : <i>QA Engineer</i></h5>
-            <h5>rank : <i>Private</i></h5>
-            <h5>status : <i>Operational</i></h5>
-            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-        </div>
-        <div class="col-lg-4 col-sm-6 text-center mb-4">
-            <img class="rounded-circle img-fluid d-block mx-auto" src="../../static/images/georgi_simeonov.jpg"
-                 alt="Georgi Simeonov">
-            <h3>Georgi Simeonov</h3>
-            <h5>civil Job : <i>Lawyer</i></h5>
-            <h5>rank : <i>Rookie</i></h5>
-            <h5>status : <i>Operational</i></h5>
-            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-        </div>
-        <div class="col-lg-4 col-sm-6 text-center mb-4">
-            <img class="rounded-circle img-fluid d-block mx-auto" src="../../static/images/daniela_kenanova.jpg"
-                 alt="Daniela Kenanova">
-            <h3>Daniela Kenanova</h3>
-            <h5>civil Job : <i>Lawyer</i></h5>
-            <h5>rank : <i>Rookie</i></h5>
-            <h5>status : <i>Rollover</i></h5>
-            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-        </div>
-        <div class="col-lg-4 col-sm-6 text-center mb-4">
-            <img class="rounded-circle img-fluid d-block mx-auto" src="../../static/images/lubomir_krustev.jpg"
-                 alt="Lubomir Krustev">
-            <h3>Lubomir Krustev</h3>
-            <h5>civil Job : <i>Student</i></h5>
-            <h5>rank : <i>Lieutenant</i></h5>
-            <h5>status : <i>Operational</i></h5>
-            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-        </div>
-        <div class="col-lg-4 col-sm-6 text-center mb-4">
-            <img class="rounded-circle img-fluid d-block mx-auto" src="../../static/images/maria_georgieva.jpg"
-                 alt="Maria Georgieva">
-            <h3>Maria Georgieva</h3>
-            <h5>civil Job : <i>Insurance Manager</i></h5>
-            <h5>rank : <i>Recruit</i></h5>
-            <h5>status : <i>Rollover</i></h5>
-            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-        </div>
-        <div class="col-lg-4 col-sm-6 text-center mb-4">
-            <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="Ivan Stoyanov">
-            <h4>Ivan Stoyanov</h4>
-            <h5>civil Job : <i>Neurologist</i></h5>
-            <h5>rank : <i>Recruit</i></h5>
-            <h5>status : <i>Operational</i></h5>
-            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-        </div>
-        <div class="col-lg-4 col-sm-6 text-center mb-4">
-            <img class="rounded-circle img-fluid d-block mx-auto" src="../../static/images/zdravko_raichev.jpg"
-                 alt="Zdravko Raichev">
-            <h4>Zdravko Raichev</h4>
-            <h5>civil Job : <i>Marketing Manager</i></h5>
-            <h5>rank : <i>Corporal</i></h5>
-            <h5>status : <i>Operational</i></h5>
-            <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-        </div>
+
+    <br>
+
+    <h3>Men's ranking</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <caption>only the first 10 are shown</caption>
+            <thead>
+            <tr>
+                <th>Place</th>
+                <th>Name</th>
+                <th>Strength score</th>
+                <th>Athletic score</th>
+                <th>Equilibrium</th>
+                <th>Rank</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Lyubomir Krustev</td>
+                <td>76.6 / 100</td>
+                <td>76.6 / 100</td>
+                <td>78.9 / 100</td>
+                <td>Captain</td>
+                <td class="border-0"><a href="../../graphs/lyubomir_krastev.html"><i class="fa fa-bar-chart" aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Emil Bogdanov</td>
+                <td>76.6 / 100</td>
+                <td>76.6 / 100</td>
+                <td>78.9 / 100</td>
+                <td>Lieutenant</td>
+                <td class="border-0"><a href=""><i class="fa fa-bar-chart" aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Zdravko Raichev</td>
+                <td>76.6 / 100</td>
+                <td>76.6 / 100</td>
+                <td>78.9 / 100</td>
+                <td>Corporal</td>
+                <td class="border-0"><a href=""><i class="fa fa-bar-chart" aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Deyan Vasilev</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Private</td>
+                <td class="border-0"><a href=""><i class="fa fa-bar-chart" aria-hidden="true"></i></a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Women's ranking</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <caption>only the first 10 are shown</caption>
+            <thead>
+            <tr>
+                <th>Place</th>
+                <th>Name</th>
+                <th>Strength score</th>
+                <th>Athletic score</th>
+                <th>Equilibrium</th>
+                <th>Rank</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Maria Vasileva</td>
+                <td>76.6 / 100</td>
+                <td>31 / 36.3</td>
+                <td>78.9 / 100</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>magdalena Raicheva</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Marina Paunova</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Maria Valova</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 
     <fieldset class="scheduler-border">

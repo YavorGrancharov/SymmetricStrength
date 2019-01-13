@@ -39,15 +39,11 @@
     <div class="jumbotron bg-light">
         <div class="float-left"><img src="static/images/logo.png" id="logo" alt="main-logo"></div>
         <div class="row">
-            <!--<div class="col-md-1">
-                <img id="logo" src="static/images/logo_transparent_camo%20copy.png">
-            </div>-->
             <div class="col-md-12">
                 <h3 id="mainHeader">ATHLETIC STANDARD</h3>
-                <h4 class="text-muted"><sup><!--home of the strong-->GO STRONG</sup></h4>
+                <h4 class="text-muted"><sup>GO STRONG</sup></h4>
             </div>
         </div>
-        <!--<div class="text-center"><img src="static/images/logo.png" id="logo" alt="logo"></div>-->
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="index.html">Начало
             </a>
@@ -73,7 +69,7 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="nav-link" href="views/martialLaw.html">Устав</a>
                                 <a class="nav-link" href="views/about.html">ЧЗВ</a>
-                                <a class="nav-link" href="views/platoon.html">Пехота</a>
+                                <a class="nav-link" href="views/platoon.html">Взвод</a>
                             </div>
                         </li>
                     </ul>
@@ -86,18 +82,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="views/gallery.html">Галерия</a>
                         </li>
-                        <!--<li style="color: #6ea171;">&#9733;</li>-->
                         <li class="nav-item">
                             <a class="nav-link" href="views/headquarter.html">Щаб квартира</a>
                         </li>
-                        <!--<li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
-                               aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe" aria-hidden="true"></i> Language<span class="caret"></span></a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">EN</a>
-                                <a class="dropdown-item" href="#">BG</a>
-                            </div>
-                        </li>-->
                     </ul>
                 </div>
             </div>
@@ -294,65 +281,64 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-xs-8 col-sm-6 col-md-4 footers-one">
-            <div class="footers-logo">
-                <h5>Карта на сайта</h5>
-            </div>
-        </div>
-    </div>
-    <footer class="footer">
-        <div class="row">
-            <div class="col-md-5">
-                <div class="row">
-                    <div class="col-6">
-                        <h5>Документация </h5>
-                        <ul class="list-unstyled">
-                            <li><a href="views/terms.html">Условия</a></li>
-                            <li><a href="views/policy.html">Политика</a></li>
-                            <li><a href="views/missing.html">Правила</a></li>
-                            <li><a href="views/codeOfEthics.html">Етичен кодекс</a></li>
-                            <li><a href="views/missing.html">Брошура</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-6">
-                        <h5>Занималня </h5>
-                        <ul class="list-unstyled">
-                            <li><a href="views/drills.html">Движения</a></li>
-                            <li><a href="views/missing.html">Видео</a></li>
-                            <li><a href="views/missing.html">GROW Strong</a></li>
-                            <li><a href="views/brainwash.html">Стани вербовчик</a></li>
-                            <li><a href="views/hallOfStrength.html">Зала на Силата</a></li>
-                            <li><a href="views/gear.html">Униформа</a></li>
-                            <li><a href="views/missing.html">Toddler</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <br>
-
-            </div>
-
-            <div class="col-md-6" id="contact">
-                <h5 class="">Вътрешно търсене</h5>
-                <div data-form-type="formoid">
-                    <form name="jse_Form" onsubmit="search_form(jse_Form); return false" method="post">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <input type="text" class="form-control input border" data-form-field="Search"
-                                       placeholder="ключова дума" name="d"> 
-                            </div>
-                            <div class="input-group-btn col-md-4">
-                                <button type="button" class="btn btn-outline-secondary btn-block" onclick="search_form(jse_Form)">
-                                    ТЪРСИ
-                                </button>
-                            </div>
+    <fieldset class="scheduler-border">
+        <legend class="scheduler-border">Карта на сайта</legend>
+        <footer class="footer">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-6">
+                            <h5>Документация </h5>
+                            <ul class="list-unstyled">
+                                <li><a href="views/terms.html">Условия</a></li>
+                                <li><a href="views/policy.html">Поверителност</a></li>
+                                <li><a href="views/missing.html">Правила</a></li>
+                                <li><a href="views/codeOfEthics.html">Етичен кодекс</a></li>
+                                <li><a href="views/missing.html">Единен стандарт</a></li>
+                                <li><a href="views/missing.html">Брошура</a></li>
+                                <li><a href="views/headquarter.html">Контакт</a></li>
+                            </ul>
                         </div>
-                    </form>
+                        <div class="col-6">
+                            <h5>Занималня </h5>
+                            <ul class="list-unstyled">
+                                <li><a href="views/drills.html">Движения</a></li>
+                                <li><a href="views/missing.html">Видео</a></li>
+                                <li><a href="views/missing.html">GROW Strong</a></li>
+                                <li><a href="views/brainwash.html">Пропагандирай</a></li>
+                                <li><a href="views/hallOfStrength.html">Зала на Силата</a></li>
+                                <li><a href="views/gear.html">Униформа</a></li>
+                                <li><a href="views/missing.html">Toddler</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <br>
+
+                </div>
+
+                <div class="col-md-6" id="contact">
+                    <h5 class="">Вътрешно търсене</h5>
+                    <div data-form-type="formoid">
+                        <form name="jse_Form" onsubmit="search_form(jse_Form); return false" method="post">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control input border" data-form-field="Search"
+                                           placeholder="ключова дума" name="d"> 
+                                </div>
+                                <div class="input-group-btn col-md-4">
+                                    <button type="button" class="btn btn-outline-secondary btn-block"
+                                            onclick="search_form(jse_Form)">
+                                        ТЪРСИ
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </fieldset>
 
     <section class="copyright">
         <div class="row text-center">
@@ -385,7 +371,8 @@
                                     </div>
                                     <br><br>
                                     <div class="input-group-btn col-md-4">
-                                        <button type="submit" class="btn btn-outline-secondary btn-block">ИЗПРАТИ</button>
+                                        <button type="submit" class="btn btn-outline-secondary btn-block">ИЗПРАТИ
+                                        </button>
                                     </div>
                                 </div>
                             </div>

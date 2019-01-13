@@ -5,73 +5,97 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131327406-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-131327406-1');
     </script>
+    <script>
+        window.addEventListener('error', function (e) {
+            e.preventDefault();
+            window.location.href = ("../views/missing");
+        }, true);
+    </script>
     <meta charset="UTF-8">
-    <title>GO STRONG</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>GO STRONG</title>
     <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/testimonials.css">
+    <link rel="stylesheet" href="../styles/timeline.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link href="../node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <script language="JavaScript1.3" type="text/javascript" src="../scripts/engines/jse_form.js"></script>
 </head>
-<body class="bg-light">
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Щаб Квартира</h2>
-            <h4><sup><!--success is generally 90 per cent persistence-->успехът обикновено е 90% постоянство</sup></h4>
-        </div>
+<body style="background-color: #f9f9f9">
+<div class="nav-wrap">
+    <div id="lang-selector">
+        <a href="headquarter.html" class="active">BG</a>
+         | 
+        <a href="../en/views/headquarter.html" class="">EN</a>
     </div>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="../index.html">Начало</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="col-md-6">
-                <ul class="navbar-nav mr-auto float-left">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../views/reports.html">Статии</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="../views/charge.html">Цени</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Мешка
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="../views/martialLaw.html">Устав</a>
-                            <a class="dropdown-item" href="../views/about.html">ЧЗВ</a>
-                            <a class="dropdown-item" href="../views/platoon.html">Пехота</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <ul class="navbar-nav mr-auto float-right">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../views/generals.html">Офицери</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../views/gallery.html">Галерия</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../views/headquarter.html">Щаб квартира</a>
-                    </li>
-                </ul>
+</div>
+<div class="container" id="wrapper">
+    <div class="jumbotron bg-light">
+        <div class="float-left"><img src="../static/images/logo.png" id="logo" alt="main-logo"></div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 id="mainHeader">ATHLETIC STANDARD</h3>
+                <h4 class="text-muted"><sup>GO STRONG</sup></h4>
             </div>
         </div>
-    </nav>
-    <hr>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="../index.html">Начало</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span><img style="opacity: 0.5" src="../static/images/drop_btn.png" alt="sergeant-dropdown-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="col-md-6">
+                    <ul class="navbar-nav mr-auto float-left">
+                        <li class="nav-item">
+                            <a class="nav-link" href="views/reports.html">Блог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="charge.html">Цени</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Мешка
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="nav-link" href="views/martialLaw.html">Устав</a>
+                                <a class="nav-link" href="views/about.html">ЧЗВ</a>
+                                <a class="nav-link" href="platoon.html">Взвод</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="navbar-nav mr-auto float-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="views/generals.html">Офицери</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="views/gallery.html">Галерия</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="headquarter.html">Щаб квартира</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
     <div class="row">
         <div class="col-md-6">
             <div class="google-map">
@@ -86,14 +110,14 @@
                             <span class="mbri-letter mbr-iconfont" media-simple="true"></span>
                         </span>
                     <h4 class="icon-block__title align-left mbr-fonts-style display-5">
-                        Свръзка
+                        Домофон
                     </h4>
                 </div>
                 <div class="icon-contacts pb-3">
 
                     <p class="mbr-text align-left mbr-fonts-style display-7">
-                        Централа: 0876 10 00 39; 0888 03 04 24<br><br>
-                        Електронна поща: youremail@mail.com
+                        телефони: 0876 10 00 39; 0888 03 04 24<br><br>
+                        е-поща: athleticstandard.org@gmail.com
                     </p>
                 </div>
             </div>
@@ -102,24 +126,24 @@
                     <div class="row">
                         <div class="col-md-6 multi-horizontal" data-for="name">
                             <input type="text" class="form-control input" name="name" data-form-field="Name"
-                                   placeholder="Име" required="" id="name-form4-6x">
+                                   placeholder="име" required="" id="name-form4-6x">
                         </div>
                         <br><br>
                         <div class="col-md-6 multi-horizontal" data-for="phone">
                             <input type="text" class="form-control input" name="phone" data-form-field="Phone"
-                                   placeholder="Телефон" required="" id="phone-form4-6x">
+                                   placeholder="телефон" required="" id="phone-form4-6x">
                         </div>
                         <div class="col-md-12" data-for="email">
                             <input type="text" class="form-control input" name="email" style="margin-top: 10px;"
-                                   data-form-field="Email" placeholder="Електронна поща" required="" id="email-form4-6x">
+                                   data-form-field="Email" placeholder="електронна поща" required="" id="email-form4-6x">
                         </div>
                         <div class="col-md-12" data-for="message">
                                 <textarea class="form-control input" name="message"
                                           style="margin-top: 10px; resize:none" rows="3" data-form-field="Message"
-                                          placeholder="Съобщение" id="message-form4-6x"></textarea>
+                                          placeholder="съобщение" id="message-form4-6x"></textarea>
                         </div>
                         <div class="input-group-btn col-md-12" style="margin-top: 10px;">
-                            <button href="" type="submit" class="btn btn-primary btn-form display-4">ИЗПРАТИ
+                            <button href="" type="submit" class="btn btn-form display-4">ИЗПРАТИ
                             </button>
                         </div>
                     </div>
@@ -128,84 +152,111 @@
         </div>
     </div>
     <hr>
-    <nav class="navbar navbar-light bg-light fixed-bottom navbar-expand-xl border border-top-secondary">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Brand -->
-        <h3 class="navbar-brand">Калкулатори</h3>
-
-        <!-- Links -->
-        <div class="collapse navbar-collapse justify-content-center" id="nav-content">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="../calcs/symmetric_strength.html">Симетрична Сила |</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../calcs/passwd.html">Издръжливост |</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../views/missing.html">Силова издръжливост |</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../views/missing.html">Идеално активно тегло </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="row">
-        <div class="col-xs-8 col-sm-6 col-md-4 footers-one">
-            <div class="footers-logo">
-                <img src="../static/images/logo.png" alt="Logo">
-            </div>
-        </div>
-    </div>
-    <footer class="footer">
-        <div class="row">
-            <div class="col-md-5">
-                <div class="row">
-                    <div class="col-6">
-                        <h5>Осведоми се </h5>
-                        <ul class="list-unstyled">
-                            <li><a href="../views/terms.html">Общи условия</a></li>
-                            <li><a href="../views/policy.html">Принципи</a></li>
-                            <li><a href="../views/missing.html">Съглашение</a></li>
-                            <li><a href="../views/missing.html">Атестати</a></li>
-                        </ul>
+    <fieldset class="scheduler-border">
+        <legend class="scheduler-border">Карта на сайта</legend>
+        <footer class="footer">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-6">
+                            <h5>Документация </h5>
+                            <ul class="list-unstyled">
+                                <li><a href="../views/missing.html">Условия</a></li>
+                                <li><a href="../views/missing.html">Поверителност</a></li>
+                                <li><a href="../views/missing.html">Правила</a></li>
+                                <li><a href="../views/codeOfEthics.html">Етичен кодекс</a></li>
+                                <li><a href="../views/missing.html">Единен стандарт</a></li>
+                                <li><a href="../views/missing.html">Брошура</a></li>
+                                <li><a href="../views/headquarter.html">Контакт</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <h5>Занималня </h5>
+                            <ul class="list-unstyled">
+                                <li><a href="../views/missing.html">Движения</a></li>
+                                <li><a href="../views/missing.html">Видео</a></li>
+                                <li><a href="../views/missing.html">Подрастваща сила</a></li>
+                                <li><a href="../views/missing.html">Пропагандирай</a></li>
+                                <li><a href="../views/hallOfStrength.html">Зала на Силата</a></li>
+                                <li><a href="../views/missing.html">Униформа</a></li>
+                                <li><a href="../views/missing.html">Toddler</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <h5>Изследвай </h5>
-                        <ul class="list-unstyled">
-                            <li><a href="../views/gear.html"><!--Gear-->Униформа</a></li>
-                            <li><a href="../views/drills.html"><!--Drills-->Система</a></li>
-                            <li><a href="../views/missing.html">Видео</a></li>
-                            <li><a href="../views/brainwash.html">Стани вербовчик</a></li>
-                            <li><a href="../views/missing.html">Тапети</a></li>
-                        </ul>
+
+                    <br>
+
+                </div>
+
+                <div class="col-md-6" id="contact">
+                    <h5 class="">Вътрешно търсене</h5>
+                    <div data-form-type="formoid">
+                        <form name="jse_Form" onsubmit="search_form(jse_Form); return false" method="post">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control input border" data-form-field="Search"
+                                           placeholder="ключова дума" name="d"> 
+                                </div>
+                                <div class="input-group-btn col-md-4">
+                                    <button type="button" class="btn btn-outline-secondary btn-block"
+                                            onclick="search_form(jse_Form)">
+                                        ТЪРСИ
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <ul class="nav">
-                    <li class="nav-item"><a target="_blank" href="https://www.facebook.com/Army-Strong-1106393462855586/?modal=admin_todo_tour" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-youtube fa-lg"></i></a></li>
-                    <li class="nav-item"><a target="_blank" href="http://leanonfat.blogspot.com/" class="nav-link"><img src="../static/images/blogger.png"></a></li>
-                    <li class="nav-item"><a target="_blank" href="https://www.instagram.com/gostrongbg/" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
-                </ul>
-                <br>
             </div>
-            <!--<div class="col-md-7">
-                <img src="../static/images/soldiers%20copy.png" id="soldiers">
-            </div>-->
-        </div>
+        </footer>
+    </fieldset>
 
-    </footer>
     <section class="copyright">
         <div class="row text-center">
-            <div class="col-md-12 pt-3">
-                <p class="text-muted text-center">Copyright &copy;2015-2019 A.R.M.Y. STRONG</p>
+            <div class="col-md-6">
+                <div class="icons-container col-md-12">
+                    <a href="https://www.facebook.com/Army-Strong-1106393462855586/?modal=admin_todo_tour"
+                       target="_blank" class="btn azm-social azm-size-32 azm-circle"><img
+                            src="../static/images/facebook.png" alt="facebook-social-icon"></a>
+                    <a href="#/" target="_blank" class="btn azm-social azm-size-32 azm-circle"><img
+                            src="../static/images/youtube.png" alt="youtube-social-icon"></a>
+                    <a href="http://leanonfat.blogspot.com/" target="_blank"
+                       class="btn azm-social azm-size-32 azm-circle"><img src="../static/images/blogger.png"
+                                                                          alt="blogger-social-icon"></a>
+                    <a href="https://www.instagram.com/gostrongbg/" target="_blank"
+                       class="btn azm-social azm-size-32 azm-circle"><img src="../static/images/instagram.png"
+                                                                          alt="instagram-social-icon"></a>
+                </div>
+
+                <br>
+                <div class="well col-md-12" style="margin-bottom: 20px">
+                    <form class="block mbr-form" action="https://formspree.io/athleticstandard.org@gmail.com"
+                          method="post">
+                        <div class="row">
+                            <div class="col-md-12" data-for="email">
+                                <div class="col-md-8">
+                                    <h6>Абонирай се за новини</h6>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control input" name="email"
+                                               data-form-field="Email" placeholder="електронна поща" required="">
+                                    </div>
+                                    <br><br>
+                                    <div class="input-group-btn col-md-4">
+                                        <button type="submit" class="btn btn-outline-secondary btn-block">ИЗПРАТИ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3">
+                <p class="text-center">&copy;2015-2019 <br>athleticstandard.org</p>
             </div>
         </div>
     </section>
-    <br><br>
 </div>
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>

@@ -5,142 +5,166 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131327406-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-131327406-1');
     </script>
+    <script>
+        window.addEventListener('error', function (e) {
+            e.preventDefault();
+            window.location.href = ("../views/missing");
+        }, true);
+    </script>
     <meta charset="UTF-8">
-    <title>GO STRONG</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>GO STRONG</title>
     <link rel="icon" type="image/x-icon" href="../../static/images/logo.png">
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../../styles/footer.css">
+    <link rel="stylesheet" href="../../styles/testimonials.css">
+    <link rel="stylesheet" href="../../styles/timeline.css">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link href="../../node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <script language="JavaScript1.3" type="text/javascript" src="../../scripts/engines/jse_form.js"></script>
 </head>
 <body style="background-color: #f9f9f9">
-<div class="container" id="wrapper">
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Join the A.R.M.Y.</h2>
-            <h4 class="text-muted"><sup>pain is weakness leaving the body</sup></h4>
-        </div>
+<div class="nav-wrap">
+    <div id="lang-selector">
+        <a href="../../views/charge.html" class="">BG</a>
+         | 
+        <a href="charge.html" class="active">EN</a>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="../index.html">Bay</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="col-md-6">
-                <ul class="navbar-nav mr-auto float-left">
-                    <li class="nav-item">
-                        <a class="nav-link" href="missing.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="charge.html">Charge</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Mesh
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="missing.html">Rules</a>
-                            <a class="dropdown-item" href="missing.html">FAQ</a>
-                            <a class="dropdown-item" href="platoon.html">Foot Soldiers</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <ul class="navbar-nav mr-auto float-right">
-                    <li class="nav-item">
-                        <a class="nav-link" href="missing.html">Murphys</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="missing.html">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="missing.html">Head Quarter</a>
-                    </li>
-                </ul>
+</div>
+<div class="container" id="wrapper">
+    <div class="jumbotron bg-light">
+        <div class="float-left"><img src="../../static/images/logo.png" id="logo" alt="main-logo"></div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 id="mainHeader">ATHLETIC STANDARD</h3>
+                <h4 class="text-muted"><sup>GO STRONG</sup></h4>
             </div>
         </div>
-    </nav>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="../index.html">Bay</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span><img style="opacity: 0.5" src="../../static/images/drop_btn.png" alt="sergeant-dropdown-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="col-md-6">
+                    <ul class="navbar-nav mr-auto float-left">
+                        <li class="nav-item">
+                            <a class="nav-link" href="views/reports.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="charge.html">Charge</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Mesh
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="nav-link" href="../views/martialLaw.html">Martial Law</a>
+                                <a class="nav-link" href="../views/about.html">FAQ</a>
+                                <a class="nav-link" href="platoon.html">Platoon</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="navbar-nav mr-auto float-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="views/generals.html">Murphys</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="views/gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="headquarter.html">Head Quarter</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
 
     <br>
 
     <div class="row flex-items-xs-middle flex-items-xs-center">
         <div class="col-md-12 col-lg-4">
-            <div class="card text-xs-center bg-transparent">
+            <div class="card text-xs-center">
                 <div class="card-header">
                     <h4 class="display-4">Alfa</h4>
                 </div>
                 <div class="card-block">
                     <h4 class="card-title">
-                        <!--4 Weeks Membership-->4 Седмичен абонамент
+                        4 Weeks Membership
                         <br>
                         <small><!--100% warranty*--></small>
                     </h4>
                     <ul class="list-group">
-                        <li class="list-group-item bg-transparent">4 тренировкии <span class="price" style="float: right">100<small>лв.</small></span>
+                        <li class="list-group-item">4 training sessions <span class="price" style="float: right">100<small>lv.</small></span>
                             <br>
-                            <small>1 Път седмично</small>
+                            <small>1 time a week</small>
                         </li>
-                        <li class="list-group-item bg-transparent">8 тренировкии <span class="price" style="float: right">175<small>лв.</small></span>
+                        <li class="list-group-item">8 training sessions <span class="price" style="float: right">175<small>lv.</small></span>
                             <br>
-                            <small>2 Пъти седмично</small>
+                            <small>2 times a week</small>
                         </li>
-                        <li class="list-group-item bg-transparent">12 тренировкии <span class="price" style="float: right">225<small>лв.</small></span>
+                        <li class="list-group-item">12 training sessions <span class="price" style="float: right">225<small>lv.</small></span>
                             <br>
-                            <small>3 Пъти седмично</small>
+                            <small>3 times a week</small>
                         </li>
-                        <li class="list-group-item bg-transparent">16 тренировкии <span class="price" style="float: right">270<small>лв.</small></span>
+                        <li class="list-group-item">16 training sessions <span class="price" style="float: right">270<small>lv.</small></span>
                             <br>
-                            <small>4 Пъти седмично</small>
+                            <small>4 times a week</small>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="col-md-12 col-lg-4">
-            <div class="card text-xs-center bg-transparent">
+            <div class="card text-xs-center">
                 <div class="card-header">
                     <h4 class="display-4">Bravo</h4>
                 </div>
                 <div class="card-block">
                     <h4 class="card-title">
-                        5 Седмичен абонамент
+                        5 Weeks Membership
                         <br>
                         <!--<small>75% warranty*</small>-->
                     </h4>
                     <ul class="list-group">
-                        <li class="list-group-item bg-transparent">4 тренировкии <span class="price" style="float: right">115<small>лв.</small></span>
+                        <li class="list-group-item">4 training sessions <span class="price" style="float: right">115<small>lv.</small></span>
                             <br>
-                            <small>1 Път седмично</small>
+                            <small>1 time a week</small>
                         </li>
-                        <li class="list-group-item bg-transparent">8 тренировкии <span class="price" style="float: right">205<small>лв.</small></span>
+                        <li class="list-group-item">8 training sessions <span class="price" style="float: right">205<small>lv.</small></span>
                             <br>
-                            <small>2 Пъти седмично</small>
+                            <small>2 times a week</small>
                         </li>
-                        <li class="list-group-item bg-transparent">12 тренировкии <span class="price" style="float: right">275<small>лв.</small></span>
+                        <li class="list-group-item">12 training sessions <span class="price" style="float: right">275<small>lv.</small></span>
                             <br>
-                            <small>3 Пъти седмично</small>
+                            <small>3 times a week</small>
                         </li>
-                        <li class="list-group-item bg-transparent">16 тренировкии <span class="price" style="float: right">325<small>лв.</small></span>
+                        <li class="list-group-item">16 training sessions <span class="price" style="float: right">325<small>lv.</small></span>
                             <br>
-                            <small>4 Пъти седмично</small>
+                            <small>4 times a week</small>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="col-md-12 col-lg-4">
-            <div class="card text-xs-center bg-transparent">
+            <div class="card text-xs-center">
                 <div class="card-header">
                     <h4 class="display-4">Charlie</h4>
                 </div>
@@ -151,21 +175,21 @@
                         <!--<small>50% warranty*</small>-->
                     </h4>
                     <ul class="list-group">
-                        <li class="list-group-item bg-white">4 тренировкии <span class="price" style="float: right">135<small>лв.</small></span>
+                        <li class="list-group-item">4 тренировкии <span class="price" style="float: right">135<small>lv.</small></span>
                             <br>
-                            <small>1 Time a week</small>
+                            <small>1 time a week</small>
                         </li>
-                        <li class="list-group-item bg-white">8 тренировкии <span class="price" style="float: right">235<small>лв.</small></span>
+                        <li class="list-group-item">8 тренировкии <span class="price" style="float: right">235<small>lv.</small></span>
                             <br>
-                            <small>2 Times a week</small>
+                            <small>2 times a week</small>
                         </li>
-                        <li class="list-group-item bg-white">12 training sessions <span class="price" style="float: right">315<small>лв.</small></span>
+                        <li class="list-group-item">12 training sessions <span class="price" style="float: right">315<small>lv.</small></span>
                             <br>
-                            <small>3 Times a week</small>
+                            <small>3 times a week</small>
                         </li>
-                        <li class="list-group-item bg-white">16 sessions <span class="price" style="float: right">370<small>лв.</small></span>
+                        <li class="list-group-item">16 sessions <span class="price" style="float: right">370<small>lv.</small></span>
                             <br>
-                            <small>4 Times a week</small>
+                            <small>4 times a week</small>
                         </li>
                     </ul>
                 </div>
@@ -189,8 +213,8 @@
             <tbody>
             <tr>
                 <td class="w-25 option">Workout Session</td>
-                <td class="">70<small>лв.</small></td>
-                <td class="">35<small>лв.</small></td>
+                <td class="">80<small>lv.</small></td>
+                <td class="">35<small>lv.</small></td>
                 <td class=""><i class="fa fa-check"></i></td>
                 <td class=""><i class="fa fa-check"></i></td>
                 <td class=""><i class="fa fa-check"></i></td>
@@ -221,7 +245,7 @@
             </tr>
             <tr>
                 <td class="option">Meal Plan</td>
-                <td>on demand</td>
+                <td>-</td>
                 <td>on demand</td>
                 <td>on demand</td>
                 <td>on demand</td>
@@ -253,125 +277,112 @@
             </tbody>
         </table>
     </div>
-    <!--<ul>
-        <li class="text-danger">all of the prices are in bulgarian leva</li>
-        <li class="text-danger">warranty - how many training sessions a month you guarantee you will do</li>
-    </ul>-->
     <ul>
         <li class="text-muted">all prices are for pair training, which means one coach with a maximum of two trainees within the session</li>
         <li class="text-muted">an exception to the above is the one-time workout within which the trainee receives all the attention of the trainer</li>
     </ul>
-    <hr>
-    <!--<nav class="navbar navbar-light bg-light fixed-bottom navbar-expand-xl border border-top-secondary">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Brand
-        <h3 class="navbar-brand">Калкулатори</h3>
 
-        <!-- Links
-        <div class="collapse navbar-collapse justify-content-center" id="nav-content">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="../calcs/symmetric_strength.html">Симетрична Сила |</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../calcs/passwd.html">Издръжливост |</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../views/missing.html">Силова издръжливост |</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../calcs/lbm_calculator.html">Идеално активно тегло </a>
-                </li>
-            </ul>
-        </div>
-    </nav>-->
-    <div class="row">
-        <div class="col-xs-8 col-sm-6 col-md-4 footers-one">
-            <div class="footers-logo">
-                <img src="../../static/images/logo.png" alt="Logo">
-            </div>
-        </div>
-    </div>
-    <footer class="footer">
-        <div class="row">
-            <div class="col-md-5">
-                <div class="row">
-                    <div class="col-6">
-                        <h5>Документация </h5>
-                        <ul class="list-unstyled">
-                            <li><a href="missing.html">Terms</a></li>
-                            <li><a href="missing.html">Policy</a></li>
-                            <li><a href="missing.html">Rules</a></li>
-                            <li><a href="missing.html">GROW Strong</a></li>
-                            <li><a href="missing.html">Toddler</a></li>
-                        </ul>
+
+    <fieldset class="scheduler-border">
+        <legend class="scheduler-border">Sitemap</legend>
+        <footer class="footer">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-6">
+                            <h5>Documentation </h5>
+                            <ul class="list-unstyled">
+                                <li><a href="views/missing.html">Terms</a></li>
+                                <li><a href="views/missing.html">Policy</a></li>
+                                <li><a href="views/missing.html">Rules</a></li>
+                                <li><a href="../views/codeOfEthics.html">Code of ethics</a></li>
+                                <li><a href="views/missing.html">Common standard</a></li>
+                                <li><a href="views/missing.html">Brochure</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <h5>Explore </h5>
+                            <ul class="list-unstyled">
+                                <li><a href="views/missing.html">Drills</a></li>
+                                <li><a href="views/missing.html">Records</a></li>
+                                <li><a href="views/missing.html">GROW Strong</a></li>
+                                <li><a href="views/missing.html">Be a recruiter</a></li>
+                                <li><a href="../views/hallOfStrength.html">Hall of Strength</a></li>
+                                <li><a href="views/missing.html">Gear</a></li>
+                                <li><a href="views/missing.html">Toddler</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <h5>Занималня </h5>
-                        <ul class="list-unstyled">
-                            <li><a href="missing.html">Gear</a></li>
-                            <li><a href="missing.html">Drills</a></li>
-                            <li><a href="missing.html">Records</a></li>
-                            <li><a href="missing.html">Recruiter</a></li>
-                            <li><a href="missing.html">Walls</a></li>
-                        </ul>
+
+                    <br>
+
+                </div>
+
+                <div class="col-md-6" id="contact">
+                    <h5 class="">Internal search</h5>
+                    <div data-form-type="formoid">
+                        <form name="jse_Form" onsubmit="search_form(jse_Form); return false" method="post">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control input border" data-form-field="Search"
+                                           placeholder="keyword" name="d"> 
+                                </div>
+                                <div class="input-group-btn col-md-4">
+                                    <button type="button" class="btn btn-outline-secondary btn-block"
+                                            onclick="search_form(jse_Form)">
+                                        SEARCH
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <ul class="nav">
-                    <li class="nav-item"><a target="_blank"
-                                            href="https://www.facebook.com/Army-Strong-1106393462855586/?modal=admin_todo_tour"
-                                            class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-youtube fa-lg"></i></a></li>
-                    <li class="nav-item"><a target="_blank" href="http://leanonfat.blogspot.com/" class="nav-link"><img src="../../static/images/blogger.png"></a></li>
-                    <li class="nav-item"><a target="_blank" href="https://www.instagram.com/gostrongbg/"
-                                            class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
-                </ul>
+            </div>
+        </footer>
+    </fieldset>
+
+    <section class="copyright">
+        <div class="row text-center">
+            <div class="col-md-6">
+                <div class="icons-container col-md-12">
+                    <a href="https://www.facebook.com/Army-Strong-1106393462855586/?modal=admin_todo_tour"
+                       target="_blank" class="btn azm-social azm-size-32 azm-circle"><img
+                            src="../../static/images/facebook.png" alt="facebook-social-icon"></a>
+                    <a href="#/" target="_blank" class="btn azm-social azm-size-32 azm-circle"><img
+                            src="../../static/images/youtube.png" alt="youtube-social-icon"></a>
+                    <a href="http://leanonfat.blogspot.com/" target="_blank"
+                       class="btn azm-social azm-size-32 azm-circle"><img src="../../static/images/blogger.png"
+                                                                          alt="blogger-social-icon"></a>
+                    <a href="https://www.instagram.com/gostrongbg/" target="_blank"
+                       class="btn azm-social azm-size-32 azm-circle"><img src="../../static/images/instagram.png"
+                                                                          alt="instagram-social-icon"></a>
+                </div>
+
                 <br>
-            </div>
-            <div class="col-md-2">
-                <h5 class="text-md-right">Intercom</h5>
-                <hr>
-            </div>
-            <div class="col-md-5">
-                <div data-form-type="formoid">
-                    <div data-form-alert="" hidden="">
-                        Thanks for filling out the form!
-                    </div>
-                    <form class="block mbr-form" action="https://formspree.io/bearhold@gmail.com" method="post">
+                <div class="well col-md-12" style="margin-bottom: 20px">
+                    <form class="block mbr-form" action="https://formspree.io/athleticstandard.org@gmail.com"
+                          method="post">
                         <div class="row">
-                            <div class="col-md-6 multi-horizontal" data-for="name">
-                                <input type="text" class="form-control input" name="name" data-form-field="Name"
-                                       placeholder="name" required="" id="name-form4-6x">
-                            </div>
-                            <br><br>
-                            <div class="col-md-6 multi-horizontal" data-for="phone">
-                                <input type="text" class="form-control input" name="phone" data-form-field="Phone"
-                                       placeholder="phone" required="" id="phone-form4-6x">
-                            </div>
                             <div class="col-md-12" data-for="email">
-                                <input type="text" class="form-control input" name="email" style="margin-top: 10px;"
-                                       data-form-field="email" placeholder="email" required="" id="email-form4-6x">
-                            </div>
-                            <div class="col-md-12" data-for="message">
-                                <textarea class="form-control input" name="message"
-                                          style="margin-top: 10px; resize:none" rows="3" data-form-field="Message"
-                                          placeholder="message" id="message-form4-6x"></textarea>
-                            </div>
-                            <div class="input-group-btn col-md-12" style="margin-top: 10px;">
-                                <button href="" type="submit" class="btn btn-form display-4">SEND
-                                </button>
+                                <div class="col-md-8">
+                                    <h6>Subscribe to our newsletter</h6>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control input" name="email"
+                                               data-form-field="Email" placeholder="email" required="">
+                                    </div>
+                                    <br><br>
+                                    <div class="input-group-btn col-md-4">
+                                        <button type="submit" class="btn btn-outline-secondary btn-block">SUBSCRIBE</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-        </div>
-    </footer>
-    <section class="copyright">
-        <div class="row text-center">
-            <div class="col-md-12 pt-3">
+            <div class="col-md-6 pt-3">
                 <p class="text-center">&copy;2015-2019 <br>athleticstandard.org</p>
             </div>
         </div>
