@@ -2,15 +2,17 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #f9f9f9;
-}
-
 .col-md-12 h2 {
     text-align: center;
 }
 
-.mb-4 {
+.jumbotron {
+    width: 104%;
+    margin-left: -2%;
+    border-radius: 0;
+}
+
+.copyright {
 
 }
 
@@ -33,16 +35,6 @@ body {
 
 .container {
     background-color: white;
-}
-
-/*.border-0 img {
-    -webkit-filter: drop-shadow(4px 4px 4px #696969);
-    filter: drop-shadow(6px 6px 6px #696969);
-}*/
-
-#pepsi_logo, #army_logo, #pepsi, #camo, #cs {
-    -webkit-filter: drop-shadow(0px 0px 0px #696969);
-    filter: drop-shadow(0px 0px 0px #696969);
 }
 
 .img-fluid {
@@ -82,7 +74,7 @@ body {
 }
 
 #lang-selector a {
-    color: #bbb;
+    color: #393939;
     z-index: 2;
 }
 
@@ -93,7 +85,7 @@ body {
 #logo {
     width: 50px;
     height: auto;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 #sex, #height, #weight, #age, #name, #round, #reps {
@@ -144,10 +136,6 @@ input {
     -webkit-transform: scale(1.0);
 }
 
-#slogans .list-group-item {
-    -webkit-transform: scale(1.0);
-}
-
 a {
     color: #4d784e;
 }
@@ -155,6 +143,15 @@ a {
 #mainHeader {
     font-family: Intro Inline;
     text-align: center;
+    background-image: linear-gradient(to right, #FFCB05, #FFCB05);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 20% 2px;
+    transition: background-size .5s ease;
+}
+
+#mainHeader:hover {
+    background-size: 50% 2px;
 }
 
 .star {
@@ -175,7 +172,7 @@ nav ul li:hover > ul {
     font-weight: 200;
     color: #4d784e;
     font-size: 107%;
-    font-family: Roboto-Regular;
+    font-family: MullerNarrow-Light;
 }
 
 .mb-4 img {
@@ -358,7 +355,8 @@ p {
 }
 
 .copyright {
-    margin-top: 5%;
+    width: 104%;
+    margin-left: -2%;
     align-items: center;
     font-family: MullerNarrow-Light;
     background-color: #f9f9f9;
@@ -387,13 +385,6 @@ img {
     height: auto;
 }
 
-/*ul.navbar-nav li a:hover {
-    transform: scale(1.1);
-    background-color: transparent;
-    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-}*/
-
 .carousel-item {
     background-attachment: fixed;
     background-position: center;
@@ -412,9 +403,9 @@ img {
     width: auto;
 }
 
-.display-4:hover, .list-group-item:hover {
+/*.display-4:hover, .list-group-item:hover {
     transform: scale(1.1);
-}
+}*/
 
 #soldiers {
     margin-top: -27%;
@@ -468,10 +459,6 @@ legend.scheduler-border {
 
 @media (min-width: 1281px) {
     #wrapper {
-        background-image: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8));
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
         height: 100%;
         font-size: 90%;
         font-weight: 500;
@@ -507,12 +494,14 @@ legend.scheduler-border {
 
 @media (min-width: 768px) and (max-width: 1024px) {
     #wrapper {
-        font-size: 90%;
-        width: 80%;
+        height: 150%;
+        font-size: 100%;
+        width: 100%;
         margin:0 auto;
         padding: 0.5%;
-        font-family: Roboto-Regular;
+        font-family: MullerNarrow-Light;
         color: #191919;
+        height: 100%;
     }
 }
 
@@ -523,16 +512,33 @@ legend.scheduler-border {
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     #wrapper {
-        background-image: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8));
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        font-size: 90%;
-        width: 85%;
+        font-size: 100%;
+        width: 100%;
         margin:0 auto;
-        padding: 0.5%;
-        font-family: Roboto-Regular;
+
+        font-family: MullerNarrow-Light;
         color: #191919;
+    }
+    .copyright {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .panel-default {
+        width: 104%;
+        margin-left: -2%;
+    }
+    .text-xs-center {
+        width: 104%;
+        margin-left: -2%;
+    }
+    .table-hover {
+        width: 104%;
+        margin-left: -2%;
+    }
+    .jumbotron {
+        width: 108%;
+        margin-left: -4%;
+        border-radius: 0;
     }
 }
 
@@ -543,15 +549,11 @@ legend.scheduler-border {
 
 @media (min-width: 481px) and (max-width: 767px) {
     #wrapper {
-        background-image: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8));
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
         font-size: 90%;
-        width: 90%;
+        width: 100%;
         margin:0 auto;
         padding: 0.5%;
-        font-family: TTWPGOTT;
+        font-family: MullerNarrow-Light;
         color: #191919;
     }
 }
@@ -569,5 +571,26 @@ legend.scheduler-border {
         padding-top: 8%;
         font-family: MullerNarrow-Light;
         color: #191919;
+    }
+    .copyright {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .panel-default {
+        width: 104%;
+        margin-left: -2%;
+    }
+    .text-xs-center {
+        width: 104%;
+        margin-left: -2%;
+    }
+    .table-hover {
+        width: 104%;
+        margin-left: -2%;
+    }
+    .jumbotron {
+        width: 108%;
+        margin-left: -4%;
+        border-radius: 0;
     }
 }

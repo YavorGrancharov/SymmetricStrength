@@ -27,8 +27,24 @@
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link href="../../node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
     <script language="JavaScript1.3" type="text/javascript" src="../../scripts/engines/jse_form.js"></script>
+    <style>
+        .img-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .img-box img {
+            max-width: 100%;
+            width: 80px;
+            height: 80px;
+            display: block;
+            border-radius: 50%;
+        }
+    </style>
 </head>
-<body style="background-color: #f9f9f9">
+<body class="bg-light">
 <div class="nav-wrap">
     <div id="lang-selector">
         <a href="../../views/hallOfStrength.html" class="">BG</a>
@@ -36,7 +52,7 @@
         <a href="hallOfStrength.html" class="active">EN</a>
     </div>
 </div>
-<div class="container" id="wrapper">
+<div class="container border" id="wrapper">
     <div class="jumbotron bg-light">
         <div class="float-left"><img src="../../static/images/logo.png" id="logo" alt="main-logo"></div>
         <div class="row">
@@ -66,7 +82,7 @@
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Mesh
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu border-0 bg-light" aria-labelledby="navbarDropdown">
                                 <a class="nav-link" href="../views/martialLaw.html">Martial law</a>
                                 <a class="nav-link" href="../views/about.html">FAQ</a>
                                 <a class="nav-link" href="platoon.html">Platoon</a>
@@ -112,11 +128,11 @@
             <tr>
                 <td>1</td>
                 <td>Lyubomir Krustev</td>
-                <td>76.6 / 100</td>
+                <td>60.57 / 100</td>
                 <td>76.6 / 100</td>
                 <td>78.9 / 100</td>
-                <td>Captain</td>
-                <td class="border-0"><a href="../../graphs/lyubomir_krastev.html"><i class="fa fa-bar-chart" aria-hidden="true"></i></a></td>
+                <td>Sergeant</td>
+                <td class="border-0"><button type="button" data-toggle="modal" data-target="#luboKrustev"><i class="fa fa-bar-chart" aria-hidden="true"></i></button></td>
             </tr>
             <tr>
                 <td>2</td>
@@ -199,6 +215,10 @@
             </tbody>
         </table>
     </div>
+
+    <div class="text-left"><span class="text-danger">IMPORTANT!</span> The results are revised every 3 months.</div>
+
+    <br>
 
     <fieldset class="scheduler-border">
         <legend class="scheduler-border">Sitemap</legend>
@@ -304,6 +324,73 @@
             </div>
         </div>
     </section>
+</div>
+<!-- The Modal -->
+<div class="modal" id="luboKrustev">
+    <script src="../../node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="../../node_modules/chart.js/dist/Chart.bundle.js"></script>
+    <script src="../../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Lyubomir Krustev<small> (157cm. 58kg. 19y.)</small></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-2 float-left">
+                                <div class="img-box" style="background-image: url('../../static/images/lubomir_krustev.jpg')"></div>
+                            </div>
+                            <canvas style="display: block" class="text-center" id="bar-chart-horizontal-ideal"></canvas>
+                        </div>
+                    </div>
+                    <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения спрямо
+                        текущото най-силно
+                    </small>
+                </div>
+                <script type="text/javascript">
+                    let chartIdeal = document.getElementById("bar-chart-horizontal-ideal");
+                    new Chart((chartIdeal), {
+                        type: 'horizontalBar',
+                        data: {
+                            labels: ["Deadlift", "Dip", "Military Press", "Sumo Deadlift", "Squat", "Lunge", "Pull-up", "Front Squat", "Push Press", "Overhead Squat", "Airborne Squat"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                    data: [-30.55, 0, -5.55, -23.53, -8.33, -10, -17.42, -33.33, -30, -62.5, -50],
+                                    color: "#ffffff"
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            legend: {
+                                display: false
+                            },
+                            title: {
+                                display: true,
+                                text: "equilibrium chart"
+                            }
+                        }
+                    });
+                </script>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
 </div>
 <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
 <script src="../../node_modules/popper.js/dist/umd/popper.min.js"></script>

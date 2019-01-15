@@ -14,12 +14,6 @@
 
         gtag('config', 'UA-131327406-1');
     </script>
-    <script>
-        window.addEventListener('error', function (e) {
-            e.preventDefault();
-            window.location.href = ("../views/missing");
-        }, true);
-    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -27,18 +21,29 @@
     <link rel="icon" type="image/x-icon" href="../../static/images/logo.png">
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../../styles/footer.css">
+    <link rel="stylesheet" href="../../styles/fieldset.css">
     <link rel="stylesheet" href="../../styles/testimonials.css">
     <link rel="stylesheet" href="../../styles/timeline.css">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link href="../../node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
     <script language="JavaScript1.3" type="text/javascript" src="../../scripts/engines/jse_form.js"></script>
+    <style>
+        ol {
+            list-style-type: none;
+        }
+
+        ol > li:before {
+            content: "-";
+            text-indent: -5px;
+        }
+    </style>
 </head>
 <body class="bg-light">
 <div class="nav-wrap">
     <div id="lang-selector">
-        <a href="../../views/charge.html" class="">BG</a>
+        <a href="../../views/codeOfEthics.html" class="">BG</a>
          | 
-        <a href="charge.html" class="active">EN</a>
+        <a href="codeOfEthics.html" class="active">EN</a>
     </div>
 </div>
 <div class="container border" id="wrapper">
@@ -46,22 +51,23 @@
         <div class="float-left"><img src="../../static/images/logo.png" id="logo" alt="main-logo"></div>
         <div class="row">
             <div class="col-md-12">
-                <h3 id="mainHeader">ATHLETIC STANDARD</h3>
-                <h4 class="text-muted"><sup>GO STRONG</sup></h4>
+                <h3 class="text-center">Code of Ethics</h3>
+                <h5 class="text-muted text-center"><sup>treat others with dignity and respect</sup></h5>
             </div>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="../index.html">Bay</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span><img style="opacity: 0.5" src="../../static/images/drop_btn.png" alt="sergeant-dropdown-icon"></span>
+                <span><img style="opacity: 0.5" src="../../static/images/drop_btn.png"
+                           alt="sergeant-dropdown-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="col-md-6">
                     <ul class="navbar-nav mr-auto float-left">
                         <li class="nav-item">
-                            <a class="nav-link" href="views/reports.html">Blog</a>
+                            <a class="nav-link" href="../views/reports.html">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " href="charge.html">Charge</a>
@@ -72,9 +78,9 @@
                                 Mesh
                             </a>
                             <div class="dropdown-menu border-0 bg-light" aria-labelledby="navbarDropdown">
-                                <a class="nav-link" href="../views/martialLaw.html">Martial Law</a>
+                                <a class="nav-link" href="../views/martialLaw.html">Martial law</a>
                                 <a class="nav-link" href="../views/about.html">FAQ</a>
-                                <a class="nav-link" href="platoon.html">Platoon</a>
+                                <a class="nav-link" href="platoon.html">Soldiers</a>
                             </div>
                         </li>
                     </ul>
@@ -82,10 +88,10 @@
                 <div class="col-md-6">
                     <ul class="navbar-nav mr-auto float-right">
                         <li class="nav-item">
-                            <a class="nav-link" href="views/generals.html">Murphys</a>
+                            <a class="nav-link" href="../views/generals.html">Murphys</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="views/gallery.html">Gallery</a>
+                            <a class="nav-link" href="../views/gallery.html">Gallery</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="headquarter.html">Head Quarter</a>
@@ -96,192 +102,120 @@
         </nav>
     </div>
 
+
     <br>
 
-    <div class="row flex-items-xs-middle flex-items-xs-center">
-        <div class="col-md-12 col-lg-4">
-            <div class="card text-xs-center">
-                <div class="card-header bg-light">
-                    <h4 class="display-4">Alfa</h4>
-                </div>
-                <div class="card-block">
-                    <h4 class="card-title">
-                        4 Weeks Membership
-                        <br>
-                        <small><!--100% warranty*--></small>
-                    </h4>
-                    <ul class="list-group">
-                        <li class="list-group-item">4 training sessions <span class="price" style="float: right">100<small>lv.</small></span>
-                            <br>
-                            <small>1 time a week</small>
-                        </li>
-                        <li class="list-group-item">8 training sessions <span class="price" style="float: right">175<small>lv.</small></span>
-                            <br>
-                            <small>2 times a week</small>
-                        </li>
-                        <li class="list-group-item">12 training sessions <span class="price" style="float: right">225<small>lv.</small></span>
-                            <br>
-                            <small>3 times a week</small>
-                        </li>
-                        <li class="list-group-item">16 training sessions <span class="price" style="float: right">270<small>lv.</small></span>
-                            <br>
-                            <small>4 times a week</small>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-12 col-lg-4">
-            <div class="card text-xs-center">
-                <div class="card-header bg-light">
-                    <h4 class="display-4">Bravo</h4>
-                </div>
-                <div class="card-block">
-                    <h4 class="card-title">
-                        5 Weeks Membership
-                        <br>
-                        <!--<small>75% warranty*</small>-->
-                    </h4>
-                    <ul class="list-group">
-                        <li class="list-group-item">4 training sessions <span class="price" style="float: right">115<small>lv.</small></span>
-                            <br>
-                            <small>1 time a week</small>
-                        </li>
-                        <li class="list-group-item">8 training sessions <span class="price" style="float: right">205<small>lv.</small></span>
-                            <br>
-                            <small>2 times a week</small>
-                        </li>
-                        <li class="list-group-item">12 training sessions <span class="price" style="float: right">275<small>lv.</small></span>
-                            <br>
-                            <small>3 times a week</small>
-                        </li>
-                        <li class="list-group-item">16 training sessions <span class="price" style="float: right">325<small>lv.</small></span>
-                            <br>
-                            <small>4 times a week</small>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-12 col-lg-4">
-            <div class="card text-xs-center">
-                <div class="card-header bg-light">
-                    <h4 class="display-4">Charlie</h4>
-                </div>
-                <div class="card-block">
-                    <h4 class="card-title">
-                        6 Седмичен абонамент
-                        <br>
-                        <!--<small>50% warranty*</small>-->
-                    </h4>
-                    <ul class="list-group">
-                        <li class="list-group-item">4 тренировкии <span class="price" style="float: right">135<small>lv.</small></span>
-                            <br>
-                            <small>1 time a week</small>
-                        </li>
-                        <li class="list-group-item">8 тренировкии <span class="price" style="float: right">235<small>lv.</small></span>
-                            <br>
-                            <small>2 times a week</small>
-                        </li>
-                        <li class="list-group-item">12 training sessions <span class="price" style="float: right">315<small>lv.</small></span>
-                            <br>
-                            <small>3 times a week</small>
-                        </li>
-                        <li class="list-group-item">16 sessions <span class="price" style="float: right">370<small>lv.</small></span>
-                            <br>
-                            <small>4 times a week</small>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <h2>Value</h2>
-    <div class="table-responsive">
-        <table class="table table-striped table-hover">
-            <thead class="thead-inverse">
-            <tr>
-                <th class="w-25"></th>
-                <th class="">Once</th>
-                <th class="">No membership</th>
-                <th class="">Alfa</th>
-                <th class="">Bravo</th>
-                <th class="">Charlie</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr class="bg-light">
-                <td class="w-25 option">Workout Session</td>
-                <td class="">80<small>lv.</small></td>
-                <td class="">35<small>lv.</small></td>
-                <td class=""><i class="fa fa-check"></i></td>
-                <td class=""><i class="fa fa-check"></i></td>
-                <td class=""><i class="fa fa-check"></i></td>
-            </tr>
-            <tr>
-                <td class="w-25 option">Duration</td>
-                <td class="">90<small>min.</small></td>
-                <td class="">60<small>min.</small></td>
-                <td class="">60<small>min.</small></td>
-                <td class="">60<small>min.</small></td>
-                <td class="">60<small>min.</small></td>
-            </tr>
-            <tr class="bg-light">
-                <td class="option">Body Fat Measurement</td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-            </tr>
-            <tr>
-                <td class="option">Strength Balance</td>
-                <td>-</td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-            </tr>
-            <tr class="bg-light">
-                <td class="option">Meal Plan</td>
-                <td>-</td>
-                <td>on demand</td>
-                <td>on demand</td>
-                <td>on demand</td>
-                <td>on demand</td>
-            </tr>
-            <tr>
-                <td class="option">Mobility Evaluation</td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-            </tr>
-            <tr class="bg-light">
-                <td class="option">Recipe Blog Access</td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-                <td><i class="fa fa-check"></i></td>
-            </tr>
-            <tr class="text-uppercase font-weight-bold">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <ul>
-        <li class="text-muted">all prices are for pair training, which means one coach with a maximum of two trainees within the session</li>
-        <li class="text-muted">an exception to the above is the one-time workout within which the trainee receives all the attention of the trainer</li>
-    </ul>
 
+    <div class="panel panel-default">
+        <h4 class="panel-heading">Code of Ethics and Professional Conduct</h4>
+        <div class="panel-body">
+            <fieldset class="fieldset col-md-12">
+                <legend class="legend">Code of Ethics</legend>
+                <h6 class="text-center">any personal trainer, hereafter referred to as "Trainer", must possess, achieve
+                    and
+                    maintain the following ideals</h6>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <ul>Trainer:
+                            <li>acts with honesty and integrity</li>
+                            <li>respects human rights</li>
+                            <li>do not discredit, lower or affect the honor and dignity of a colleague, client,
+                                or other member of society. This principle does not prevent him from providing,
+                                in a professional manner, an honest and competent second or expert opinion
+                                about the actions of another trainer where appropriate
+                            </li>
+                            <li>is diligent, responsible and determined</li>
+                            <li>provides a competent decision in accordance with the requirements and constraints of the
+                                profession
+                            </li>
+                            <li>provide only those services for which he is qualified or competent</li>
+                            <li>is transparent and candid in all of his communications. Do not misrepresent in any
+                                manner his skills, training, professional credentials, identity or services
+                            </li>
+                            <li>defines himself on the basis of his contribution to the profession without inwardly or
+                                openly
+                                denying all or part of his sources of information serving him as a starting point in
+                                deriving a new principle, conclusion or movement
+                            </li>
+                            <li>builds professional self-esteem on the basis of added value and not on the basis of
+                                differentiation from another practitioner
+                            </li>
+                            <li>recognizes that the self-regulation of the profession is a privilege and that he has
+                                a continuing responsibility to merit this privilege
+                            </li>
+                            <li>conducts himself in a manner that merits the respect of society and the profession</li>
+                            <li>engages in continuing education and professional development throughout his career</li>
+                            <li>participates in the promotion of the profession through advocacy, research and
+                                maintenance of the highest possible standards of practice
+                            </li>
+                            <li>keeps his professional commitments by integrating all of the listed principles into his
+                                daily practice
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <legend class="legend">Professional Conduct</legend>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <ul>Trainer:
+                            <li>respects the client’s dignity, needs and values</li>
+                            <li>conforms to customer wishes, except in a situation outside the technical competence of
+                                the latter
+                            </li>
+                            <li>respects human rights of the client</li>
+                            <li>shall not discriminate in the provision of services to a client based on grounds of
+                                race, religion, ethnic or national origin, age, sex, sexual orientation, disability or
+                                any similar ground
+                            </li>
+                            <li>shall not treat or attempt to treat a condition that he know or ought to know is
+                                beyond his expertise or competence
+                            </li>
+                            <li>shall refer a client to a qualified health practitioner where he recognize or ought to
+                                recognize a condition that requires health services that he is not able to provide
+                            </li>
+                            <li>shall not assess or treat a client without informed consent</li>
+                            <li>shall assume full responsibility for all care he provides including supervising
+                                appropriately persons to whom he delegates duties
+                            </li>
+                            <li>shall maintain the generally accepted standard of practice</li>
+                            <li>shall maintain appropriate documentation for all clients</li>
+                            <li>shall keep all client information confidential and shall not communicate such
+                                information to any person without the consent of the client or the client’s substitute
+                                decision maker except when required or permitted by law
+                            </li>
+                            <li>shall disclose his fees to clients before providing services</li>
+                            <li>shall not charge fees that are excessive for the services provided</li>
+                            <li>shall not physically, emotionally or sexually abuse or harass a client or any other
+                                person
+                            </li>
+                            <li>shall not practice while under the influence of a substance or while incapacitated</li>
+                            <li>shall not discontinue professional services that are needed unless:
+                                <ol>
+                                    <li> the client terminates the service</li>
+                                    <li> has a reasonable opportunity to obtain alternative services</li>
+                                    <li> there are reasonable grounds to believe that the client has or will become
+                                        abusive
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>shall not engage in conduct that is relevant to the practice and that
+                                would reasonably be regarded as, dishonourable or unprofessional
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="text-center" style="border: 1px dashed orangered; border-radius: 2px; width: 200px">
+        Download: <a href="https://docs.google.com/uc?export=download&id=1W_WqFRBNdHDO873cQFrNJWvD7DBeSH6R">code_of_ethics.txt</a>
+    </div>
+
+    <br>
 
     <fieldset class="scheduler-border">
         <legend class="scheduler-border">Sitemap</legend>
@@ -360,6 +294,7 @@
                 </div>
 
                 <br>
+
                 <div class="well col-md-12" style="margin-bottom: 20px">
                     <form class="block mbr-form" action="https://formspree.io/athleticstandard.org@gmail.com"
                           method="post">

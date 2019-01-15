@@ -20,14 +20,27 @@
     <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link href="../node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
     <style>
-        .active {
-            color: orangered;
+        .col-md-12 {
+            margin-top: 2%;
+        }
+        .img-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .img-box img {
+            max-width: 100%;
+            width: 80px;
+            height: 80px;
+            display: block;
+            border-radius: 50%;
         }
     </style>
 </head>
-<body>
+<body style="background-color: #f9f9f9">
 <div class="nav-wrap">
     <div id="lang-selector">
         <a href="lyubomir_krastev.html" class="active">BG</a>
@@ -35,25 +48,30 @@
         <a href="../en/graphs/lyubomir_krastev.html" class="">EN</a>
     </div>
 </div>
-<div class="nav-wrap text-center">
-    <div id="balance-selector">
-        <a href="#bar-chart-horizontal-ideal" class="active">Идеален баланс</a>
-         | 
-        <a href="#bar-chart-horizontal-perfect" class="">Перфектен баланс</a>
-    </div>
-</div>
-<div class="container">
+<div class="container" id="wrapper">
     <div class="row">
         <div class="col-md-12">
-            <h5>Любомир Кръстев <small> [157см. 58кг. 19г.]</small></h5>
-            <h5><small>най-силно движение: Кофи с тежест</small></h5>
-            <h5><small>най-слабо движение: Клек с тежест над глава</small></h5>
-            <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения спрямо текущото най-силно</small>
+            <div class="col-md-2 float-left">
+                <div class="img-box" style="background-image: url('../static/images/lubomir_krustev.jpg')"></div>
+            </div>
+            <div class="col-md-10 float-right">
+                <h5>Любомир Кръстев
+                    <small> (157см. 58кг. 19г.)</small>
+                </h5>
+                <h5>
+                    <small>най-силно движение: Кофи с тежест</small>
+                </h5>
+                <h5>
+                    <small>най-слабо движение: Клек с щанга над глава</small>
+                </h5>
+            </div>
 
             <canvas style="display: block" class="text-center" id="bar-chart-horizontal-ideal"></canvas>
-            <canvas style="display: none" class="text-center" id="bar-chart-horizontal-perfect"></canvas>
         </div>
     </div>
+    <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения спрямо
+        текущото най-силно
+    </small>
 </div>
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
@@ -86,58 +104,10 @@
             },
             title: {
                 display: true,
-                text: 'идеален баланс'
+                text: "идеален баланс"
             }
         }
     });
-</script>
-<script type="text/javascript">
-    let chartPerfect = document.getElementById("bar-chart-horizontal-perfect");
-    chartPerfect.style.height = "500px";
-    chartPerfect.style.width = "100%";
-    new Chart((chartPerfect), {
-        type: 'horizontalBar',
-        data: {
-            labels: ["Deadlift", "Dip", "Military Press", "Sumo Deadlift", "Squat", "Lunge", "Pull-up", "Front Squat", "Push Press", "Overhead Squat", "Airborne Squat"],
-            datasets: [
-                {
-                    label: "",
-                    backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
-                    data: [-30.55, 0, -5.55, -23.53, -8.33, -10, -17.42, -33.33, -30, -62.5, -50],
-                    color: "#ffffff"
-                }
-            ]
-        },
-        options: {
-            responsive: false,
-            legend: {
-                display: false
-            },
-            title: {
-                display: true,
-                text: 'перфектен баланс'
-            }
-        }
-    });
-</script>
-<script>
-    let ideal = document.getElementById("bar-chart-horizontal-ideal");
-    let perfect = document.getElementById("bar-chart-horizontal-perfect");
-    let hrefs = document.getElementById("balance-selector").children;
-    for(let i = 0; i < hrefs.length; i++) {
-        hrefs[i].addEventListener("click", function () {
-            let current = document.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
-            if(hrefs[i].innerText.indexOf("Идеален баланс") !== -1) {
-                ideal.style.display = "block";
-                perfect.style.display = "none";
-            } else {
-                ideal.style.display = "none";
-                perfect.style.display = "block";
-            }
-        })
-    }
 </script>
 </body>
 </html>

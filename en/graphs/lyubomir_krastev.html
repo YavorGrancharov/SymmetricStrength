@@ -22,12 +22,28 @@
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link href="../../node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
     <style>
-        .active {
-            color: orangered;
+        .col-md-12 {
+            margin-top: 2%;
+        }
+
+        .img-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .img-box img {
+            max-width: 100%;
+            width: 80px;
+            height: 80px;
+            display: block;
+            border-radius: 50%;
         }
     </style>
 </head>
-<body>
+<body style="background-color: #f9f9f9">
 <div class="nav-wrap">
     <div id="lang-selector">
         <a href="../../graphs/lyubomir_krastev.html" class="">BG</a>
@@ -35,25 +51,30 @@
         <a href="lyubomir_krastev.html" class="active">EN</a>
     </div>
 </div>
-<div class="nav-wrap text-center">
-    <div id="balance-selector">
-        <a href="#bar-chart-horizontal-ideal" class="active">Ideal balance</a>
-         | 
-        <a href="#bar-chart-horizontal-perfect" class="">Perfect balancs</a>
-    </div>
-</div>
-<div class="container">
+<div class="container" id="wrapper">
     <div class="row">
         <div class="col-md-12">
-            <h5>Lyubomir Krustev <small> [157cm. 58kg. 19y.]</small></h5>
-            <h5><small>strongest lift: Weighted Dip</small></h5>
-            <h5><small>weakest lift: Overhead Squat</small></h5>
-            <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения спрямо текущото най-силно</small>
+            <div class="col-md-2 float-left">
+                <div class="img-box" style="background-image: url('../../static/images/lubomir_krustev.jpg')"></div>
+            </div>
+            <div class="col-md-10 float-right">
+                <h5>Lyubomir Krustev
+                    <small> [157cm. 58kg. 19y.]</small>
+                </h5>
+                <h5>
+                    <small>strongest lift: Weighted Dip</small>
+                </h5>
+                <h5>
+                    <small>weakest lift: Overhead Squat</small>
+                </h5>
+            </div>
 
             <canvas style="display: block" class="text-center" id="bar-chart-horizontal-ideal"></canvas>
-            <canvas style="display: none" class="text-center" id="bar-chart-horizontal-perfect"></canvas>
         </div>
     </div>
+    <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения спрямо
+        текущото най-силно
+    </small>
 </div>
 <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
 <script src="../../node_modules/popper.js/dist/umd/popper.min.js"></script>
@@ -90,11 +111,6 @@
             }
         }
     });
-</script>
-<script>
-    let ideal = document.getElementById("bar-chart-horizontal");
-    let perfect = document.getElementById("bar-chart-horizontal2");
-
 </script>
 </body>
 </html>
