@@ -12,6 +12,15 @@
     border-radius: 0;
 }
 
+.pt-3 .azm-circle {
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    background-color: #f7f7f7;
+    border-radius: 50%;
+    height: 40px;
+    width: auto;
+}
+
 .copyright {
 
 }
@@ -85,7 +94,7 @@
 #logo {
     width: 50px;
     height: auto;
-    opacity: 0.9;
+    opacity: 1;
 }
 
 #sex, #height, #weight, #age, #name, #round, #reps {
@@ -141,9 +150,10 @@ a {
 }
 
 #mainHeader {
+    color: #3b5998;
     font-family: Intro Inline;
     text-align: center;
-    background-image: linear-gradient(to right, #FFCB05, #FFCB05);
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: 20% 2px;
@@ -422,11 +432,11 @@ img {
 -------------------------------------------------- */
 footer {
     padding-top: 30px;
-    color: #191919;
+    color: #3b5998;
 }
 
 footer a {
-    color: #191919;
+    color: #3b5998;
     text-decoration: none;
 }
 
@@ -485,10 +495,10 @@ legend.scheduler-border {
         width: 62%;
         margin:0 auto;
         font-family: MullerNarrow-Light;
-        color: #191919;
+        color: #3b5998;
     }
     #navbarSupportedContent {
-        color: #191919;
+        color: #3b5998;
     }
 }
 
