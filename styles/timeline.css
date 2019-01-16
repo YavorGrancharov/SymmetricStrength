@@ -2,7 +2,7 @@
 .circle {
     padding: 13px 20px;
     border-radius: 50%;
-    background-color: #3b5998;
+    background-color: #ED8D8D;
     color: #fff;
     max-height: 50px;
     z-index: 2;
@@ -14,7 +14,7 @@
 .how-it-works.row .col-2::after {
     content: "";
     position: absolute;
-    border-left: 3px solid #3b5998;
+    border-left: 3px solid #ED8D8D;
     z-index: 1;
 }
 .how-it-works.row .col-2.bottom::after {
@@ -38,7 +38,7 @@
     height: 40px;
 }
 .timeline hr {
-    border-top: 3px solid #3b5998;
+    border-top: 3px solid #ED8D8D;
     margin: 0;
     top: 17px;
     position: relative;
@@ -48,7 +48,7 @@
     overflow: hidden;
 }
 .timeline .corner {
-    border: 3px solid #3b5998;
+    border: 3px solid #ED8D8D;
     width: 100%;
     position: relative;
     border-radius: 15px;

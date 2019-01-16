@@ -12,15 +12,6 @@
     border-radius: 0;
 }
 
-.pt-3 .azm-circle {
-    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    background-color: #f7f7f7;
-    border-radius: 50%;
-    height: 40px;
-    width: auto;
-}
-
 .copyright {
 
 }
@@ -83,7 +74,7 @@
 }
 
 #lang-selector a {
-    color: #393939;
+    color: #0b090f;
     z-index: 2;
 }
 
@@ -94,7 +85,7 @@
 #logo {
     width: 50px;
     height: auto;
-    opacity: 1;
+    opacity: 0.9;
 }
 
 #sex, #height, #weight, #age, #name, #round, #reps {
@@ -150,7 +141,7 @@ a {
 }
 
 #mainHeader {
-    color: #3b5998;
+    color: #0b090f;
     font-family: Intro Inline;
     text-align: center;
     background-image: linear-gradient(to right, #ffffff, #ffffff);
@@ -180,7 +171,7 @@ nav ul li:hover > ul {
 
 .popover-body {
     font-weight: 200;
-    color: #4d784e;
+    color: #0b090f;
     font-size: 107%;
     font-family: MullerNarrow-Light;
 }
@@ -369,7 +360,6 @@ p {
     margin-left: -2%;
     align-items: center;
     font-family: MullerNarrow-Light;
-    background-color: #f9f9f9;
 }
 
 #copyscape {
@@ -432,11 +422,11 @@ img {
 -------------------------------------------------- */
 footer {
     padding-top: 30px;
-    color: #3b5998;
+    color: #0b090f;
 }
 
 footer a {
-    color: #3b5998;
+    color: #0b090f;
     text-decoration: none;
 }
 
@@ -495,10 +485,10 @@ legend.scheduler-border {
         width: 62%;
         margin:0 auto;
         font-family: MullerNarrow-Light;
-        color: #3b5998;
+        color: #0b090f;
     }
     #navbarSupportedContent {
-        color: #3b5998;
+        color: #0b090f;
     }
 }
 
@@ -515,7 +505,7 @@ legend.scheduler-border {
         margin:0 auto;
         padding: 0.5%;
         font-family: MullerNarrow-Light;
-        color: #191919;
+        color: #0b090f;
         height: 100%;
     }
 }
@@ -532,7 +522,7 @@ legend.scheduler-border {
         margin:0 auto;
 
         font-family: MullerNarrow-Light;
-        color: #191919;
+        color: #0b090f;
     }
     .copyright {
         width: 100%;
@@ -569,7 +559,7 @@ legend.scheduler-border {
         margin:0 auto;
         padding: 0.5%;
         font-family: MullerNarrow-Light;
-        color: #191919;
+        color: #0b090f;
     }
 }
 
@@ -585,7 +575,7 @@ legend.scheduler-border {
         margin:0 auto;
         padding-top: 8%;
         font-family: MullerNarrow-Light;
-        color: #191919;
+        color: #0b090f;
     }
     .copyright {
         width: 100%;
