@@ -362,6 +362,11 @@ p {
     background-color: #f9f9f9;
 }
 
+#copyscape {
+    width: 480px;
+    height: auto;
+}
+
 tr {
     min-height: 10px;
     height: 10px;
