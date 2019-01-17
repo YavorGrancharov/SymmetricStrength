@@ -10,10 +10,23 @@
     width: 104%;
     margin-left: -2%;
     border-radius: 0;
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    transition: background-size .5s ease;
 }
 
 .copyright {
 
+}
+
+.breadcrumb a {
+    color: #ffffff;
+}
+
+.breadcrumb a .breadcrumb-item .active {
+    color: #ffffff;
 }
 
 #name-form4-6x, #phone-form4-6x, #email-form4-6x, #message-form4-6x {
@@ -65,27 +78,29 @@
 }
 
 #lang-selector {
+    font-family: Roboto-Regular;
     position: absolute;
     top: 10px;
     bottom: 10px;
     right: 25px;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 10px;
 }
 
 #lang-selector a {
-    color: #0b090f;
-    z-index: 2;
+    color: #ffffff;
+    z-index: 9999;
 }
 
 #lang-selector a.active{
-    color: #ff2400;
+    z-index: 9999;
+    color: #FFCB05;
 }
 
 #logo {
     width: 50px;
     height: auto;
-    opacity: 0.9;
+    opacity: 1;
 }
 
 #sex, #height, #weight, #age, #name, #round, #reps {
@@ -95,8 +110,13 @@
 input {
     border: 1px solid lightgray;
     border-radius: 3px;
-    background-color: transparent;
+    background-color: #f7f7f7;
     text-align: center;
+}
+
+@font-face {
+    font-family: MatchbookTexture;
+    src: url('./static/fonts/MatchbookTexture.otf') format('opentype');
 }
 
 @font-face {
@@ -141,18 +161,10 @@ a {
 }
 
 #mainHeader {
-    color: #0b090f;
+    margin-top: -5px;
+    color: #363636;
     font-family: Intro Inline;
-    text-align: center;
-    background-image: linear-gradient(to right, #ffffff, #ffffff);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: 20% 2px;
-    transition: background-size .5s ease;
-}
-
-#mainHeader:hover {
-    background-size: 50% 2px;
+    text-align: left;
 }
 
 .star {
@@ -356,6 +368,7 @@ p {
 }
 
 .copyright {
+    color: white;
     width: 104%;
     margin-left: -2%;
     align-items: center;
@@ -385,10 +398,10 @@ td, a {
     transform: rotate(-90deg);
 }
 
-img {
+/*img {
     width: 20px;
     height: auto;
-}
+}*/
 
 .carousel-item {
     background-attachment: fixed;
@@ -412,11 +425,6 @@ img {
     transform: scale(1.1);
 }*/
 
-#soldiers {
-    margin-top: -27%;
-    width: 100%;
-    height: auto;
-}
 
 /* Sticky footer style and color
 -------------------------------------------------- */
@@ -490,6 +498,11 @@ legend.scheduler-border {
     #navbarSupportedContent {
         color: #0b090f;
     }
+    .breadcrumb {
+        width: 104%;
+        margin-left: -2%;
+        border-radius: 0;
+    }
 }
 
 /*
@@ -541,8 +554,13 @@ legend.scheduler-border {
         margin-left: -2%;
     }
     .jumbotron {
-        width: 108%;
-        margin-left: -4%;
+        width: 104%;
+        margin-left: -2%;
+        border-radius: 0;
+    }
+    .breadcrumb {
+        width: 104%;
+        margin-left: -2%;
         border-radius: 0;
     }
 }
@@ -554,7 +572,7 @@ legend.scheduler-border {
 
 @media (min-width: 481px) and (max-width: 767px) {
     #wrapper {
-        font-size: 90%;
+        font-size: 100%;
         width: 100%;
         margin:0 auto;
         padding: 0.5%;
@@ -573,7 +591,7 @@ legend.scheduler-border {
         font-size: 100%;
         width: 100%;
         margin:0 auto;
-        padding-top: 8%;
+
         font-family: MullerNarrow-Light;
         color: #0b090f;
     }
@@ -594,8 +612,16 @@ legend.scheduler-border {
         margin-left: -2%;
     }
     .jumbotron {
+         width: 108%;
+         margin-left: -4%;
+         border-radius: 0;
+     }
+    .breadcrumb {
         width: 108%;
         margin-left: -4%;
         border-radius: 0;
+    }
+    #lang-selector {
+        margin-top: 44px;
     }
 }

@@ -28,67 +28,73 @@
     <script language="JavaScript1.3" type="text/javascript" src="scripts/engines/jse_form.js" defer></script>
 </head>
 <body>
-<div class="nav-wrap">
-    <div id="lang-selector">
-        <a href="index.html" class="active">BG</a>
-         | 
-        <a href="en/index.html" class="">EN</a>
-    </div>
-</div>
-<div class="container border" id="wrapper">
-    <div class="jumbotron bg-light" style="border-radius: 0%">
-        <div class="float-left" id="logo-container"><img src="static/images/logo.png" id="logo" alt="main-logo"></div>
-        <div class="row">
-            <div class="col-md-12">
-                <h3 id="mainHeader">ATHLETIC STANDARD</h3>
-                <h4 class="text-muted"><sup>GO STRONG</sup></h4>
+<div class="container" id="wrapper" style="background-color: #fafafa">
+    <nav class="breadcrumb sticky-top" style="background-color: #363636;border-radius: 0">
+        <a class="breadcrumb-item active" href="index.html">База</a>
+        <a class="breadcrumb-item" href="views/charge.html">Цени</a>
+        <a class="breadcrumb-item" href="views/reports.html">Блог</a>
+        <a class="breadcrumb-item" href="views/generals.html">Офицери</a>
+        <a class="breadcrumb-item" href="views/headquarter.html">Щаб квартира</a>
+        <div class="nav-wrap">
+            <div id="lang-selector">
+                <a href="index.html" class="active">BG</a>
+                 <span style="color: white">|</span> 
+                <a href="en/index.html" class="">EN</a>
             </div>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="index.html">База</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span><img style="opacity: 0.5;" src="static/images/drop_btn.png" alt="sergeant-dropdown-icon"></span>
-            </button>
+    </nav>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="col-md-6">
-                    <ul class="navbar-nav mr-auto float-left">
-                        <li class="nav-item">
-                            <a class="nav-link" href="views/reports.html">Блог</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="views/charge.html">Цени</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Мешка
-                            </a>
-                            <div class="dropdown-menu border-0 bg-light" aria-labelledby="navbarDropdown">
-                                <a class="nav-link" href="views/martialLaw.html">Устав</a>
-                                <a class="nav-link" href="views/about.html">ЧЗВ</a>
-                                <a class="nav-link" href="views/platoon.html">Взвод</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <ul class="navbar-nav mr-auto float-right">
-                        <li class="nav-item">
-                            <a class="nav-link" href="views/generals.html">Офицери</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="views/gallery.html">Галерия</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="views/headquarter.html">Щаб квартира</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <div class="float-left" id="logo-container"><img src="static/images/logo_army_colors_transparent.png" id="logo" alt="main-logo"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2 id="mainHeader" class="float-left">ATHLETIC <br>STANDARD</h2>
+            <h4 class="text-muted pull-right"></h4>
+        </div>
     </div>
+    <!--<nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">База</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><img style="opacity: 0.5;" src="static/images/drop_btn.png" alt="sergeant-dropdown-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" style="background-color: #f7f7f7" id="navbarSupportedContent">
+            <div class="col-md-6">
+                <ul class="navbar-nav mr-auto float-left">
+                    <li class="nav-item">
+                        <a class="nav-link" href="views/reports.html">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="views/charge.html">Цени</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Мешка
+                        </a>
+                        <div class="dropdown-menu" style="background-color: #dfe3ee" aria-labelledby="navbarDropdown">
+                            <a class="nav-link" href="views/martialLaw.html">Устав</a>
+                            <a class="nav-link" href="views/about.html">ЧЗВ</a>
+                            <a class="nav-link" href="views/platoon.html">Взвод</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="navbar-nav mr-auto float-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="views/generals.html">Офицери</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="views/gallery.html">Галерия</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="views/headquarter.html">Щаб квартира</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>-->
 
 
     <br>
@@ -339,7 +345,7 @@
         </footer>
     </fieldset>
 
-    <section class="copyright bg-light">
+    <section class="copyright" style="background-color: #363636">
         <div class="row text-center">
             <div class="col-md-6">
                 <div class="icons-container col-md-12 pt-3">
@@ -350,11 +356,10 @@
                             src="static/images/youtube.png"></a>
                     <a href="http://leanonfat.blogspot.com/" target="_blank"
                        class="btn azm-social azm-size-32 azm-circle"><img src="static/images/blogger.png"></a>
-                    <a href="https://www.instagram.com/gostrongbg/" target="_blank"
-                       class="btn azm-social azm-size-32 azm-circle"><img src="static/images/instagram.png"></a>
                 </div>
 
                 <br>
+
                 <div class="well col-md-12" style="margin-bottom: 20px">
                     <form class="block mbr-form" action="https://formspree.io/athleticstandard.org@gmail.com"
                           method="post">
@@ -370,7 +375,7 @@
                                     </div>
                                     <br><br>
                                     <div class="input-group-btn col-md-4">
-                                        <button type="submit" class="btn btn-secondary btn-block">ИЗПРАТИ
+                                        <button type="submit" class="btn btn-outline-light btn-block">ИЗПРАТИ
                                         </button>
                                     </div>
                                 </div>
@@ -380,12 +385,23 @@
                 </div>
             </div>
             <div class="col-md-6 pt-3">
-                <p class="text-center">&copy;2015-2019 <br>athleticstandard.org</p>
                 <div class="pt-3">
-                    <a href="http://www.copyscape.com/"><img src="//banners.copyscape.com/img/copyscape-stamp-black-90x90.png" width="90" height="90" border="0" alt="Protected by Copyscape" title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page." /></a>
+                    <a href="http://www.copyscape.com/"><img src="//banners.copyscape.com/img/copyscape-stamp-white-90x90.png" width="90" height="90" border="0" style="margin-bottom: 20px" alt="Protected by Copyscape" title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page."/></a>
+                </div>
+                <div class="pt-3">
+                    <p class="text-center"><br>&copy;2015-2019
+                        <br>athleticstandard.org</p>
                 </div>
             </div>
         </div>
+        <a href="https://shidofitness.com/" class="text-left"><img class="img-box"
+                                                                   src="static/images/Shido-Fitness-Logo-New-Orange.png"
+                                                                   width="80" height="auto" border="0"
+                                                                   alt="Shido Fitness"></a>
+        &nbsp;
+        <a href="https://www.biz-logo.com/" class="text-left"><img class="img-box" src="static/images/biz-logo-logo.jpg"
+                                                                   width="80" height="auto" border="0"
+                                                                   alt="Biz Logo"></a>
     </section>
 </div>
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
