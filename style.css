@@ -6,9 +6,7 @@
     text-align: center;
 }
 
-.jumbotron {
-    width: 104%;
-    margin-left: -2%;
+line {
     border-radius: 0;
     background-image: linear-gradient(to right, #ffffff, #ffffff);
     background-position: bottom;
@@ -17,8 +15,9 @@
     transition: background-size .5s ease;
 }
 
-.copyright {
-
+#wrapper > nav {
+    background-color: #363636;
+    border-radius: 0;
 }
 
 .breadcrumb a {
@@ -368,9 +367,10 @@ p {
 }
 
 .copyright {
+    background-color: #363636;
     color: white;
-    width: 104%;
-    margin-left: -2%;
+
+
     align-items: center;
     font-family: MullerNarrow-Light;
 }
@@ -472,6 +472,7 @@ legend.scheduler-border {
 
 @media (min-width: 1281px) {
     #wrapper {
+        background-color: #fafafa;
         height: 100%;
         font-size: 90%;
         font-weight: 500;
@@ -480,6 +481,10 @@ legend.scheduler-border {
         padding: 0.5%;
         font-family: Roboto-Regular;
         color: #191919;
+    }
+    .copyright {
+        width: 100%;
+        margin: 0 auto;
     }
 }
 
@@ -490,18 +495,22 @@ legend.scheduler-border {
 
 @media (min-width: 1025px) and (max-width: 1280px) {
     #wrapper {
+        background-color: #fafafa;
         width: 62%;
         margin:0 auto;
         font-family: MullerNarrow-Light;
         color: #0b090f;
     }
-    #navbarSupportedContent {
-        color: #0b090f;
-    }
     .breadcrumb {
         width: 104%;
         margin-left: -2%;
+        left: 0;
+        right: 0;
         border-radius: 0;
+    }
+    .copyright {
+        width: 100%;
+        margin: 0 auto;
     }
 }
 
@@ -512,14 +521,23 @@ legend.scheduler-border {
 
 @media (min-width: 768px) and (max-width: 1024px) {
     #wrapper {
-        height: 150%;
+        background-color: #fafafa;
         font-size: 100%;
         width: 100%;
-        margin:0 auto;
-        padding: 0.5%;
+        margin: 0 auto;
         font-family: MullerNarrow-Light;
         color: #0b090f;
-        height: 100%;
+    }
+    .copyright {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .breadcrumb {
+        width: 104%;
+        margin-left: -2%;
+        left: 0;
+        right: 0;
+        border-radius: 0;
     }
 }
 
@@ -530,6 +548,7 @@ legend.scheduler-border {
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     #wrapper {
+        background-color: #fafafa;
         font-size: 100%;
         width: 100%;
         margin:0 auto;
@@ -572,6 +591,7 @@ legend.scheduler-border {
 
 @media (min-width: 481px) and (max-width: 767px) {
     #wrapper {
+        background-color: #fafafa;
         font-size: 100%;
         width: 100%;
         margin:0 auto;
@@ -588,9 +608,10 @@ legend.scheduler-border {
 
 @media (min-width: 320px) and (max-width: 480px) {
     #wrapper {
+        background-color: #fafafa;
         font-size: 100%;
         width: 100%;
-        margin:0 auto;
+        margin: 0 auto;
 
         font-family: MullerNarrow-Light;
         color: #0b090f;
@@ -611,11 +632,6 @@ legend.scheduler-border {
         width: 104%;
         margin-left: -2%;
     }
-    .jumbotron {
-         width: 108%;
-         margin-left: -4%;
-         border-radius: 0;
-     }
     .breadcrumb {
         width: 108%;
         margin-left: -4%;
@@ -623,5 +639,8 @@ legend.scheduler-border {
     }
     #lang-selector {
         margin-top: 44px;
+    }
+    #lang-selector a {
+        color: #000000;
     }
 }
