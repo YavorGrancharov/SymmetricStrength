@@ -28,12 +28,8 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
-body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
+
+
 blockquote, q {
     quotes: none;
 }
@@ -51,19 +47,29 @@ table {
 
 html, body {
     background-color: #fafafa !important;
-    margin: 0 auto;
+    margin: 0 !important;
 }
 
-* {
-    box-sizing: border-box;
+#wrapper {
+    background-color: #fafafa;
+    width: 71%;
+    margin:0 auto;
+    font-family: MullerNarrow-Light;
+    color: #0b090f;
 }
 
-.col-md-12 h2 {
-    text-align: center;
+.breadcrumb {
+    margin-top: 20px; !important;
+    border-radius: 0 !important;
+}
+
+.container-fluid {
+    margin-top: 20px;
 }
 
 #partners a {
     margin: 0 8px;
+    color: #ffffff;
 }
 
 #order1, #order2, #order3 {
@@ -75,10 +81,6 @@ html, body {
     font-size: 18px;
 }
 
-#sector {
-    border-bottom: 1px solid #9c7b36;
-}
-
 /*#subheading {
     border-radius: 0;
     background-image: linear-gradient(to right, #9c7b36, #9c7b36);
@@ -88,26 +90,36 @@ html, body {
     transition: background-size .5s ease;
 }*/
 
-#wrapper > nav {
-    background-color: #002e63;
+nav {
+    font-size: 74%;
+    font-family: Archive;
+    background-color: #fafafa !important;
     border-radius: 0;
-}
-
-#wrapper > nav > span {
-    color: #cf142b;
-}
-
-#wrapper > nav {
-    align-items: center;
     box-sizing: border-box;
 }
 
+nav > span {
+    border-radius: 0;
+    background-image: linear-gradient(to right, #cf142b, #cf142b);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    transition: background-size .5s ease;
+    color: #002e63;
+}
+
 .breadcrumb a {
-    color: #ffffff;
+    color: #002e63;
 }
 
 .breadcrumb a:hover {
+    -webkit-transform: scale(1.1);
     color: #cf142b;
+}
+
+.panel-default h4 {
+    color: #002e63;
+    font-family: Archive;
 }
 
 .well .col-md-12 {
@@ -123,16 +135,8 @@ html, body {
     text-align: center;
 }
 
-.container h4 {
-    text-align: center;
-}
-
 .container h4 sup {
     font-family: MullerNarrow-ExtraBold;
-}
-
-.container {
-    background-color: white;
 }
 
 .img-fluid {
@@ -145,7 +149,8 @@ html, body {
     border-radius: 0;
 }
 
-.card .card-header{
+.card .card-header {
+    text-align: center;
     color: #ffffff;
     z-index: 1;
     background-color: #002e63;
@@ -153,6 +158,9 @@ html, body {
 }
 
 .card .card-block {
+    color: #002e63;
+    text-align: center;
+    vertical-align: middle;
     background-color: #fafafa;
 }
 
@@ -189,13 +197,8 @@ html, body {
 }
 
 #lang-selector a {
-    color: #ffffff;
+    color: #002e63;
     z-index: 9999;
-}
-
-.jumbotron {
-    margin-top: -16px;
-    border-radius: 0 !important;
 }
 
 #logo-container {
@@ -205,6 +208,22 @@ html, body {
 #lang-selector a.active{
     z-index: 9999;
     color: #cf142b;
+    border-radius: 0;
+    background-image: linear-gradient(to right, #cf142b, #cf142b);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    transition: background-size .5s ease;
+}
+
+#inner_logo {
+    width: 40px;
+    height: auto;
+}
+
+#inner_logo h6 {
+    font-family: Archive;
+    font-size: 80%;
 }
 
 #logo {
@@ -223,16 +242,14 @@ html, body {
     font-size: 100%;
 }
 
-input {
-    border: 1px solid lightgray;
-    border-radius: 3px;
-    background-color: #f7f7f7;
-    text-align: center;
+@font-face {
+    font-family: Archive;
+    src: url('./static/fonts/Archive.otf') format('opentype');
 }
 
 @font-face {
-    font-family: MatchbookTexture;
-    src: url('./static/fonts/MatchbookTexture.otf') format('opentype');
+    font-family: Gross Regular;
+    src: url('./static/fonts/Gross Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -273,16 +290,33 @@ input {
 }
 
 a {
-    color: #363636;
+    color: #002e63;
+}
+
+#title h6 {
+    font-family: Archive;
+    margin-top: -10px;
+    margin-left: 75px;
+    font-size: 80%;
+}
+
+#title h2 {
+    color: #002e63;
+    font-family: Archive;
 }
 
 #mainHeader {
+    line-height: 14px;
     width: 200px;
-    margin-top: 6px;
-    color: #363636;
-    font-family: Intro Inline;
+    margin-top: 20px;
+    color: #002e63;
+    font-family: Archive;
     text-align: left;
+}
 
+#inner_header {
+    color: #002e63;
+    font-family: Archive;
 }
 
 .star {
@@ -301,7 +335,7 @@ nav ul li:hover > ul {
 
 .popover-body {
     font-weight: 200;
-    color: #363636;
+    color: #002e63;
     font-size: 107%;
     font-family: MullerNarrow-Light;
 }
@@ -311,6 +345,7 @@ nav ul li:hover > ul {
 }
 
 .price {
+    font-family: Gross Regular;
     font-size: 130%;
     color: #002e63;
 }
@@ -488,7 +523,6 @@ p {
 .copyright {
     /*background-image: linear-gradient(to bottom, #363636, #39383b, #3b3b41, #3e3d46, #40404c);*/
     background-color: #002e63;
-    box-sizing: border-box;
     color: #ffffff;
     width: 100%;
     font-family: MullerNarrow-Light;
@@ -544,11 +578,11 @@ td, a {
 -------------------------------------------------- */
 footer {
     padding-top: 30px;
-    color: #0b090f;
+    color: #000654;
 }
 
 footer a {
-    color: #0b090f;
+    color: #000654;
     text-decoration: none;
 }
 
@@ -561,18 +595,19 @@ footer .form-control {
     box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
     border: none;
     resize: none;
-    color: #d1d2d2;
+    color: #000654;
     padding: 0.7em 1em;
 }
 
 fieldset.scheduler-border {
-    border: 1px solid #ddd !important;
+    border: 1px solid #000654 !important;
     padding: 0 1.4em 1.4em 1.4em !important;
     margin: 0 0 1.5em 0 !important;
     border-radius: 2px;
 }
 
 legend.scheduler-border {
+    color: #000654;
     text-align: left !important;
     width:inherit; /* Or auto */
     padding:0 10px; /* To give a bit of padding on the left and right */
@@ -603,7 +638,7 @@ legend.scheduler-border {
   ##Screen = B/w 1025px to 1280px
 */
 
-@media (min-width: 1025px) and (max-width: 1280px) {
+/*@media (min-width: 1025px) and (max-width: 1280px) {
     #wrapper {
         background-color: #fafafa;
         width: 71%;
@@ -697,7 +732,6 @@ legend.scheduler-border {
 
 @media (min-width: 320px) and (max-width: 480px) {
     #wrapper {
-        background-color: #fafafa;
         font-size: 100%;
         width: 100%;
         margin: 0 auto;
@@ -709,20 +743,20 @@ legend.scheduler-border {
         width: 104%;
         margin-left: -2%;
     }
-
     .table-hover {
         width: 104%;
         margin-left: -2%;
     }
-    .breadcrumb {
-        width: 108%;
-        margin-left: -4%;
-        border-radius: 0;
-    }
     #lang-selector {
         margin-top: -44px;
     }
-    #lang-selector a {
-        color: #000000;
+    .breadcrumb {
+        width: 108%;
+        margin-left: -4%;
+    }
+    .copyright {
+        width: 108%;
+        margin-left: -4%;
+        overflow: hidden;
     }
 }

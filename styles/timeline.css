@@ -8,8 +8,13 @@
     z-index: 2;
 }
 
+input {
+    background-color: #ffffff !important;
+}
+
 .how-it-works {
-    background-color: #f7f7f7;
+    background-color: #ffffff;
+    border: 0;
 }
 
 .how-it-works.row .col-2 {
