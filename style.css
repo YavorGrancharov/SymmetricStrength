@@ -296,7 +296,6 @@ a {
 #title h6 {
     font-family: Archive;
     margin-top: -10px;
-    margin-left: 75px;
     font-size: 80%;
 }
 
@@ -748,7 +747,7 @@ legend.scheduler-border {
         margin-left: -2%;
     }
     #lang-selector {
-        margin-top: -44px;
+        margin-top: -65px;
     }
     .breadcrumb {
         width: 108%;
