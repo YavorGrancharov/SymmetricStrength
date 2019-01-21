@@ -35,10 +35,11 @@
         <div class="row">
             <div class="col-md-12" id="title">
                 <h1 id="mainHeader">ATHLETIC</h1><h2>STANDARD</h2>
+                <h6>go strong</h6>
             </div>
         </div>
 
-    <nav class="breadcrumb sticky-top">
+    <nav class="breadcrumb sticky-top" style="">
         <span class="breadcrumb-item active">База</span>
         <a class="breadcrumb-item" href="views/charge.html">Цени</a>
         <a class="breadcrumb-item" href="views/reports.html">Блог</a>
@@ -52,7 +53,6 @@
             </div>
         </div>
     </nav>
-
     <br>
 
     <div class="panel panel-default">
@@ -248,25 +248,25 @@
                         <div class="col-6">
                             <h5>Документация </h5>
                             <ul class="list-unstyled">
-                                <li><a href="../views/missing.html">Условия</a></li>
-                                <li><a href="../views/missing.html">Поверителност</a></li>
-                                <li><a href="../views/missing.html">Правила</a></li>
-                                <li><a href="../views/codeOfEthics.html">Етичен кодекс</a></li>
-                                <li><a href="../views/missing.html">Единен стандарт</a></li>
-                                <li><a href="../views/missing.html">Брошура</a></li>
-                                <li><a href="../views/headquarter.html">Контакт</a></li>
+                                <li><a href="views/missing.html">Идентичност</a></li>
+                                <li><a href="views/missing.html">Поверителност</a></li>
+                                <li><a href="views/missing.html">Правила</a></li>
+                                <li><a href="views/codeOfEthics.html">Етичен кодекс</a></li>
+                                <li><a href="views/missing.html">Единен стандарт</a></li>
+                                <li><a href="views/missing.html">Брошура</a></li>
+                                <li><a href="views/headquarter.html">Контакт</a></li>
                             </ul>
                         </div>
                         <div class="col-6">
                             <h5>Занималня </h5>
                             <ul class="list-unstyled">
-                                <li><a href="drills.html">Движения</a></li>
-                                <li><a href="missing.html">Видео</a></li>
-                                <li><a href="missing.html">Подрастваща сила</a></li>
-                                <li><a href="brainwash.html">Пропагандирай</a></li>
-                                <li><a href="hallOfStrength.html">Зала на Силата</a></li>
-                                <li><a href="gear.html">Униформа</a></li>
-                                <li><a href="missing.html">Toddler</a></li>
+                                <li><a href="views/drills.html">Движения</a></li>
+                                <li><a href="views/missing.html">Видео</a></li>
+                                <li><a href="views/missing.html">Подрастваща сила</a></li>
+                                <li><a href="views/brainwash.html">Пропагандирай</a></li>
+                                <li><a href="views/hallOfStrength.html">Зала на Силата</a></li>
+                                <li><a href="views/gear.html">Униформа</a></li>
+                                <li><a href="views/missing.html">Toddler</a></li>
                             </ul>
                         </div>
                     </div>
@@ -277,13 +277,13 @@
                 <div class="col-md-6">
                     <h5>Ресурси </h5>
                     <ul class="list-unstyled">
-                        <li><a href="drills.html">Движения</a></li>
-                        <li><a href="missing.html">Видео</a></li>
-                        <li><a href="missing.html">Подрастваща сила</a></li>
-                        <li><a href="brainwash.html">Пропагандирай</a></li>
-                        <li><a href="hallOfStrength.html">Зала на Силата</a></li>
-                        <li><a href="gear.html">Униформа</a></li>
-                        <li><a href="missing.html">Toddler</a></li>
+                        <li><a href="views/drills.html">Лого</a></li>
+                        <li><a href="views/missing.html">Тапети</a></li>
+                        <li><a href="views/missing.html">Подрастваща сила</a></li>
+                        <li><a href="views/brainwash.html">Пропагандирай</a></li>
+                        <li><a href="views/hallOfStrength.html">Зала на Силата</a></li>
+                        <li><a href="views/gear.html">Униформа</a></li>
+                        <li><a href="views/missing.html">Toddler</a></li>
                     </ul>
                 </div>
             </div>
@@ -366,5 +366,28 @@
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    window.addEventListener("scroll", function () {
+        let items = document.getElementById("lang-selector");
+        let el = document.getElementsByClassName("breadcrumb")[0];
+        if (window.scrollY >= 150) {
+            items.children[0].style.color = "#ffffff";
+            items.children[1].style.color = "#ffffff";
+            items.children[2].style.color = "#ffffff";
+            for(let i = 0; i < el.children.length; i++) {
+                el.children[i].style.color = "#ffffff";
+            }
+            el.style.setProperty("background-color", "#002e63", "important")
+        } else {
+            items.children[0].style.color = "#cf142b";
+            items.children[1].style.color = "#002e63";
+            items.children[2].style.color = "#002e63";
+            for(let i = 0; i < el.children.length; i++) {
+                el.children[i].style.color = "#002e63";
+            }
+            el.style.setProperty("background-color", "#fafafa", "important")
+        }
+    })
+</script>
 </body>
 </html>

@@ -46,19 +46,23 @@ table {
 /* CSS Reset End */
 
 html, body {
+    border: none;
     background-color: #fafafa !important;
     margin: 0 !important;
 }
 
 #wrapper {
+    border: none;
     background-color: #fafafa;
     width: 71%;
-    margin:0 auto;
+    margin-top: 40px;
     font-family: MullerNarrow-Light;
     color: #0b090f;
 }
 
 .breadcrumb {
+    background-color: #fafafa !important;
+    border: none;
     margin-top: 20px; !important;
     border-radius: 0 !important;
 }
@@ -93,7 +97,7 @@ html, body {
 nav {
     font-size: 74%;
     font-family: Archive;
-    background-color: #fafafa !important;
+
     border-radius: 0;
     box-sizing: border-box;
 }
@@ -294,6 +298,7 @@ a {
 }
 
 #title h6 {
+    color: #cf142b;
     font-family: Archive;
     margin-top: -10px;
     font-size: 80%;
@@ -748,6 +753,10 @@ legend.scheduler-border {
     }
     #lang-selector {
         margin-top: -65px;
+    }
+    #lang-selector a {
+        color: #002e63;
+        z-index: 9999;
     }
     .breadcrumb {
         width: 108%;
