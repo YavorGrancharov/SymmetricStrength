@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>GO STRONG</title>
+    <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
+    <link rel="stylesheet" href="../style.css" media="all">
+    <link rel="stylesheet" href="../styleSec.css" media="all">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" media="all">
+    <link href="../node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="../views/charge_sec.html">ЦЕНИ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#blog">БЛОГ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#officers">ОФИЦЕРИ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="../views/headquarter_sec.html">ЩАБ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container text-center">
+        <div class="nav-wrap">
+            <div id="lang-selector">
+                <a href="index.html" class="active">BG</a>
+                 <span style="color: #393f4d">|</span>
+                <a href="en/index.html" class="">EN</a>
+            </div>
+        </div>
+        <h1>Welcome to Scrolling Nav</h1>
+        <p class="lead text-center">A landing page template freshly redesigned for Bootstrap 4</p>
+    </div>
+</header>
+
+<section id="charge">
+    <div class="container">
+        <div class="row flex-items-xs-middle flex-items-xs-center">
+            <div class="col-md-12 col-lg-4">
+                <div class="card text-xs-center">
+                    <div class="card-header">
+                        <h4 class="display-4">Алфа</h4>
+                    </div>
+                    <div class="card-block">
+                        <h4 class="card-title">
+                            4 Седмичен абонамент
+                            <br>
+                        </h4>
+                        <ul class="list-group">
+                            <li class="list-group-item">4 тренировкии <span class="price float-right">105<small style="font-family: MullerNarrow-Light">лв.</small></span>
+                                <br>
+                                <h6>1 път седмично</h6>
+                            </li>
+                            <li class="list-group-item">8 тренировкии <span class="price" style="float: right">185<small style="font-family: MullerNarrow-Light">лв.</small></span>
+                                <br>
+                                <h6>2 пъти седмично</h6>
+                            </li>
+                            <li class="list-group-item">12 тренировкии <span class="price" style="float: right">235<small style="font-family: MullerNarrow-Light">лв.</small></span>
+                                <br>
+                                <h6>3 пъти седмично</h6>
+                            </li>
+                            <li class="list-group-item" hidden>16 тренировкии <span class="price" style="float: right">285<small style="font-family: MullerNarrow-Light">лв.</small></span>
+                                <br>
+                                <h6>4 пъти седмично</h6>
+                            </li>
+                        </ul>
+                    </div>
+                    <button id="order1" class="btn btn-block" data-toggle="modal" data-target="#contactUs"><span class="reserve">ЗАЯВИ ПРОБНА ТРЕНИРОВКА</span></button>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-4">
+                <div class="card text-xs-center">
+                    <div class="card-header">
+                        <h4 class="display-4">Браво</h4>
+                    </div>
+                    <div class="card-block">
+                        <h4 class="card-title">
+                            5 Седмичен абонамент
+                            <br>
+                            <!--<h6>75% warranty*</h6>-->
+                        </h4>
+                        <ul class="list-group">
+                            <li class="list-group-item">4 тренировкии <span class="price" style="float: right">120<small style="font-family: MullerNarrow-Light">лв.</small></span>
+                                <br>
+                                <h6>1 път седмично</h6>
+                            </li>
+                            <li class="list-group-item">8 тренировкии <span class="price" style="float: right">215<small style="font-family: MullerNarrow-Light">лв.</small></span>
+                                <br>
+                                <h6>2 пъти седмично</h6>
+                            </li>
+                            <li class="list-group-item">12 тренировкии <span class="price" style="float: right">285<small style="font-family: MullerNarrow-Light">лв.</small></span>
+                                <br>
+                                <h6>3 пъти седмично</h6>
+                            </li>
+                            <li class="list-group-item" hidden>16 тренировкии <span class="price" style="float: right">340<small style="font-family: MullerNarrow-Light">лв.</small></span>
+                                <br>
+                                <h6>4 пъти седмично</h6>
+                            </li>
+                        </ul>
+                    </div>
+                    <button id="order2"class="btn btn-block" data-toggle="modal" data-target="#contactUs"><span class="reserve">ЗАЯВИ ПРОБНА ТРЕНИРОВКА</span></button>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-4">
+                <div class="card text-xs-center">
+                    <div class="card-header">
+                        <h4 class="display-4">Чарли</h4>
+                    </div>
+                    <div class="card-block">
+                        <h4 class="card-title">
+                            6 Седмичен абонамент
+                            <br>
+                            <!--<h6>50% warranty*</h6>-->
+                        </h4>
+                        <ul class="list-group">
+                            <li class="list-group-item">4 тренировкии <span class="price" style="float: right">140<small style="font-family: MullerNarrow-Light">лв.</small></span>
+                                <br>
+                                <h6>1 път седмично</h6>
+                            </li>
+                            <li class="list-group-item">8 тренировкии <span class="price" style="float: right">245<small style="font-family: MullerNarrow-Light">лв.</small></span>
+                                <br>
+                                <h6>2 пъти седмично</h6>
+                            </li>
+                            <li class="list-group-item">12 тренировкии <span class="price" style="float: right;">330<small style="font-family: MullerNarrow-Light">лв.</small></span>
+                                <br>
+                                <h6>3 пъти седмично</h6>
+                            </li>
+                            <li class="list-group-item" hidden>16 тренировкии <span class="price" style="float: right;">385<small style="font-family: MullerNarrow-Light">лв.</small></span>
+                                <br>
+                                <h6>4 пъти седмично</h6>
+                            </li>
+                        </ul>
+                    </div>
+                    <button id="order3" class="btn btn-block" data-toggle="modal" data-target="#contactUs"><span class="reserve">ЗАЯВИ ПРОБНА ТРЕНИРОВКА</span></button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <h2>Стойност</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="thead-inverse">
+                <tr>
+                    <th class="w-25">Услуга</th>
+                    <th class="">Еднократна</th>
+                    <th class="">Единична</th>
+                    <th class="">Алфа</th>
+                    <th class="">Браво</th>
+                    <th class="">Чарли</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="w-25 option">Тренировка</td>
+                    <td class="">80<small>лв.</small></td>
+                    <td class="">35<small>лв.</small></td>
+                    <td class=""><i class="fa fa-check"></i></td>
+                    <td class=""><i class="fa fa-check"></i></td>
+                    <td class=""><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="w-25 option">Продължителност</td>
+                    <td class="">90<small>мин.</small></td>
+                    <td class="">60<small>мин.</small></td>
+                    <td class="">60<small>мин.</small></td>
+                    <td class="">60<small>мин.</small></td>
+                    <td class="">60<small>мин.</small></td>
+                </tr>
+                <tr>
+                    <td class="option">Калиперометрия</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="option">Силов баланс</td>
+                    <td>-</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="option">Хранителен план</td>
+                    <td>-</td>
+                    <td>по заявка</td>
+                    <td>по заявка</td>
+                    <td>по заявка</td>
+                    <td>по заявка</td>
+                </tr>
+                <tr>
+                    <td class="option">
+                        <h6>Мобилност</h6>
+                    </td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td class="option">Блог с рецепти</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <ul>
+            <li class="text-muted">всички цени са за тренировка в двойка, което означава един треньор с максимум двама
+                трениращи в рамките на часа
+            </li>
+            <li class="text-muted">изключение от горното е еднократната тренировка, в рамките на която трениращия получава
+                цялото внимание на треньора
+            </li>
+        </ul>
+    </div>
+</section>
+
+<footer class="nb-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about">
+                    <div class="well col-md-12">
+                        <form class="block mbr-form" action="https://formspree.io/athleticstandard.org@gmail.com"
+                              method="post">
+                            <div class="row">
+                                <div class="col-md-12" data-for="email">
+                                    <div class="col-md-8">
+                                        <h6>Абонирай се за новини</h6>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control input" name="email"
+                                                   data-form-field="Email" placeholder="електронна поща" required="">
+                                        </div>
+                                        <br><br>
+                                        <div class="input-group-btn col-md-4">
+                                            <button type="submit" class="btn btn-outline-light btn-block">ИЗПРАТИ
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="social-media">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="http://www.nextbootstrap.com/" title=""><i
+                                    class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="http://www.nextbootstrap.com/" title=""><i
+                                    class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="http://www.nextbootstrap.com/" title=""><i
+                                    class="fa fa-google-plus"></i></a></li>
+                            <li class="list-inline-item"><a href="http://www.nextbootstrap.com/" title=""><i
+                                    class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-info-single">
+                    <h2 class="title">Help Center</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            How to Pay</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            FAQ's</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Sitemap</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Delivery Info</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-info-single">
+                    <h2 class="title">Customer information</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            About Us</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            FAQ's</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Sell Your Items</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Contact Us</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            RSS</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-info-single">
+                    <h2 class="title">Security & privacy</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Terms Of Use</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Privacy Policy</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Return / Refund Policy</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Store Locations</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 text-center">
+                <div class="footer-info-single">
+                    <a href="http://www.copyscape.com/"><img
+                            src="//banners.copyscape.com/img/copyscape-stamp-white-90x90.png" width="90" height="90"
+                            border="0" alt="Protected by Copyscape"
+                            title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page."/></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="text-right">© 2015-2019 athleticstandard.org</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
+<div class="modal" id="contactUs">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="col-md-12">
+                    <h4>Адрес</h4>
+                    <div class="text-left"><i class="fa fa-address-card"></i> ул. "Проф. д-р Иван Странски" 61, 1700
+                        Студентски Комплекс, София
+                    </div>
+                    <hr>
+                </div>
+                <div class="col-md-12">
+                    <h4>Номера за връзка</h4>
+                    <div class="text-left"><i class="fa fa-phone-square"></i> Явор - <a href="tel:0876-10-00-39"  data-rel="external">0876 10 00 39</a></div>
+                    <div class="text-left"><i class="fa fa-phone-square"></i> Елица -<a href="tel:0888-03-04-24"  data-rel="external">0888 03 04 24</a></div>
+                </div>
+                <hr>
+                <div class="col-md-12">
+                    <h4>Е-поща</h4>
+                    <div class="text-left"><i class="fa fa-envelope-o"></i> <a href="headquarter.html"> athleticstandard.org@gmail.com</a></div>
+                </div>
+            </div>
+            <button style="border-radius: 0 !important;" class="btn btn-block btn-danger" data-dismiss="modal">&times;</button>
+        </div>
+    </div>
+</div>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
