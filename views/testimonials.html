@@ -20,314 +20,319 @@
     <title>GO STRONG</title>
     <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styleSec.css">
     <link rel="stylesheet" href="../styles/testimonials.css">
-    <link rel="stylesheet" href="../styles/timeline.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link href="../node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
-    <script language="JavaScript1.3" type="text/javascript" src="../scripts/engines/jse_form.js"></script>
 </head>
 <body>
-<div class="container" id="wrapper">
-    <nav class="breadcrumb sticky-top">
-        <a class="breadcrumb-item" href="../index.html">База</a>
-        <span class="breadcrumb-item active">Цени</span>
-        <a class="breadcrumb-item" href="../views/reports.html">Блог</a>
-        <a class="breadcrumb-item" href="../views/generals.html">Офицери</a>
-        <a class="breadcrumb-item" href="../views/headquarter.html">Щаб квартира</a>
-        <div class="nav-wrap">
-            <div id="lang-selector">
-                <a href="charge.html" class="active">BG</a>
-                 <span style="color: white">|</span> 
-                <a href="../en/views/charge.html" class="">EN</a>
-            </div>
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">БАЗА</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="charge_sec.html">ЦЕНИ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#blog">БЛОГ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#officers">ОФИЦЕРИ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="headquarter_sec.html">ЩАБ</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+    <div id="lang-selector">
+        <a href="index.html" class="active">BG</a>
+         <span style="color: #dfdfdf">|</span>
+        <a href="en/index.html" class="">EN</a>
+    </div>
+</nav>
 
-    <h4 class="text-left">Атестати</h4>
-    <div class="row">
-        <div class="carousel col-md-6 text-center" data-ride="carousel" data-interval="10000">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="img-box"
-                         style="background-image: url('../static/images/zdravko_raichev.jpg')"></div>
-                    <h6 class="testimonial text-justify">Здравейте! Много Ви благодаря за вниманието и коректното
-                        отношение!
-                        С удоволствие отново ще бъда Ваш клиент!</h6>
-                    <p class="overview"><b>Здравко Райчев</b>Seo Analyst at <a href="#">OsCorp Tech.</a></p>
-                    <div class="star-rating">
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="img-box"
-                         style="background-image: url('../static/images/lubomir_krustev.jpg')"></div>
-                    <h6 class="testimonial text-justify">
-                        Коректен магазин отнасящ се отговорно и с уважение към клиентите си.
-                        Това особено си пролича в случая на рекламация, който имах заради фабричен
-                        дефект на стола - откликнаха любезно и без "мрънкане", като замениха дефектната част.
-                        Благодаря.</h6>
-                    <p class="overview"><b>Любомир Кръстев</b>Media Analyst at <a href="#">SkyNet Inc.</a></p>
-                    <div class="star-rating">
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="img-box"
-                         style="background-image: url('../static/images/daniela_kenanova.jpg')"></div>
-                    <h6 class="testimonial text-justify">Благодаря Ви много за вниманието и за активното съдействие.
-                        Аз съм човек, който изключително много цени този тип отношение. Искрено ви благодаря
-                        за всичко и бъдете сигурни, че ще имате моите препоръки!</h6>
-                    <p class="overview"><b>Даниела Кенанова</b>Web Developer at <a href="#">Circle Ltd.</a></p>
-                    <div class="star-rating">
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
-                        </ul>
+<header id="ethics">
+    <div class="container">
+        <h1 class="text-center">АТЕСТАТИ</h1>
+        <div class="col-lg-10 mx-auto">
+        </div>
+    </div>
+</header>
+
+<section id="testimonials">
+    <div class="container">
+        <h1 class="text-left"></h1>
+        <div class="row">
+            <div class="carousel col-md-4 text-center">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="img-box" style="background-image: url('../static/images/zdravko_raichev.jpg')"></div>
+                        <h6 class="testimonial text-justify">Здравейте! Много Ви благодаря за вниманието и коректното
+                            отношение!
+                            С удоволствие отново ще бъда Ваш клиент!</h6>
+                        <p class="overview"><b>Здравко Райчев</b>Seo Analyst at <a href="#">OsCorp Tech.</a></p>
+                        <div class="star-rating">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="carousel col-md-4 text-center">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="img-box"
+                             style="background-image: url('../static/images/lubomir_krustev.jpg')"></div>
+                        <h6 class="testimonial text-justify">
+                            Коректен магазин отнасящ се отговорно и с уважение към клиентите си.
+                            Това особено си пролича в случая на рекламация, който имах заради фабричен
+                            дефект на стола - откликнаха любезно и без "мрънкане", като замениха дефектната част.
+                            Благодаря.</h6>
+                        <p class="overview"><b>Любомир Кръстев</b>Media Analyst at <a href="#">SkyNet Inc.</a></p>
+                        <div class="star-rating">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel col-md-4 text-center">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="img-box"
+                             style="background-image: url('../static/images/daniela_kenanova.jpg')"></div>
+                        <h6 class="testimonial text-justify">Благодаря Ви много за вниманието и за активното съдействие.
+                            Аз съм човек, който изключително много цени този тип отношение. Искрено ви благодаря
+                            за всичко и бъдете сигурни, че ще имате моите препоръки!</h6>
+                        <p class="overview"><b>Даниела Кенанова</b>Web Developer at <a href="#">Circle Ltd.</a></p>
+                        <div class="star-rating">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="carousel col-md-6 text-center" data-ride="carousel" data-interval="15000">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="img-box"
-                         style="background-image: url('../static/images/maria_georgieva.jpg')"></div>
-                    <h6 class="testimonial text-justify">Здравейте! Много Ви благодаря за вниманието и коректното
-                        отношение!
-                        С удоволствие отново ще бъда Ваш клиент!</h6>
-                    <p class="overview"><b>Мария Георгиева</b>Seo Analyst at <a href="#">OsCorp Tech.</a></p>
-                    <div class="star-rating">
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                        </ul>
+            <div class="carousel col-md-4 text-center">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="img-box"
+                             style="background-image: url('../static/images/maria_georgieva.jpg')"></div>
+                        <h6 class="testimonial text-justify">Здравейте! Много Ви благодаря за вниманието и коректното
+                            отношение!
+                            С удоволствие отново ще бъда Ваш клиент!</h6>
+                        <p class="overview"><b>Мария Георгиева</b>Seo Analyst at <a href="#">OsCorp Tech.</a></p>
+                        <div class="star-rating">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="img-box"
-                         style="background-image: url('../static/images/georgi_simeonov.jpg')"></div>
-                    <h6 class="testimonial text-justify">
-                        Коректен магазин отнасящ се отговорно и с уважение към клиентите си.
-                        Това особено си пролича в случая на рекламация, който имах заради фабричен
-                        дефект на стола - откликнаха любезно и без "мрънкане", като замениха дефектната част.
-                        Благодаря.</h6>
-                    <p class="overview"><b>Георги Симеонов</b>Media Analyst at <a href="#">SkyNet Inc.</a></p>
-                    <div class="star-rating">
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                        </ul>
+            </div>
+            <div class="carousel col-md-4 text-center">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="img-box"
+                             style="background-image: url('../static/images/georgi_simeonov.jpg')"></div>
+                        <h6 class="testimonial text-justify">
+                            Коректен магазин отнасящ се отговорно и с уважение към клиентите си.
+                            Това особено си пролича в случая на рекламация, който имах заради фабричен
+                            дефект на стола - откликнаха любезно и без "мрънкане", като замениха дефектната част.
+                            Благодаря.</h6>
+                        <p class="overview"><b>Георги Симеонов</b>Media Analyst at <a href="#">SkyNet Inc.</a></p>
+                        <div class="star-rating">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="img-box"
-                         style="background-image: url('../static/images/deyan_vasilev.jpg')"></div>
-                    <h6 class="testimonial text-justify">Благодаря Ви много за вниманието и за активното съдействие.
-                        Аз съм човек, който изключително много цени този тип отношение. Искрено ви благодаря
-                        за всичко и бъдете сигурни, че ще имате моите препоръки!</h6>
-                    <p class="overview"><b>Деян Василев</b>Web Developer at <a href="#">Circle Ltd.</a></p>
-                    <div class="star-rating">
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
-                        </ul>
+            </div>
+            <div class="carousel col-md-4 text-center">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="img-box"
+                             style="background-image: url('../static/images/deyan_vasilev.jpg')"></div>
+                        <h6 class="testimonial text-justify">Благодаря Ви много за вниманието и за активното съдействие.
+                            Аз съм човек, който изключително много цени този тип отношение. Искрено ви благодаря
+                            за всичко и бъдете сигурни, че ще имате моите препоръки!</h6>
+                        <p class="overview"><b>Деян Василев</b>Web Developer at <a href="#">Circle Ltd.</a></p>
+                        <div class="star-rating">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
 
-    <fieldset class="scheduler-border">
-        <legend class="scheduler-border">Карта на сайта</legend>
-        <footer class="footer">
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="row">
-                        <div class="col-6">
-                            <h5>Документация </h5>
-                            <ul class="list-unstyled">
-                                <li><a href="../views/missing.html">Условия</a></li>
-                                <li><a href="../views/missing.html">Поверителност</a></li>
-                                <li><a href="../views/missing.html">Правила</a></li>
-                                <li><a href="../views/codeOfEthics.html">Етичен кодекс</a></li>
-                                <li><a href="../views/missing.html">Единен стандарт</a></li>
-                                <li><a href="../views/missing.html">Брошура</a></li>
-                                <li><a href="../views/headquarter.html">Контакт</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-6">
-                            <h5>Занималня </h5>
-                            <ul class="list-unstyled">
-                                <li><a href="drills.html">Движения</a></li>
-                                <li><a href="missing.html">Видео</a></li>
-                                <li><a href="missing.html">Подрастваща сила</a></li>
-                                <li><a href="brainwash.html">Пропагандирай</a></li>
-                                <li><a href="hallOfStrength.html">Зала на Силата</a></li>
-                                <li><a href="gear.html">Униформа</a></li>
-                                <li><a href="missing.html">Toddler</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <br>
-
-                </div>
-
-                <div class="col-md-6" id="contact">
-                    <h5 class="">Вътрешно търсене</h5>
-                    <div data-form-type="formoid">
-                        <form name="jse_Form" onsubmit="search_form(jse_Form); return false" method="post">
+<footer class="nb-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about">
+                    <div class="well col-md-12">
+                        <form class="block mbr-form" action="https://formspree.io/athleticstandard.org@gmail.com"
+                              method="post">
                             <div class="row">
-                                <div class="col-md-8">
-                                    <input type="text" class="form-control input border" data-form-field="Search"
-                                           placeholder="ключова дума" name="d"> 
-                                </div>
-                                <div class="input-group-btn col-md-4">
-                                    <button style="background-color: #002e63; color: #ffffff" class="btn btn-block" onclick="search_form(jse_Form)">
-                                        <i class="fa fa-search"></i>
-                                    </button>
+                                <div class="col-md-12" data-for="email">
+                                    <div class="col-md-8">
+                                        <h6>Абонирай се за новини</h6>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control input" name="email"
+                                                   data-form-field="Email" placeholder="електронна поща" required="">
+                                        </div>
+                                        <br><br>
+                                        <div class="input-group-btn col-md-4">
+                                            <button type="submit" class="btn btn-outline-light btn-block">ИЗПРАТИ
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                         </form>
                     </div>
-                </div>
-            </div>
-        </footer>
-    </fieldset>
-
-    <section class="copyright">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="icons-container col-md-12 pt-3">
-                    <a href="https://www.facebook.com/Army-Strong-1106393462855586/?modal=admin_todo_tour"
-                       target="_blank" class="btn azm-social azm-size-32 azm-circle"><img
-                            src="../static/images/facebook.png"></a>
-                    <a href="#/" target="_blank" class="btn azm-social azm-size-32 azm-circle"><img
-                            src="../static/images/youtube.png"></a>
-                    <a href="http://leanonfat.blogspot.com/" target="_blank"
-                       class="btn azm-social azm-size-32 azm-circle"><img src="../static/images/blogger.png"></a>
-                </div>
-
-                <br>
-
-                <div class="well col-md-12">
-                    <form class="block mbr-form" action="https://formspree.io/athleticstandard.org@gmail.com"
-                          method="post">
-                        <div class="row">
-                            <div class="col-md-12" data-for="email">
-                                <div class="col-md-8">
-                                    <h6>Абонирай се за новини</h6>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <input type="text" class="form-control input" name="email"
-                                               data-form-field="Email" placeholder="електронна поща" required="">
-                                    </div>
-                                    <br><br>
-                                    <div class="input-group-btn col-md-4">
-                                        <button type="submit" class="btn btn-outline-light btn-block">ИЗПРАТИ
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="col-md-12 pt-5">
-                    <div class="col-6 float-left">
-                        <a target="_blank" href="http://www.copyscape.com/"><img
-                                src="//banners.copyscape.com/img/copyscape-stamp-white-90x90.png" width="90" height="90"
-                                border="0" alt="Protected by Copyscape"
-                                title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page."/></a>
-                    </div>
-                    <div class="col-6 float-right">
-                        <p class="text-center"><img src="../static/images/logo_facebook.png" width="40"
-                                                    height="auto"><br>&copy;2015-2019<br>athleticstandard.org</p>
+                    <div class="social-media">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="http://www.nextbootstrap.com/" title=""><i
+                                    class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="http://www.nextbootstrap.com/" title=""><i
+                                    class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="http://www.nextbootstrap.com/" title=""><i
+                                    class="fa fa-google-plus"></i></a></li>
+                            <li class="list-inline-item"><a href="http://www.nextbootstrap.com/" title=""><i
+                                    class="fa fa-linkedin"></i></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <br>
-
-        <div class="col-md-12" id="partners">
-            <a target="_blank" href="https://shidofitness.com/" class="text-left"><img
-                    src="../static/images/Shido-Fitness-Logo-New-Orange.png" width="80" height="auto" border="0"
-                    alt="Shido Fitness"></a>
-            <a target="_blank" href="https://www.biz-logo.com/"><img src="../static/images/biz-logo-logo.jpg"
-                                                                     width="80" height="auto" border="0"
-                                                                     alt="Biz Logo"></a>
-            <a target="_blank" href="https://www.instituteofpersonaltrainers.com/code-of-ethical-conduct.html"><img
-                    src="https://www.instituteofpersonaltrainers.com/uploads/2/2/0/1/22014694/iptmember2_orig.png"
-                    width="80" height="80" alt="personal trainer business support"></a>
-            <a href="terms.html">Условия</a>
-            <a href="policy.html">Поверителност</a>
-        </div>
-    </section>
-</div>
-<div class="modal" id="contactUs">
-    <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
-    <script src="../node_modules/chart.js/dist/Chart.bundle.js"></script>
-    <script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
-    <div class="modal-dialog modal-md">
-        <div class="modal-content">
-
-            <!-- Modal body -->
-            <div class="modal-body">
-                <div class="col-md-12">
-                    <h4>Адрес</h4>
-                    <div class="text-left"><i class="fa fa-address-card"></i> ул. "Проф. д-р Иван Странски" 61, 1700
-                        Студентски Комплекс, София
-                    </div>
-                    <hr>
-                </div>
-                <div class="col-md-12">
-                    <h4>Номера за връзка</h4>
-                    <div class="text-left"><i class="fa fa-phone-square"></i> Явор - <a href="tel:0876-10-00-39"  data-rel="external">0876 10 00 39</a></div>
-                    <div class="text-left"><i class="fa fa-phone-square"></i> Елица -<a href="tel:0888-03-04-24"  data-rel="external">0888 03 04 24</a></div>
-                </div>
-                <hr>
-                <div class="col-md-12">
-                    <h4>Е-поща</h4>
-                    <div class="text-left"><i class="fa fa-envelope-o"></i> <a href="headquarter.html"> athleticstandard.org@gmail.com</a></div>
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-info-single">
+                    <h2 class="title">Документация</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Идентичност</a></li>
+                        <li><a href="rules.html" title=""><i class="fa fa-angle-double-right"></i>
+                            Правила</a></li>
+                        <li><a href="code_of_ethics_sec.html" title=""><i class="fa fa-angle-double-right"></i> Етичен
+                            кодекс</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Стандарт</a></li>
+                        <li><a href="testimonials.html" title=""><i class="fa fa-angle-double-right"></i>
+                            Атестати</a></li>
+                    </ul>
                 </div>
             </div>
-            <button style="border-radius: 0 !important;" class="btn btn-block btn-danger" data-dismiss="modal">&times;</button>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-info-single">
+                    <h2 class="title">Занималня</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Движения</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Видео</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Подрастваща сила</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Зала на Силата</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Toddler</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-info-single">
+                    <h2 class="title">Ресурси</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="calcs/passwd.html" title=""><i class="fa fa-angle-double-right"></i>
+                            Калкулатори</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Брошура</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Лого</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Униформа</a></li>
+                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
+                            Блог с рецепти</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 text-center">
+                <div class="footer-info-single">
+                    <a href="http://www.copyscape.com/"><img
+                            src="//banners.copyscape.com/img/copyscape-stamp-white-90x90.png" width="90" height="90"
+                            border="0" alt="Protected by Copyscape"
+                            title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page."/></a>
+
+                </div>
+            </div>
         </div>
     </div>
-</div>
+
+    <section class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="text-center">© 2015-2019 athleticstandard.org</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    $('.navbar li a').on("click", (function () {
+        $('.navbar').find(".active").removeClass("active");
+        $(this).parent().addClass("active");
+        // add this line to specify color of active class
+        $(this).parent().find(".active").css("background-color", "lightgray");
+    }));
+</script>
 </body>
 </html>

@@ -12,17 +12,20 @@
 
 .card .card-header {
     text-align: center;
-    color: #BCA465;
+    color: #000654;
     z-index: 1;
-    background-color: #020104;
+    background-color: #dfdfdf;
     /*background-image: linear-gradient(to bottom, #4d5448, #585b4e, #636353, #6e6a5a, #7a7161, #75695c, #706157, #6a5a52, #504340, #372e2d, #1e1a1b, #000000);*/
 }
 
 .card .card-block {
     color: #000000;
-    text-align: center;
     vertical-align: middle;
     background-color: #fafafa;
+}
+
+.card .card-title {
+    text-align: center;
 }
 
 .card-img-top {
@@ -49,7 +52,7 @@
 
 #lang-selector {
     font-family: Roboto-Regular;
-    position: absolute;
+
     top: 15px;
     bottom: 10px;
     right: 25px;
@@ -58,7 +61,7 @@
 }
 
 #lang-selector a {
-    color: #393f4d;
+    color: #dfdfdf;
     z-index: 9999;
 }
 
@@ -74,6 +77,8 @@
 }
 
 #logo {
+    border: 2px solid #dfdfdf;
+    border-radius: 3px;
     width: 50px;
     height: auto;
     opacity: 1;
@@ -121,14 +126,17 @@
 }
 
 #title h5 {
-    margin-top: -13px;
+    margin-top: -10px;
+    margin-left: 95px;
     color: #ffffff;
     font-family: Archive;
     font-size: 80%;
 }
 
 #title h2 {
+    line-height: 30px;
     margin-top: 13px;
+    margin-left: 5px;
     color: #dfdfdf;
     font-family: Archive;
 }
@@ -136,8 +144,13 @@
 #mainHeader {
     line-height: 14px;
     margin-top: 35px;
+    margin-left: 5px;
     color: #d42729;
     font-family: Archive;
+}
+
+#title {
+    position: relative;
 }
 
 .star {
@@ -162,13 +175,14 @@ nav ul li:hover > ul {
 }
 
 .mb-4 img {
+    color: #9F9048;
     display: block;
 }
 
 .price {
     font-family: Gross Regular;
     font-size: 130%;
-    color: #9F9048;
+    color: #d42729;
 }
 
 .btn {
@@ -193,14 +207,6 @@ nav ul li:hover > ul {
 #information {
     border: 1px solid lightgray;
     border-bottom: 5px solid lightgray;
-}
-
-.copyright {
-    /*background-image: linear-gradient(to bottom, #363636, #39383b, #3b3b41, #3e3d46, #40404c);*/
-    background-color: #002e63;
-    color: #ffffff;
-    width: 100%;
-    font-family: MullerNarrow-Light;
 }
 
 tr {

@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131327406-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-131327406-1');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -14,9 +27,9 @@
 <body>
 <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-        <div class="float-left" id="logo-container"><img src="static/images/logo_american_flag_red_white.png" id="logo" alt="main-logo"></div>&nbsp;
+        <div class="float-left" id="logo-container"><img src="static/images/logo_american_flag_filled_back.png" id="logo" alt="main-logo"></div>&nbsp;
         <div class="row">
-            <div class="col-md-6" id="title">
+            <div class="col-md-12 pull-left" id="title">
                 <h1 id="mainHeader">ATHLETIC</h1>
                 <h2>STANDARD</h2>
                 <h5>GO STRONG</h5>
@@ -42,14 +55,13 @@
             </ul>
         </div>
     </div>
-</nav>
-<div class="nav-wrap">
     <div id="lang-selector">
         <a href="index.html" class="active">BG</a>
-         <span style="color: #393f4d">|</span>
+         <span style="color: #dfdfdf">|</span>
         <a href="en/index.html" class="">EN</a>
     </div>
-</div>
+</nav>
+
 <header id="front">
     <div class="container">
         <h1 class="text-center">Добре дошъл от правилната страна на Силата<!--Welcome to the right side of the Force--></h1>
@@ -60,7 +72,17 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <h2>About this page</h2>
+                <h2>Визия</h2>
+                <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
+                <ul>
+                    <li>Clickable nav links that smooth scroll to page sections</li>
+                    <li>Responsive behavior when clicking nav links perfect for a one page website</li>
+                    <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
+                    <li>Minimal custom CSS so you are free to explore your own unique design options</li>
+                </ul>
+            </div>
+            <div class="col-lg-8 mx-auto">
+                <h2>Мисия</h2>
                 <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
                 <ul>
                     <li>Clickable nav links that smooth scroll to page sections</li>
@@ -118,10 +140,10 @@
                     <h2 class="title">Документация</h2>
                     <ul class="list-unstyled">
                         <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Идентичност</a></li>
-                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Правила</a></li>
+                        <li><a href="views/rules.html" title=""><i class="fa fa-angle-double-right"></i> Правила</a></li>
                         <li><a href="views/code_of_ethics_sec.html" title=""><i class="fa fa-angle-double-right"></i> Етичен кодекс</a></li>
                         <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Стандарт</a></li>
-                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Атестати</a></li>
+                        <li><a href="views/testimonials.html" title=""><i class="fa fa-angle-double-right"></i> Атестати</a></li>
                     </ul>
                 </div>
             </div>

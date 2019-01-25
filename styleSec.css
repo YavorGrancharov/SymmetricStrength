@@ -34,6 +34,10 @@ nav a:hover {
     color: #d42729 !important;
 }
 
+#price {
+    padding: 40px 0 60px;
+}
+
 footer {
     background-color: #000654 !important;
 }
@@ -73,8 +77,6 @@ section {
     src: url('./static/fonts/Gross Regular.ttf') format('truetype');
 }
 
-pt-serif.italic
-
 @font-face {
     font-family: MullerNarrow-Light;
     src: url('./static/fonts/MullerNarrow-Light.otf') format('opentype');
@@ -88,26 +90,18 @@ pt-serif.italic
 /* mega footer */
 footer.nb-footer {
     background: #222222;
-    border-top: 4px solid #d42729;
-}
-
+    border-top: 4px solid #d42729; }
 footer.nb-footer .about {
     margin: 0 auto;
     margin-top: 40px;
     max-width: 1170px;
-    text-align: center;
-}
-
+    text-align: center; }
 footer.nb-footer .about p {
     font-size: 13px;
     color: #999;
-    margin-top: 30px;
-}
-
+    margin-top: 30px; }
 footer.nb-footer .about .social-media {
-    margin-top: 15px;
-}
-
+    margin-top: 15px; }
 footer.nb-footer .about .social-media ul li a {
     display: inline-block;
     width: 45px;
@@ -116,55 +110,37 @@ footer.nb-footer .about .social-media ul li a {
     border-radius: 50%;
     font-size: 16px;
     color: #d42729;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
+    border: 1px solid rgba(255, 255, 255, 0.3); }
 footer.nb-footer .about .social-media ul li a:hover {
     background: #d42729;
     color: #fff;
-    border-color: #d42729;
-}
-
+    border-color: #d42729; }
 footer.nb-footer .footer-info-single {
-    margin-top: 30px;
-}
-
+    margin-top: 30px; }
 footer.nb-footer .footer-info-single .title {
     color: #dfdfdf;
     text-transform: uppercase;
     font-size: 16px;
     border-left: 4px solid #d42729;
-    padding-left: 5px;
-}
-
+    padding-left: 5px; }
 footer.nb-footer .footer-info-single ul li a {
     display: block;
     color: #dfdfdf;
-    padding: 2px 0;
-}
-
+    padding: 2px 0; }
 footer.nb-footer .footer-info-single ul li a:hover {
-    color: #d42729;
-}
-
+    color: #d42729; }
 footer.nb-footer .footer-info-single p {
     font-size: 13px;
     line-height: 20px;
-    color: #aaa;
-}
-
+    color: #aaa; }
 .copyright .container .row {
     align-items: center;
 }
-
 footer.nb-footer .copyright {
     margin-top: 15px;
     background: #111111;
     padding: 7px 0;
-    color: #dfdfdf;
-}
-
+    color: #dfdfdf; }
 footer.nb-footer .copyright p {
     margin: 0;
-    padding: 0;
-}
+    padding: 0; }
