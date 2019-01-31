@@ -59,6 +59,18 @@ footer {
     font-family: pt-serif-italic;
 }
 
+#rules_header {
+    padding: 40px 0 60px;
+}
+
+#generals_header {
+    padding: 40px 0 60px;
+}
+
+#headquarter {
+    padding: 40px 0 60px;
+}
+
 #services {
     background-color: #dfdfdf;
 }
@@ -66,6 +78,15 @@ footer {
 #company_name {
     color: #020104;
     font-family: Archive;
+}
+
+#a_standard {
+    color: #dfdfdf;
+    background-color: #000654;
+}
+
+#food_standard {
+    background-color: #d42729;
 }
 
 section {

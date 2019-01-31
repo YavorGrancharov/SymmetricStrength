@@ -45,7 +45,6 @@
 
 #lang-selector {
     font-family: Roboto-Regular;
-
     top: 15px;
     bottom: 10px;
     right: 25px;
@@ -183,10 +182,6 @@ nav ul li:hover > ul {
     font-family: MullerNarrow-ExtraBold !important;
 }
 
-.btn:hover {
-    transform: scale(1.1);
-}
-
 #order1, #order2, #order3 {
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
@@ -195,10 +190,8 @@ nav ul li:hover > ul {
     height: 44px;
 }
 
-
-
 .rounded-circle {
-    width: 50%;
+    width: 71%;
     height: auto;
 }
 
