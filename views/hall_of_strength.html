@@ -453,9 +453,9 @@
                 </div>
                 <script type="text/javascript">
                     let chartLubo = document.getElementById("bar-chart-horizontal-lubo");
-                    let x = window.matchMedia("(max-width: 480px)");
-                    myFunction(x);
-                    x.addListener(myFunction);
+                    let a = window.matchMedia("(max-width: 480px)");
+                    myFunction(a);
+                    a.addListener(myFunction);
                     new Chart((chartLubo), {
                         type: 'horizontalBar',
                         data: {
@@ -481,8 +481,8 @@
                         }
                     });
 
-                    function myFunction(x) {
-                        if (x.matches) {
+                    function myFunction(a) {
+                        if (a.matches) {
                             chartLubo.height = window.innerHeight;
                             chartLubo.width = window.innerWidth;
                         }
@@ -529,9 +529,9 @@
                 </div>
                 <script type="text/javascript">
                     let chartEmo = document.getElementById("bar-chart-horizontal-emo");
-                    let x = window.matchMedia("(max-width: 480px)");
-                    myFunction(x);
-                    x.addListener(myFunction);
+                    let b = window.matchMedia("(max-width: 480px)");
+                    myFunction(b);
+                    b.addListener(myFunction);
                     new Chart((chartEmo), {
                         type: 'horizontalBar',
                         data: {
@@ -557,8 +557,8 @@
                         }
                     });
 
-                    function myFunction(x) {
-                        if (x.matches) {
+                    function myFunction(b) {
+                        if (b.matches) {
                             chartEmo.height = window.innerHeight;
                             chartEmo.width = window.innerWidth;
                         }
@@ -605,9 +605,9 @@
                 </div>
                 <script type="text/javascript">
                     let chartDeyan = document.getElementById("bar-chart-horizontal-deyan");
-                    let x = window.matchMedia("(max-width: 480px)");
-                    myFunction(x);
-                    x.addListener(myFunction);
+                    let c = window.matchMedia("(max-width: 480px)");
+                    myFunction(c);
+                    c.addListener(myFunction);
                     new Chart((chartDeyan), {
                         type: 'horizontalBar',
                         data: {
@@ -633,8 +633,8 @@
                         }
                     });
 
-                    function myFunction(x) {
-                        if (x.matches) {
+                    function myFunction(c) {
+                        if (c.matches) {
                             chartDeyan.height = window.innerHeight;
                             chartDeyan.width = window.innerWidth;
                         }
