@@ -23,7 +23,8 @@
     <link rel="stylesheet" href="../styleSec.css" media="all">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" media="all">
     <link href="../node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css" rel="stylesheet"
+          type="text/css">
     <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
     <style>
         .img-box {
@@ -41,6 +42,67 @@
             display: block;
             border-radius: 50%;
         }
+
+        /*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+        @media (min-width: 1281px) {
+
+        }
+
+        /*
+          ##Device = Laptops, Desktops
+          ##Screen = B/w 1025px to 1280px
+        */
+
+        @media (min-width: 1025px) and (max-width: 1280px) {
+
+        }
+
+        /*
+          ##Device = Tablets, Ipads (portrait)
+          ##Screen = B/w 768px to 1024px
+        */
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+
+        }
+
+        /*
+          ##Device = Tablets, Ipads (landscape)
+          ##Screen = B/w 768px to 1024px
+        */
+
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+        }
+
+        /*
+          ##Device = Low Resolution Tablets, Mobiles (Landscape)
+          ##Screen = B/w 481px to 767px
+        */
+
+        @media (min-width: 481px) and (max-width: 767px) {
+
+        }
+
+        /*
+          ##Device = Most of the Smartphones Mobiles (Portrait)
+          ##Screen = B/w 320px to 479px
+        */
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            canvas {
+                height: 640px;
+                width: auto;
+            }
+            h3 {
+                color: orangered;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -273,11 +335,17 @@
                     </div>
                     <div class="social-media">
                         <ul class="list-inline">
-                            <li class="list-inline-item"><a target="_blank" href="https://web.facebook.com/Athletic-Standard-155676468649069/" title=""><i
+                            <li class="list-inline-item"><a target="_blank"
+                                                            href="https://web.facebook.com/Athletic-Standard-155676468649069/"
+                                                            title=""><i
                                     class="fa fa-facebook"></i></a></li>
-                            <li class="list-inline-item"><a target="_blank" href="https://www.youtube.com/channel/UC3jhBZbeXDzwad6o2yrttSA" title=""><i
+                            <li class="list-inline-item"><a target="_blank"
+                                                            href="https://www.youtube.com/channel/UC3jhBZbeXDzwad6o2yrttSA"
+                                                            title=""><i
                                     class="fa fa-youtube-play"></i></a></li>
-                            <li class="list-inline-item"><a target="_blank" href="https://plus.google.com/u/1/107807292645953595864" title=""><i
+                            <li class="list-inline-item"><a target="_blank"
+                                                            href="https://plus.google.com/u/1/107807292645953595864"
+                                                            title=""><i
                                     class="fa fa-google-plus"></i></a></li>
                         </ul>
                     </div>
@@ -332,7 +400,8 @@
                             Лого</a></li>
                         <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i>
                             Униформа</a></li>
-                        <li><a target="_blank" href="http://leanonfat.blogspot.com/" title=""><i class="fa fa-angle-double-right"></i>
+                        <li><a target="_blank" href="http://leanonfat.blogspot.com/" title=""><i
+                                class="fa fa-angle-double-right"></i>
                             Блог с рецепти</a></li>
                     </ul>
                 </div>
@@ -523,6 +592,9 @@
                 </div>
                 <script type="text/javascript">
                     let chartDeyan = document.getElementById("bar-chart-horizontal-deyan");
+                    let x = window.matchMedia("(max-width: 480px)");
+                    myFunction(x);
+                    x.addListener(myFunction);
                     new Chart((chartDeyan), {
                         type: 'horizontalBar',
                         data: {
@@ -547,6 +619,13 @@
                             }
                         }
                     });
+
+                    function myFunction(x) {
+                        if (x.matches) {
+                            chartDeyan.height = 440;
+                            chartDeyan.width = window.innerWidth;
+                        }
+                    }
                 </script>
             </div>
 
