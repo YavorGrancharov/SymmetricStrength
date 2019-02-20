@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    function passwd() {
+        let source = "../password";
+        $.ajax({
+            type: "GET",
+            url: source
+        }).then(function (res) {
+            let secret;
+            let rounds = 1;
+            while (secret !== res && rounds < 4) {
+                secret = prompt("Access denied. Enter Password!", "");
+                if (secret === res) {
+                    window.location.href = "../views/endurance_calculator.html";
+                    break;
+                } else {
+                    window.location.href = ("403.html");
+                }
+                rounds++;
+            }
+        }).catch(function (err) {
+            console.log(err.name + " " + err.message);
+        });
+    }
+
+    passwd();
+</script>
+</body>
+</html>

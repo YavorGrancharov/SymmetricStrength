@@ -1,0 +1,5 @@
+let strengthController = (() => {
+    function strength() {
+        
+    }
+})();
