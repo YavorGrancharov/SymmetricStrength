@@ -325,6 +325,66 @@
 
                         </article>
 
+                        <article class="post">
+                            <div class="post-header">
+                                <h2 class="title">
+                                    Сумо Гуд Морнинг
+                                </h2>
+
+                                <!-- Post Details -->
+                                <div class="post-details">
+                                    <div class="post-cat">
+                                        <a href="#video">Видео</a>
+                                    </div>
+                                    <span class="post-date">Aug 06, 2018</span>
+                                </div>
+                                <!-- End Post Details -->
+                            </div>
+                            <div class="post-content">
+
+                                <!-- The Content -->
+                                <div class="the-excerpt">
+                                    <div class="col-lg-12 col-md-12 mb-4">
+                                        <h6 class="text-center">Лежанка за корем @5кг</h6>
+                                        <!--Modal: Name-->
+                                        <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+
+                                                <!--Content-->
+                                                <div class="modal-content">
+
+                                                    <!--Body-->
+                                                    <div class="modal-body mb-0 p-0">
+
+                                                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1ffF1pgeg0U"
+                                                                    allowfullscreen></iframe>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <!--Footer-->
+                                                    <div class="modal-footer justify-content-center">
+                                                        <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Затвори</button>
+                                                    </div>
+
+                                                </div>
+                                                <!--/.Content-->
+
+                                            </div>
+                                        </div>
+                                        <!--Modal: Name-->
+
+                                        <a><img class="img-fluid z-depth-1" src="http://i3.ytimg.com/vi/1ffF1pgeg0U/maxresdefault.jpg" alt="video"
+                                                data-toggle="modal" data-target="#modal3"></a>
+
+                                    </div>
+                                </div>
+                                <!-- End The Content -->
+                            </div>
+
+                        </article>
+
                     </div>
 
                     <!-- Pagination -->
@@ -423,6 +483,9 @@
     });
     $('#modal2').on('hidden.bs.modal', function (e) {
         $('#modal2 iframe').attr("src", $("#modal2 iframe").attr("src"));
+    });
+    $('#modal3').on('hidden.bs.modal', function (e) {
+        $('#modal3 iframe').attr("src", $("#modal3 iframe").attr("src"));
     });
 </script>
 </body>

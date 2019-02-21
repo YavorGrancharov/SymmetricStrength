@@ -74,9 +74,9 @@
                         <div class="table-cell">
                             <!-- Logo -->
                             <div class="logo">
-                                <a href="art_blog.html">
-                                    <img src="" alt="Logo" class="logo-light">
-                                    <img src="" alt="Logo">
+                                <a href="../index.html">
+                                    <img src="../static/images/print_ready_logo%20copy.png" width="300" height="auto"
+                                         alt="main-logo">
                                 </a>
                             </div>
                             <!-- End Logo -->
@@ -85,48 +85,51 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul class="menu-list">
-                                        <li class="menu-item-has-children">
-                                            <a href="art_index.html">Начало</a>
-                                        </li>
                                         <li>
-                                            <a href="art_blog.html">Блог</a>
-                                        </li>
-                                        <li>
-                                            <a href="art_price.html">Цени</a>
+                                            <a href="../index.html">Начало</a>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a href="art_video.html">Видео</a>
+                                            <a href="blog.html">Блог</a>
                                             <ul class="sub-menu">
                                                 <li>
-                                                    <a href="art_video.html">Стандартен изглед</a>
+                                                    <a href="blog.html">Стандартен изглед</a>
                                                 </li>
                                                 <li>
-                                                    <a href="art_video_grid.html">Решетъчен изглед</a>
+                                                    <a href="blog_grid.html">Решетъчен изглед</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="art_about.html">За нас</a>
+                                            <a href="price.html">Цени</a>
                                         </li>
                                         <li>
-                                            <a href="art_contact.html">Контакти</a>
+                                            <a href="video_grid.html">Видео</a>
+                                        </li>
+                                        <li>
+                                            <a href="about.html">За нас</a>
+                                        </li>
+                                        <li>
+                                            <a href="contact.html">Контакти</a>
                                         </li>
                                         <li class="menu-item-has-children">
                                             <a href="single.html">Документация</a>
                                             <ul class="sub-menu">
                                                 <li>
-                                                    <a href="art_missing.html">Идентичност</a>
+                                                    <a href="404.html">Идентичност</a>
                                                 </li>
                                                 <li>
-                                                    <a href="art_rules.html">Правила</a>
+                                                    <a href="rules.html">Правила</a>
                                                 </li>
                                                 <li>
-                                                    <a href="art_code_of_ethics.html">Етичен кодекс</a>
+                                                    <a href="code_of_ethics.html">Етичен кодекс</a>
                                                 </li>
                                                 <li>
-                                                    <a href="art_missing.html">Стандарт</a>
+                                                    <a href="404.html">Ръководство</a>
                                                 </li>
                                             </ul>
+                                        </li>
+                                        <li>
+                                            <a href="testimonials.html">Атестати</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -135,31 +138,33 @@
 
                             <!-- Socials -->
                             <div class="socials">
-                                <a href="#" title="Behance">
-                                    <i class="fa fa-behance"></i>
-                                </a>
-                                <a href="#" title="Dribbble">
-                                    <i class="fa fa-dribbble"></i>
-                                </a>
-                                <a href="#" title="Facebook">
+                                <a target="_blank" href="https://web.facebook.com/Athletic-Standard-155676468649069/"
+                                   title="Facebook">
                                     <i class="fa fa-facebook"></i>
                                 </a>
-                                <a href="#" title="Google Plus">
-                                    <i class="fa fa-google-plus"></i>
+                                <a target="_blank" href="https://www.youtube.com/channel/UC3jhBZbeXDzwad6o2yrttSA"
+                                   title="You Tube">
+                                    <i class="fa fa-youtube-play"></i>
                                 </a>
-                                <a href="#" title="Instagram">
-                                    <i class="fa fa-instagram"></i>
+                                <a target="_blank" href="http://leanonfat.blogspot.com/" title="Blogger">
+                                    <i class="fa fa-cutlery"></i>
                                 </a>
-                                <a href="#" title="Search this site">
+                                <a href="#/" title="Subscribe">
+                                    <i class="fa fa-newspaper-o"></i>
+                                </a>
+                                <a href="#/" title="Language">
+                                    <i id="lang" class="fa fa-globe"></i>
+                                </a>
+                                <a href="#/" title="Search this site">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div>
                             <!-- End Socials -->
 
                             <div class="box-search">
-                                <label for="searchform"></label>
-                                <form role="search" id="searchform" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
-                                    <input type="text" placeholder="Search ..." name="query"/>
+                                <form role="search" id="searchform" action="https://search.freefind.com/find.html"
+                                      method="get" accept-charset="utf-8" target="_self">
+                                    <input type="text" placeholder="Търсене ..." name="query"/>
                                     <input type="hidden" name="si" value="30222917">
                                     <input type="hidden" name="pid" value="r">
                                     <input type="hidden" name="n" value="0">
@@ -168,9 +173,17 @@
                                 </form>
                             </div>
 
+                            <div class="box-subscribe">
+                                <form class="block mbr-form"
+                                      action="https://formspree.io/athleticstandard.org@gmail.com" method="post">
+                                    <input type="text" class="form-control input" name="email" data-form-field="Email"
+                                           placeholder="Абонирай се с е-поща" required="">
+                                </form>
+                            </div>
+
                             <div class="copyright">
                                 <p>
-                                    Tancho @ 2018. Design by <a href="#">Kendy</a>
+                                    &copy;2015-2019 athleticstandard.org
                                 </p>
                             </div>
 
