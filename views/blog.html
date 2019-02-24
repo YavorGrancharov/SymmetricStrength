@@ -98,8 +98,16 @@
                                         <li>
                                             <a href="price.html">Цени</a>
                                         </li>
-                                        <li>
-                                            <a href="video_grid.html">Видео</a>
+                                        <li class="menu-item-has-children">
+                                            <a href="video.html">Видео</a>
+                                            <ul class="sub-menu">
+                                                <li>
+                                                    <a href="video.html">Стандартен изглед</a>
+                                                </li>
+                                                <li>
+                                                    <a href="video_grid.html">Решетъчен изглед</a>
+                                                </li>
+                                            </ul>
                                         </li>
                                         <li>
                                             <a href="about.html">За нас</a>
@@ -192,6 +200,7 @@
                 <div class="posts">
                     <div class="posts-inner">
                         <article class="post">
+                            <input id="id" type="hidden" value="1">
                             <div class="post-header">
                                 <h2 class="title">
                                     <a href="../articles/water.html">Всичко, което трябва да знаем за водата</a>
@@ -202,11 +211,7 @@
                                     <div class="post-cat">
                                         <a href="#food">Хранене</a>
                                     </div>
-                                    <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
-                                    <div class="post-details-child">
-                                        <a href="#" class="post-views">15 views</a>
-                                        <a href="#" class="post-comments">03 Comments</a>
-                                    </div>
+                                    <a href="#/" class="post-date"><span>Aug 06, 2018</span></a>
                                 </div>
                                 <!-- End Post Details -->
                             </div>
@@ -246,10 +251,6 @@
                                         <a href="#food">Хранене</a>
                                     </div>
                                     <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
-                                    <div class="post-details-child">
-                                        <a href="#" class="post-views">15 views</a>
-                                        <a href="#" class="post-comments">03 Comments</a>
-                                    </div>
                                 </div>
                                 <!-- End Post Details -->
                             </div>
@@ -289,10 +290,6 @@
                                         <a href="#food">Хранене</a>
                                     </div>
                                     <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
-                                    <div class="post-details-child">
-                                        <a href="#" class="post-views">15 views</a>
-                                        <a href="#" class="post-comments">03 Comments</a>
-                                    </div>
                                 </div>
                                 <!-- End Post Details -->
                             </div>
@@ -405,11 +402,20 @@
 <script src="../js/js/bootstrap.min.js"></script>
 <script src="../js/libs/masonry.pkgd.min.js"></script>
 <script src="../js/libs/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
 <script src="../js/scripts.js"></script>
 <script>
     document.getElementById("lang").addEventListener("click", function (e) {
         e.preventDefault();
         window.location.href = ("../en/views/art_index_en.html");
+    });
+</script>
+<script>
+    $('.container').infiniteScroll({
+        // options
+        path: '.pagination__next',
+        append: '.post',
+        history: false,
     });
 </script>
 </body>

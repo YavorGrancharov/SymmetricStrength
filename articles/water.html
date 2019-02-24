@@ -198,12 +198,20 @@
                                 <!-- Post Details -->
                                 <div class="post-details">
                                     <div class="post-cat">
-                                        <a href="#">Travel</a>
+                                        <a href="#food">Хранене</a>
                                     </div>
-                                    <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
+                                    <a href="#/" class="post-date"><span>28 JAN 2019</span></a>
                                     <div class="post-details-child">
-                                        <a href="#" class="post-views">15 views</a>
-                                        <a href="#" class="post-comments">03 Comments</a>
+                                        <a href="#/" class="post-views"></a>
+                                        <a href="#/" class="post-comments"></a>
+                                        <div class="post-share-icon">
+                                            <span>SHARE</span>
+                                            <ul>
+                                                <li><a data-href="water.html" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fathleticstandard.herokuapp.com%2Farticles%2Fwater.html&amp;src=sdkpreparse"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                                <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                                                <li><a href="#"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- End Post Details -->
@@ -373,7 +381,7 @@
                         <!-- Respond -->
                         <div id="respond" class="comment-respond">
                             <h2 class="title"><span>Leave a Reply</span></h2>
-                            <form action="#" method="post" class="contact">
+                            <form action="#/" method="post" class="contact">
                                 <div class="contact-item">
                                     <label for="author">Your Name *</label>
                                     <input name="author" value="" id="author" type="text" required>
@@ -388,10 +396,10 @@
                                 </div>
                                 <div class="contact-item">
                                     <label for="comment">Your Comment *</label>
-                                    <textarea name="comment" id="comment" class="commentBox"></textarea>
+                                    <textarea name="comment" id="comment" class="commentBox" required></textarea>
                                 </div>
                                 <div class="contact-item form-submit">
-                                    <input name="submit" type="submit" id="submit" class="submit" value="Submit" required>
+                                    <input name="submit" type="submit" id="submit" class="submit" value="Submit">
                                 </div>
                             </form>
                         </div><!-- #respond -->
@@ -464,6 +472,8 @@
     </div>
 </footer>
 <!-- End Footer -->
+<div id="fb-root"></div>
+<script async defer src="https://connect.facebook.net/bg_BG/sdk.js#xfbml=1&version=v3.2"></script>
 <script src="../js/libs/jquery-1.12.4.min.js"></script>
 <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="../js/js/bootstrap.min.js"></script>
@@ -471,6 +481,7 @@
 <script src="../js/libs/imagesloaded.pkgd.min.js"></script>
 <script src="../js/scripts.js"></script>
 <script src="../js/controller/commentController.js"></script>
+<script src="../js/controller/siteVisits.js"></script>
 <script src="../js/services/commentService.js"></script>
 <script src="../js/services/remoteService.js"></script>
 <script>
@@ -482,6 +493,22 @@
 <script>
     commentController.getComments();
     commentController.postComment();
+</script>
+<script>
+    $(document).ready(function () {
+        let count = 0;
+        let post_id = $('#id').val();
+        commentService.countVisitsPost(post_id, count).then((res) => {
+            commentService.countVisitsGet().then((visits) => {
+                visits.forEach(function (visit, index) {
+                    if(visit.post_id === post_id) {
+                        count++;
+                    }
+                })
+                $('.post-views')[0].innerHTML = count + ' Views'
+            })
+        })
+    })
 </script>
 </body>
 </html>
