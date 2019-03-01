@@ -474,17 +474,5 @@
         history: false
     });
 </script>
-<script>
-    $(function () {
-        let pathName = document.location.pathname;
-        window.onbeforeunload = function () {
-            let scrollPosition = $(document).scrollTop();
-            sessionStorage.setItem("scrollPosition_" + pathName, scrollPosition.toString());
-        }
-        if (sessionStorage["scrollPosition_" + pathName]) {
-            $(document).scrollTop(sessionStorage.getItem("scrollPosition_" + pathName));
-        }
-    })();
-</script>
 </body>
 </html>

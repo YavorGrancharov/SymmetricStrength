@@ -476,7 +476,7 @@
     });
 </script>
 <script>
-    $(function () {
+    $(function ($) {
         let pathName = document.location.pathname;
         window.onbeforeunload = function () {
             let scrollPosition = $(document).scrollTop();
@@ -485,7 +485,7 @@
         if (sessionStorage["scrollPosition_" + pathName]) {
             $(document).scrollTop(sessionStorage.getItem("scrollPosition_" + pathName));
         }
-    })();
+    });
 </script>
 </body>
 </html>
