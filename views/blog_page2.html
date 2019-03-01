@@ -372,7 +372,7 @@
                             <a href="#">Older Posts <i class="fa fa-angle-double-right"></i></a>
                         </div>
                         <div class="newer">
-                            <a class="pagination__next" href="blog_page2.html"><i class="fa fa-angle-double-left"></i> Newer
+                            <a class="pagination__next" href="blog_page3.html"><i class="fa fa-angle-double-left"></i> Newer
                                 Posts</a>
                         </div>
                     </div>
@@ -458,7 +458,6 @@
 <script src="../js/libs/masonry.pkgd.min.js"></script>
 <script src="../js/libs/imagesloaded.pkgd.min.js"></script>
 <script src="../js/libs/infinite-scroll.pkgd.min.js"></script>
-<script src="/path/to/noframework.waypoints.min.js"></script>
 <script src="../js/scripts.js"></script>
 <script>
     document.getElementById("lang").addEventListener("click", function (e) {
@@ -474,6 +473,18 @@
         hideNav: '.pagination-wrap',
         history: false
     });
+</script>
+<script>
+    $(function () {
+        let pathName = document.location.pathname;
+        window.onbeforeunload = function () {
+            let scrollPosition = $(document).scrollTop();
+            sessionStorage.setItem("scrollPosition_" + pathName, scrollPosition.toString());
+        }
+        if (sessionStorage["scrollPosition_" + pathName]) {
+            $(document).scrollTop(sessionStorage.getItem("scrollPosition_" + pathName));
+        }
+    })();
 </script>
 </body>
 </html>
