@@ -42,8 +42,9 @@ let commentController = (() => {
                                                                         let email = $('#email').val();
                                                                         let avatar = $('#avatar').val();
                                                                         let comment = $('#comment').val();
+                                                                        let visible = false;
 
-                                                                        commentService.postReply(post_id, date, author, email, avatar, comment).then(function () {
+                                                                        commentService.postReply(post_id, date, author, email, avatar, comment, visible).then(function () {
                                                                             alert("Thank you for commenting!");
                                                                             window.location.reload(true);
                                                                             window.location.hash = 'current';

@@ -1,11 +1,11 @@
 let commentService = (() => {
     function getCommentsById(post_id) {
-        const endpoint = `Comments?query={"post_id":"${post_id}"}&sort={"_kmd.ect": 1}`;
+        const endpoint = `Comments?query={"post_id":"${post_id}","visible":true}&sort={"_kmd.ect": 1}`;
 
         return remoteService.get('appdata', endpoint, 'kinvey');
     }
 
-    function postComment(post_id, date, author, email, avatar, comment) {
+    function postComment(post_id, date, author, email, avatar, comment, visible) {
         const endpoint = 'Comments';
 
         let data = {
@@ -14,7 +14,8 @@ let commentService = (() => {
             author: author,
             email: email,
             avatar: avatar,
-            comment: comment
+            comment: comment,
+            visible: false
         };
 
         return remoteService.post('appdata', endpoint, 'kinvey', data);
@@ -26,7 +27,7 @@ let commentService = (() => {
         return remoteService.get('appdata', endpoint, 'kinvey');
     }
 
-    function postReply(post_id, date, author, email, avatar, comment) {
+    function postReply(post_id, date, author, email, avatar, comment, visible) {
         const endpoint = 'Replies';
 
         let data = {
@@ -35,7 +36,8 @@ let commentService = (() => {
             author: author,
             email: email,
             avatar: avatar,
-            comment: comment
+            comment: comment,
+            visible: false
         };
 
         return remoteService.post('appdata', endpoint, 'kinvey', data);
