@@ -14,267 +14,447 @@
 
         gtag('config', 'UA-131327406-1');
     </script>
-    <script>
-        window.addEventListener('error', function (e) {
-            e.preventDefault();
-            window.location.href = ("../views/missing");
-        }, true);
-    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Lato:400,700%7CCrete+Round' type='text/css'
+          media='all'/>
     <title>GO STRONG</title>
     <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../styles/footer.css">
-    <link rel="stylesheet" href="../styles/testimonials.css">
-    <link rel="stylesheet" href="../styles/timeline.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link href="../node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
-    <script language="JavaScript1.3" type="text/javascript" src="../scripts/engines/jse_form.js"></script>
+    <link rel="stylesheet" href="../styles/styles.css" media="all">
+    <link rel="stylesheet" href="../styles/libs/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="../styles/libs/font-awesome.min.css" type="text/css" media="all">
 </head>
-<body class="bg-light">
-<div class="nav-wrap">
-    <div id="lang-selector">
-        <a href="headquarter.html" class="active">BG</a>
-         | 
-        <a href="../en/views/headquarter.html" class="">EN</a>
+<body>
+<!-- Wrapper Site -->
+<div id="main-content">
+
+    <!-- Preload -->
+    <div id="preload">
+        <div class="kd-bounce">
+            <div></div>
+            <div></div>
+        </div>
     </div>
-</div>
-<div class="container border" id="wrapper">
-    <div class="jumbotron bg-light">
-        <div class="float-left" id="dLogo"><img src="../static/images/logo.png" id="logo" alt="main-logo"></div>
+    <!-- Preload -->
+
+    <!-- Mobile Menu -->
+    <div class="mobile">
+        <div class="container">
+            <!-- Mobile -->
+            <div class="menu-mobile">
+                <span class="item item-1"></span>
+                <span class="item item-2"></span>
+                <span class="item item-3"></span>
+            </div>
+            <!-- End Mobile -->
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="../index.html">
+                    <h1>GO STRONG</h1>
+                </a>
+            </div>
+            <!-- End Logo -->
+        </div>
+    </div>
+    <div class="hide-menu"></div>
+    <!-- End Mobile Menu -->
+
+    <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h3 id="mainHeader">ATHLETIC STANDARD</h3>
-                <h4 class="text-muted"><sup>GO STRONG</sup></h4>
+
+            <div class="col-md-3">
+                <div class="header affix">
+                    <div class="table">
+                        <div class="table-cell">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href="../index.html">
+                                    <img src="../static/images/print_ready_logo%20copy.png" width="300" height="auto"
+                                         alt="main-logo">
+                                </a>
+                            </div>
+                            <!-- End Logo -->
+
+                            <!-- Navigation -->
+                            <div class="main-menu">
+                                <nav>
+                                    <ul class="menu-list">
+                                        <li>
+                                            <a href="../index.html">Начало</a>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="blog.html">Блог</a>
+                                            <ul class="sub-menu">
+                                                <li>
+                                                    <a href="blog.html">Стандартен изглед</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog_grid.html">Решетъчен изглед</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="price.html">Цени</a>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="video.html">Видео</a>
+                                            <ul class="sub-menu">
+                                                <li>
+                                                    <a href="video.html">Стандартен изглед</a>
+                                                </li>
+                                                <li>
+                                                    <a href="video_grid.html">Решетъчен изглед</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="about.html">За нас</a>
+                                        </li>
+                                        <li>
+                                            <a href="contact.html">Контакти</a>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="single.html">Документация</a>
+                                            <ul class="sub-menu">
+                                                <li>
+                                                    <a href="404.html">Идентичност</a>
+                                                </li>
+                                                <li>
+                                                    <a href="rules.html">Правила</a>
+                                                </li>
+                                                <li>
+                                                    <a href="code_of_ethics.html">Етичен кодекс</a>
+                                                </li>
+                                                <li>
+                                                    <a href="404.html">Стандарт</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="testimonials.html">Атестати</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- End Navigation -->
+
+                            <!-- Socials -->
+                            <div class="socials">
+                                <a target="_blank" href="https://web.facebook.com/Athletic-Standard-155676468649069/"
+                                   title="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a target="_blank" href="https://www.youtube.com/channel/UC3jhBZbeXDzwad6o2yrttSA"
+                                   title="You Tube">
+                                    <i class="fa fa-youtube-play"></i>
+                                </a>
+                                <a target="_blank" href="http://leanonfat.blogspot.com/" title="Blogger">
+                                    <i class="fa fa-cutlery"></i>
+                                </a>
+                                <a href="#/" title="Subscribe">
+                                    <i class="fa fa-newspaper-o"></i>
+                                </a>
+                                <a href="#/" title="Language">
+                                    <i id="lang" class="fa fa-globe"></i>
+                                </a>
+                                <a href="#/" title="Search this site">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div>
+                            <!-- End Socials -->
+
+                            <div class="box-search">
+                                <form role="search" id="searchform" action="https://search.freefind.com/find.html"
+                                      method="get" accept-charset="utf-8" target="_self">
+                                    <input type="text" placeholder="Search ..." name="query"/>
+                                    <input type="hidden" name="si" value="30222917">
+                                    <input type="hidden" name="pid" value="r">
+                                    <input type="hidden" name="n" value="0">
+                                    <input type="hidden" name="_charset_" value="">
+                                    <input type="hidden" name="bcd" value="&#247;">
+                                </form>
+                            </div>
+
+                            <div class="box-subscribe">
+                                <form class="block mbr-form"
+                                      action="https://formspree.io/athleticstandard.org@gmail.com" method="post">
+                                    <input type="text" class="form-control input" name="email" data-form-field="Email"
+                                           placeholder="Абонирай се с е-поща" required="">
+                                </form>
+                            </div>
+
+                            <div class="copyright">
+                                <p>
+                                    &copy;2015-2019 athleticstandard.org
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9 col-md-offset-3">
+                <div class="posts">
+                    <div class="posts-inner">
+                        <article class="post">
+                            <div class="post-header">
+                                <h2 class="title"><span>Условия за ползване</span></h2>
+                                <hr>
+                            </div>
+                            <div class="post-content">
+
+                                <!-- The Content -->
+                                <div class="the-excerpt">
+                                    <p>&nbsp;&nbsp;Прочетете внимателно настоящия документ и се уверете, че разбирате
+                                        ясно неговото съдържание.</p>
+                                    <p>&nbsp;&nbsp;Всяко лице, което посети сайта athleticstandard.org, без значение
+                                        дали разбира и
+                                        използва неговото съдържание, дали отваря или не препратки от сайта към негови
+                                        съставни части, се нарича за краткост по-долу "потребител" или "клиент" на
+                                        сайта.</p>
+                                    <br>
+                                    <p class="text-uppercase">
+                                        ВАЖНО! Използвайки сайта на Доставчика (athleticstandard.org) Вие приемате без
+                                        ограничения и безусловно тези Общи условия.
+                                    </p>
+                                    <p>
+                                        ПРЕДМЕТ
+                                    </p>
+                                    <p>
+                                        &nbsp;&nbsp;Съдържанието поместено на сайта athleticstandard.org съдържа
+                                        информация
+                                        свързана със здравословния начин на живот и поддържането на добро физическо
+                                        състояние. <br>
+                                        &nbsp;&nbsp;Всички съвети за правилен начин на хранене, трениране и други,
+                                        произтичат
+                                        пряко от прочуванията, опита и гледната точка на автора на съдържанието.<br>
+                                        &nbsp;&nbsp;Чрез този сайт, авторът не предоставя диагнози, медицински съвети и
+                                        лечение на състояния изискващи намесата на здравен специалист, както и не носи
+                                        отговорност за евентуални последици или вреди следствие от прилагане на
+                                        съдържащата се в този сайт информация. При съмнение за здравословен проблем,
+                                        и преди да приложите съветите предоставени чрез athleticstandard.org се
+                                        консултирайте с вашия лекар.
+
+                                    </p>
+                                    <p>
+                                        ИНТЕЛЕКТУАЛНА СОБСТВЕНОСТ И АВТОРСКИ ПРАВА
+                                    </p>
+                                    <p>
+                                        &nbsp;&nbsp;Сайтът athleticstandard.org няма за цел да убеди потребителя да
+                                        използва върху
+                                        себе си или върху други лица информацията, която е получил от сайта.<br>
+                                        &nbsp;&nbsp;Информацията
+                                        от athleticstandard.org може да бъде разглеждана,
+                                        изтегляна на електронно устройство и отпечатвана само за лични нужди
+                                        с нетърговска цел.
+                                        <br>
+                                        &nbsp;&nbsp;Забранено е използването, разпространяването и/или
+                                        редактирането на всички текстове, статии, снимки,
+                                        графично оформление, графични изображения и други материали
+                                        публикувани на athleticstandard.org. Копирането,
+                                        разпространението, публикуването в части или в цялост, съхранението на друг
+                                        сървър от лица различни от доставчика и взаимстването на материали от уебсайта
+                                        не се разрешава освен след изричното съгласие на автора.
+                                        Всички текстове, статии, снимки, графично оформление,
+                                        графични изображения и други материали са авторски или са взаимствани от
+                                        източници, които не са обект на авторски и други права.
+                                        Всички статии, видео и други материали на сайта са
+                                        защитени от авторското право на техния създател.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        ИЗПОЛЗВАНЕ НА САЙТА
+                                    </p>
+                                    <p>
+                                        &nbsp;&nbsp;На сайта на athleticstandard.org потребители могат да публикуват
+                                        коментари под статии, да задават и да отговарят на въпроси, стига тяхното
+                                        съдържание да не е заплашително, нецензурно или засягащо неприкосновеността
+                                        на човешкия живот, правото на интелектуална собственост на На сайта потребители
+                                        могат да публикуват коментари; могат да се
+                                        обръщат с въпроси, стига тяхното съдържание да не е незаконно, нецензурно,
+                                        заплашително, клеветническо и/или да засяга неприкосновеността на личния живот,
+                                        правото на интелектуална собственост на athleticstandard.org и/или на трети
+                                        страни, СПАМ, както и да не съдържа вируси. Забранено е
+                                        ползването на фалшив e-mail адрес или чужда самоличност като в тези случаи
+                                        athleticstandard.org си запазва правото да премахва и/или редактира подобна
+                                        информация.
+                                    </p>
+                                    <p>
+                                        СЪБИРАНЕ НА ДАННИ
+                                    </p>
+                                    <p>
+                                        Сайтът събира и обработва следните данни:
+                                    </p>
+                                    <ol>
+                                        <li>
+                                            (Форма за) Коментари
+                                            <ul>
+                                                <li>
+                                                    Уебсайтът разрешава коментари под почти всички свои страници и
+                                                    публикации. С цел предотвратяване на спама при коментиране Уебсайтът
+                                                    събира следната информация от коментиралите Ползватели:
+                                                    <ol>
+                                                        <li>
+                                                            посочените във формата за коментари данни (име и имейл
+                                                            адрес),
+                                                        </li>
+                                                    </ol>
+                                                </li>
+                                                <li>
+                                                    С попълването на формата за коментар и натискане на бутона
+                                                    “Публикувай” Ползвателят декларира, че се е запознал с настоящите
+                                                    Общи условия, съгласен е с тяхното съдържание и се задължил да ги
+                                                    спазва.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            (Форма за) Контакт
+                                            <ul>
+                                                <li>
+                                                    Ползвателят се свързва с Уебсайта посредством формата за контакт. С
+                                                    цел предотвратяване на спама и за да може да се осъществи контакст с
+                                                    Ползвателя Уебсайтът събира следната информация: посочените във
+                                                    формата за контакт данни (име и имейл адрес). Освен тях във формата
+                                                    за контакт се попълва още едно поле, в което Ползвателят въвежда
+                                                    своето съобщение.
+                                                </li>
+                                                <li>
+                                                    С попълването на формата за контакт и натискане на бутона “Изпрати”
+                                                    Ползвателят декларира, че се е запознал с настоящите Общи условия,
+                                                    съгласен е с тяхното съдържание и се задължил да ги спазва.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                    <p>
+                                        Сайтът не събира и не обработва:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            Лични данни като ЕГН, номер на лична карта, адрес, банкова сметка и др.;
+                                        </li>
+                                        <li>
+                                            Чувствителни лични по смисъла на на чл. 9 от Общия регламент за защита на
+                                            личните данни.
+                                        </li>
+                                        <li>
+                                            Уебсайтът не използва имейл адресите на Ползвателите за изпращане на
+                                            търговски и други непоискани съобщения.
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        ДОПЪЛНИТЕЛНИ
+                                    </p>
+                                    <p>
+                                        &nbsp;&nbsp;Доставчикът има право по всяко време да променя, допълва и/или
+                                        премахва
+                                        публикации на сайта, както и да изменя настоящите общи условия без да информира
+                                        изрично потребителя. Потребителят се задължава всеки път, когато използва сайта
+                                        athleticstandard.org, да се информира за действащите Общи условия за ползване.
+                                        Ако член или част от настоящите общи условия се окаже невалидна или
+                                        недействителна, това не се отразява върху останалата част от условията.
+                                        Изцяло приложимо е българското законодателство за всички неуредени въпроси и/или
+                                        възникнали спорове.
+                                        <br>
+                                        &nbsp;&nbsp;Уебсайтът си запазва правото да извършва промени в Общите условия,
+                                        Политиката за
+                                        бисквитките и Политиката за поверителност, които своевременно са отразени на
+                                        настоящата страница. За неуредените въпроси в условията за ползване се прилага
+                                        действащото българско законодателство.
+                                    </p>
+                                </div>
+                                <!-- End The Content -->
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </div>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="../index.html">База</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span><img style="opacity: 0.5" src="../static/images/drop_btn.png" alt="sergeant-dropdown-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="col-md-6">
-                    <ul class="navbar-nav mr-auto float-left">
-                        <li class="nav-item">
-                            <a class="nav-link" href="reports.html">Блог</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="charge.html">Цени</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Мешка
-                            </a>
-                            <div class="dropdown-menu border-0 bg-light" aria-labelledby="navbarDropdown">
-                                <a class="nav-link" href="martialLaw.html">Устав</a>
-                                <a class="nav-link" href="about.html">ЧЗВ</a>
-                                <a class="nav-link" href="platoon.html">Взвод</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <ul class="navbar-nav mr-auto float-right">
-                        <li class="nav-item">
-                            <a class="nav-link" href="generals.html">Офицери</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="gallery.html">Галерия</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="headquarter.html">Щаб квартира</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
     </div>
+</div>
+<!-- End Wrapper Site -->
 
-    <br>
-    ОПИСАНИЕ НА УСЛУГАТА
-    ATHLETIC STANDARD (“FitnessGenerator”) управлява уебсайта на athleticstandard.org (“Сайта”), за да предложи на
-    лицензирани лични треньори достъп до лична тренировка, здравна, фитнес и фитнес информация за използване при
-    самостоятелното им разработване на обучителни програми за своите клиенти. , Използването на Сайта се урежда от това
-    споразумение (това „Споразумение“) и условията за ползване („TOS“), описани тук.
-    <h3>1. Terms</h3>
-    <p>By accessing the website at <a target="_blank" href="https://armystrong.herokuapp.com">https:<span
-            style="font-family: 'Arial Black'">//</span>armystrong.net</a>, you are agreeing to be bound by these terms
-        of service, all applicable laws and regulations, and agree that you are responsible for compliance with any
-        applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing
-        this site. The materials contained in this website are protected by applicable copyright and trademark law.</p>
-    <h3>2. Use License</h3>
-    <ol type="a">
-        <li>Permission is granted to temporarily download one copy of the materials (information or software) on Army
-            Strong's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a
-            transfer of title, and under this license you may not:
-            <ol type="i">
-                <li>modify or copy the materials;</li>
-                <li>use the materials for any commercial purpose, or for any public display (commercial or
-                    non-commercial);
-                </li>
-                <li>attempt to decompile or reverse engineer any software contained on Army Strong's website;</li>
-                <li>remove any copyright or other proprietary notations from the materials; or</li>
-                <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
-            </ol>
-        </li>
-        <li>This license shall automatically terminate if you violate any of these restrictions and may be terminated by
-            Army Strong at any time. Upon terminating your viewing of these materials or upon the termination of this
-            license, you must destroy any downloaded materials in your possession whether in electronic or printed
-            format.
-        </li>
-    </ol>
-    <h3>3. Disclaimer</h3>
-    <ol type="a">
-        <li>The materials on Army Strong's website are provided on an 'as is' basis. Army Strong makes no warranties,
-            expressed or implied, and hereby disclaims and negates all other warranties including, without limitation,
-            implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement
-            of intellectual property or other violation of rights.
-        </li>
-        <li>Further, Army Strong does not warrant or make any representations concerning the accuracy, likely results,
-            or reliability of the use of the materials on its website or otherwise relating to such materials or on any
-            sites linked to this site.
-        </li>
-    </ol>
-    <h3>4. Limitations</h3>
-    <p>In no event shall Army Strong or its suppliers be liable for any damages (including, without limitation, damages
-        for loss of data or profit, or due to business interruption) arising out of the use or inability to use the
-        materials on Army Strong's website, even if Army Strong or a Army Strong authorized representative has been
-        notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow
-        limitations on implied warranties, or limitations of liability for consequential or incidental damages, these
-        limitations may not apply to you.</p>
-    <h3>5. Accuracy of materials</h3>
-    <p>The materials appearing on Army Strong's website could include technical, typographical, or photographic errors.
-        Army Strong does not warrant that any of the materials on its website are accurate, complete or current. Army
-        Strong may make changes to the materials contained on its website at any time without notice. However Army
-        Strong does not make any commitment to update the materials.</p>
-    <h3>6. Links</h3>
-    <p>Army Strong has not reviewed all of the sites linked to its website and is not responsible for the contents of
-        any such linked site. The inclusion of any link does not imply endorsement by Army Strong of the site. Use of
-        any such linked website is at the user's own risk.</p>
-    <h3>7. Modifications</h3>
-    <p>Army Strong may revise these terms of service for its website at any time without notice. By using this website
-        you are agreeing to be bound by the then current version of these terms of service.</p>
-    <h3>8. Governing Law</h3>
-    <p>These terms and conditions are governed by and construed in accordance with the laws of Bulgaria and you
-        irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
-
-    <br>
-
-    <fieldset class="scheduler-border">
-        <legend class="scheduler-border">Карта на сайта</legend>
-        <footer class="footer">
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="row">
-                        <div class="col-6">
-                            <h5>Документация </h5>
-                            <ul class="list-unstyled">
-                                <li><a href="../views/missing.html">Условия</a></li>
-                                <li><a href="../views/missing.html">Поверителност</a></li>
-                                <li><a href="../views/missing.html">Правила</a></li>
-                                <li><a href="../views/codeOfEthics.html">Етичен кодекс</a></li>
-                                <li><a href="../views/missing.html">Единен стандарт</a></li>
-                                <li><a href="../views/missing.html">Брошура</a></li>
-                                <li><a href="../views/headquarter.html">Контакт</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-6">
-                            <h5>Занималня </h5>
-                            <ul class="list-unstyled">
-                                <li><a href="../views/missing.html">Движения</a></li>
-                                <li><a href="../views/missing.html">Видео</a></li>
-                                <li><a href="../views/missing.html">Подрастваща сила</a></li>
-                                <li><a href="../views/missing.html">Пропагандирай</a></li>
-                                <li><a href="hall_of_strength.html">Зала на Силата</a></li>
-                                <li><a href="../views/missing.html">Униформа</a></li>
-                                <li><a href="../views/missing.html">Toddler</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <br>
-
-                </div>
-
-                <div class="col-md-6" id="contact">
-                    <h5 class="">Вътрешно търсене</h5>
-                    <div data-form-type="formoid">
-                        <form name="jse_Form" onsubmit="search_form(jse_Form); return false" method="post">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <input type="text" class="form-control input border" data-form-field="Search"
-                                           placeholder="ключова дума" name="d"> 
-                                </div>
-                                <div class="input-group-btn col-md-4">
-                                    <button type="button" class="btn btn-outline-secondary btn-block"
-                                            onclick="search_form(jse_Form)">
-                                        ТЪРСИ
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </fieldset>
-
-    <section class="copyright">
-        <div class="row text-center">
-            <div class="col-md-6">
-                <div class="icons-container col-md-12">
-                    <a href="https://www.facebook.com/Army-Strong-1106393462855586/?modal=admin_todo_tour"
-                       target="_blank" class="btn azm-social azm-size-32 azm-circle"><img
-                            src="../static/images/facebook.png" alt="facebook-social-icon"></a>
-                    <a href="#/" target="_blank" class="btn azm-social azm-size-32 azm-circle"><img
-                            src="../static/images/youtube.png" alt="youtube-social-icon"></a>
-                    <a href="http://leanonfat.blogspot.com/" target="_blank"
-                       class="btn azm-social azm-size-32 azm-circle"><img src="../static/images/blogger.png"
-                                                                          alt="blogger-social-icon"></a>
-                    <a href="https://www.instagram.com/gostrongbg/" target="_blank"
-                       class="btn azm-social azm-size-32 azm-circle"><img src="../static/images/instagram.png"
-                                                                          alt="instagram-social-icon"></a>
-                </div>
-
-                <br>
-                <div class="well col-md-12" style="margin-bottom: 20px">
-                    <form class="block mbr-form" action="https://formspree.io/athleticstandard.org@gmail.com"
-                          method="post">
+<!-- Footer -->
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-md-offset-3">
+                <div class="footer-inner">
+                    <div class="footer-widgets">
                         <div class="row">
-                            <div class="col-md-12" data-for="email">
-                                <div class="col-md-8">
-                                    <h6>Абонирай се за новини</h6>
+                            <div class="col-sm-4">
+                                <div class="widget">
+                                    <h2 class="title"><span>Контакти</span></h2>
+                                    <ul>
+                                        <li>
+                                            Тел: +359 876 10 00 39 - Явор
+                                            Тел: +359 888 03 04 24 - Ели
+                                        </li>
+                                        <li>
+                                            Е-Поща: athleticstandard.org@gmail.com
+                                        </li>
+                                        <li>
+                                            Адрес: ул. „Проф. д-р Иван Странски“ 61, 1700 Студентски Комплекс, София
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <input type="text" class="form-control input" name="email"
-                                               data-form-field="Email" placeholder="електронна поща" required="">
-                                    </div>
-                                    <br><br>
-                                    <div class="input-group-btn col-md-4">
-                                        <button type="submit" class="btn btn-outline-secondary btn-block">ИЗПРАТИ
-                                        </button>
-                                    </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="widget">
+                                    <h2 class="title"><span>Занималня</span></h2>
+                                    <ul>
+                                        <li><a href="404.html">Движения</a></li>
+                                        <li><a href="strength_hall.html">Зала на Силата</a></li>
+                                        <li><a href="404.html">Toddler</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="widget">
+                                    <h2 class="title"><span>Ресурси</span></h2>
+                                    <ul>
+                                        <li><a href="calculators.html">Калкулатори</a></li>
+                                        <li><a href="404.html">Брошура</a></li>
+                                        <li><a href="404.html">Униформа</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="copyright">
+                                    <p>&copy;2015-2019 <br>athleticstandard.org</p>
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
+                    всички права запазени |
+                    <a href="terms.html">условия за ползване</a> |
+                    <a href="policy.html">политика за поверителност</a> |
+                    &copy;protected by <a target="_blank" href="http://www.copyscape.com/"
+                                          title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page.">Copyscape</a>
                 </div>
-            </div>
-            <div class="col-md-6 pt-3">
-                <p class="text-center">&copy;2015-2019 <br>athleticstandard.org</p>
             </div>
         </div>
-    </section>
-</div>
-<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    </div>
+</footer>
+<!-- End Footer -->
+
+<script src="../js/libs/jquery-1.12.4.min.js"></script>
 <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../js/js/bootstrap.min.js"></script>
+<script src="../js/libs/masonry.pkgd.min.js"></script>
+<script src="../js/libs/imagesloaded.pkgd.min.js"></script>
+<script src="../js/scripts.js"></script>
+<script>
+    document.getElementById("lang").addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = ("../en/views/art_rules_en.html");
+    });
+</script>
 </body>
 </html>
