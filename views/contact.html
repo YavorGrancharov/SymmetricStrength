@@ -180,11 +180,7 @@
                             </div>
 
                             <div class="box-subscribe">
-                                <form class="block mbr-form"
-                                      action="https://formspree.io/athleticstandard.org@gmail.com" method="post">
-                                    <input type="text" class="form-control input" name="email" data-form-field="Email"
-                                           placeholder="Абонирай се с е-поща" required="">
-                                </form>
+                                <input name="email" type="text" placeholder="Абонирай се с е-поща" id="subscribe_email">
                             </div>
 
                             <div class="copyright">
@@ -229,29 +225,29 @@
                                     <p>
                                         <strong>- Тел:</strong> +359 876 10 00 39 Явор<br/>
                                         <strong>- Тел:</strong> +359 888 03 04 24 Елица<br/>
-                                        <strong>- Е-Поща:</strong> athleticstandard.org@gmail.com <br/>
+                                        <strong>- Е-Поща:</strong> mail@athleticstandard.org <br/>
                                         <strong>- Адрес:</strong> ул. „Проф. д-р Иван Странски“ 61, 1700 Студентски Комплекс, София
                                         <br/>
                                     </p>
-                                    <form action="https://formspree.io/athleticstandard.org@gmail.com" method="post" class="contact" style="margin-top: 10px;">
+                                    <form action="#/" method="post" class="contact" style="margin-top: 10px;">
                                         <div class="contact-item">
                                             <label>Име *</label>
-                                            <input name="author" value="" type="text" required>
+                                            <input name="author" id="author_contact" type="text" />
                                         </div>
                                         <div class="contact-item">
                                             <label>Е-Поща *</label>
-                                            <input name="email" value="" type="email" required>
+                                            <input name="email" id="email_contact" type="email" />
                                         </div>
                                         <div class="contact-item">
                                             <label>Телефонен номер</label>
-                                            <input id="url" name="url" value="" type="text">
+                                            <input id="phone_contact" name="phone" type="text" placeholder="Може да въведете код на страната със знака '+', без интервали, наклонена или тирета!">
                                         </div>
                                         <div class="contact-item">
-                                            <label>Message *</label>
-                                            <textarea name="comment" required></textarea>
+                                            <label>Съобщение *</label>
+                                            <textarea name="comment" id="message_contact"></textarea>
                                         </div>
                                         <div class="contact-item form-submit">
-                                            <input name="submit" type="submit" id="submit" class="submit" value="Submit">
+                                            <input name="submit" type="submit" id="submit" class="submit" value="ИЗПРАТИ">
                                         </div>
                                     </form>
                                 </div>
@@ -338,11 +334,22 @@
 <script src="../js/libs/masonry.pkgd.min.js"></script>
 <script src="../js/libs/imagesloaded.pkgd.min.js"></script>
 <script src="../js/scripts.js"></script>
+<script src="../js/controller/messageController.js"></script>
+<script src="../js/services/messageService.js"></script>
+<script src="../js/controller/subscribeController.js"></script>
+<script src="../js/services/subscribeService.js"></script>
+<script src="../js/services/remoteService.js"></script>
 <script>
     document.getElementById("lang").addEventListener("click", function (e) {
         e.preventDefault();
         window.location.href = ("../en/views/art_index_en.html");
     });
+</script>
+<script>
+    messageController.sendMessage();
+</script>
+<script>
+    subscribeController.subscribe();
 </script>
 <!-- End Scripts -->
 

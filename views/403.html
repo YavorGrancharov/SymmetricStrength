@@ -178,11 +178,7 @@
                             </div>
 
                             <div class="box-subscribe">
-                                <form class="block mbr-form"
-                                      action="https://formspree.io/athleticstandard.org@gmail.com" method="post">
-                                    <input type="text" class="form-control input" name="email" data-form-field="Email"
-                                           placeholder="Абонирай се с е-поща" required="">
-                                </form>
+                                <input name="email" type="text" placeholder="Абонирай се с е-поща" id="subscribe_email">
                             </div>
 
                             <div class="copyright">
@@ -298,6 +294,9 @@
 <script src="../js/libs/masonry.pkgd.min.js"></script>
 <script src="../js/libs/imagesloaded.pkgd.min.js"></script>
 <script src="../js/scripts.js"></script>
+<script src="../js/controller/subscribeController.js"></script>
+<script src="../js/services/subscribeService.js"></script>
+<script src="../js/services/remoteService.js"></script>
 <script>
     document.getElementById("lang").addEventListener("click", function (e) {
         e.preventDefault();
@@ -326,6 +325,9 @@
             document.body.appendChild(el);
         }
     });
+</script>
+<script>
+    subscribeController.subscribe();
 </script>
 </body>
 </html>

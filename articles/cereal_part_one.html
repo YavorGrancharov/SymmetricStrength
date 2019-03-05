@@ -131,7 +131,7 @@
                                             <a href="../views/contact.html">Контакти</a>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a href="single.html">Документация</a>
+                                            <a href="#/">Документация</a>
                                             <ul class="sub-menu">
                                                 <li>
                                                     <a href="../views/404.html">Идентичност</a>
@@ -193,11 +193,7 @@
                             </div>
 
                             <div class="box-subscribe">
-                                <form class="block mbr-form"
-                                      action="https://formspree.io/athleticstandard.org@gmail.com" method="post">
-                                    <input type="text" class="form-control input" name="email" data-form-field="Email"
-                                           placeholder="Абонирай се с е-поща" required="">
-                                </form>
+                                <input name="email" type="text" placeholder="Абонирай се с е-поща" id="subscribe_email">
                             </div>
 
                             <div class="copyright">
@@ -739,6 +735,8 @@
 <script src="../js/scripts.js"></script>
 <script src="../js/controller/commentController.js"></script>
 <script src="../js/services/commentService.js"></script>
+<script src="../js/controller/subscribeController.js"></script>
+<script src="../js/services/subscribeService.js"></script>
 <script src="../js/services/remoteService.js"></script>
 <script>
     document.getElementById("lang").addEventListener("click", function (e) {
@@ -765,6 +763,9 @@
             })
         })
     })
+</script>
+<script>
+    subscribeController.subscribe();
 </script>
 </body>
 </html>

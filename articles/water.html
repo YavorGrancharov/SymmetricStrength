@@ -194,11 +194,7 @@
                             </div>
 
                             <div class="box-subscribe">
-                                <form class="block mbr-form"
-                                      action="https://formspree.io/athleticstandard.org@gmail.com" method="post">
-                                    <input type="text" class="form-control input" name="email" data-form-field="Email"
-                                           placeholder="Абонирай се с е-поща" required="">
-                                </form>
+                                <input name="email" type="text" placeholder="Абонирай се с е-поща" id="subscribe_email">
                             </div>
 
                             <div class="copyright">
@@ -255,7 +251,7 @@
 
                                 <!-- The Content -->
                                 <div class="the-excerpt">
-                                    <p>&nbsp;&nbsp;Живеем в свят на необятна информираност, различни
+                                    <p class="m">Живеем в свят на необятна информираност, различни
                                         хранителни, спортни, модни и
                                         какви ли още не течения минават, оставяйки трайна следа в съзнанията и телата
                                         ни. Само едно течение е вечно и може би няма да се промени - "водата". </p>
@@ -558,19 +554,19 @@
                             <form action="#/" method="post" class="contact">
                                 <div class="contact-item">
                                     <label for="author">Име *</label>
-                                    <input name="author" value="" id="author" type="text" required>
+                                    <input name="author" value="" id="author" type="text" />
                                 </div>
                                 <div class="contact-item">
                                     <label for="email">Е-Поща *</label>
-                                    <input name="email" value="" id="email" type="email" required>
+                                    <input name="email" value="" id="email" type="email" />
                                 </div>
                                 <div class="contact-item">
-                                    <label for="avatar">Връзка към изображение</label>
-                                    <input id="avatar" name="avatar" value="" type="text">
+                                    <label for="avatar">Аватар</label>
+                                    <input id="avatar" name="avatar" value="" type="text" />
                                 </div>
                                 <div class="contact-item">
                                     <label for="comment">Коментар *</label>
-                                    <textarea name="comment" id="comment" class="commentBox" placeholder="Бъди учтив!" required></textarea>
+                                    <textarea name="comment" id="comment" class="commentBox" placeholder="Бъди учтив!"></textarea>
                                 </div>
                                 <div class="contact-item form-submit">
                                     <input name="submit" type="submit" id="submit" class="submit" value="ИЗПРАТИ">
@@ -657,8 +653,9 @@
 <script src="../js/libs/imagesloaded.pkgd.min.js"></script>
 <script src="../js/scripts.js"></script>
 <script src="../js/controller/commentController.js"></script>
-<script src="../js/controller/siteVisits.js"></script>
 <script src="../js/services/commentService.js"></script>
+<script src="../js/controller/subscribeController.js"></script>
+<script src="../js/services/subscribeService.js"></script>
 <script src="../js/services/remoteService.js"></script>
 <script>
     document.getElementById("lang").addEventListener("click", function (e) {
@@ -685,6 +682,9 @@
             })
         })
     })
+</script>
+<script>
+    subscribeController.subscribe();
 </script>
 </body>
 </html>

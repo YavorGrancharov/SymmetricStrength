@@ -89,9 +89,41 @@ let commentController = (() => {
                 let avatar = $('#avatar').val();
                 let comment = $('#comment').val();
 
+                let validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
+                let validURL = /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i;
+
+                if (author === '') {
+                    alert('Въведете името си в предвиденото за това поле!');
+                    return;
+                } else if (author.length < 3) {
+                    alert('Името трябва да бъде с дължина не по-малка от три символа!');
+                    return;
+                }
+
+                if (!validEmail.test(String(email).toLowerCase())) {
+                    alert('Въведете валидна е-поща!');
+                    return;
+                }
+
+                if (avatar !== '') {
+                    if (!validURL.test(avatar)) {
+                        alert('Въведете валидна връзка към изображение!');
+                        return;
+                    }
+                } else {
+                    avatar = '../static/images/helmet.png';
+                }
+
+                if (comment === '') {
+                    alert('Въведете коментар в предвиденото за това поле!');
+                    return;
+                } else if (comment.length < 5 || comment.length > 250) {
+                    alert('Коментарът трябва да бъде с дължина между 5 и 250 символа!');
+                    return;
+                }
+
                 commentService.postComment(post_id, date, author, email, avatar, comment).then(function () {
-                    alert("Thank you for commenting!");
-                    window.location.reload(true);
+                    alert("Благодаря, че коментирахте!");
                     window.location.hash = `${post_id}`;
                 });
 
