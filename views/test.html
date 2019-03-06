@@ -8,14 +8,12 @@
 <body>
 <div id="main"></div>
 <script>
-    $.ajax({
-        type: 'GET',
-        url: 'https://baas.kinvey.com/blob/kid_BkZfV-Zqz',
-        headers: {
-            'Authorization': 'Basic a2lkX0JrWmZWLVpxejpjMjI2OWU0ZDBhZTA0ODIwODYwY2VhNjdkOWE4N2U3Mw=='
-        },
-        mimeType: 'text/html'
+    $(document).ready(function () {
+        remoteService.get('user', '', 'kinvey').then((res) => {
+            console.log(res[0].username)
+        })
     })
 </script>
+<script src="../js/services/remoteService.js"></script>
 </body>
 </html>

@@ -21,17 +21,17 @@ let commentService = (() => {
         return remoteService.post('appdata', endpoint, 'kinvey', data);
     }
 
-    function getRepliesById(post_id) {
-        const endpoint = `Replies?query={"post_id":"${post_id}"}&sort={"_kmd.ect": 1}`;
+    function getRepliesById(id) {
+        const endpoint = `Replies?query={"id":"${id}","visible":true}&sort={"_kmd.ect": -1}`;
 
         return remoteService.get('appdata', endpoint, 'kinvey');
     }
 
-    function postReply(post_id, date, author, email, avatar, comment, visible) {
+    function postReply(id, date, author, email, avatar, comment, visible) {
         const endpoint = 'Replies';
 
         let data = {
-            post_id: post_id,
+            id: id,
             date: date,
             author: author,
             email: email,

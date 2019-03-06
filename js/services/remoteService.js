@@ -1,7 +1,7 @@
 let remoteService = (() => {
     const BASE_URL = "https://baas.kinvey.com/";
     const APP_KEY = "kid_HkQnF4nSV";
-    const USERNAME = "user";
+    const USERNAME = 'user';
     const PASSWORD = "12345678";
     const BASE_64 = btoa(USERNAME + ':' + PASSWORD);
     const AUTH = {'Authorization': 'Basic ' + BASE_64};
