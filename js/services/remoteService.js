@@ -4,7 +4,7 @@ let remoteService = (() => {
     const USERNAME = 'user';
     const PASSWORD = "12345678";
     const BASE_64 = btoa(USERNAME + ':' + PASSWORD);
-    const AUTH = {'Authorization': 'Basic ' + BASE_64};
+    const AUTH = {'Authorization': 'Basic ' + BASE_64, 'Content-type': 'application/json'};
 
     function makeRequest(method, module, endpoint, auth) {
         let req;

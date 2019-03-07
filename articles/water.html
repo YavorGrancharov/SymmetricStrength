@@ -554,19 +554,19 @@
                             <form action="#/" method="post" class="contact">
                                 <div class="contact-item">
                                     <label for="author">Име *</label>
-                                    <input name="author" value="" id="author" type="text" />
+                                    <input name="author" value="" id="author" type="text" placeholder="името трябва да е с дължина поне три символа"/>
                                 </div>
                                 <div class="contact-item">
-                                    <label for="email">Е-Поща *</label>
-                                    <input name="email" value="" id="email" type="email" />
+                                    <label for="email">Е-Поща</label>
+                                    <input name="email" value="" placeholder="използвайте имейла си в Gravatar или оставете полето празно" id="email" type="email" />
                                 </div>
-                                <div class="contact-item">
-                                    <label for="avatar">Аватар</label>
-                                    <input id="avatar" name="avatar" value="" type="text" />
-                                </div>
+                                <!--<div class="contact-item">-->
+                                    <!--<label for="avatar">Аватар</label>-->
+                                    <!--<input id="avatar" name="avatar" value="" type="text" />-->
+                                <!--</div>-->
                                 <div class="contact-item">
                                     <label for="comment">Коментар *</label>
-                                    <textarea name="comment" id="comment" class="commentBox" placeholder="Бъди учтив!"></textarea>
+                                    <textarea name="comment" id="comment" class="commentBox" placeholder="бъдете учтиви!"></textarea>
                                 </div>
                                 <div class="contact-item form-submit">
                                     <input name="submit" type="submit" id="submit" class="submit" value="ИЗПРАТИ">
@@ -651,6 +651,7 @@
 <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="../js/js/bootstrap.min.js"></script>
 <script src="../js/libs/masonry.pkgd.min.js"></script>
+<script src="../js/libs/md5.min.js"></script>
 <script src="../js/libs/imagesloaded.pkgd.min.js"></script>
 <script src="../js/scripts.js"></script>
 <script src="../js/controller/commentController.js"></script>
@@ -665,6 +666,7 @@
     });
 </script>
 <script>
+    subscribeController.subscribe();
     commentController.getComments();
     commentController.postComment();
 </script>
@@ -683,9 +685,6 @@
             })
         })
     })
-</script>
-<script>
-    subscribeController.subscribe();
 </script>
 </body>
 </html>

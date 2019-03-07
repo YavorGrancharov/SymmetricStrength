@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="../js/libs/jquery-1.12.4.min.js"></script>
 </head>
 <body>
-<div id="main"></div>
+<div class="main"></div>
+<script src="../js/libs/jquery-1.12.4.min.js"></script>
+<script src="../js/libs/md5.min.js"></script>
 <script>
-    $(document).ready(function () {
-        remoteService.get('user', '', 'kinvey').then((res) => {
-            console.log(res[0].username)
-        })
-    })
+    const URL = "https://www.gravatar.com/avatar/";
+    const HASH = md5("ygrancharov@mail.bg");
+    let AVATAR = URL + HASH;
+    $('.main')
+        .append($(`<img src="${AVATAR}">`))
+
 </script>
-<script src="../js/services/remoteService.js"></script>
 </body>
 </html>

@@ -13,7 +13,7 @@ let subscribeController = (() => {
                     }
                     subscribeService.subscribe(date, email).then(() => {
                         alert('Благодаря, че се абонирахте за нас!');
-                        window.location.reload(true);
+                        //window.location.reload(true);
                     });
                     $('#subscribe_email').val('');
                 }

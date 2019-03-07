@@ -2,7 +2,6 @@ let commentController = (() => {
     function getComments() {
         $(document).ready(function () {
             let post_id = $('#id').val();
-            let len = 0;
             commentService.getCommentsById(post_id).then((comments) => {
                 comments.forEach(comment => {
                     $('.comment-list')
@@ -27,27 +26,28 @@ let commentController = (() => {
                                                     $(commentReply)
                                                         .append($('<form action="#/" method="post" class="contact" style="margin-top: 10px"></form>')
                                                             .append($('<div class="contact-item"></div>')
-                                                                .append($('<input name="author" value="" id="author" type="text" placeholder="Your Name *" required>')))
+                                                                .append($('<input name="author" value="" id="author" type="text" placeholder="Име *">')))
                                                             .append($('<div class="contact-item"></div>')
-                                                                .append($('<input name="email" value="" id="email" type="email" placeholder="Your Email *" required>')))
+                                                                .append($('<input name="email" value="" id="email" type="email" placeholder="Е-Поща *">')))
+                                                            // .append($('<div class="contact-item"></div>')
+                                                            //     .append($('<input id="avatar" name="avatar" value="" type="text" placeholder="Avatar URL">')))
                                                             .append($('<div class="contact-item"></div>')
-                                                                .append($('<input id="avatar" name="avatar" value="" type="text" placeholder="Avatar URL">')))
-                                                            .append($('<div class="contact-item"></div>')
-                                                                .append($('<textarea name="comment" id="comment" class="commentBox" placeholder="Коментар *" required></textarea>')))
+                                                                .append($('<textarea name="comment" id="comment" class="commentBox" placeholder="Коментар *"></textarea>')))
                                                             .append($('<div class="contact-item form-submit"></div>')
-                                                                .append($('<input name="submit" type="submit" id="submit" class="submit" value="Submit">')
+                                                                .append($('<input name="submit" type="submit" id="submit" class="submit" value="ИЗПРАТИ">')
                                                                     .on('click', function (event) {
                                                                         event.preventDefault();
                                                                         let id = _id;
                                                                         let date = formatDate(new Date());
                                                                         let author = $('#author').val();
                                                                         let email = $('#email').val();
-                                                                        let avatar = $('#avatar').val();
+                                                                        let avatar = '';
                                                                         let comment = $('#comment').val();
                                                                         let visible = false;
 
+                                                                        let validName = /^[a-zA-Z|а-яА-ЯЁё]+((\s[a-zA-Z|а-яА-ЯЁё ])?[a-zA-Z|а-яА-ЯЁё]*)*$/gm;
                                                                         let validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
-                                                                        let validURL = /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i;
+                                                                        //let validURL = /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i;
 
                                                                         if (author === '') {
                                                                             alert('Въведете името си в предвиденото за това поле!');
@@ -55,21 +55,28 @@ let commentController = (() => {
                                                                         } else if (author.length < 3) {
                                                                             alert('Името трябва да бъде с дължина не по-малка от три символа!');
                                                                             return;
-                                                                        }
-
-                                                                        if (!validEmail.test(String(email).toLowerCase())) {
-                                                                            alert('Въведете валидна е-поща!');
+                                                                        } else if (!validName.test(author)) {
+                                                                            alert('Името може да съдържа само букви!');
                                                                             return;
                                                                         }
 
-                                                                        if (avatar !== '') {
-                                                                            if (!validURL.test(avatar)) {
-                                                                                alert('Въведете валидна връзка към изображение!');
+                                                                        if (email !== '') {
+                                                                            if (!validEmail.test(String(email).toLowerCase())) {
+                                                                                alert('Въведете валидна е-поща!');
                                                                                 return;
+                                                                            } else {
+                                                                                avatar = 'https://www.gravatar.com/avatar/' + md5(String(email).toLowerCase().trim());
                                                                             }
                                                                         } else {
-                                                                            avatar = '../static/images/helmet.png';
+                                                                            avatar = 'https://www.gravatar.com/avatar/' + md5(String(email).toLowerCase().trim()) + '?f=y';
                                                                         }
+
+                                                                        // if (avatar !== '') {
+                                                                        //     if (!validURL.test(avatar)) {
+                                                                        //         alert('Въведете валидна връзка към изображение!');
+                                                                        //         return;
+                                                                        //     }
+                                                                        // }
 
                                                                         if (comment === '') {
                                                                             alert('Въведете коментар в предвиденото за това поле!');
@@ -79,7 +86,7 @@ let commentController = (() => {
                                                                             return;
                                                                         }
 
-                                                                        commentService.postReply(id, date, author, email, avatar, comment, visible).then(function () {
+                                                                        commentService.postReply(id, date, author, avatar, comment, visible).then(function () {
                                                                             alert("Благодарим Ви за коментара!");
                                                                             //window.location.reload(true);
                                                                             window.location.hash = 'current';
@@ -88,10 +95,10 @@ let commentController = (() => {
                                                                         });
                                                                         $('#author').val('');
                                                                         $('#email').val('');
-                                                                        $('#avatar').val('');
+                                                                        //$('#avatar').val('');
                                                                         $('#comment').val('');
                                                                     }))
-                                                                .append($('<input name="hide" type="submit" style="margin: 5px" id="hide" class="submit" value="Close">')
+                                                                .append($('<input name="hide" type="submit" style="margin: 5px" id="hide" class="submit" value="ЗАТВОРИ">')
                                                                     .on('click', function (event) {
                                                                         event.preventDefault();
                                                                         $(replyLink).show();
@@ -101,7 +108,6 @@ let commentController = (() => {
                                                 })))))));
                     commentService.getRepliesById(comment._id).then((replies) => {
                         let nodes = $('.comment');
-                        len += replies.length;
                         replies.forEach(reply => {
                             for(let i = 0; i < nodes.length; i++) {
                                 if (nodes[i].id === reply.id) {
@@ -127,7 +133,7 @@ let commentController = (() => {
                 if (comments.length === 1) {
                     $('.comment-list').prepend(`<h2 class="title"><span>${comments.length} Comment</span></h2>`);
                 } else {
-                    $('.comment-list').prepend(`<h2 class="title"><span>${comments.length + len} Comments</span></h2>`);
+                    $('.comment-list').prepend(`<h2 class="title"><span>${comments.length} Comments</span></h2>`);
                 }
             })
         });
@@ -141,11 +147,12 @@ let commentController = (() => {
                 let date = formatDate(new Date());
                 let author = $('#author').val();
                 let email = $('#email').val();
-                let avatar = $('#avatar').val();
+                let avatar = '';
                 let comment = $('#comment').val();
 
+                let validName = /^[a-zA-Z|а-яА-ЯЁё]+((\s[a-zA-Z|а-яА-ЯЁё ])?[a-zA-Z|а-яА-ЯЁё]*)*$/gm;
                 let validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
-                let validURL = /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i;
+                //let validURL = /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i;
 
                 if (author === '') {
                     alert('Въведете името си в предвиденото за това поле!');
@@ -153,21 +160,28 @@ let commentController = (() => {
                 } else if (author.length < 3) {
                     alert('Името трябва да бъде с дължина не по-малка от три символа!');
                     return;
-                }
-
-                if (!validEmail.test(String(email).toLowerCase())) {
-                    alert('Въведете валидна е-поща!');
+                } else if (!validName.test(author)) {
+                    alert('Името може да съдържа само букви!');
                     return;
                 }
 
-                if (avatar !== '') {
-                    if (!validURL.test(avatar)) {
-                        alert('Въведете валидна връзка към изображение!');
+                if (email !== '') {
+                    if (!validEmail.test(String(email).toLowerCase())) {
+                        alert('Въведете валидна е-поща!');
                         return;
+                    } else {
+                        avatar = 'https://www.gravatar.com/avatar/' + md5(String(email).toLowerCase().trim());
                     }
                 } else {
-                    avatar = '../static/images/helmet.png';
+                    avatar = 'https://www.gravatar.com/avatar/' + md5(String(email).toLowerCase().trim()) + '?f=y';
                 }
+
+                // if (avatar !== '') {
+                //     if (!validURL.test(avatar)) {
+                //         alert('Въведете валидна връзка към изображение!');
+                //         return;
+                //     }
+                // }
 
                 if (comment === '') {
                     alert('Въведете коментар в предвиденото за това поле!');
@@ -177,7 +191,7 @@ let commentController = (() => {
                     return;
                 }
 
-                commentService.postComment(post_id, date, author, email, avatar, comment).then(function () {
+                commentService.postComment(post_id, date, author, avatar, comment).then(function () {
                     alert("Благодаря, че коментирахте!");
                     window.location.hash = `${post_id}`;
                 });
@@ -208,7 +222,6 @@ let commentController = (() => {
 
     return {
         getComments,
-        postComment,
-        formatDate
+        postComment
     }
 })();

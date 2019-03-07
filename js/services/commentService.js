@@ -5,14 +5,13 @@ let commentService = (() => {
         return remoteService.get('appdata', endpoint, 'kinvey');
     }
 
-    function postComment(post_id, date, author, email, avatar, comment, visible) {
+    function postComment(post_id, date, author, avatar, comment, visible) {
         const endpoint = 'Comments';
 
         let data = {
             post_id: post_id,
             date: date,
             author: author,
-            email: email,
             avatar: avatar,
             comment: comment,
             visible: false
@@ -27,14 +26,13 @@ let commentService = (() => {
         return remoteService.get('appdata', endpoint, 'kinvey');
     }
 
-    function postReply(id, date, author, email, avatar, comment, visible) {
+    function postReply(id, date, author, avatar, comment, visible) {
         const endpoint = 'Replies';
 
         let data = {
             id: id,
             date: date,
             author: author,
-            email: email,
             avatar: avatar,
             comment: comment,
             visible: false

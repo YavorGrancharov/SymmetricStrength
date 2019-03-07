@@ -636,10 +636,6 @@
                                     <input name="author" value="" id="author" type="text" required>
                                 </div>
                                 <div class="contact-item">
-                                    <label for="email">Your Email *</label>
-                                    <input name="email" value="" id="email" type="email" required>
-                                </div>
-                                <div class="contact-item">
                                     <label for="avatar">Avatar URL</label>
                                     <input id="avatar" name="avatar" value="" type="text">
                                 </div>
@@ -745,6 +741,7 @@
     });
 </script>
 <script>
+    subscribeController.subscribe();
     commentController.getComments();
     commentController.postComment();
 </script>
@@ -763,9 +760,6 @@
             })
         })
     })
-</script>
-<script>
-    subscribeController.subscribe();
 </script>
 </body>
 </html>
