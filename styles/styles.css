@@ -1005,11 +1005,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    padding-bottom: 70%;
+    /*padding-bottom: 70%;*/
 }
 
 #related-posts .post-media img {
-    display: none;
+    display: block;
 }
 
 #related-posts .post-details {
