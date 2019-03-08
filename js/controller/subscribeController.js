@@ -12,8 +12,7 @@ let subscribeController = (() => {
                         return;
                     }
                     grecaptcha.ready(function() {
-                        grecaptcha.execute('6LcKZJYUAAAAAA1J1y6UDRb5SVsb8HS9uq4TJSGn', {action: 'index.html'}).then(function(token) {
-                            console.log(token)
+                        grecaptcha.execute('6LcKZJYUAAAAAA1J1y6UDRb5SVsb8HS9uq4TJSGn', {action: 'validate_captcha'}).then(() => {
                             subscribeService.subscribe(date, email).then(() => {
                                 alert('Благодаря, че се абонирахте за нас!');
                                 //window.location.reload(true);
