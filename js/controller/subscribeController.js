@@ -12,12 +12,19 @@ let subscribeController = (() => {
                         return;
                     }
                     grecaptcha.ready(function() {
-                        grecaptcha.execute('6LcKZJYUAAAAAA1J1y6UDRb5SVsb8HS9uq4TJSGn', {action: 'validate_captcha'}).then(() => {
-                            subscribeService.subscribe(date, email).then(() => {
-                                alert('Благодаря, че се абонирахте за нас!');
-                                //window.location.reload(true);
-                            });
-                            $('#subscribe_email').val('');
+                        grecaptcha.execute('6LcKZJYUAAAAAA1J1y6UDRb5SVsb8HS9uq4TJSGn', {action: 'validate_captcha'}).then(function(token) {
+                            $('.box-subscribe').prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
+                            $.post($('.subscribe_email'),{date: date, email: email, token: token}, function (result) {
+                                if(result.success) {
+                                    subscribeService.subscribe(date, email).then(() => {
+                                        alert('Благодаря, че се абонирахте за нас!');
+                                        //window.location.reload(true);
+                                    });
+                                    $('#subscribe_email').val('');
+                                } else {
+                                    alert('You are spammer!');
+                                }
+                            })
                         });
                     });
                 }
