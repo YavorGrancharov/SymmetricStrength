@@ -11,11 +11,16 @@ let subscribeController = (() => {
                         alert('Въведете валидна е-поща!');
                         return;
                     }
-                    subscribeService.subscribe(date, email).then(() => {
-                        alert('Благодаря, че се абонирахте за нас!');
-                        //window.location.reload(true);
+                    grecaptcha.ready(function() {
+                        grecaptcha.execute('6LcKZJYUAAAAAA1J1y6UDRb5SVsb8HS9uq4TJSGn', {action: 'index.html'}).then(function(token) {
+                            console.log(token)
+                            subscribeService.subscribe(date, email).then(() => {
+                                alert('Благодаря, че се абонирахте за нас!');
+                                //window.location.reload(true);
+                            });
+                            $('#subscribe_email').val('');
+                        });
                     });
-                    $('#subscribe_email').val('');
                 }
             });
         });
