@@ -193,7 +193,7 @@ let commentController = (() => {
                 }
 
                 if (response.length === 0) {
-                    alert( "Удостоверете, reCa!" );
+                    alert( "Удостоверете с тикче квадратчето 'Не съм робот'" );
                     if( !$captcha.hasClass( "error" ) ){
                         $captcha.addClass( "error" );
                     }

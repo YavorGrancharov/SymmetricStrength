@@ -2048,7 +2048,6 @@ body {
     font-size: 107%;
 }
 
-
 @-webkit-keyframes pull {
     0% { transform: translateY(0); }
     100% { transform: translateY(-20px); }
@@ -2067,6 +2066,12 @@ body {
 @keyframes push {
     0% { transform: translateY(0); }
     100% { transform: translateY(-20px); }
+}
+
+.g-recaptcha.error {
+    border: solid 2px #c64848;
+    padding: .2em;
+    width: 19em;
 }
 
 /* end endurance calculator css*/
