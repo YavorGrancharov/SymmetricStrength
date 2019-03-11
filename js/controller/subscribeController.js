@@ -13,8 +13,8 @@ let subscribeController = (() => {
                     } else if (response.length === 0) {
                         alert( "Удостоверете с тикче квадратчето 'Не съм робот'" );
                         return;
+                        $('#subscribe_email').focus();
                     } else {
-                        $('#subscribe_email').get(0).focus();
                         subscribeService.subscribe(date, email).then(() => {
                             alert('Благодаря, че се абонирахте за нас!');
                             //window.location.reload(true);
