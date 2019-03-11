@@ -122,8 +122,16 @@
                                         <li>
                                             <a href="../views/price.html">Цени</a>
                                         </li>
-                                        <li>
-                                            <a href="../views/video_grid.html">Видео</a>
+                                        <li class="menu-item-has-children">
+                                            <a href="#/">Видео</a>
+                                            <ul class="sub-menu">
+                                                <li>
+                                                    <a href="../views/video.html">Стандартен изглед</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../views/video_grid.html">Решетъчен изглед</a>
+                                                </li>
+                                            </ul>
                                         </li>
                                         <li>
                                             <a href="../views/about.html">За нас</a>
@@ -568,6 +576,7 @@
                                     <label for="comment">Коментар *</label>
                                     <textarea name="comment" id="comment" class="commentBox" placeholder="бъдете учтиви!"></textarea>
                                 </div>
+                                <div id="recaptcha" class="g-recaptcha" data-sitekey="6LcKZJYUAAAAAA1J1y6UDRb5SVsb8HS9uq4TJSGn"></div>
                                 <div class="contact-item form-submit">
                                     <input name="submit" type="submit" id="submit" class="submit" value="ИЗПРАТИ">
                                 </div>
@@ -644,7 +653,6 @@
             </div>
         </div>
     </div>
-    <div class="col-md-9 col-md-offset-3 text-center">Icons made by <a target="_blank" href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a target="_blank" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 </footer>
 <!-- End Footer -->
 <script src="../js/libs/jquery-1.12.4.min.js"></script>
@@ -653,6 +661,7 @@
 <script src="../js/libs/masonry.pkgd.min.js"></script>
 <script src="../js/libs/md5.min.js"></script>
 <script src="../js/libs/imagesloaded.pkgd.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="../js/scripts.js"></script>
 <script src="../js/models/visitCounter.js"></script>
 <script src="../js/controller/commentController.js"></script>

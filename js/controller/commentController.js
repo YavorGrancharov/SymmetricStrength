@@ -191,10 +191,22 @@ let commentController = (() => {
                     return;
                 }
 
-                commentService.postComment(post_id, date, author, avatar, comment).then(function () {
-                    alert("Благодаря, че коментирахте!");
-                    window.location.hash = `${post_id}`;
-                });
+                let $captcha = $( '#recaptcha' ), response = grecaptcha.getResponse();
+
+                if (response.length === 0) {
+                    alert( "reCAPTCHA е задължително!" );
+                    if( !$captcha.hasClass( "error" ) ){
+                        $captcha.addClass( "error" );
+                    }
+                    return;
+                } else {
+                    //$( '.msg-error' ).text('');
+                    $captcha.removeClass( "error" );
+                    commentService.postComment(post_id, date, author, avatar, comment).then(function () {
+                        alert("Благодаря, че коментирахте!");
+                        window.location.hash = `${post_id}`;
+                    });
+                }
 
                 $('#author').val('');
                 $('#email').val('');
