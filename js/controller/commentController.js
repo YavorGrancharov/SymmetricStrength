@@ -149,6 +149,7 @@ let commentController = (() => {
                 let email = $('#email').val();
                 let avatar = '';
                 let comment = $('#comment').val();
+                let $captcha = $( '.recaptcha' ), response = grecaptcha.getResponse();
 
                 let validName = /^[a-zA-Z|а-яА-ЯЁё]{3,}((\s[a-zA-Z|а-яА-ЯЁё ])?[a-zA-Z|а-яА-ЯЁё]*)*$/gm;
                 let validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
@@ -191,19 +192,16 @@ let commentController = (() => {
                     return;
                 }
 
-                let $captcha = $( '#recaptcha' ), response = grecaptcha.getResponse();
-
                 if (response.length === 0) {
-                    alert( "reCAPTCHA е задължително!" );
+                    alert( "Удостоверете, reCa!" );
                     if( !$captcha.hasClass( "error" ) ){
                         $captcha.addClass( "error" );
                     }
                     return;
                 } else {
-                    //$( '.msg-error' ).text('');
                     $captcha.removeClass( "error" );
                     commentService.postComment(post_id, date, author, avatar, comment).then(function () {
-                        alert("Благодаря, че коментирахте!");
+                        alert("Благодарим, че коментирахте!");
                         window.location.hash = `${post_id}`;
                     });
                 }
@@ -212,6 +210,7 @@ let commentController = (() => {
                 $('#email').val('');
                 $('#avatar').val('');
                 $('#comment').val('');
+                grecaptcha.reset();
             });
         });
     }
