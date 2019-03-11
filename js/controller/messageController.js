@@ -8,6 +8,7 @@ let messageController = (() => {
                 let email = $('#email_contact').val();
                 let phone = $('#phone_contact').val();
                 let message = $('#message_contact').val();
+                let $captcha = $( '.recaptcha' ), response = grecaptcha.getResponse();
 
                 let validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
                 let validPhone = /^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,3})|(\(?\d{2,3}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$/i;
@@ -40,14 +41,24 @@ let messageController = (() => {
                     return;
                 }
 
-                messageService.sendMessage(author, date, email, phone, message).then(() => {
-                    alert("Благодаря за изпратеното съобщение!");
-                });
+                if (response.length === 0) {
+                    alert( "Удостоверете с тикче квадратчето 'Не съм робот'" );
+                    if( !$captcha.hasClass( "error" ) ){
+                        $captcha.addClass( "error" );
+                    }
+                    return;
+                } else {
+                    $captcha.removeClass( "error" );
+                    messageService.sendMessage(author, date, email, phone, message).then(() => {
+                        alert("Благодарим за изпратеното съобщение! Ще се свържем с Вас при първа възможност!");
+                    });
+                }
 
                 $('#author_contact').val('');
                 $('#email_contact').val('');
                 $('#phone_contact').val('');
                 $('#message_contact').val('');
+                grecaptcha.reset();
             });
         });
 
