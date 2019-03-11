@@ -194,12 +194,8 @@ let commentController = (() => {
 
                 if (response.length === 0) {
                     alert( "Удостоверете с тикче квадратчето 'Не съм робот'" );
-                    if( !$captcha.hasClass( "error" ) ){
-                        $captcha.addClass( "error" );
-                    }
                     return;
                 } else {
-                    $captcha.removeClass( "error" );
                     commentService.postComment(post_id, date, author, avatar, comment).then(function () {
                         alert("Благодарим, че коментирахте!");
                         window.location.hash = `${post_id}`;
