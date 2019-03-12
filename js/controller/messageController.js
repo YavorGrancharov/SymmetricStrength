@@ -8,7 +8,7 @@ let messageController = (() => {
                 let email = $('#email_contact').val();
                 let phone = $('#phone_contact').val();
                 let message = $('#message_contact').val();
-                let $captcha = $( '#message_captcha' ), response = grecaptcha.getResponse();
+                let response = grecaptcha.getResponse();
 
                 let validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
                 let validPhone = /^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,3})|(\(?\d{2,3}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$/i;
@@ -39,7 +39,9 @@ let messageController = (() => {
                 } else if (message.length < 5 || message.length > 250) {
                     alert('Съобщението трябва да бъде с дължина между 5 и 250 символа!');
                     return;
-                } else if (response.length === 0) {
+                }
+
+                if (response.length === 0) {
                     alert( "Удостоверете с тикче квадратчето 'Не съм робот'" );
                     return;
                 } else {

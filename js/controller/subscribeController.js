@@ -3,14 +3,20 @@ let subscribeController = (() => {
         $(document).ready(function () {
             $('#subscribe_email').keydown(function (e) {
                 let validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
-                let $captcha = $( '#subscribe_captcha' ), response = grecaptcha.getResponse();
+                //let response = grecaptcha.getResponse();
                 let date = formatDate(new Date());
                 let email = $('#subscribe_email').val();
+                let response = grecaptcha.render('subscribe_captcha', {'sitekey' : '6Ldg2pYUAAAAAJAvcm5rIdhZaU3kpydbkoDHm5uP', 'callback' : validateCaptcha});
+                let validateCaptcha = function (response) {
+                    $('#subscribe_hiddenRecaptcha').val(response);
+                };
                 if (e.which === 13) {
                     if (!validEmail.test(String(email).toLowerCase())) {
                         alert('Въведете валидна е-поща!');
                         return;
-                    } else if (response.length === 0) {
+                    }
+
+                    if (response.length === 0) {
                         alert( "Удостоверете с тикче квадратчето 'Не съм робот'" );
                         return;
                     } else {
