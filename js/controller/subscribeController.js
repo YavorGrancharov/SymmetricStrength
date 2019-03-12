@@ -6,10 +6,10 @@ let subscribeController = (() => {
                 //let response = grecaptcha.getResponse();
                 let date = formatDate(new Date());
                 let email = $('#subscribe_email').val();
-                let response = grecaptcha.render('subscribe_captcha', {'sitekey' : '6Ldg2pYUAAAAAJAvcm5rIdhZaU3kpydbkoDHm5uP', 'callback' : validateCaptcha});
                 let validateCaptcha = function (response) {
                     $('#subscribe_hiddenRecaptcha').val(response);
                 };
+                let response = grecaptcha.render('subscribe_captcha', {'sitekey' : '6Ldg2pYUAAAAAJAvcm5rIdhZaU3kpydbkoDHm5uP', 'callback' : validateCaptcha});
                 if (e.which === 13) {
                     if (!validEmail.test(String(email).toLowerCase())) {
                         alert('Въведете валидна е-поща!');
