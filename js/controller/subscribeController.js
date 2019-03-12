@@ -3,7 +3,7 @@ let subscribeController = (() => {
         $(document).ready(function () {
             $('#subscribe_email').keydown(function (e) {
                 let validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
-                let $captcha = $( '.recaptcha' ), response = grecaptcha.getResponse();
+                let $captcha = $( '#subscribe_captcha' ), response = grecaptcha.getResponse();
                 let date = formatDate(new Date());
                 let email = $('#subscribe_email').val();
                 if (e.which === 13) {

@@ -149,7 +149,7 @@ let commentController = (() => {
                 let email = $('#email').val();
                 let avatar = '';
                 let comment = $('#comment').val();
-                let $captcha = $( '.recaptcha' ), response = grecaptcha.getResponse();
+                let $captcha = $('#comment_captcha'), response = grecaptcha.getResponse();
 
                 let validName = /^[a-zA-Z|а-яА-ЯЁё]{3,}((\s[a-zA-Z|а-яА-ЯЁё ])?[a-zA-Z|а-яА-ЯЁё]*)*$/gm;
                 let validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
@@ -190,9 +190,7 @@ let commentController = (() => {
                 } else if (comment.length < 5 || comment.length > 250) {
                     alert('Коментарът трябва да бъде с дължина между 5 и 250 символа!');
                     return;
-                }
-
-                if (response.length === 0) {
+                } else if (response.length === 0) {
                     alert( "Удостоверете с тикче квадратчето 'Не съм робот'" );
                     return;
                 } else {
