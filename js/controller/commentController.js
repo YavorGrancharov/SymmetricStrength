@@ -1,1 +1,242 @@
-let commentController=(()=>{function a(a){let b=a.getDate(),c=a.getMonth(),d=a.getFullYear(),e=b+" "+["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][c]+" "+d;return e}return{getComments:function(){$(document).ready(function(){let b=$("#id").val();commentService.getCommentsById(b).then(b=>{b.forEach(b=>{$(".comment-list").prepend($(`<li class="comment" id="${b._id}"></li>`).append($("<div class=\"comment-body\"></div>").append($("<div class=\"comment-head\"></div>").append($("<div class=\"comment-avatar\"></div>").append($(`<img alt="avatar" src="${b.avatar}">`))).append($("<div class=\"comment-info\"></div>").append($(`<h5 class="title">${b.author}</h5>`)).append($(`<span class="comment-date">${b.date}</span>`)))).append($("<div class=\"comment-context\"></div>").append($(`<p>${b.comment}</p>`)).append($("<div class=\"reply\"></div>").append($("<span class=\"comment-reply\"></span>").append($("<a class=\"comment-reply-link\" href=\"#/\">Reply</a>").on("click",function(c){c.preventDefault();let d=$(this),e=$(this.parentNode),f=b._id;$(e).append($("<form action=\"#/\" method=\"post\" class=\"contact\" style=\"margin-top: 10px\"></form>").append($("<div class=\"contact-item\"></div>").append($("<input name=\"author\" value=\"\" id=\"author\" type=\"text\" placeholder=\"\u0418\u043C\u0435 *\">"))).append($("<div class=\"contact-item\"></div>").append($("<input name=\"email\" value=\"\" id=\"email\" type=\"email\" placeholder=\"\u0415-\u041F\u043E\u0449\u0430 *\">"))).append($("<div class=\"contact-item\"></div>").append($("<textarea name=\"comment\" id=\"comment\" class=\"commentBox\" placeholder=\"\u041A\u043E\u043C\u0435\u043D\u0442\u0430\u0440 *\"></textarea>"))).append($("<div class=\"contact-item form-submit\"></div>").append($("<input name=\"submit\" type=\"submit\" id=\"submit\" class=\"submit\" value=\"\u0418\u0417\u041F\u0420\u0410\u0422\u0418\">").on("click",function(b){b.preventDefault();let c=a(new Date),g=$("#author").val(),h=$("#email").val(),i="",j=$("#comment").val(),k=/^[a-zA-Z|а-яА-ЯЁё]{3,}((\s[a-zA-Z|а-яА-ЯЁё ])?[a-zA-Z|а-яА-ЯЁё]*)*$/gm,l=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;if(""===g)return void alert("\u0412\u044A\u0432\u0435\u0434\u0435\u0442\u0435 \u0438\u043C\u0435\u0442\u043E \u0441\u0438 \u0432 \u043F\u0440\u0435\u0434\u0432\u0438\u0434\u0435\u043D\u043E\u0442\u043E \u0437\u0430 \u0442\u043E\u0432\u0430 \u043F\u043E\u043B\u0435!");if(3>g.length)return void alert("\u0418\u043C\u0435\u0442\u043E \u0442\u0440\u044F\u0431\u0432\u0430 \u0434\u0430 \u0431\u044A\u0434\u0435 \u0441 \u0434\u044A\u043B\u0436\u0438\u043D\u0430 \u043D\u0435 \u043F\u043E-\u043C\u0430\u043B\u043A\u0430 \u043E\u0442 \u0442\u0440\u0438 \u0431\u0443\u043A\u0432\u0438!");if(!k.test(g))return void alert("\u0418\u043C\u0435\u0442\u043E \u043C\u043E\u0436\u0435 \u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430 \u0441\u0430\u043C\u043E \u0431\u0443\u043A\u0432\u0438!");if(""!==h){if(!l.test((h+"").toLowerCase()))return void alert("\u0412\u044A\u0432\u0435\u0434\u0435\u0442\u0435 \u0432\u0430\u043B\u0438\u0434\u043D\u0430 \u0435-\u043F\u043E\u0449\u0430!");i="https://www.gravatar.com/avatar/"+md5((h+"").toLowerCase().trim())}else i="https://www.gravatar.com/avatar/"+md5((h+"").toLowerCase().trim())+"?f=y";return""===j?void alert("\u0412\u044A\u0432\u0435\u0434\u0435\u0442\u0435 \u043A\u043E\u043C\u0435\u043D\u0442\u0430\u0440 \u0432 \u043F\u0440\u0435\u0434\u0432\u0438\u0434\u0435\u043D\u043E\u0442\u043E \u0437\u0430 \u0442\u043E\u0432\u0430 \u043F\u043E\u043B\u0435!"):5>j.length||250<j.length?void alert("\u041A\u043E\u043C\u0435\u043D\u0442\u0430\u0440\u044A\u0442 \u0442\u0440\u044F\u0431\u0432\u0430 \u0434\u0430 \u0431\u044A\u0434\u0435 \u0441 \u0434\u044A\u043B\u0436\u0438\u043D\u0430 \u043C\u0435\u0436\u0434\u0443 5 \u0438 250 \u0441\u0438\u043C\u0432\u043E\u043B\u0430!"):void(commentService.postReply(f,c,g,i,j,!1).then(function(){alert("\u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u0438\u043C \u0412\u0438 \u0437\u0430 \u043A\u043E\u043C\u0435\u043D\u0442\u0430\u0440\u0430!"),window.location.hash="current",$(e.context.children[1]).remove(),$(d).show()}),$("#author").val(""),$("#email").val(""),$("#comment").val(""))})).append($("<input name=\"hide\" type=\"submit\" style=\"margin: 5px\" id=\"hide\" class=\"submit\" value=\"\u0417\u0410\u0422\u0412\u041E\u0420\u0418\">").on("click",function(a){a.preventDefault(),$(d).show(),$(e[0].lastChild).remove()})))),$(d).hide()}))))))),commentService.getRepliesById(b._id).then(a=>{let b=$(".comment");a.forEach(a=>{for(let c=0;c<b.length;c++)b[c].id===a.id&&$(b[c]).append($("<ul class=\"children\"></ul>").prepend($(`<li class="comment" id="current"></li>`).append($("<div class=\"comment-body\"></div>").append($("<div class=\"comment-head\"></div>").append($("<div class=\"comment-avatar\"></div>").append($(`<img alt="avatar" src="${a.avatar}">`))).append($("<div class=\"comment-info\"></div>").append($(`<h5 class="title">${a.author}</h5>`)).append($(`<span class="comment-date">${a.date}</span>`)))).append($("<div class=\"comment-context\"></div>").append($(`<p>${a.comment}</p>`))))))})})});let c=$(".post-comments");$(c)[0].innerHTML=b.length+" Comments",1===b.length?$(".comment-list").prepend(`<h2 class="title"><span>${b.length} Comment</span></h2>`):$(".comment-list").prepend(`<h2 class="title"><span>${b.length} Comments</span></h2>`)})})},postComment:function(){$(document).ready(function(){$("#submit").click(function(b){b.preventDefault();let c=$("#id").val(),d=a(new Date),e=$("#author").val(),f=$("#email").val(),g="",h=$("#comment").val(),i=grecaptcha.getResponse(),j=/^[a-zA-Z|а-яА-ЯЁё]{3,}((\s[a-zA-Z|а-яА-ЯЁё ])?[a-zA-Z|а-яА-ЯЁё]*)*$/gm,k=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;if(""===e)return void alert("\u0412\u044A\u0432\u0435\u0434\u0435\u0442\u0435 \u0438\u043C\u0435\u0442\u043E \u0441\u0438 \u0432 \u043F\u0440\u0435\u0434\u0432\u0438\u0434\u0435\u043D\u043E\u0442\u043E \u0437\u0430 \u0442\u043E\u0432\u0430 \u043F\u043E\u043B\u0435!");if(3>e.length)return void alert("\u0418\u043C\u0435\u0442\u043E \u0442\u0440\u044F\u0431\u0432\u0430 \u0434\u0430 \u0431\u044A\u0434\u0435 \u0441 \u0434\u044A\u043B\u0436\u0438\u043D\u0430 \u043D\u0435 \u043F\u043E-\u043C\u0430\u043B\u043A\u0430 \u043E\u0442 \u0442\u0440\u0438 \u0431\u0443\u043A\u0432\u0438!");if(!j.test(e))return void alert("\u0418\u043C\u0435\u0442\u043E \u043C\u043E\u0436\u0435 \u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430 \u0441\u0430\u043C\u043E \u0431\u0443\u043A\u0432\u0438!");if(""!==f){if(!k.test((f+"").toLowerCase()))return void alert("\u0412\u044A\u0432\u0435\u0434\u0435\u0442\u0435 \u0432\u0430\u043B\u0438\u0434\u043D\u0430 \u0435-\u043F\u043E\u0449\u0430!");g="https://www.gravatar.com/avatar/"+md5((f+"").toLowerCase().trim())}else g="https://www.gravatar.com/avatar/"+md5((f+"").toLowerCase().trim())+"?f=y";if(""===h)return void alert("\u0412\u044A\u0432\u0435\u0434\u0435\u0442\u0435 \u043A\u043E\u043C\u0435\u043D\u0442\u0430\u0440 \u0432 \u043F\u0440\u0435\u0434\u0432\u0438\u0434\u0435\u043D\u043E\u0442\u043E \u0437\u0430 \u0442\u043E\u0432\u0430 \u043F\u043E\u043B\u0435!");if(5>h.length||250<h.length)return void alert("\u041A\u043E\u043C\u0435\u043D\u0442\u0430\u0440\u044A\u0442 \u0442\u0440\u044F\u0431\u0432\u0430 \u0434\u0430 \u0431\u044A\u0434\u0435 \u0441 \u0434\u044A\u043B\u0436\u0438\u043D\u0430 \u043C\u0435\u0436\u0434\u0443 5 \u0438 250 \u0441\u0438\u043C\u0432\u043E\u043B\u0430!");if(0===i.length)return void alert("\u0423\u0434\u043E\u0441\u0442\u043E\u0432\u0435\u0440\u0435\u0442\u0435 \u0441 \u0442\u0438\u043A\u0447\u0435 \u043A\u0432\u0430\u0434\u0440\u0430\u0442\u0447\u0435\u0442\u043E '\u041D\u0435 \u0441\u044A\u043C \u0440\u043E\u0431\u043E\u0442'");commentService.postComment(c,d,e,g,h).then(function(){alert("\u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u0438\u043C, \u0447\u0435 \u043A\u043E\u043C\u0435\u043D\u0442\u0438\u0440\u0430\u0445\u0442\u0435!"),window.location.hash=`${c}`});$("#author").val(""),$("#email").val(""),$("#avatar").val(""),$("#comment").val(""),grecaptcha.reset()})})}}})();
+let commentController = (() => {
+    function getComments() {
+        $(document).ready(function () {
+            let post_id = $('#id').val();
+            commentService.getCommentsById(post_id).then((comments) => {
+                comments.forEach(comment => {
+                    $('.comment-list')
+                        .prepend($(`<li class="comment" id="${comment._id}"></li>`)
+                            .append($('<div class="comment-body"></div>')
+                                .append($('<div class="comment-head"></div>')
+                                    .append($('<div class="comment-avatar"></div>')
+                                        .append($(`<img alt="avatar" src="${comment.avatar}">`)))
+                                    .append($('<div class="comment-info"></div>')
+                                        .append($(`<h5 class="title">${comment.author}</h5>`))
+                                        .append($(`<span class="comment-date">${comment.date}</span>`))))
+                                .append($('<div class="comment-context"></div>')
+                                    .append($(`<p>${comment.comment}</p>`))
+                                    .append($('<div class="reply"></div>')
+                                        .append($('<span class="comment-reply"></span>')
+                                            .append($('<a class="comment-reply-link" href="#/">Reply</a>')
+                                                .on('click', function (event) {
+                                                    event.preventDefault();
+                                                    let replyLink = $(this);
+                                                    let commentReply = $(this.parentNode);
+                                                    let _id = comment._id;
+                                                    $(commentReply)
+                                                        .append($('<form action="#/" method="post" class="contact" style="margin-top: 10px"></form>')
+                                                            .append($('<div class="contact-item"></div>')
+                                                                .append($('<input name="author" value="" id="author" type="text" placeholder="Име *">')))
+                                                            .append($('<div class="contact-item"></div>')
+                                                                .append($('<input name="email" value="" id="email" type="email" placeholder="По избор с е-поща в Gravatar">')))
+                                                            // .append($('<div class="contact-item"></div>')
+                                                            //     .append($('<input id="avatar" name="avatar" value="" type="text" placeholder="Avatar URL">')))
+                                                            .append($('<div class="contact-item"></div>')
+                                                                .append($('<textarea name="comment" id="comment" class="commentBox" placeholder="Коментар *"></textarea>')))
+                                                            .append($('<div class="contact-item form-submit"></div>')
+                                                                .append($('<input name="submit" type="submit" id="submit" class="submit" value="ИЗПРАТИ">')
+                                                                    .on('click', function (event) {
+                                                                        event.preventDefault();
+                                                                        let id = _id;
+                                                                        let date = formatDate(new Date());
+                                                                        let author = $('#author').val();
+                                                                        let email = $('#email').val();
+                                                                        let avatar = '';
+                                                                        let comment = $('#comment').val();
+                                                                        let visible = false;
+                                                                        let response = grecaptcha.getResponse();
+
+                                                                        let validName = /^[a-zA-Z|а-яА-ЯЁё]{3,}((\s[a-zA-Z|а-яА-ЯЁё ])?[a-zA-Z|а-яА-ЯЁё]*)*$/gm;
+                                                                        let validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
+                                                                        //let validURL = /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i;
+
+                                                                        if (author === '') {
+                                                                            alert('Въведете името си в предвиденото за това поле!');
+                                                                            return;
+                                                                        } else if (author.length < 3) {
+                                                                            alert('Името трябва да бъде с дължина не по-малка от три букви!');
+                                                                            return;
+                                                                        } else if (!validName.test(author)) {
+                                                                            alert('Името може да съдържа само букви!');
+                                                                            return;
+                                                                        }
+
+                                                                        if (email !== '') {
+                                                                            if (!validEmail.test(String(email).toLowerCase())) {
+                                                                                alert('Въведете валидна е-поща!');
+                                                                                return;
+                                                                            } else {
+                                                                                avatar = 'https://www.gravatar.com/avatar/' + md5(String(email).toLowerCase().trim());
+                                                                            }
+                                                                        } else {
+                                                                            avatar = 'https://www.gravatar.com/avatar/' + md5(String(email).toLowerCase().trim()) + '?f=y';
+                                                                        }
+
+                                                                        // if (avatar !== '') {
+                                                                        //     if (!validURL.test(avatar)) {
+                                                                        //         alert('Въведете валидна връзка към изображение!');
+                                                                        //         return;
+                                                                        //     }
+                                                                        // }
+
+                                                                        if (comment === '') {
+                                                                            alert('Въведете коментар в предвиденото за това поле!');
+                                                                            return;
+                                                                        } else if (comment.length < 5 || comment.length > 250) {
+                                                                            alert('Коментарът трябва да бъде с дължина между 5 и 250 символа!');
+                                                                            return;
+                                                                        }
+
+                                                                        if (response.length === 0) {
+                                                                            alert( "Удостоверете с тикче квадратчето 'Не съм робот'" );
+                                                                            return;
+                                                                        } else {
+                                                                            commentService.postReply(id, date, author, avatar, comment, visible).then(function () {
+                                                                                alert("Благодарим Ви за коментара!");
+                                                                                //window.location.reload(true);
+                                                                                window.location.hash = 'current';
+                                                                                $((commentReply).context.children[1]).remove();
+                                                                                $(replyLink).show();
+                                                                            });
+                                                                        }
+
+                                                                        $('#author').val('');
+                                                                        $('#email').val('');
+                                                                        //$('#avatar').val('');
+                                                                        $('#comment').val('');
+                                                                        grecaptcha.reset();
+                                                                    }))
+                                                                .append($('<input name="hide" type="submit" style="margin: 5px" id="hide" class="submit" value="ЗАТВОРИ">')
+                                                                    .on('click', function (event) {
+                                                                        event.preventDefault();
+                                                                        $(replyLink).show();
+                                                                        $((commentReply)[0].lastChild).remove();
+                                                                    }))));
+                                                    $(replyLink).hide();
+                                                })))))));
+                    commentService.getRepliesById(comment._id).then((replies) => {
+                        let nodes = $('.comment');
+                        replies.forEach(reply => {
+                            for(let i = 0; i < nodes.length; i++) {
+                                if (nodes[i].id === reply.id) {
+                                    $(nodes[i])
+                                        .append($('<ul class="children"></ul>')
+                                            .prepend($(`<li class="comment" id="current"></li>`)
+                                                .append($('<div class="comment-body"></div>')
+                                                    .append($('<div class="comment-head"></div>')
+                                                        .append($('<div class="comment-avatar"></div>')
+                                                            .append($(`<img alt="avatar" src="${reply.avatar}">`)))
+                                                        .append($('<div class="comment-info"></div>')
+                                                            .append($(`<h5 class="title">${reply.author}</h5>`))
+                                                            .append($(`<span class="comment-date">${reply.date}</span>`))))
+                                                    .append($('<div class="comment-context"></div>')
+                                                        .append($(`<p>${reply.comment}</p>`))))));
+                                }
+                            }
+                        })
+                    })
+                });
+                let postComments = $('.post-comments');
+                $(postComments)[0].innerHTML = comments.length + ' Comments'
+                if (comments.length === 1) {
+                    $('.comment-list').prepend(`<h2 class="title"><span>${comments.length} Comment</span></h2>`);
+                } else {
+                    $('.comment-list').prepend(`<h2 class="title"><span>${comments.length} Comments</span></h2>`);
+                }
+            })
+        });
+    }
+
+    function postComment() {
+        $(document).ready(function () {
+            $('#submit').click(function (e) {
+                e.preventDefault();
+                let post_id = $('#id').val();
+                let date = formatDate(new Date());
+                let author = $('#author').val();
+                let email = $('#email').val();
+                let avatar = '';
+                let comment = $('#comment').val();
+                let response = grecaptcha.getResponse();
+
+                let validName = /^[a-zA-Z|а-яА-ЯЁё]{3,}((\s[a-zA-Z|а-яА-ЯЁё ])?[a-zA-Z|а-яА-ЯЁё]*)*$/gm;
+                let validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
+                //let validURL = /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i;
+
+                if (author === '') {
+                    alert('Въведете името си в предвиденото за това поле!');
+                    return;
+                } else if (author.length < 3) {
+                    alert('Името трябва да бъде с дължина не по-малка от три букви!');
+                    return;
+                } else if (!validName.test(author)) {
+                    alert('Името може да съдържа само букви!');
+                    return;
+                }
+
+                if (email !== '') {
+                    if (!validEmail.test(String(email).toLowerCase())) {
+                        alert('Въведете валидна е-поща!');
+                        return;
+                    } else {
+                        avatar = 'https://www.gravatar.com/avatar/' + md5(String(email).toLowerCase().trim());
+                    }
+                } else {
+                    avatar = 'https://www.gravatar.com/avatar/' + md5(String(email).toLowerCase().trim()) + '?f=y';
+                }
+
+                // if (avatar !== '') {
+                //     if (!validURL.test(avatar)) {
+                //         alert('Въведете валидна връзка към изображение!');
+                //         return;
+                //     }
+                // }
+
+                if (comment === '') {
+                    alert('Въведете коментар в предвиденото за това поле!');
+                    return;
+                } else if (comment.length < 5 || comment.length > 250) {
+                    alert('Коментарът трябва да бъде с дължина между 5 и 250 символа!');
+                    return;
+                }
+
+                if (response.length === 0) {
+                    alert( "Удостоверете с тикче квадратчето 'Не съм робот'" );
+                    return;
+                } else {
+                    commentService.postComment(post_id, date, author, avatar, comment).then(function () {
+                        alert("Благодарим Ви аз коментара!");
+                        window.location.hash = `${post_id}`;
+                    });
+                }
+
+                $('#author').val('');
+                $('#email').val('');
+                $('#avatar').val('');
+                $('#comment').val('');
+                grecaptcha.reset();
+            });
+        });
+    }
+
+    function formatDate(date) {
+        let monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+        ];
+
+        let day = date.getDate();
+        let monthIndex = date.getMonth();
+        let year = date.getFullYear();
+        let postDate = day + ' ' + monthNames[monthIndex] + ' ' + year;
+
+        return postDate;
+    }
+
+    return {
+        getComments,
+        postComment
+    }
+})();
