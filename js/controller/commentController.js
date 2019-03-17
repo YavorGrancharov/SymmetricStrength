@@ -205,7 +205,7 @@ let commentController = (() => {
                     return;
                 } else {
                     commentService.postComment(post_id, date, author, avatar, comment).then(function () {
-                        alert("Благодарим Ви аз коментара!");
+                        alert("Благодарим Ви за коментара!");
                         window.location.hash = `${post_id}`;
                     });
                 }
