@@ -26,15 +26,15 @@ let commentController = (() => {
                                                     $(commentReply)
                                                         .append($('<form action="#/" method="post" class="contact" style="margin-top: 10px"></form>')
                                                             .append($('<div class="contact-item"></div>')
-                                                                .append($('<input name="author" value="" id="author" type="text" placeholder="РРјРµ *">')))
+                                                                .append($('<input name="author" value="" id="author" type="text" placeholder="Име *">')))
                                                             .append($('<div class="contact-item"></div>')
-                                                                .append($('<input name="email" value="" id="email" type="email" placeholder="РџРѕ РёР·Р±РѕСЂ СЃ Рµ-РїРѕС‰Р° РІ Gravatar">')))
+                                                                .append($('<input name="email" value="" id="email" type="email" placeholder="По избор с е-поща в Gravatar">')))
                                                             // .append($('<div class="contact-item"></div>')
                                                             //     .append($('<input id="avatar" name="avatar" value="" type="text" placeholder="Avatar URL">')))
                                                             .append($('<div class="contact-item"></div>')
-                                                                .append($('<textarea name="comment" id="comment" class="commentBox" placeholder="РљРѕРјРµРЅС‚Р°СЂ *"></textarea>')))
+                                                                .append($('<textarea name="comment" id="comment" class="commentBox" placeholder="Коментар *"></textarea>')))
                                                             .append($('<div class="contact-item form-submit"></div>')
-                                                                .append($('<input name="submit" type="submit" id="submit" class="submit" value="РР—РџР РђРўР">')
+                                                                .append($('<input name="submit" type="submit" id="submit" class="submit" value="ИЗПРАТИ">')
                                                                     .on('click', function (event) {
                                                                         event.preventDefault();
                                                                         let id = _id;
@@ -46,24 +46,24 @@ let commentController = (() => {
                                                                         let visible = false;
                                                                         let response = grecaptcha.getResponse();
 
-                                                                        let validName = /^[a-zA-Z|Р°-СЏРђ-РЇРЃС‘]{3,}((\s[a-zA-Z|Р°-СЏРђ-РЇРЃС‘ ])?[a-zA-Z|Р°-СЏРђ-РЇРЃС‘]*)*$/gm;
+                                                                        let validName = /^[a-zA-Z|а-яА-ЯЁё]{3,}((\s[a-zA-Z|а-яА-ЯЁё ])?[a-zA-Z|а-яА-ЯЁё]*)*$/gm;
                                                                         let validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
                                                                         //let validURL = /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i;
 
                                                                         if (author === '') {
-                                                                            alert('Р’СЉРІРµРґРµС‚Рµ РёРјРµС‚Рѕ СЃРё РІ РїСЂРµРґРІРёРґРµРЅРѕС‚Рѕ Р·Р° С‚РѕРІР° РїРѕР»Рµ!');
+                                                                            alert('Въведете името си в предвиденото за това поле!');
                                                                             return;
                                                                         } else if (author.length < 3) {
-                                                                            alert('РРјРµС‚Рѕ С‚СЂСЏР±РІР° РґР° Р±СЉРґРµ СЃ РґСЉР»Р¶РёРЅР° РЅРµ РїРѕ-РјР°Р»РєР° РѕС‚ С‚СЂРё Р±СѓРєРІРё!');
+                                                                            alert('Името трябва да бъде с дължина не по-малка от три букви!');
                                                                             return;
                                                                         } else if (!validName.test(author)) {
-                                                                            alert('РРјРµС‚Рѕ РјРѕР¶Рµ РґР° СЃСЉРґСЉСЂР¶Р° СЃР°РјРѕ Р±СѓРєРІРё!');
+                                                                            alert('Името може да съдържа само букви!');
                                                                             return;
                                                                         }
 
                                                                         if (email !== '') {
                                                                             if (!validEmail.test(String(email).toLowerCase())) {
-                                                                                alert('Р’СЉРІРµРґРµС‚Рµ РІР°Р»РёРґРЅР° Рµ-РїРѕС‰Р°!');
+                                                                                alert('Въведете валидна е-поща!');
                                                                                 return;
                                                                             } else {
                                                                                 avatar = 'https://www.gravatar.com/avatar/' + md5(String(email).toLowerCase().trim());
@@ -74,25 +74,25 @@ let commentController = (() => {
 
                                                                         // if (avatar !== '') {
                                                                         //     if (!validURL.test(avatar)) {
-                                                                        //         alert('Р’СЉРІРµРґРµС‚Рµ РІР°Р»РёРґРЅР° РІСЂСЉР·РєР° РєСЉРј РёР·РѕР±СЂР°Р¶РµРЅРёРµ!');
+                                                                        //         alert('Въведете валидна връзка към изображение!');
                                                                         //         return;
                                                                         //     }
                                                                         // }
 
                                                                         if (comment === '') {
-                                                                            alert('Р’СЉРІРµРґРµС‚Рµ РєРѕРјРµРЅС‚Р°СЂ РІ РїСЂРµРґРІРёРґРµРЅРѕС‚Рѕ Р·Р° С‚РѕРІР° РїРѕР»Рµ!');
+                                                                            alert('Въведете коментар в предвиденото за това поле!');
                                                                             return;
                                                                         } else if (comment.length < 5 || comment.length > 250) {
-                                                                            alert('РљРѕРјРµРЅС‚Р°СЂСЉС‚ С‚СЂСЏР±РІР° РґР° Р±СЉРґРµ СЃ РґСЉР»Р¶РёРЅР° РјРµР¶РґСѓ 5 Рё 250 СЃРёРјРІРѕР»Р°!');
+                                                                            alert('Коментарът трябва да бъде с дължина между 5 и 250 символа!');
                                                                             return;
                                                                         }
 
                                                                         if (response.length === 0) {
-                                                                            alert( "РЈРґРѕСЃС‚РѕРІРµСЂРµС‚Рµ СЃ С‚РёРєС‡Рµ РєРІР°РґСЂР°С‚С‡РµС‚Рѕ 'РќРµ СЃСЉРј СЂРѕР±РѕС‚'" );
+                                                                            alert( "Удостоверете с тикче квадратчето 'Не съм робот'" );
                                                                             return;
                                                                         } else {
                                                                             commentService.postReply(id, date, author, avatar, comment, visible).then(function () {
-                                                                                alert("Р‘Р»Р°РіРѕРґР°СЂРёРј Р’Рё Р·Р° РєРѕРјРµРЅС‚Р°СЂР°!");
+                                                                                alert("Благодарим Ви за коментара!");
                                                                                 //window.location.reload(true);
                                                                                 window.location.hash = 'current';
                                                                                 $((commentReply).context.children[1]).remove();
@@ -106,7 +106,7 @@ let commentController = (() => {
                                                                         $('#comment').val('');
                                                                         grecaptcha.reset();
                                                                     }))
-                                                                .append($('<input name="hide" type="submit" style="margin: 5px" id="hide" class="submit" value="Р—РђРўР’РћР Р">')
+                                                                .append($('<input name="hide" type="submit" style="margin: 5px" id="hide" class="submit" value="ЗАТВОРИ">')
                                                                     .on('click', function (event) {
                                                                         event.preventDefault();
                                                                         $(replyLink).show();
@@ -159,24 +159,24 @@ let commentController = (() => {
                 let comment = $('#comment').val();
                 let response = grecaptcha.getResponse();
 
-                let validName = /^[a-zA-Z|Р°-СЏРђ-РЇРЃС‘]{3,}((\s[a-zA-Z|Р°-СЏРђ-РЇРЃС‘ ])?[a-zA-Z|Р°-СЏРђ-РЇРЃС‘]*)*$/gm;
+                let validName = /^[a-zA-Z|а-яА-ЯЁё]{3,}((\s[a-zA-Z|а-яА-ЯЁё ])?[a-zA-Z|а-яА-ЯЁё]*)*$/gm;
                 let validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
                 //let validURL = /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i;
 
                 if (author === '') {
-                    alert('Р’СЉРІРµРґРµС‚Рµ РёРјРµС‚Рѕ СЃРё РІ РїСЂРµРґРІРёРґРµРЅРѕС‚Рѕ Р·Р° С‚РѕРІР° РїРѕР»Рµ!');
+                    alert('Въведете името си в предвиденото за това поле!');
                     return;
                 } else if (author.length < 3) {
-                    alert('РРјРµС‚Рѕ С‚СЂСЏР±РІР° РґР° Р±СЉРґРµ СЃ РґСЉР»Р¶РёРЅР° РЅРµ РїРѕ-РјР°Р»РєР° РѕС‚ С‚СЂРё Р±СѓРєРІРё!');
+                    alert('Името трябва да бъде с дължина не по-малка от три букви!');
                     return;
                 } else if (!validName.test(author)) {
-                    alert('РРјРµС‚Рѕ РјРѕР¶Рµ РґР° СЃСЉРґСЉСЂР¶Р° СЃР°РјРѕ Р±СѓРєРІРё!');
+                    alert('Името може да съдържа само букви!');
                     return;
                 }
 
                 if (email !== '') {
                     if (!validEmail.test(String(email).toLowerCase())) {
-                        alert('Р’СЉРІРµРґРµС‚Рµ РІР°Р»РёРґРЅР° Рµ-РїРѕС‰Р°!');
+                        alert('Въведете валидна е-поща!');
                         return;
                     } else {
                         avatar = 'https://www.gravatar.com/avatar/' + md5(String(email).toLowerCase().trim());
@@ -187,25 +187,25 @@ let commentController = (() => {
 
                 // if (avatar !== '') {
                 //     if (!validURL.test(avatar)) {
-                //         alert('Р’СЉРІРµРґРµС‚Рµ РІР°Р»РёРґРЅР° РІСЂСЉР·РєР° РєСЉРј РёР·РѕР±СЂР°Р¶РµРЅРёРµ!');
+                //         alert('Въведете валидна връзка към изображение!');
                 //         return;
                 //     }
                 // }
 
                 if (comment === '') {
-                    alert('Р’СЉРІРµРґРµС‚Рµ РєРѕРјРµРЅС‚Р°СЂ РІ РїСЂРµРґРІРёРґРµРЅРѕС‚Рѕ Р·Р° С‚РѕРІР° РїРѕР»Рµ!');
+                    alert('Въведете коментар в предвиденото за това поле!');
                     return;
                 } else if (comment.length < 5 || comment.length > 250) {
-                    alert('РљРѕРјРµРЅС‚Р°СЂСЉС‚ С‚СЂСЏР±РІР° РґР° Р±СЉРґРµ СЃ РґСЉР»Р¶РёРЅР° РјРµР¶РґСѓ 5 Рё 250 СЃРёРјРІРѕР»Р°!');
+                    alert('Коментарът трябва да бъде с дължина между 5 и 250 символа!');
                     return;
                 }
 
                 if (response.length === 0) {
-                    alert( "РЈРґРѕСЃС‚РѕРІРµСЂРµС‚Рµ СЃ С‚РёРєС‡Рµ РєРІР°РґСЂР°С‚С‡РµС‚Рѕ 'РќРµ СЃСЉРј СЂРѕР±РѕС‚'" );
+                    alert( "Удостоверете с тикче квадратчето 'Не съм робот'" );
                     return;
                 } else {
                     commentService.postComment(post_id, date, author, avatar, comment).then(function () {
-                        alert("Р‘Р»Р°РіРѕРґР°СЂРёРј Р’Рё Р·Р° РєРѕРјРµРЅС‚Р°СЂР°!");
+                        alert("Благодарим Ви за коментара!");
                         window.location.hash = `${post_id}`;
                     });
                 }
