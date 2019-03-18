@@ -44,6 +44,7 @@ let commentController = (() => {
                                                                         let avatar = '';
                                                                         let comment = $('#comment').val();
                                                                         let visible = false;
+                                                                        let response = grecaptcha.getResponse();
 
                                                                         let validName = /^[a-zA-Z|а-яА-ЯЁё]{3,}((\s[a-zA-Z|а-яА-ЯЁё ])?[a-zA-Z|а-яА-ЯЁё]*)*$/gm;
                                                                         let validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
@@ -86,18 +87,24 @@ let commentController = (() => {
                                                                             return;
                                                                         }
 
-                                                                        commentService.postReply(id, date, author, avatar, comment, visible).then(function () {
-                                                                            alert("Благодарим Ви за коментара!");
-                                                                            //window.location.reload(true);
-                                                                            window.location.hash = 'current';
-                                                                            $((commentReply).context.children[1]).remove();
-                                                                            $(replyLink).show();
-                                                                        });
+                                                                        if (response.length === 0) {
+                                                                            alert( "Удостоверете с тикче квадратчето 'Не съм робот'" );
+                                                                            return;
+                                                                        } else {
+                                                                            commentService.postReply(id, date, author, avatar, comment, visible).then(function () {
+                                                                                alert("Благодарим Ви за коментара!");
+                                                                                //window.location.reload(true);
+                                                                                window.location.hash = 'current';
+                                                                                $((commentReply).context.children[1]).remove();
+                                                                                $(replyLink).show();
+                                                                            });
+                                                                        }
 
                                                                         $('#author').val('');
                                                                         $('#email').val('');
                                                                         //$('#avatar').val('');
                                                                         $('#comment').val('');
+                                                                        grecaptcha.reset();
                                                                     }))
                                                                 .append($('<input name="hide" type="submit" style="margin: 5px" id="hide" class="submit" value="ЗАТВОРИ">')
                                                                     .on('click', function (event) {
