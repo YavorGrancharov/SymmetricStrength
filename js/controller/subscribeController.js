@@ -17,7 +17,7 @@ let subscribeController = (() => {
                         return;
                     } else {
                         subscribeService.subscribe(date, email).then(() => {
-                            alert('Благодаря, че се абонирахте за нас!');
+                            alert('Благодарим Ви, че се абонирахте за нас!');
                             //window.location.reload(true);
                         });
                     }
