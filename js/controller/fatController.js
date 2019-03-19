@@ -127,7 +127,7 @@ let fatController = (() => {
                         fat.innerHTML = Math.round(((457 / bodyDensity) - 414.2) * 10) / 10;
                     }
 
-                    if (formula === 'siri') {
+                    if (formula.value === 'siri') {
                         fat.innerHTML = Math.round(((495 / bodyDensity) - 450) * 10) / 10;
                     }
                 }

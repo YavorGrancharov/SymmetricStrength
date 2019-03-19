@@ -219,12 +219,12 @@
                                     <div class="col-md-6 text-center">
                                         <h2>Калиперометрия</h2>
                                         <h4>телесна композиция</h4>
-                                        <img src="../static/images/fit_scanner.png" id="index">
+                                        <img src="../static/images/fit_scanner.png" id="fat-mass">
                                     </div>
                                     <div class="col-md-6 text-center">
                                         <h2>Антропометрия</h2>
                                         <h4>идеално активно тегло</h4>
-                                        <img src="../static/images/strong-man.png" id="bodyFat">
+                                        <img src="../static/images/strong-man.png" id="free-fat-mass">
                                     </div>
                                 </div>
                             </div>
@@ -320,6 +320,7 @@
 <script>
     let endurance = document.getElementById("endurance");
     let strengthEndurance = document.getElementById("strengthEndurance");
+    let fatMass = document.getElementById("fat-mass");
     endurance.addEventListener("click", function (event) {
         event.preventDefault();
         window.location.href = ("endurance_calculator.html");
@@ -328,7 +329,10 @@
         event.preventDefault();
         window.location.href = ("strength_endurance_calculator.html");
     });
-
+    fatMass.addEventListener("click", function (event) {
+        event.preventDefault();
+        window.location.href = ("../calcs/fat_calculator.html");
+    });
 </script>
 <script>
     subscribeController.subscribe();
