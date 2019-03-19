@@ -235,11 +235,11 @@
                                                                         </td>
                                                                         <td>
                                                                             <label class="radio-inline" for="radio-01">
-                                                                                <input type="radio" name="radios" id="radio-01" value="male" checked>
+                                                                                <input type="radio" name="radios" id="radio-01" value="male" checked onchange="fatController.calcFat()">
                                                                                 Мъж
                                                                             </label>
                                                                             <label class="radio-inline" for="radio-02">
-                                                                                <input type="radio" name="radios" id="radio-02" value="female">
+                                                                                <input type="radio" name="radios" id="radio-02" value="female" onchange="fatController.calcFat()">
                                                                                 Жена
                                                                             </label>
                                                                         </td>
@@ -249,7 +249,7 @@
                                                                             <label class="control-label" for="age">Възраст *</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="age" name="age" type="number" placeholder="__" class="form-control input-sm">
+                                                                            <input id="age" name="age" type="number" placeholder="г" value="" class="form-control input-sm" onchange="fatController.calcFat()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -257,7 +257,7 @@
                                                                             <label class="control-label" for="weight">Тегло *</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="weight" name="weight" type="number" placeholder="кг" class="form-control input-sm">
+                                                                            <input id="weight" name="weight" type="number" placeholder="кг" value="" class="form-control input-sm" onchange="fatController.calcFat()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -265,7 +265,7 @@
                                                                             <label class="control-label" for="folds">Метод</label>
                                                                         </td>
                                                                         <td>
-                                                                            <select class="dropdown" id="folds">
+                                                                            <select class="dropdown" id="folds" onchange="fatController.calcFat()">
                                                                                 <option value="7" selected>7</option>
                                                                                 <option value="4">4</option>
                                                                                 <option value="3">3</option>
@@ -278,15 +278,16 @@
                                                                         </td>
                                                                         <td>
                                                                             <label class="radio-inline" for="brozek">
-                                                                                <input type="radio" name="formula" id="brozek" value="brozek" checked>
+                                                                                <input type="radio" name="formula" id="brozek" value="brozek" checked onchange="fatController.calcFat()">
                                                                                 Brozek
                                                                             </label>
                                                                             <label class="radio-inline" for="siri">
-                                                                                <input type="radio" name="formula" id="siri" value="siri">
+                                                                                <input type="radio" name="formula" id="siri" value="siri" onchange="fatController.calcFat()">
                                                                                 Siri
                                                                             </label>
                                                                         </td>
                                                                     </tr>
+                                                                    <tr></tr>
                                                                     <tr>
                                                                         <td>
                                                                             <h3>Измервания</h3>
@@ -298,7 +299,7 @@
                                                                             <label class="control-label" for="triceps">Triceps</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="triceps" name="triceps" placeholder="mm" class="form-control input-sm">
+                                                                            <input id="triceps" name="triceps" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -306,7 +307,7 @@
                                                                             <label class="control-label" for="subscapula">Subscapula</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="subscapula" name="subscapula" placeholder="mm" class="form-control input-sm">
+                                                                            <input id="subscapula" name="subscapula" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -314,7 +315,7 @@
                                                                             <label class="control-label" for="midaxilla">Midaxilla</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="midaxilla" name="midaxilla" placeholder="mm" class="form-control input-sm">
+                                                                            <input id="midaxilla" name="midaxilla" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -322,7 +323,7 @@
                                                                             <label class="control-label" for="chest">Chest</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="chest" name="chest" placeholder="mm" class="form-control input-sm">
+                                                                            <input id="chest" name="chest" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -330,7 +331,7 @@
                                                                             <label class="control-label" for="abdominal">Abdominal</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="abdominal" name="abdominal" placeholder="mm" class="form-control input-sm">
+                                                                            <input id="abdominal" name="abdominal" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -338,7 +339,7 @@
                                                                             <label class="control-label" for="suprailiac">Suprailiac</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="suprailiac" name="suprailiac" placeholder="mm" class="form-control input-sm">
+                                                                            <input id="suprailiac" name="suprailiac" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -346,18 +347,19 @@
                                                                             <label class="control-label" for="thigh">Thigh</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="thigh" name="thigh" placeholder="mm" class="form-control input-sm">
+                                                                            <input id="thigh" name="thigh" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
                                                                         </td>
                                                                     </tr>
                                                                     </tbody>
                                                                     <tfoot>
+                                                                    <tr></tr>
                                                                     <tr>
                                                                         <td>
-                                                                            <label class="control-label" for="sum">Сбор</label>
+                                                                            <label class="control-label" for="sum">Сума</label>
                                                                         </td>
                                                                         <td>
                                                                             <input type="hidden" id="total">
-                                                                            <input id="sum" readonly placeholder="mm" class="form-control input-sm" value="0">
+                                                                            <input id="sum" readonly placeholder="mm" class="form-control input-sm" value="0" onchange="fatController.calcFat()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -366,11 +368,11 @@
                                                                                 <input name="submit" type="submit" id="submit" class="submit" value="ИЗЧИСЛИ">
                                                                             </div>
                                                                         </td>
-                                                                        <td>
-                                                                            <div class="contact-item form-submit pull-right">
-                                                                                <input type="reset" class="submit" value="НУЛИРАЙ">
-                                                                            </div>
-                                                                        </td>
+                                                                        <!--&lt;!&ndash;<td>&ndash;&gt;-->
+                                                                            <!--&lt;!&ndash;<div class="contact-item form-submit pull-right">-->
+                                                                                <!--&lt;!&ndash;<input type="reset" class="submit" id="reset" value="НУЛИРАЙ">&ndash;&gt;-->
+                                                                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                                                        <!--&lt;!&ndash;</td>&ndash;&gt;-->
                                                                     </tr>
                                                                     </tfoot>
                                                                 </table>
@@ -503,8 +505,8 @@
                         </div>
                     </div>
                     всички права запазени |
-                    <a href="terms.html">условия за ползване</a> |
-                    <a href="policy.html">политика за поверителност</a> |
+                    <a href="../views/terms.html">условия за ползване</a> |
+                    <a href="../views/policy.html">политика за поверителност</a> |
                     &copy;protected by <a target="_blank" href="http://www.copyscape.com/"
                                           title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page.">Copyscape</a>
                 </div>
@@ -525,6 +527,7 @@
 <script src="../js/controller/subscribeController.js"></script>
 <script src="../js/services/subscribeService.js"></script>
 <script src="../js/services/remoteService.js"></script>
+<script src="../js/models/fatModel.js"></script>
 <script>
     document.getElementById("lang").addEventListener("click", function (e) {
         e.preventDefault();
