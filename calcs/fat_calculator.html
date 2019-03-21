@@ -202,7 +202,7 @@
                         <article class="post">
                             <div class="post-header">
                                 <h3 class="title">Изчислител на процент телесни мазнини</h3>
-                                <h4 class="text-center">формули Jackson, Pollock, Brozek, Siri</h4>
+                                <h4 class="text-center">формули Jackson & Pollock, Brozek, Siri</h4>
                                 <hr>
                             </div>
                             <div class="post-content">
@@ -299,7 +299,7 @@
                                                                             <label class="control-label" for="triceps">Triceps</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="triceps" name="triceps" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
+                                                                            <input type="number" id="triceps" name="triceps" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -307,7 +307,7 @@
                                                                             <label class="control-label" for="subscapula">Subscapula</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="subscapula" name="subscapula" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
+                                                                            <input type="number" id="subscapula" name="subscapula" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -315,7 +315,7 @@
                                                                             <label class="control-label" for="midaxilla">Midaxilla</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="midaxilla" name="midaxilla" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
+                                                                            <input type="number" id="midaxilla" name="midaxilla" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -323,7 +323,7 @@
                                                                             <label class="control-label" for="chest">Chest</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="chest" name="chest" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
+                                                                            <input type="number" id="chest" name="chest" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -331,7 +331,7 @@
                                                                             <label class="control-label" for="abdominal">Abdominal</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="abdominal" name="abdominal" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
+                                                                            <input type="number" id="abdominal" name="abdominal" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -339,7 +339,7 @@
                                                                             <label class="control-label" for="suprailiac">Suprailiac</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="suprailiac" name="suprailiac" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
+                                                                            <input type="number" id="suprailiac" name="suprailiac" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -347,32 +347,28 @@
                                                                             <label class="control-label" for="thigh">Thigh</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="thigh" name="thigh" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
+                                                                            <input type="number" id="thigh" name="thigh" placeholder="mm" class="form-control input-sm" onchange="fatController.calcFat()">
                                                                         </td>
                                                                     </tr>
                                                                     </tbody>
                                                                     <tfoot>
-                                                                    <tr></tr>
                                                                     <tr>
                                                                         <td>
                                                                             <label class="control-label" for="sum">Сума</label>
                                                                         </td>
                                                                         <td>
                                                                             <input type="hidden" id="total">
-                                                                            <input id="sum" readonly placeholder="mm" class="form-control input-sm" value="0" onchange="fatController.calcFat()">
+                                                                            <input type="number" id="sum" placeholder="0.0" value="" class="form-control input-sm">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
                                                                             <div class="contact-item form-submit">
                                                                                 <input name="submit" type="submit" id="submit" class="submit" value="ИЗЧИСЛИ">
+                                                                                <input type="reset" class="submit" id="reset" value="НУЛИРАЙ" style="margin-top: 8px">
                                                                             </div>
                                                                         </td>
-                                                                        <!--&lt;!&ndash;<td>&ndash;&gt;-->
-                                                                            <!--&lt;!&ndash;<div class="contact-item form-submit pull-right">-->
-                                                                                <!--&lt;!&ndash;<input type="reset" class="submit" id="reset" value="НУЛИРАЙ">&ndash;&gt;-->
-                                                                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                                                                        <!--&lt;!&ndash;</td>&ndash;&gt;-->
+                                                                        <td></td>
                                                                     </tr>
                                                                     </tfoot>
                                                                 </table>
@@ -437,6 +433,209 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="category col-md-12">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body" style="padding-top: 10px">
+                                                    <h3 class="bg-primary" style="margin-top: 0px">Категоризация</h3>
+                                                    <div class="table-responsive">
+                                                        <p></p>
+                                                        <table class="table">
+                                                            <thead>
+                                                            <tr>
+                                                                <th>
+                                                                    Мъже
+                                                                </th>
+                                                                <th>
+                                                                    Жени
+                                                                </th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <table class="table table-bordered">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <td>
+                                                                                % телесни мазнини
+                                                                            </td>
+                                                                            <td>
+                                                                                Състояние
+                                                                            </td>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody class="text-center">
+                                                                        <tr>
+                                                                            <td>
+                                                                                < 3%
+                                                                            </td>
+                                                                            <td>
+                                                                                Нездравословно
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                4% - 5%
+                                                                            </td>
+                                                                            <td>
+                                                                                Отлично
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                5% - 7%
+                                                                            </td>
+                                                                            <td>
+                                                                                Много добро
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                7% - 9%
+                                                                            </td>
+                                                                            <td>
+                                                                                Добро
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                9% - 11%
+                                                                            </td>
+                                                                            <td>
+                                                                                Умерено
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                11% - 13%
+                                                                            </td>
+                                                                            <td>
+                                                                                Незадоволително
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                13% - 15%
+                                                                            </td>
+                                                                            <td>
+                                                                                Неприемливо
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                > 15%
+                                                                            </td>
+                                                                            <td>
+                                                                                Недопустимо
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td>
+                                                                    <table class="table table-bordered">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <td>
+                                                                                % телесни мазнини
+                                                                            </td>
+                                                                            <td>
+                                                                                Състояние
+                                                                            </td>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody class="text-center">
+                                                                        <tr>
+                                                                            <td>
+                                                                                < 9%
+                                                                            </td>
+                                                                            <td>
+                                                                                Нездравословно
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                10% - 12%
+                                                                            </td>
+                                                                            <td>
+                                                                                Отлично
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                12% - 14%
+                                                                            </td>
+                                                                            <td>
+                                                                                Много добро
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                14% - 16%
+                                                                            </td>
+                                                                            <td>
+                                                                                Добро
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                16% - 18%
+                                                                            </td>
+                                                                            <td>
+                                                                                Умерено
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                18% - 20%
+                                                                            </td>
+                                                                            <td>
+                                                                                Незадоволително
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                20% - 22%
+                                                                            </td>
+                                                                            <td>
+                                                                                Неприемливо
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                > 22%
+                                                                            </td>
+                                                                            <td>
+                                                                                Недопустимо
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <p>
+                                                            <i>
+                                                                Имайте предвид, че горната категоризация на диазпазона
+                                                                относителни телесни мазнини, е валидна при положение, че
+                                                                активната Ви телесна маса е в порядъка на не повече от
+                                                                -5кг от долната граница на оптималната Ви такава!
+                                                            </i>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p>
+                                                При четене на таблицата с категоризация, за да сравните резултатите си с
+                                                тези на друг, с по-малко години от вашите, за всеки десет години разлика
+                                                мъжете да извадят 1% от резултата от измерването, а жените 0.5%! При
+                                                сравнение между мъже с разлика в годините не по-малка от 5 и не повече
+                                                от 10 години, да се извадят 0.5% от резултатите! В случай на по-малко от
+                                                5 години разлика в годините, за сравнение използвайте крайните
+                                                стойностите от таблиците с резултати и категоризация!
+                                            </p>
                                         </div>
                                     </div>
                                 </div>

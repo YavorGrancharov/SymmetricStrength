@@ -67,7 +67,7 @@ let fatController = (() => {
 
         //document.f.density.value = (bodyDensity).toFixed(4);
 
-        if (sum.value != 0 && age.value !== '' && weight.value !== '') {
+        if (sum.value != '' && age.value !== '' && weight.value !== '') {
             submit.disabled = false;
             submit.addEventListener('click', function (event) {
                 event.preventDefault();
