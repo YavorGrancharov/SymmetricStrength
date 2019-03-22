@@ -2119,14 +2119,14 @@ body {
     cursor: pointer;
 }
 
-#strengthEndurance {
+#deadlift {
     opacity: 0.5;
     border-radius: 50%;
     width: 80%;
     height: 80%;
 }
 
-#strengthEndurance:hover {
+#deadlift:hover {
     opacity: 1;
     cursor: pointer;
 }

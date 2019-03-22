@@ -65,14 +65,13 @@ let fatController = (() => {
 
         sum.value = addition();
 
-        //document.f.density.value = (bodyDensity).toFixed(4);
+        let bodyFat = 0;
+        let bodyDensity = 0;
 
-        if (sum.value != '' && age.value !== '' && weight.value !== '') {
+        if (age.value !== '' && weight.value !== '') {
             submit.disabled = false;
             submit.addEventListener('click', function (event) {
                 event.preventDefault();
-                let bodyFat = 0;
-                let bodyDensity = 0;
                 if (sex.value == 'male' && method.value == '7') {
                     bodyDensity = 1.112 - (0.00043499 * sum.value) + (0.00000055 * sum.value * sum.value) - (0.00028826 * age.value);
                     if (formula.value == 'brozek') {

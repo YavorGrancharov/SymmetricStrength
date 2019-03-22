@@ -231,15 +231,15 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
-                                                                            <label class="control-label" for="radios">Пол</label>
+                                                                            <label class="control-label" for="sexes">Пол</label>
                                                                         </td>
                                                                         <td>
-                                                                            <label class="radio-inline" for="radio-01">
-                                                                                <input type="radio" name="radios" id="radio-01" value="male" checked onchange="fatController.calcFat()">
+                                                                            <label class="radio-inline" for="sexes-01">
+                                                                                <input type="radio" name="sexes" id="sexes-01" value="male" checked onchange="lbmController.evalLBM()">
                                                                                 Мъж
                                                                             </label>
-                                                                            <label class="radio-inline" for="radio-02">
-                                                                                <input type="radio" name="radios" id="radio-02" value="female" onchange="fatController.calcFat()">
+                                                                            <label class="radio-inline" for="sexes-02">
+                                                                                <input type="radio" name="sexes" id="sexes-02" value="female" onchange="lbmController.evalLBM()">
                                                                                 Жена
                                                                             </label>
                                                                         </td>
@@ -249,7 +249,7 @@
                                                                             <label class="control-label" for="height">Височина *</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="height" name="height" type="number" placeholder="см" value="" class="form-control input-sm" onchange="fatController.calcFat()">
+                                                                            <input id="height" name="height" type="number" placeholder="см" value="" class="form-control input-sm" onchange="lbmController.evalLBM()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -257,7 +257,7 @@
                                                                             <label class="control-label" for="wrist">Обиколка на китка </label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="wrist" name="wrist" type="number" placeholder="см" value="" class="form-control input-sm" onchange="fatController.calcFat()">
+                                                                            <input id="wrist" name="wrist" type="number" placeholder="см" value="" class="form-control input-sm" onchange="lbmController.evalLBM()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -265,7 +265,7 @@
                                                                             <label class="control-label" for="ankle">Обиколка на глезен </label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="ankle" name="ankle" type="number" placeholder="см" value="" class="form-control input-sm" onchange="fatController.calcFat()">
+                                                                            <input id="ankle" name="ankle" type="number" placeholder="см" value="" class="form-control input-sm" onchange="lbmController.evalLBM()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -273,7 +273,7 @@
                                                                             <label class="control-label" for="desired-fat">Тестови % телесни мазнини</label>
                                                                         </td>
                                                                         <td>
-                                                                            <input id="desired-fat" name="desired-fat" type="number" placeholder="%" value="" class="form-control input-sm" onchange="fatController.calcFat()">
+                                                                            <input id="desired-fat" name="desired-fat" type="number" placeholder="%" value="" class="form-control input-sm" onchange="lbmController.evalLBM()">
                                                                         </td>
                                                                     </tr>
                                                                     <tr></tr>
@@ -647,11 +647,11 @@
 <script src="../js/libs/imagesloaded.pkgd.min.js"></script>
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="../js/models/magnificPopup.js"></script>
-<script src="../js/controller/fatController.js"></script>
+<script src="../js/controller/lbmController.js"></script>
 <script src="../js/controller/subscribeController.js"></script>
 <script src="../js/services/subscribeService.js"></script>
 <script src="../js/services/remoteService.js"></script>
-<script src="../js/models/fatModel.js"></script>
+<script src="../js/models/lbmModel.js"></script>
 <script>
     document.getElementById("lang").addEventListener("click", function (e) {
         e.preventDefault();
@@ -671,7 +671,7 @@
     });
 </script>
 <script>
-    fatController.calcFat();
+    lbmController.evalLBM();
     subscribeController.subscribe();
 </script>
 </body>

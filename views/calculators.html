@@ -182,12 +182,16 @@
                             <div class="box-subscribe">
                                 <input name="email" type="text" placeholder="Абонирай се с е-поща" id="subscribe_email">
                             </div>
-
-                            <div class="copyright">
-                                <p>
-                                    &copy;2015-2019 athleticstandard.org
-                                </p>
+                            <div class="box-subscribe">
+                                <div style="transform:scale(0.594);transform-origin:0 0; margin-top: 0.1px" class="g-recaptcha"
+                                     data-sitekey="6Ldg2pYUAAAAAJAvcm5rIdhZaU3kpydbkoDHm5uP"></div>
                             </div>
+
+                            <!--<div class="copyright">-->
+                                <!--<p>-->
+                                    <!--&copy;2015-2019 athleticstandard.org-->
+                                <!--</p>-->
+                            <!--</div>-->
 
                         </div>
                     </div>
@@ -210,9 +214,9 @@
                                         <img src="../static/images/pull-dip.png" id="endurance">
                                     </div>
                                     <div class="col-md-6 text-center">
-                                        <h2>Сила</h2>
-                                        <h4>многоставни движения</h4>
-                                        <img src="../static/images/deadlift.png" id="strengthEndurance">
+                                        <h2>Силов Показател</h2>
+                                        <h4>мъртва тяга</h4>
+                                        <img src="../static/images/deadlift.png" id="deadlift">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -307,6 +311,7 @@
 <script src="../js/js/bootstrap.min.js"></script>
 <script src="../js/libs/masonry.pkgd.min.js"></script>
 <script src="../js/libs/imagesloaded.pkgd.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="../js/models/magnificPopup.js"></script>
 <script src="../js/controller/subscribeController.js"></script>
 <script src="../js/services/subscribeService.js"></script>
@@ -319,7 +324,7 @@
 </script>
 <script>
     let endurance = document.getElementById("endurance");
-    let strengthEndurance = document.getElementById("strengthEndurance");
+    let deadliftIndex = document.getElementById("deadlift");
     let fatMass = document.getElementById("fat-mass");
     let freeFatMass = document.getElementById("free-fat-mass");
 
@@ -327,9 +332,9 @@
         event.preventDefault();
         window.location.href = ("../calcs/endurance_calculator.html");
     });
-    strengthEndurance.addEventListener("click", function (event) {
+    deadliftIndex.addEventListener("click", function (event) {
         event.preventDefault();
-        window.location.href = ("strength_endurance_calculator.html");
+        window.location.href = ("../calcs/deadlift_index.html");
     });
     fatMass.addEventListener("click", function (event) {
         event.preventDefault();

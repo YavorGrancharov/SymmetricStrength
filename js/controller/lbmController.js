@@ -1,9 +1,10 @@
 let lbmController = (() => {
-    function lbmController() {
-
+    function evalLBM() {
+        let user = lbmModel.getUser();
+        console.log(user.sex.value)
     }
 
     return {
-        lbmController
+        evalLBM
     }
 })();
