@@ -1,10 +1,678 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131327406-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-131327406-1');
+    </script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>GO STRONG</title>
+    <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
+    <link rel="stylesheet" href="../styles/styles.css" media="all">
+    <link rel="stylesheet" href="../styles/libs/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="../styles/libs/font-awesome.min.css" type="text/css" media="all">
 </head>
 <body>
+<!-- Wrapper Site -->
+<div id="main-content">
 
+    <!-- Preload -->
+    <div id="preload">
+        <div class="kd-bounce">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- Preload -->
+
+    <!-- Mobile Menu -->
+    <div class="mobile">
+        <div class="container">
+            <!-- Mobile -->
+            <div class="menu-mobile">
+                <span class="item item-1"></span>
+                <span class="item item-2"></span>
+                <span class="item item-3"></span>
+            </div>
+            <!-- End Mobile -->
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="../index.html">
+                    <h1>GO STRONG</h1>
+                </a>
+            </div>
+            <!-- End Logo -->
+        </div>
+    </div>
+    <div class="hide-menu"></div>
+    <!-- End Mobile Menu -->
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="header affix">
+                    <div class="table">
+                        <div class="table-cell">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href="../index.html">
+                                    <img src="../static/images/print_ready_logo%20copy.png" width="300" height="auto"
+                                         alt="main-logo">
+                                </a>
+                            </div>
+                            <!-- End Logo -->
+
+                            <!-- Navigation -->
+                            <div class="main-menu">
+                                <nav>
+                                    <ul class="menu-list">
+                                        <li>
+                                            <a href="../index.html">Начало</a>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="#/">Блог</a>
+                                            <ul class="sub-menu">
+                                                <li>
+                                                    <a href="../views/blog.html">Стандартен изглед</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../views/blog_grid.html">Решетъчен изглед</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="../views/price.html">Цени</a>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="#/">Видео</a>
+                                            <ul class="sub-menu">
+                                                <li>
+                                                    <a href="../views/video.html">Стандартен изглед</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../views/video_grid.html">Решетъчен изглед</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="../views/about.html">За нас</a>
+                                        </li>
+                                        <li>
+                                            <a href="../views/contact.html">Контакти</a>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="#/">Документация</a>
+                                            <ul class="sub-menu">
+                                                <li>
+                                                    <a href="../views/404.html">Идентичност</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../views/rules.html">Правила</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../views/code_of_ethics.html">Етичен кодекс</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../views/404.html">Ръководство</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="../views/testimonials.html">Атестати</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- End Navigation -->
+
+                            <!-- Socials -->
+                            <div class="socials">
+                                <a target="_blank" href="https://web.facebook.com/Athletic-Standard-155676468649069/"
+                                   title="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a target="_blank" href="https://www.youtube.com/channel/UC3jhBZbeXDzwad6o2yrttSA"
+                                   title="You Tube">
+                                    <i class="fa fa-youtube-play"></i>
+                                </a>
+                                <a target="_blank" href="http://leanonfat.blogspot.com/" title="Blogger">
+                                    <i class="fa fa-cutlery"></i>
+                                </a>
+                                <a href="#/" title="Subscribe">
+                                    <i class="fa fa-newspaper-o"></i>
+                                </a>
+                                <a href="#/" title="Language">
+                                    <i id="lang" class="fa fa-globe"></i>
+                                </a>
+                                <a href="#/" title="Search this site">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div>
+                            <!-- End Socials -->
+
+                            <div class="box-search">
+                                <form role="search" id="searchform" action="https://search.freefind.com/find.html"
+                                      method="get" accept-charset="utf-8" target="_self">
+                                    <input type="text" placeholder="Търсене ..." name="query"/>
+                                    <input type="hidden" name="si" value="30222917">
+                                    <input type="hidden" name="pid" value="r">
+                                    <input type="hidden" name="n" value="0">
+                                    <input type="hidden" name="_charset_" value="">
+                                    <input type="hidden" name="bcd" value="&#247;">
+                                </form>
+                            </div>
+
+                            <div class="box-subscribe">
+                                <input name="email" type="text" placeholder="Абонирай се с е-поща" id="subscribe_email">
+                            </div>
+                            <div class="box-subscribe">
+                                <div style="transform:scale(0.594);transform-origin:0 0; margin-top: 0.1px" class="g-recaptcha"
+                                     data-sitekey="6Ldg2pYUAAAAAJAvcm5rIdhZaU3kpydbkoDHm5uP"></div>
+                            </div>
+
+                            <!--<div class="copyright">-->
+                            <!--<p>-->
+                            <!--&copy;2015-2019 athleticstandard.org-->
+                            <!--</p>-->
+                            <!--</div>-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9 col-md-offset-3">
+                <div class="posts">
+                    <div class="posts-inner">
+                        <article class="post">
+                            <div class="post-header">
+                                <h3 class="title">Определител на оптимална активна телесна маса</h3>
+                                <h4 class="text-center">формули: Явор Грънчаров</h4>
+                                <hr>
+                            </div>
+                            <div class="post-content">
+
+                                <!-- The Content -->
+                                <div class="the-excerpt">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <form class="center-block" id="fat_calc" role="form">
+                                                <div class="well">
+                                                    <div class="text-center">
+                                                        <h3>
+                                                            <strong><< ОПРЕДЕЛИТЕЛ >></strong>
+                                                        </h3>
+                                                    </div>
+                                                    <div>
+                                                        <div id="bodyfat-calc" class="tab-content">
+                                                            <div class="tab-pane active">
+                                                                <table class="table borderless">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <h3>Данни</h3>
+                                                                        </td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label class="control-label" for="radios">Пол</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <label class="radio-inline" for="radio-01">
+                                                                                <input type="radio" name="radios" id="radio-01" value="male" checked onchange="fatController.calcFat()">
+                                                                                Мъж
+                                                                            </label>
+                                                                            <label class="radio-inline" for="radio-02">
+                                                                                <input type="radio" name="radios" id="radio-02" value="female" onchange="fatController.calcFat()">
+                                                                                Жена
+                                                                            </label>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label class="control-label" for="height">Височина *</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input id="height" name="height" type="number" placeholder="см" value="" class="form-control input-sm" onchange="fatController.calcFat()">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label class="control-label" for="wrist">Обиколка на китка </label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input id="wrist" name="wrist" type="number" placeholder="см" value="" class="form-control input-sm" onchange="fatController.calcFat()">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label class="control-label" for="ankle">Обиколка на глезен </label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input id="ankle" name="ankle" type="number" placeholder="см" value="" class="form-control input-sm" onchange="fatController.calcFat()">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <label class="control-label" for="desired-fat">Тестови % телесни мазнини</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input id="desired-fat" name="desired-fat" type="number" placeholder="%" value="" class="form-control input-sm" onchange="fatController.calcFat()">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr></tr>
+                                                                    </tbody>
+                                                                    <tfoot>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="contact-item form-submit">
+                                                                                <input name="submit" type="submit" id="submit" class="submit" value="ИЗЧИСЛИ">
+                                                                                <input type="reset" class="submit" id="reset" value="НУЛИРАЙ" style="margin-top: 8px">
+                                                                            </div>
+                                                                        </td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    </tfoot>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div id="result" class="col-md-12" hidden>
+                                            <div class="panel panel-default">
+                                                <div class="panel-body" style="padding-top: 10px">
+                                                    <h3 class="bg-primary" style="margin-top: 0px">Резултат</h3>
+                                                    <div>
+                                                        <strong>Процент Телесни Мазнини: </strong>
+                                                        <strong id="fat-percent"></strong>
+                                                        <p></p>
+                                                        <table class="table table-bordered">
+                                                            <tbody class="text-center">
+                                                            <tr>
+                                                                <td>
+                                                                    Относително количество телесни мазнини (%)
+                                                                </td>
+                                                                <td>
+                                                                    <strong id="fat-percent-2"></strong>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Абсолютно количество телесни мазнини (кг)
+                                                                </td>
+                                                                <td>
+                                                                    <strong id="fat-mass"></strong>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Активна телесна маса (кг)
+                                                                </td>
+                                                                <td>
+                                                                    <strong id="lbm"></strong>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Относително количество излишни телесни мазнини (%)
+                                                                </td>
+                                                                <td>
+                                                                    <strong id="efm-percent"></strong>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Абсолютно количество излишни телесни мазнини (кг)
+                                                                </td>
+                                                                <td>
+                                                                    <strong id="efm-kg"></strong>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="category col-md-12">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body" style="padding-top: 10px">
+                                                    <h3 class="bg-primary" style="margin-top: 0px">Категоризация</h3>
+                                                    <div class="table-responsive">
+                                                        <p></p>
+                                                        <table class="table">
+                                                            <thead>
+                                                            <tr>
+                                                                <th>
+                                                                    Мъже
+                                                                </th>
+                                                                <th>
+                                                                    Жени
+                                                                </th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <table class="table table-bordered">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <td>
+                                                                                % телесни мазнини
+                                                                            </td>
+                                                                            <td>
+                                                                                Състояние
+                                                                            </td>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody class="text-center">
+                                                                        <tr>
+                                                                            <td>
+                                                                                < 3%
+                                                                            </td>
+                                                                            <td>
+                                                                                Нездравословно
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                4% - 5%
+                                                                            </td>
+                                                                            <td>
+                                                                                Отлично
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                6% - 8%
+                                                                            </td>
+                                                                            <td>
+                                                                                Много добро
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                9% - 11%
+                                                                            </td>
+                                                                            <td>
+                                                                                Добро
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                12% - 14%
+                                                                            </td>
+                                                                            <td>
+                                                                                Умерено
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                15% - 17%
+                                                                            </td>
+                                                                            <td>
+                                                                                Незадоволително
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                17% - 19%
+                                                                            </td>
+                                                                            <td>
+                                                                                Неприемливо
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                > 19%
+                                                                            </td>
+                                                                            <td>
+                                                                                Недопустимо
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td>
+                                                                    <table class="table table-bordered">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <td>
+                                                                                % телесни мазнини
+                                                                            </td>
+                                                                            <td>
+                                                                                Състояние
+                                                                            </td>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody class="text-center">
+                                                                        <tr>
+                                                                            <td>
+                                                                                < 10%
+                                                                            </td>
+                                                                            <td>
+                                                                                Нездравословно
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                11% - 12%
+                                                                            </td>
+                                                                            <td>
+                                                                                Отлично
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                13% - 14%
+                                                                            </td>
+                                                                            <td>
+                                                                                Много добро
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                15% - 16%
+                                                                            </td>
+                                                                            <td>
+                                                                                Добро
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                17% - 19%
+                                                                            </td>
+                                                                            <td>
+                                                                                Умерено
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                20% - 22%
+                                                                            </td>
+                                                                            <td>
+                                                                                Незадоволително
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                22% - 22%
+                                                                            </td>
+                                                                            <td>
+                                                                                Неприемливо
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                > 22%
+                                                                            </td>
+                                                                            <td>
+                                                                                Недопустимо
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <p>
+                                                        <i>
+                                                            Имайте предвид, че горната категоризация на диазпазона
+                                                            относителни телесни мазнини, е валидна при положение, че
+                                                            активната Ви телесна маса е в порядъка на не повече от
+                                                            -5кг от долната граница на оптималната Ви такава!
+                                                        </i>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <p>
+                                                При четене на таблицата с категоризация, за да сравните резултатите си с
+                                                тези на друг, с по-малко години от вашите, за всеки десет години разлика
+                                                мъжете да извадят 1% от резултата от измерването, а жените 0.5%! При
+                                                сравнение между мъже с разлика в годините не по-малка от 5 и не повече
+                                                от 10 години, да се извадят 0.5% от резултатите! В случай на по-малко от
+                                                5 години разлика в годините, за сравнение използвайте крайните
+                                                стойностите от таблиците с резултати и категоризация!
+                                            </p>
+                                            <div>
+                                                <h3>Директни връзки</h3>
+                                                <a href="endurance_calculator.html">Издръжливост със собствено тегло</a><br>
+                                                <a href="strength_calculator.html">Силова издръжливост</a><br>
+                                                <a href="fat_calculator.html">Изчислител на телесни мазнини</a><br>
+                                                <a href="lbm_calculator.html">Изчислител на оптимално активно тегло</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End The Content -->
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Wrapper Site -->
+
+<!-- Footer -->
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-md-offset-3">
+                <div class="footer-inner">
+                    <div class="footer-widgets">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="widget">
+                                    <h2 class="title"><span>Контакти</span></h2>
+                                    <ul>
+                                        <li>
+                                            Тел: +359 876 10 00 39 - Явор
+                                            Тел: +359 888 03 04 24 - Ели
+                                        </li>
+                                        <li>
+                                            Е-Поща: mail@athleticstandard.org
+                                        </li>
+                                        <li>
+                                            Адрес: ул. „Проф. д-р Иван Странски“ 61, 1700 Студентски Комплекс, София
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="widget">
+                                    <h2 class="title"><span>Занималня</span></h2>
+                                    <ul>
+                                        <li><a href="../views/404.html">Движения</a></li>
+                                        <li><a href="../views/strength_hall.html">Зала на Силата</a></li>
+                                        <li><a href="../views/404.html">Toddler</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="widget">
+                                    <h2 class="title"><span>Ресурси</span></h2>
+                                    <ul>
+                                        <li><a href="../views/calculators.html">Калкулатори</a></li>
+                                        <li><a href="../views/404.html">Брошура</a></li>
+                                        <li><a href="../views/404.html">Униформа</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="copyright">
+                                    <p>&copy;2015-2019 <br>athleticstandard.org</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    всички права запазени |
+                    <a href="../views/terms.html">условия за ползване</a> |
+                    <a href="../views/policy.html">политика за поверителност</a> |
+                    &copy;protected by <a target="_blank" href="http://www.copyscape.com/"
+                                          title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page.">Copyscape</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+<script src="../js/libs/jquery-1.12.4.min.js"></script>
+<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="../js/js/bootstrap.min.js"></script>
+<script src="../js/libs/masonry.pkgd.min.js"></script>
+<script src="../js/libs/imagesloaded.pkgd.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script src="../js/models/magnificPopup.js"></script>
+<script src="../js/controller/fatController.js"></script>
+<script src="../js/controller/subscribeController.js"></script>
+<script src="../js/services/subscribeService.js"></script>
+<script src="../js/services/remoteService.js"></script>
+<script src="../js/models/fatModel.js"></script>
+<script>
+    document.getElementById("lang").addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = ("../en/views/art_index_en.html");
+    });
+</script>
+<script>
+    $(function ($) {
+        let pathName = document.location.pathname;
+        window.onbeforeunload = function () {
+            let scrollPosition = $(document).scrollTop();
+            sessionStorage.setItem("scrollPosition_" + pathName, scrollPosition.toString());
+        }
+        if (sessionStorage["scrollPosition_" + pathName]) {
+            $(document).scrollTop(sessionStorage.getItem("scrollPosition_" + pathName));
+        }
+    });
+</script>
+<script>
+    fatController.calcFat();
+    subscribeController.subscribe();
+</script>
 </body>
 </html>

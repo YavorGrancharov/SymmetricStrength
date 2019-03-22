@@ -20,7 +20,7 @@ let fatController = (() => {
 
         let fat = document.getElementById("fat-percent");
         let fat_second_row = document.getElementById("fat-percent-2");
-        let fatMass = document.getElementById("fat-mass");
+        let fatMass = document.getElementById("fat-result");
         let lbm = document.getElementById("lbm");
         let submit = document.getElementById("submit");
         let result = document.getElementById("result");

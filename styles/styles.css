@@ -2083,4 +2083,55 @@ body {
     border-bottom: hidden;
 }
 
+#fat-mass {
+    opacity: 0.5;
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+}
+
+#fat-mass:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#free-fat-mass {
+    opacity: 0.5;
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+}
+
+#free-fat-mass:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#endurance {
+    opacity: 0.5;
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+}
+
+#endurance:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#strengthEndurance {
+    opacity: 0.5;
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+}
+
+#strengthEndurance:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#maxPull, #maxDip {
+    text-align-last: center;
+}
 /* end endurance calculator css*/

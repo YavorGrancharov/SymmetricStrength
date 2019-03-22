@@ -207,24 +207,24 @@
                                     <div class="col-md-6 text-center">
                                         <h2>Изръжливост</h2>
                                         <h4>набирания/кофи</h4>
-                                        <img src="../static/images/hanging-knee-raises-crossfit-silhouette.png" id="endurance">
+                                        <img src="../static/images/pull-dip.png" id="endurance">
                                     </div>
                                     <div class="col-md-6 text-center">
                                         <h2>Сила</h2>
                                         <h4>многоставни движения</h4>
-                                        <img src="../static/images/mill_press2.png" id="strengthEndurance">
+                                        <img src="../static/images/deadlift.png" id="strengthEndurance">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 text-center">
                                         <h2>Калиперометрия</h2>
                                         <h4>телесна композиция</h4>
-                                        <img src="../static/images/fit_scanner.png" id="fat-mass">
+                                        <img src="../static/images/skinfold-caliper.png" id="fat-mass">
                                     </div>
                                     <div class="col-md-6 text-center">
                                         <h2>Антропометрия</h2>
                                         <h4>идеално активно тегло</h4>
-                                        <img src="../static/images/strong-man.png" id="free-fat-mass">
+                                        <img src="../static/images/wrist-size.png" id="free-fat-mass">
                                     </div>
                                 </div>
                             </div>
@@ -321,9 +321,11 @@
     let endurance = document.getElementById("endurance");
     let strengthEndurance = document.getElementById("strengthEndurance");
     let fatMass = document.getElementById("fat-mass");
+    let freeFatMass = document.getElementById("free-fat-mass");
+
     endurance.addEventListener("click", function (event) {
         event.preventDefault();
-        window.location.href = ("endurance_calculator.html");
+        window.location.href = ("../calcs/endurance_calculator.html");
     });
     strengthEndurance.addEventListener("click", function (event) {
         event.preventDefault();
@@ -332,6 +334,10 @@
     fatMass.addEventListener("click", function (event) {
         event.preventDefault();
         window.location.href = ("../calcs/fat_calculator.html");
+    });
+    freeFatMass.addEventListener("click", function (event) {
+        event.preventDefault();
+        window.location.href = ("../calcs/lbm_calculator.html");
     });
 </script>
 <script>
