@@ -63,7 +63,11 @@ let fatController = (() => {
             return total.value;
         });
 
-        sum.value = addition();
+        if (addition() == 0) {
+            sum.value = ''
+        } else {
+            sum.value = addition();
+        }
 
         let bodyFat = 0;
         let bodyDensity = 0;
@@ -75,18 +79,18 @@ let fatController = (() => {
                 if (sex.value == 'male' && method.value == '7') {
                     bodyDensity = 1.112 - (0.00043499 * sum.value) + (0.00000055 * sum.value * sum.value) - (0.00028826 * age.value);
                     if (formula.value == 'brozek') {
-                        fat.innerHTML = Math.round(((457 / bodyDensity) - 414.2) * 10) / 10 + '%';
+                        fat.innerHTML = Math.round(((457 / bodyDensity) - 414.2) * 10) / 10;
                     }
 
                     if (formula.value == 'siri') {
-                        fat.innerHTML = Math.round(((495 / bodyDensity) - 450) * 10) / 10 + '%';
+                        fat.innerHTML = Math.round(((495 / bodyDensity) - 450) * 10) / 10;
                     }
                 }
 
                 if (sex.value == 'female' && method.value == '7') {
                     bodyDensity = 1.097 - (0.00046971 * sum.value) + (0.00000056 * sum.value * sum.value) - (0.00012828 * age.value);
                     if (formula.value == 'brozek') {
-                        fat.innerHTML = Math.round(((457 / bodyDensity) - 414.2) * 10) / 10 + '%';
+                        fat.innerHTML = Math.round(((457 / bodyDensity) - 414.2) * 10) / 10;
                     }
 
                     if (formula.value == 'siri') {
@@ -96,39 +100,39 @@ let fatController = (() => {
 
                 if (sex.value == 'male' && method.value == '4') {
                     bodyFat = (0.29288 * sum.value) - (0.0005 * sum.value * sum.value) + (0.15845 * age.value) - 5.76377;
-                    fat.innerHTML = Math.round(bodyFat * 10) / 10 + '%';
+                    fat.innerHTML = Math.round(bodyFat * 10) / 10;
                 }
 
                 if (sex.value == 'female' && method.value == '4') {
                     bodyFat = (0.29669 * sum.value) - (0.00043 * sum.value * sum.value) + (0.02963 * age.value) + 1.4072;
-                    fat.innerHTML = Math.round(bodyFat * 10) / 10 + '%';
+                    fat.innerHTML = Math.round(bodyFat * 10) / 10;
                 }
 
                 if (sex.value == 'male' && method.value == '3') {
                     bodyDensity = 1.10938 - (0.0008267 * sum.value) + (0.0000016 * sum.value * sum.value) - (0.0002574 * age.value);
                     if (formula.value == 'brozek') {
-                        fat.innerHTML = Math.round(((457 / bodyDensity) - 414.2) * 10) / 10 + '%';
+                        fat.innerHTML = Math.round(((457 / bodyDensity) - 414.2) * 10) / 10;
                     }
 
                     if (formula.value == 'siri') {
-                        fat.innerHTML = Math.round(((495 / bodyDensity) - 450) * 10) / 10 + '%';
+                        fat.innerHTML = Math.round(((495 / bodyDensity) - 450) * 10) / 10;
                     }
                 }
 
                 if (sex.value == 'female' && method.value == '3') {
                     bodyDensity = 1.0994921 - (0.0009929 * sum.value) + (0.0000023 * sum.value * sum.value) - (0.0001392 * age.value);
                     if (formula.value == 'brozek') {
-                        fat.innerHTML = Math.round(((457 / bodyDensity) - 414.2) * 10) / 10 + '%';
+                        fat.innerHTML = Math.round(((457 / bodyDensity) - 414.2) * 10) / 10;
                     }
 
                     if (formula.value == 'siri') {
-                        fat.innerHTML = Math.round(((495 / bodyDensity) - 450) * 10) / 10 + '%';
+                        fat.innerHTML = Math.round(((495 / bodyDensity) - 450) * 10) / 10;
                     }
                 }
 
                 fat_second_row.innerHTML = fat.innerHTML;
-                fatMass.innerHTML = Math.round((weight.value * parseFloat(fat.innerHTML)) / 10) / 10 + 'кг';
-                lbm.innerHTML = weight.value - parseFloat(fatMass.innerHTML) + 'кг';
+                fatMass.innerHTML = Math.round((weight.value * parseFloat(fat.innerHTML)) / 10) / 10;
+                lbm.innerHTML = weight.value - parseFloat(fatMass.innerHTML);
 
                 if (result.hidden === true) {
                     result.hidden = false;
