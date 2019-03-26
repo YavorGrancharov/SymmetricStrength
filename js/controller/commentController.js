@@ -26,23 +26,23 @@ let commentController = (() => {
                                                     $(commentReply)
                                                         .append($('<form action="#/" method="post" class="contact" style="margin-top: 10px"></form>')
                                                             .append($('<div class="contact-item"></div>')
-                                                                .append($('<input name="author" value="" id="author" type="text" placeholder="Име *">')))
+                                                                .append($('<input name="author-reply" value="" id="author-reply" type="text" placeholder="Име *">')))
                                                             .append($('<div class="contact-item"></div>')
-                                                                .append($('<input name="email" value="" id="email" type="email" placeholder="По избор с е-поща в Gravatar">')))
+                                                                .append($('<input name="email-reply" value="" id="email" type="email-reply" placeholder="По избор с е-поща в Gravatar">')))
                                                             // .append($('<div class="contact-item"></div>')
                                                             //     .append($('<input id="avatar" name="avatar" value="" type="text" placeholder="Avatar URL">')))
                                                             .append($('<div class="contact-item"></div>')
-                                                                .append($('<textarea name="comment" id="comment" class="commentBox" placeholder="Коментар *"></textarea>')))
+                                                                .append($('<textarea name="reply" id="reply" class="commentBox" placeholder="Коментар *"></textarea>')))
                                                             .append($('<div class="contact-item form-submit"></div>')
-                                                                .append($('<input name="submit" type="submit" id="submit" class="submit" value="ИЗПРАТИ">')
+                                                                .append($('<input name="submit-reply" type="submit" id="submit-reply" class="submit" value="ИЗПРАТИ">')
                                                                     .on('click', function (event) {
                                                                         event.preventDefault();
                                                                         let id = _id;
                                                                         let date = formatDate(new Date());
-                                                                        let author = $('#author').val();
-                                                                        let email = $('#email').val();
+                                                                        let author = $('#author-reply').val();
+                                                                        let email = $('#email-reply').val();
                                                                         let avatar = '';
-                                                                        let comment = $('#comment').val();
+                                                                        let comment = $('#reply').val();
                                                                         let visible = false;
                                                                         let response = grecaptcha.getResponse();
 
@@ -100,10 +100,10 @@ let commentController = (() => {
                                                                             });
                                                                         }
 
-                                                                        $('#author').val('');
-                                                                        $('#email').val('');
+                                                                        $('#author-reply').val('');
+                                                                        $('#email-reply').val('');
                                                                         //$('#avatar').val('');
-                                                                        $('#comment').val('');
+                                                                        $('#reply').val('');
                                                                         grecaptcha.reset();
                                                                     }))
                                                                 .append($('<input name="hide" type="submit" style="margin: 5px" id="hide" class="submit" value="ЗАТВОРИ">')

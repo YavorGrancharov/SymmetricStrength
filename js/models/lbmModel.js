@@ -11,7 +11,7 @@ let lbmModel = (() => {
             lbmHigherBound: document.getElementById("lbm-kg-higherbound"),
             weightLowerBound: document.getElementById("overall-lowerbound"),
             weightHigherBound: document.getElementById("overall-higherbound"),
-        }
+        };
         return user;
     }
 
