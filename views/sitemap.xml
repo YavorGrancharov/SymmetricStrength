@@ -104,6 +104,24 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://www.athleticstandard.org/calcs/endurance_calculator.html</loc>
+        <lastmod>2019-03-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.athleticstandard.org/calcs/fat_calculator.html</loc>
+        <lastmod>2019-03-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.athleticstandard.org/calcs/lbm_calculator.html</loc>
+        <lastmod>2019-03-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://www.athleticstandard.org/views/terms.html</loc>
         <lastmod>2019-03-26</lastmod>
         <changefreq>yearly</changefreq>
