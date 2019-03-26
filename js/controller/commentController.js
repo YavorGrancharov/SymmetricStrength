@@ -28,7 +28,7 @@ let commentController = (() => {
                                                             .append($('<div class="contact-item"></div>')
                                                                 .append($('<input name="author-reply" value="" id="author-reply" type="text" placeholder="Име *">')))
                                                             .append($('<div class="contact-item"></div>')
-                                                                .append($('<input name="email-reply" value="" id="email" type="email-reply" placeholder="По избор с е-поща в Gravatar">')))
+                                                                .append($('<input name="email-reply" value="" id="email-reply" type="email" placeholder="По избор с е-поща в Gravatar">')))
                                                             // .append($('<div class="contact-item"></div>')
                                                             //     .append($('<input id="avatar" name="avatar" value="" type="text" placeholder="Avatar URL">')))
                                                             .append($('<div class="contact-item"></div>')
