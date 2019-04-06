@@ -19,7 +19,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>ATHLETIC STANDARD</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="атлетизъм, сила, издръжливост, упоритост, стабилност">
+    <meta name="author" content="Yavor Grancharov">
+    <title>Athletic Standard</title>
     <link rel="icon" type="image/x-icon" href="static/images/logo.png">
     <link rel="canonical" href="https://www.athleticstandard.org"/>
     <link rel="stylesheet" href="styles/styles.css" media="all">
@@ -27,6 +30,27 @@
     <link rel="stylesheet" href="styles/libs/font-awesome.min.css" type="text/css" media="all">
 </head>
 <body>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml            : true,
+            version          : 'v3.2'
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat" attribution=setup_tool page_id="155676468649069" theme_color="#d42828" logged_in_greeting="Здравей! С какво можем да ти бъдем полезни?" logged_out_greeting="Здравей! С какво можем да ти бъдем полезни?">
+</div>
 <!-- Wrapper Site -->
 <div id="main-content">
 
@@ -120,9 +144,6 @@
                                             <a href="">Документация</a>
                                             <ul class="sub-menu">
                                                 <li>
-                                                    <a href="views/404.html">Концепция</a>
-                                                </li>
-                                                <li>
                                                     <a href="views/404.html">Идентичност</a>
                                                 </li>
                                                 <li>
@@ -170,7 +191,7 @@
 
                             <!-- Socials -->
                             <div class="socials">
-                                <a target="_blank" href="https://web.facebook.com/Athletic-Standard-155676468649069/"
+                                <a target="_blank" href="https://www.facebook.com/athleticstandard.org/"
                                    title="Facebook">
                                     <i class="fa fa-facebook"></i>
                                 </a>
@@ -216,11 +237,9 @@
                                 <input type="hidden" class="hiddenRecaptcha" name="subscribe_hiddenRecaptcha"
                                        id="subscribe_hiddenRecaptcha">
                             </div>
-                            <!--<div class="copyright">-->
-                            <!--<p>-->
-                            <!--&copy;2015-2019 athleticstandard.org-->
-                            <!--</p>-->
-                            <!--</div>-->
+                            <div class="copyright">
+
+                            </div>
 
                         </div>
                     </div>
@@ -340,6 +359,7 @@
                                     <ul>
                                         <li><a href="views/404.html">Движения</a></li>
                                         <li><a href="views/strength_hall.html">Зала на Силата</a></li>
+                                        <li><a href="views/strength_hall.html">Сводка</a></li>
                                         <li><a href="views/404.html">Галерия</a></li>
                                         <li><a href="views/sitemap.html">Карта на сайта</a></li>
                                     </ul>

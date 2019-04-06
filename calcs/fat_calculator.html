@@ -19,7 +19,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>ATHLETIC STANDARD</title>
+    <meta name="description" content="Калкулатор за изчисляване на процент подкожни мазнини чрез интерпретиране резултата от измервания на гънките тялото по метода на калиперометрията!">
+    <meta name="keywords" content="нисък, процент, телесни, мазнини, активно, тегло, релеф">
+    <meta name="author" content="Yavor Grancharov">
+    <title>Изчислител на процент телесни мазнини</title>
     <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
     <link rel="stylesheet" href="../styles/styles.css" media="all">
     <link rel="stylesheet" href="../styles/libs/bootstrap.min.css" media="all">
@@ -266,9 +269,9 @@
                                                                         </td>
                                                                         <td>
                                                                             <select class="dropdown" id="folds" onchange="fatController.calcFat()">
-                                                                                <option value="7" selected>7 (препоръчително)</option>
-                                                                                <option value="4">4</option>
-                                                                                <option value="3">3</option>
+                                                                                <option value="7" selected>7 кожни гънки</option>
+                                                                                <option value="4">4 кожни гънки</option>
+                                                                                <option value="3">3 кожни гънки</option>
                                                                             </select>
                                                                         </td>
                                                                     </tr>
@@ -457,12 +460,12 @@
                                                                     <table class="table table-bordered">
                                                                         <thead>
                                                                         <tr>
-                                                                            <td>
-                                                                                % телесни мазнини
-                                                                            </td>
-                                                                            <td>
+                                                                            <th class="text-center">
+                                                                                % мазнини
+                                                                            </th>
+                                                                            <th class="text-center">
                                                                                 Състояние
-                                                                            </td>
+                                                                            </th>
                                                                         </tr>
                                                                         </thead>
                                                                         <tbody class="text-center">
@@ -537,12 +540,12 @@
                                                                     <table class="table table-bordered">
                                                                         <thead>
                                                                         <tr>
-                                                                            <td>
-                                                                                % телесни мазнини
-                                                                            </td>
-                                                                            <td>
+                                                                            <th class="text-center">
+                                                                                % мазнини
+                                                                            </th>
+                                                                            <th class="text-center">
                                                                                 Състояние
-                                                                            </td>
+                                                                            </th>
                                                                         </tr>
                                                                         </thead>
                                                                         <tbody class="text-center">
@@ -617,7 +620,7 @@
                                                             </tbody>
                                                         </table>
                                                     </div>
-                                                    <p>
+                                                    <p hidden>
                                                         <i>
                                                             Имайте предвид, че горната категоризация на диазпазона
                                                             относителни телесни мазнини, е валидна при положение, че
