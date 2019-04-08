@@ -19,8 +19,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="description" content="">
-    <meta name="keywords" content="атлетизъм, сила, издръжливост, упоритост, стабилност">
+    <meta name="description"
+          content="Oбщо силова подготовка с цел развиване на първостепенни физически качества чрез упражнения, както с външно съпротивление така и собственосилови.">
+    <meta name="keywords" content="физически качества, атлетизъм, сила, баланс, издръжливост, упоритост, стабилност">
     <meta name="author" content="Yavor Grancharov">
     <title>Athletic Standard</title>
     <link rel="icon" type="image/x-icon" href="static/images/logo.png">
@@ -28,29 +29,21 @@
     <link rel="stylesheet" href="styles/styles.css" media="all">
     <link rel="stylesheet" href="styles/libs/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="styles/libs/font-awesome.min.css" type="text/css" media="all">
+    <style id="antiClickjack">
+        body {
+            display: none !important;
+        }
+    </style>
+    <script type="text/javascript">
+        if (self === top) {
+            let antiClickjack = document.getElementById("antiClickjack");
+            antiClickjack.parentNode.removeChild(antiClickjack);
+        } else {
+            top.location = self.location;
+        }
+    </script>
 </head>
 <body>
-<!-- Load Facebook SDK for JavaScript -->
-<div id="fb-root"></div>
-<script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            xfbml            : true,
-            version          : 'v3.2'
-        });
-    };
-
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-<!-- Your customer chat code -->
-<div class="fb-customerchat" attribution=setup_tool page_id="155676468649069" theme_color="#d42828" logged_in_greeting="Здравей! С какво можем да ти бъдем полезни?" logged_out_greeting="Здравей! С какво можем да ти бъдем полезни?">
-</div>
 <!-- Wrapper Site -->
 <div id="main-content">
 
@@ -174,10 +167,12 @@
                                             <a href="">Емпиричен подход</a>
                                             <ul class="sub-menu">
                                                 <li>
-                                                    <a href="views/404.html">Обосновка на прогресията за издръжливост</a>
+                                                    <a href="views/404.html">Обосновка на прогресията за
+                                                        издръжливост</a>
                                                 </li>
                                                 <li>
-                                                    <a href="views/404.html">Обосновка на прогресията за силова издръжливост</a>
+                                                    <a href="views/404.html">Обосновка на прогресията за силова
+                                                        издръжливост</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -260,61 +255,56 @@
                                 <!-- The Content -->
                                 <div class="the-excerpt">
                                     <h2>Философия</h2>
-                                    <p>There’s nothing quite as frightening as the unknown. These words of former US
-                                        Secretary of Defense Donald Rumsfeld should be truly terrifying (although the
-                                        general consensus at the time was that they sounded like nonsense).</p>
-                                    <p>Design works within constraints. The Columban monks who crafted the Book of Kells
-                                        worked with four inks on vellum, a material made of calfskin. The materials were
-                                        simple but clearly defined. The cenobitic designers knew the hues of the inks,
-                                        the weight of the vellum, and crucially, they knew the dimensions of each
-                                        page.</p>
-                                    <p>
-                                        Suspendisse eleifend nulla ac rhoncus egestas. Sed vehicula ipsum vitae finibus
-                                        condimentum. Phasellus rhoncus, nulla et sodales sodales, massa nisl volutpat
-                                        odio, ac sodales risus metus sollicitudin odio.
+                                    <p>Атлетичната сила на един лидер, според гледната точка на времето, отразява
+                                        способността му да води. Спортът се
+                                        разглежда като методологичен процес, чрез който
+                                        да научим обективната истина за атлетичния потенциал на даден човек, като я
+                                        актуализираме в спортната конкуренция. Атлетизмът като мярка за индивидуална
+                                        стойност се разглежда като лек за социалното неравенство, а спортът се
+                                        възприема като морално образование.</p>
+                                    <p>Важни въпроси във философията на
+                                        спорта са
+                                        неговите социални предимства, естетиката на спортното
+                                        представяне, произхода, обхвата и особеностите на индивидуалната и екипната
+                                        стратегия,
+                                        спортната етика, логиката на правилата в спорта, метафизиката на спорта като
+                                        компонент на човешката природа или инстинкт.</p>
+                                    <p><a target="_blank" href="https://en.wikipedia.org/wiki/Philosophy_of_sport">Wikipedia</a>
                                     </p>
+                                    <p hidden>Тези и други въпроси обикновено се сравняват и противопоставят чрез
+                                        обективите на
+                                        три значими морални теории: последователност, професионален дълг и етика на
+                                        добродетелите.</p>
                                     <h2>Визия</h2>
-                                    <p>There’s nothing quite as frightening as the unknown. These words of former US
-                                        Secretary of Defense Donald Rumsfeld should be truly terrifying (although the
-                                        general consensus at the time was that they sounded like nonsense).</p>
-                                    <p>Design works within constraints. The Columban monks who crafted the Book of Kells
-                                        worked with four inks on vellum, a material made of calfskin. The materials were
-                                        simple but clearly defined. The cenobitic designers knew the hues of the inks,
-                                        the weight of the vellum, and crucially, they knew the dimensions of each
-                                        page.</p>
-                                    <p>
-                                        Suspendisse eleifend nulla ac rhoncus egestas. Sed vehicula ipsum vitae finibus
-                                        condimentum. Phasellus rhoncus, nulla et sodales sodales, massa nisl volutpat
-                                        odio, ac sodales risus metus sollicitudin odio.
-                                    </p>
+                                    <p>Да бъдем признати за един от водещите стандарти в развитието на </p>
                                     <h2>Мисия</h2>
-                                    <p>There’s nothing quite as frightening as the unknown. These words of former US
-                                        Secretary of Defense Donald Rumsfeld should be truly terrifying (although the
-                                        general consensus at the time was that they sounded like nonsense).</p>
-                                    <p>Design works within constraints. The Columban monks who crafted the Book of Kells
-                                        worked with four inks on vellum, a material made of calfskin. The materials were
-                                        simple but clearly defined. The cenobitic designers knew the hues of the inks,
-                                        the weight of the vellum, and crucially, they knew the dimensions of each
-                                        page.</p>
-                                    <p>
-                                        Suspendisse eleifend nulla ac rhoncus egestas. Sed vehicula ipsum vitae finibus
-                                        condimentum. Phasellus rhoncus, nulla et sodales sodales, massa nisl volutpat
-                                        odio, ac sodales risus metus sollicitudin odio.
+                                    <p>По достъпен начин, да образоваме и насърчаваме обществото да предприема действия,
+                                        към спазването на здравословен и активен начин на живот. Да
                                     </p>
                                     <h2>Ценности</h2>
-                                    <p>There’s nothing quite as frightening as the unknown. These words of former US
-                                        Secretary of Defense Donald Rumsfeld should be truly terrifying (although the
-                                        general consensus at the time was that they sounded like nonsense).</p>
-                                    <p>Design works within constraints. The Columban monks who crafted the Book of Kells
-                                        worked with four inks on vellum, a material made of calfskin. The materials were
-                                        simple but clearly defined. The cenobitic designers knew the hues of the inks,
-                                        the weight of the vellum, and crucially, they knew the dimensions of each
-                                        page.</p>
-                                    <p>
-                                        Suspendisse eleifend nulla ac rhoncus egestas. Sed vehicula ipsum vitae finibus
-                                        condimentum. Phasellus rhoncus, nulla et sodales sodales, massa nisl volutpat
-                                        odio, ac sodales risus metus sollicitudin odio.
-                                    </p>
+                                    <p class="lead">Отговорност</p>
+                                    <p>Осъзнаваме, че носим отговорност за използването и развитието
+                                        нашите индивидуални и колективни способности с цел постигане на високи резултати
+                                        в сферата на физическото здраве и спортно дълголетие, както за отделния човек
+                                        така и за общността.</p>
+                                    <p class="lead">Взаимодействие</p>
+                                    <p>Работим съвместно с други в сферата на физическото здраве и спорта, в изпълнение на
+                                        стратегията за доставяне и непрестанно подобряване на услугата, в дух на
+                                        сътрудничество и подкрепа, ценейки уменията и приноса на другите.</p>
+                                    <p class="lead">Професионализъм</p>
+                                    <p>Изпълняваме отговорността си да бъдем лидери в нашата професионална дисциплина
+                                        чрез налагането и прилагането на най-добрите практики, както по научен, така и
+                                        по грижовен и ангажиран начин.</p>
+                                    <p class="lead">Почтеност</p>
+                                    <p>Изграждаме доверие чрез поддържането на високо ниво на изпълнение, както и чрез
+                                        лоялност, честност, етични стандарти и справедливост.</p>
+                                    <p class="lead">Зачитане</p>
+                                    <p>Почитаме ценностите, правата и нуждите на другите и възприемаме разнообразието,
+                                        предоставено от всеки човек, независимо от културата, ориентацията, расата,
+                                        класа или пола.</p>
+                                    <p class="lead">Превъзходство</p>
+                                    <p>Непрекъснато проучваме, създаваме и разработваме нови решения за постигане на
+                                        изключителни резултати за нашите клиенти, партньори и общество.</p>
                                 </div>
                                 <!-- End The Content -->
                             </div>
