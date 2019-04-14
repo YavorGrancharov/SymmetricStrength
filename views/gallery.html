@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="../styles/styles.css" media="all">
     <link rel="stylesheet" href="../styles/libs/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="../styles/libs/font-awesome.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../node_modules/lightbox2/dist/css/lightbox.min.css">
 </head>
 <body>
 <!-- Wrapper Site -->
@@ -72,7 +73,7 @@
                             <!-- Logo -->
                             <div class="logo">
                                 <a href="../index.html">
-                                    <img src="../static/images/print_ready_logo%20copy.png" width="300" height="auto"
+                                    <img src="../static/images/print_ready_logo_vertical.png" width="60" height="auto"
                                          alt="main-logo">
                                 </a>
                             </div>
@@ -129,7 +130,7 @@
                                                     <a href="code_of_ethics.html">Етичен кодекс</a>
                                                 </li>
                                                 <li>
-                                                    <a href="404.html">Ръководство</a>
+                                                    <a href="404.html">Стандарт</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -182,7 +183,8 @@
                                 <input name="email" type="text" placeholder="Абонирай се с е-поща" id="subscribe_email">
                             </div>
                             <div class="box-subscribe">
-                                <div style="transform:scale(0.594);transform-origin:0 0; margin-top: 0.1px" class="g-recaptcha"
+                                <div style="transform:scale(0.594);transform-origin:0 0; margin-top: 0.1px"
+                                     class="g-recaptcha"
                                      data-sitekey="6Ldg2pYUAAAAAJAvcm5rIdhZaU3kpydbkoDHm5uP"></div>
                             </div>
 
@@ -202,10 +204,38 @@
                     <div class="posts-inner">
                         <article class="post">
                             <div class="post-header">
-                                <h3 class="text-center">Явор и Ели</h3>
+                                <h2 class="title"><span>Галерия</span></h2>
+                                <hr>
                             </div>
                             <div class="post-media">
-                                <img src="../static/images/us%20(3%20of%201).jpg" alt="Glass of water">
+                                <div class="row">
+                                    <a href="https://unsplash.it/1200/768.jpg?image=251" data-lightbox="fitness"
+                                       class="col-sm-4">
+                                        <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
+                                    </a>
+                                    <a href="https://unsplash.it/1200/768.jpg?image=252" data-lightbox="fitness"
+                                       class="col-sm-4">
+                                        <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
+                                    </a>
+                                    <a href="https://unsplash.it/1200/768.jpg?image=253" data-lightbox="fitness"
+                                       class="col-sm-4">
+                                        <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="row">
+                                    <a href="https://unsplash.it/1200/768.jpg?image=254" data-lightbox="fitness"
+                                       class="col-sm-4">
+                                        <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
+                                    </a>
+                                    <a href="https://unsplash.it/1200/768.jpg?image=255" data-lightbox="fitness"
+                                       class="col-sm-4">
+                                        <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
+                                    </a>
+                                    <a href="https://unsplash.it/1200/768.jpg?image=256" data-lightbox="fitness"
+                                       class="col-sm-4">
+                                        <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">
+                                    </a>
+                                </div>
                             </div>
                         </article>
                     </div>
@@ -222,26 +252,6 @@
         <div class="row">
             <div class="col-md-9 col-md-offset-3">
                 <div class="footer-inner">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="instagram">
-                                <h2 class="title"><a href="#/">Галерия</a></h2>
-                                <ul>
-                                    <li><img src="../static/images/us%20(3%20of%201).jpg" alt="Image"></li>
-                                    <li><img src="../static/images/us2%20(3%20of%201).jpg" alt="Image"></li>
-                                    <li><img src="../static/images/us3%20(3%20of%201).jpg" alt="Image"></li>
-                                    <li><img src="../static/images/us4%20(3%20of%201).jpg" alt="Image"></li>
-                                    <li><img src="../static/images/us5%20(3%20of%201).jpg" alt="Image"></li>
-                                    <li><img src="../static/images/us6%20(3%20of%201).jpg" alt="Image"></li>
-                                    <li><img src="../static/images/us7%20(3%20of%201).jpg" alt="Image"></li>
-                                    <li><img src="../static/images/us8%20(3%20of%201).jpg" alt="Image"></li>
-                                    <li><img src="../static/images/us9%20(3%20of%201).jpg" alt="Image"></li>
-                                    <li><img src="../static/images/us10%20(3%20of%201).jpg" alt="Image"></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="footer-widgets">
                         <div class="row">
                             <div class="col-sm-4">
@@ -267,6 +277,7 @@
                                     <ul>
                                         <li><a href="404.html">Движения</a></li>
                                         <li><a href="strength_hall.html">Зала на Силата</a></li>
+                                        <li><a href="gallery.html">Галерия</a></li>
                                         <li><a href="sitemap.html">Карта на сайта</a></li>
                                     </ul>
                                 </div>
@@ -303,6 +314,7 @@
 <script src="../js/libs/jquery-1.12.4.min.js"></script>
 <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="../js/js/bootstrap.min.js"></script>
+<script src="../node_modules/lightbox2/dist/js/lightbox.min.js"></script>
 <script src="../js/libs/masonry.pkgd.min.js"></script>
 <script src="../js/libs/imagesloaded.pkgd.min.js"></script>
 <script src="https://www.google.com/recaptcha/api.js"></script>
@@ -318,6 +330,13 @@
 </script>
 <script>
     subscribeController.subscribe();
+</script>
+<script>
+
+    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
 </script>
 </body>
 </html>
