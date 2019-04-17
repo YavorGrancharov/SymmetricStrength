@@ -11,7 +11,7 @@ let visitCounter = (() => {
                             count++;
                         }
                     })
-                    $('.post-views')[0].innerHTML = count + ' Views'
+                    $('.post-views')[0].innerHTML = count + ' Прегледа'
                 })
             })
         })

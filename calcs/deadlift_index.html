@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131327406-1"></script>
@@ -25,646 +26,782 @@
     <link rel="stylesheet" href="../styles/libs/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="../styles/libs/font-awesome.min.css" type="text/css" media="all">
 </head>
+
 <body>
-<!-- Wrapper Site -->
-<div id="main-content">
+    <!-- Wrapper Site -->
+    <div id="main-content">
 
-    <!-- Preload -->
-    <div id="preload">
-        <div class="kd-bounce">
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-    <!-- Preload -->
-
-    <!-- Mobile Menu -->
-    <div class="mobile">
-        <div class="container">
-            <!-- Mobile -->
-            <div class="menu-mobile">
-                <span class="item item-1"></span>
-                <span class="item item-2"></span>
-                <span class="item item-3"></span>
+        <!-- Preload -->
+        <div id="preload">
+            <div class="kd-bounce">
+                <div></div>
+                <div></div>
             </div>
-            <!-- End Mobile -->
-
-            <!-- Logo -->
-            <div class="logo">
-                <a href="../index.html">
-                    <h1>GO STRONG</h1>
-                </a>
-            </div>
-            <!-- End Logo -->
         </div>
-    </div>
-    <div class="hide-menu"></div>
-    <!-- End Mobile Menu -->
+        <!-- Preload -->
 
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-3">
-                <div class="header affix">
-                    <div class="table">
-                        <div class="table-cell">
-                            <!-- Logo -->
-                            <div class="logo">
-                                <a href="../index.html">
-                                    <img src="../static/images/print_ready_logo%20copy.png" width="300" height="auto"
-                                         alt="main-logo">
-                                </a>
-                            </div>
-                            <!-- End Logo -->
-
-                            <!-- Navigation -->
-                            <div class="main-menu">
-                                <nav>
-                                    <ul class="menu-list">
-                                        <li>
-                                            <a href="../index.html">Начало</a>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#/">Блог</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="../views/blog.html">Стандартен изглед</a>
-                                                </li>
-                                                <li>
-                                                    <a href="../views/blog_grid.html">Решетъчен изглед</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="../views/price.html">Цени</a>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#/">Видео</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="../views/video.html">Стандартен изглед</a>
-                                                </li>
-                                                <li>
-                                                    <a href="../views/video_grid.html">Решетъчен изглед</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="../views/about.html">За нас</a>
-                                        </li>
-                                        <li>
-                                            <a href="../views/contact.html">Контакти</a>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#/">Документация</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="../views/404.html">Идентичност</a>
-                                                </li>
-                                                <li>
-                                                    <a href="../views/rules.html">Правила</a>
-                                                </li>
-                                                <li>
-                                                    <a href="../views/code_of_ethics.html">Етичен кодекс</a>
-                                                </li>
-                                                <li>
-                                                    <a href="../views/404.html">Ръководство</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="../views/testimonials.html">Атестати</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <!-- End Navigation -->
-
-                            <!-- Socials -->
-                            <div class="socials">
-                                <a target="_blank" href="https://web.facebook.com/Athletic-Standard-155676468649069/"
-                                   title="Facebook">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                                <a target="_blank" href="https://www.youtube.com/channel/UC3jhBZbeXDzwad6o2yrttSA"
-                                   title="You Tube">
-                                    <i class="fa fa-youtube-play"></i>
-                                </a>
-                                <a target="_blank" href="http://leanonfat.blogspot.com/" title="Blogger">
-                                    <i class="fa fa-cutlery"></i>
-                                </a>
-                                <a href="#/" title="Subscribe">
-                                    <i class="fa fa-newspaper-o"></i>
-                                </a>
-                                <a href="#/" title="Language">
-                                    <i id="lang" class="fa fa-globe"></i>
-                                </a>
-                                <a href="#/" title="Search this site">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </div>
-                            <!-- End Socials -->
-
-                            <div class="box-search">
-                                <form role="search" id="searchform" action="https://search.freefind.com/find.html"
-                                      method="get" accept-charset="utf-8" target="_self">
-                                    <input type="text" placeholder="Търсене ..." name="query"/>
-                                    <input type="hidden" name="si" value="30222917">
-                                    <input type="hidden" name="pid" value="r">
-                                    <input type="hidden" name="n" value="0">
-                                    <input type="hidden" name="_charset_" value="">
-                                    <input type="hidden" name="bcd" value="&#247;">
-                                </form>
-                            </div>
-
-                            <div class="box-subscribe">
-                                <input name="email" type="text" placeholder="Абонирай се с е-поща" id="subscribe_email">
-                            </div>
-                            <div class="box-subscribe">
-                                <div style="transform:scale(0.594);transform-origin:0 0; margin-top: 0.1px" class="g-recaptcha"
-                                     data-sitekey="6Ldg2pYUAAAAAJAvcm5rIdhZaU3kpydbkoDHm5uP"></div>
-                            </div>
-
-                            <!--<div class="copyright">-->
-                            <!--<p>-->
-                            <!--&copy;2015-2019 athleticstandard.org-->
-                            <!--</p>-->
-                            <!--</div>-->
-
-                        </div>
-                    </div>
+        <!-- Mobile Menu -->
+        <div class="mobile">
+            <div class="container">
+                <!-- Mobile -->
+                <div class="menu-mobile">
+                    <span class="item item-1"></span>
+                    <span class="item item-2"></span>
+                    <span class="item item-3"></span>
                 </div>
+                <!-- End Mobile -->
+
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="../index.html">
+                        <h1>GO STRONG</h1>
+                    </a>
+                </div>
+                <!-- End Logo -->
             </div>
+        </div>
+        <div class="hide-menu"></div>
+        <!-- End Mobile Menu -->
 
-            <div class="col-md-9 col-md-offset-3">
-                <div class="posts">
-                    <div class="posts-inner">
-                        <article class="post">
-                            <div class="post-header">
-                                <h3 class="title">Силов Показател</h3>
-                                <h4 class="text-center">алгоритъм: Явор Грънчаров</h4>
-                                <hr>
-                            </div>
-                            <div class="post-content">
+        <div class="container">
+            <div class="row">
 
-                                <!-- The Content -->
-                                <div class="the-excerpt">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <form class="center-block" id="fat_calc" role="form">
-                                                <div class="well">
-                                                    <div class="text-center">
-                                                        <h3>
-                                                            <strong><< ОПРЕДЕЛИТЕЛ >></strong>
-                                                        </h3>
-                                                    </div>
-                                                    <div>
-                                                        <div id="bodyfat-calc" class="tab-content">
-                                                            <div class="tab-pane active">
-                                                                <table class="table borderless">
-                                                                    <tbody>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <h3>Данни</h3>
-                                                                        </td>
-                                                                        <td></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <label class="control-label" for="sexes">Пол</label>
-                                                                        </td>
-                                                                        <td>
-                                                                            <label class="radio-inline" for="sexes-01">
-                                                                                <input type="radio" name="sexes" id="sexes-01" value="male" checked onchange="lbmController.evalLBM()">
-                                                                                Мъж
-                                                                            </label>
-                                                                            <label class="radio-inline" for="sexes-02">
-                                                                                <input type="radio" name="sexes" id="sexes-02" value="female" onchange="lbmController.evalLBM()">
-                                                                                Жена
-                                                                            </label>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <label class="control-label" for="height">Височина *</label>
-                                                                        </td>
-                                                                        <td>
-                                                                            <input id="height" name="height" type="number" placeholder="см" value="" class="form-control input-sm" onchange="lbmController.evalLBM()">
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <label class="control-label" for="wrist">Обиколка на китка </label>
-                                                                        </td>
-                                                                        <td>
-                                                                            <input id="wrist" name="wrist" type="number" placeholder="см" value="" class="form-control input-sm" onchange="lbmController.evalLBM()">
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <label class="control-label" for="ankle">Обиколка на глезен </label>
-                                                                        </td>
-                                                                        <td>
-                                                                            <input id="ankle" name="ankle" type="number" placeholder="см" value="" class="form-control input-sm" onchange="lbmController.evalLBM()">
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <label class="control-label" for="desired-fat">Тестови % телесни мазнини</label>
-                                                                        </td>
-                                                                        <td>
-                                                                            <input id="desired-fat" name="desired-fat" type="number" placeholder="%" value="" class="form-control input-sm" onchange="lbmController.evalLBM()">
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr></tr>
-                                                                    </tbody>
-                                                                    <tfoot>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <div class="contact-item form-submit">
-                                                                                <input name="submit" type="submit" id="submit" class="submit" value="ИЗЧИСЛИ">
-                                                                                <input type="reset" class="submit" id="reset" value="НУЛИРАЙ" style="margin-top: 8px">
-                                                                            </div>
-                                                                        </td>
-                                                                        <td></td>
-                                                                    </tr>
-                                                                    </tfoot>
-                                                                </table>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div id="result" class="col-md-12" hidden>
-                                            <div class="panel panel-default">
-                                                <div class="panel-body" style="padding-top: 10px">
-                                                    <h3 class="bg-primary" style="margin-top: 0px">Резултат</h3>
-                                                    <div>
-                                                        <strong>Осреднена активна телесна маса: </strong>
-                                                        <strong id="lbm-kg"></strong><small>kg</small>
-                                                        <p></p>
-                                                        <table class="table table-bordered">
-                                                            <tbody class="text-center">
-                                                            <tr>
-                                                                <td>
-                                                                    Оптимална активно тегло, долна граница (кг)
-                                                                </td>
-                                                                <td>
-                                                                    <strong id="lbm-kg-lowerbound"></strong><small>kg</small>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    Оптимална активно тегло, горна граница (кг)
-                                                                </td>
-                                                                <td>
-                                                                    <strong id="lbm-kg-higherbound"></strong><small>kg</small>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    Относително общо тегло, долна граница (кг)
-                                                                </td>
-                                                                <td>
-                                                                    <strong id="overall-lowerbound"></strong><small>kg</small>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    Относително общо тегло, горна граница (кг)
-                                                                </td>
-                                                                <td>
-                                                                    <strong id="overall-higherbound"></strong><small>kg</small>
-                                                                </td>
-                                                            </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="category col-md-12">
-                                            <div class="panel panel-default">
-                                                <div class="panel-body" style="padding-top: 10px">
-                                                    <h3 class="bg-primary" style="margin-top: 0px">Категоризация</h3>
-                                                    <div class="table-responsive">
-                                                        <p></p>
-                                                        <table class="table">
-                                                            <thead>
-                                                            <tr>
-                                                                <th>
-                                                                    Мъже
-                                                                </th>
-                                                                <th>
-                                                                    Жени
-                                                                </th>
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <table class="table table-bordered">
-                                                                        <thead>
-                                                                        <tr>
-                                                                            <td>
-                                                                                % телесни мазнини
-                                                                            </td>
-                                                                            <td>
-                                                                                Състояние
-                                                                            </td>
-                                                                        </tr>
-                                                                        </thead>
-                                                                        <tbody class="text-center">
-                                                                        <tr>
-                                                                            <td>
-                                                                                < 3%
-                                                                            </td>
-                                                                            <td>
-                                                                                Нездравословно
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                4% - 5%
-                                                                            </td>
-                                                                            <td>
-                                                                                Отлично
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                6% - 8%
-                                                                            </td>
-                                                                            <td>
-                                                                                Много добро
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                9% - 11%
-                                                                            </td>
-                                                                            <td>
-                                                                                Добро
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                12% - 14%
-                                                                            </td>
-                                                                            <td>
-                                                                                Умерено
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                15% - 17%
-                                                                            </td>
-                                                                            <td>
-                                                                                Незадоволително
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                17% - 19%
-                                                                            </td>
-                                                                            <td>
-                                                                                Неприемливо
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                > 19%
-                                                                            </td>
-                                                                            <td>
-                                                                                Недопустимо
-                                                                            </td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                                <td>
-                                                                    <table class="table table-bordered">
-                                                                        <thead>
-                                                                        <tr>
-                                                                            <td>
-                                                                                % телесни мазнини
-                                                                            </td>
-                                                                            <td>
-                                                                                Състояние
-                                                                            </td>
-                                                                        </tr>
-                                                                        </thead>
-                                                                        <tbody class="text-center">
-                                                                        <tr>
-                                                                            <td>
-                                                                                < 10%
-                                                                            </td>
-                                                                            <td>
-                                                                                Нездравословно
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                11% - 12%
-                                                                            </td>
-                                                                            <td>
-                                                                                Отлично
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                13% - 14%
-                                                                            </td>
-                                                                            <td>
-                                                                                Много добро
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                15% - 16%
-                                                                            </td>
-                                                                            <td>
-                                                                                Добро
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                17% - 19%
-                                                                            </td>
-                                                                            <td>
-                                                                                Умерено
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                20% - 22%
-                                                                            </td>
-                                                                            <td>
-                                                                                Незадоволително
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                22% - 22%
-                                                                            </td>
-                                                                            <td>
-                                                                                Неприемливо
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                > 22%
-                                                                            </td>
-                                                                            <td>
-                                                                                Недопустимо
-                                                                            </td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                    <p>
-                                                        <i>
-                                                            Имайте предвид, че горната категоризация на диазпазона
-                                                            относителни телесни мазнини, е валидна при положение, че
-                                                            активната Ви телесна маса е в порядъка на не повече от
-                                                            -5кг от долната граница на оптималната Ви такава!
-                                                        </i>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <p>
-                                                При четене на таблицата с категоризация, за да сравните резултатите си с
-                                                тези на друг, с по-малко години от вашите, за всеки десет години разлика
-                                                мъжете да извадят 1% от резултата от измерването, а жените 0.5%! При
-                                                сравнение между мъже с разлика в годините не по-малка от 5 и не повече
-                                                от 10 години, да се извадят 0.5% от резултатите! В случай на по-малко от
-                                                5 години разлика в годините, за сравнение използвайте крайните
-                                                стойностите от таблиците с резултати и категоризация!
-                                            </p>
-                                            <div>
-                                                <h3>Директни връзки</h3>
-                                                <a href="endurance_calculator.html">Издръжливост със собствено тегло</a><br>
-                                                <a href="strength_calculator.html">Силова издръжливост</a><br>
-                                                <a href="fat_calculator.html">Изчислител на телесни мазнини</a><br>
-                                                <a href="lbm_calculator.html">Изчислител на оптимално активно тегло</a>
-                                            </div>
-                                        </div>
+                <div class="col-md-3">
+                    <div class="header affix">
+                        <div class="table">
+                            <div class="table-cell">
+                                <!-- Logo -->
+                                <div class="logo">
+                                    <a href="../index.html">
+                                        <img src="../static/images/print_ready_logo_vertical.png" width="60"
+                                            height="auto" alt="main-logo">
+                                    </a>
+                                </div>
+                                <!-- End Logo -->
+
+                                <!-- Navigation -->
+                                <div class="main-menu">
+                                    <nav>
+                                        <ul class="menu-list">
+                                            <li class="menu-item-has-children">
+                                                <a href="#/">Блог</a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <a href="../views/blog.html">Стандартен изглед</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../views/blog_grid.html">Решетъчен изглед</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="../views/price.html">Цени</a>
+                                            </li>
+                                            <li class="menu-item-has-children">
+                                                <a href="#/">Видео</a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <a href="../views/video.html">Стандартен изглед</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../views/video_grid.html">Решетъчен изглед</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="../views/about.html">За нас</a>
+                                            </li>
+                                            <li>
+                                                <a href="../views/contact.html">Контакти</a>
+                                            </li>
+                                            <li class="menu-item-has-children">
+                                                <a href="#/">Документация</a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <a href="../views/404.html">Идентичност</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../views/rules.html">Правила</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../views/code_of_ethics.html">Етичен кодекс</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../views/404.html">Ръководство</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="../views/testimonials.html">Атестати</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!-- End Navigation -->
+
+                                <!-- Socials -->
+                                <div class="socials">
+                                    <a target="_blank"
+                                        href="https://web.facebook.com/Athletic-Standard-155676468649069/"
+                                        title="Facebook">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a target="_blank" href="https://www.youtube.com/channel/UC3jhBZbeXDzwad6o2yrttSA"
+                                        title="You Tube">
+                                        <i class="fa fa-youtube-play"></i>
+                                    </a>
+                                    <a target="_blank" href="http://leanonfat.blogspot.com/" title="Blogger">
+                                        <i class="fa fa-cutlery"></i>
+                                    </a>
+                                    <a href="#/" title="Subscribe">
+                                        <i class="fa fa-newspaper-o"></i>
+                                    </a>
+                                    <a href="#/" title="Language">
+                                        <i id="lang" class="fa fa-globe"></i>
+                                    </a>
+                                    <a href="#/" title="Search this site">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                </div>
+                                <!-- End Socials -->
+
+                                <div class="box-search">
+                                    <form role="search" id="searchform" action="https://search.freefind.com/find.html"
+                                        method="get" accept-charset="utf-8" target="_self">
+                                        <input type="text" placeholder="Търсене ..." name="query" />
+                                        <input type="hidden" name="si" value="30222917">
+                                        <input type="hidden" name="pid" value="r">
+                                        <input type="hidden" name="n" value="0">
+                                        <input type="hidden" name="_charset_" value="">
+                                        <input type="hidden" name="bcd" value="&#247;">
+                                    </form>
+                                </div>
+
+                                <div class="box-subscribe">
+                                    <input name="email" type="text" placeholder="Абонирай се с е-поща"
+                                        id="subscribe_email">
+                                </div>
+                                <div class="box-subscribe">
+                                    <div style="transform:scale(0.594);transform-origin:0 0; margin-top: 0.1px"
+                                        class="g-recaptcha" data-sitekey="6Ldg2pYUAAAAAJAvcm5rIdhZaU3kpydbkoDHm5uP">
                                     </div>
                                 </div>
-                                <!-- End The Content -->
-                            </div>
 
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Wrapper Site -->
+                                <!--<div class="copyright">-->
+                                <!--<p>-->
+                                <!--&copy;2015-2019 athleticstandard.org-->
+                                <!--</p>-->
+                                <!--</div>-->
 
-<!-- Footer -->
-<footer id="footer" class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9 col-md-offset-3">
-                <div class="footer-inner">
-                    <div class="footer-widgets">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="widget">
-                                    <h2 class="title"><span>Контакти</span></h2>
-                                    <ul>
-                                        <li>
-                                            Тел: +359 876 10 00 39 - Явор
-                                            Тел: +359 888 03 04 24 - Ели
-                                        </li>
-                                        <li>
-                                            Е-Поща: mail@athleticstandard.org
-                                        </li>
-                                        <li>
-                                            Адрес: ул. „Проф. д-р Иван Странски“ 61, 1700 Студентски Комплекс, София
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="widget">
-                                    <h2 class="title"><span>Занималня</span></h2>
-                                    <ul>
-                                        <li><a href="../views/404.html">Движения</a></li>
-                                        <li><a href="../views/strength_hall.html">Зала на Силата</a></li>
-                                        <li><a href="sitemap.html">Карта на сайта</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="widget">
-                                    <h2 class="title"><span>Ресурси</span></h2>
-                                    <ul>
-                                        <li><a href="../views/calculators.html">Калкулатори</a></li>
-                                        <li><a href="../views/404.html">Брошура</a></li>
-                                        <li><a href="../views/404.html">Униформа</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="copyright">
-                                    <p>&copy;2015-2019 <br>athleticstandard.org</p>
-                                </div>
                             </div>
                         </div>
                     </div>
-                    всички права запазени |
-                    <a href="../views/terms.html">условия за ползване</a> |
-                    <a href="../views/policy.html">политика за поверителност</a> |
-                    &copy;protected by <a target="_blank" href="http://www.copyscape.com/"
-                                          title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page.">Copyscape</a>
+                </div>
+
+                <div class="col-md-9 col-md-offset-3">
+                    <div class="posts">
+                        <div class="posts-inner">
+                            <article class="post">
+                                <div class="post-header">
+                                    <h3 class="title">Силов Показател</h3>
+                                    <h5>алгоритъм: <button class="btn-link"><a href="../views/about.html">Явор
+                                                Грънчаров</a></button></h5>
+                                    <h5>сътрудник: Диян Чубуров</h5>
+                                    <h5>вдъхновение: Милко Георгиев (<button class="btn btn-link"><a target="_blank"
+                                                href="https://spidersport.com/">SPIDER SPORT</a></button>)</h5>
+                                    <hr>
+                                </div>
+                                <div class="post-content">
+
+                                    <!-- The Content -->
+                                    <div class="the-excerpt">
+                                        <div class="main">
+                                            <h1>Deadlift Index</h1>
+                                            [work to bodyweight ratio]
+
+                                            <table>
+                                                <tr>
+                                                    <td>Gender:</td>
+                                                    <td><select name="gender"></select></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Height:</td>
+                                                    <td> <select name="height"></select></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Weight:</td>
+                                                    <td><select name="weight"></select></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Deadlift:</td>
+                                                    <td>
+                                                        <select name="deadlift"></select>
+                                                        <select name="reps"></select>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>RM:</td>
+                                                    <td class="rm">-</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>W/Bw:</td>
+                                                    <td>
+                                                        <span class="wbw">-</span>
+                                                        <span class="performance"></span>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+
+                                                <tr class="need-results">
+                                                    <td>To achieve: </td>
+                                                    <td><select name="nextLevel" class="res"></select></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <div class="nextLevelReps"></div>
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+
+                                        </div>
+
+                                    
+                                        <script type="text/javascript" charset="utf-8"></script>
+
+                                        
+
+                                    </div>
+                                    <!-- End The Content -->
+                                </div>
+
+                            </article>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</footer>
-<!-- End Footer -->
+    <!-- End Wrapper Site -->
 
-<script src="../js/libs/jquery-1.12.4.min.js"></script>
-<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="../js/js/bootstrap.min.js"></script>
-<script src="../js/libs/masonry.pkgd.min.js"></script>
-<script src="../js/libs/imagesloaded.pkgd.min.js"></script>
-<script src="https://www.google.com/recaptcha/api.js"></script>
-<script src="../js/models/magnificPopup.js"></script>
-<script src="../js/controller/lbmController.js"></script>
-<script src="../js/controller/subscribeController.js"></script>
-<script src="../js/services/subscribeService.js"></script>
-<script src="../js/services/remoteService.js"></script>
-<script src="../js/models/lbmModel.js"></script>
-<script>
-    document.getElementById("lang").addEventListener("click", function (e) {
-        e.preventDefault();
-        window.location.href = ("../en/views/art_index_en.html");
-    });
-</script>
-<script>
-    $(function ($) {
-        let pathName = document.location.pathname;
-        window.onbeforeunload = function () {
-            let scrollPosition = $(document).scrollTop();
-            sessionStorage.setItem("scrollPosition_" + pathName, scrollPosition.toString());
-        }
-        if (sessionStorage["scrollPosition_" + pathName]) {
-            $(document).scrollTop(sessionStorage.getItem("scrollPosition_" + pathName));
-        }
-    });
-</script>
-<script>
-    lbmController.evalLBM();
-    subscribeController.subscribe();
-</script>
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-md-offset-3">
+                    <div class="footer-inner">
+                        <div class="footer-widgets">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="widget">
+                                        <h2 class="title"><span>Контакти</span></h2>
+                                        <ul>
+                                            <li>
+                                                Тел: +359 876 10 00 39 - Явор
+                                                Тел: +359 888 03 04 24 - Ели
+                                            </li>
+                                            <li>
+                                                Е-Поща: mail@athleticstandard.org
+                                            </li>
+                                            <li>
+                                                Адрес: ул. „Проф. д-р Иван Странски“ 61, 1700 Студентски Комплекс, София
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="widget">
+                                        <h2 class="title"><span>Занималня</span></h2>
+                                        <ul>
+                                            <li><a href="../views/404.html">Движения</a></li>
+                                            <li><a href="../views/strength_hall.html">Зала на Силата</a></li>
+                                            <li><a href="../views/gallery.html">Галерия</a></li>
+                                            <li><a href="sitemap.html">Карта на сайта</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="widget">
+                                        <h2 class="title"><span>Ресурси</span></h2>
+                                        <ul>
+                                            <li><a href="../views/calculators.html">Калкулатори</a></li>
+                                            <li><a href="../views/404.html">Брошура</a></li>
+                                            <li><a href="../views/404.html">Униформа</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="copyright">
+                                        <p>&copy;2015-2019 <br>athleticstandard.org</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        всички права запазени |
+                        <a href="../views/terms.html">условия за ползване</a> |
+                        <a href="../views/policy.html">политика за поверителност</a> |
+                        &copy;protected by <a target="_blank" href="http://www.copyscape.com/"
+                            title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page.">Copyscape</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="../js/libs/jquery-1.12.4.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../js/js/bootstrap.min.js"></script>
+    <script src="../js/libs/masonry.pkgd.min.js"></script>
+    <script src="../js/libs/imagesloaded.pkgd.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="../js/models/magnificPopup.js"></script>
+    <script src="../js/controller/lbmController.js"></script>
+    <script src="../js/controller/subscribeController.js"></script>
+    <script src="../js/services/subscribeService.js"></script>
+    <script src="../js/services/remoteService.js"></script>
+    <script src="../js/models/lbmModel.js"></script>
+    <script>
+        document.getElementById("lang").addEventListener("click", function (e) {
+            e.preventDefault();
+            window.location.href = ("../en/views/art_index_en.html");
+        });
+    </script>
+    <script>
+        subscribeController.subscribe();
+    </script>
+    <script>
+
+            var EMPTY = 0;
+            var GENDER_MALE = 1;
+            var GENDER_FEMALE = 2;
+
+            var genders = [
+                [0, ''],
+                [GENDER_MALE, 'Male'],
+                [GENDER_FEMALE, 'Female']
+            ];
+
+            var prefills = [
+                ['height', 140, 206, 1, true],
+                ['weight', 40, 173, 1, true],
+                ['deadlift', 40, 500, 2.5, true],
+                ['reps', 1, 10, 1, false]
+            ];
+
+            var genderWorkMultiplier = {
+                1: 1,
+                2: 0.87
+            };
+
+            var relativeMaxReps = {
+                1: 1,
+                2: 0.95,
+                3: 0.93,
+                4: 0.90,
+                5: 0.87,
+                6: 0.85,
+                7: 0.83,
+                8: 0.80,
+                9: 0.77,
+                10: 0.75
+            };
+
+            var performanceLevels = [
+                [0, 'poor'],
+                [0.72, 'low'],
+                [0.97, 'average'],
+                [1.22, 'advanced'],
+                [1.47, 'supreme'],
+                [1.72, 'elite']
+            ];
+
+            var presets = [{
+                name: 'Ð”Ð¸Ð´Ð¾',
+                gender: GENDER_MALE,
+                weight: 86.5,
+                height: 173,
+                deadlift: 140,
+                reps: 5
+            }, {
+                name: 'ÐœÐ°Ñ€Ð¸Ñ',
+                gender: GENDER_FEMALE,
+                weight: 56,
+                height: 164,
+                deadlift: 120,
+                reps: 6
+            }, {
+                name: 'Ð¢ÐµÐ¶ÑŠÐº ÐŸÐ¸Ñ‡',
+                gender: GENDER_MALE,
+                weight: 106,
+                height: 178,
+                deadlift: 250,
+                reps: 7
+            }, {
+                name: 'Ð¢ÐµÐ¶ÑŠÐº ÐŸÐ¸Ñ‡ #2',
+                gender: GENDER_MALE,
+                weight: 106,
+                height: 178,
+                deadlift: 255,
+                reps: 7
+            }];
+
+
+            var calc = {
+                init: function init() {
+                    this._prefillData();
+                    this._presets();
+
+                    $('select:not(.res)').on('change', this.doCalc.bind(calc));
+                },
+
+                doCalc: function doCalc() {
+                    this.showResults(this.calcResults(this._gatherData()));
+                },
+
+                nextLevels: function nextLevels(ratio) {
+                    var ret = [];
+                    var n = 0;
+
+                    for (; n < performanceLevels.length; ++n) {
+                        if (ratio < performanceLevels[n][0]) {
+                            ret.push(performanceLevels[n]);
+                        }
+                    }
+                    return ret;
+                },
+
+                performanceFromRatio: function performanceFromRatio(ratio) {
+                    var ret;
+                    var n = 0;
+
+                    for (; n < performanceLevels.length; ++n) {
+                        if (ratio >= performanceLevels[n][0]) {
+                            ret = performanceLevels[n][1];
+                        }
+                    }
+                    return ret;
+                },
+
+                calcResults: function calcResults(data) {
+                    var relativeMax;
+                    var work;
+                    var wpbRatio;
+                    var performance;
+
+                    if (data.deadlift && data.reps) {
+                        relativeMax = data.deadlift / relativeMaxReps[data.reps];
+                    }
+
+                    if (data.height && relativeMax) {
+                        work = this.work(data.height, relativeMax);
+                    }
+
+                    if (work && data.weight && data.gender) {
+                        wpbRatio = this.workPerBodyRatio(work, data.weight, data.gender);
+                    }
+
+                    if (wpbRatio) {
+                        performance = this.performanceFromRatio(wpbRatio);
+                    }
+
+                    return {
+                        data: data,
+                        relativeMax: relativeMax,
+                        work: work,
+                        wpbRatio: wpbRatio,
+                        performance: performance
+                    };
+                },
+
+                showResults: function showResults(results) {
+                    var data = results.data;
+                    var nextLevels = [];
+                    var self = this;
+
+                    if (results.relativeMax) {
+                        this.val('rm', this.toLiftingWeight(results.relativeMax), 'Real: ' + results.relativeMax);
+                    }
+
+                    if (results.wpbRatio) {
+                        this.val(
+                            'wbw',
+                            results.wpbRatio.toFixed(2),
+                            'Work: ' + results.work + ', WBR: ' + results.wpbRatio);
+                    }
+
+                    if (results.performance) {
+                        this.val('performance', ', ' + results.performance + '');
+                    }
+
+                    if (results.performance) {
+                        nextLevels = this.nextLevels(results.wpbRatio);
+
+                        if (nextLevels.length) {
+                            $('.main').addClass('has-results');
+                            $('select[name=nextLevel]')
+                                .empty()
+                                .append(nextLevels.map(function mapLevels(item) {
+                                    return '<option value="' + item[0] + '">' + item[1] + '</option>';
+                                }))
+                                .on('change', function changeNextLevel() {
+                                    var targetRatio = this.value;
+                                    var targetRank = $(this).children(':selected').text();
+                                    var nextRm = self.liftForWork(
+                                        self.workForRatio(targetRatio, data.weight, data.gender),
+                                        data.height
+                                    );
+                                    var nextReps = [];
+                                    var n;
+
+                                    function buildLevelReps(i) {
+                                        nextReps.push(
+                                            $('<div></div>')
+                                                .append(i + ': ')
+                                                .append(
+                                                    $('<span></span>')
+                                                        .text(self.toLiftingWeight(nextRm * relativeMaxReps[i], true))
+                                                        .on('click', function clickNextLevelWeight() {
+                                                            $('select[name=deadlift]').val(
+                                                                self.toLiftingWeight(nextRm * relativeMaxReps[i], true)
+                                                            );
+                                                            $('select[name=reps]').val(i);
+                                                            self.doCalc();
+                                                        })
+                                                )
+                                                .prop('title', 'Real Lift: ' + (nextRm * relativeMaxReps[i]).toFixed(2))
+                                        );
+                                    }
+
+                                    for (n in relativeMaxReps) {
+                                        if (!relativeMaxReps.hasOwnProperty(n)) {
+                                            continue;
+                                        }
+
+                                        buildLevelReps(n);
+                                    }
+
+                                    self.val('nextLevel', targetRank, 'Next RM: ' + nextRm);
+                                    self.set('nextLevelReps', nextReps);
+                                })
+                                .trigger('change');
+                        } else {
+                            this.set('nextLevelReps', 'Max Level Achieved');
+                            $('.main').removeClass('has-results');
+                        }
+                    }
+                },
+
+                val: function val(key, value, title) {
+                    $('.' + key).text(value).prop('title', title);
+                },
+
+                set: function set(key, obj) {
+                    $('.' + key).empty().append(obj);
+                },
+
+                /**
+                 * work
+                 * @param  {int} height   athlete height (cm)
+                 * @param  {int} lift     lift in kg
+                 * @return {num}          work
+                 */
+                work: function work(height, lift) {
+                    return (height / 100) * (1 / 3) * lift;
+                },
+
+                workPerBodyRatio: function workPerBodyRatio(work, weight, gender) {
+                    return Math.floor((work / weight / genderWorkMultiplier[gender]) * 100) / 100;
+                },
+
+                workForRatio: function workForRatio(ratio, weight, gender) {
+                    return ratio * weight * genderWorkMultiplier[gender];
+                },
+
+                liftForWork: function liftForWork(work, height) {
+                    return work / (height * (1 / 3) / 100);
+                },
+
+                /**
+                   * turns calculated weight (something derived from a function) to
+                   * lifting weigh (something you can put on the bar)
+                   * @param  {int} weight    raw weight
+                   * @param  {bool} upwards  round upwards or downwards
+                   * @return {float}         weigt that can be put to a bar (divisible by 2.5)
+                   */
+                toLiftingWeight: function toLiftingWeight(weight, upwards) {
+                    var precision = 2.5;
+                    var func = 'round'; // Ñ‚Ð²Ð° Ð·Ð°ÐºÑ€ÑŠÐ³Ð»Ñ Ð½Ð°Ð´Ð¾Ð»Ñƒ
+                    var ret;
+
+                    if (upwards) {
+                        func = 'ceil'; // Ñ‚Ð²Ð° Ð·Ð°ÐºÑ€ÑŠÐ³Ð»Ñ Ð½Ð°Ð³Ð¾Ñ€Ðµ
+                    }
+
+                    ret = Math[func](weight / precision) * precision;
+
+                    return ret;
+                },
+
+                _gatherData: function _gatherData() {
+                    var ret = {};
+
+                    $('select').each(function mapData(i, select) {
+                        ret[select.name] = parseFloat(select.value);
+                    });
+
+                    return ret;
+                },
+
+                _prefillData: function _prefillData() {
+                    $('select[name=gender]').append(genders.map(function mapGender(gender) {
+                        return '<option value="' + gender[0] + '">' + gender[1] + '</option>';
+                    }));
+
+                    $.each(prefills, function mapPrefills(i, prefill) {
+                        var select;
+                        var n;
+
+                        select = $('select[name=' + prefill[0] + ']');
+
+                        if (prefill[4]) {
+                            select.append('<option value="0"></option>');
+                        }
+
+                        for (n = prefill[1]; n <= prefill[2]; n += prefill[3]) {
+                            select.append('<option value="' + n + '">' + n + '</option');
+                        }
+                    });
+                },
+
+                _randomHuman: function _randomHuman() {
+                    return {
+                        name: '',
+                        gender: 1 + parseInt(Math.random() * 2, 10),
+                        weight: 40 + parseInt(Math.random() * 80, 10),
+                        height: 140 + parseInt(Math.random() * 65, 10),
+                        deadlift: calc.toLiftingWeight(50 + parseInt(Math.random() * 150, 10)),
+                        reps: 1 + parseInt(Math.random() * 9, 10)
+                    };
+                },
+
+                _randomPresets: function _randomPresets() {
+                    var n;
+
+                    for (n = 1; n <= 10; ++n) {
+                        presets.push($.extend(this._randomHuman(), { name: 'Random #' + n }));
+                    }
+                },
+
+                _presets: function _presets() {
+                    this._randomPresets();
+
+                    $('div.presets table tbody').append(presets.map(function mapPresets(preset) {
+                        return $('<tr></tr>')
+                            .append(
+                                $('<td></td>')
+                                    .append(
+                                        $('<button>').on('click', function applyPreset() {
+                                            var n;
+
+                                            for (n in preset) {
+                                                if (preset.hasOwnProperty(n)) {
+                                                    $('select[name=' + n + ']').val(preset[n]);
+                                                }
+                                            }
+
+                                            calc.doCalc();
+                                        }).text('Apply')
+                                    )
+                            )
+                            .append($('<td></td>').text(preset.name))
+                            .append($('<td></td>').text(preset.height))
+                            .append($('<td></td>').text(preset.weight))
+                            .append($('<td></td>').text(preset.deadlift))
+                            .append($('<td></td>').text(preset.reps));
+                    }));
+                },
+
+                liftingRepsFromRelativeMax: function liftingRepsFromRelativeMax(relativeMax) {
+                    var ret = {};
+                    var n;
+
+                    for (n in relativeMaxReps) {
+                        if (relativeMaxReps.hasOwnProperty(n)) {
+                            ret[n] = this.toLiftingWeight(relativeMaxReps[n] * relativeMax, true);
+                        }
+                    }
+
+                    return ret;
+                },
+
+                runTest: function runTest() {
+                    var random = this._randomHuman();
+                    var results = this.calcResults(random);
+                    var nextLevels = this.nextLevels(results.wpbRatio);
+                    var n = 0;
+                    var nextRm;
+                    var liftingReps;
+                    var k;
+
+                    // console.log(results);
+                    // console.log(nextLevels);
+
+                    if (nextLevels.length) {
+                        for (; n < nextLevels.length; ++n) {
+                            // console.log('next level', nextLevels[n]);
+                            nextRm = this.liftForWork(
+                                this.workForRatio(nextLevels[n][0], random.weight, random.gender),
+                                random.height
+                            );
+
+                            liftingReps = this.liftingRepsFromRelativeMax(nextRm);
+                            for (k in liftingReps) {
+                                if (liftingReps.hasOwnProperty(k)) {
+                                    assert(
+                                        this.calcResults($.extend({}, random, {
+                                            reps: k,
+                                            deadlift: liftingReps[k]
+                                        })).performance,
+                                        nextLevels[n][1],
+                                        nextLevels[n][1] + ' matches calculation for suggested reps ' +
+                                        k + ' and deadlift ' + liftingReps[k]
+                                    );
+                                }
+                            }
+                        }
+                    }
+                },
+
+                runTests: function runTests(many) {
+                    var n;
+
+                    for (n = 0; n < (many || 1); ++n) {
+                        this.runTest();
+                    }
+                }
+            };
+
+            /* eslint no-console: 0 */
+            /* eslint no-use-before-define: 0 */
+            function assert(val1, val2, text) {
+                if (val1 !== val2) {
+                    throw new Error(val1 + ' and ' + val2 + ' are different.');
+                }
+
+                console.log(text);
+            }
+
+            $(document).on('ready', calc.init.bind(calc));
+        </script>
 </body>
 </html>

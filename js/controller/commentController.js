@@ -137,11 +137,11 @@ let commentController = (() => {
                     })
                 });
                 let postComments = $('.post-comments');
-                $(postComments)[0].innerHTML = comments.length + ' Comments'
+                $(postComments)[0].innerHTML = comments.length + ' Коментари'
                 if (comments.length === 1) {
-                    $('.comment-list').prepend(`<h2 class="title"><span>${comments.length} Comment</span></h2>`);
+                    $('.comment-list').prepend(`<h2 class="title"><span>${comments.length} Коментар</span></h2>`);
                 } else {
-                    $('.comment-list').prepend(`<h2 class="title"><span>${comments.length} Comments</span></h2>`);
+                    $('.comment-list').prepend(`<h2 class="title"><span>${comments.length} Коментари</span></h2>`);
                 }
             })
         });

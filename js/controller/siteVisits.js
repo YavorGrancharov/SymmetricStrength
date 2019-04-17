@@ -6,7 +6,7 @@ let siteVisists = (() => {
         }
         n++;
         localStorage.setItem("visit_counter", n);
-        $('.post-views').innerHTML = n + ' Views';
+        $('.post-views').innerHTML = n + ' Прегледа';
     }
 
     return {
