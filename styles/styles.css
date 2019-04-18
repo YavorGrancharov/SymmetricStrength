@@ -2165,3 +2165,7 @@ body {
 }
 
 /* end drills gallery and description styling */
+
+.clear {
+    clear: both;
+}
