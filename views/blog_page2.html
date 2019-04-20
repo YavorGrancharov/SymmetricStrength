@@ -19,12 +19,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>ATHLETIC STANDARD</title>
+    <title>Блог</title>
     <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
     <link rel="canonical" href="https://www.athleticstandard.org/views/blog_page2.html"/>
     <link rel="stylesheet" href="../styles/styles.css" media="all">
     <link rel="stylesheet" href="../styles/libs/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="../styles/libs/font-awesome.min.css" type="text/css" media="all">
+    <style id="antiClickjack">
+            body {
+                display: none !important;
+            }
+        </style>
+        <script type="text/javascript">
+            if (self === top) {
+                let antiClickjack = document.getElementById("antiClickjack");
+                antiClickjack.parentNode.removeChild(antiClickjack);
+            } else {
+                top.location = self.location;
+            }
+        </script>
 </head>
 <body>
 <!-- Wrapper Site -->
@@ -82,9 +95,6 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul class="menu-list">
-                                        <li>
-                                            <a href="../index.html">Начало</a>
-                                        </li>
                                         <li class="menu-item-has-children">
                                             <a href="blog.html">Блог</a>
                                             <ul class="sub-menu">
@@ -99,16 +109,8 @@
                                         <li>
                                             <a href="price.html">Цени</a>
                                         </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="video.html">Видео</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="video.html">Стандартен изглед</a>
-                                                </li>
-                                                <li>
-                                                    <a href="video_grid.html">Решетъчен изглед</a>
-                                                </li>
-                                            </ul>
+                                        <li>
+                                            <a href="video_grid.html">Видео</a> 
                                         </li>
                                         <li>
                                             <a href="about.html">За нас</a>
@@ -129,7 +131,7 @@
                                                     <a href="code_of_ethics.html">Етичен кодекс</a>
                                                 </li>
                                                 <li>
-                                                    <a href="404.html">Ръководство</a>
+                                                    <a href="404.html">Стандарт</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -370,12 +372,10 @@
                     <div class="pagination-wrap">
 
                         <div class="older">
-                            <a href="#">Older Posts <i class="fa fa-angle-double-right"></i></a>
+                            <a href="#"></a>
                         </div>
                         <div class="newer">
-                            <a class="pagination__next" href="blog_page3.html"><i class="fa fa-angle-double-left"></i>
-                                Newer
-                                Posts</a>
+                            <a class="pagination__next" href="blog_page3.html"></a>
                         </div>
                     </div>
                     <!-- End Pagination -->
@@ -424,7 +424,7 @@
                                 <div class="widget">
                                     <h2 class="title"><span>Занималня</span></h2>
                                     <ul>
-                                        <li><a href="404.html">Движения</a></li>
+                                        <li><a href="drills.html">Движения</a></li>
                                         <li><a href="strength_hall.html">Зала на Силата</a></li>
                                         <li><a href="gallery.html">Галерия</a></li>
                                         <li><a href="404.html">Toddler</a></li>
@@ -486,5 +486,17 @@
         history: false
     });
 </script>
+<script>
+        $(function ($) {
+            let pathName = document.location.pathname;
+            window.onbeforeunload = function () {
+                let scrollPosition = $(document).scrollTop();
+                sessionStorage.setItem("scrollPosition_" + pathName, scrollPosition.toString());
+            }
+            if (sessionStorage["scrollPosition_" + pathName]) {
+                $(document).scrollTop(sessionStorage.getItem("scrollPosition_" + pathName));
+            }
+        });
+    </script>
 </body>
 </html>

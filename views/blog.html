@@ -25,6 +25,19 @@
     <link rel="stylesheet" href="../styles/styles.css" media="all">
     <link rel="stylesheet" href="../styles/libs/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="../styles/libs/font-awesome.min.css" type="text/css" media="all">
+    <style id="antiClickjack">
+            body {
+                display: none !important;
+            }
+        </style>
+        <script type="text/javascript">
+            if (self === top) {
+                let antiClickjack = document.getElementById("antiClickjack");
+                antiClickjack.parentNode.removeChild(antiClickjack);
+            } else {
+                top.location = self.location;
+            }
+        </script>
 </head>
 <body>
 <!-- Wrapper Site -->
@@ -96,16 +109,8 @@
                                         <li>
                                             <a href="price.html">Цени</a>
                                         </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="video.html">Видео</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="video.html">Стандартен изглед</a>
-                                                </li>
-                                                <li>
-                                                    <a href="video_grid.html">Решетъчен изглед</a>
-                                                </li>
-                                            </ul>
+                                        <li>
+                                            <a href="video_grid.html">Видео</a> 
                                         </li>
                                         <li>
                                             <a href="about.html">За нас</a>
@@ -365,11 +370,10 @@
                     <div class="pagination-wrap">
 
                         <div class="older">
-                            <a href="#"> </i></a>
+                            <a href="#"></a>
                         </div>
                         <div class="newer">
-                            <a class="pagination__next" href=""></i>
-                                </a>
+                            <a class="pagination__next" href="blog_page2.html></a>
                         </div>
                     </div>
                     <!-- End Pagination -->
