@@ -2166,13 +2166,129 @@ body {
 
 /* end drills gallery and description styling */
 
-.card {
+.main {
     padding: 20px;
-    margin-top: 20px;
-  }
+}
 
-  .rightcolumn {
-    float: left;
-    width: 25%;
-    padding-left: 20px;
-  }
+.footer {
+    margin-top: -17px;
+    margin-left: 26px;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 5px 0 5px 0;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 5px 0 5px;
+}
+
+table {
+    margin: 20px 0 20px 0;
+}
+
+tr td:first-child {
+    min-width: 60px;
+}
+
+td {
+    line-height: 32px;
+}
+
+select {
+    height: 24px;
+    line-height: 24px;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover,
+a.active {
+    text-decoration: none;
+    color: #000;
+}
+
+.presets {
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+th {
+    font-weight: normal;
+    background: #ddd;
+    padding: 3px 8px 3px 8px;
+}
+
+th:first-child {
+    background: none;
+}
+
+td {
+    text-align: right;
+    padding: 0 4px 0 4px;
+    line-height: 24px;
+}
+
+button {
+    line-height: 18px;
+    padding: 0 4px 0 4px;
+}
+
+td:first-child {
+    text-align: center;
+}
+
+td:nth-child(2) {
+    text-align: left;
+}
+
+.nextLevelReps {
+    width: 280px;
+    padding: 5px 0 5px 0;
+    margin: 5px 0 0 0;
+}
+
+.has-results .nextLevelReps {
+    background: #eee;
+}
+
+.nextLevelReps>div {
+    width: 100px;
+    margin-left: 15px;
+    text-align: left;
+    display: inline-block;
+
+    text-decoration: none;
+}
+
+.nextLevelReps>div>span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.rm,
+.wbw,
+.performance {
+    font-weight: bold;
+}
+
+.legend {
+    text-align: center;
+}
+
+.need-results {
+    display: none;
+}
+
+.has-results .need-results {
+    display: block;
+}
+
+.has-results tr.need-results {
+    display: table-row;
+}
