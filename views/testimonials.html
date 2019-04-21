@@ -27,6 +27,19 @@
     <link rel="stylesheet" href="../styles/styles.css" media="all">
     <link rel="stylesheet" href="../styles/libs/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="../styles/libs/font-awesome.min.css" type="text/css" media="all">
+    <style id="antiClickjack">
+        body {
+            display: none !important;
+        }
+    </style>
+    <script type="text/javascript">
+        if (self === top) {
+            let antiClickjack = document.getElementById("antiClickjack");
+            antiClickjack.parentNode.removeChild(antiClickjack);
+        } else {
+            top.location = self.location;
+        }
+    </script>
 </head>
 
 <body>
@@ -85,30 +98,14 @@
                                 <div class="main-menu">
                                     <nav>
                                         <ul class="menu-list">
-                                            <li class="menu-item-has-children">
-                                                <a href="blog.html">Блог</a>
-                                                <ul class="sub-menu">
-                                                    <li>
-                                                        <a href="blog.html">Стандартен изглед</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="blog_grid.html">Решетъчен изглед</a>
-                                                    </li>
-                                                </ul>
+                                            <li>
+                                                <a href="blog_grid.html">Блог</a>
                                             </li>
                                             <li>
                                                 <a href="price.html">Цени</a>
                                             </li>
-                                            <li class="menu-item-has-children">
-                                                <a href="video.html">Видео</a>
-                                                <ul class="sub-menu">
-                                                    <li>
-                                                        <a href="video.html">Стандартен изглед</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="video_grid.html">Решетъчен изглед</a>
-                                                    </li>
-                                                </ul>
+                                            <li>
+                                                <a href="video_grid.html">Видео</a>
                                             </li>
                                             <li>
                                                 <a href="about.html">За нас</a>
@@ -402,17 +399,21 @@
                                                             <div class="img-box"
                                                                 style="background-image: url('../static/images/deyan_vasilev.jpg')">
                                                             </div>
-                                                            <h5 align="left">Не бях склонен да тренирам с личен треньор, 
+                                                            <h5 align="left">Не бях склонен да тренирам с личен треньор,
                                                                 тъй като смятах, че знам достатъчно за
-                                                                фитнеса, функцията на тялото и силовите тренировки. Оказах се в
+                                                                фитнеса, функцията на тялото и силовите тренировки.
+                                                                Оказах се в
                                                                 грешка.
 
                                                                 По време на тренировките ми с Явор от ATHLETIC STANDARD
                                                                 нямах травми, дори незначителни, които не бяха толкова
                                                                 необичайни преди, когато тренирах сам или с приятел.
-                                                                Намалих процента на телесните си мазнини с повече от 5% и 
-                                                                значително подобрих силата и мобилността си. Упражнения, от чието
-                                                                изпълнение преди изпитвах страх, сега са ми любими - от мъртва
+                                                                Намалих процента на телесните си мазнини с повече от 5%
+                                                                и
+                                                                значително подобрих силата и мобилността си. Упражнения,
+                                                                от чието
+                                                                изпълнение преди изпитвах страх, сега са ми любими - от
+                                                                мъртва
                                                                 тяга и клек до военна преса и ренегатско гребане.
 
                                                                 Явор има много индивидуален подход и е
@@ -433,8 +434,8 @@
                                                                 </li>
                                                                 <li class="list-inline-item"><i class="fa fa-star"></i>
                                                                 </li>
-                                                                <li class="list-inline-item"><i
-                                                                        class="fa fa-star"></i></li>
+                                                                <li class="list-inline-item"><i class="fa fa-star"></i>
+                                                                </li>
                                                             </ul>
                                                         </div>
                                                     </div>

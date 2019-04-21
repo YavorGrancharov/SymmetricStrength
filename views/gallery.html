@@ -26,6 +26,19 @@
     <link rel="stylesheet" href="../styles/libs/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="../styles/libs/font-awesome.min.css" type="text/css" media="all">
     <link rel="stylesheet" href="../node_modules/lightbox2/dist/css/lightbox.min.css">
+    <style id="antiClickjack">
+            body {
+                display: none !important;
+            }
+        </style>
+        <script type="text/javascript">
+            if (self === top) {
+                let antiClickjack = document.getElementById("antiClickjack");
+                antiClickjack.parentNode.removeChild(antiClickjack);
+            } else {
+                top.location = self.location;
+            }
+        </script>
 </head>
 <body>
 <!-- Wrapper Site -->

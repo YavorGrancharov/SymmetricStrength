@@ -2165,3 +2165,14 @@ body {
 }
 
 /* end drills gallery and description styling */
+
+.card {
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }

@@ -83,32 +83,13 @@
                                 <nav>
                                     <ul class="menu-list">
                                         <li>
-                                            <a href="../index.html">Начало</a>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="blog.html">Блог</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="blog.html">Стандартен изглед</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog_grid.html">Решетъчен изглед</a>
-                                                </li>
-                                            </ul>
+                                            <a href="blog_grid.html">Цени</a>
                                         </li>
                                         <li>
                                             <a href="price.html">Цени</a>
                                         </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="video.html">Видео</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="video.html">Стандартен изглед</a>
-                                                </li>
-                                                <li>
-                                                    <a href="video_grid.html">Решетъчен изглед</a>
-                                                </li>
-                                            </ul>
+                                        <li>
+                                            <a href="video_grid.html">Видео</a> 
                                         </li>
                                         <li>
                                             <a href="about.html">За нас</a>
@@ -485,5 +466,17 @@
         history: false
     });
 </script>
+<script>
+        $(function ($) {
+            let pathName = document.location.pathname;
+            window.onbeforeunload = function () {
+                let scrollPosition = $(document).scrollTop();
+                sessionStorage.setItem("scrollPosition_" + pathName, scrollPosition.toString());
+            }
+            if (sessionStorage["scrollPosition_" + pathName]) {
+                $(document).scrollTop(sessionStorage.getItem("scrollPosition_" + pathName));
+            }
+        });
+    </script>
 </body>
 </html>
