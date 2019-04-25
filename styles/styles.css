@@ -2220,7 +2220,7 @@ a.active {
 
 th {
     font-weight: normal;
-    background: #ddd;
+    /* background: #ddd; */
     padding: 3px 8px 3px 8px;
 }
 
