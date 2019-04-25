@@ -27,18 +27,18 @@
     <link rel="stylesheet" href="../styles/libs/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="../styles/libs/font-awesome.min.css" type="text/css" media="all">
     <style id="antiClickjack">
-            body {
-                display: none !important;
-            }
-        </style>
-        <script type="text/javascript">
-            if (self === top) {
-                let antiClickjack = document.getElementById("antiClickjack");
-                antiClickjack.parentNode.removeChild(antiClickjack);
-            } else {
-                top.location = self.location;
-            }
-        </script>
+        body {
+            display: none !important;
+        }
+    </style>
+    <script type="text/javascript">
+        if (self === top) {
+            let antiClickjack = document.getElementById("antiClickjack");
+            antiClickjack.parentNode.removeChild(antiClickjack);
+        } else {
+            top.location = self.location;
+        }
+    </script>
 </head>
 
 <body class="home">
@@ -99,21 +99,14 @@
                                     <nav>
                                         <ul class="menu-list">
                                             <li class="menu-item-has-children">
-                                                <a href="#/">Блог</a>
-                                                <ul class="sub-menu">
-                                                    <li>
-                                                        <a href="blog.html">Стандартен изглед</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="blog_grid.html">Решетъчен изглед</a>
-                                                    </li>
-                                                </ul>
+                                            <li>
+                                                <a href="blog_grid.html">Блог</a>
                                             </li>
                                             <li>
                                                 <a href="price.html">Цени</a>
                                             </li>
                                             <li>
-                                                <a href="video_grid.html">Видео</a> 
+                                                <a href="video_grid.html">Видео</a>
                                             </li>
                                             <li>
                                                 <a href="about.html">За нас</a>
