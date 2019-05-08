@@ -22,6 +22,8 @@ let fatController = (() => {
         let fat_second_row = document.getElementById("fat-percent-2");
         let fatMass = document.getElementById("fat-result");
         let lbm = document.getElementById("lbm");
+        let excessiveFatPercent = document.getElementById("efm-percent");
+        let excessiveFatKg = document.getElementById("efm-kg");
         let submit = document.getElementById("submit");
         let result = document.getElementById("result");
 
@@ -133,6 +135,13 @@ let fatController = (() => {
                 fat_second_row.innerHTML = fat.innerHTML;
                 fatMass.innerHTML = Math.round((weight.value * parseFloat(fat.innerHTML)) / 10) / 10;
                 lbm.innerHTML = weight.value - parseFloat(fatMass.innerHTML);
+                if(sex.value == 'male') {
+                    excessiveFatPercent.innerHTML = (parseFloat(fat.innerHTML) - 5).toFixed(1);
+                    excessiveFatKg.innerHTML = ((weight.value * parseFloat(excessiveFatPercent.innerHTML)) / 100).toFixed(1);
+                } else {
+                    excessiveFatPercent.innerHTML = (parseFloat(fat.innerHTML) - 10).toFixed(1);
+                    excessiveFatKg.innerHTML = ((weight.value * parseFloat(excessiveFatPercent.innerHTML)) / 100).toFixed(1);
+                }
 
                 if (result.hidden === true) {
                     result.hidden = false;
