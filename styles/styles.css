@@ -2131,6 +2131,30 @@ body {
     cursor: pointer;
 }
 
+#yavor {
+    opacity: 0.5;
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+}
+
+#yavor:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#ellie {
+    opacity: 0.5;
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+}
+
+#ellie:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
 #maxPull, #maxDip {
     text-align-last: center;
 }
