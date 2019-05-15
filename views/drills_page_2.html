@@ -206,18 +206,11 @@
                                         <a href="../drills/deadlift.html">Мъртва тяга</a>
                                     </h2>
 
-                                    <!-- Post Details -->
-                                    <div class="post-details">
-                                        <div class="post-cat">
-                                            <a href="training.html">Трениране</a>
-                                        </div>
-                                        <a href="#" class="post-date"><span>14 Февруари, 2019</span></a>
-                                    </div>
-                                    <!-- End Post Details -->
                                 </div>
                                 <div class="post-media">
                                     <a href="../drills/deadlift.html">
-                                        <img src="../static/images/noimage.png" alt="Deadlift">
+                                        <img class="lazy" src="../static/images/noimage.png"
+                                            data-src="../static/images/noimage.png" alt="Deadlift">
                                     </a>
                                 </div>
                                 <div class="post-content">
@@ -241,44 +234,45 @@
                             </article>
 
                             <article class="post">
-                                    <div class="post-header">
-                                        <h2 class="title">
-                                            <a href="../drills/deadlift.html">Мъртва тяга</a>
-                                        </h2>
-    
-                                        <!-- Post Details -->
-                                        <div class="post-details">
-                                            <div class="post-cat">
-                                                <a href="training.html">Трениране</a>
-                                            </div>
-                                            <a href="#" class="post-date"><span>14 Февруари, 2019</span></a>
+                                <div class="post-header">
+                                    <h2 class="title">
+                                        <a href="../drills/deadlift.html">Мъртва тяга</a>
+                                    </h2>
+
+                                    <!-- Post Details -->
+                                    <div class="post-details">
+                                        <div class="post-cat">
+                                            <a href="training.html">Трениране</a>
                                         </div>
-                                        <!-- End Post Details -->
+                                        <a href="#" class="post-date"><span>14 Февруари, 2019</span></a>
                                     </div>
-                                    <div class="post-media">
-                                        <a href="../drills/deadlift.html">
-                                            <img src="../static/images/noimage.png" alt="Deadlift">
-                                        </a>
+                                    <!-- End Post Details -->
+                                </div>
+                                <div class="post-media">
+                                    <a href="../drills/deadlift.html">
+                                        <img class="lazy" src="../static/images/noimage.png"
+                                            data-src="../static/images/noimage.png" alt="Deadlift">
+                                    </a>
+                                </div>
+                                <div class="post-content">
+
+                                    <!-- The Content -->
+                                    <div class="the-excerpt">
+                                        <p>Живеем в свят на необятна информираност, различни хранителни, спортни, модни
+                                            и какви ли още не течения минават, оставяйки трайна следа в съзнанията и
+                                            телата
+                                            ни. Само едно течение е вечно и може би няма да се промени -
+                                            &quot;водата&quot;...
+                                        </p>
                                     </div>
-                                    <div class="post-content">
-    
-                                        <!-- The Content -->
-                                        <div class="the-excerpt">
-                                            <p>Живеем в свят на необятна информираност, различни хранителни, спортни, модни
-                                                и какви ли още не течения минават, оставяйки трайна следа в съзнанията и
-                                                телата
-                                                ни. Само едно течение е вечно и може би няма да се промени -
-                                                &quot;водата&quot;...
-                                            </p>
-                                        </div>
-                                        <!-- End The Content -->
-                                    </div>
-    
-                                    <div class="read-more">
-                                        <a href="../drills/deadlift.html">Прочети Повече ...</a>
-                                    </div>
-    
-                                </article>
+                                    <!-- End The Content -->
+                                </div>
+
+                                <div class="read-more">
+                                    <a href="../drills/deadlift.html">Прочети Повече ...</a>
+                                </div>
+
+                            </article>
 
                         </div>
 
@@ -377,6 +371,7 @@
     <script src="../js/js/bootstrap.min.js"></script>
     <script src="../js/libs/masonry.pkgd.min.js"></script>
     <script src="../js/libs/imagesloaded.pkgd.min.js"></script>
+    <script src="../js/libs/jquery.lazyload.js"></script>
     <script src="../js/libs/infinite-scroll.pkgd.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="../js/models/magnificPopup.js"></script>
@@ -411,6 +406,9 @@
                 $(document).scrollTop(sessionStorage.getItem("scrollPosition_" + pathName));
             }
         });
+    </script>
+    <script>
+        $("img.lazy").lazyload();
     </script>
     <script>
         subscribeController.subscribe();
