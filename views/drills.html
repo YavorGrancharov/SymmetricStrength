@@ -389,13 +389,32 @@
                         </div>
 
                         <!-- Pagination -->
+
                         <div class="pagination-wrap">
+
+                            <div class="newer">
+                                
+                            </div>
+                            <div class="older">
+                                <a href="drills_page_2.html" title="They have originality ">Следваща <i
+                                        class="fa fa-angle-double-right"></i></a>
+                                <h2 class="title">
+                                    <a href="/#"></a>
+                                </h2>
+                            </div>
+
+                        </div>
+                        <!-- End Pagination -->
+
+
+                        <!-- Pagination -->
+                        <!-- <div class="pagination-wrap">
                             <div class="pagination-wrap">
                                 <div class="newer">
                                     <a class="pagination__next" href="drills_page_2.html"></a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- End Pagination -->
 
                         <!-- <div class="scroller-status text-center">
@@ -483,8 +502,8 @@
     <script src="../js/js/bootstrap.min.js"></script>
     <script src="../js/libs/masonry.pkgd.min.js"></script>
     <script src="../js/libs/imagesloaded.pkgd.min.js"></script>
-    <script src="../js/libs/jquery.lazyload.js"></script>
-    <script src="../js/libs/infinite-scroll.pkgd.min.js"></script>
+    <script src="../js/libs/simplePagination.js"></script>
+    <!-- <script src="../js/libs/infinite-scroll.pkgd.min.js"></script> -->
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="../js/models/magnificPopup.min.js"></script>
     <script src="../js/controller/messageController.min.js"></script>
@@ -498,7 +517,7 @@
             window.location.href = ("../en/views/art_index_en.html");
         });
     </script>
-    <script>
+    <!-- <script>
         $('.posts').infiniteScroll({
             path: '.pagination__next',
             append: '.post',
@@ -518,7 +537,7 @@
                 $(document).scrollTop(sessionStorage.getItem("scrollPosition_" + pathName));
             }
         });
-    </script>
+    </script> -->
     <script>
         subscribeController.subscribe();
     </script>
