@@ -46,7 +46,7 @@ let messageController = (() => {
                     return;
                 } else {
                     messageService.sendMessage(author, date, email, phone, message).then(() => {
-                        alert("Благодарим за изпратеното съобщение! Ще се свържем с Вас при първа възможност!");
+                        alert("Благодарим Ви за изпратеното съобщение! Ще се свържем с Вас при първа възможност!");
                     });
                 }
 
