@@ -6,12 +6,12 @@ let messageController = (() => {
                 let author = $('#author_contact').val();
                 let date = formatDate(new Date());
                 let email = $('#email_contact').val();
-                let phone = $('#phone_contact').val();
+                // let phone = $('#phone_contact').val();
                 let message = $('#message_contact').val();
                 let response = grecaptcha.getResponse();
 
                 let validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/igm;
-                let validPhone = /^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,3})|(\(?\d{2,3}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$/i;
+                // let validPhone = /^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,3})|(\(?\d{2,3}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$/i;
 
                 if (author === '') {
                     alert('Въведете името си в предвиденото за това поле!');
@@ -26,12 +26,12 @@ let messageController = (() => {
                     return;
                 }
 
-                if (phone !== '') {
-                    if (!validPhone.test(phone)) {
-                        alert('Въведете валиден телефонен номер!');
-                        return;
-                    }
-                }
+                // if (phone !== '') {
+                //     if (!validPhone.test(phone)) {
+                //         alert('Въведете валиден телефонен номер!');
+                //         return;
+                //     }
+                // }
 
                 if (message === '') {
                     alert('Въведете съобщението си в предвиденото за това поле!');
@@ -52,7 +52,7 @@ let messageController = (() => {
 
                 $('#author_contact').val('');
                 $('#email_contact').val('');
-                $('#phone_contact').val('');
+                // $('#phone_contact').val('');
                 $('#message_contact').val('');
                 grecaptcha.reset();
             });
