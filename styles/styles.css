@@ -2107,6 +2107,18 @@ body {
     cursor: pointer;
 }
 
+#symmetric-strength {
+    opacity: 0.5;
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+}
+
+#symmetric-strength:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
 #endurance {
     opacity: 0.5;
     border-radius: 50%;

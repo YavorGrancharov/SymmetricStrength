@@ -23,7 +23,7 @@
     <title>Calculators</title>
     <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
     <link rel="canonical" href="https://www.athleticstandard.org/views/calculators.html" />
-    <link rel="stylesheet" href="../styles/styles.min.css" media="all">
+    <link rel="stylesheet" href="../styles/styles.css" media="all">
     <link rel="stylesheet" href="../styles/libs/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="../styles/libs/font-awesome.min.css" type="text/css" media="all">
     <style id="antiClickjack">
@@ -206,18 +206,23 @@
                                     <hr>
                                 </div>
                                 <div class="post-content">
-                                    <!-- <div class="row">
+                                    <div class="row">
                                         <div class="col-md-6 text-center">
                                             <h2>Изръжливост</h2>
                                             <h4>набирания/кофи</h4>
                                             <img src="../static/images/pull-dip.png" id="endurance">
                                         </div>
                                         <div class="col-md-6 text-center">
+                                            <h2>Изравнител</h2>
+                                            <h4>силов баланс</h4>
+                                            <img src="../static/images/wrist-size.png" id="symmetric-strength">
+                                        </div>
+                                        <!--<div class="col-md-6 text-center">
                                             <h2>Силов Показател</h2>
                                             <h4>мъртва тяга</h4>
-                                            <img src="../static/images/deadlift.png" id="deadlift">
+                                            <img src="../static/images/deadlift.png" id="deadlift">-->
                                         </div>
-                                    </div> -->
+                                    </div>
                                     <div class="row">
                                         <div class="col-md-6 text-center">
                                             <h2>Калиперометрия</h2>
@@ -323,9 +328,15 @@
         });
     </script>
     <script>
+        let endurance = document.getElementById("endurance");
         let fatMass = document.getElementById("fat-mass");
         let freeFatMass = document.getElementById("free-fat-mass");
+        let symmetricStrength = document.getElementById("symmetric-strength");
 
+        endurance.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = ("../calcs/endurance_calculator.html");
+        });
         fatMass.addEventListener("click", function (event) {
             event.preventDefault();
             window.location.href = ("../calcs/fat_calculator.html");
@@ -333,6 +344,10 @@
         freeFatMass.addEventListener("click", function (event) {
             event.preventDefault();
             window.location.href = ("../calcs/lbm_calculator.html");
+        });
+        symmetricStrength.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = ("../calcs/symmetric_strength.html");
         });
     </script>
     <script>
