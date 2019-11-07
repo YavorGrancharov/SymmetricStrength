@@ -1,55 +1,92 @@
 let strengthController = (() => {
-    function symmetricStrength() {
-        // let count = 0, $hidden = $('.next-2, .next-3');
-        // let nextMoves = document.getElementById("show-next");
-        // $(nextMoves).click(function (event) {
-        //     event.preventDefault();
-        //     if(count < $hidden.length) {
-        //         $hidden.eq(count).show('slow');
-        //         count++
+    // function checkAll() {
+    //     let all = document.getElementById("all");
+    //     all.addEventListener('click', function () {
+    //         if (this.childNodes[1].children[0].checked) {
+    //             $(':checkbox').each(function () {
+    //                 this.checked = true;
+    //             });
+    //         }
+    //         else {
+    //             $(':checkbox').each(function () {
+    //                 this.checked = false;
+    //             });
+    //         }
+    //     })
+    // }
+
+    function showMovements() {
+        // let all = document.getElementById("all");
+        // all.addEventListener('click', function () {
+        //     if (this.childNodes[1].children[0].checked) {
+        //         $(':checkbox').each(function () {
+        //             this.checked = true;
+        //         });
         //     }
-        // });
+        //     else {
+        //         $(':checkbox').each(function () {
+        //             this.checked = false;
+        //         });
+        //     }
+        // })
 
         let showMoves = document.getElementById("show-next");
-        let clientMovements = document.getElementById("chosen-movements");
-        let m = document.getElementById("hidden-div");
-        var x = document.getElementById("hidden-div").querySelectorAll("tr");
+        let hidden = document.getElementById("hidden-div");
+        let trows = document.getElementById("hidden-div").querySelectorAll("tr");
+        let originalState = $("hidden-div").clone(true, true); $("#some_div").replaceWith(originalState.clone(true, true));
         showMoves.addEventListener('click', function (event) {
             event.preventDefault();
-            let array = []
+            let checked = []
             let chosen = []
-            array = Array.from(document.querySelectorAll('input[type="checkbox"]'))
+            checked = Array.from(document.querySelectorAll('input[type="checkbox"]'))
                 .filter((checkbox) => checkbox.checked)
                 .map((checkbox) => checkbox.value);
-            for (let i = 1; i < x.length; i++) {
-                for (let j = 0; j < x.length + 1; j++) {
-                    if (array[j] === x[i].classList.value) {
-                        chosen.push(x[i])
+            for (let i = 0; i < trows.length; i++) {
+                for (let j = 0; j < trows.length; j++) {
+                    if (checked[j] === trows[i].classList.value) {
+                        chosen.push(trows[i]);
                     }
-                    if (chosen.includes(x[i])) {
-                        chosen.splice(i, 1)
+                    if (chosen.includes(trows[i])) {
+                        chosen.splice(i, 1);
                     }
                 }
             }
             console.log(chosen)
             for (let f = 0; f < chosen.length; f++) {
                 if (chosen.length >= 5) {
-                    m.style.display = 'block';              
+                    hidden.style.display = 'block';
                     chosen[f].style.display = 'table-row';
                 } else {
-                    m.style.display = 'none';
+                    hidden.style.display = 'none';
                 }
             }
         });
     }
 
-    function Showhidefunc(chkbox) {
-        if ($(chkbox).is(":checked")) {
-            $('tr td:first-child :checkbox:not(:checked)').closest('tr').hide();
-        } else {
-            $('tr td:first-child :checkbox:not(:checked)').closest('tr').show();
-        }
-      }
+    function symmetricStrength() {
+        let sex = strengthModel.getSex();
+        let height = strengthModel.getHeight();
+        let weight = strengthModel.getBodyWeight();
+        let age = strengthModel.getAge();
+
+        let deadlift = strengthModel.getDeadlift();
+        let squat = strengthModel.getSquat();
+        let overheadPress = strengthModel.getOverheadPress();
+        let lunge = strengthModel.getLunge();
+        let frontSquat = strengthModel.getFrontSquat();
+
+        let deadlift_reps = strengthModel.getDeadliftReps();
+        let squat_reps = strengthModel.getSquatReps();
+        let overhead_press_reps = strengthModel.getOverheadPressReps();
+        let lunge_reps = strengthModel.getLungeReps();
+        let front_squat_reps = strengthModel.getFrontSquatReps();
+
+        let submit = document.getElementById("submit");
+        submit.addEventListener('click', function(event) {
+            event.preventDefault();
+            console.log(sex.value)
+        })
+    }
 
     function getIntensity(reps) {
         let intensity = {
@@ -71,6 +108,7 @@ let strengthController = (() => {
     }
 
     return {
+        showMovements,
         symmetricStrength
     }
 })();

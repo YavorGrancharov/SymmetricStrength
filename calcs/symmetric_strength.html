@@ -129,7 +129,7 @@
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="../views/testimonials.html">Атестати</a>
+                                                <a href="../views/testimonials.html">Отзиви</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -241,15 +241,13 @@
                                                                                         for="sexes-01">
                                                                                         <input type="radio" name="sexes"
                                                                                             id="sexes-01" value="male"
-                                                                                            checked
-                                                                                            onchange="lbmController.evalLBM()">
+                                                                                            checked>
                                                                                         Мъж
                                                                                     </label>
                                                                                     <label class="radio-inline"
                                                                                         for="sexes-02">
                                                                                         <input type="radio" name="sexes"
-                                                                                            id="sexes-02" value="female"
-                                                                                            onchange="lbmController.evalLBM()">
+                                                                                            id="sexes-02" value="female">
                                                                                         Жена
                                                                                     </label>
                                                                                 </td>
@@ -264,8 +262,7 @@
                                                                                     <input id="height" name="height"
                                                                                         type="number" placeholder="см"
                                                                                         value=""
-                                                                                        class="form-control input-sm"
-                                                                                        onchange="lbmController.evalLBM()">
+                                                                                        class="form-control input-sm">
                                                                                 </td>
                                                                                 <td></td>
                                                                             </tr>
@@ -279,8 +276,7 @@
                                                                                     <input id="body-weight"
                                                                                         name="body-weight" type="number"
                                                                                         placeholder="кг" value=""
-                                                                                        class="form-control input-sm"
-                                                                                        onchange="lbmController.evalLBM()">
+                                                                                        class="form-control input-sm">
                                                                                 </td>
                                                                                 <td></td>
                                                                             </tr>
@@ -294,8 +290,7 @@
                                                                                     <input id="age" name="age"
                                                                                         type="number"
                                                                                         placeholder="години" value=""
-                                                                                        class="form-control input-sm"
-                                                                                        onchange="lbmController.evalLBM()">
+                                                                                        class="form-control input-sm">
                                                                                 </td>
                                                                                 <td></td>
                                                                             </tr>
@@ -318,6 +313,13 @@
                                                         </strong>
                                                         </h3>
                                                 </div>
+                                                <!-- <div class="form-check" id="all">
+                                                        <label>
+                                                            <input type="checkbox" name="check"
+                                                                value="all"> <span
+                                                                class="label-text">Избери всички</span>
+                                                        </label>
+                                                    </div> -->
                                                 <form class="center-block" role="form">
                                                     <div>
                                                         <div class="col-md-4 col-sm-6">
@@ -431,7 +433,7 @@
                                         </div>
                                         <div class="row" style="display: none;" id="hidden-div">
                                             <div class="col-md-12">
-                                                <form class="center-block" role="form">
+                                                <form class="center-block" role="form" id="client-movements">
                                                     <div class="well">
                                                         <div>
                                                             <div class="tab-content">
@@ -454,17 +456,17 @@
                                                                             <tr style="display: none;" class="deadlift">
                                                                                 <td>
                                                                                     <label class="control-label"
-                                                                                        for="deadlift">Мъртва
+                                                                                        for="deadlift-input">Мъртва
                                                                                         тяга</label>
                                                                                 </td>
                                                                                 <td>
                                                                                     <input id="deadlift-input"
-                                                                                        name="body-weight" type="number"
+                                                                                        type="number"
                                                                                         placeholder="кг" value=""
                                                                                         class="form-control input-sm">
                                                                                 </td>
                                                                                 <td>
-                                                                                    <select class="form-control">
+                                                                                    <select class="form-control" id="deadlift-reps">
                                                                                         <option>1</option>
                                                                                         <option>2</option>
                                                                                         <option>3</option>
@@ -476,16 +478,16 @@
                                                                             <tr style="display: none;" class="squat">
                                                                                 <td>
                                                                                     <label class="control-label"
-                                                                                        for="deadlift">Клек</label>
+                                                                                        for="squat-input">Клек</label>
                                                                                 </td>
                                                                                 <td>
-                                                                                    <input id="body-weight"
-                                                                                        name="body-weight" type="number"
+                                                                                    <input id="squat-input"
+                                                                                        type="number"
                                                                                         placeholder="кг" value=""
                                                                                         class="form-control input-sm">
                                                                                 </td>
                                                                                 <td>
-                                                                                    <select class="form-control">
+                                                                                    <select class="form-control" id="squat-reps">
                                                                                         <option>1</option>
                                                                                         <option>2</option>
                                                                                         <option>3</option>
@@ -497,17 +499,17 @@
                                                                             <tr style="display: none;" class="overhead-press">
                                                                                 <td>
                                                                                     <label class="control-label"
-                                                                                        for="deadlift">Военна
+                                                                                        for="overhead-press-input">Военна
                                                                                         преса</label>
                                                                                 </td>
                                                                                 <td>
-                                                                                    <input id="body-weight"
-                                                                                        name="body-weight" type="number"
+                                                                                    <input id="overhead-press-input"
+                                                                                        type="number"
                                                                                         placeholder="кг" value=""
                                                                                         class="form-control input-sm">
                                                                                 </td>
                                                                                 <td>
-                                                                                    <select class="form-control">
+                                                                                    <select class="form-control" id="overhead-press-reps">
                                                                                         <option>1</option>
                                                                                         <option>2</option>
                                                                                         <option>3</option>
@@ -519,16 +521,16 @@
                                                                             <tr style="display: none;" class="lunge">
                                                                                 <td>
                                                                                     <label class="control-label"
-                                                                                        for="deadlift">Напад</label>
+                                                                                        for="lunge-input">Напад</label>
                                                                                 </td>
                                                                                 <td>
-                                                                                    <input id="body-weight"
-                                                                                        name="body-weight" type="number"
+                                                                                    <input id="lunge-input"
+                                                                                        type="number"
                                                                                         placeholder="кг" value=""
                                                                                         class="form-control input-sm">
                                                                                 </td>
                                                                                 <td>
-                                                                                    <select class="form-control">
+                                                                                    <select class="form-control" id="lunge-reps">
                                                                                         <option>1</option>
                                                                                         <option>2</option>
                                                                                         <option>3</option>
@@ -582,17 +584,17 @@
                                                                             <tr style="display: none;" class="front-squat">
                                                                                 <td>
                                                                                     <label class="control-label"
-                                                                                        for="deadlift">Преден
+                                                                                        for="front-squat-input">Преден
                                                                                         клек</label>
                                                                                 </td>
                                                                                 <td>
-                                                                                    <input id="body-weight"
-                                                                                        name="body-weight" type="number"
+                                                                                    <input id="front-squat-input"
+                                                                                       type="number"
                                                                                         placeholder="кг" value=""
                                                                                         class="form-control input-sm">
                                                                                 </td>
                                                                                 <td>
-                                                                                    <select class="form-control">
+                                                                                    <select class="form-control" id="front-squat-reps">
                                                                                         <option>1</option>
                                                                                         <option>2</option>
                                                                                         <option>3</option>
@@ -812,7 +814,7 @@
     <script src="../js/controller/subscribeController.min.js"></script>
     <script src="../js/services/subscribeService.min.js"></script>
     <script src="../js/services/remoteService.min.js"></script>
-    <script src="../js/models/lbmModel.min.js"></script>
+    <script src="../js/models/strengthModel.js"></script>
     <script>
         document.getElementById("lang").addEventListener("click", function (e) {
             e.preventDefault();
@@ -820,6 +822,7 @@
         });
     </script>
     <script>
+        strengthController.showMovements();
         strengthController.symmetricStrength();
         subscribeController.subscribe();
     </script>
