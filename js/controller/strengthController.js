@@ -33,11 +33,11 @@ let strengthController = (() => {
             }
             console.log(chosen)
             for (let f = 0; f < chosen.length; f++) {
-                if (chosen.length >= 5) {                  
+                if (chosen.length >= 5) {
+                    m.style.display = 'block';              
                     chosen[f].style.display = 'table-row';
                 } else {
-                    chosen[f + 2].style.display = 'none';
-                    chosen[f].style.display = 'none';
+                    m.style.display = 'none';
                 }
             }
         });
