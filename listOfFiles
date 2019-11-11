@@ -1,0 +1,266 @@
+.gitignore
+BingSiteAuth.xml
+README.md
+articles/armlifting.html
+articles/cereal.html
+articles/cereal_part_one.html
+articles/cereal_part_two.html
+articles/cholesterol.html
+articles/energyPower.html
+articles/execution.html
+articles/free_weights.html
+articles/talent_vs_hard_work.html
+articles/water.html
+calcs/endurance_calculator.html
+calcs/fat_calculator.html
+calcs/lbm_calculator.html
+calcs/passwd.html
+calcs/powerEndurance.html
+calcs/symmetric_strength.html
+drills/deadlift.html
+drills/dip.html
+drills/frontSquat.html
+drills/goodMorning.html
+drills/lunge.html
+drills/militaryPress.html
+drills/overheadSquat.html
+drills/pullUp.html
+drills/renegadeRow.html
+drills/romanianDeadlift.html
+drills/squat.html
+drills/sumoDeadlift.html
+en/calcs/symmetric_strength.html
+en/index.html
+en/views/art_code_of_ethics_en.html
+en/views/art_index_en.html
+en/views/charge.html
+en/views/codeOfEthics.html
+en/views/hallOfStrength.html
+en/views/headquarter.html
+en/views/missing.html
+en/views/platoon.html
+general_topics/28_dollars_only.html
+id
+index.html
+js/controller/commentController.js
+js/controller/commentController.min.js
+js/controller/enduranceController.js
+js/controller/enduranceController.min.js
+js/controller/fatController.js
+js/controller/fatController.min.js
+js/controller/lbmController.js
+js/controller/lbmController.min.js
+js/controller/messageController.js
+js/controller/messageController.min.js
+js/controller/movementsController.js
+js/controller/siteVisits.js
+js/controller/siteVisits.min.js
+js/controller/strengthController.js
+js/controller/subscribeController.js
+js/controller/subscribeController.min.js
+js/js/bootstrap.min.js
+js/js/jquery.js
+js/js/jquery.simplePagination.js
+js/js/shBrushCss.js
+js/js/shBrushJScript.js
+js/js/shBrushXml.js
+js/js/shCore.js
+js/libs/dataTables.bootstrap.min.js
+js/libs/imagesloaded.pkgd.min.js
+js/libs/infinite-scroll.pkgd.min.js
+js/libs/jquery-1.12.4.min.js
+js/libs/jquery.dataTables.min.js
+js/libs/lightslider.js
+js/libs/masonry.pkgd.min.js
+js/libs/md5.min.js
+js/models/clientModel.js
+js/models/clientModel.min.js
+js/models/enduranceModel.js
+js/models/enduranceModel.min.js
+js/models/fatModel.js
+js/models/fatModel.min.js
+js/models/lbmModel.js
+js/models/lbmModel.min.js
+js/models/magnificPopup.js
+js/models/magnificPopup.min.js
+js/models/strengthModel.js
+js/models/visitCounter.js
+js/services/authService.js
+js/services/commentService.js
+js/services/commentService.min.js
+js/services/defer.js
+js/services/messageService.js
+js/services/messageService.min.js
+js/services/remoteService.js
+js/services/remoteService.min.js
+js/services/subscribeService.js
+js/services/subscribeService.min.js
+js/services/userService.js
+package-lock.json
+package.json
+password
+server.js
+static/fonts/AbrilFatface-Regular.otf
+static/fonts/Archive.otf
+static/fonts/Gross Regular.ttf
+static/fonts/Intro Inline.otf
+static/fonts/MKStencilsansBlack.ttf
+static/fonts/MatchbookTexture.otf
+static/fonts/MullerNarrow-ExtraBold.otf
+static/fonts/MullerNarrow-Light.otf
+static/fonts/Roboto-Regular.ttf
+static/fonts/Top Secret.ttf
+static/fonts/pt-serif-italic.ttf
+static/images/Cholesterol3D.png
+static/images/Elitsa-action_380.jpg
+static/images/Elitsa-action_Lisbon.jpg
+static/images/Thumbs.db
+static/images/battlefield-cross.png
+static/images/cereal.png
+static/images/daniela_kenanova.jpg
+static/images/deadlift.png
+static/images/denis.png
+static/images/denis_axel.png
+static/images/denis_axel_three.png
+static/images/denis_axel_two.png
+static/images/denis_axle_4.png
+static/images/denis_end.png
+static/images/denis_excalibur.png
+static/images/denis_excalibur_2.png
+static/images/denis_pinch.png
+static/images/denis_pinch_2.png
+static/images/denis_rolling.png
+static/images/denis_rolling_three.png
+static/images/denis_rolling_two.png
+static/images/denis_silver.png
+static/images/denis_silver_2.png
+static/images/denis_winner.png
+static/images/deyan_vasilev.jpg
+static/images/georgi_simeonov.jpg
+static/images/glass_of_water.png
+static/images/harpenden.png
+static/images/logo.png
+static/images/logo_american_flag.png
+static/images/loz4 (1 of 1).jpg
+static/images/lubomir_krustev.jpg
+static/images/maria_georgieva.jpg
+static/images/muscle-male-exercising-kettlebel copy.png
+static/images/noimage.png
+static/images/p_CA0408_01_1_1 copy.jpg
+static/images/p_CA0408_01_2_1 copy.jpg
+static/images/p_CA0408_01_7_1 copy.jpg
+static/images/p_CA0408_01_8_1 copy.jpg
+static/images/p_CA0408_02_1_1 copy.jpg
+static/images/p_CA0408_02_2_1 copy.jpg
+static/images/p_CA0408_02_7_1 copy.jpg
+static/images/p_CA0408_02_8_1 copy.jpg
+static/images/p_CA0425_01_1_1 copy.jpg
+static/images/p_CA0425_01_2_1 copy.jpg
+static/images/p_CA0425_01_7_1 copy.jpg
+static/images/p_CA0425_01_8_1 copy.jpg
+static/images/p_CA0425_02_1_1 copy.jpg
+static/images/p_CA0425_02_2_1 copy.jpg
+static/images/p_CA0425_02_7_1 copy.jpg
+static/images/p_CA0425_02_8_1 copy.jpg
+static/images/p_CA0425_15_1_1 copy.jpg
+static/images/p_CA0425_15_2_1 copy.jpg
+static/images/p_CA0425_15_7_1 copy.jpg
+static/images/p_CA0425_15_8_1 copy.jpg
+static/images/p_CA6401_01_1_1 copy.jpg
+static/images/p_CA6401_01_2_1 copy.jpg
+static/images/p_CA6401_01_7_1 copy.jpg
+static/images/p_CA6401_01_8_1 copy.jpg
+static/images/p_CA6401_46_1_1 copy.jpg
+static/images/p_CA6401_46_2_1 copy.jpg
+static/images/p_CA6401_46_7_1 copy.jpg
+static/images/p_CA6401_46_8_1 copy.jpg
+static/images/p_CA6663_02243_1_1 copy.jpg
+static/images/p_CA6663_02243_2_1 copy.jpg
+static/images/p_CA6663_02243_7_1 copy.jpg
+static/images/p_CA6663_02243_8_1 copy.jpg
+static/images/p_CQ6421_60_1_1 copy.jpg
+static/images/p_CQ6421_60_2_1 copy.jpg
+static/images/p_CQ6421_60_7_1 copy.jpg
+static/images/p_CQ6421_60_8_1 copy.jpg
+static/images/print_ready_logo_vertical.png
+static/images/pull-dip.png
+static/images/pull_web.png
+static/images/push_web.png
+static/images/saxon1_orig.png
+static/images/shido.png
+static/images/shido2.png
+static/images/skinfold-caliper.png
+static/images/top_arrow_left.png
+static/images/top_arrow_right.png
+static/images/us.png
+static/images/us2.png
+static/images/us3.png
+static/images/us4.png
+static/images/us5.png
+static/images/us6.png
+static/images/us8 (3 of 1).jpg
+static/images/us9 (3 of 1).jpg
+static/images/us__3_of_1_-removebg.png
+static/images/vegetables.png
+static/images/wounded_warrior.png
+static/images/wrist-size.png
+static/images/yavor.jpg
+static/images/zdravko_raichev.jpg
+styles/css/SyntaxHighlighter.css
+styles/css/bootstrap.css
+styles/css/bootstrap.min.css
+styles/css/docs.css
+styles/css/docs.min.css
+styles/css/font-awesome.css
+styles/css/font-awesome.min.css
+styles/css/testimonials.css
+styles/css/testimonials.min.css
+styles/fonts/FontAwesome.otf
+styles/fonts/fontawesome-webfont.eot
+styles/fonts/fontawesome-webfont.svg
+styles/fonts/fontawesome-webfont.ttf
+styles/fonts/fontawesome-webfont.woff
+styles/libs/bootstrap.min.css
+styles/libs/font-awesome.min.css
+styles/libs/lightslider.css
+styles/styles.css
+styles/styles.css.map
+styles/styles.less
+styles/styles.min.css
+views/403.html
+views/404.html
+views/about.html
+views/athlete_oath.html
+views/blanks.html
+views/blog.html
+views/blog_grid.html
+views/blog_page2.html
+views/blog_page3.html
+views/calculators.html
+views/code_of_ethics.html
+views/contact.html
+views/drafts.html
+views/drills.html
+views/drills_page_2.html
+views/drills_page_3.html
+views/ellie.html
+views/food.html
+views/forms.html
+views/gallery.html
+views/gear.html
+views/identity.html
+views/passwd.html
+views/policy.html
+views/price.html
+views/rules.html
+views/sitemap.html
+views/sitemap.xml
+views/standards.html
+views/strength_hall.html
+views/terms.html
+views/test.html
+views/testimonials.html
+views/training.html
+views/video.html
+views/video_grid.html
+views/yavor.html

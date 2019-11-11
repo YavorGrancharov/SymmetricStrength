@@ -1,35 +1,5 @@
 let strengthController = (() => {
-    // function checkAll() {
-    //     let all = document.getElementById("all");
-    //     all.addEventListener('click', function () {
-    //         if (this.childNodes[1].children[0].checked) {
-    //             $(':checkbox').each(function () {
-    //                 this.checked = true;
-    //             });
-    //         }
-    //         else {
-    //             $(':checkbox').each(function () {
-    //                 this.checked = false;
-    //             });
-    //         }
-    //     })
-    // }
-
     function showMovements() {
-        // let all = document.getElementById("all");
-        // all.addEventListener('click', function () {
-        //     if (this.childNodes[1].children[0].checked) {
-        //         $(':checkbox').each(function () {
-        //             this.checked = true;
-        //         });
-        //     }
-        //     else {
-        //         $(':checkbox').each(function () {
-        //             this.checked = false;
-        //         });
-        //     }
-        // })
-
         let showMoves = document.getElementById("show-next");
         let hidden = document.getElementById("hidden-div");
         let trows = document.getElementById("hidden-div").querySelectorAll("tr");
@@ -56,6 +26,7 @@ let strengthController = (() => {
                 if (chosen.length >= 5) {
                     hidden.style.display = 'block';
                     chosen[f].style.display = 'table-row';
+                    showMoves.value = 'ДОБАВИ'
                 } else {
                     hidden.style.display = 'none';
                 }
@@ -63,28 +34,297 @@ let strengthController = (() => {
         });
     }
 
+    function checkAll() {
+        let all = document.getElementById("all");
+        let allChecked;
+        all.addEventListener('click', function () {
+            if (this.childNodes[1].children[0].checked) {
+                $(':checkbox').each(function () {
+                    this.checked = true;
+                });
+                allChecked = true;
+            }
+            else {
+                $(':checkbox').each(function () {
+                    this.checked = false;
+                });
+                allChecked = false;
+            }
+            return allChecked;
+        })
+    }
+
     function symmetricStrength() {
-        let sex = strengthModel.getSex();
-        let height = strengthModel.getHeight();
-        let weight = strengthModel.getBodyWeight();
-        let age = strengthModel.getAge();
-
-        let deadlift = strengthModel.getDeadlift();
-        let squat = strengthModel.getSquat();
-        let overheadPress = strengthModel.getOverheadPress();
-        let lunge = strengthModel.getLunge();
-        let frontSquat = strengthModel.getFrontSquat();
-
-        let deadlift_reps = strengthModel.getDeadliftReps();
-        let squat_reps = strengthModel.getSquatReps();
-        let overhead_press_reps = strengthModel.getOverheadPressReps();
-        let lunge_reps = strengthModel.getLungeReps();
-        let front_squat_reps = strengthModel.getFrontSquatReps();
-
         let submit = document.getElementById("submit");
-        submit.addEventListener('click', function(event) {
+        submit.addEventListener('click', function (event) {
             event.preventDefault();
-            console.log(sex.value)
+            let sex = document.querySelector('input[name="sex"]:checked').value;
+            let height = document.getElementById("height").value;
+            let body_weight = document.getElementById("body-weight").value;
+            let age = document.getElementById("age").value;
+
+            let deadlift = document.getElementById("deadlift").value;
+            let squat = document.getElementById("squat").value;
+            let overhead_press = document.getElementById("overhead-press").value;
+            let lunge = document.getElementById("lunge").value;
+            let pull_up = document.getElementById("pull-up").value;
+            let dip = document.getElementById("dip").value;
+            let front_squat = document.getElementById("front-squat").value;
+            let sumo_deadlift = document.getElementById("sumo-deadlift").value;
+            let push_press = document.getElementById("push-press").value;
+
+            let deadlift_reps = document.getElementById("deadlift-reps").value;
+            let squat_reps = document.getElementById("squat-reps").value;
+            let overhead_press_reps = document.getElementById("overhead-press-reps").value;
+            let lunge_reps = document.getElementById("lunge-reps").value;
+            let pull_up_reps = document.getElementById("pull-up-reps").value;
+            let dip_reps = document.getElementById("dip-reps").value;
+            let front_psquat_reps = document.getElementById("front-squat-reps").value;
+            let sumo_deadlift_reps = document.getElementById("sumo-deadlift-reps").value;
+            let push_press_reps = document.getElementById("push-press-reps").value;
+
+            let rank = document.getElementById("rank");
+            let division = document.getElementById("division");
+            let insignia = document.getElementById("insignia");
+            let nextRank = document.getElementById("next-level-rank");
+            let nextDivision = document.getElementById("next-level-division");
+            let nextInsignia = document.getElementById("next-level-insignia");
+            let strongest = document.getElementById("strongest");
+            let weakest = document.getElementById("weakest");
+
+            let maleRealDeadlift = ((1.72 * body_weight) / ((height * (1 / 3)) / 100)) / getLifterAge(age);
+            let femaleRealDeadlift = ((1.486 * body_weight) / ((height * (1 / 3)) / 100)) / getLifterAge(age);
+
+            let strengthIndexes = [0.25, 0.3375, 0.425, 0.5125, 0.6, 0.6833, 0.7666, 0.85, 0.925, 1];
+            let ranks = ["Вербован", "Новобранец", "Редник", "Ефрейтор", "Сержант", "Лейтенант", "Капитан", "Майор", "Полковник", "Генерал"];
+            let divisions = ["Зулу", "Зулу", "Зулу", "Зулу", "Лима", "Лима", "Лима", "Делта", "Делта", "Алфа"];
+            let shoulder_mark = [
+                '../static/images/1_2.png', '../static/images/2_2.png', '../static/images/3_2.png',
+                '../static/images/4_2.png', '../static/images/5_2.png', '../static/images/6_2.png',
+                '../static/images/8_2.png', '../static/images/7_2.png', '../static/images/9_2.png',
+                '../static/images/10_2.png'
+            ];
+
+            let reps = [
+                getIntensity(deadlift_reps),
+                getIntensity(squat_reps),
+                getIntensity(overhead_press_reps),
+                getIntensity(lunge_reps),
+                getIntensity(pull_up_reps),
+                getIntensity(dip_reps),
+                getIntensity(front_psquat_reps),
+                getIntensity(sumo_deadlift_reps),
+                getIntensity(push_press_reps)
+            ];
+
+            let userInput = [
+                { name: "Мъртва тяга", value: document.getElementById("deadlift"), reps: document.getElementById("deadlift-reps") },
+                { name: "Клек", value: document.getElementById("squat"), reps: document.getElementById("squat-reps") },
+                { name: "Военна преса", value: document.getElementById("overhead-press"), reps: document.getElementById("overhead-press-reps") },
+                { name: "Напад", value: document.getElementById("lunge"), reps: document.getElementById("lunge-reps") },
+                { name: "Набиране", value: document.getElementById("pull-up"), reps: document.getElementById("pull-up-reps") },
+                { name: "Кофи", value: document.getElementById("dip"), reps: document.getElementById("dip-reps") },
+                { name: "Преден клек", value: document.getElementById("front-squat"), reps: document.getElementById("front-squat-reps") },
+                { name: "Сумо тяга", value: document.getElementById("sumo-deadlift"), reps: document.getElementById("sumo-deadlift-reps") },
+                { name: "Пуш преса", value: document.getElementById("push-press"), reps: document.getElementById("push-press-reps") }
+            ];
+
+            let movementsIndexes = [
+                { name: "Мъртва тяга", value: 1 }, { name: "Клек", value: 0.83 },
+                { name: "Военна преса", value: sex === 'male' ? 0.4 : 0.37 },
+                { name: "Напад", value: 0.7 }, { name: "Набиране", value: sex === 'male' ? 0.65 : 0.56 },
+                { name: "Кофи", value: sex === 'male' ? 0.8 : 0.63 },
+                { name: "Преден клек", value: sex === 'male' ? 0.68 : 0.67 },
+                { name: "Сумо тяга", value: 0.95 }, { name: "Пуш преса", value: sex === 'male' ? 0.56 : 0.49 }
+            ];
+
+            let idealSet = [
+                { name: "Мъртва тяга", value: document.getElementById("ideal-deadlift"), reps: document.getElementById("ideal-deadlift-reps") },
+                { name: "Клек", value: document.getElementById("ideal-squat"), reps: document.getElementById("ideal-squat-reps") },
+                { name: "Военна преса", value: document.getElementById("ideal-overhead-press"), reps: document.getElementById("ideal-overhead-press-reps") },
+                { name: "Напад", value: document.getElementById("ideal-lunge"), reps: document.getElementById("ideal-lunge-reps") },
+                { name: "Набиране", value: document.getElementById("ideal-pull-up"), reps: document.getElementById("ideal-pull-up-reps") },
+                { name: "Кофи", value: document.getElementById("ideal-dip"), reps: document.getElementById("ideal-dip-reps") },
+                { name: "Преден клек", value: document.getElementById("ideal-front-squat"), reps: document.getElementById("ideal-front-squat-reps") },
+                { name: "Сумо тяга", value: document.getElementById("ideal-sumo-dealift"), reps: document.getElementById("ideal-sumo-deadlift-reps") },
+                { name: "Пуш преса", value: document.getElementById("ideal-push-press"), reps: document.getElementById("ideal-push-press-reps") }
+            ];
+
+            let ideal_moves = [
+                { name: "Мъртва тяга", value: (deadlift / getIntensity(deadlift_reps)) / 1 },
+                { name: "Клек", value: (squat / getIntensity(squat_reps)) / 0.83 },
+                {
+                    name: "Военна преса",
+                    value: sex === 'male'
+                        ? (overhead_press / getIntensity(overhead_press_reps)) / 0.4
+                        : (overhead_press / getIntensity(overhead_press_reps)) / 0.37
+                },
+                { name: "Напад", value: (lunge / getIntensity(lunge_reps)) / 0.7 },
+                {
+                    name: "Набиране",
+                    value: sex === 'male'
+                        ? (pull_up / getIntensity(pull_up_reps)) / 0.65
+                        : (pull_up / getIntensity(pull_up_reps)) / 0.56
+                },
+                {
+                    name: "Кофи",
+                    value: sex === 'male'
+                        ? (dip / getIntensity(dip_reps)) / 0.79
+                        : (dip / getIntensity(dip_reps)) / 0.63
+                },
+                {
+                    name: "Преден клек",
+                    value: sex === 'male'
+                        ? (front_squat / getIntensity(front_psquat_reps)) / 0.68
+                        : (front_squat / getIntensity(front_psquat_reps)) / 0.67
+                },
+                { name: "Сумо тяга", value: (sumo_deadlift / getIntensity(sumo_deadlift_reps)) / 0.95 },
+                {
+                    name: "Пуш преса",
+                    value: sex === 'male'
+                        ? (push_press / getIntensity(push_press_reps)) / 0.56
+                        : (push_press / getIntensity(push_press_reps)) / 0.49
+                }
+            ];
+
+            let hidden = document.getElementById("ideal-hidden-div");
+            let trows = document.getElementById("ideal-hidden-div").querySelectorAll("tr");
+
+            let checked = []
+            let chosen = []
+            checked = Array.from(document.querySelectorAll('input[type="checkbox"]'))
+                .filter((checkbox) => checkbox.checked)
+                .map((checkbox) => checkbox.value);
+            for (let i = 0; i < trows.length; i++) {
+                for (let j = 0; j < trows.length; j++) {
+                    if (checked[j] === trows[i].classList.value) {
+                        chosen.push(trows[i]);
+                    }
+                    if (chosen.includes(trows[i])) {
+                        chosen.splice(i, 1);
+                    }
+                }
+            }
+
+            for (let f = 0; f < chosen.length; f++) {
+                if (chosen.length >= 5) {
+                    hidden.style.display = 'block';
+                    chosen[f].style.display = 'table-row';
+                } else {
+                    hidden.style.display = 'none';
+                }
+            }
+
+            let avg;
+            let hasInput = [];
+            let idealMax = Number.MIN_SAFE_INTEGER;
+            let idealMaxName = '';
+            let idealMin = Number.MAX_SAFE_INTEGER;
+            let idealNameMin = '';
+            for (let i = 0; i < ideal_moves.length; i++) {
+                if (ideal_moves[i].value) {
+                    hasInput.push(ideal_moves[i].value);
+                    if (ideal_moves[i].value > idealMax) {
+                        idealMax = ideal_moves[i].value;
+                        idealMaxName = ideal_moves[i].name;
+                    }
+                    if (ideal_moves[i].value < idealMin) {
+                        idealMin = ideal_moves[i].value;
+                        idealNameMin = ideal_moves[i].name;
+                    }
+                }
+            }
+            console.log(`Ideal max is ${idealMaxName} with value of ${Math.round(idealMax)}kg`)
+            console.log(`Ideal min is ${idealNameMin} with value of ${Math.round(idealMin)}kg`)
+            console.log(hasInput)
+            avg = hasInput.reduce(function (a, b) { return (a + b) })
+            avg /= hasInput.length;
+            console.log(avg)
+
+            let nextLevelDeadlift = 0;
+            let currentRank = '';
+            let currentDivision = '';
+            let nextLevelRank = '';
+            let nextLevelDivision = '';
+            let imgPos;
+            let imgPosNext;
+            for (let j = 0; j < strengthIndexes.length; j++) {
+                if (sex === "male") {
+                    if ((maleRealDeadlift * strengthIndexes[j]) >= idealMax) {
+                        nextLevelDeadlift = maleRealDeadlift * strengthIndexes[j];
+                        if (nextLevelDeadlift >= avg) {
+                            nextLevelRank = ranks[j];
+                            nextLevelDivision = divisions[j];
+                            imgPosNext = j;
+                            currentRank = ranks[j - 1];
+                            currentDivision = divisions[j - 1];
+                            imgPos = j - 1;
+                        }
+                        break;
+                    } else {
+                        nextLevelDeadlift = maleRealDeadlift;
+                        imgPos = strengthIndexes.length - 1;
+                        currentRank = ranks[strengthIndexes.length - 1];
+                        currentDivision = divisions[strengthIndexes.length - 1];
+                    }
+                } else {
+                    if ((femaleRealDeadlift * strengthIndexes[j]) >= idealMax) {
+                        nextLevelDeadlift = femaleRealDeadlift * strengthIndexes[j];
+                        if (nextLevelDeadlift >= avg) {
+                            nextLevelRank = ranks[j];
+                            nextLevelDivision = divisions[j];
+                            imgPosNext = j;
+                            currentRank = ranks[j - 1];
+                            currentDivision = divisions[j - 1];
+                            imgPos = j - 1;
+                        }
+                        break;
+                    } else {
+                        nextLevelDeadlift = femaleRealDeadlift;
+                        imgPos = strengthIndexes.length - 1;
+                        currentRank = ranks[strengthIndexes.length - 1];
+                        currentDivision = divisions[strengthIndexes.length - 1];
+                    }
+                }
+            }
+
+            let relativeDeadlift = 0;
+            if (idealMax > (deadlift / getIntensity(deadlift_reps))) {
+                relativeDeadlift = idealMax * getIntensity(deadlift_reps);
+            } else {
+                relativeDeadlift = (deadlift / getIntensity(deadlift_reps)) * getIntensity(deadlift_reps);
+            }
+            console.log(relativeDeadlift)
+
+            for (let i = 0; i < idealSet.length; i++) {
+                if (userInput[i].value.value) {
+                    idealSet[i].value.value = Math.round(((relativeDeadlift / getIntensity(deadlift_reps)) * movementsIndexes[i].value) * reps[i]);
+                    idealSet[i].reps.value = userInput[i].reps.value;
+                    // nextLevelSet[i].value.value = Math.round(((nextLevelDeadlift * reps[i]) * coeff[i].value) / round) * round;
+                    // if (sex === "male") {
+                    //     perfectSet[i].value.value = Math.round(((maleRealDeadlift * coeff[i].value) * reps[i]) / round) * round;
+                    // } else {
+                    //     perfectSet[i].value.value = Math.round(((femaleRealDeadlift * coeff[i].value) * reps[i]) / round) * round;
+                    // }
+                } else {
+                    // nextLevelSet[i].value.value = '';
+                    // idealSet[i].value.value = '';
+                    // perfectSet[i].value.value = '';
+                }
+            }
+
+            if (userInput.length > 0) {
+                rank.innerHTML = `${currentRank}`;
+                division.innerHTML = `${currentDivision}`;
+                insignia.setAttribute('src', shoulder_mark[imgPos])
+                nextRank.innerHTML = `${nextLevelRank}`;
+                nextDivision.innerHTML = `${nextLevelDivision}`;
+                nextInsignia.setAttribute('src', shoulder_mark[imgPosNext]);
+                strongest.innerHTML = `${idealMaxName}`;
+                // strongestRmDeadlift.innerHTML = `${Math.round(idealMax)}kg`;
+                weakest.innerHTML = `${idealNameMin}`;
+                // weakestRmDeadlift.innerHTML = `${Math.round(idealMin)}kg`;
+            }
         })
     }
 
@@ -108,6 +348,7 @@ let strengthController = (() => {
     }
 
     return {
+        checkAll,
         showMovements,
         symmetricStrength
     }
