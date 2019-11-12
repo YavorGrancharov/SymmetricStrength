@@ -337,12 +337,17 @@ let strengthController = (() => {
             }
             console.log(relativeDeadlift)
 
+            let labels = []
+            let data = []
             for (let i = 0; i < idealSet.length; i++) {
                 if (userInput[i].value.value) {
+                    labels.push(userInput[i].name)
                     idealSet[i].value.value = Math.round(((relativeDeadlift / getIntensity(deadlift_reps)) * movementsIndexes[i].value) * reps[i]);
                     idealSet[i].reps.value = userInput[i].reps.value;
                     nextLevelSet[i].value.value = Math.round((nextLevelDeadlift * reps[i]) * movementsIndexes[i].value);
                     nextLevelSet[i].reps.value = userInput[i].reps.value;
+                    data.push(Math.round(((userInput[i].value.value - idealSet[i].value.value) / userInput[i].value.value ) * 100))
+                    // data.push(Math.round()
                     // if (sex === "male") {
                     //     perfectSet[i].value.value = Math.round(((maleRealDeadlift * coeff[i].value) * reps[i]) / round) * round;
                     // } else {
@@ -354,7 +359,10 @@ let strengthController = (() => {
                     // perfectSet[i].value.value = '';
                 }
             }
+            console.log(labels)
+            console.log(data)
 
+            let idealChartBtn = document.getElementById("idealChartBtn");
             if (userInput.length > 0) {
                 rank.innerHTML = `${currentRank}`;
                 division.innerHTML = `${currentDivision}`;
@@ -366,48 +374,44 @@ let strengthController = (() => {
                 // strongestRmDeadlift.innerHTML = `${Math.round(idealMax)}kg`;
                 weakest.innerHTML = `${idealNameMin}`;
                 // weakestRmDeadlift.innerHTML = `${Math.round(idealMin)}kg`;
-            }
-        })
-    }
-
-    function idealChart() {
-        let idealChartBtn = document.getElementById("idealChartBtn");
-        idealChartBtn.addEventListener('click', function (event) {
-            event.preventDefault();
-            let idealChart = document.getElementById("ideal-bar-chart-horizontal");
-            let a = window.matchMedia("(max-width: 480px)");
-            myFunction(a);
-            a.addListener(myFunction);
-            new Chart((idealChart), {
-                type: 'horizontalBar',
-                data: {
-                    labels: ["Deadlift", "Dip", "Military Press", "Sumo Deadlift", "Squat", "Lunge", "Pull-up", "Front Squat", "Push Press", "Overhead Squat", "Airborne Squat"],
-                    datasets: [
-                        {
-                            label: "",
-                            backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
-                            data: [-30.55, 0, -5.55, -23.53, -8.33, -10, -17.42, -33.33, -30, -62.5, -50],
-                            color: "#ffffff"
+                idealChartBtn.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    let idealChart = document.getElementById("ideal-bar-chart-horizontal");
+                    let a = window.matchMedia("(max-width: 480px)");
+                    myFunction(a);
+                    a.addListener(myFunction);
+                    new Chart((idealChart), {
+                        type: 'horizontalBar',
+                        data: {
+                            labels: labels,
+                            datasets: [
+                                {
+                                    label: "",
+                                    backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                    data: data,
+                                    color: "#ffffff"
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            legend: {
+                                display: false
+                            },
+                            title: {
+                                display: true,
+                                text: "графика на равновесието"
+                            }
                         }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    legend: {
-                        display: false
-                    },
-                    title: {
-                        display: true,
-                        text: "графика на равновесието"
-                    }
-                }
-            });
+                    });
 
-            function myFunction(a) {
-                if (a.matches) {
-                    idealChart.height = window.innerHeight;
-                    idealChart.width = window.innerWidth;
-                }
+                    function myFunction(a) {
+                        if (a.matches) {
+                            idealChart.height = window.innerHeight;
+                            idealChart.width = window.innerWidth;
+                        }
+                    }
+                })
             }
         })
     }
