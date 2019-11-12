@@ -72,6 +72,8 @@ let strengthController = (() => {
             let front_squat = document.getElementById("front-squat").value;
             let sumo_deadlift = document.getElementById("sumo-deadlift").value;
             let push_press = document.getElementById("push-press").value;
+            let renegade_row = document.getElementById("renegade-row").value;
+            let good_morning = document.getElementById("good-morning").value;
 
             let deadlift_reps = document.getElementById("deadlift-reps").value;
             let squat_reps = document.getElementById("squat-reps").value;
@@ -82,6 +84,8 @@ let strengthController = (() => {
             let front_psquat_reps = document.getElementById("front-squat-reps").value;
             let sumo_deadlift_reps = document.getElementById("sumo-deadlift-reps").value;
             let push_press_reps = document.getElementById("push-press-reps").value;
+            let renegade_row_reps = document.getElementById("renegade-row-reps").value;
+            let good_morning_reps = document.getElementById("good-morning-reps").value;
 
             let rank = document.getElementById("rank");
             let division = document.getElementById("division");
@@ -114,7 +118,9 @@ let strengthController = (() => {
                 getIntensity(dip_reps),
                 getIntensity(front_psquat_reps),
                 getIntensity(sumo_deadlift_reps),
-                getIntensity(push_press_reps)
+                getIntensity(push_press_reps),
+                getIntensity(renegade_row_reps),
+                getIntensity(good_morning_reps)
             ];
 
             let userInput = [
@@ -126,7 +132,9 @@ let strengthController = (() => {
                 { name: "Кофи", value: document.getElementById("dip"), reps: document.getElementById("dip-reps") },
                 { name: "Преден клек", value: document.getElementById("front-squat"), reps: document.getElementById("front-squat-reps") },
                 { name: "Сумо тяга", value: document.getElementById("sumo-deadlift"), reps: document.getElementById("sumo-deadlift-reps") },
-                { name: "Пуш преса", value: document.getElementById("push-press"), reps: document.getElementById("push-press-reps") }
+                { name: "Пуш преса", value: document.getElementById("push-press"), reps: document.getElementById("push-press-reps") },
+                { name: "Ренегатско гребане", value: document.getElementById("renegade-row"), reps: document.getElementById("renegade-row-reps") },
+                { name: "Гуд морнинг", value: document.getElementById("good-morning"), reps: document.getElementById("good-morning-reps") }
             ];
 
             let movementsIndexes = [
@@ -135,7 +143,8 @@ let strengthController = (() => {
                 { name: "Напад", value: 0.7 }, { name: "Набиране", value: sex === 'male' ? 0.65 : 0.56 },
                 { name: "Кофи", value: sex === 'male' ? 0.8 : 0.63 },
                 { name: "Преден клек", value: sex === 'male' ? 0.68 : 0.67 },
-                { name: "Сумо тяга", value: 0.95 }, { name: "Пуш преса", value: sex === 'male' ? 0.56 : 0.49 }
+                { name: "Сумо тяга", value: 0.95 }, { name: "Пуш преса", value: sex === 'male' ? 0.56 : 0.49 },
+                { name: "Ренегатско гребане", value: sex === 'male' ? 0.26 : 0.2 }, { name: "Гуд морнинг", value: 0.44 }
             ];
 
             let idealSet = [
@@ -146,8 +155,24 @@ let strengthController = (() => {
                 { name: "Набиране", value: document.getElementById("ideal-pull-up"), reps: document.getElementById("ideal-pull-up-reps") },
                 { name: "Кофи", value: document.getElementById("ideal-dip"), reps: document.getElementById("ideal-dip-reps") },
                 { name: "Преден клек", value: document.getElementById("ideal-front-squat"), reps: document.getElementById("ideal-front-squat-reps") },
-                { name: "Сумо тяга", value: document.getElementById("ideal-sumo-dealift"), reps: document.getElementById("ideal-sumo-deadlift-reps") },
-                { name: "Пуш преса", value: document.getElementById("ideal-push-press"), reps: document.getElementById("ideal-push-press-reps") }
+                { name: "Сумо тяга", value: document.getElementById("ideal-sumo-deadlift"), reps: document.getElementById("ideal-sumo-deadlift-reps") },
+                { name: "Пуш преса", value: document.getElementById("ideal-push-press"), reps: document.getElementById("ideal-push-press-reps") },
+                { name: "Ренегатско гребане", value: document.getElementById("ideal-renegade-row"), reps: document.getElementById("ideal-renegade-row-reps") },
+                { name: "Гуд морнинг", value: document.getElementById("ideal-good-morning"), reps: document.getElementById("ideal-good-morning-reps") }
+            ];
+
+            let nextLevelSet = [
+                { name: "Мъртва тяга", value: document.getElementById("next-level-deadlift"), reps: document.getElementById("next-level-deadlift-reps") },
+                { name: "Клек", value: document.getElementById("next-level-squat"), reps: document.getElementById("next-level-squat-reps") },
+                { name: "Военна преса", value: document.getElementById("next-level-overhead-press"), reps: document.getElementById("next-level-overhead-press-reps") },
+                { name: "Напад", value: document.getElementById("next-level-lunge"), reps: document.getElementById("next-level-lunge-reps") },
+                { name: "Набиране", value: document.getElementById("next-level-pull-up"), reps: document.getElementById("next-level-pull-up-reps") },
+                { name: "Кофи", value: document.getElementById("next-level-dip"), reps: document.getElementById("next-level-dip-reps") },
+                { name: "Преден клек", value: document.getElementById("next-level-front-squat"), reps: document.getElementById("next-level-front-squat-reps") },
+                { name: "Сумо тяга", value: document.getElementById("next-level-sumo-deadlift"), reps: document.getElementById("next-level-sumo-deadlift-reps") },
+                { name: "Пуш преса", value: document.getElementById("next-level-push-press"), reps: document.getElementById("next-level-push-press-reps") },
+                { name: "Ренегатско гребане", value: document.getElementById("next-level-renegade-row"), reps: document.getElementById("next-level-renegade-row-reps") },
+                { name: "Гуд морнинг", value: document.getElementById("next-level-good-morning"), reps: document.getElementById("next-level-good-morning-reps") }
             ];
 
             let ideal_moves = [
@@ -184,34 +209,49 @@ let strengthController = (() => {
                     value: sex === 'male'
                         ? (push_press / getIntensity(push_press_reps)) / 0.56
                         : (push_press / getIntensity(push_press_reps)) / 0.49
-                }
+                },
+                {
+                    name: "Ренегатско гребане",
+                    value: sex === 'male'
+                        ? (renegade_row / getIntensity(renegade_row_reps)) / 0.26
+                        : (renegade_row / getIntensity(renegade_row_reps)) / 0.2
+                },
+                { name: "Гуд морнинг", value: (good_morning / getIntensity(good_morning_reps)) / 0.44 }
             ];
 
             let hidden = document.getElementById("ideal-hidden-div");
             let trows = document.getElementById("ideal-hidden-div").querySelectorAll("tr");
+            let nextLvlHiddenDiv = document.getElementById("next-level-hidden-div");
+            let nextLvlTRows = document.getElementById("next-level-hidden-div").querySelectorAll("tr");
 
             let checked = []
-            let chosen = []
+            let ideal = []
+            let nextLvl = []
             checked = Array.from(document.querySelectorAll('input[type="checkbox"]'))
                 .filter((checkbox) => checkbox.checked)
                 .map((checkbox) => checkbox.value);
             for (let i = 0; i < trows.length; i++) {
                 for (let j = 0; j < trows.length; j++) {
-                    if (checked[j] === trows[i].classList.value) {
-                        chosen.push(trows[i]);
+                    if (checked[j] === trows[i].classList.value && checked[j] === nextLvlTRows[i].classList.value) {
+                        ideal.push(trows[i]);
+                        nextLvl.push(nextLvlTRows[i])
                     }
-                    if (chosen.includes(trows[i])) {
-                        chosen.splice(i, 1);
+                    if (ideal.includes(trows[i]) || nextLvl.includes(nextLvlTRows[i])) {
+                        ideal.splice(i, 1);
+                        nextLvl.splice(i, 1)
                     }
                 }
             }
 
-            for (let f = 0; f < chosen.length; f++) {
-                if (chosen.length >= 5) {
+            for (let f = 0; f < ideal.length; f++) {
+                if (ideal.length >= 5) {
                     hidden.style.display = 'block';
-                    chosen[f].style.display = 'table-row';
+                    ideal[f].style.display = 'table-row';
+                    nextLvlHiddenDiv.style.display = 'block';
+                    nextLvl[f].style.display = 'table-row';
                 } else {
                     hidden.style.display = 'none';
+                    nextLvlHiddenDiv.style.display = 'none';
                 }
             }
 
@@ -239,6 +279,7 @@ let strengthController = (() => {
             console.log(hasInput)
             avg = hasInput.reduce(function (a, b) { return (a + b) })
             avg /= hasInput.length;
+            console.log(hasInput)
             console.log(avg)
 
             let nextLevelDeadlift = 0;
@@ -300,7 +341,8 @@ let strengthController = (() => {
                 if (userInput[i].value.value) {
                     idealSet[i].value.value = Math.round(((relativeDeadlift / getIntensity(deadlift_reps)) * movementsIndexes[i].value) * reps[i]);
                     idealSet[i].reps.value = userInput[i].reps.value;
-                    // nextLevelSet[i].value.value = Math.round(((nextLevelDeadlift * reps[i]) * coeff[i].value) / round) * round;
+                    nextLevelSet[i].value.value = Math.round((nextLevelDeadlift * reps[i]) * movementsIndexes[i].value);
+                    nextLevelSet[i].reps.value = userInput[i].reps.value;
                     // if (sex === "male") {
                     //     perfectSet[i].value.value = Math.round(((maleRealDeadlift * coeff[i].value) * reps[i]) / round) * round;
                     // } else {
@@ -328,6 +370,48 @@ let strengthController = (() => {
         })
     }
 
+    function idealChart() {
+        let idealChartBtn = document.getElementById("idealChartBtn");
+        idealChartBtn.addEventListener('click', function (event) {
+            event.preventDefault();
+            let idealChart = document.getElementById("ideal-bar-chart-horizontal");
+            let a = window.matchMedia("(max-width: 480px)");
+            myFunction(a);
+            a.addListener(myFunction);
+            new Chart((idealChart), {
+                type: 'horizontalBar',
+                data: {
+                    labels: ["Deadlift", "Dip", "Military Press", "Sumo Deadlift", "Squat", "Lunge", "Pull-up", "Front Squat", "Push Press", "Overhead Squat", "Airborne Squat"],
+                    datasets: [
+                        {
+                            label: "",
+                            backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                            data: [-30.55, 0, -5.55, -23.53, -8.33, -10, -17.42, -33.33, -30, -62.5, -50],
+                            color: "#ffffff"
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: "графика на равновесието"
+                    }
+                }
+            });
+
+            function myFunction(a) {
+                if (a.matches) {
+                    idealChart.height = window.innerHeight;
+                    idealChart.width = window.innerWidth;
+                }
+            }
+        })
+    }
+
     function getIntensity(reps) {
         let intensity = {
             1: 1, 2: 0.95, 3: 0.93, 4: 0.9, 5: 0.87, 6: 0.85, 7: 0.83, 8: 0.8, 9: 0.77, 10: 0.75
@@ -350,6 +434,7 @@ let strengthController = (() => {
     return {
         checkAll,
         showMovements,
-        symmetricStrength
+        symmetricStrength,
+        idealChart
     }
 })();

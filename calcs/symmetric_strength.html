@@ -399,17 +399,15 @@
                                                                 <div class="form-check">
                                                                     <label>
                                                                         <input type="checkbox" name="check"
-                                                                            value="bent-over-row">
-                                                                        <span class="label-text">Гребане с
-                                                                            щанга</span>
+                                                                            value="renegade-row">
+                                                                        <span class="label-text">Ренегатско гребане</span>
                                                                     </label>
                                                                 </div>
                                                                 <div class="form-check">
                                                                     <label>
                                                                         <input type="checkbox" name="check"
-                                                                            value="romanian-deadlift">
-                                                                        <span class="label-text">Румънска
-                                                                            тяга</span>
+                                                                            value="good-morning">
+                                                                        <span class="label-text">Гуд морнинг</span>
                                                                     </label>
                                                                 </div>
                                                                 <div class="form-check">
@@ -658,6 +656,50 @@
                                                                                         </select>
                                                                                     </td>
                                                                                 </tr>
+                                                                                <tr style="display: none;"
+                                                                                    class="renegade-row">
+                                                                                    <td>
+                                                                                        <label class="control-label"
+                                                                                            for="renegade-row">Ренегатско гребане</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="renegade-row" type="number"
+                                                                                            placeholder="кг" value=""
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <select class="form-control"
+                                                                                            id="renegade-row-reps">
+                                                                                            <option value="1">1</option>
+                                                                                            <option value="2">2</option>
+                                                                                            <option value="3">3</option>
+                                                                                            <option value="4">4</option>
+                                                                                            <option value="5" selected>5</option>
+                                                                                        </select>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr style="display: none;"
+                                                                                    class="good-morning">
+                                                                                    <td>
+                                                                                        <label class="control-label"
+                                                                                            for="good-morning">Гуд морнинг</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="good-morning" type="number"
+                                                                                            placeholder="кг" value=""
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <select class="form-control"
+                                                                                            id="good-morning-reps">
+                                                                                            <option value="1">1</option>
+                                                                                            <option value="2">2</option>
+                                                                                            <option value="3">3</option>
+                                                                                            <option value="4">4</option>
+                                                                                            <option value="5" selected>5</option>
+                                                                                        </select>
+                                                                                    </td>
+                                                                                </tr>
                                                                             </tbody>
                                                                             <tfoot>
                                                                                 <tr>
@@ -865,7 +907,7 @@
                                                                                     class="overhead-press">
                                                                                     <td>
                                                                                         <label class="control-label"
-                                                                                            for="ideal-squat">Военна
+                                                                                            for="ideal-overhead-press">Военна
                                                                                             преса</label>
                                                                                     </td>
                                                                                     <td>
@@ -982,6 +1024,292 @@
                                                                                             class="form-control input-sm">
                                                                                     </td>
                                                                                 </tr>
+                                                                                <tr style="display: none;"
+                                                                                    class="renegade-row">
+                                                                                    <td>
+                                                                                        <label class="control-label"
+                                                                                            for="ideal-renegade-row">Ренегатско гребане</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="ideal-renegade-row"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="ideal-renegade-row-reps"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr style="display: none;"
+                                                                                    class="good-morning">
+                                                                                    <td>
+                                                                                        <label class="control-label"
+                                                                                            for="ideal-good-morning">Гуд морнинг</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="ideal-good-morning"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="ideal-good-morning-reps"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <label class="control-label"
+                                                                                            for="ideal-shart">Графика</label>
+                                                                                    </td>
+                                                                                    <td style="border: none;">
+                                                                                        <button type="button" data-toggle="modal" id="idealChartBtn"
+                                                                                            data-target="#idealChart"><i class="fa fa-bar-chart"
+                                                                                                aria-hidden="true"></i></button>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="display: none;" id="next-level-hidden-div">
+                                                <div class="col-md-12">
+                                                    <form class="center-block" role="form">
+                                                        <div class="well">
+                                                            <div>
+                                                                <h4>
+                                                                    <strong>
+                                                                        Следващо ниво
+                                                                    </strong>
+                                                                </h4>
+                                                            </div>
+                                                            <div>
+                                                                <div class="tab-content">
+                                                                    <div class="tab-pane active">
+                                                                        <table class="table borderless" id="next-level-balance">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <h4>
+                                                                                            Движение *
+                                                                                        </h4>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <h4>
+                                                                                            Тежест
+                                                                                        </h4>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <h4>
+                                                                                            Повторения
+                                                                                        </h4>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr style="display: none;" class="deadlift">
+                                                                                    <td style="width: 35%;">
+                                                                                        <label class="control-label"
+                                                                                            for="next-level-deadlift">Мъртва
+                                                                                            тяга</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-deadlift"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-deadlift-reps"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr style="display: none;" class="squat">
+                                                                                    <td>
+                                                                                        <label class="control-label"
+                                                                                            for="next-level-squat">Клек</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-squat" type="text"
+                                                                                            readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-squat-reps"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr style="display: none;"
+                                                                                    class="overhead-press">
+                                                                                    <td>
+                                                                                        <label class="control-label"
+                                                                                            for="next-level-overhead-press">Военна
+                                                                                            преса</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-overhead-press"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input
+                                                                                            id="next-level-overhead-press-reps"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr style="display: none;" class="lunge">
+                                                                                    <td>
+                                                                                        <label class="control-label"
+                                                                                            for="next-level-lunge">Напад</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-lunge" type="text"
+                                                                                            readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-lunge-reps"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr style="display: none;" class="pull-up">
+                                                                                    <td>
+                                                                                        <label class="control-label"
+                                                                                            for="next-level-pull-up">Набиране</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-pull-up"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-pull-up-reps"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr style="display: none;" class="dip">
+                                                                                    <td>
+                                                                                        <label class="control-label"
+                                                                                            for="next-level-dip">Кофи</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-dip" type="text"
+                                                                                            readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-dip-reps"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr style="display: none;"
+                                                                                    class="front-squat">
+                                                                                    <td>
+                                                                                        <label class="control-label"
+                                                                                            for="next-level-front-squat">Преден
+                                                                                            клек</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-front-squat"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-front-squat-reps"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr style="display: none;"
+                                                                                    class="sumo-deadlift">
+                                                                                    <td>
+                                                                                        <label class="control-label"
+                                                                                            for="next-level-sumo-deadlift">Сумо
+                                                                                            тяга</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-sumo-deadlift"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-sumo-deadlift-reps"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr style="display: none;"
+                                                                                    class="push-press">
+                                                                                    <td>
+                                                                                        <label class="control-label"
+                                                                                            for="next-level-push-press">Пуш
+                                                                                            преса</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-push-press"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-push-press-reps"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr style="display: none;"
+                                                                                    class="renegade-row">
+                                                                                    <td>
+                                                                                        <label class="control-label"
+                                                                                            for="next-level-renegade-row">Ренегатско гребане</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-renegade-row"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-renegade-row-reps"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr style="display: none;"
+                                                                                    class="good-morning">
+                                                                                    <td>
+                                                                                        <label class="control-label"
+                                                                                            for="next-level-good-morning">Гуд морнинг</label>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-good-morning"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <input id="next-level-good-morning-reps"
+                                                                                            type="text" readonly
+                                                                                            class="form-control input-sm">
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <label class="control-label"
+                                                                                            for="next-level-shart">Графика</label>
+                                                                                    </td>
+                                                                                    <td style="border: none;">
+                                                                                        <button type="button" data-toggle="modal"
+                                                                                            data-target="#nextLevelChart"><i class="fa fa-bar-chart"
+                                                                                                aria-hidden="true"></i></button>
+                                                                                    </td>
+                                                                                </tr>
                                                                             </tbody>
                                                                         </table>
                                                                     </div>
@@ -1068,6 +1396,46 @@
         </div>
     </footer>
     <!-- End Footer -->
+    <div class="modal" id="idealChart">
+        <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <!-- <h4 class="modal-title">Л. Кръстев
+                        <small> (157см. 58кг. 19г.)</small>
+                    </h4> -->
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <canvas style="display: block" class="text-center"
+                                    id="ideal-bar-chart-horizontal"></canvas>
+                            </div>
+                        </div>
+                        <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения
+                            спрямо
+                            текущото най-силно
+                        </small>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Затвори</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <script src="../js/libs/jquery-1.12.4.min.js"></script>
     <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
@@ -1088,6 +1456,7 @@
         });
     </script>
     <script>
+        strengthController.idealChart();
         strengthController.checkAll();
         strengthController.showMovements();
         strengthController.symmetricStrength();

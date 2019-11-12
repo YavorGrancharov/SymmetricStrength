@@ -1793,3 +1793,8 @@ td:nth-child(3){
     box-shadow: none;
     border: none;
 }
+#next-level-balance tr > td > input {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
