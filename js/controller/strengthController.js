@@ -337,16 +337,20 @@ let strengthController = (() => {
             }
             console.log(relativeDeadlift)
 
-            let labels = []
-            let data = []
+            let idealLabels = []
+            let idealData = []
+            let nextLevelLabels = []
+            let nextLevelData = []
             for (let i = 0; i < idealSet.length; i++) {
                 if (userInput[i].value.value) {
-                    labels.push(userInput[i].name)
+                    idealLabels.push(userInput[i].name)
+                    nextLevelLabels.push(userInput[i].name)
                     idealSet[i].value.value = Math.round(((relativeDeadlift / getIntensity(deadlift_reps)) * movementsIndexes[i].value) * reps[i]);
                     idealSet[i].reps.value = userInput[i].reps.value;
                     nextLevelSet[i].value.value = Math.round((nextLevelDeadlift * reps[i]) * movementsIndexes[i].value);
                     nextLevelSet[i].reps.value = userInput[i].reps.value;
-                    data.push(Math.round(((userInput[i].value.value - idealSet[i].value.value) / userInput[i].value.value ) * 100))
+                    idealData.push(Math.round(((userInput[i].value.value - idealSet[i].value.value) / userInput[i].value.value) * 100))
+                    nextLevelData.push(Math.round(((userInput[i].value.value - nextLevelSet[i].value.value) / userInput[i].value.value) * 100))
                     // data.push(Math.round()
                     // if (sex === "male") {
                     //     perfectSet[i].value.value = Math.round(((maleRealDeadlift * coeff[i].value) * reps[i]) / round) * round;
@@ -359,10 +363,9 @@ let strengthController = (() => {
                     // perfectSet[i].value.value = '';
                 }
             }
-            console.log(labels)
-            console.log(data)
 
             let idealChartBtn = document.getElementById("idealChartBtn");
+            let nextLevelChartBtn = document.getElementById("nextLevelChartBtn");
             if (userInput.length > 0) {
                 rank.innerHTML = `${currentRank}`;
                 division.innerHTML = `${currentDivision}`;
@@ -383,12 +386,12 @@ let strengthController = (() => {
                     new Chart((idealChart), {
                         type: 'horizontalBar',
                         data: {
-                            labels: labels,
+                            labels: idealLabels,
                             datasets: [
                                 {
                                     label: "",
                                     backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
-                                    data: data,
+                                    data: idealData,
                                     color: "#ffffff"
                                 }
                             ]
@@ -409,6 +412,52 @@ let strengthController = (() => {
                         if (a.matches) {
                             idealChart.height = window.innerHeight;
                             idealChart.width = window.innerWidth;
+                        }
+                    }
+                })
+
+                nextLevelChartBtn.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    let nextLevelChart = document.getElementById("next-level-bar-chart-horizontal");
+                    let a = window.matchMedia("(max-width: 480px)");
+                    myFunction(a);
+                    a.addListener(myFunction);
+                    new Chart((nextLevelChart), {
+                        type: 'horizontalBar',
+                        data: {
+                            labels: nextLevelLabels,
+                            datasets: [
+                                {
+                                    label: "",
+                                    backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                    data: nextLevelData,
+                                    color: "#ffffff"
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            legend: {
+                                display: false
+                            },
+                            title: {
+                                display: true,
+                                text: "графика на равновесието"
+                            },
+                            scales : {
+                                xAxes : [{
+                                    ticks : {
+                                        beginAtZero : true
+                                    }   
+                                }]
+                            }
+                        }
+                    });
+
+                    function myFunction(a) {
+                        if (a.matches) {
+                            nextLevelChart.height = window.innerHeight;
+                            nextLevelChart.width = window.innerWidth;
                         }
                     }
                 })
@@ -438,7 +487,6 @@ let strengthController = (() => {
     return {
         checkAll,
         showMovements,
-        symmetricStrength,
-        idealChart
+        symmetricStrength
     }
 })();
