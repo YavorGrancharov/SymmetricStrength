@@ -410,10 +410,10 @@ let strengthController = (() => {
                 // weakestRmDeadlift.innerHTML = `${Math.round(idealMin)}kg`;
                 idealChartBtn.addEventListener('click', function (event) {
                     event.preventDefault();
-                    let idealChart = document.getElementById("ideal-bar-chart-horizontal").getContext('2d');
+                    let idealChart = document.getElementById("ideal-bar-chart-horizontal");
                     let a = window.matchMedia("(max-width: 480px)");
                     if(window.chart1 && window.chart1 !== null){
-                        window.chart.destroy();
+                        window.chart1.destroy();
                     }
                     myFunction(a);
                     a.addListener(myFunction);
@@ -438,6 +438,13 @@ let strengthController = (() => {
                             title: {
                                 display: true,
                                 text: "графика на равновесието"
+                            },
+                            scales: {
+                                xAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
                             }
                         }
                     });
