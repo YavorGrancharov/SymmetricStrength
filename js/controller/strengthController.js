@@ -412,12 +412,12 @@ let strengthController = (() => {
                     event.preventDefault();
                     let idealChart = document.getElementById("ideal-bar-chart-horizontal").getContext('2d');
                     let a = window.matchMedia("(max-width: 480px)");
-                    if(window.chart && window.chart !== null){
+                    if(window.chart1 && window.chart1 !== null){
                         window.chart.destroy();
                     }
                     myFunction(a);
                     a.addListener(myFunction);
-                    window.chart = new Chart((idealChart), {
+                    window.chart1 = new Chart((idealChart), {
                         type: 'horizontalBar',
                         data: {
                             labels: idealLabels,
