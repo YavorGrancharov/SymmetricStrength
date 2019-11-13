@@ -96,8 +96,8 @@ let strengthController = (() => {
             let strongest = document.getElementById("strongest");
             let weakest = document.getElementById("weakest");
 
-            let maleRealDeadlift = Math.round(((1.72 * body_weight) / ((height * (1 / 3)) / 100)) / getLifterAge(age));
-            let femaleRealDeadlift = Math.round(((1.486 * body_weight) / ((height * (1 / 3)) / 100)) / getLifterAge(age));
+            let maleRealDeadlift = ((1.72 * body_weight) / ((height * (1 / 3)) / 100)) / getLifterAge(age);
+            let femaleRealDeadlift = ((1.486 * body_weight) / ((height * (1 / 3)) / 100)) / getLifterAge(age);
 
             let strengthIndexes = [0.25, 0.3375, 0.425, 0.5125, 0.6, 0.6833, 0.7666, 0.85, 0.925, 1];
             let ranks = ["Вербован", "Новобранец", "Редник", "Ефрейтор", "Сержант", "Лейтенант", "Капитан", "Майор", "Полковник", "Генерал"];
@@ -176,17 +176,17 @@ let strengthController = (() => {
             ];
 
             let perfectSet = [
-                { name: "Мъртва тяга", value: document.getElementById("perfect-level-deadlift"), reps: document.getElementById("perfect-level-deadlift-reps") },
-                { name: "Клек", value: document.getElementById("perfect-level-squat"), reps: document.getElementById("perfect-level-squat-reps") },
-                { name: "Военна преса", value: document.getElementById("perfect-level-overhead-press"), reps: document.getElementById("perfect-level-overhead-press-reps") },
-                { name: "Напад", value: document.getElementById("perfect-level-lunge"), reps: document.getElementById("perfect-level-lunge-reps") },
-                { name: "Набиране", value: document.getElementById("perfect-level-pull-up"), reps: document.getElementById("perfect-level-pull-up-reps") },
-                { name: "Кофи", value: document.getElementById("perfect-level-dip"), reps: document.getElementById("perfect-level-dip-reps") },
-                { name: "Преден клек", value: document.getElementById("perfect-level-front-squat"), reps: document.getElementById("perfect-level-front-squat-reps") },
-                { name: "Сумо тяга", value: document.getElementById("perfect-level-sumo-deadlift"), reps: document.getElementById("perfect-level-sumo-deadlift-reps") },
-                { name: "Пуш преса", value: document.getElementById("perfect-level-push-press"), reps: document.getElementById("perfect-level-push-press-reps") },
-                { name: "Ренегатско гребане", value: document.getElementById("next-level-renegade-row"), reps: document.getElementById("perfect-level-renegade-row-reps") },
-                { name: "Гуд морнинг", value: document.getElementById("perfect-level-good-morning"), reps: document.getElementById("perfect-level-good-morning-reps") }
+                { name: "Мъртва тяга", value: document.getElementById("perfect-level-deadlift"), reps: document.getElementById("perfect-level-deadlift-reps"), max: document.getElementById("perfect-level-deadlift-max") },
+                { name: "Клек", value: document.getElementById("perfect-level-squat"), reps: document.getElementById("perfect-level-squat-reps"), max: document.getElementById("perfect-level-squat-max") },
+                { name: "Военна преса", value: document.getElementById("perfect-level-overhead-press"), reps: document.getElementById("perfect-level-overhead-press-reps"), max: document.getElementById("perfect-level-overhead-press-max") },
+                { name: "Напад", value: document.getElementById("perfect-level-lunge"), reps: document.getElementById("perfect-level-lunge-reps"), max: document.getElementById("perfect-level-lunge-max") },
+                { name: "Набиране", value: document.getElementById("perfect-level-pull-up"), reps: document.getElementById("perfect-level-pull-up-reps"), max: document.getElementById("perfect-level-pull-up-max") },
+                { name: "Кофи", value: document.getElementById("perfect-level-dip"), reps: document.getElementById("perfect-level-dip-reps"), max: document.getElementById("perfect-level-dip-max") },
+                { name: "Преден клек", value: document.getElementById("perfect-level-front-squat"), reps: document.getElementById("perfect-level-front-squat-reps"), max: document.getElementById("perfect-level-front-squat-max") },
+                { name: "Сумо тяга", value: document.getElementById("perfect-level-sumo-deadlift"), reps: document.getElementById("perfect-level-sumo-deadlift-reps"), max: document.getElementById("perfect-level-sumo-deadlift-max") },
+                { name: "Пуш преса", value: document.getElementById("perfect-level-push-press"), reps: document.getElementById("perfect-level-push-press-reps"), max: document.getElementById("perfect-level-push-press-max") },
+                { name: "Ренегатско гребане", value: document.getElementById("next-level-renegade-row"), reps: document.getElementById("perfect-level-renegade-row-reps"), max: document.getElementById("perfect-level-renegade-row-max") },
+                { name: "Гуд морнинг", value: document.getElementById("perfect-level-good-morning"), reps: document.getElementById("perfect-level-good-morning-reps"), max: document.getElementById("perfect-level-good-morning-max") }
             ];
 
             let ideal_moves = [
@@ -291,7 +291,7 @@ let strengthController = (() => {
                 if (ideal_moves[i].value) {
                     hasInput.push(ideal_moves[i].value);
                     if (ideal_moves[i].value > idealMax) {
-                        idealMax = Math.round(ideal_moves[i].value);
+                        idealMax = ideal_moves[i].value;
                         idealMaxName = ideal_moves[i].name;
                     }
                     if (ideal_moves[i].value < idealMin) {
@@ -318,8 +318,8 @@ let strengthController = (() => {
             for (let j = 0; j < strengthIndexes.length; j++) {
                 if (sex === "male") {
                     if ((maleRealDeadlift * strengthIndexes[j]) >= idealMax) {
-                        nextLevelDeadlift = Math.round(maleRealDeadlift * strengthIndexes[j]);
-                        if (nextLevelDeadlift >= Math.round(avg)) {
+                        nextLevelDeadlift = maleRealDeadlift * strengthIndexes[j];
+                        if (nextLevelDeadlift >= avg) {
                             nextLevelRank = ranks[j];
                             nextLevelDivision = divisions[j];
                             imgPosNext = j;
@@ -336,7 +336,7 @@ let strengthController = (() => {
                     }
                 } else {
                     if ((femaleRealDeadlift * strengthIndexes[j]) >= idealMax) {
-                        nextLevelDeadlift = Math.round(femaleRealDeadlift * strengthIndexes[j]);
+                        nextLevelDeadlift = femaleRealDeadlift * strengthIndexes[j];
                         if (nextLevelDeadlift >= avg) {
                             nextLevelRank = ranks[j];
                             nextLevelDivision = divisions[j];
@@ -357,9 +357,9 @@ let strengthController = (() => {
 
             let relativeDeadlift = 0;
             if (idealMax > (deadlift / getIntensity(deadlift_reps))) {
-                relativeDeadlift = Math.round(idealMax * getIntensity(deadlift_reps));
+                relativeDeadlift = idealMax * getIntensity(deadlift_reps);
             } else {
-                relativeDeadlift = Math.round((deadlift / getIntensity(deadlift_reps)) * getIntensity(deadlift_reps));
+                relativeDeadlift = (deadlift / getIntensity(deadlift_reps)) * getIntensity(deadlift_reps);
             }
             console.log(relativeDeadlift)
 
@@ -376,13 +376,14 @@ let strengthController = (() => {
                     perfectLevelLabels.push(userInput[i].name)
                     idealSet[i].value.value = Math.round(((relativeDeadlift / getIntensity(deadlift_reps)) * movementsIndexes[i].value) * reps[i]);
                     idealSet[i].reps.value = userInput[i].reps.value;
-                    nextLevelSet[i].value.value = Math.round((nextLevelDeadlift * reps[i]) * movementsIndexes[i].value);
+                    nextLevelSet[i].value.value = Math.round((nextLevelDeadlift * movementsIndexes[i].value) * reps[i]);
                     nextLevelSet[i].reps.value = userInput[i].reps.value;
                     perfectSet[i].reps.value = userInput[i].reps.value;
                     idealData.push(Math.round(((userInput[i].value.value - idealSet[i].value.value) / userInput[i].value.value) * 100))
                     nextLevelData.push(Math.round(((userInput[i].value.value - nextLevelSet[i].value.value) / userInput[i].value.value) * 100))
                     if (sex === "male") {
                         perfectSet[i].value.value = Math.round((maleRealDeadlift * movementsIndexes[i].value) * reps[i]);
+                        perfectSet[i].max.value = Math.round(perfectSet[i].value.value / reps[i])
                     } else {
                         perfectSet[i].value.value = Math.round((femaleRealDeadlift * movementsIndexes[i].value) * reps[i]);
                     }
