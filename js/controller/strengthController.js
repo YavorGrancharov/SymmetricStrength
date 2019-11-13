@@ -96,8 +96,8 @@ let strengthController = (() => {
             let strongest = document.getElementById("strongest");
             let weakest = document.getElementById("weakest");
 
-            let maleRealDeadlift = ((1.72 * body_weight) / ((height * (1 / 3)) / 100)) / getLifterAge(age);
-            let femaleRealDeadlift = ((1.486 * body_weight) / ((height * (1 / 3)) / 100)) / getLifterAge(age);
+            let maleRealDeadlift = Math.round(((1.72 * body_weight) / ((height * (1 / 3)) / 100)) / getLifterAge(age));
+            let femaleRealDeadlift = Math.round(((1.486 * body_weight) / ((height * (1 / 3)) / 100)) / getLifterAge(age));
 
             let strengthIndexes = [0.25, 0.3375, 0.425, 0.5125, 0.6, 0.6833, 0.7666, 0.85, 0.925, 1];
             let ranks = ["Вербован", "Новобранец", "Редник", "Ефрейтор", "Сержант", "Лейтенант", "Капитан", "Майор", "Полковник", "Генерал"];
@@ -175,6 +175,20 @@ let strengthController = (() => {
                 { name: "Гуд морнинг", value: document.getElementById("next-level-good-morning"), reps: document.getElementById("next-level-good-morning-reps") }
             ];
 
+            let perfectSet = [
+                { name: "Мъртва тяга", value: document.getElementById("perfect-level-deadlift"), reps: document.getElementById("perfect-level-deadlift-reps") },
+                { name: "Клек", value: document.getElementById("perfect-level-squat"), reps: document.getElementById("perfect-level-squat-reps") },
+                { name: "Военна преса", value: document.getElementById("perfect-level-overhead-press"), reps: document.getElementById("perfect-level-overhead-press-reps") },
+                { name: "Напад", value: document.getElementById("perfect-level-lunge"), reps: document.getElementById("perfect-level-lunge-reps") },
+                { name: "Набиране", value: document.getElementById("perfect-level-pull-up"), reps: document.getElementById("perfect-level-pull-up-reps") },
+                { name: "Кофи", value: document.getElementById("perfect-level-dip"), reps: document.getElementById("perfect-level-dip-reps") },
+                { name: "Преден клек", value: document.getElementById("perfect-level-front-squat"), reps: document.getElementById("perfect-level-front-squat-reps") },
+                { name: "Сумо тяга", value: document.getElementById("perfect-level-sumo-deadlift"), reps: document.getElementById("perfect-level-sumo-deadlift-reps") },
+                { name: "Пуш преса", value: document.getElementById("perfect-level-push-press"), reps: document.getElementById("perfect-level-push-press-reps") },
+                { name: "Ренегатско гребане", value: document.getElementById("next-level-renegade-row"), reps: document.getElementById("perfect-level-renegade-row-reps") },
+                { name: "Гуд морнинг", value: document.getElementById("perfect-level-good-morning"), reps: document.getElementById("perfect-level-good-morning-reps") }
+            ];
+
             let ideal_moves = [
                 { name: "Мъртва тяга", value: (deadlift / getIntensity(deadlift_reps)) / 1 },
                 { name: "Клек", value: (squat / getIntensity(squat_reps)) / 0.83 },
@@ -223,22 +237,31 @@ let strengthController = (() => {
             let trows = document.getElementById("ideal-hidden-div").querySelectorAll("tr");
             let nextLvlHiddenDiv = document.getElementById("next-level-hidden-div");
             let nextLvlTRows = document.getElementById("next-level-hidden-div").querySelectorAll("tr");
+            let perfectLvlHiddenDiv = document.getElementById("perfect-level-hidden-div");
+            let prefectLvlTRows = document.getElementById("perfect-level-hidden-div").querySelectorAll("tr");
 
             let checked = []
             let ideal = []
             let nextLvl = []
+            let perfectLvl = []
             checked = Array.from(document.querySelectorAll('input[type="checkbox"]'))
                 .filter((checkbox) => checkbox.checked)
                 .map((checkbox) => checkbox.value);
             for (let i = 0; i < trows.length; i++) {
                 for (let j = 0; j < trows.length; j++) {
-                    if (checked[j] === trows[i].classList.value && checked[j] === nextLvlTRows[i].classList.value) {
+                    if (checked[j] === trows[i].classList.value
+                        && checked[j] === nextLvlTRows[i].classList.value
+                        && checked[j] === prefectLvlTRows[i].classList.value) {
                         ideal.push(trows[i]);
                         nextLvl.push(nextLvlTRows[i])
+                        perfectLvl.push(prefectLvlTRows[i])
                     }
-                    if (ideal.includes(trows[i]) || nextLvl.includes(nextLvlTRows[i])) {
+                    if (ideal.includes(trows[i])
+                        || nextLvl.includes(nextLvlTRows[i])
+                        || perfectLvl.includes(prefectLvlTRows[i])) {
                         ideal.splice(i, 1);
                         nextLvl.splice(i, 1)
+                        perfectLvl.splice(i, 1)
                     }
                 }
             }
@@ -249,8 +272,11 @@ let strengthController = (() => {
                     ideal[f].style.display = 'table-row';
                     nextLvlHiddenDiv.style.display = 'block';
                     nextLvl[f].style.display = 'table-row';
+                    perfectLvlHiddenDiv.style.display = 'block';
+                    perfectLvl[f].style.display = 'table-row';
                 } else {
                     hidden.style.display = 'none';
+                    nextLvlHiddenDiv.style.display = 'none';
                     nextLvlHiddenDiv.style.display = 'none';
                 }
             }
@@ -265,7 +291,7 @@ let strengthController = (() => {
                 if (ideal_moves[i].value) {
                     hasInput.push(ideal_moves[i].value);
                     if (ideal_moves[i].value > idealMax) {
-                        idealMax = ideal_moves[i].value;
+                        idealMax = Math.round(ideal_moves[i].value);
                         idealMaxName = ideal_moves[i].name;
                     }
                     if (ideal_moves[i].value < idealMin) {
@@ -292,8 +318,8 @@ let strengthController = (() => {
             for (let j = 0; j < strengthIndexes.length; j++) {
                 if (sex === "male") {
                     if ((maleRealDeadlift * strengthIndexes[j]) >= idealMax) {
-                        nextLevelDeadlift = maleRealDeadlift * strengthIndexes[j];
-                        if (nextLevelDeadlift >= avg) {
+                        nextLevelDeadlift = Math.round(maleRealDeadlift * strengthIndexes[j]);
+                        if (nextLevelDeadlift >= Math.round(avg)) {
                             nextLevelRank = ranks[j];
                             nextLevelDivision = divisions[j];
                             imgPosNext = j;
@@ -310,7 +336,7 @@ let strengthController = (() => {
                     }
                 } else {
                     if ((femaleRealDeadlift * strengthIndexes[j]) >= idealMax) {
-                        nextLevelDeadlift = femaleRealDeadlift * strengthIndexes[j];
+                        nextLevelDeadlift = Math.round(femaleRealDeadlift * strengthIndexes[j]);
                         if (nextLevelDeadlift >= avg) {
                             nextLevelRank = ranks[j];
                             nextLevelDivision = divisions[j];
@@ -331,9 +357,9 @@ let strengthController = (() => {
 
             let relativeDeadlift = 0;
             if (idealMax > (deadlift / getIntensity(deadlift_reps))) {
-                relativeDeadlift = idealMax * getIntensity(deadlift_reps);
+                relativeDeadlift = Math.round(idealMax * getIntensity(deadlift_reps));
             } else {
-                relativeDeadlift = (deadlift / getIntensity(deadlift_reps)) * getIntensity(deadlift_reps);
+                relativeDeadlift = Math.round((deadlift / getIntensity(deadlift_reps)) * getIntensity(deadlift_reps));
             }
             console.log(relativeDeadlift)
 
@@ -341,22 +367,26 @@ let strengthController = (() => {
             let idealData = []
             let nextLevelLabels = []
             let nextLevelData = []
+            let perfectLevelLabels = []
+            let perfectLevelData = []
             for (let i = 0; i < idealSet.length; i++) {
                 if (userInput[i].value.value) {
                     idealLabels.push(userInput[i].name)
                     nextLevelLabels.push(userInput[i].name)
+                    perfectLevelLabels.push(userInput[i].name)
                     idealSet[i].value.value = Math.round(((relativeDeadlift / getIntensity(deadlift_reps)) * movementsIndexes[i].value) * reps[i]);
                     idealSet[i].reps.value = userInput[i].reps.value;
                     nextLevelSet[i].value.value = Math.round((nextLevelDeadlift * reps[i]) * movementsIndexes[i].value);
                     nextLevelSet[i].reps.value = userInput[i].reps.value;
+                    perfectSet[i].reps.value = userInput[i].reps.value;
                     idealData.push(Math.round(((userInput[i].value.value - idealSet[i].value.value) / userInput[i].value.value) * 100))
                     nextLevelData.push(Math.round(((userInput[i].value.value - nextLevelSet[i].value.value) / userInput[i].value.value) * 100))
-                    // data.push(Math.round()
-                    // if (sex === "male") {
-                    //     perfectSet[i].value.value = Math.round(((maleRealDeadlift * coeff[i].value) * reps[i]) / round) * round;
-                    // } else {
-                    //     perfectSet[i].value.value = Math.round(((femaleRealDeadlift * coeff[i].value) * reps[i]) / round) * round;
-                    // }
+                    if (sex === "male") {
+                        perfectSet[i].value.value = Math.round((maleRealDeadlift * movementsIndexes[i].value) * reps[i]);
+                    } else {
+                        perfectSet[i].value.value = Math.round((femaleRealDeadlift * movementsIndexes[i].value) * reps[i]);
+                    }
+                    perfectLevelData.push(Math.round(((userInput[i].value.value - perfectSet[i].value.value) / userInput[i].value.value) * 100))
                 } else {
                     // nextLevelSet[i].value.value = '';
                     // idealSet[i].value.value = '';
@@ -366,6 +396,7 @@ let strengthController = (() => {
 
             let idealChartBtn = document.getElementById("idealChartBtn");
             let nextLevelChartBtn = document.getElementById("nextLevelChartBtn");
+            let perfectLevelChartBtn = document.getElementById("perfectLevelChartBtn");
             if (userInput.length > 0) {
                 rank.innerHTML = `${currentRank}`;
                 division.innerHTML = `${currentDivision}`;
@@ -379,11 +410,14 @@ let strengthController = (() => {
                 // weakestRmDeadlift.innerHTML = `${Math.round(idealMin)}kg`;
                 idealChartBtn.addEventListener('click', function (event) {
                     event.preventDefault();
-                    let idealChart = document.getElementById("ideal-bar-chart-horizontal");
+                    let idealChart = document.getElementById("ideal-bar-chart-horizontal").getContext('2d');
                     let a = window.matchMedia("(max-width: 480px)");
+                    if(window.chart && window.chart !== null){
+                        window.chart.destroy();
+                    }
                     myFunction(a);
                     a.addListener(myFunction);
-                    new Chart((idealChart), {
+                    window.chart = new Chart((idealChart), {
                         type: 'horizontalBar',
                         data: {
                             labels: idealLabels,
@@ -420,9 +454,12 @@ let strengthController = (() => {
                     event.preventDefault();
                     let nextLevelChart = document.getElementById("next-level-bar-chart-horizontal");
                     let a = window.matchMedia("(max-width: 480px)");
+                    if(window.chart2 && window.chart2 !== null){
+                        window.chart2.destroy();
+                    }
                     myFunction(a);
                     a.addListener(myFunction);
-                    new Chart((nextLevelChart), {
+                    window.chart2 = new Chart((nextLevelChart), {
                         type: 'horizontalBar',
                         data: {
                             labels: nextLevelLabels,
@@ -444,11 +481,11 @@ let strengthController = (() => {
                                 display: true,
                                 text: "графика на равновесието"
                             },
-                            scales : {
-                                xAxes : [{
-                                    ticks : {
-                                        beginAtZero : true
-                                    }   
+                            scales: {
+                                xAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
                                 }]
                             }
                         }
@@ -458,6 +495,55 @@ let strengthController = (() => {
                         if (a.matches) {
                             nextLevelChart.height = window.innerHeight;
                             nextLevelChart.width = window.innerWidth;
+                        }
+                    }
+                })
+
+                perfectLevelChartBtn.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    let perfectLevelChart = document.getElementById("perfect-level-bar-chart-horizontal");
+                    let a = window.matchMedia("(max-width: 480px)");
+                    if(window.chart3 && window.chart3 !== null){
+                        window.chart3.destroy();
+                    }
+                    myFunction(a);
+                    a.addListener(myFunction);
+                    window.chart3 = new Chart((perfectLevelChart), {
+                        type: 'horizontalBar',
+                        data: {
+                            labels: perfectLevelLabels,
+                            datasets: [
+                                {
+                                    label: "",
+                                    backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                    data: perfectLevelData,
+                                    color: "#ffffff"
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            legend: {
+                                display: false
+                            },
+                            title: {
+                                display: true,
+                                text: "графика на равновесието"
+                            },
+                            scales: {
+                                xAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                            }
+                        }
+                    });
+
+                    function myFunction(a) {
+                        if (a.matches) {
+                            perfectLevelChart.height = window.innerHeight;
+                            perfectLevelChart.width = window.innerWidth;
                         }
                     }
                 })
