@@ -87,6 +87,7 @@ let strengthController = (() => {
             let renegade_row_reps = document.getElementById("renegade-row-reps").value;
             let good_morning_reps = document.getElementById("good-morning-reps").value;
 
+            let hidden = document.getElementById("hidden");
             let rank = document.getElementById("rank");
             let division = document.getElementById("division");
             let insignia = document.getElementById("insignia");
@@ -233,7 +234,6 @@ let strengthController = (() => {
                 { name: "Гуд морнинг", value: (good_morning / getIntensity(good_morning_reps)) / 0.44 }
             ];
 
-            let hidden = document.getElementById("ideal-hidden-div");
             let trows = document.getElementById("ideal-hidden-div").querySelectorAll("tr");
             let nextLvlHiddenDiv = document.getElementById("next-level-hidden-div");
             let nextLvlTRows = document.getElementById("next-level-hidden-div").querySelectorAll("tr");
