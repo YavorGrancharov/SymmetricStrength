@@ -1749,12 +1749,15 @@ button{
     text-align:center
 }*/
 td:nth-child(2){
-    text-align:left
+    text-align:left;
 }
 td:nth-child(3){
     text-align:left;
 }
 td:nth-child(4){
+    text-align:left
+}
+td:nth-child(5){
     text-align:left
 }
 .nextLevelReps{
@@ -1802,6 +1805,11 @@ td:nth-child(4){
     border: none;
 }
 #perfect-level-balance tr > td > input {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+#real-balance tr > td > input {
     background-color: transparent;
     box-shadow: none;
     border: none;

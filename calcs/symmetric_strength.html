@@ -428,6 +428,8 @@
                                         <div class="contact-item form-submit">
                                             <input name="submit" type="submit" id="show-next" class="submit"
                                                 value="ПОКАЖИ">
+                                            <input type="submit" class="submit" id="refresh" value="ОПРЕСНИ"
+                                                style="margin-top: 8px;display: none;">
                                         </div>
                                         <div class="row" style="display: none;" id="hidden-div">
                                             <div class="col-md-12">
@@ -743,6 +745,7 @@
                                                 </form>
                                             </div>
                                         </div>
+
                                         <div class="row" id="hidden" style="display: none;">
                                             <div class="col-md-12">
                                                 <div>
@@ -754,74 +757,372 @@
                                                             <div class="pull-left">
                                                                 <ul class="nav nav-tabs">
                                                                     <li class="active"><a href="#level"
-                                                                            data-toggle="tab">Ниво</a></li>
-                                                                    <li><a href="#ideal" data-toggle="tab">Идеален
-                                                                            стандарт</a></li>
+                                                                            data-toggle="tab">Текущо ниво</a></li>
+                                                                    <li><a href="#ideal" data-toggle="tab">Идеално
+                                                                            ниво</a></li>
                                                                     <li><a href="#next" data-toggle="tab">Следващо
                                                                             ниво</a></li>
-                                                                    <li><a href="#perfect" data-toggle="tab">Перфектен
-                                                                            стандарт</a></li>
+                                                                    <li><a href="#perfect" data-toggle="tab">Последно
+                                                                            ниво</a></li>
                                                                 </ul>
                                                             </div>
                                                             <div class="clearfix"></div>
                                                         </span>
                                                     </div>
+
                                                     <div class="panel-body">
                                                         <div class="tab-content">
                                                             <div class="tab-pane fade in active" id="level">
-                                                                <form>
-                                                                    <table
-                                                                        class="table table-responsive table-stripped">
-                                                                        <thead>
-                                                                            <tr>
-                                                                                <th>
-                                                                                    Звание
-                                                                                </th>
-                                                                                <th>
-                                                                                    Дивизия
-                                                                                </th>
-                                                                                <th>
-                                                                                    Знак
-                                                                                </th>
-                                                                                <th>
-                                                                                    Най-силно
-                                                                                </th>
-                                                                                <th>
-                                                                                    Най-слабо
-                                                                                </th>
-                                                                            </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td id="rank"
-                                                                                    style="text-align: left !important;color: #d42729;">
-                                                                                </td>
-                                                                                <td id="division"
-                                                                                    style="color: #d42729;"></td>
-                                                                                <td><img class="resize" id="insignia">
-                                                                                </td>
-                                                                                <td id="strongest"
-                                                                                    style="text-align: left !important;color: #d42729;">
-                                                                                </td>
-                                                                                <td id="weakest"
-                                                                                    style="text-align: left !important;color: #d42729;">
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-
-                                                                </form>
-
-                                                            </div>
-
-
-                                                            <div class="tab-pane fade" id="ideal">
-                                                                <div class="row"
-                                                                    id="ideal-hidden-div">
+                                                                <div class="row" id="real-hidden-div">
                                                                     <div class="col-md-12">
                                                                         <form class="center-block" role="form">
-                                                                            <table
-                                                                                class="table borderless table-striped"
+                                                                            <table class="table borderless"
+                                                                                id="real-balance">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            Движение
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            Тежест
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            Повт.
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            1МП
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="deadlift">
+                                                                                        <td style="width: 35%;">
+                                                                                            <label class="control-label"
+                                                                                                for="real-deadlift">Мъртва
+                                                                                                тяга</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-deadlift"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-deadlift-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-deadlift-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="squat">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="real-squat">Клек</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-squat"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-squat-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-squat-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="overhead-press">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="real-overhead-press">Военна
+                                                                                                преса</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-overhead-press"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-overhead-press-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-overhead-press-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="lunge">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="real-lunge">Напад</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-lunge"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-lunge-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-lunge-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="pull-up">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="real-pull-up">Набиране</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-pull-up"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-pull-up-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-pull-up-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="dip">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="real-dip">Кофи</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-dip"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-dip-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-dip-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="front-squat">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="real-front-squat">Преден
+                                                                                                клек</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-front-squat"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-front-squat-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-front-squat-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="sumo-deadlift">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="real-sumo-deadlift">Сумо
+                                                                                                тяга</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-sumo-deadlift"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-sumo-deadlift-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-sumo-deadlift-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="push-press">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="real-push-press">Пуш
+                                                                                                преса</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-push-press"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-push-press-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-push-press-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="renegade-row">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="real-renegade-row">Ренегатско
+                                                                                                гребане</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-renegade-row"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-renegade-row-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-renegade-row-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="good-morning">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="real-good-morning">Гуд
+                                                                                                морнинг</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-good-morning"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-good-morning-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-good-morning-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <table class="table borderless">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td
+                                                                                            style="text-align: left !important;">
+                                                                                            Звание
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            Дивизия
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            Знак
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td id="rank"
+                                                                                            style="text-align: left !important; color: #d42729;">
+                                                                                        </td>
+                                                                                        <td id="division"
+                                                                                            style="color: #d42729;">
+                                                                                        </td>
+                                                                                        <td><img class="resize"
+                                                                                                id="insignia">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <table class="table borderless">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td></td>
+                                                                                        <td>
+                                                                                            Най-силно
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            Най-слабо
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td></td>
+                                                                                        <td id="strongest"
+                                                                                            style="color: #d42729;">
+                                                                                        </td>
+                                                                                        <td id="weakest"
+                                                                                            style="color: #d42729;">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="tab-pane fade" id="ideal">
+                                                                <div class="row" id="ideal-hidden-div">
+                                                                    <div class="col-md-12">
+                                                                        <form class="center-block" role="form">
+                                                                            <table class="table borderless"
                                                                                 id="ideal-balance">
                                                                                 <tbody>
                                                                                     <tr>
@@ -832,7 +1133,7 @@
                                                                                             Тежест
                                                                                         </td>
                                                                                         <td>
-                                                                                            Повторения
+                                                                                            Повт.
                                                                                         </td>
                                                                                         <td>
                                                                                             1МП
@@ -1113,7 +1414,7 @@
                                                                                             <label class="control-label"
                                                                                                 for="ideal-shart">Графика</label>
                                                                                         </td>
-                                                                                        <td style="border: none;">
+                                                                                        <td>
                                                                                             <button type="button"
                                                                                                 data-toggle="modal"
                                                                                                 id="idealChartBtn"
@@ -1132,12 +1433,10 @@
                                                             </div>
 
                                                             <div class="tab-pane fade" id="next">
-                                                                <div class="row"
-                                                                    id="next-level-hidden-div">
+                                                                <div class="row" id="next-level-hidden-div">
                                                                     <div class="col-md-12">
                                                                         <form class="center-block" role="form">
-                                                                            <table
-                                                                                class="table borderless table-striped"
+                                                                            <table class="table borderless"
                                                                                 id="next-level-balance">
                                                                                 <tbody>
                                                                                     <tr>
@@ -1438,7 +1737,7 @@
                                                                                             <label class="control-label"
                                                                                                 for="next-level-shart">Графика</label>
                                                                                         </td>
-                                                                                        <td style="border: none;">
+                                                                                        <td>
                                                                                             <button type="button"
                                                                                                 data-toggle="modal"
                                                                                                 id="nextLevelChartBtn"
@@ -1449,8 +1748,13 @@
                                                                                         <td></td>
                                                                                         <td></td>
                                                                                     </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <table class="table borderless">
+                                                                                <tbody>
                                                                                     <tr>
-                                                                                        <td style="text-align: left !important;">
+                                                                                        <td
+                                                                                            style="text-align: left !important;">
                                                                                             Звание
                                                                                         </td>
                                                                                         <td>
@@ -1459,7 +1763,6 @@
                                                                                         <td>
                                                                                             Знак
                                                                                         </td>
-                                                                                        <td></td>
                                                                                     </tr>
                                                                                     <tr>
                                                                                         <td id="next-level-rank"
@@ -1470,22 +1773,18 @@
                                                                                         </td>
                                                                                         <td><img id="next-level-insignia"
                                                                                                 class="resize"></td>
-                                                                                        <td></td>
                                                                                     </tr>
                                                                                 </tbody>
                                                                             </table>
-
                                                                         </form>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="tab-pane fade" id="perfect">
-                                                                <div class="row"
-                                                                    id="perfect-level-hidden-div">
+                                                                <div class="row" id="perfect-level-hidden-div">
                                                                     <div class="col-md-12">
                                                                         <form class="center-block" role="form">
-                                                                            <table
-                                                                                class="table borderless table-striped"
+                                                                            <table class="table borderless"
                                                                                 id="perfect-level-balance">
                                                                                 <tbody>
                                                                                     <tr>
@@ -1789,7 +2088,7 @@
                                                                                             <label class="control-label"
                                                                                                 for="perfect-level-shart">Графика</label>
                                                                                         </td>
-                                                                                        <td style="border: none;">
+                                                                                        <td>
                                                                                             <button type="button"
                                                                                                 data-toggle="modal"
                                                                                                 id="perfectLevelChartBtn"
@@ -1813,48 +2112,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <div class="row">
-                                            <div class="col-md-12">
-                                                <div>
-                                                    <h3>
-                                                        Следващо ниво
-                                                    </h3>
-                                                </div>
-                                                <table class="table table-responsive table-stripped">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>
-                                                                <h4>
-                                                                    Звание
-                                                                </h4>
-                                                            </th>
-                                                            <th>
-                                                                <h4>
-                                                                    Дивизия
-                                                                </h4>
-                                                            </th>
-                                                            <th>
-                                                                <h4>
-                                                                    Знак
-                                                                </h4>
-                                                            </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td style="text-align: left !important;color: #d42729;">
-                                                                <h4 id="next-level-rank"></h4>
-                                                            </td>
-                                                            <td>
-                                                                <h4 id="next-level-division" style="color: #d42729;">
-                                                                </h4>
-                                                            </td>
-                                                            <td><img id="next-level-insignia" class="resize"></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div> -->
                                     </div>
                                     <!-- End The Content -->
                                 </div>

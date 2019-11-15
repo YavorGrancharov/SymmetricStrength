@@ -1,8 +1,13 @@
 let strengthController = (() => {
     function showMovements() {
         let showMoves = document.getElementById("show-next");
+        let refresh = document.getElementById("refresh");
         let hidden = document.getElementById("hidden-div");
         let trows = document.getElementById("hidden-div").querySelectorAll("tr");
+        let realTRows = document.getElementById("real-hidden-div").querySelectorAll("tr");
+        let idealTrows = document.getElementById("ideal-hidden-div").querySelectorAll("tr");
+        let nextLvlTRows = document.getElementById("next-level-hidden-div").querySelectorAll("tr");
+        let prefectLvlTRows = document.getElementById("perfect-level-hidden-div").querySelectorAll("tr");
         let originalState = $("hidden-div").clone(true, true); $("#some_div").replaceWith(originalState.clone(true, true));
         showMoves.addEventListener('click', function (event) {
             event.preventDefault();
@@ -11,26 +16,44 @@ let strengthController = (() => {
             checked = Array.from(document.querySelectorAll('input[type="checkbox"]'))
                 .filter((checkbox) => checkbox.checked)
                 .map((checkbox) => checkbox.value);
-            for (let i = 0; i < trows.length; i++) {
+            for (let i = 1; i < trows.length - 1; i++) {
+                if (!checked.includes(trows[i].classList.value)) {
+                    trows[i].style.display = 'none'
+                    realTRows[i].style.display = 'none'
+                    idealTrows[i].style.display = 'none'
+                    nextLvlTRows[i].style.display = 'none'
+                    prefectLvlTRows[i].style.display = 'none'
+                }
                 for (let j = 0; j < trows.length; j++) {
-                    if (checked[j] === trows[i].classList.value) {
-                        chosen.push(trows[i]);
+                    if (checked[j] === trows[i].classList.value && checked.length >= 5) {
+                        hidden.style.display = 'block';
+                        trows[i].style.display = 'table-row'
+                        realTRows[i].style.display = 'table-row'
+                        idealTrows[i].style.display = 'table-row'
+                        nextLvlTRows[i].style.display = 'table-row'
+                        prefectLvlTRows[i].style.display = 'table-row'
+                        showMoves.value = 'ДОБАВИ'
+                        refresh.style.display = 'block'
+                        // chosen.push(trows[i]);
                     }
-                    if (chosen.includes(trows[i])) {
-                        chosen.splice(i, 1);
-                    }
+                    // if (chosen.includes(trows[i])) {
+
+                    //     // chosen.splice(i, 1);
+                    // }
                 }
             }
-            console.log(chosen)
-            for (let f = 0; f < chosen.length; f++) {
-                if (chosen.length >= 5) {
-                    hidden.style.display = 'block';
-                    chosen[f].style.display = 'table-row';
-                    showMoves.value = 'ДОБАВИ'
-                } else {
-                    hidden.style.display = 'none';
-                }
-            }
+            console.log(checked)
+            // for (let f = 0; f < chosen.length; f++) {
+            //     if (chosen.length >= 5) {
+            //         hidden.style.display = 'block';
+            //         chosen[f].style.display = 'table-row';
+            //         showMoves.value = 'ДОБАВИ'
+            //         refresh.style.display = 'block'
+            //     } else {
+            //         trows[f].style.display = 'none';
+            //         hidden.style.display = 'none';
+            //     }
+            // }
         });
     }
 
@@ -148,32 +171,46 @@ let strengthController = (() => {
                 { name: "Ренегатско гребане", value: sex === 'male' ? 0.26 : 0.2 }, { name: "Гуд морнинг", value: 0.44 }
             ];
 
+            let realSet = [
+                { name: "Мъртва тяга", value: document.getElementById("real-deadlift"), reps: document.getElementById("real-deadlift-reps"), max: document.getElementById("real-deadlift-max") },
+                { name: "Клек", value: document.getElementById("real-squat"), reps: document.getElementById("real-squat-reps"), max: document.getElementById("real-squat-max") },
+                { name: "Военна преса", value: document.getElementById("real-overhead-press"), reps: document.getElementById("real-overhead-press-reps"), max: document.getElementById("real-overhead-press-max") },
+                { name: "Напад", value: document.getElementById("real-lunge"), reps: document.getElementById("real-lunge-reps"), max: document.getElementById("real-lunge-max") },
+                { name: "Набиране", value: document.getElementById("real-pull-up"), reps: document.getElementById("real-pull-up-reps"), max: document.getElementById("real-pull-up-max") },
+                { name: "Кофи", value: document.getElementById("real-dip"), reps: document.getElementById("real-dip-reps"), max: document.getElementById("real-dip-max") },
+                { name: "Преден клек", value: document.getElementById("real-front-squat"), reps: document.getElementById("real-front-squat-reps"), max: document.getElementById("real-front-squat-max") },
+                { name: "Сумо тяга", value: document.getElementById("real-sumo-deadlift"), reps: document.getElementById("real-sumo-deadlift-reps"), max: document.getElementById("real-sumo-deadlift-max") },
+                { name: "Пуш преса", value: document.getElementById("real-push-press"), reps: document.getElementById("real-push-press-reps"), max: document.getElementById("real-push-press-max") },
+                { name: "Ренегатско гребане", value: document.getElementById("real-renegade-row"), reps: document.getElementById("real-renegade-row-reps"), max: document.getElementById("real-renegade-row-max") },
+                { name: "Гуд морнинг", value: document.getElementById("real-good-morning"), reps: document.getElementById("real-good-morning-reps"), max: document.getElementById("real-good-morning-reps") }
+            ];
+
             let idealSet = [
-                { name: "Мъртва тяга", value: document.getElementById("ideal-deadlift"), reps: document.getElementById("ideal-deadlift-reps") },
-                { name: "Клек", value: document.getElementById("ideal-squat"), reps: document.getElementById("ideal-squat-reps") },
-                { name: "Военна преса", value: document.getElementById("ideal-overhead-press"), reps: document.getElementById("ideal-overhead-press-reps") },
-                { name: "Напад", value: document.getElementById("ideal-lunge"), reps: document.getElementById("ideal-lunge-reps") },
-                { name: "Набиране", value: document.getElementById("ideal-pull-up"), reps: document.getElementById("ideal-pull-up-reps") },
-                { name: "Кофи", value: document.getElementById("ideal-dip"), reps: document.getElementById("ideal-dip-reps") },
-                { name: "Преден клек", value: document.getElementById("ideal-front-squat"), reps: document.getElementById("ideal-front-squat-reps") },
-                { name: "Сумо тяга", value: document.getElementById("ideal-sumo-deadlift"), reps: document.getElementById("ideal-sumo-deadlift-reps") },
-                { name: "Пуш преса", value: document.getElementById("ideal-push-press"), reps: document.getElementById("ideal-push-press-reps") },
-                { name: "Ренегатско гребане", value: document.getElementById("ideal-renegade-row"), reps: document.getElementById("ideal-renegade-row-reps") },
-                { name: "Гуд морнинг", value: document.getElementById("ideal-good-morning"), reps: document.getElementById("ideal-good-morning-reps") }
+                { name: "Мъртва тяга", value: document.getElementById("ideal-deadlift"), reps: document.getElementById("ideal-deadlift-reps"), max: document.getElementById("ideal-deadlift-max") },
+                { name: "Клек", value: document.getElementById("ideal-squat"), reps: document.getElementById("ideal-squat-reps"), max: document.getElementById("ideal-squat-max") },
+                { name: "Военна преса", value: document.getElementById("ideal-overhead-press"), reps: document.getElementById("ideal-overhead-press-reps"), max: document.getElementById("ideal-overhead-press-max") },
+                { name: "Напад", value: document.getElementById("ideal-lunge"), reps: document.getElementById("ideal-lunge-reps"), max: document.getElementById("ideal-lunge-max") },
+                { name: "Набиране", value: document.getElementById("ideal-pull-up"), reps: document.getElementById("ideal-pull-up-reps"), max: document.getElementById("ideal-pull-up-max") },
+                { name: "Кофи", value: document.getElementById("ideal-dip"), reps: document.getElementById("ideal-dip-reps"), max: document.getElementById("ideal-dip-max") },
+                { name: "Преден клек", value: document.getElementById("ideal-front-squat"), reps: document.getElementById("ideal-front-squat-reps"), max: document.getElementById("ideal-front-squat-max") },
+                { name: "Сумо тяга", value: document.getElementById("ideal-sumo-deadlift"), reps: document.getElementById("ideal-sumo-deadlift-reps"), max: document.getElementById("ideal-sumo-deadlift-max") },
+                { name: "Пуш преса", value: document.getElementById("ideal-push-press"), reps: document.getElementById("ideal-push-press-reps"), max: document.getElementById("ideal-push-press-max") },
+                { name: "Ренегатско гребане", value: document.getElementById("ideal-renegade-row"), reps: document.getElementById("ideal-renegade-row-reps"), max: document.getElementById("ideal-renegade-row-max") },
+                { name: "Гуд морнинг", value: document.getElementById("ideal-good-morning"), reps: document.getElementById("ideal-good-morning-reps"), max: document.getElementById("ideal-good-morning-max") }
             ];
 
             let nextLevelSet = [
-                { name: "Мъртва тяга", value: document.getElementById("next-level-deadlift"), reps: document.getElementById("next-level-deadlift-reps") },
-                { name: "Клек", value: document.getElementById("next-level-squat"), reps: document.getElementById("next-level-squat-reps") },
-                { name: "Военна преса", value: document.getElementById("next-level-overhead-press"), reps: document.getElementById("next-level-overhead-press-reps") },
-                { name: "Напад", value: document.getElementById("next-level-lunge"), reps: document.getElementById("next-level-lunge-reps") },
-                { name: "Набиране", value: document.getElementById("next-level-pull-up"), reps: document.getElementById("next-level-pull-up-reps") },
-                { name: "Кофи", value: document.getElementById("next-level-dip"), reps: document.getElementById("next-level-dip-reps") },
-                { name: "Преден клек", value: document.getElementById("next-level-front-squat"), reps: document.getElementById("next-level-front-squat-reps") },
-                { name: "Сумо тяга", value: document.getElementById("next-level-sumo-deadlift"), reps: document.getElementById("next-level-sumo-deadlift-reps") },
-                { name: "Пуш преса", value: document.getElementById("next-level-push-press"), reps: document.getElementById("next-level-push-press-reps") },
-                { name: "Ренегатско гребане", value: document.getElementById("next-level-renegade-row"), reps: document.getElementById("next-level-renegade-row-reps") },
-                { name: "Гуд морнинг", value: document.getElementById("next-level-good-morning"), reps: document.getElementById("next-level-good-morning-reps") }
+                { name: "Мъртва тяга", value: document.getElementById("next-level-deadlift"), reps: document.getElementById("next-level-deadlift-reps"), max: document.getElementById("next-level-deadlift-max") },
+                { name: "Клек", value: document.getElementById("next-level-squat"), reps: document.getElementById("next-level-squat-reps"), max: document.getElementById("next-level-squat-max") },
+                { name: "Военна преса", value: document.getElementById("next-level-overhead-press"), reps: document.getElementById("next-level-overhead-press-reps"), max: document.getElementById("next-level-overhead-press-max") },
+                { name: "Напад", value: document.getElementById("next-level-lunge"), reps: document.getElementById("next-level-lunge-reps"), max: document.getElementById("next-level-lunge-max") },
+                { name: "Набиране", value: document.getElementById("next-level-pull-up"), reps: document.getElementById("next-level-pull-up-reps"), max: document.getElementById("next-level-pull-up-max") },
+                { name: "Кофи", value: document.getElementById("next-level-dip"), reps: document.getElementById("next-level-dip-reps"), max: document.getElementById("next-level-dip-max") },
+                { name: "Преден клек", value: document.getElementById("next-level-front-squat"), reps: document.getElementById("next-level-front-squat-reps"), max: document.getElementById("next-level-front-squat-max") },
+                { name: "Сумо тяга", value: document.getElementById("next-level-sumo-deadlift"), reps: document.getElementById("next-level-sumo-deadlift-reps"), max: document.getElementById("next-level-sumo-deadlift-max") },
+                { name: "Пуш преса", value: document.getElementById("next-level-push-press"), reps: document.getElementById("next-level-push-press-reps"), max: document.getElementById("next-level-push-press-max") },
+                { name: "Ренегатско гребане", value: document.getElementById("next-level-renegade-row"), reps: document.getElementById("next-level-renegade-row-reps"), max: document.getElementById("next-level-renegade-row-max") },
+                { name: "Гуд морнинг", value: document.getElementById("next-level-good-morning"), reps: document.getElementById("next-level-good-morning-reps"), max: document.getElementById("next-level-good-morning-max") }
             ];
 
             let perfectSet = [
@@ -234,6 +271,7 @@ let strengthController = (() => {
                 { name: "Гуд морнинг", value: (good_morning / getIntensity(good_morning_reps)) / 0.44 }
             ];
 
+            let realTRows = document.getElementById("real-hidden-div").querySelectorAll("tr");
             let trows = document.getElementById("ideal-hidden-div").querySelectorAll("tr");
             let nextLvlHiddenDiv = document.getElementById("next-level-hidden-div");
             let nextLvlTRows = document.getElementById("next-level-hidden-div").querySelectorAll("tr");
@@ -241,6 +279,7 @@ let strengthController = (() => {
             let prefectLvlTRows = document.getElementById("perfect-level-hidden-div").querySelectorAll("tr");
 
             let checked = []
+            let real = []
             let ideal = []
             let nextLvl = []
             let perfectLvl = []
@@ -250,15 +289,19 @@ let strengthController = (() => {
             for (let i = 0; i < trows.length; i++) {
                 for (let j = 0; j < trows.length; j++) {
                     if (checked[j] === trows[i].classList.value
+                        && checked[j] === realTRows[i].classList.value
                         && checked[j] === nextLvlTRows[i].classList.value
                         && checked[j] === prefectLvlTRows[i].classList.value) {
+                        real.push(realTRows[i])
                         ideal.push(trows[i]);
                         nextLvl.push(nextLvlTRows[i])
                         perfectLvl.push(prefectLvlTRows[i])
                     }
                     if (ideal.includes(trows[i])
+                        || real.includes(realTRows[i])
                         || nextLvl.includes(nextLvlTRows[i])
                         || perfectLvl.includes(prefectLvlTRows[i])) {
+                        real.splice(i, 1)
                         ideal.splice(i, 1);
                         nextLvl.splice(i, 1)
                         perfectLvl.splice(i, 1)
@@ -268,16 +311,18 @@ let strengthController = (() => {
 
             for (let f = 0; f < ideal.length; f++) {
                 if (ideal.length >= 5) {
+                    checked[f]
                     hidden.style.display = 'block';
+                    real[f].style.display = 'table-row';
                     ideal[f].style.display = 'table-row';
-                    nextLvlHiddenDiv.style.display = 'block';
+                    // nextLvlHiddenDiv.style.display = 'block';
                     nextLvl[f].style.display = 'table-row';
-                    perfectLvlHiddenDiv.style.display = 'block';
+                    // perfectLvlHiddenDiv.style.display = 'block';
                     perfectLvl[f].style.display = 'table-row';
                 } else {
                     hidden.style.display = 'none';
-                    nextLvlHiddenDiv.style.display = 'none';
-                    nextLvlHiddenDiv.style.display = 'none';
+                    // nextLvlHiddenDiv.style.display = 'none';
+                    // nextLvlHiddenDiv.style.display = 'none';
                 }
             }
 
@@ -302,11 +347,9 @@ let strengthController = (() => {
             }
             console.log(`Ideal max is ${idealMaxName} with value of ${Math.round(idealMax)}kg`)
             console.log(`Ideal min is ${idealNameMin} with value of ${Math.round(idealMin)}kg`)
-            console.log(hasInput)
+
             avg = hasInput.reduce(function (a, b) { return (a + b) })
             avg /= hasInput.length;
-            console.log(hasInput)
-            console.log(avg)
 
             let nextLevelDeadlift = 0;
             let currentRank = '';
@@ -374,10 +417,15 @@ let strengthController = (() => {
                     idealLabels.push(userInput[i].name)
                     nextLevelLabels.push(userInput[i].name)
                     perfectLevelLabels.push(userInput[i].name)
+                    realSet[i].value.value = userInput[i].value.value;
+                    realSet[i].reps.value = userInput[i].reps.value;
+                    realSet[i].max.value = Math.round(realSet[i].value.value / reps[i]);
                     idealSet[i].value.value = Math.round(((relativeDeadlift / getIntensity(deadlift_reps)) * movementsIndexes[i].value) * reps[i]);
                     idealSet[i].reps.value = userInput[i].reps.value;
+                    idealSet[i].max.value = Math.round(idealSet[i].value.value / reps[i])
                     nextLevelSet[i].value.value = Math.round((nextLevelDeadlift * movementsIndexes[i].value) * reps[i]);
                     nextLevelSet[i].reps.value = userInput[i].reps.value;
+                    nextLevelSet[i].max.value = Math.round(nextLevelSet[i].value.value / reps[i])
                     perfectSet[i].reps.value = userInput[i].reps.value;
                     idealData.push(Math.round(((userInput[i].value.value - idealSet[i].value.value) / userInput[i].value.value) * 100))
                     nextLevelData.push(Math.round(((userInput[i].value.value - nextLevelSet[i].value.value) / userInput[i].value.value) * 100))
@@ -388,6 +436,7 @@ let strengthController = (() => {
                         perfectSet[i].value.value = Math.round((femaleRealDeadlift * movementsIndexes[i].value) * reps[i]);
                     }
                     perfectLevelData.push(Math.round(((userInput[i].value.value - perfectSet[i].value.value) / userInput[i].value.value) * 100))
+                    perfectSet[i].max.value = Math.round(perfectSet[i].value.value / reps[i])
                 } else {
                     // nextLevelSet[i].value.value = '';
                     // idealSet[i].value.value = '';
@@ -413,7 +462,7 @@ let strengthController = (() => {
                     event.preventDefault();
                     let idealChart = document.getElementById("ideal-bar-chart-horizontal");
                     let a = window.matchMedia("(max-width: 480px)");
-                    if(window.chart1 && window.chart1 !== null){
+                    if (window.chart1 && window.chart1 !== null) {
                         window.chart1.destroy();
                     }
                     myFunction(a);
@@ -462,7 +511,7 @@ let strengthController = (() => {
                     event.preventDefault();
                     let nextLevelChart = document.getElementById("next-level-bar-chart-horizontal");
                     let a = window.matchMedia("(max-width: 480px)");
-                    if(window.chart2 && window.chart2 !== null){
+                    if (window.chart2 && window.chart2 !== null) {
                         window.chart2.destroy();
                     }
                     myFunction(a);
@@ -511,7 +560,7 @@ let strengthController = (() => {
                     event.preventDefault();
                     let perfectLevelChart = document.getElementById("perfect-level-bar-chart-horizontal");
                     let a = window.matchMedia("(max-width: 480px)");
-                    if(window.chart3 && window.chart3 !== null){
+                    if (window.chart3 && window.chart3 !== null) {
                         window.chart3.destroy();
                     }
                     myFunction(a);
