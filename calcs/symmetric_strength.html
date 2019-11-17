@@ -325,7 +325,7 @@
                                                             <form class="input">
                                                                 <div class="form-check" class="deadlift">
                                                                     <label>
-                                                                        <input type="checkbox" name="check"
+                                                                        <input type="checkbox" name="Мъртва тяга"
                                                                             value="deadlift"> <span
                                                                             class="label-text">Мъртва
                                                                             тяга</span>
@@ -333,22 +333,22 @@
                                                                 </div>
                                                                 <div class="form-check" class="squat">
                                                                     <label>
-                                                                        <input type="checkbox" name="check"
+                                                                        <input type="checkbox" name="Клек"
                                                                             value="squat">
                                                                         <span class="label-text">Клек</span>
                                                                     </label>
                                                                 </div>
                                                                 <div class="form-check" class="overhead-press">
                                                                     <label>
-                                                                        <input type="checkbox" name="check"
+                                                                        <input type="checkbox" name="Военна преса"
                                                                             value="overhead-press">
                                                                         <span class="label-text">Военна
                                                                             преса</span>
                                                                     </label>
                                                                 </div>
-                                                                <div class="form-check">
+                                                                <div class="form-check" class="lunge">
                                                                     <label>
-                                                                        <input type="checkbox" name="check"
+                                                                        <input type="checkbox" name="Напад"
                                                                             value="lunge"> <span
                                                                             class="label-text">Напад</span>
                                                                     </label>
@@ -358,28 +358,29 @@
                                                     </div>
                                                     <div class="col-md-4 col-sm-6">
                                                         <form>
-                                                            <div class="form-check">
+                                                            <div class="form-check" class="pull-up">
                                                                 <label>
-                                                                    <input type="checkbox" name="check" value="pull-up">
+                                                                    <input type="checkbox" name="check"
+                                                                        value="Набиране">
                                                                     <span class="label-text">Набиране с тежест</span>
                                                                 </label>
                                                             </div>
-                                                            <div class="form-check">
+                                                            <div class="form-check" class="dip">
                                                                 <label>
-                                                                    <input type="checkbox" name="check" value="dip">
+                                                                    <input type="checkbox" name="Кофи" value="dip">
                                                                     <span class="label-text">Кофи с тежест</span>
                                                                 </label>
                                                             </div>
-                                                            <div class="form-check">
+                                                            <div class="form-check" class="front-sqiuat">
                                                                 <label>
-                                                                    <input type="checkbox" name="check"
+                                                                    <input type="checkbox" name="Преден клек"
                                                                         value="front-squat">
                                                                     <span class="label-text">Преден клек</span>
                                                                 </label>
                                                             </div>
-                                                            <div class="form-check">
+                                                            <div class="form-check" class="sumo-deadlift">
                                                                 <label>
-                                                                    <input type="checkbox" name="check"
+                                                                    <input type="checkbox" name="Сумо тяга"
                                                                         value="sumo-deadlift"> <span
                                                                         class="label-text">Сумо тяга</span>
                                                                 </label>
@@ -389,28 +390,28 @@
                                                     </div>
                                                     <div class="col-md-4 col-sm-6">
                                                         <form>
-                                                            <div class="form-check">
+                                                            <div class="form-check" class="push-press">
                                                                 <label>
-                                                                    <input type="checkbox" name="check"
+                                                                    <input type="checkbox" name="Пуш преса"
                                                                         value="push-press"> <span class="label-text">Пуш
                                                                         преса</span>
                                                                 </label>
                                                             </div>
-                                                            <div class="form-check">
+                                                            <div class="form-check" class="renegade-row">
                                                                 <label>
-                                                                    <input type="checkbox" name="check"
+                                                                    <input type="checkbox" name="Ренегатско гребане"
                                                                         value="renegade-row">
                                                                     <span class="label-text">Ренегатско гребане</span>
                                                                 </label>
                                                             </div>
-                                                            <div class="form-check">
+                                                            <div class="form-check" class="good-morning">
                                                                 <label>
-                                                                    <input type="checkbox" name="check"
+                                                                    <input type="checkbox" name="Гуд морнинг"
                                                                         value="good-morning">
                                                                     <span class="label-text">Гуд морнинг</span>
                                                                 </label>
                                                             </div>
-                                                            <div class="form-check">
+                                                            <div class="form-check" class="overhead-squat">
                                                                 <label>
                                                                     <input type="checkbox" name="check"
                                                                         value="overhead-squat"> <span
@@ -428,8 +429,6 @@
                                         <div class="contact-item form-submit">
                                             <input name="submit" type="submit" id="show-next" class="submit"
                                                 value="ПОКАЖИ">
-                                            <input type="submit" class="submit" id="refresh" value="ОПРЕСНИ"
-                                                style="margin-top: 8px;display: none;">
                                         </div>
                                         <div class="row" style="display: none;" id="hidden-div">
                                             <div class="col-md-12">
@@ -751,6 +750,50 @@
                                                 <div>
                                                     <h3>Резултат</h3>
                                                 </div>
+                                                <!-- <table class="table borderless">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="text-align: left !important;">
+                                                                    Звание
+                                                                </td>
+                                                                <td>
+                                                                    Дивизия
+                                                                </td>
+                                                                <td>
+                                                                    Знак
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td id="rank"
+                                                                    style="text-align: left !important; color: #d42729;">
+                                                                </td>
+                                                                <td id="division" style="color: #d42729;">
+                                                                </td>
+                                                                <td><img class="resize" id="insignia">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="table borderless">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td>
+                                                                    Най-силно
+                                                                </td>
+                                                                <td>
+                                                                    Най-слабо
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td id="strongest" style="color: #d42729;">
+                                                                </td>
+                                                                <td id="weakest" style="color: #d42729;">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table> -->
                                                 <div class="panel panel-default panel-fade">
                                                     <div class="panel-heading">
                                                         <span class="panel-title">
@@ -775,6 +818,28 @@
                                                             <div class="tab-pane fade in active" id="level">
                                                                 <div class="row" id="real-hidden-div">
                                                                     <div class="col-md-12">
+                                                                        <div class="col-md-4 col-xs-4">
+                                                                            <h5>Звание</h5>
+                                                                            <h5 id="rank"></h5>
+                                                                        </div>
+                                                                        <div class="col-md-4 col-xs-4">
+                                                                            <h5>Дивизия</h5>
+                                                                            <h5 id="division"></h5>
+                                                                        </div>
+                                                                        <div class="col-md-4 col-xs-4">
+                                                                            <h5>Знак</h5>
+                                                                            <div>
+                                                                                <img class="resize" id="insignia">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6 col-xs-6">
+                                                                                <h5>Най-силно движение</h5>
+                                                                                <h5 id="strongest"></h5>
+                                                                        </div>
+                                                                        <div class="col-md-6 col-xs-6">
+                                                                                <h5>Най-слабо движение</h5>
+                                                                                <h5 id="weakest"></h5>
+                                                                        </div>
                                                                         <form class="center-block" role="form">
                                                                             <table class="table borderless"
                                                                                 id="real-balance">
@@ -787,7 +852,7 @@
                                                                                             Тежест
                                                                                         </td>
                                                                                         <td>
-                                                                                            Повт.
+                                                                                            Повторения
                                                                                         </td>
                                                                                         <td>
                                                                                             1МП
@@ -795,7 +860,7 @@
                                                                                     </tr>
                                                                                     <tr style="display: none;"
                                                                                         class="deadlift">
-                                                                                        <td style="width: 35%;">
+                                                                                        <td>
                                                                                             <label class="control-label"
                                                                                                 for="real-deadlift">Мъртва
                                                                                                 тяга</label>
@@ -1064,55 +1129,6 @@
                                                                                     </tr>
                                                                                 </tbody>
                                                                             </table>
-                                                                            <table class="table borderless">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td
-                                                                                            style="text-align: left !important;">
-                                                                                            Звание
-                                                                                        </td>
-                                                                                        <td>
-                                                                                            Дивизия
-                                                                                        </td>
-                                                                                        <td>
-                                                                                            Знак
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td id="rank"
-                                                                                            style="text-align: left !important; color: #d42729;">
-                                                                                        </td>
-                                                                                        <td id="division"
-                                                                                            style="color: #d42729;">
-                                                                                        </td>
-                                                                                        <td><img class="resize"
-                                                                                                id="insignia">
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                            <table class="table borderless">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td></td>
-                                                                                        <td>
-                                                                                            Най-силно
-                                                                                        </td>
-                                                                                        <td>
-                                                                                            Най-слабо
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td></td>
-                                                                                        <td id="strongest"
-                                                                                            style="color: #d42729;">
-                                                                                        </td>
-                                                                                        <td id="weakest"
-                                                                                            style="color: #d42729;">
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
                                                                         </form>
                                                                     </div>
                                                                 </div>
@@ -1133,7 +1149,7 @@
                                                                                             Тежест
                                                                                         </td>
                                                                                         <td>
-                                                                                            Повт.
+                                                                                            Повторения
                                                                                         </td>
                                                                                         <td>
                                                                                             1МП
@@ -1141,7 +1157,7 @@
                                                                                     </tr>
                                                                                     <tr style="display: none;"
                                                                                         class="deadlift">
-                                                                                        <td style="width: 35%;">
+                                                                                        <td>
                                                                                             <label class="control-label"
                                                                                                 for="ideal-deadlift">Мъртва
                                                                                                 тяга</label>
@@ -1435,6 +1451,20 @@
                                                             <div class="tab-pane fade" id="next">
                                                                 <div class="row" id="next-level-hidden-div">
                                                                     <div class="col-md-12">
+                                                                        <div class="col-md-4 col-xs-4">
+                                                                            <h5>Звание</h5>
+                                                                            <h5 id="next-level-rank"></h5>
+                                                                        </div>
+                                                                        <div class="col-md-4 col-xs-4">
+                                                                            <h5>Дивизия</h5>
+                                                                            <h5 id="next-level-division"></h5>
+                                                                        </div>
+                                                                        <div class="col-md-4 col-xs-4">
+                                                                            <h5>Знак</h5>
+                                                                            <div>
+                                                                                <img class="resize" id="next-level-insignia">
+                                                                            </div>                                                                          
+                                                                        </div>
                                                                         <form class="center-block" role="form">
                                                                             <table class="table borderless"
                                                                                 id="next-level-balance">
@@ -1447,7 +1477,7 @@
                                                                                             Тежест
                                                                                         </td>
                                                                                         <td>
-                                                                                            Повт.
+                                                                                            Повторения
                                                                                         </td>
                                                                                         <td>
                                                                                             1МП
@@ -1455,7 +1485,7 @@
                                                                                     </tr>
                                                                                     <tr style="display: none;"
                                                                                         class="deadlift">
-                                                                                        <td style="width: 35%;">
+                                                                                        <td class="first">
                                                                                             <label class="control-label"
                                                                                                 for="next-level-deadlift">Мъртва
                                                                                                 тяга</label>
@@ -1750,32 +1780,6 @@
                                                                                     </tr>
                                                                                 </tbody>
                                                                             </table>
-                                                                            <table class="table borderless">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td
-                                                                                            style="text-align: left !important;">
-                                                                                            Звание
-                                                                                        </td>
-                                                                                        <td>
-                                                                                            Дивизия
-                                                                                        </td>
-                                                                                        <td>
-                                                                                            Знак
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td id="next-level-rank"
-                                                                                            style="text-align: left !important;color: #d42729;">
-                                                                                        </td>
-                                                                                        <td id="next-level-division"
-                                                                                            style="color: #d42729;">
-                                                                                        </td>
-                                                                                        <td><img id="next-level-insignia"
-                                                                                                class="resize"></td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
                                                                         </form>
                                                                     </div>
                                                                 </div>
@@ -1795,7 +1799,7 @@
                                                                                             Тежест
                                                                                         </td>
                                                                                         <td>
-                                                                                            Повт.
+                                                                                            Повторения
                                                                                         </td>
                                                                                         <td>
                                                                                             1МП
@@ -1803,7 +1807,7 @@
                                                                                     </tr>
                                                                                     <tr style="display: none;"
                                                                                         class="deadlift">
-                                                                                        <td style="width: 35%;">
+                                                                                        <td class="first">
                                                                                             <label class="control-label"
                                                                                                 for="perfect-level-deadlift">Мъртва
                                                                                                 тяга</label>

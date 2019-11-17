@@ -36,10 +36,6 @@ abbr[title]{
 b,optgroup,strong{
     font-weight:700
 }
-.resize {
-    height: auto;
-    width: 20px;
-}
 dfn{
     font-style:italic
 }
@@ -1745,21 +1741,21 @@ button{
     line-height:18px;
     padding:0 4px 0 4px
 }
-/* td:first-child{
+td:first-child{
     text-align:center
-}*/
+}
 td:nth-child(2){
     text-align:left;
 }
-td:nth-child(3){
-    text-align:left;
+/* td:nth-child(3){
+    text-align:center;
 }
 td:nth-child(4){
-    text-align:left
+    text-align:center
 }
 td:nth-child(5){
-    text-align:left
-}
+    text-align:center
+} */
 .nextLevelReps{
     width:280px;
     padding:5px 0 5px 0;
@@ -1813,4 +1809,111 @@ td:nth-child(5){
     background-color: transparent;
     box-shadow: none;
     border: none;
+}
+.resize {
+    height: auto;
+    width: 20px;
+}
+#real-balance > tbody > tr:nth-child(1) > td:nth-child(2), 
+#real-balance > tbody > tr:nth-child(1) > td:nth-child(3),
+#real-balance > tbody > tr:nth-child(1) > td:nth-child(4),
+#ideal-balance > tbody > tr:nth-child(1) > td:nth-child(2), 
+#ideal-balance > tbody > tr:nth-child(1) > td:nth-child(3),
+#ideal-balance > tbody > tr:nth-child(1) > td:nth-child(4),
+#next-level-balance > tbody > tr:nth-child(1) > td:nth-child(2), 
+#next-level-balance > tbody > tr:nth-child(1) > td:nth-child(3),
+#next-level-balance > tbody > tr:nth-child(1) > td:nth-child(4),
+#perfect-level-balance > tbody > tr:nth-child(1) > td:nth-child(2), 
+#perfect-level-balance > tbody > tr:nth-child(1) > td:nth-child(3),
+#perfect-level-balance > tbody > tr:nth-child(1) > td:nth-child(4) {
+    text-align: center;
+}
+#real-deadlift, #real-deadlift-reps, #real-deadlift-max,
+#real-squat, #real-squat-reps, #real-squat-max,
+#real-overhead-press, #real-overhead-press-reps, #real-overhead-press-max,
+#real-lunge, #real-lunge-reps, #real-lunge-max,
+#real-pull-up, #real-pull-up-reps, #real-pull-up-max,
+#real-dip, #real-dip-reps, #real-dip-max,
+#real-front-squat, #real-front-squat-reps, #real-front-squat-max,
+#real-sumo-deadlift, #real-sumo-deadlift-reps, #real-sumo-deadlift-max,
+#real-push-press, #real-push-press-reps, #real-push-press-max,
+#real-renegade-row, #real-renegade-row-reps, #real-renegade-row-max,
+#real-good-morning, #real-good-morning-reps, #real-good-morning-max {
+    text-align: center;
+}
+#real-balance > tbody > tr.deadlift > td:nth-child(1) > label,
+#ideal-balance > tbody > tr.deadlift > td:nth-child(1) > label,
+#next-level-balance > tbody > tr.deadlift > td:nth-child(1) > label,
+#perfect-level-balance > tbody > tr.deadlift > td:nth-child(1) > label {
+    min-width: 100px !important;
+}
+#ideal-deadlift, #ideal-deadlift-reps, #ideal-deadlift-max,
+#ideal-squat, #ideal-squat-reps, #ideal-squat-max,
+#ideal-overhead-press, #ideal-overhead-press-reps, #ideal-overhead-press-max,
+#ideal-lunge, #ideal-lunge-reps, #ideal-lunge-max,
+#ideal-pull-up, #ideal-pull-up-reps, #ideal-pull-up-max,
+#ideal-dip, #ideal-dip-reps, #ideal-dip-max,
+#ideal-front-squat, #ideal-front-squat-reps, #ideal-front-squat-max,
+#ideal-sumo-deadlift, #ideal-sumo-deadlift-reps, #ideal-sumo-deadlift-max,
+#ideal-push-press, #ideal-push-press-reps, #ideal-push-press-max,
+#ideal-renegade-row, #ideal-renegade-row-reps, #ideal-renegade-row-max,
+#ideal-good-morning, #ideal-good-morning-reps, #ideal-good-morning-max {
+    text-align: center;
+}
+
+#next-level-deadlift, #next-level-deadlift-reps, #next-level-deadlift-max,
+#next-level-squat, #next-level-squat-reps, #next-level-squat-max,
+#next-level-overhead-press, #next-level-overhead-press-reps, #next-level-overhead-press-max,
+#next-level-lunge, #next-level-lunge-reps, #next-level-lunge-max,
+#next-level-pull-up, #next-level-pull-up-reps, #next-level-pull-up-max,
+#next-level-dip, #next-level-dip-reps, #next-level-dip-max,
+#next-level-front-squat, #next-level-front-squat-reps, #next-level-front-squat-max,
+#next-level-sumo-deadlift, #next-level-sumo-deadlift-reps, #next-level-sumo-deadlift-max,
+#next-level-push-press, #next-level-push-press-reps, #next-level-push-press-max,
+#next-level-renegade-row, #next-level-renegade-row-reps, #next-level-renegade-row-max,
+#next-level-good-morning, #next-level-good-morning-reps, #next-level-good-morning-max {
+    text-align: center;
+}
+
+#perfect-level-deadlift, #perfect-level-deadlift-reps, #perfect-level-deadlift-max,
+#perfect-level-squat, #perfect-level-squat-reps, #perfect-level-squat-max,
+#perfect-level-overhead-press, #perfect-level-overhead-press-reps, #perfect-level-overhead-press-max,
+#perfect-level-lunge, #perfect-level-lunge-reps, #perfect-level-lunge-max,
+#perfect-level-pull-up, #perfect-level-pull-up-reps, #perfect-level-pull-up-max,
+#perfect-level-dip, #perfect-level-dip-reps, #perfect-level-dip-max,
+#perfect-level-front-squat, #perfect-level-front-squat-reps, #perfect-level-front-squat-max,
+#perfect-level-sumo-deadlift, #perfect-level-sumo-deadlift-reps, #perfect-level-sumo-deadlift-max,
+#perfect-level-push-press, #perfect-level-push-press-reps, #perfect-level-push-press-max,
+#perfect-level-renegade-row, #perfect-level-renegade-row-reps, #perfect-level-renegade-row-max,
+#perfect-level-good-morning, #perfect-level-good-morning-reps, #perfect-level-good-morning-max {
+    text-align: center;
+}
+
+#ideal-balance > tbody > tr:nth-child(13) > td:nth-child(2),
+#next-level-balance > tbody > tr:nth-child(13) > td:nth-child(2),
+#perfect-level-balance > tbody > tr:nth-child(13) > td:nth-child(2) {
+    text-align: center;
+}
+#rank, 
+#division, 
+#insignia, 
+#next-level-rank, 
+#next-level-division, 
+#next-level-insignia,
+#strongest,
+#weakest {
+    text-align: center;
+    color: #d42729;
+}
+#real-hidden-div > div > div:nth-child(1) > h5:nth-child(1),
+#real-hidden-div > div > div:nth-child(2) > h5:nth-child(1),
+#real-hidden-div > div > div:nth-child(3) > h5:nth-child(1),
+#real-hidden-div > div > div:nth-child(4) > h5:nth-child(1),
+#real-hidden-div > div > div:nth-child(5) > h5:nth-child(1),
+#real-hidden-div > div > div:nth-child(3) > div,
+#next-level-hidden-div > div > div:nth-child(1) > h5:nth-child(1),
+#next-level-hidden-div > div > div:nth-child(2) > h5:nth-child(1),
+#next-level-hidden-div > div > div:nth-child(3) > h5:nth-child(1),
+#next-level-hidden-div > div > div:nth-child(3) > div {
+    text-align: center;
 }

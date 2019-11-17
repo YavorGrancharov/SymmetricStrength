@@ -1,7 +1,6 @@
 let strengthController = (() => {
     function showMovements() {
         let showMoves = document.getElementById("show-next");
-        let refresh = document.getElementById("refresh");
         let hidden = document.getElementById("hidden-div");
         let trows = document.getElementById("hidden-div").querySelectorAll("tr");
         let realTRows = document.getElementById("real-hidden-div").querySelectorAll("tr");
@@ -12,7 +11,6 @@ let strengthController = (() => {
         showMoves.addEventListener('click', function (event) {
             event.preventDefault();
             let checked = []
-            let chosen = []
             checked = Array.from(document.querySelectorAll('input[type="checkbox"]'))
                 .filter((checkbox) => checkbox.checked)
                 .map((checkbox) => checkbox.value);
@@ -32,28 +30,10 @@ let strengthController = (() => {
                         idealTrows[i].style.display = 'table-row'
                         nextLvlTRows[i].style.display = 'table-row'
                         prefectLvlTRows[i].style.display = 'table-row'
-                        showMoves.value = 'ДОБАВИ'
-                        refresh.style.display = 'block'
-                        // chosen.push(trows[i]);
+                        showMoves.value = 'ОПРЕСНИ'
                     }
-                    // if (chosen.includes(trows[i])) {
-
-                    //     // chosen.splice(i, 1);
-                    // }
                 }
             }
-            console.log(checked)
-            // for (let f = 0; f < chosen.length; f++) {
-            //     if (chosen.length >= 5) {
-            //         hidden.style.display = 'block';
-            //         chosen[f].style.display = 'table-row';
-            //         showMoves.value = 'ДОБАВИ'
-            //         refresh.style.display = 'block'
-            //     } else {
-            //         trows[f].style.display = 'none';
-            //         hidden.style.display = 'none';
-            //     }
-            // }
         });
     }
 
@@ -345,9 +325,7 @@ let strengthController = (() => {
                     }
                 }
             }
-            console.log(`Ideal max is ${idealMaxName} with value of ${Math.round(idealMax)}kg`)
-            console.log(`Ideal min is ${idealNameMin} with value of ${Math.round(idealMin)}kg`)
-
+            
             avg = hasInput.reduce(function (a, b) { return (a + b) })
             avg /= hasInput.length;
 
@@ -360,7 +338,7 @@ let strengthController = (() => {
             let imgPosNext;
             for (let j = 0; j < strengthIndexes.length; j++) {
                 if (sex === "male") {
-                    if ((maleRealDeadlift * strengthIndexes[j]) >= idealMax) {
+                    if ((maleRealDeadlift * strengthIndexes[j]) >= newMaxMin(ideal_moves)[0]) {
                         nextLevelDeadlift = maleRealDeadlift * strengthIndexes[j];
                         if (nextLevelDeadlift >= avg) {
                             nextLevelRank = ranks[j];
@@ -378,7 +356,7 @@ let strengthController = (() => {
                         currentDivision = divisions[strengthIndexes.length - 1];
                     }
                 } else {
-                    if ((femaleRealDeadlift * strengthIndexes[j]) >= idealMax) {
+                    if ((femaleRealDeadlift * strengthIndexes[j]) >= newMaxMin(ideal_moves)[0]) {
                         nextLevelDeadlift = femaleRealDeadlift * strengthIndexes[j];
                         if (nextLevelDeadlift >= avg) {
                             nextLevelRank = ranks[j];
@@ -399,12 +377,11 @@ let strengthController = (() => {
             }
 
             let relativeDeadlift = 0;
-            if (idealMax > (deadlift / getIntensity(deadlift_reps))) {
-                relativeDeadlift = idealMax * getIntensity(deadlift_reps);
+            if (newMaxMin(ideal_moves)[0] > (deadlift / getIntensity(deadlift_reps))) {
+                relativeDeadlift = newMaxMin(ideal_moves)[0] * getIntensity(deadlift_reps);
             } else {
                 relativeDeadlift = (deadlift / getIntensity(deadlift_reps)) * getIntensity(deadlift_reps);
             }
-            console.log(relativeDeadlift)
 
             let idealLabels = []
             let idealData = []
@@ -419,28 +396,35 @@ let strengthController = (() => {
                     perfectLevelLabels.push(userInput[i].name)
                     realSet[i].value.value = userInput[i].value.value;
                     realSet[i].reps.value = userInput[i].reps.value;
-                    realSet[i].max.value = Math.round(realSet[i].value.value / reps[i]);
-                    idealSet[i].value.value = Math.round(((relativeDeadlift / getIntensity(deadlift_reps)) * movementsIndexes[i].value) * reps[i]);
+                    realSet[i].max.value = Math.round(realSet[i].value.value / getIntensity(realSet[i].reps.value));
                     idealSet[i].reps.value = userInput[i].reps.value;
-                    idealSet[i].max.value = Math.round(idealSet[i].value.value / reps[i])
-                    nextLevelSet[i].value.value = Math.round((nextLevelDeadlift * movementsIndexes[i].value) * reps[i]);
+                    idealSet[i].value.value = Math.round(((relativeDeadlift / getIntensity(deadlift_reps)) * movementsIndexes[i].value) * getIntensity(idealSet[i].reps.value));
+                    idealSet[i].max.value = Math.round(idealSet[i].value.value / getIntensity(idealSet[i].reps.value))
+                    nextLevelSet[i].value.value = Math.round((nextLevelDeadlift * getIntensity(userInput[i].reps.value)) * movementsIndexes[i].value);
                     nextLevelSet[i].reps.value = userInput[i].reps.value;
-                    nextLevelSet[i].max.value = Math.round(nextLevelSet[i].value.value / reps[i])
+                    nextLevelSet[i].max.value = Math.round(nextLevelSet[i].value.value / getIntensity(userInput[i].reps.value))
                     perfectSet[i].reps.value = userInput[i].reps.value;
                     idealData.push(Math.round(((userInput[i].value.value - idealSet[i].value.value) / userInput[i].value.value) * 100))
                     nextLevelData.push(Math.round(((userInput[i].value.value - nextLevelSet[i].value.value) / userInput[i].value.value) * 100))
                     if (sex === "male") {
-                        perfectSet[i].value.value = Math.round((maleRealDeadlift * movementsIndexes[i].value) * reps[i]);
-                        perfectSet[i].max.value = Math.round(perfectSet[i].value.value / reps[i])
+                        perfectSet[i].value.value = Math.round((maleRealDeadlift * movementsIndexes[i].value) * getIntensity(userInput[i].reps.value));
+                        perfectSet[i].max.value = Math.round(perfectSet[i].value.value / getIntensity(perfectSet[i].reps.value))
                     } else {
-                        perfectSet[i].value.value = Math.round((femaleRealDeadlift * movementsIndexes[i].value) * reps[i]);
+                        perfectSet[i].value.value = Math.round((femaleRealDeadlift * movementsIndexes[i].value) * getIntensity(userInput[i].reps.value));
                     }
                     perfectLevelData.push(Math.round(((userInput[i].value.value - perfectSet[i].value.value) / userInput[i].value.value) * 100))
-                    perfectSet[i].max.value = Math.round(perfectSet[i].value.value / reps[i])
-                } else {
-                    // nextLevelSet[i].value.value = '';
-                    // idealSet[i].value.value = '';
-                    // perfectSet[i].value.value = '';
+                    perfectSet[i].max.value = Math.round(perfectSet[i].value.value / getIntensity(perfectSet[i].reps.value))
+                }
+            }
+
+            let labels = []
+            labels = Array.from(document.querySelectorAll('input[type="checkbox"]'))
+                .filter((checkbox) => checkbox.checked)
+                .map((checkbox) => checkbox.name);
+            for (let i = 0; i < idealLabels.length; i++) {
+                if (idealLabels[i] !== labels[i]) {
+                    idealLabels.splice(i, 1)
+                    idealData.splice(i, 1)
                 }
             }
 
@@ -606,6 +590,26 @@ let strengthController = (() => {
                 })
             }
         })
+    }
+
+    function newMaxMin(ideal_moves) {
+        let idealMax = Number.MIN_SAFE_INTEGER;
+        let idealMaxName = '';
+        let idealMin = Number.MAX_SAFE_INTEGER;
+        let idealNameMin = '';
+        for (let i = 0; i < ideal_moves.length; i++) {
+            if (ideal_moves[i].value) {
+                if (ideal_moves[i].value > idealMax) {
+                    idealMax = ideal_moves[i].value;
+                    idealMaxName = ideal_moves[i].name;
+                }
+                if (ideal_moves[i].value < idealMin) {
+                    idealMin = ideal_moves[i].value;
+                    idealNameMin = ideal_moves[i].name;
+                }
+            }
+        }
+        return [idealMax, idealMaxName, idealMin, idealNameMin]
     }
 
     function getIntensity(reps) {
