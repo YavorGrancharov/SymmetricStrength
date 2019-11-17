@@ -425,6 +425,7 @@ let strengthController = (() => {
                 if (idealLabels[i] !== labels[i]) {
                     idealLabels.splice(i, 1)
                     idealData.splice(i, 1)
+                    newMaxMin(ideal_moves)
                 }
             }
 
