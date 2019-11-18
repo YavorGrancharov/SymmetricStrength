@@ -34,6 +34,7 @@ let strengthController = (() => {
                     }
                     if (checked.length < 5) {
                         hidden.style.display = 'none';
+                        showMoves.value = 'ПОКАЖИ'
                     }
                 }
             }
