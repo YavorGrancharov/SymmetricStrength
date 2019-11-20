@@ -195,7 +195,7 @@ let strengthController = (() => {
                 { name: "Преден клек", value: document.getElementById("perfect-level-front-squat"), reps: document.getElementById("perfect-level-front-squat-reps"), max: document.getElementById("perfect-level-front-squat-max") },
                 { name: "Сумо тяга", value: document.getElementById("perfect-level-sumo-deadlift"), reps: document.getElementById("perfect-level-sumo-deadlift-reps"), max: document.getElementById("perfect-level-sumo-deadlift-max") },
                 { name: "Пуш преса", value: document.getElementById("perfect-level-push-press"), reps: document.getElementById("perfect-level-push-press-reps"), max: document.getElementById("perfect-level-push-press-max") },
-                { name: "Ренегатско гребане", value: document.getElementById("next-level-renegade-row"), reps: document.getElementById("perfect-level-renegade-row-reps"), max: document.getElementById("perfect-level-renegade-row-max") },
+                { name: "Ренегатско гребане", value: document.getElementById("perfect-level-renegade-row"), reps: document.getElementById("perfect-level-renegade-row-reps"), max: document.getElementById("perfect-level-renegade-row-max") },
                 { name: "Гуд морнинг", value: document.getElementById("perfect-level-good-morning"), reps: document.getElementById("perfect-level-good-morning-reps"), max: document.getElementById("perfect-level-good-morning-max") }
             ];
 
@@ -241,6 +241,75 @@ let strengthController = (() => {
                         : (renegade_row / getIntensity(renegade_row_reps)) / 0.2
                 },
                 { name: "Гуд морнинг", value: (good_morning / getIntensity(good_morning_reps)) / 0.44 }
+            ];
+
+            let perfect_moves = [
+                {
+                    name: "Мъртва тяга",
+                    value: sex === 'male'
+                        ? (maleRealDeadlift * getIntensity(deadlift_reps)) * 1
+                        : (femaleRealDeadlift * getIntensity(deadlift_reps)) * 1
+                },
+                {
+                    name: "Клек",
+                    value: sex === 'male'
+                        ? (maleRealDeadlift * 0.83 * getIntensity(squat_reps))
+                        : (femaleRealDeadlift * 0.83 * getIntensity(squat_reps))
+                },
+                {
+                    name: "Военна преса",
+                    value: sex === 'male'
+                        ? (maleRealDeadlift * 0.4 * getIntensity(overhead_press_reps))
+                        : (femaleRealDeadlift * 0.37 * getIntensity(overhead_press_reps))
+                },
+                {
+                    name: "Напад",
+                    value: sex === 'male'
+                        ? (maleRealDeadlift * 0.7 * getIntensity(lunge_reps))
+                        : (femaleRealDeadlift * 0.7 * getIntensity(lunge_reps))
+                },
+                {
+                    name: "Набиране",
+                    value: sex === 'male'
+                        ? (maleRealDeadlift * 0.65 * getIntensity(pull_up_reps))
+                        : (femaleRealDeadlift * 0.56 * getIntensity(pull_up_reps))
+                },
+                {
+                    name: "Кофи",
+                    value: sex === 'male'
+                        ? (maleRealDeadlift * 0.79 * getIntensity(dip_reps))
+                        : (femaleRealDeadlift * 0.63 * getIntensity(dip_reps))
+                },
+                {
+                    name: "Преден клек",
+                    value: sex === 'male'
+                        ? (maleRealDeadlift * 0.68 * getIntensity(front_psquat_reps))
+                        : (femaleRealDeadlift * 0.67 * getIntensity(front_psquat_reps))
+                },
+                {
+                    name: "Сумо тяга",
+                    value: sex === 'male'
+                        ? (maleRealDeadlift * 0.95 * getIntensity(sumo_deadlift_reps))
+                        : (femaleRealDeadlift * 0.95 * getIntensity(sumo_deadlift_reps))
+                },
+                {
+                    name: "Пуш преса",
+                    value: sex === 'male'
+                        ? (maleRealDeadlift * 0.56 * getIntensity(push_press_reps))
+                        : (femaleRealDeadlift * 0.49 * getIntensity(push_press_reps))
+                },
+                {
+                    name: "Ренегатско гребане",
+                    value: sex === 'male'
+                        ? (maleRealDeadlift * 0.26 * getIntensity(renegade_row_reps))
+                        : (femaleRealDeadlift * 0.2 * getIntensity(renegade_row_reps))
+                },
+                {
+                    name: "Гуд морнинг",
+                    value: sex === 'male'
+                        ? (maleRealDeadlift * 0.44 * getIntensity(good_morning_reps))
+                        : (femaleRealDeadlift * 0.44 * getIntensity(good_morning_reps))
+                }
             ];
 
             let realTRows = document.getElementById("real-hidden-div").querySelectorAll("tr");
@@ -316,8 +385,11 @@ let strengthController = (() => {
                 }
             }
 
-            let avg;
-            let hasInput = [];
+            let currentLevel = 0;
+            let idealAvg;
+            let perfectAvg;
+            let idealInput = [];
+            let perfectInput = []
             let idealMax = Number.MIN_SAFE_INTEGER;
             let idealMaxName = '';
             let idealMin = Number.MAX_SAFE_INTEGER;
@@ -325,7 +397,9 @@ let strengthController = (() => {
             for (let i = 0; i < ideal_moves.length; i++) {
                 for (let j = 0; j < labels.length; j++) {
                     if (userChoice[i] === labels[j]) {
-                        hasInput.push(ideal_moves[i].value);
+                        idealInput.push(ideal_moves[i].value);
+                        perfectInput.push(perfect_moves[i].value)
+                        currentLevel += userInput[i].value.value / perfect_moves[i].value
                         if (ideal_moves[i].value > idealMax) {
                             idealMax = ideal_moves[i].value;
                             idealMaxName = ideal_moves[i].name;
@@ -337,56 +411,76 @@ let strengthController = (() => {
                     }
                 }
             }
+            currentLevel /= idealInput.length;
+            console.log(currentLevel)
 
-            avg = hasInput.reduce(function (a, b) { return (a + b) })
-            avg /= hasInput.length;
-
+            let info = document.getElementById("info");
             let nextLevelDeadlift = 0;
+            let imgPos;
             let currentRank = '';
             let currentDivision = '';
             let nextLevelRank = '';
             let nextLevelDivision = '';
-            let imgPos;
             let imgPosNext;
-            for (let j = 0; j < strengthIndexes.length; j++) {
-                if (sex === "male") {
-                    if ((maleRealDeadlift * strengthIndexes[j]) >= idealMax) {
-                        nextLevelDeadlift = maleRealDeadlift * strengthIndexes[j];
-                        if (nextLevelDeadlift >= avg) {
-                            nextLevelRank = ranks[j];
-                            nextLevelDivision = divisions[j];
-                            imgPosNext = j;
-                            currentRank = ranks[j - 1];
-                            currentDivision = divisions[j - 1];
-                            imgPos = j - 1;
+            for (let i = 0; i < strengthIndexes.length; i++) {
+                if (sex === 'male') {
+                    if (currentLevel < strengthIndexes[i]) {
+                        if ((maleRealDeadlift * strengthIndexes[i]) < idealMax) {
+                            nextLevelDeadlift = maleRealDeadlift * strengthIndexes[i + 1];
+                            nextLevelRank = ranks[i + 1];
+                            nextLevelDivision = divisions[i + 1];
+                            imgPosNext = i + 1;
+                            info.innerHTML = 'Тък като текущото най-силно движение е по-голямо от изискванията за следващо ниво<br>в таблицата за следващо ниво за изразени изискванията за по-следващото такова!'
+                        } else {
+                            nextLevelDeadlift = maleRealDeadlift * strengthIndexes[i]
+                            nextLevelRank = ranks[i];
+                            nextLevelDivision = divisions[i];
+                            imgPosNext = i;
                         }
-                        break;
+                        currentRank = ranks[i - 1];
+                        currentDivision = divisions[i - 1];
+                        imgPos = i - 1;
+                        break
                     } else {
-                        nextLevelDeadlift = maleRealDeadlift;
+                        nextLevelDeadlift = maleRealDeadlift
                         imgPos = strengthIndexes.length - 1;
                         currentRank = ranks[strengthIndexes.length - 1];
                         currentDivision = divisions[strengthIndexes.length - 1];
                     }
                 } else {
-                    if ((femaleRealDeadlift * strengthIndexes[j]) >= idealMax) {
-                        nextLevelDeadlift = femaleRealDeadlift * strengthIndexes[j];
-                        if (nextLevelDeadlift >= avg) {
-                            nextLevelRank = ranks[j];
-                            nextLevelDivision = divisions[j];
-                            imgPosNext = j;
-                            currentRank = ranks[j - 1];
-                            currentDivision = divisions[j - 1];
-                            imgPos = j - 1;
+                    if (currentLevel < strengthIndexes[i]) {
+                        if ((femaleRealDeadlift * strengthIndexes[i]) < idealMax) {
+                            nextLevelDeadlift = femaleRealDeadlift * strengthIndexes[i + 1];
+                            nextLevelRank = ranks[i + 1];
+                            nextLevelDivision = divisions[i + 1];
+                            imgPosNext = i + 1;
+                            info.innerHTML = 'Тък като текущото най-силно движение е по-голямо от изискванията за следващо ниво<br>в таблицата за следващо ниво за изразени изискванията за по-следващото такова!'
+                        } else {
+                            nextLevelDeadlift = femaleRealDeadlift * strengthIndexes[i]
+                            nextLevelRank = ranks[i];
+                            nextLevelDivision = divisions[i];
+                            imgPosNext = i;
                         }
-                        break;
+                        currentRank = ranks[i - 1];
+                        currentDivision = divisions[i - 1];
+                        imgPos = i - 1;
+                        break
                     } else {
-                        nextLevelDeadlift = femaleRealDeadlift;
+                        nextLevelDeadlift = femaleRealDeadlift
                         imgPos = strengthIndexes.length - 1;
                         currentRank = ranks[strengthIndexes.length - 1];
                         currentDivision = divisions[strengthIndexes.length - 1];
                     }
                 }
             }
+            console.log(nextLevelDeadlift)
+            console.log(idealMax)
+            console.log(idealMin)
+            idealAvg = idealInput.reduce(function (a, b) { return (a + b) })
+            idealAvg /= idealInput.length;
+            console.log(idealInput)
+            console.log(idealAvg)
+            console.log(perfectInput)
 
             let relativeDeadlift = 0;
             if (idealMax > (deadlift / getIntensity(deadlift_reps))) {
