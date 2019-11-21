@@ -107,7 +107,7 @@ let strengthController = (() => {
             let maleRealDeadlift = ((1.72 * body_weight) / ((height * (1 / 3)) / 100)) / getLifterAge(age);
             let femaleRealDeadlift = ((1.486 * body_weight) / ((height * (1 / 3)) / 100)) / getLifterAge(age);
 
-            let strengthIndexes = [0.25, 0.3375, 0.425, 0.5125, 0.6, 0.6833, 0.7666, 0.85, 0.925, 1];
+            let strengthIndexes = [0.25, 0.33, 0.42, 0.51, 0.6, 0.68, 0.76, 0.85, 0.92, 1];
             let ranks = ["Вербован", "Новобранец", "Редник", "Ефрейтор", "Сержант", "Лейтенант", "Капитан", "Майор", "Полковник", "Генерал"];
             let divisions = ["Зулу", "Зулу", "Зулу", "Зулу", "Лима", "Лима", "Лима", "Делта", "Делта", "Алфа"];
             let shoulder_mark = [
@@ -424,18 +424,19 @@ let strengthController = (() => {
             let imgPosNext;
             for (let i = 0; i < strengthIndexes.length; i++) {
                 if (sex === 'male') {
-                    if (currentLevel < strengthIndexes[i]) {
+                    if (currentLevel.toFixed(2) < strengthIndexes[i].toFixed(2)) {
                         if ((maleRealDeadlift * strengthIndexes[i]) < idealMax) {
                             nextLevelDeadlift = maleRealDeadlift * strengthIndexes[i + 1];
                             nextLevelRank = ranks[i + 1];
                             nextLevelDivision = divisions[i + 1];
                             imgPosNext = i + 1;
-                            info.innerHTML = 'Тък като текущото най-силно движение е по-голямо от изискванията за следващо ниво<br>в таблицата за следващо ниво за изразени изискванията за по-следващото такова!'
+                            info.innerHTML = `Поради прескачане на текущото най-силно движение едно ниво нагоре, в таблицата "Следващо ниво" вместо за ${ranks[i]}, са изведени стойностите за ${ranks[i + 1]}!`
                         } else {
                             nextLevelDeadlift = maleRealDeadlift * strengthIndexes[i]
                             nextLevelRank = ranks[i];
                             nextLevelDivision = divisions[i];
                             imgPosNext = i;
+                            info.innerHTML = ''
                         }
                         currentRank = ranks[i - 1];
                         currentDivision = divisions[i - 1];
@@ -446,6 +447,9 @@ let strengthController = (() => {
                         imgPos = strengthIndexes.length - 1;
                         currentRank = ranks[strengthIndexes.length - 1];
                         currentDivision = divisions[strengthIndexes.length - 1];
+                        imgPosNext = strengthIndexes.length - 1;
+                        nextLevelRank = ranks[strengthIndexes.length - 1];
+                        nextLevelDivision = divisions[strengthIndexes.length - 1];
                     }
                 } else {
                     if (currentLevel < strengthIndexes[i]) {
@@ -454,22 +458,26 @@ let strengthController = (() => {
                             nextLevelRank = ranks[i + 1];
                             nextLevelDivision = divisions[i + 1];
                             imgPosNext = i + 1;
-                            info.innerHTML = 'Тък като текущото най-силно движение е по-голямо от изискванията за следващо ниво<br>в таблицата за следващо ниво за изразени изискванията за по-следващото такова!'
+                            info.innerHTML = 'Поради прескачане на текущото най-силно движение едно ниво нагоре, в таблицата "Следващо ниво" са изведени стойностите за по-горното такова!'
                         } else {
                             nextLevelDeadlift = femaleRealDeadlift * strengthIndexes[i]
                             nextLevelRank = ranks[i];
                             nextLevelDivision = divisions[i];
                             imgPosNext = i;
+                            info.innerHTML = ''
                         }
                         currentRank = ranks[i - 1];
                         currentDivision = divisions[i - 1];
                         imgPos = i - 1;
                         break
                     } else {
-                        nextLevelDeadlift = femaleRealDeadlift
+                        nextLevelDeadlift = maleRealDeadlift
                         imgPos = strengthIndexes.length - 1;
                         currentRank = ranks[strengthIndexes.length - 1];
                         currentDivision = divisions[strengthIndexes.length - 1];
+                        imgPosNext = strengthIndexes.length - 1;
+                        nextLevelRank = ranks[strengthIndexes.length - 1];
+                        nextLevelDivision = divisions[strengthIndexes.length - 1];
                     }
                 }
             }
