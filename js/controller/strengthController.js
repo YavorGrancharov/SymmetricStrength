@@ -453,7 +453,7 @@ let strengthController = (() => {
                     }
                 } else {
                     if (currentLevel < strengthIndexes[i]) {
-                        if ((femaleRealDeadlift * strengthIndexes[i]) < idealMax) {
+                        if ((femaleRealDeadlift * strengthIndexes[i]).toFixed(2) < Math.floor(idealMax.toFixed(2))) {
                             nextLevelDeadlift = femaleRealDeadlift * strengthIndexes[i + 1];
                             nextLevelRank = ranks[i + 1];
                             nextLevelDivision = divisions[i + 1];
@@ -496,7 +496,7 @@ let strengthController = (() => {
             } else {
                 relativeDeadlift = (deadlift / getIntensity(deadlift_reps)) * getIntensity(deadlift_reps);
             }
-
+            let fill = document.getElementById("fill");
             for (let i = 0; i < userChoice.length; i++) {
                 for (let j = 0; j < labels.length; j++) {
                     if (userChoice[i] === labels[j]) {
@@ -527,6 +527,13 @@ let strengthController = (() => {
                         }
                         break
                     }
+                }
+            }
+            for(let i = 0; i < userInput.length; i++) {
+                if(userInput[i].value.value) {
+                    fill.addEventListener("click", function (event) {
+                        userInput[i].value.value = Math.round((nextLevelDeadlift * getIntensity(userInput[i].reps.value)) * movementsIndexes[i].value);
+                    })
                 }
             }
             console.log(labels)
