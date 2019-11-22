@@ -452,13 +452,13 @@ let strengthController = (() => {
                         nextLevelDivision = divisions[strengthIndexes.length - 1];
                     }
                 } else {
-                    if (currentLevel < strengthIndexes[i]) {
-                        if ((femaleRealDeadlift * strengthIndexes[i]).toFixed(2) < Math.floor(idealMax.toFixed(2))) {
+                    if (currentLevel.toFixed(2) < strengthIndexes[i].toFixed(2)) {
+                        if ((femaleRealDeadlift * strengthIndexes[i]) < idealMax) {
                             nextLevelDeadlift = femaleRealDeadlift * strengthIndexes[i + 1];
                             nextLevelRank = ranks[i + 1];
                             nextLevelDivision = divisions[i + 1];
                             imgPosNext = i + 1;
-                            info.innerHTML = 'Поради прескачане на текущото най-силно движение едно ниво нагоре, в таблицата "Следващо ниво" са изведени стойностите за по-горното такова!'
+                            info.innerHTML = `Поради прескачане на текущото най-силно движение едно ниво нагоре, в таблицата "Следващо ниво" вместо за ${ranks[i]}, са изведени стойностите за ${ranks[i + 1]}!`
                         } else {
                             nextLevelDeadlift = femaleRealDeadlift * strengthIndexes[i]
                             nextLevelRank = ranks[i];
@@ -471,7 +471,7 @@ let strengthController = (() => {
                         imgPos = i - 1;
                         break
                     } else {
-                        nextLevelDeadlift = maleRealDeadlift
+                        nextLevelDeadlift = femaleRealDeadlift
                         imgPos = strengthIndexes.length - 1;
                         currentRank = ranks[strengthIndexes.length - 1];
                         currentDivision = divisions[strengthIndexes.length - 1];
