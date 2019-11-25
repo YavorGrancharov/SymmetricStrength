@@ -1917,3 +1917,97 @@ td:nth-child(5){
 #next-level-hidden-div > div > div:nth-child(3) > div {
     text-align: center;
 }
+img.patches {
+    width: 20px;
+    height: auto;
+}
+img.legend {
+    width: 20px;
+    height: auto;
+}
+.table-responsive {
+    overflow: hidden;
+  overflow-x: auto;
+  clear: both;
+  width: 100%;
+}
+table {
+    min-width: rem-calc(640);
+    border-collapse: collapse; 
+  }
+
+tr td {
+    table-layout: auto;
+    white-space:nowrap;
+}
+#beginner, #trained, #skilled, #master {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+#dl1, #dl5, #dl8, #dl10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+#ranks .list-group-item {
+    -webkit-transform: scale(1.0);
+}
+#sq1, #sq5, #sq8, #sq10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+#mp1, #mp5, #mp8, #mp10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+ul.list-group {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  /* CSS used here will be applied after bootstrap.css */
+
+    /* START TREE MENU */
+
+    ul.treeMenu 
+    {
+        margin-left: -30px;
+        font-size: 11pt;
+    }
+
+    .treeMenu li {
+        
+        padding: 0 0 10px 10px;
+        color: #000000;
+        margin-left: -15px;
+        list-style-type: none;
+        cursor: pointer;
+    }
+
+    .treeMenu li ul 
+    {
+        display: none;
+        margin-top: 10px;
+        margin-left: -25px;
+    }
+   
+    
+    .treeMenu > li > ul > li
+    {
+        border-left: 1px dotted #cccccc;
+    }
+
+    .treeMenu li a {
+            color: #000000;
+            font-weight: normal;
+    }
+
+    .treeMenu li a.selectedDoc {
+            background-color: #e3e3e3;
+    }
+    
+    .treeMenu li span.pipe 
+    {
+        color: #cccccc;
+    }
+
+    /* END TREE MENU */
