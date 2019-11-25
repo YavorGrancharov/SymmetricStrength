@@ -550,18 +550,18 @@ let strengthController = (() => {
                     mp[i].innerHTML = (Math.round((maleRealDeadlift * 0.4 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
                 }
             }
-            for (let i = 0; i < userInput.length; i++) {
-                if (userInput[i].value.value) {
-                    fill.addEventListener("click", function (event) {
-                        event.preventDefault();
-                        userInput[i].value.value = Math.round(((relativeDeadlift * getIntensity(idealSet[i].reps.value)) * movementsIndexes[i].value));
-                    })
-                    fill2.addEventListener("click", function (event) {
-                        event.preventDefault();
-                        userInput[i].value.value = Math.round((nextLevelDeadlift * getIntensity(userInput[i].reps.value)) * movementsIndexes[i].value);
-                    })
-                }
-            }
+            // for (let i = 0; i < userInput.length; i++) {
+            //     if (userInput[i].value.value) {
+            //         fill.addEventListener("click", function (event) {
+            //             event.preventDefault();
+            //             userInput[i].value.value = Math.round(((relativeDeadlift * getIntensity(idealSet[i].reps.value)) * movementsIndexes[i].value));
+            //         })
+            //         fill2.addEventListener("click", function (event) {
+            //             event.preventDefault();
+            //             userInput[i].value.value = Math.round((nextLevelDeadlift * getIntensity(userInput[i].reps.value)) * movementsIndexes[i].value);
+            //         })
+            //     }
+            // }
             console.log(labels)
 
             let idealChartBtn = document.getElementById("idealChartBtn");
