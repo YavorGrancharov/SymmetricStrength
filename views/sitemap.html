@@ -366,8 +366,8 @@
                                         </div>
 
                                         <div class="container" id="treeContainer">
-                                            <p><a href="#" id="link_expandAllButton">Отвори всички</a> / <a href="#"
-                                                    id="link_collapseAllButton">Затвори всички</a></p>
+                                            <!-- <p><a href="#" id="link_expandAllButton">Отвори всички</a> / <a href="#"
+                                                    id="link_collapseAllButton">Затвори всички</a></p> -->
                                         </div>
                                     </div>
                                 </div>
@@ -539,17 +539,17 @@
         /* BEGIN DOCTREE FUNCS */
 
 
-        $('#link_expandAllButton').on('click', function (e) {
-            $('ul.treeMenu i.fa-folder').removeClass('fa fa-folder').addClass('fa fa-folder-open');
-            $('ul.treeMenu ul').slideDown('slow');
-            return false;
-        });
+        // $('#link_expandAllButton').on('click', function (e) {
+        //     $('ul.treeMenu i.fa-folder').removeClass('fa fa-folder').addClass('fa fa-folder-open');
+        //     $('ul.treeMenu ul').slideDown('slow');
+        //     return false;
+        // });
 
-        $('#link_collapseAllButton').on('click', function (e) {
-            $('ul.treeMenu i.fa-folder-open').removeClass('fa fa-folder-open').addClass('fa fa-folder');
-            $('ul.treeMenu ul').slideUp('slow');
-            return false;
-        });
+        // $('#link_collapseAllButton').on('click', function (e) {
+        //     $('ul.treeMenu i.fa-folder-open').removeClass('fa fa-folder-open').addClass('fa fa-folder');
+        //     $('ul.treeMenu ul').slideUp('slow');
+        //     return false;
+        // });
 
 
         $('ul.treeMenu li').on('click', function (e) {
@@ -569,8 +569,8 @@
         });
 
         //COMENNT OUT NEXT TWO LINES TO DEFAULT TO COLLAPSED
-        $('ul.treeMenu i.fa-folder').removeClass('fa fa-folder').addClass('fa fa-folder-open');
-        $('ul.treeMenu ul').slideDown('slow');
+        // $('ul.treeMenu i.fa-folder').removeClass('fa fa-folder').addClass('fa fa-folder-open');
+        // $('ul.treeMenu ul').slideDown('slow');
 
 
         /* END DOCTREE FUNCS */
