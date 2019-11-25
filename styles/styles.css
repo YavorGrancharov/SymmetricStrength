@@ -1935,11 +1935,6 @@ table {
     min-width: rem-calc(640);
     border-collapse: collapse; 
   }
-
-tr td {
-    table-layout: auto;
-    white-space:nowrap;
-}
 #beginner, #trained, #skilled, #master {
     border-left: 1px solid;
     border-left-color: lightgray;
