@@ -7,34 +7,43 @@ let strengthController = (() => {
         let idealTrows = document.getElementById("ideal-hidden-div").querySelectorAll("tr");
         let nextLvlTRows = document.getElementById("next-level-hidden-div").querySelectorAll("tr");
         let prefectLvlTRows = document.getElementById("perfect-level-hidden-div").querySelectorAll("tr");
+        let strengthStandardRows = document.getElementById("list").querySelectorAll("tr");
+        console.log(strengthStandardRows)
         let originalState = $("hidden-div").clone(true, true); $("#some_div").replaceWith(originalState.clone(true, true));
         showMoves.addEventListener('click', function (event) {
             event.preventDefault();
-            let checked = []
+            let checked = [];
             checked = Array.from(document.querySelectorAll('input[type="checkbox"]'))
                 .filter((checkbox) => checkbox.checked)
                 .map((checkbox) => checkbox.value);
             for (let i = 1; i < trows.length - 1; i++) {
                 if (!checked.includes(trows[i].classList.value)) {
-                    trows[i].style.display = 'none'
-                    realTRows[i].style.display = 'none'
-                    idealTrows[i].style.display = 'none'
-                    nextLvlTRows[i].style.display = 'none'
-                    prefectLvlTRows[i].style.display = 'none'
+                    trows[i].style.display = 'none';
+                    realTRows[i].style.display = 'none';
+                    idealTrows[i].style.display = 'none';
+                    nextLvlTRows[i].style.display = 'none';
+                    prefectLvlTRows[i].style.display = 'none';
+                    if (!checked.includes(strengthStandardRows[i + 2].classList.value)) {
+                        strengthStandardRows[i + 2].style.display = 'none';
+                    }
+
                 }
                 for (let j = 0; j < trows.length; j++) {
                     if (checked[j] === trows[i].classList.value) {
                         hidden.style.display = 'block';
-                        trows[i].style.display = 'table-row'
-                        realTRows[i].style.display = 'table-row'
-                        idealTrows[i].style.display = 'table-row'
-                        nextLvlTRows[i].style.display = 'table-row'
-                        prefectLvlTRows[i].style.display = 'table-row'
-                        showMoves.value = 'ОПРЕСНИ'
+                        trows[i].style.display = 'table-row';
+                        realTRows[i].style.display = 'table-row';
+                        idealTrows[i].style.display = 'table-row';
+                        nextLvlTRows[i].style.display = 'table-row';
+                        prefectLvlTRows[i].style.display = 'table-row';
+                        showMoves.value = 'ОПРЕСНИ';
+                        if (checked[j] === strengthStandardRows[i + 2].classList.value) {
+                            strengthStandardRows[i + 2].style.display = 'table-row';
+                        }
                     }
                     if (checked.length < 5) {
                         hidden.style.display = 'none';
-                        showMoves.value = 'ПОКАЖИ'
+                        showMoves.value = 'ПОКАЖИ';
                     }
                 }
             }
@@ -110,16 +119,15 @@ let strengthController = (() => {
             //main lifts
             let dl = document.getElementById("user-deadlift").children;
             let sq = document.getElementById("user-squat").children;
-            // let dip = document.getElementById("weightedDips").children;
-            // let rdip = document.getElementById("ringDip").children;
             let mp = document.getElementById("user-militaryPress").children;
-            // let sdl = document.getElementById("sumoDeadlift").children;
-            // let lng = document.getElementById("barbellLunge").children;
-            // let pup = document.getElementById("weightedPullUps").children;
-            // let fsq = document.getElementById("frontSquat").children;
-            // let pp = document.getElementById("pushPress").children;
-            // let ohsq = document.getElementById("overheadSquat").children;
-            // let airsq = document.getElementById("airborneSquat").children;
+            let lng = document.getElementById("barbellLunge").children;
+            let pup = document.getElementById("weightedPullUps").children;
+            let dips = document.getElementById("weightedDips").children;
+            let fsq = document.getElementById("frontSquat").children;
+            let sdl = document.getElementById("sumoDeadlift").children;
+            let pp = document.getElementById("pushPress").children;
+            let rr = document.getElementById("renegadeRow").children;
+            let gm = document.getElementById("goodMorning").children;
 
             let strengthIndexes = [0.25, 0.33, 0.42, 0.51, 0.6, 0.68, 0.76, 0.85, 0.92, 1];
             let ranks = ["Вербован", "Новобранец", "Редник", "Ефрейтор", "Сержант", "Лейтенант", "Капитан", "Майор", "Полковник", "Генерал"];
@@ -226,14 +234,14 @@ let strengthController = (() => {
                 {
                     name: "Набиране",
                     value: sex === 'male'
-                        ? (pull_up / getIntensity(pull_up_reps)) / 0.65
-                        : (pull_up / getIntensity(pull_up_reps)) / 0.56
+                        ? ((Number(pull_up) + Number(body_weight)) / getIntensity(pull_up_reps)) / 0.65
+                        : ((Number(pull_up) + Number(body_weight)) / getIntensity(pull_up_reps)) / 0.56
                 },
                 {
                     name: "Кофи",
                     value: sex === 'male'
-                        ? (dip / getIntensity(dip_reps)) / 0.79
-                        : (dip / getIntensity(dip_reps)) / 0.63
+                        ? ((Number(dip) + Number(body_weight)) / getIntensity(dip_reps)) / 0.79
+                        : ((Number(dip) + Number(body_weight)) / getIntensity(dip_reps)) / 0.63
                 },
                 {
                     name: "Преден клек",
@@ -514,6 +522,21 @@ let strengthController = (() => {
                 for (let j = 0; j < labels.length; j++) {
                     if (userChoice[i] === labels[j]) {
                         if (userInput[i].name === userChoice[i]) {
+                            if (i === 4 || i === 5) {
+                                realSet[i].value.value = userInput[i].value.value;
+                                realSet[i].reps.value = userInput[i].reps.value;
+                                realSet[i].max.value = Math.round(realSet[i].value.value / getIntensity(realSet[i].reps.value));
+                                idealSet[i].reps.value = userInput[i].reps.value;
+                                idealSet[i].value.value = Math.round((((relativeDeadlift * movementsIndexes[i].value)) * getIntensity(idealSet[i].reps.value)) - body_weight);
+                                idealSet[i].max.value = Math.round(((idealSet[i].value.value + body_weight) / getIntensity(idealSet[i].reps.value)) - body_weight);
+                                nextLevelSet[i].value.value = Math.round(((nextLevelDeadlift * movementsIndexes[i].value) * getIntensity(userInput[i].reps.value)) - body_weight);
+                                nextLevelSet[i].reps.value = userInput[i].reps.value;
+                                nextLevelSet[i].max.value = Math.round(((nextLevelSet[i].value.value + body_weight) / getIntensity(userInput[i].reps.value)) - body_weight);
+                                idealLabels.push(userInput[i].name);
+                                nextLevelLabels.push(userInput[i].name);
+                                perfectLevelLabels.push(userInput[i].name);
+                                continue
+                            }
                             idealLabels.push(userInput[i].name);
                             nextLevelLabels.push(userInput[i].name);
                             perfectLevelLabels.push(userInput[i].name);
@@ -548,6 +571,18 @@ let strengthController = (() => {
                     dl[i].innerHTML = (Math.round((maleRealDeadlift * strengthIndexes[i - 1]) * getIntensity(deadlift_reps))).toString();
                     sq[i].innerHTML = (Math.round((maleRealDeadlift * 0.83 * strengthIndexes[i - 1]) * getIntensity(squat_reps))).toString();
                     mp[i].innerHTML = (Math.round((maleRealDeadlift * 0.4 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
+                    lng[i].innerHTML = (Math.round((maleRealDeadlift * 0.7 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
+                    if (Math.round(((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) - body_weight)) > 0) {
+                        pup[i].innerHTML = (Math.round((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - body_weight))).toString();
+                    } else {
+                        pup[i].innerHTML = ((Math.round(((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) - body_weight) + Number(body_weight) * 0.93))).toString() + "*";
+                    }
+                    fsq[i].innerHTML = (Math.round((maleRealDeadlift * 0.68 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
+                    sdl[i].innerHTML = (Math.round((maleRealDeadlift * 0.95 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
+                    fsq[i].innerHTML = (Math.round((maleRealDeadlift * 0.68 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
+                    pp[i].innerHTML = (Math.round((maleRealDeadlift * 0.56 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
+                    rr[i].innerHTML = (Math.round((maleRealDeadlift * 0.26 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
+                    gm[i].innerHTML = (Math.round((maleRealDeadlift * 0.44 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
                 }
             }
             // for (let i = 0; i < userInput.length; i++) {

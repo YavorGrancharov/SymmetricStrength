@@ -116,9 +116,6 @@
                                                 <a href="#/">Документация</a>
                                                 <ul class="sub-menu">
                                                     <li>
-                                                        <a href="../views/404.html">Идентичност</a>
-                                                    </li>
-                                                    <li>
                                                         <a href="../views/rules.html">Правила</a>
                                                     </li>
                                                     <li>
@@ -201,7 +198,7 @@
                         <div class="posts-inner">
                             <article class="post">
                                 <div class="post-header">
-                                    <h3 class="title">Пропорционална сила</h3>
+                                    <h3 class="title">Симетрична сила</h3>
                                     <h4 class="text-center">идея, концепция и формули: Явор Грънчаров</h4>
                                     <hr>
                                 </div>
@@ -2064,7 +2061,7 @@
                                                     </div>
                                                 </div>
                                                 1МП - единично максимално повторение
-                                                <div class="table-responsive">
+                                                <div class="table-responsive" id="list">
                                                     <div>
                                                         <h3>Стандарти</h3>
                                                     </div>
@@ -2120,7 +2117,8 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr id="user-deadlift">
+                                                            <tr style="display: none;" id="user-deadlift"
+                                                                class="deadlift">
                                                                 <td id="dl" title="Deadlift">Мъртва тяга</td>
                                                                 <td id="dl1"></td>
                                                                 <td id="dl2"></td>
@@ -2133,7 +2131,7 @@
                                                                 <td id="dl9"></td>
                                                                 <td id="dl10"></td>
                                                             </tr>
-                                                            <tr id="user-squat">
+                                                            <tr style="display: none;" id="user-squat" class="squat">
                                                                 <td id="sq" title="High-bar Squat">Клек</td>
                                                                 <td id="sq1"></td>
                                                                 <td id="sq2"></td>
@@ -2146,7 +2144,8 @@
                                                                 <td id="sq9"></td>
                                                                 <td id="sq10"></td>
                                                             </tr>
-                                                            <tr id="user-militaryPress">
+                                                            <tr style="display: none;" id="user-militaryPress"
+                                                                class="overhead-press">
                                                                 <td id="mp" title="Military Press">Военна преса</td>
                                                                 <td id="mp1"></td>
                                                                 <td id="mp2"></td>
@@ -2158,6 +2157,120 @@
                                                                 <td id="mp8"></td>
                                                                 <td id="mp9"></td>
                                                                 <td id="mp10"></td>
+                                                            </tr>
+                                                            <tr style="display: none;" id="barbellLunge" class="lunge">
+                                                                <td id="lng" title="Barbell Lunge">Напад</td>
+                                                                <td id="lng1"></td>
+                                                                <td id="lng2"></td>
+                                                                <td id="lng3"></td>
+                                                                <td id="lng4"></td>
+                                                                <td id="lng5"></td>
+                                                                <td id="lng6"></td>
+                                                                <td id="lng7"></td>
+                                                                <td id="lng8"></td>
+                                                                <td id="lng9"></td>
+                                                                <td id="lng10"></td>
+                                                            </tr>
+                                                            <tr style="display: none;" id="weightedPullUps"
+                                                                class="pull-up">
+                                                                <td id="pup" title="Weighted Pull-Up">Набиране</td>
+                                                                <td id="pup1"></td>
+                                                                <td id="pup2"></td>
+                                                                <td id="pup3"></td>
+                                                                <td id="pup4"></td>
+                                                                <td id="pup5"></td>
+                                                                <td id="pup6"></td>
+                                                                <td id="pup7"></td>
+                                                                <td id="pup8"></td>
+                                                                <td id="pup9"></td>
+                                                                <td id="pup10"></td>
+                                                            </tr>
+                                                            <tr style="display: none;" id="weightedDips" class="dip">
+                                                                <td id="dip" title="Weighted Dip">Кофи</td>
+                                                                <td id="dip1"></td>
+                                                                <td id="dip2"></td>
+                                                                <td id="dip3"></td>
+                                                                <td id="dip4"></td>
+                                                                <td id="dip5"></td>
+                                                                <td id="dip6"></td>
+                                                                <td id="dip7"></td>
+                                                                <td id="dip8"></td>
+                                                                <td id="dip9"></td>
+                                                                <td id="dip10"></td>
+                                                            </tr>
+                                                            <tr style="display: none;" id="frontSquat"
+                                                                class="front-squat">
+                                                                <td id="fsq" title="Barbell Front Squat">Преден клек
+                                                                </td>
+                                                                <td id="fsq1"></td>
+                                                                <td id="fsq2"></td>
+                                                                <td id="fsq3"></td>
+                                                                <td id="fsq4"></td>
+                                                                <td id="fsq5"></td>
+                                                                <td id="fsq6"></td>
+                                                                <td id="fsq7"></td>
+                                                                <td id="fsq8"></td>
+                                                                <td id="fsq9"></td>
+                                                                <td id="fsq10"></td>
+                                                            </tr>
+                                                            <tr style="display: none;" id="sumoDeadlift"
+                                                                class="sumo-deadlift">
+                                                                <td id="sdl" title="Sumo Deadlift">
+                                                                    Сумо Тяга</td>
+                                                                <td id="sdl1"></td>
+                                                                <td id="sdl2"></td>
+                                                                <td id="sdl3"></td>
+                                                                <td id="sdl4"></td>
+                                                                <td id="sdl5"></td>
+                                                                <td id="sdl6"></td>
+                                                                <td id="sdl7"></td>
+                                                                <td id="sdl8"></td>
+                                                                <td id="sdl9"></td>
+                                                                <td id="sdl10"></td>
+                                                            </tr>
+                                                            <tr style="display: none;" id="pushPress"
+                                                                class="push-press">
+                                                                <td id="pp" title="Push Press">Пуш преса</td>
+                                                                <td id="pp1"></td>
+                                                                <td id="pp2"></td>
+                                                                <td id="pp3"></td>
+                                                                <td id="pp4"></td>
+                                                                <td id="pp5"></td>
+                                                                <td id="pp6"></td>
+                                                                <td id="pp7"></td>
+                                                                <td id="pp8"></td>
+                                                                <td id="pp9"></td>
+                                                                <td id="pp10"></td>
+                                                            </tr>
+                                                            <tr style="display: none;" id="renegadeRow"
+                                                                class="renegade-row">
+                                                                <td id="rr" title="Renegade Row">Ренегатско гребане
+                                                                </td>
+                                                                <td id="rr1"></td>
+                                                                <td id="rr2"></td>
+                                                                <td id="rr3"></td>
+                                                                <td id="rr4"></td>
+                                                                <td id="rr5"></td>
+                                                                <td id="rr6"></td>
+                                                                <td id="rr7"></td>
+                                                                <td id="rr8"></td>
+                                                                <td id="rr9"></td>
+                                                                <td id="rr10"></td>
+                                                            </tr>
+                                                            <tr style="display: none;" id="goodMorning"
+                                                                class="good-morning">
+                                                                <td id="gm" title="Barbell Good Morning">Гуд морнинг
+                                                                </td>
+                                                                <td id="gm1"></td>
+                                                                <td id="gm2"></td>
+                                                                <td id="gm3"></td>
+                                                                <td id="gm4"></td>
+                                                                <td id="gm5"></td>
+                                                                <td id="gm6"></td>
+                                                                <td id="gm7"></td>
+                                                                <td id="gm8"></td>
+                                                                <td id="gm9"></td>
+                                                                <td id="gm10"></td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -2172,7 +2285,7 @@
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                     <div>
-                                        <h3>Справка</h3>
+                                        <h3>Условни знаци</h3>
                                     </div>
                                     <div class="col-md-6 col-sm-6 col-xs-6">
                                         <h4>Войници</h4>
@@ -2243,7 +2356,6 @@
                                     <div class="widget">
                                         <h2 class="title"><span>Занималня</span></h2>
                                         <ul>
-                                            <li><a href="../views/drills.html">Движения</a></li>
                                             <li><a href="../views/strength_hall.html">Зала на Силата</a></li>
                                             <li><a href="../views/gallery.html">Галерия</a></li>
                                             <li><a href="../views/sitemap.html">Карта на сайта</a></li>
@@ -2254,8 +2366,8 @@
                                     <div class="widget">
                                         <h2 class="title"><span>Ресурси</span></h2>
                                         <ul>
+                                            <li><a href="../views/drills.html">Движения</a></li>
                                             <li><a href="../views/calculators.html">Калкулатори</a></li>
-                                            <li><a href="../views/404.html">Брошура</a></li>
                                             <li><a href="../views/gear.html">Униформа</a></li>
                                         </ul>
                                     </div>

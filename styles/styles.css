@@ -1954,6 +1954,38 @@ table {
     border-left: 1px solid;
     border-left-color: lightgray;
 }
+#lng1, #lng5, #lng8, #lng10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+#pup1, #pup5, #pup8, #pup10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+#dip1, #dip5, #dip8, #dip10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+#fsq1, #fsq5, #fsq8, #fsq10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+#sdl1, #sdl5, #sdl8, #sdl10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+#pp1, #pp5, #pp8, #pp10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+#rr1, #rr5, #rr8, #rr10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+#gm1, #gm5, #gm8, #gm10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
 ul.list-group {
     list-style-type: none;
     padding: 0;
