@@ -1837,7 +1837,7 @@ td:nth-child(5){
 #real-front-squat, #real-front-squat-reps, #real-front-squat-max,
 #real-sumo-deadlift, #real-sumo-deadlift-reps, #real-sumo-deadlift-max,
 #real-push-press, #real-push-press-reps, #real-push-press-max,
-#real-renegade-row, #real-renegade-row-reps, #real-renegade-row-max,
+#real-bent-over-row, #real-bent-over-row-reps, #real-bent-over-row-max,
 #real-good-morning, #real-good-morning-reps, #real-good-morning-max {
     text-align: center;
 }
@@ -1856,7 +1856,7 @@ td:nth-child(5){
 #ideal-front-squat, #ideal-front-squat-reps, #ideal-front-squat-max,
 #ideal-sumo-deadlift, #ideal-sumo-deadlift-reps, #ideal-sumo-deadlift-max,
 #ideal-push-press, #ideal-push-press-reps, #ideal-push-press-max,
-#ideal-renegade-row, #ideal-renegade-row-reps, #ideal-renegade-row-max,
+#ideal-bent-over-row, #ideal-bent-over-row-reps, #ideal-bent-over-row-max,
 #ideal-good-morning, #ideal-good-morning-reps, #ideal-good-morning-max {
     text-align: center;
 }
@@ -1870,7 +1870,7 @@ td:nth-child(5){
 #next-level-front-squat, #next-level-front-squat-reps, #next-level-front-squat-max,
 #next-level-sumo-deadlift, #next-level-sumo-deadlift-reps, #next-level-sumo-deadlift-max,
 #next-level-push-press, #next-level-push-press-reps, #next-level-push-press-max,
-#next-level-renegade-row, #next-level-renegade-row-reps, #next-level-renegade-row-max,
+#next-level-bent-over-row, #next-level-bent-over-row-reps, #next-level-bent-over-row-max,
 #next-level-good-morning, #next-level-good-morning-reps, #next-level-good-morning-max {
     text-align: center;
 }
@@ -1884,7 +1884,7 @@ td:nth-child(5){
 #perfect-level-front-squat, #perfect-level-front-squat-reps, #perfect-level-front-squat-max,
 #perfect-level-sumo-deadlift, #perfect-level-sumo-deadlift-reps, #perfect-level-sumo-deadlift-max,
 #perfect-level-push-press, #perfect-level-push-press-reps, #perfect-level-push-press-max,
-#perfect-level-renegade-row, #perfect-level-renegade-row-reps, #perfect-level-renegade-row-max,
+#perfect-level-bent-over-row, #perfect-level-bent-over-row-reps, #perfect-level-bent-over-row-max,
 #perfect-level-good-morning, #perfect-level-good-morning-reps, #perfect-level-good-morning-max {
     text-align: center;
 }
@@ -1978,7 +1978,7 @@ table {
     border-left: 1px solid;
     border-left-color: lightgray;
 }
-#rr1, #rr5, #rr8, #rr10 {
+#bor1, #bor5, #bor8, #bor10 {
     border-left: 1px solid;
     border-left-color: lightgray;
 }
