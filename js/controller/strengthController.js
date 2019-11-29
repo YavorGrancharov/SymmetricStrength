@@ -159,7 +159,7 @@ let strengthController = (() => {
                 { name: "Мъртва тяга", value: 1 }, { name: "Клек", value: 0.83 },
                 { name: "Военна преса", value: sex === 'male' ? 0.4 : 0.37 },
                 { name: "Напад", value: 0.7 }, { name: "Набиране", value: sex === 'male' ? 0.65 : 0.56 },
-                { name: "Кофи", value: sex === 'male' ? 0.8 : 0.63 },
+                { name: "Кофи", value: sex === 'male' ? 0.79 : 0.63 },
                 { name: "Преден клек", value: sex === 'male' ? 0.68 : 0.67 },
                 { name: "Сумо тяга", value: 0.95 }, { name: "Пуш преса", value: sex === 'male' ? 0.56 : 0.49 },
                 { name: "Ренегатско гребане", value: sex === 'male' ? 0.26 : 0.2 }, { name: "Гуд морнинг", value: 0.44 }
@@ -408,10 +408,6 @@ let strengthController = (() => {
             }
 
             let currentLevel = 0;
-            let idealAvg;
-            let perfectAvg;
-            let idealInput = [];
-            let perfectInput = []
             let idealMax = Number.MIN_SAFE_INTEGER;
             let idealMaxName = '';
             let idealMin = Number.MAX_SAFE_INTEGER;
@@ -419,8 +415,18 @@ let strengthController = (() => {
             for (let i = 0; i < ideal_moves.length; i++) {
                 for (let j = 0; j < labels.length; j++) {
                     if (userChoice[i] === labels[j]) {
-                        idealInput.push(ideal_moves[i].value);
-                        perfectInput.push(perfect_moves[i].value)
+                        if (labels[j] === 'Набиране' || labels[j] === 'Кофи') {
+                            currentLevel += (Number(userInput[i].value.value) + Number(body_weight)) / perfect_moves[i].value
+                            if (ideal_moves[i].value > idealMax) {
+                                idealMax = ideal_moves[i].value;
+                                idealMaxName = ideal_moves[i].name;
+                            }
+                            if (ideal_moves[i].value < idealMin) {
+                                idealMin = ideal_moves[i].value;
+                                idealNameMin = ideal_moves[i].name;
+                            }
+                            continue
+                        }
                         currentLevel += userInput[i].value.value / perfect_moves[i].value
                         if (ideal_moves[i].value > idealMax) {
                             idealMax = ideal_moves[i].value;
@@ -433,8 +439,14 @@ let strengthController = (() => {
                     }
                 }
             }
-            currentLevel /= idealInput.length;
-            console.log(currentLevel)
+            currentLevel /= labels.length;
+
+            let counter = 0;
+            strengthIndexes.forEach(function (el) {
+                if ((maleRealDeadlift * el) < idealMax) {
+                    counter++;
+                }
+            })
 
             let info = document.getElementById("info");
             let nextLevelDeadlift = 0;
@@ -448,11 +460,11 @@ let strengthController = (() => {
                 if (sex === 'male') {
                     if (currentLevel.toFixed(2) < strengthIndexes[i].toFixed(2)) {
                         if ((maleRealDeadlift * strengthIndexes[i]) < idealMax) {
-                            nextLevelDeadlift = maleRealDeadlift * strengthIndexes[i + 1];
-                            nextLevelRank = ranks[i + 1];
-                            nextLevelDivision = divisions[i + 1];
-                            imgPosNext = i + 1;
-                            info.innerHTML = `Поради прескачане на текущото най-силно движение едно ниво нагоре, в таблицата "Следващо ниво" вместо за ${ranks[i]}, са изведени стойностите за ${ranks[i + 1]}!`
+                            nextLevelDeadlift = maleRealDeadlift * strengthIndexes[counter];
+                            nextLevelRank = ranks[counter];
+                            nextLevelDivision = divisions[counter];
+                            imgPosNext = counter;
+                            info.innerHTML = `Тъй като стойността на текущото най-силно движение е по-голяма от изискванията за следващо ниво, в таблицата "Следващо ниво" вместо за ${ranks[i]}, са изведени стойностите за ${ranks[counter]}!`
                         } else {
                             nextLevelDeadlift = maleRealDeadlift * strengthIndexes[i]
                             nextLevelRank = ranks[i];
@@ -480,7 +492,7 @@ let strengthController = (() => {
                             nextLevelRank = ranks[i + 1];
                             nextLevelDivision = divisions[i + 1];
                             imgPosNext = i + 1;
-                            info.innerHTML = `Поради прескачане на текущото най-силно движение едно ниво нагоре, в таблицата "Следващо ниво" вместо за ${ranks[i]}, са изведени стойностите за ${ranks[i + 1]}!`
+                            info.innerHTML = `Тъй като стойността на текущото най-силно движение е по-голяма от изискванията за следващо ниво, в таблицата "Следващо ниво" вместо за ${ranks[i]}, са изведени стойностите за ${ranks[counter]}!`
                         } else {
                             nextLevelDeadlift = femaleRealDeadlift * strengthIndexes[i]
                             nextLevelRank = ranks[i];
@@ -505,8 +517,6 @@ let strengthController = (() => {
             }
             console.log(nextLevelDeadlift)
             console.log(idealMax)
-            idealAvg = idealInput.reduce(function (a, b) { return (a + b) })
-            idealAvg /= idealInput.length;
 
             let relativeDeadlift = 0;
             if (idealMax > (deadlift / getIntensity(deadlift_reps))) {
@@ -515,26 +525,36 @@ let strengthController = (() => {
                 relativeDeadlift = deadlift / getIntensity(deadlift_reps);
             }
             console.log(relativeDeadlift)
-            let counter = 0;
             let fill = document.getElementById("fill");
             let fill2 = document.getElementById("fill2");
             for (let i = 0; i < userChoice.length; i++) {
                 for (let j = 0; j < labels.length; j++) {
                     if (userChoice[i] === labels[j]) {
                         if (userInput[i].name === userChoice[i]) {
-                            if (i === 4 || i === 5) {
-                                realSet[i].value.value = userInput[i].value.value;
-                                realSet[i].reps.value = userInput[i].reps.value;
-                                realSet[i].max.value = Math.round(realSet[i].value.value / getIntensity(realSet[i].reps.value));
-                                idealSet[i].reps.value = userInput[i].reps.value;
-                                idealSet[i].value.value = Math.round((((relativeDeadlift * movementsIndexes[i].value)) * getIntensity(idealSet[i].reps.value)) - body_weight);
-                                idealSet[i].max.value = Math.round(((idealSet[i].value.value + body_weight) / getIntensity(idealSet[i].reps.value)) - body_weight);
-                                nextLevelSet[i].value.value = Math.round(((nextLevelDeadlift * movementsIndexes[i].value) * getIntensity(userInput[i].reps.value)) - body_weight);
-                                nextLevelSet[i].reps.value = userInput[i].reps.value;
-                                nextLevelSet[i].max.value = Math.round(((nextLevelSet[i].value.value + body_weight) / getIntensity(userInput[i].reps.value)) - body_weight);
+                            if (labels[j] === 'Набиране' || labels[j] === 'Кофи') {
                                 idealLabels.push(userInput[i].name);
                                 nextLevelLabels.push(userInput[i].name);
                                 perfectLevelLabels.push(userInput[i].name);
+                                realSet[i].value.value = userInput[i].value.value;
+                                realSet[i].reps.value = userInput[i].reps.value;
+                                realSet[i].max.value = Math.round(((Number(realSet[i].value.value) + Number(body_weight)) / getIntensity(realSet[i].reps.value)) - Number(body_weight));
+                                idealSet[i].reps.value = userInput[i].reps.value;
+                                idealSet[i].value.value = Math.round(((relativeDeadlift * movementsIndexes[i].value) * getIntensity(idealSet[i].reps.value)) - Number(body_weight));
+                                idealSet[i].max.value = Math.round(((Number(idealSet[i].value.value) + Number(body_weight)) / getIntensity(idealSet[i].reps.value)) - Number(body_weight))
+                                nextLevelSet[i].value.value = Math.round(((nextLevelDeadlift * movementsIndexes[i].value) * getIntensity(userInput[i].reps.value)) - Number(body_weight));
+                                nextLevelSet[i].reps.value = userInput[i].reps.value;
+                                nextLevelSet[i].max.value = Math.round(((Number(nextLevelSet[i].value.value) + Number(body_weight)) / getIntensity(nextLevelSet[i].reps.value)) - Number(body_weight));
+                                perfectSet[i].reps.value = userInput[i].reps.value;
+                                idealData.push(Math.round((((Number(userInput[i].value.value) + Number(body_weight)) - (Number(idealSet[i].value.value) + Number(body_weight))) / (Number(userInput[i].value.value) + Number(body_weight))) * 100));
+                                nextLevelData.push(Math.round((((Number(userInput[i].value.value) + Number(body_weight)) - (Number(nextLevelSet[i].value.value) + Number(body_weight))) / (Number(userInput[i].value.value) + Number(body_weight))) * 100));
+                                if (sex === "male") {
+                                    perfectSet[i].value.value = Math.round(((maleRealDeadlift * movementsIndexes[i].value) * getIntensity(userInput[i].reps.value)) - Number(body_weight));
+                                    perfectSet[i].max.value = Math.round(((Number(perfectSet[i].value.value) + Number(body_weight)) / getIntensity(nextLevelSet[i].reps.value)) - Number(body_weight));
+                                } else {
+                                    perfectSet[i].value.value = Math.round(((femaleRealDeadlift * movementsIndexes[i].value) * getIntensity(userInput[i].reps.value)) - Number(body_weight));
+                                    perfectSet[i].max.value = Math.round(((Number(perfectSet[i].value.value) + Number(body_weight)) / getIntensity(nextLevelSet[i].reps.value)) - Number(body_weight));
+                                }
+                                perfectLevelData.push(Math.round((((Number(userInput[i].value.value) + Number(body_weight)) - (Number(perfectSet[i].value.value) + Number(body_weight))) / (Number(userInput[i].value.value) + Number(body_weight))) * 100));
                                 continue
                             }
                             idealLabels.push(userInput[i].name);
@@ -557,9 +577,10 @@ let strengthController = (() => {
                                 perfectSet[i].max.value = Math.round(perfectSet[i].value.value / getIntensity(perfectSet[i].reps.value))
                             } else {
                                 perfectSet[i].value.value = Math.round((femaleRealDeadlift * movementsIndexes[i].value) * getIntensity(userInput[i].reps.value));
+                                perfectSet[i].max.value = Math.round(perfectSet[i].value.value / getIntensity(perfectSet[i].reps.value))
                             }
                             perfectLevelData.push(Math.round(((userInput[i].value.value - perfectSet[i].value.value) / userInput[i].value.value) * 100));
-                            perfectSet[i].max.value = Math.round(perfectSet[i].value.value / getIntensity(perfectSet[i].reps.value));
+                            // perfectSet[i].max.value = Math.round(perfectSet[i].value.value / getIntensity(perfectSet[i].reps.value));
                         }
                         break
                     }
@@ -573,13 +594,17 @@ let strengthController = (() => {
                     mp[i].innerHTML = (Math.round((maleRealDeadlift * 0.4 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
                     lng[i].innerHTML = (Math.round((maleRealDeadlift * 0.7 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
                     if (Math.round(((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) - body_weight)) > 0) {
-                        pup[i].innerHTML = (Math.round((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - body_weight))).toString();
+                        pup[i].innerHTML = (Math.round((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
                     } else {
                         pup[i].innerHTML = ((Math.round(((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) - body_weight) + Number(body_weight) * 0.93))).toString() + "*";
                     }
+                    if (Math.round(((maleRealDeadlift * 0.79 * strengthIndexes[i - 1]) - body_weight)) > 0) {
+                        dips[i].innerHTML = (Math.round((((maleRealDeadlift * 0.79 * strengthIndexes[i - 1]) * getIntensity(dip_reps)) - body_weight))).toString();
+                    } else {
+                        dips[i].innerHTML = ((Math.round(((maleRealDeadlift * 0.79 * strengthIndexes[i - 1]) - body_weight) + Number(body_weight)))).toString() + "*";
+                    }
                     fsq[i].innerHTML = (Math.round((maleRealDeadlift * 0.68 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
                     sdl[i].innerHTML = (Math.round((maleRealDeadlift * 0.95 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
-                    fsq[i].innerHTML = (Math.round((maleRealDeadlift * 0.68 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
                     pp[i].innerHTML = (Math.round((maleRealDeadlift * 0.56 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
                     rr[i].innerHTML = (Math.round((maleRealDeadlift * 0.26 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
                     gm[i].innerHTML = (Math.round((maleRealDeadlift * 0.44 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
@@ -798,32 +823,6 @@ let strengthController = (() => {
             77: 1.918, 78: 1.961, 79: 2.005, 80: 2.05, "default": 1
         };
         return (ageIndex[age] || ageIndex["default"]);
-    }
-
-    function isEquivalent(a, b) {
-        // Create arrays of property names
-        var aProps = Object.getOwnPropertyNames(a);
-        var bProps = Object.getOwnPropertyNames(b);
-
-        // If number of properties is different,
-        // objects are not equivalent
-        if (aProps.length != bProps.length) {
-            return false;
-        }
-
-        for (var i = 0; i < aProps.length; i++) {
-            var propName = aProps[i];
-
-            // If values of same property are not equal,
-            // objects are not equivalent
-            if (a[propName] !== b[propName]) {
-                return false;
-            }
-        }
-
-        // If we made it this far, objects
-        // are considered equivalent
-        return true;
     }
 
     return {
