@@ -609,6 +609,26 @@ let strengthController = (() => {
                     pp[i].innerHTML = (Math.round((maleRealDeadlift * 0.56 * strengthIndexes[i - 1]) * getIntensity(push_press_reps))).toString();
                     bor[i].innerHTML = (Math.round((maleRealDeadlift * 0.53 * strengthIndexes[i - 1]) * getIntensity(bent_over_row_reps))).toString();
                     gm[i].innerHTML = (Math.round((maleRealDeadlift * 0.44 * strengthIndexes[i - 1]) * getIntensity(good_morning_reps))).toString();
+                } else {
+                    dl[i].innerHTML = (Math.round((femaleRealDeadlift * strengthIndexes[i - 1]) * getIntensity(deadlift_reps))).toString();
+                    sq[i].innerHTML = (Math.round((femaleRealDeadlift * 0.83 * strengthIndexes[i - 1]) * getIntensity(squat_reps))).toString();
+                    mp[i].innerHTML = (Math.round((femaleRealDeadlift * 0.37 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
+                    lng[i].innerHTML = (Math.round((femaleRealDeadlift * 0.7 * strengthIndexes[i - 1]) * getIntensity(lunge_reps))).toString();
+                    if (Math.round(((femaleRealDeadlift * 0.56 * strengthIndexes[i - 1]) - body_weight)) > 0) {
+                        pup[i].innerHTML = (Math.round((((femaleRealDeadlift * 0.56 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
+                    } else {
+                        pup[i].innerHTML = ((Math.round(((femaleRealDeadlift * 0.56 * strengthIndexes[i - 1]) - body_weight) + Number(body_weight) * 0.93))).toString() + "*";
+                    }
+                    if (Math.round(((femaleRealDeadlift * 0.63 * strengthIndexes[i - 1]) - body_weight)) > 0) {
+                        dips[i].innerHTML = (Math.round((((femaleRealDeadlift * 0.63 * strengthIndexes[i - 1]) * getIntensity(dip_reps)) - body_weight))).toString();
+                    } else {
+                        dips[i].innerHTML = ((Math.round(((femaleRealDeadlift * 0.63 * strengthIndexes[i - 1]) - body_weight) + Number(body_weight)))).toString() + "*";
+                    }
+                    fsq[i].innerHTML = (Math.round((femaleRealDeadlift * 0.67 * strengthIndexes[i - 1]) * getIntensity(front_squat_reps))).toString();
+                    sdl[i].innerHTML = (Math.round((femaleRealDeadlift * 0.95 * strengthIndexes[i - 1]) * getIntensity(sumo_deadlift_reps))).toString();
+                    pp[i].innerHTML = (Math.round((femaleRealDeadlift * 0.49 * strengthIndexes[i - 1]) * getIntensity(push_press_reps))).toString();
+                    bor[i].innerHTML = (Math.round((femaleRealDeadlift * 0.53 * strengthIndexes[i - 1]) * getIntensity(bent_over_row_reps))).toString();
+                    gm[i].innerHTML = (Math.round((femaleRealDeadlift * 0.44 * strengthIndexes[i - 1]) * getIntensity(good_morning_reps))).toString();
                 }
             }
             for (let i = 0; i < userInput.length; i++) {
