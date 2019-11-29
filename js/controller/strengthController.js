@@ -389,7 +389,7 @@ let strengthController = (() => {
             let perfectLevelData = []
 
             let labels = []
-            labels = Array.from(document.querySelectorAll('input[type="checkbox"]'))
+            labels = Array.from(document.querySelectorAll('#all-checked input[type="checkbox"]'))
                 .filter((checkbox) => checkbox.checked)
                 .map((checkbox) => checkbox.name);
             for (let i = 0; i < idealLabels.length; i++) {
@@ -440,6 +440,7 @@ let strengthController = (() => {
                 }
             }
             currentLevel /= labels.length;
+            console.log(currentLevel.toFixed(2))
 
             let counter = 0;
             strengthIndexes.forEach(function (el) {
@@ -459,7 +460,7 @@ let strengthController = (() => {
             for (let i = 0; i < strengthIndexes.length; i++) {
                 if (sex === 'male') {
                     if (currentLevel.toFixed(2) < strengthIndexes[i].toFixed(2)) {
-                        if ((maleRealDeadlift * strengthIndexes[i]) < idealMax) {
+                        if ((maleRealDeadlift * strengthIndexes[i]) <= idealMax) {
                             nextLevelDeadlift = maleRealDeadlift * strengthIndexes[counter];
                             nextLevelRank = ranks[counter];
                             nextLevelDivision = divisions[counter];
@@ -610,18 +611,18 @@ let strengthController = (() => {
                     gm[i].innerHTML = (Math.round((maleRealDeadlift * 0.44 * strengthIndexes[i - 1]) * getIntensity(good_morning_reps))).toString();
                 }
             }
-            // for (let i = 0; i < userInput.length; i++) {
-            //     if (userInput[i].value.value) {
-            //         fill.addEventListener("click", function (event) {
-            //             event.preventDefault();
-            //             userInput[i].value.value = Math.round(((relativeDeadlift * getIntensity(idealSet[i].reps.value)) * movementsIndexes[i].value));
-            //         })
-            //         fill2.addEventListener("click", function (event) {
-            //             event.preventDefault();
-            //             userInput[i].value.value = Math.round((nextLevelDeadlift * getIntensity(userInput[i].reps.value)) * movementsIndexes[i].value);
-            //         })
-            //     }
-            // }
+            for (let i = 0; i < userInput.length; i++) {
+                if (userInput[i].value.value) {
+                    fill.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        userInput[i].value.value = Math.round(((relativeDeadlift * getIntensity(idealSet[i].reps.value)) * movementsIndexes[i].value));
+                    })
+                    fill2.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        userInput[i].value.value = Math.round((nextLevelDeadlift * getIntensity(userInput[i].reps.value)) * movementsIndexes[i].value);
+                    })
+                }
+            }
             console.log(labels)
 
             let idealChartBtn = document.getElementById("idealChartBtn");
