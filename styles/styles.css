@@ -1943,9 +1943,6 @@ table {
     border-left: 1px solid;
     border-left-color: lightgray;
 }
-#ranks .list-group-item {
-    -webkit-transform: scale(1.0);
-}
 #sq1, #sq5, #sq8, #sq10 {
     border-left: 1px solid;
     border-left-color: lightgray;
@@ -1991,6 +1988,9 @@ ul.list-group {
     padding: 0;
     margin: 0;
   }
+  #dl, #sq, #dip, #mp, #sdl, #sq, #lng, #pup, #bor, #gm, #fsq, #pp {
+    
+}
   /* CSS used here will be applied after bootstrap.css */
 
     /* START TREE MENU */

@@ -351,21 +351,36 @@
                                                                         <span class="label-text">Напад</span>
                                                                     </label>
                                                                 </div>
+                                                                <!-- <div class="form-check" class="body-pull-up">
+                                                                    <label>
+                                                                        <input type="checkbox" name="Набиране"
+                                                                            value="body-pull-up">
+                                                                        <span class="label-text">Набиране</span>
+                                                                    </label>
+                                                                </div> -->
                                                             </form>
                                                         </div>
                                                         <div class="col-md-4 col-sm-6 col-xs-6">
                                                             <form>
                                                                 <div class="form-check" class="pull-up">
                                                                     <label>
-                                                                        <input type="checkbox" name="Набиране"
+                                                                        <input type="checkbox" name="Набиране с тежест"
                                                                             value="pull-up">
                                                                         <span class="label-text">Набиране с
                                                                             тежест</span>
                                                                     </label>
                                                                 </div>
+                                                                <!-- <div class="form-check" class="body-dip">
+                                                                    <label>
+                                                                        <input type="checkbox" name="Кофи"
+                                                                            value="body-dip">
+                                                                        <span class="label-text">Кофи</span>
+                                                                    </label>
+                                                                </div> -->
                                                                 <div class="form-check" class="dip">
                                                                     <label>
-                                                                        <input type="checkbox" name="Кофи" value="dip">
+                                                                        <input type="checkbox" name="Кофи с тежест"
+                                                                            value="dip">
                                                                         <span class="label-text">Кофи с тежест</span>
                                                                     </label>
                                                                 </div>
@@ -560,6 +575,36 @@
                                                                                     </select>
                                                                                 </td>
                                                                             </tr>
+                                                                            <tr style="display: none;"
+                                                                                class="body-pull-up">
+                                                                                <td>
+                                                                                    <label class="control-label"
+                                                                                        for="body-pull-up">Набиране</label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input id="body-pull-up" min="1"
+                                                                                        max="10"
+                                                                                        type="number" placeholder="брой"
+                                                                                        value=""
+                                                                                        class="form-control input-sm">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <!-- <select class="form-control"
+                                                                                        id="body-pull-up-reps">
+                                                                                        <option value="1">1</option>
+                                                                                        <option value="2">2</option>
+                                                                                        <option value="3">3</option>
+                                                                                        <option value="4">4</option>
+                                                                                        <option value="5" selected>5
+                                                                                        </option>
+                                                                                        <option value="6">6</option>
+                                                                                        <option value="7">7</option>
+                                                                                        <option value="8">8</option>
+                                                                                        <option value="9">9</option>
+                                                                                        <option value="10">10</option>
+                                                                                    </select> -->
+                                                                                </td>
+                                                                            </tr>
                                                                             <tr style="display: none;" class="pull-up">
                                                                                 <td>
                                                                                     <label class="control-label"
@@ -567,7 +612,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <input id="pull-up"
-                                                                                        name="body-weight" type="number"
+                                                                                        type="number"
                                                                                         placeholder="кг" value=""
                                                                                         class="form-control input-sm">
                                                                                 </td>
@@ -586,6 +631,34 @@
                                                                                         <option value="9">9</option>
                                                                                         <option value="10">10</option>
                                                                                     </select>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr style="display: none;" class="body-dip">
+                                                                                <td>
+                                                                                    <label class="control-label"
+                                                                                        for="body-dip">Кофи</label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input id="body-dip" type="number"
+                                                                                    min="1" max="10"
+                                                                                        placeholder="брой" value=""
+                                                                                        class="form-control input-sm">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <!-- <select class="form-control"
+                                                                                        id="body-dip-reps">
+                                                                                        <option value="1">1</option>
+                                                                                        <option value="2">2</option>
+                                                                                        <option value="3">3</option>
+                                                                                        <option value="4">4</option>
+                                                                                        <option value="5" selected>5
+                                                                                        </option>
+                                                                                        <option value="6">6</option>
+                                                                                        <option value="7">7</option>
+                                                                                        <option value="8">8</option>
+                                                                                        <option value="9">9</option>
+                                                                                        <option value="10">10</option>
+                                                                                    </select> -->
                                                                                 </td>
                                                                             </tr>
                                                                             <tr style="display: none;" class="dip">
@@ -961,6 +1034,29 @@
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr style="display: none;"
+                                                                                        class="body-pull-up">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="real-body-pull-up">Набиране</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-body-pull-up"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-body-pull-up-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <!-- <input id="real-pull-up-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm"> -->
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
                                                                                         class="pull-up">
                                                                                         <td>
                                                                                             <label class="control-label"
@@ -981,6 +1077,28 @@
                                                                                             <input id="real-pull-up-max"
                                                                                                 type="text" readonly
                                                                                                 class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="body-dip">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="real-body-dip">Кофи</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-body-dip"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-body-dip-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <!-- <input id="real-dip-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm"> -->
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr style="display: none;"
@@ -1258,6 +1376,30 @@
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr style="display: none;"
+                                                                                        class="body-pull-up">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="ideal-body-pull-up">Набиране</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="ideal-body-pull-up"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="ideal-body-pull-up-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <!-- <input
+                                                                                                id="ideal-pull-up-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm"> -->
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
                                                                                         class="pull-up">
                                                                                         <td>
                                                                                             <label class="control-label"
@@ -1279,6 +1421,28 @@
                                                                                                 id="ideal-pull-up-max"
                                                                                                 type="text" readonly
                                                                                                 class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="body-dip">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="ideal-body-dip">Кофи</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="ideal-body-dip"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="ideal-body-dip-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <!-- <input id="ideal-dip-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm"> -->
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr style="display: none;"
@@ -1592,6 +1756,31 @@
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr style="display: none;"
+                                                                                        class="body-pull-up">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="next-level-body-pull-up">Набиране</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="next-level-body-pull-up"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="next-level-body-pull-up-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <!-- <input
+                                                                                                id="next-level-pull-up-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm"> -->
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
                                                                                         class="pull-up">
                                                                                         <td>
                                                                                             <label class="control-label"
@@ -1614,6 +1803,30 @@
                                                                                                 id="next-level-pull-up-max"
                                                                                                 type="text" readonly
                                                                                                 class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="body-dip">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="next-level-body-dip">Кофи</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="next-level-body-dip"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="next-level-body-dip-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <!-- <input
+                                                                                                id="next-level-dip-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm"> -->
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr style="display: none;"
@@ -1916,6 +2129,31 @@
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr style="display: none;"
+                                                                                        class="body-pull-up">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="perfect-level-body-pull-up">Набиране</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="perfect-level-body-pull-up"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="perfect-level-body-pull-up-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <!-- <input
+                                                                                                id="perfect-level-pull-up-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm"> -->
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
                                                                                         class="pull-up">
                                                                                         <td>
                                                                                             <label class="control-label"
@@ -1938,6 +2176,31 @@
                                                                                                 id="perfect-level-pull-up-max"
                                                                                                 type="text" readonly
                                                                                                 class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="body-dip">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="perfect-level-body-dip">Кофи</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="perfect-level-body-dip"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="perfect-level-body-dip-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <!-- <input
+                                                                                                id="perfect-level-dip-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm"> -->
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr style="display: none;"
@@ -2231,6 +2494,20 @@
                                                                 <td id="lng9"></td>
                                                                 <td id="lng10"></td>
                                                             </tr>
+                                                            <tr style="display: none;" id="bodyPullUps"
+                                                                class="body-pull-up">
+                                                                <td id="bpup" title="Weighted Pull-Up">Набиране</td>
+                                                                <td id="bpup1"></td>
+                                                                <td id="bpup2"></td>
+                                                                <td id="bpup3"></td>
+                                                                <td id="bpup4"></td>
+                                                                <td id="bpup5"></td>
+                                                                <td id="bpup6"></td>
+                                                                <td id="bpup7"></td>
+                                                                <td id="bpup8"></td>
+                                                                <td id="bpup9"></td>
+                                                                <td id="bpup10"></td>
+                                                            </tr>
                                                             <tr style="display: none;" id="weightedPullUps"
                                                                 class="pull-up">
                                                                 <td id="pup" title="Weighted Pull-Up">Набиране</td>
@@ -2245,6 +2522,19 @@
                                                                 <td id="pup9"></td>
                                                                 <td id="pup10"></td>
                                                             </tr>
+                                                            <tr style="display: none;" id="bodyDips" class="body-dip">
+                                                                    <td id="bdip" title="Weighted Dip">Кофи</td>
+                                                                    <td id="bdip1"></td>
+                                                                    <td id="bdip2"></td>
+                                                                    <td id="bdip3"></td>
+                                                                    <td id="bdip4"></td>
+                                                                    <td id="bdip5"></td>
+                                                                    <td id="bdip6"></td>
+                                                                    <td id="bdip7"></td>
+                                                                    <td id="bdip8"></td>
+                                                                    <td id="bdip9"></td>
+                                                                    <td id="bdip10"></td>
+                                                                </tr>
                                                             <tr style="display: none;" id="weightedDips" class="dip">
                                                                 <td id="dip" title="Weighted Dip">Кофи</td>
                                                                 <td id="dip1"></td>
@@ -2333,6 +2623,7 @@
                                                             </tr>
                                                         </tbody>
                                                     </table>
+                                                    <div id="ifbodyweight"></div>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div>
@@ -2373,8 +2664,8 @@
                                         </div>
                                     </div>
                                     <!-- End The Content -->
-                                    <input type="button" id="fill" value="Замени идеален">
-                                    <input type="button" id="fill2" value="Замени следващо ниво">
+                                    <!-- <input type="button" id="fill" value="Замени идеален">
+                                    <input type="button" id="fill2" value="Замени следващо ниво"> -->
                                 </div>
 
                             </article>

@@ -26,7 +26,6 @@ let strengthController = (() => {
                     if (!checked.includes(strengthStandardRows[i + 2].classList.value)) {
                         strengthStandardRows[i + 2].style.display = 'none';
                     }
-
                 }
                 for (let j = 0; j < trows.length; j++) {
                     if (checked[j] === trows[i].classList.value) {
@@ -144,8 +143,8 @@ let strengthController = (() => {
                 { name: "Клек", value: document.getElementById("squat"), reps: document.getElementById("squat-reps") },
                 { name: "Военна преса", value: document.getElementById("overhead-press"), reps: document.getElementById("overhead-press-reps") },
                 { name: "Напад", value: document.getElementById("lunge"), reps: document.getElementById("lunge-reps") },
-                { name: "Набиране", value: document.getElementById("pull-up"), reps: document.getElementById("pull-up-reps") },
-                { name: "Кофи", value: document.getElementById("dip"), reps: document.getElementById("dip-reps") },
+                { name: "Набиране с тежест", value: document.getElementById("pull-up"), reps: document.getElementById("pull-up-reps") },
+                { name: "Кофи с тежест", value: document.getElementById("dip"), reps: document.getElementById("dip-reps") },
                 { name: "Преден клек", value: document.getElementById("front-squat"), reps: document.getElementById("front-squat-reps") },
                 { name: "Сумо тяга", value: document.getElementById("sumo-deadlift"), reps: document.getElementById("sumo-deadlift-reps") },
                 { name: "Пуш преса", value: document.getElementById("push-press"), reps: document.getElementById("push-press-reps") },
@@ -153,13 +152,13 @@ let strengthController = (() => {
                 { name: "Гуд морнинг", value: document.getElementById("good-morning"), reps: document.getElementById("good-morning-reps") }
             ];
 
-            let userChoice = ["Мъртва тяга", "Клек", "Военна преса", "Напад", "Набиране", "Кофи", "Преден клек", "Сумо тяга", "Пуш преса", "Гребане с щанга", "Гуд морнинг"]
+            let userChoice = ["Мъртва тяга", "Клек", "Военна преса", "Напад", "Набиране с тежест", "Кофи с тежест", "Преден клек", "Сумо тяга", "Пуш преса", "Гребане с щанга", "Гуд морнинг"]
 
             let movementsIndexes = [
                 { name: "Мъртва тяга", value: 1 }, { name: "Клек", value: 0.83 },
                 { name: "Военна преса", value: sex === 'male' ? 0.4 : 0.37 },
-                { name: "Напад", value: 0.7 }, { name: "Набиране", value: sex === 'male' ? 0.65 : 0.56 },
-                { name: "Кофи", value: sex === 'male' ? 0.79 : 0.63 },
+                { name: "Напад", value: 0.7 }, { name: "Набиране с тежест", value: sex === 'male' ? 0.65 : 0.56 },
+                { name: "Кофи с тежест", value: sex === 'male' ? 0.79 : 0.63 },
                 { name: "Преден клек", value: sex === 'male' ? 0.68 : 0.67 },
                 { name: "Сумо тяга", value: 0.95 }, { name: "Пуш преса", value: sex === 'male' ? 0.56 : 0.49 },
                 { name: "Гребане с щанга", value: 0.53 }, { name: "Гуд морнинг", value: 0.44 }
@@ -170,8 +169,8 @@ let strengthController = (() => {
                 { name: "Клек", value: document.getElementById("real-squat"), reps: document.getElementById("real-squat-reps"), max: document.getElementById("real-squat-max") },
                 { name: "Военна преса", value: document.getElementById("real-overhead-press"), reps: document.getElementById("real-overhead-press-reps"), max: document.getElementById("real-overhead-press-max") },
                 { name: "Напад", value: document.getElementById("real-lunge"), reps: document.getElementById("real-lunge-reps"), max: document.getElementById("real-lunge-max") },
-                { name: "Набиране", value: document.getElementById("real-pull-up"), reps: document.getElementById("real-pull-up-reps"), max: document.getElementById("real-pull-up-max") },
-                { name: "Кофи", value: document.getElementById("real-dip"), reps: document.getElementById("real-dip-reps"), max: document.getElementById("real-dip-max") },
+                { name: "Набиране с тежест", value: document.getElementById("real-pull-up"), reps: document.getElementById("real-pull-up-reps"), max: document.getElementById("real-pull-up-max") },
+                { name: "Кофи с тежест", value: document.getElementById("real-dip"), reps: document.getElementById("real-dip-reps"), max: document.getElementById("real-dip-max") },
                 { name: "Преден клек", value: document.getElementById("real-front-squat"), reps: document.getElementById("real-front-squat-reps"), max: document.getElementById("real-front-squat-max") },
                 { name: "Сумо тяга", value: document.getElementById("real-sumo-deadlift"), reps: document.getElementById("real-sumo-deadlift-reps"), max: document.getElementById("real-sumo-deadlift-max") },
                 { name: "Пуш преса", value: document.getElementById("real-push-press"), reps: document.getElementById("real-push-press-reps"), max: document.getElementById("real-push-press-max") },
@@ -184,8 +183,8 @@ let strengthController = (() => {
                 { name: "Клек", value: document.getElementById("ideal-squat"), reps: document.getElementById("ideal-squat-reps"), max: document.getElementById("ideal-squat-max") },
                 { name: "Военна преса", value: document.getElementById("ideal-overhead-press"), reps: document.getElementById("ideal-overhead-press-reps"), max: document.getElementById("ideal-overhead-press-max") },
                 { name: "Напад", value: document.getElementById("ideal-lunge"), reps: document.getElementById("ideal-lunge-reps"), max: document.getElementById("ideal-lunge-max") },
-                { name: "Набиране", value: document.getElementById("ideal-pull-up"), reps: document.getElementById("ideal-pull-up-reps"), max: document.getElementById("ideal-pull-up-max") },
-                { name: "Кофи", value: document.getElementById("ideal-dip"), reps: document.getElementById("ideal-dip-reps"), max: document.getElementById("ideal-dip-max") },
+                { name: "Набиране с тежест", value: document.getElementById("ideal-pull-up"), reps: document.getElementById("ideal-pull-up-reps"), max: document.getElementById("ideal-pull-up-max") },
+                { name: "Кофи с тежест", value: document.getElementById("ideal-dip"), reps: document.getElementById("ideal-dip-reps"), max: document.getElementById("ideal-dip-max") },
                 { name: "Преден клек", value: document.getElementById("ideal-front-squat"), reps: document.getElementById("ideal-front-squat-reps"), max: document.getElementById("ideal-front-squat-max") },
                 { name: "Сумо тяга", value: document.getElementById("ideal-sumo-deadlift"), reps: document.getElementById("ideal-sumo-deadlift-reps"), max: document.getElementById("ideal-sumo-deadlift-max") },
                 { name: "Пуш преса", value: document.getElementById("ideal-push-press"), reps: document.getElementById("ideal-push-press-reps"), max: document.getElementById("ideal-push-press-max") },
@@ -198,8 +197,8 @@ let strengthController = (() => {
                 { name: "Клек", value: document.getElementById("next-level-squat"), reps: document.getElementById("next-level-squat-reps"), max: document.getElementById("next-level-squat-max") },
                 { name: "Военна преса", value: document.getElementById("next-level-overhead-press"), reps: document.getElementById("next-level-overhead-press-reps"), max: document.getElementById("next-level-overhead-press-max") },
                 { name: "Напад", value: document.getElementById("next-level-lunge"), reps: document.getElementById("next-level-lunge-reps"), max: document.getElementById("next-level-lunge-max") },
-                { name: "Набиране", value: document.getElementById("next-level-pull-up"), reps: document.getElementById("next-level-pull-up-reps"), max: document.getElementById("next-level-pull-up-max") },
-                { name: "Кофи", value: document.getElementById("next-level-dip"), reps: document.getElementById("next-level-dip-reps"), max: document.getElementById("next-level-dip-max") },
+                { name: "Набиране с тежест", value: document.getElementById("next-level-pull-up"), reps: document.getElementById("next-level-pull-up-reps"), max: document.getElementById("next-level-pull-up-max") },
+                { name: "Кофи с тежест", value: document.getElementById("next-level-dip"), reps: document.getElementById("next-level-dip-reps"), max: document.getElementById("next-level-dip-max") },
                 { name: "Преден клек", value: document.getElementById("next-level-front-squat"), reps: document.getElementById("next-level-front-squat-reps"), max: document.getElementById("next-level-front-squat-max") },
                 { name: "Сумо тяга", value: document.getElementById("next-level-sumo-deadlift"), reps: document.getElementById("next-level-sumo-deadlift-reps"), max: document.getElementById("next-level-sumo-deadlift-max") },
                 { name: "Пуш преса", value: document.getElementById("next-level-push-press"), reps: document.getElementById("next-level-push-press-reps"), max: document.getElementById("next-level-push-press-max") },
@@ -212,8 +211,8 @@ let strengthController = (() => {
                 { name: "Клек", value: document.getElementById("perfect-level-squat"), reps: document.getElementById("perfect-level-squat-reps"), max: document.getElementById("perfect-level-squat-max") },
                 { name: "Военна преса", value: document.getElementById("perfect-level-overhead-press"), reps: document.getElementById("perfect-level-overhead-press-reps"), max: document.getElementById("perfect-level-overhead-press-max") },
                 { name: "Напад", value: document.getElementById("perfect-level-lunge"), reps: document.getElementById("perfect-level-lunge-reps"), max: document.getElementById("perfect-level-lunge-max") },
-                { name: "Набиране", value: document.getElementById("perfect-level-pull-up"), reps: document.getElementById("perfect-level-pull-up-reps"), max: document.getElementById("perfect-level-pull-up-max") },
-                { name: "Кофи", value: document.getElementById("perfect-level-dip"), reps: document.getElementById("perfect-level-dip-reps"), max: document.getElementById("perfect-level-dip-max") },
+                { name: "Набиране с тежест", value: document.getElementById("perfect-level-pull-up"), reps: document.getElementById("perfect-level-pull-up-reps"), max: document.getElementById("perfect-level-pull-up-max") },
+                { name: "Кофи с тежест", value: document.getElementById("perfect-level-dip"), reps: document.getElementById("perfect-level-dip-reps"), max: document.getElementById("perfect-level-dip-max") },
                 { name: "Преден клек", value: document.getElementById("perfect-level-front-squat"), reps: document.getElementById("perfect-level-front-squat-reps"), max: document.getElementById("perfect-level-front-squat-max") },
                 { name: "Сумо тяга", value: document.getElementById("perfect-level-sumo-deadlift"), reps: document.getElementById("perfect-level-sumo-deadlift-reps"), max: document.getElementById("perfect-level-sumo-deadlift-max") },
                 { name: "Пуш преса", value: document.getElementById("perfect-level-push-press"), reps: document.getElementById("perfect-level-push-press-reps"), max: document.getElementById("perfect-level-push-press-max") },
@@ -232,13 +231,13 @@ let strengthController = (() => {
                 },
                 { name: "Напад", value: (lunge / getIntensity(lunge_reps)) / 0.7 },
                 {
-                    name: "Набиране",
+                    name: "Набиране с тежест",
                     value: sex === 'male'
                         ? ((Number(pull_up) + Number(body_weight)) / getIntensity(pull_up_reps)) / 0.65
                         : ((Number(pull_up) + Number(body_weight)) / getIntensity(pull_up_reps)) / 0.56
                 },
                 {
-                    name: "Кофи",
+                    name: "Кофи с тежест",
                     value: sex === 'male'
                         ? ((Number(dip) + Number(body_weight)) / getIntensity(dip_reps)) / 0.79
                         : ((Number(dip) + Number(body_weight)) / getIntensity(dip_reps)) / 0.63
@@ -291,13 +290,13 @@ let strengthController = (() => {
                         : (femaleRealDeadlift * 0.7 * getIntensity(lunge_reps))
                 },
                 {
-                    name: "Набиране",
+                    name: "Набиране с тежест",
                     value: sex === 'male'
                         ? (maleRealDeadlift * 0.65 * getIntensity(pull_up_reps))
                         : (femaleRealDeadlift * 0.56 * getIntensity(pull_up_reps))
                 },
                 {
-                    name: "Кофи",
+                    name: "Кофи с тежест",
                     value: sex === 'male'
                         ? (maleRealDeadlift * 0.79 * getIntensity(dip_reps))
                         : (femaleRealDeadlift * 0.63 * getIntensity(dip_reps))
@@ -415,7 +414,7 @@ let strengthController = (() => {
             for (let i = 0; i < ideal_moves.length; i++) {
                 for (let j = 0; j < labels.length; j++) {
                     if (userChoice[i] === labels[j]) {
-                        if (labels[j] === 'Набиране' || labels[j] === 'Кофи') {
+                        if (labels[j] === 'Набиране с тежест' || labels[j] === 'Кофи с тежест') {
                             currentLevel += (Number(userInput[i].value.value) + Number(body_weight)) / perfect_moves[i].value
                             if (ideal_moves[i].value > idealMax) {
                                 idealMax = ideal_moves[i].value;
@@ -532,7 +531,7 @@ let strengthController = (() => {
                 for (let j = 0; j < labels.length; j++) {
                     if (userChoice[i] === labels[j]) {
                         if (userInput[i].name === userChoice[i]) {
-                            if (labels[j] === 'Набиране' || labels[j] === 'Кофи') {
+                            if (labels[j] === 'Набиране с тежест' || labels[j] === 'Кофи с тежест') {
                                 idealLabels.push(userInput[i].name);
                                 nextLevelLabels.push(userInput[i].name);
                                 perfectLevelLabels.push(userInput[i].name);
@@ -588,21 +587,24 @@ let strengthController = (() => {
                 }
             }
 
+            let onlyReps = document.getElementById("ifbodyweight");
             for (let i = 1; i < 11; i++) {
                 if (sex === "male") {
                     dl[i].innerHTML = (Math.round((maleRealDeadlift * strengthIndexes[i - 1]) * getIntensity(deadlift_reps))).toString();
                     sq[i].innerHTML = (Math.round((maleRealDeadlift * 0.83 * strengthIndexes[i - 1]) * getIntensity(squat_reps))).toString();
                     mp[i].innerHTML = (Math.round((maleRealDeadlift * 0.4 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
                     lng[i].innerHTML = (Math.round((maleRealDeadlift * 0.7 * strengthIndexes[i - 1]) * getIntensity(lunge_reps))).toString();
-                    if (Math.round(((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) - body_weight)) > 0) {
+                    if((Math.round((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))) > 0) {
                         pup[i].innerHTML = (Math.round((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
                     } else {
-                        pup[i].innerHTML = ((Math.round(((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) - body_weight) + Number(body_weight) * 0.93))).toString() + "*";
+                        pup[i].innerHTML = Math.round((maleRealDeadlift * strengthIndexes[i - 1] * 0.65) - (Number(body_weight) + ((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight))))).toString() + 'п'
+                        onlyReps.innerHTML = 'п - брой повторения със собствено тегло'
                     }
-                    if (Math.round(((maleRealDeadlift * 0.79 * strengthIndexes[i - 1]) - body_weight)) > 0) {
-                        dips[i].innerHTML = (Math.round((((maleRealDeadlift * 0.79 * strengthIndexes[i - 1]) * getIntensity(dip_reps)) - body_weight))).toString();
+                    if((Math.round((((maleRealDeadlift * 0.79 * strengthIndexes[i - 1]) * getIntensity(dip_reps)) - Number(body_weight)))) > 0) {
+                        dips[i].innerHTML = (Math.round((((maleRealDeadlift * 0.79 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
                     } else {
-                        dips[i].innerHTML = ((Math.round(((maleRealDeadlift * 0.79 * strengthIndexes[i - 1]) - body_weight) + Number(body_weight)))).toString() + "*";
+                        dips[i].innerHTML = Math.round((maleRealDeadlift * strengthIndexes[i - 1] * 0.79) - (Number(body_weight) + ((((maleRealDeadlift * 0.79 * strengthIndexes[i - 1]) * getIntensity(dip_reps)) - Number(body_weight))))).toString() + 'п'
+                        onlyReps.innerHTML = 'п - брой повторения със собствено тегло'
                     }
                     fsq[i].innerHTML = (Math.round((maleRealDeadlift * 0.68 * strengthIndexes[i - 1]) * getIntensity(front_squat_reps))).toString();
                     sdl[i].innerHTML = (Math.round((maleRealDeadlift * 0.95 * strengthIndexes[i - 1]) * getIntensity(sumo_deadlift_reps))).toString();
@@ -614,15 +616,17 @@ let strengthController = (() => {
                     sq[i].innerHTML = (Math.round((femaleRealDeadlift * 0.83 * strengthIndexes[i - 1]) * getIntensity(squat_reps))).toString();
                     mp[i].innerHTML = (Math.round((femaleRealDeadlift * 0.37 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
                     lng[i].innerHTML = (Math.round((femaleRealDeadlift * 0.7 * strengthIndexes[i - 1]) * getIntensity(lunge_reps))).toString();
-                    if (Math.round(((femaleRealDeadlift * 0.56 * strengthIndexes[i - 1]) - body_weight)) > 0) {
-                        pup[i].innerHTML = (Math.round((((femaleRealDeadlift * 0.56 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
+                    if((Math.round((((femaleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))) > 0) {
+                        pup[i].innerHTML = (Math.round((((femaleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
                     } else {
-                        pup[i].innerHTML = ((Math.round(((femaleRealDeadlift * 0.56 * strengthIndexes[i - 1]) - body_weight) + Number(body_weight) * 0.93))).toString() + "*";
+                        pup[i].innerHTML = Math.round((femaleRealDeadlift * strengthIndexes[i - 1] * 0.65) - (Number(body_weight) + ((((femaleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight))))).toString() + 'п'
+                        onlyReps.innerHTML = 'п - брой повторения със собствено тегло'
                     }
-                    if (Math.round(((femaleRealDeadlift * 0.63 * strengthIndexes[i - 1]) - body_weight)) > 0) {
-                        dips[i].innerHTML = (Math.round((((femaleRealDeadlift * 0.63 * strengthIndexes[i - 1]) * getIntensity(dip_reps)) - body_weight))).toString();
+                    if((Math.round((((femaleRealDeadlift * 0.63 * strengthIndexes[i - 1]) * getIntensity(dip_reps)) - Number(body_weight)))) > 0) {
+                        dips[i].innerHTML = (Math.round((((femaleRealDeadlift * 0.63 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
                     } else {
-                        dips[i].innerHTML = ((Math.round(((femaleRealDeadlift * 0.63 * strengthIndexes[i - 1]) - body_weight) + Number(body_weight)))).toString() + "*";
+                        dips[i].innerHTML = Math.round((femaleRealDeadlift * strengthIndexes[i - 1] * 0.63) - (Number(body_weight) + ((((femaleRealDeadlift * 0.63 * strengthIndexes[i - 1]) * getIntensity(dip_reps)) - Number(body_weight))))).toString() + 'п'
+                        onlyReps.innerHTML = 'п - брой повторения със собствено тегло'
                     }
                     fsq[i].innerHTML = (Math.round((femaleRealDeadlift * 0.67 * strengthIndexes[i - 1]) * getIntensity(front_squat_reps))).toString();
                     sdl[i].innerHTML = (Math.round((femaleRealDeadlift * 0.95 * strengthIndexes[i - 1]) * getIntensity(sumo_deadlift_reps))).toString();
