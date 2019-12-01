@@ -586,7 +586,7 @@ let strengthController = (() => {
                     }
                 }
             }
-
+            // pup[i].innerHTML = Math.round((maleRealDeadlift * strengthIndexes[i - 1] * 0.65) - (Number(body_weight) + ((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight))))).toString() + 'п'
             let onlyReps = document.getElementById("ifbodyweight");
             for (let i = 1; i < 11; i++) {
                 if (sex === "male") {
@@ -597,15 +597,14 @@ let strengthController = (() => {
                     if((Math.round((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))) > 0) {
                         pup[i].innerHTML = (Math.round((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
                     } else {
-                        pup[i].innerHTML = Math.round((maleRealDeadlift * strengthIndexes[i - 1] * 0.65) - (Number(body_weight) + ((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight))))).toString() + 'п'
-                        onlyReps.innerHTML = 'п - брой повторения със собствено тегло'
+                        pup[i].innerHTML = (Math.round((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)) + Number(body_weight) * 0.93)).toString() + "*";
+                        onlyReps.innerHTML = '* добавена тежест за горен скрипец'
                     }
-                    if((Math.round((((maleRealDeadlift * 0.79 * strengthIndexes[i - 1]) * getIntensity(dip_reps)) - Number(body_weight)))) > 0) {
+                    if((Math.round((((maleRealDeadlift * 0.79 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))) > 0) {
                         dips[i].innerHTML = (Math.round((((maleRealDeadlift * 0.79 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
                     } else {
-                        dips[i].innerHTML = Math.round((maleRealDeadlift * strengthIndexes[i - 1] * 0.79) - (Number(body_weight) + ((((maleRealDeadlift * 0.79 * strengthIndexes[i - 1]) * getIntensity(dip_reps)) - Number(body_weight))))).toString() + 'п'
-                        onlyReps.innerHTML = 'п - брой повторения със собствено тегло'
-                    }
+                        dips[i].innerHTML = '';
+                    }                   
                     fsq[i].innerHTML = (Math.round((maleRealDeadlift * 0.68 * strengthIndexes[i - 1]) * getIntensity(front_squat_reps))).toString();
                     sdl[i].innerHTML = (Math.round((maleRealDeadlift * 0.95 * strengthIndexes[i - 1]) * getIntensity(sumo_deadlift_reps))).toString();
                     pp[i].innerHTML = (Math.round((maleRealDeadlift * 0.56 * strengthIndexes[i - 1]) * getIntensity(push_press_reps))).toString();
@@ -616,18 +615,17 @@ let strengthController = (() => {
                     sq[i].innerHTML = (Math.round((femaleRealDeadlift * 0.83 * strengthIndexes[i - 1]) * getIntensity(squat_reps))).toString();
                     mp[i].innerHTML = (Math.round((femaleRealDeadlift * 0.37 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
                     lng[i].innerHTML = (Math.round((femaleRealDeadlift * 0.7 * strengthIndexes[i - 1]) * getIntensity(lunge_reps))).toString();
-                    if((Math.round((((femaleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))) > 0) {
-                        pup[i].innerHTML = (Math.round((((femaleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
+                    if((Math.round((((femaleRealDeadlift * 0.56 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))) > 0) {
+                        pup[i].innerHTML = (Math.round((((femaleRealDeadlift * 0.56 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
                     } else {
-                        pup[i].innerHTML = Math.round((femaleRealDeadlift * strengthIndexes[i - 1] * 0.65) - (Number(body_weight) + ((((femaleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight))))).toString() + 'п'
-                        onlyReps.innerHTML = 'п - брой повторения със собствено тегло'
+                        pup[i].innerHTML = (Math.round((((femaleRealDeadlift * 0.56 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)) + Number(body_weight) * 0.93)).toString() + "*";
+                        onlyReps.innerHTML = '* добавена тежест за горен скрипец'
                     }
-                    if((Math.round((((femaleRealDeadlift * 0.63 * strengthIndexes[i - 1]) * getIntensity(dip_reps)) - Number(body_weight)))) > 0) {
+                    if((Math.round((((femaleRealDeadlift * 0.63 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))) > 0) {
                         dips[i].innerHTML = (Math.round((((femaleRealDeadlift * 0.63 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
                     } else {
-                        dips[i].innerHTML = Math.round((femaleRealDeadlift * strengthIndexes[i - 1] * 0.63) - (Number(body_weight) + ((((femaleRealDeadlift * 0.63 * strengthIndexes[i - 1]) * getIntensity(dip_reps)) - Number(body_weight))))).toString() + 'п'
-                        onlyReps.innerHTML = 'п - брой повторения със собствено тегло'
-                    }
+                        dips[i].innerHTML = '';
+                    }  
                     fsq[i].innerHTML = (Math.round((femaleRealDeadlift * 0.67 * strengthIndexes[i - 1]) * getIntensity(front_squat_reps))).toString();
                     sdl[i].innerHTML = (Math.round((femaleRealDeadlift * 0.95 * strengthIndexes[i - 1]) * getIntensity(sumo_deadlift_reps))).toString();
                     pp[i].innerHTML = (Math.round((femaleRealDeadlift * 0.49 * strengthIndexes[i - 1]) * getIntensity(push_press_reps))).toString();
