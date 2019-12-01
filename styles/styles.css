@@ -1988,8 +1988,8 @@ ul.list-group {
     padding: 0;
     margin: 0;
   }
-  #dl, #sq, #dip, #mp, #sdl, #sq, #lng, #pup, #bor, #gm, #fsq, #pp {
-    
+.table, .table-hover, th, td {
+    text-align: center !important;
 }
   /* CSS used here will be applied after bootstrap.css */
 
