@@ -696,9 +696,9 @@
                     </div>
                     <script type="text/javascript">
                         let chartZdravko = document.getElementById("bar-chart-horizontal-zdravko");
-                        let d = window.matchMedia("(max-width: 480px)");
+                        let c = window.matchMedia("(max-width: 480px)");
                         myFunction(c);
-                        d.addListener(myFunction);
+                        c.addListener(myFunction);
                         new Chart((chartZdravko), {
                             type: 'horizontalBar',
                             data: {
@@ -724,8 +724,8 @@
                             }
                         });
 
-                        function myFunction(d) {
-                            if (d.matches) {
+                        function myFunction(c) {
+                            if (c.matches) {
                                 chartZdravko.height = window.innerHeight;
                                 chartZdravko.width = window.innerWidth;
                             }
@@ -775,9 +775,9 @@
                     </div>
                     <script type="text/javascript">
                         let chartDani = document.getElementById("bar-chart-horizontal-dani");
-                        let c = window.matchMedia("(max-width: 480px)");
-                        myFunction(c);
-                        c.addListener(myFunction);
+                        let d = window.matchMedia("(max-width: 480px)");
+                        myFunction(d);
+                        d.addListener(myFunction);
                         new Chart((chartDani), {
                             type: 'horizontalBar',
                             data: {
@@ -803,8 +803,8 @@
                             }
                         });
 
-                        function myFunction(c) {
-                            if (c.matches) {
+                        function myFunction(d) {
+                            if (d.matches) {
                                 chartDani.height = window.innerHeight;
                                 chartDani.width = window.innerWidth;
                             }
