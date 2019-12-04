@@ -1690,7 +1690,6 @@ body{
 }
 .footer{
     margin-top:-17px;
-    margin-left:26px
 }
 h1{
     font-size:30px;
@@ -1832,13 +1831,16 @@ td:nth-child(5){
 #real-squat, #real-squat-reps, #real-squat-max,
 #real-overhead-press, #real-overhead-press-reps, #real-overhead-press-max,
 #real-lunge, #real-lunge-reps, #real-lunge-max,
+#real-renegade-row, #real-renegade-row-reps, #real-renegade-row-max,
 #real-pull-up, #real-pull-up-reps, #real-pull-up-max,
 #real-dip, #real-dip-reps, #real-dip-max,
 #real-front-squat, #real-front-squat-reps, #real-front-squat-max,
 #real-sumo-deadlift, #real-sumo-deadlift-reps, #real-sumo-deadlift-max,
+#real-swing, #real-swing-reps, #real-swing-max,
 #real-push-press, #real-push-press-reps, #real-push-press-max,
 #real-bent-over-row, #real-bent-over-row-reps, #real-bent-over-row-max,
-#real-good-morning, #real-good-morning-reps, #real-good-morning-max {
+#real-good-morning, #real-good-morning-reps, #real-good-morning-max,
+#real-overhead-squat, #real-overhead-squat-reps, #real-overhead-squat-max {
     text-align: center;
 }
 #real-balance > tbody > tr.deadlift > td:nth-child(1) > label,
@@ -1851,13 +1853,16 @@ td:nth-child(5){
 #ideal-squat, #ideal-squat-reps, #ideal-squat-max,
 #ideal-overhead-press, #ideal-overhead-press-reps, #ideal-overhead-press-max,
 #ideal-lunge, #ideal-lunge-reps, #ideal-lunge-max,
+#ideal-renegade-row, #ideal-renegade-row-reps, #ideal-renegade-row-max,
 #ideal-pull-up, #ideal-pull-up-reps, #ideal-pull-up-max,
 #ideal-dip, #ideal-dip-reps, #ideal-dip-max,
 #ideal-front-squat, #ideal-front-squat-reps, #ideal-front-squat-max,
 #ideal-sumo-deadlift, #ideal-sumo-deadlift-reps, #ideal-sumo-deadlift-max,
+#ideal-swing, #ideal-swing-reps, #ideal-swing-max,
 #ideal-push-press, #ideal-push-press-reps, #ideal-push-press-max,
 #ideal-bent-over-row, #ideal-bent-over-row-reps, #ideal-bent-over-row-max,
-#ideal-good-morning, #ideal-good-morning-reps, #ideal-good-morning-max {
+#ideal-good-morning, #ideal-good-morning-reps, #ideal-good-morning-max,
+#ideal-overhead-squat, #ideal-overhead-squat-reps, #ideal-overhead-squat-max {
     text-align: center;
 }
 
@@ -1865,13 +1870,16 @@ td:nth-child(5){
 #next-level-squat, #next-level-squat-reps, #next-level-squat-max,
 #next-level-overhead-press, #next-level-overhead-press-reps, #next-level-overhead-press-max,
 #next-level-lunge, #next-level-lunge-reps, #next-level-lunge-max,
+#next-level-renegade-row, #next-level-renegade-row-reps, #next-level-renegade-row-max,
 #next-level-pull-up, #next-level-pull-up-reps, #next-level-pull-up-max,
 #next-level-dip, #next-level-dip-reps, #next-level-dip-max,
 #next-level-front-squat, #next-level-front-squat-reps, #next-level-front-squat-max,
 #next-level-sumo-deadlift, #next-level-sumo-deadlift-reps, #next-level-sumo-deadlift-max,
+#next-level-swing, #next-level-swing-reps, #next-level-swing-max,
 #next-level-push-press, #next-level-push-press-reps, #next-level-push-press-max,
 #next-level-bent-over-row, #next-level-bent-over-row-reps, #next-level-bent-over-row-max,
-#next-level-good-morning, #next-level-good-morning-reps, #next-level-good-morning-max {
+#next-level-good-morning, #next-level-good-morning-reps, #next-level-good-morning-max,
+#next-level-overhead-squat, #next-level-overhead-squat-reps, #next-level-overhead-squat-max {
     text-align: center;
 }
 
@@ -1879,13 +1887,16 @@ td:nth-child(5){
 #perfect-level-squat, #perfect-level-squat-reps, #perfect-level-squat-max,
 #perfect-level-overhead-press, #perfect-level-overhead-press-reps, #perfect-level-overhead-press-max,
 #perfect-level-lunge, #perfect-level-lunge-reps, #perfect-level-lunge-max,
+#perfect-level-renegade-row, #perfect-level-renegade-row-reps, #perfect-level-renegade-row-max,
 #perfect-level-pull-up, #perfect-level-pull-up-reps, #perfect-level-pull-up-max,
 #perfect-level-dip, #perfect-level-dip-reps, #perfect-level-dip-max,
 #perfect-level-front-squat, #perfect-level-front-squat-reps, #perfect-level-front-squat-max,
 #perfect-level-sumo-deadlift, #perfect-level-sumo-deadlift-reps, #perfect-level-sumo-deadlift-max,
+#perfect-level-swing, #perfect-level-swing-reps, #perfect-level-swing-max,
 #perfect-level-push-press, #perfect-level-push-press-reps, #perfect-level-push-press-max,
 #perfect-level-bent-over-row, #perfect-level-bent-over-row-reps, #perfect-level-bent-over-row-max,
-#perfect-level-good-morning, #perfect-level-good-morning-reps, #perfect-level-good-morning-max {
+#perfect-level-good-morning, #perfect-level-good-morning-reps, #perfect-level-good-morning-max,
+#perfect-level-overhead-squat, #perfect-level-overhead-squat-reps, #perfect-level-overhead-squat-max {
     text-align: center;
 }
 
@@ -1983,12 +1994,28 @@ table {
     border-left: 1px solid;
     border-left-color: lightgray;
 }
+#ohsq1, #ohsq5, #ohsq8, #ohsq10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+#rr1, #rr5, #rr8, #rr10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
+#sw1, #sw5, #sw8, #sw10 {
+    border-left: 1px solid;
+    border-left-color: lightgray;
+}
 ul.list-group {
     list-style-type: none;
     padding: 0;
     margin: 0;
   }
 .table, .table-hover, th, td {
+    text-align: center !important;
+}
+
+#men, #women {
     text-align: center !important;
 }
   /* CSS used here will be applied after bootstrap.css */

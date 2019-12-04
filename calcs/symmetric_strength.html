@@ -358,6 +358,14 @@
                                                                         <span class="label-text">Набиране</span>
                                                                     </label>
                                                                 </div> -->
+                                                                <div class="form-check" class="renegade-row">
+                                                                    <label>
+                                                                        <input type="checkbox" name="Ренегатско гребане"
+                                                                            value="renegade-row">
+                                                                        <span class="label-text">Ренегатско
+                                                                            гребане</span>
+                                                                    </label>
+                                                                </div>
                                                             </form>
                                                         </div>
                                                         <div class="col-md-4 col-sm-6 col-xs-6">
@@ -398,8 +406,14 @@
                                                                             class="label-text">Сумо тяга</span>
                                                                     </label>
                                                                 </div>
+                                                                <div class="form-check" class="swing">
+                                                                    <label>
+                                                                        <input type="checkbox" name="Суинг"
+                                                                            value="swing">
+                                                                        <span class="label-text">Суинг</span>
+                                                                    </label>
+                                                                </div>
                                                             </form>
-
                                                         </div>
                                                         <div class="col-md-4 col-sm-6 col-xs-6">
                                                             <form>
@@ -420,13 +434,21 @@
                                                                 </div>
                                                                 <div class="form-check" class="good-morning">
                                                                     <label>
-                                                                        <input type="checkbox" name="Гуд морнинг"
+                                                                        <input type="checkbox" name="Добро утро"
                                                                             value="good-morning">
-                                                                        <span class="label-text">Гуд морнинг</span>
+                                                                        <span class="label-text">Добро утро</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check" class="overhead-squat">
+                                                                    <label>
+                                                                        <input type="checkbox"
+                                                                            name="Клек с щанга над глава"
+                                                                            value="overhead-squat">
+                                                                        <span class="label-text">Клек с щанга над
+                                                                            глава</span>
                                                                     </label>
                                                                 </div>
                                                             </form>
-
                                                         </div>
                                                     </form>
                                                 </div>
@@ -576,6 +598,36 @@
                                                                                 </td>
                                                                             </tr>
                                                                             <tr style="display: none;"
+                                                                                class="renegade-row">
+                                                                                <td>
+                                                                                    <label class="control-label"
+                                                                                        for="renegade-row">Ренегатско
+                                                                                        гребане</label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input id="renegade-row"
+                                                                                        type="number" placeholder="кг"
+                                                                                        value=""
+                                                                                        class="form-control input-sm">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select class="form-control"
+                                                                                        id="renegade-row-reps">
+                                                                                        <option value="1">1</option>
+                                                                                        <option value="2">2</option>
+                                                                                        <option value="3">3</option>
+                                                                                        <option value="4">4</option>
+                                                                                        <option value="5" selected>5
+                                                                                        </option>
+                                                                                        <option value="6">6</option>
+                                                                                        <option value="7">7</option>
+                                                                                        <option value="8">8</option>
+                                                                                        <option value="9">9</option>
+                                                                                        <option value="10">10</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr style="display: none;"
                                                                                 class="body-pull-up">
                                                                                 <td>
                                                                                     <label class="control-label"
@@ -583,9 +635,8 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <input id="body-pull-up" min="1"
-                                                                                        max="10"
-                                                                                        type="number" placeholder="брой"
-                                                                                        value=""
+                                                                                        max="10" type="number"
+                                                                                        placeholder="брой" value=""
                                                                                         class="form-control input-sm">
                                                                                 </td>
                                                                                 <td>
@@ -611,8 +662,7 @@
                                                                                         for="pull-up">Набиране</label>
                                                                                 </td>
                                                                                 <td>
-                                                                                    <input id="pull-up"
-                                                                                        type="number"
+                                                                                    <input id="pull-up" type="number"
                                                                                         placeholder="кг" value=""
                                                                                         class="form-control input-sm">
                                                                                 </td>
@@ -640,7 +690,7 @@
                                                                                 </td>
                                                                                 <td>
                                                                                     <input id="body-dip" type="number"
-                                                                                    min="1" max="10"
+                                                                                        min="1" max="10"
                                                                                         placeholder="брой" value=""
                                                                                         class="form-control input-sm">
                                                                                 </td>
@@ -748,6 +798,33 @@
                                                                                     </select>
                                                                                 </td>
                                                                             </tr>
+                                                                            <tr style="display: none;" class="swing">
+                                                                                <td>
+                                                                                    <label class="control-label"
+                                                                                        for="swing">Суинг</label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input id="swing" type="number"
+                                                                                        placeholder="кг" value=""
+                                                                                        class="form-control input-sm">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select class="form-control"
+                                                                                        id="swing-reps">
+                                                                                        <option value="1">1</option>
+                                                                                        <option value="2">2</option>
+                                                                                        <option value="3">3</option>
+                                                                                        <option value="4">4</option>
+                                                                                        <option value="5" selected>5
+                                                                                        </option>
+                                                                                        <option value="6">6</option>
+                                                                                        <option value="7">7</option>
+                                                                                        <option value="8">8</option>
+                                                                                        <option value="9">9</option>
+                                                                                        <option value="10">10</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                            </tr>
                                                                             <tr style="display: none;"
                                                                                 class="push-press">
                                                                                 <td>
@@ -811,8 +888,8 @@
                                                                                 class="good-morning">
                                                                                 <td>
                                                                                     <label class="control-label"
-                                                                                        for="good-morning">Гуд
-                                                                                        морнинг</label>
+                                                                                        for="good-morning">Добро
+                                                                                        утро</label>
                                                                                 </td>
                                                                                 <td>
                                                                                     <input id="good-morning"
@@ -823,6 +900,36 @@
                                                                                 <td>
                                                                                     <select class="form-control"
                                                                                         id="good-morning-reps">
+                                                                                        <option value="1">1</option>
+                                                                                        <option value="2">2</option>
+                                                                                        <option value="3">3</option>
+                                                                                        <option value="4">4</option>
+                                                                                        <option value="5" selected>5
+                                                                                        </option>
+                                                                                        <option value="6">6</option>
+                                                                                        <option value="7">7</option>
+                                                                                        <option value="8">8</option>
+                                                                                        <option value="9">9</option>
+                                                                                        <option value="10">10</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr style="display: none;"
+                                                                                class="overhead-squat">
+                                                                                <td>
+                                                                                    <label class="control-label"
+                                                                                        for="overhead-squat">Клек с
+                                                                                        щанга над глава</label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input id="overhead-squat"
+                                                                                        type="number" placeholder="кг"
+                                                                                        value=""
+                                                                                        class="form-control input-sm">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select class="form-control"
+                                                                                        id="overhead-squat-reps">
                                                                                         <option value="1">1</option>
                                                                                         <option value="2">2</option>
                                                                                         <option value="3">3</option>
@@ -1034,13 +1141,40 @@
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr style="display: none;"
+                                                                                        class="renegade-row">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="real-renegade-row">Ренегатско
+                                                                                                гребане</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-renegade-row"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-renegade-row-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-renegade-row-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
                                                                                         class="body-pull-up">
                                                                                         <td>
                                                                                             <label class="control-label"
                                                                                                 for="real-body-pull-up">Набиране</label>
                                                                                         </td>
                                                                                         <td>
-                                                                                            <input id="real-body-pull-up"
+                                                                                            <input
+                                                                                                id="real-body-pull-up"
                                                                                                 type="text" readonly
                                                                                                 class="form-control input-sm">
                                                                                         </td>
@@ -1091,7 +1225,8 @@
                                                                                                 class="form-control input-sm">
                                                                                         </td>
                                                                                         <td>
-                                                                                            <input id="real-body-dip-reps"
+                                                                                            <input
+                                                                                                id="real-body-dip-reps"
                                                                                                 type="text" readonly
                                                                                                 class="form-control input-sm">
                                                                                         </td>
@@ -1175,6 +1310,28 @@
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr style="display: none;"
+                                                                                        class="swing">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="real-swing">Суинг</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-swing"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-swing-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="real-swing-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
                                                                                         class="push-press">
                                                                                         <td>
                                                                                             <label class="control-label"
@@ -1229,8 +1386,8 @@
                                                                                         class="good-morning">
                                                                                         <td>
                                                                                             <label class="control-label"
-                                                                                                for="real-good-morning">Гуд
-                                                                                                морнинг</label>
+                                                                                                for="real-good-morning">Добро
+                                                                                                утро</label>
                                                                                         </td>
                                                                                         <td>
                                                                                             <input
@@ -1250,7 +1407,33 @@
                                                                                                 type="text" readonly
                                                                                                 class="form-control input-sm">
                                                                                         </td>
-
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="overhead-squat">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="real-overhead-squat">Клек
+                                                                                                с щанга над
+                                                                                                глава</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-overhead-squat"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-overhead-squat-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="real-overhead-squat-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
                                                                                     </tr>
                                                                                 </tbody>
                                                                             </table>
@@ -1376,13 +1559,40 @@
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr style="display: none;"
+                                                                                        class="renegade-row">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="ideal-renegade-row">Ренегатско
+                                                                                                гребане</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="ideal-renegade-row"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="ideal-renegade-row-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="ideal-renegade-row-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
                                                                                         class="body-pull-up">
                                                                                         <td>
                                                                                             <label class="control-label"
                                                                                                 for="ideal-body-pull-up">Набиране</label>
                                                                                         </td>
                                                                                         <td>
-                                                                                            <input id="ideal-body-pull-up"
+                                                                                            <input
+                                                                                                id="ideal-body-pull-up"
                                                                                                 type="text" readonly
                                                                                                 class="form-control input-sm">
                                                                                         </td>
@@ -1435,7 +1645,8 @@
                                                                                                 class="form-control input-sm">
                                                                                         </td>
                                                                                         <td>
-                                                                                            <input id="ideal-body-dip-reps"
+                                                                                            <input
+                                                                                                id="ideal-body-dip-reps"
                                                                                                 type="text" readonly
                                                                                                 class="form-control input-sm">
                                                                                         </td>
@@ -1520,6 +1731,28 @@
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr style="display: none;"
+                                                                                        class="swing">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="ideal-swing">Суинг</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="ideal-swing"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="ideal-swing-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="ideal-swing-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
                                                                                         class="push-press">
                                                                                         <td>
                                                                                             <label class="control-label"
@@ -1574,8 +1807,8 @@
                                                                                         class="good-morning">
                                                                                         <td>
                                                                                             <label class="control-label"
-                                                                                                for="ideal-good-morning">Гуд
-                                                                                                морнинг</label>
+                                                                                                for="ideal-good-morning">Добро
+                                                                                                утро</label>
                                                                                         </td>
                                                                                         <td>
                                                                                             <input
@@ -1592,6 +1825,31 @@
                                                                                         <td>
                                                                                             <input
                                                                                                 id="ideal-good-morning-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="overhead-squat">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="ideal-overhead-squat">Клек с щанга над глава</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="ideal-overhead-squat"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="ideal-overhead-squat-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="ideal-overhead-squat-max"
                                                                                                 type="text" readonly
                                                                                                 class="form-control input-sm">
                                                                                         </td>
@@ -1756,6 +2014,32 @@
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr style="display: none;"
+                                                                                        class="renegade-row">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="next-level-lunge">Ренегатско
+                                                                                                гребане</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="next-level-renegade-row"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="next-level-renegade-row-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="next-level-renegade-row-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
                                                                                         class="body-pull-up">
                                                                                         <td>
                                                                                             <label class="control-label"
@@ -1812,7 +2096,8 @@
                                                                                                 for="next-level-body-dip">Кофи</label>
                                                                                         </td>
                                                                                         <td>
-                                                                                            <input id="next-level-body-dip"
+                                                                                            <input
+                                                                                                id="next-level-body-dip"
                                                                                                 type="text" readonly
                                                                                                 class="form-control input-sm">
                                                                                         </td>
@@ -1906,6 +2191,30 @@
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr style="display: none;"
+                                                                                        class="swing">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="next-level-swing">Суинг</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input id="next-level-swing"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="next-level-swing-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="next-level-swing-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
                                                                                         class="push-press">
                                                                                         <td>
                                                                                             <label class="control-label"
@@ -1961,8 +2270,8 @@
                                                                                         class="good-morning">
                                                                                         <td>
                                                                                             <label class="control-label"
-                                                                                                for="next-level-good-morning">Гуд
-                                                                                                морнинг</label>
+                                                                                                for="next-level-good-morning">Добро
+                                                                                                утро</label>
                                                                                         </td>
                                                                                         <td>
                                                                                             <input
@@ -1979,6 +2288,33 @@
                                                                                         <td>
                                                                                             <input
                                                                                                 id="next-level-good-morning-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="overhead-squat">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="next-level-overhead-squat">Клек
+                                                                                                с щанга над
+                                                                                                глава</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="next-level-overhead-squat"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="next-level-overhead-squat-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="next-level-overhead-squat-max"
                                                                                                 type="text" readonly
                                                                                                 class="form-control input-sm">
                                                                                         </td>
@@ -2124,6 +2460,32 @@
                                                                                         <td>
                                                                                             <input
                                                                                                 id="perfect-level-lunge-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="renegade-row">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="perfect-level-renegade-row">Ренегатско
+                                                                                                гребане</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="perfect-level-renegade-row"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="perfect-level-renegade-row-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="perfect-level-renegade-row-max"
                                                                                                 type="text" readonly
                                                                                                 class="form-control input-sm">
                                                                                         </td>
@@ -2281,6 +2643,31 @@
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr style="display: none;"
+                                                                                        class="swing">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="perfect-level-swing">Суинг</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="perfect-level-swing"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="perfect-level-swing-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="perfect-level-swing-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
                                                                                         class="push-press">
                                                                                         <td>
                                                                                             <label class="control-label"
@@ -2336,8 +2723,8 @@
                                                                                         class="good-morning">
                                                                                         <td>
                                                                                             <label class="control-label"
-                                                                                                for="perfect-level-good-morning">Гуд
-                                                                                                морнинг</label>
+                                                                                                for="perfect-level-good-morning">Добро
+                                                                                                утро</label>
                                                                                         </td>
                                                                                         <td>
                                                                                             <input
@@ -2354,6 +2741,33 @@
                                                                                         <td>
                                                                                             <input
                                                                                                 id="perfect-level-good-morning-max"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr style="display: none;"
+                                                                                        class="overhead-squat">
+                                                                                        <td>
+                                                                                            <label class="control-label"
+                                                                                                for="perfect-level-overhead-squat">Клек
+                                                                                                с щанга над
+                                                                                                глава</label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="perfect-level-overhead-squat"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="perfect-level-overhead-squat-reps"
+                                                                                                type="text" readonly
+                                                                                                class="form-control input-sm">
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input
+                                                                                                id="perfect-level-overhead-squat-max"
                                                                                                 type="text" readonly
                                                                                                 class="form-control input-sm">
                                                                                         </td>
@@ -2384,145 +2798,174 @@
                                                     </div>
                                                 </div>
                                                 1МП - единично максимално повторение
-                                                <div class="table-responsive" id="list">
+                                                <div class="well">
                                                     <div>
                                                         <h3>Стандарти</h3>
                                                     </div>
-                                                    <div>
-                                                        <h4 id="user-info"></h4>
-                                                    </div>
-                                                    <table class="table table-hover">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Знак</th>
-                                                                <th><img class="patches" src="../static/images/1_2.png">
-                                                                </th>
-                                                                <th><img class="patches" src="../static/images/2_2.png">
-                                                                </th>
-                                                                <th><img class="patches" src="../static/images/3_2.png">
-                                                                </th>
-                                                                <th><img class="patches" src="../static/images/4_2.png">
-                                                                </th>
-                                                                <th><img class="patches" src="../static/images/5_2.png">
-                                                                </th>
-                                                                <th><img class="patches" src="../static/images/6_2.png">
-                                                                </th>
-                                                                <th><img class="patches" src="../static/images/8_2.png">
-                                                                </th>
-                                                                <th><img class="patches" src="../static/images/7_2.png">
-                                                                </th>
-                                                                <th><img class="patches" src="../static/images/9_2.png">
-                                                                </th>
-                                                                <th><img class="patches" src="../static/images/10_2.png">
-                                                                </th>
-                                                            </tr>
-                                                            <tr>
-                                                                <th>Звание</th>
-                                                                <th id="beginner">врб</th>
-                                                                <th>нвб</th>
-                                                                <th>рк</th>
-                                                                <th>ефр</th>
-                                                                <th id="trained">срж</th>
-                                                                <th>лт</th>
-                                                                <th>кпт</th>
-                                                                <th id="skilled">мр</th>
-                                                                <th>плк</th>
-                                                                <th id="master">ген</th>
-                                                            </tr>
-                                                            <tr>
-                                                                <th>Дивизия</th>
-                                                                <th id="beginner" colspan="4">Зулу</th>
-                                                                <th id="trained"></th>
-                                                                <th>Лима</th>
-                                                                <th></th>
-                                                                <th id="skilled" colspan="2">Делта</th>
-                                                                <th id="master">Алфа</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr style="display: none;" id="user-deadlift"
-                                                                class="deadlift">
-                                                                <td id="dl" title="Deadlift">Мъртва тяга</td>
-                                                                <td id="dl1"></td>
-                                                                <td id="dl2"></td>
-                                                                <td id="dl3"></td>
-                                                                <td id="dl4"></td>
-                                                                <td id="dl5"></td>
-                                                                <td id="dl6"></td>
-                                                                <td id="dl7"></td>
-                                                                <td id="dl8"></td>
-                                                                <td id="dl9"></td>
-                                                                <td id="dl10"></td>
-                                                            </tr>
-                                                            <tr style="display: none;" id="user-squat" class="squat">
-                                                                <td id="sq" title="High-bar Squat">Клек</td>
-                                                                <td id="sq1"></td>
-                                                                <td id="sq2"></td>
-                                                                <td id="sq3"></td>
-                                                                <td id="sq4"></td>
-                                                                <td id="sq5"></td>
-                                                                <td id="sq6"></td>
-                                                                <td id="sq7"></td>
-                                                                <td id="sq8"></td>
-                                                                <td id="sq9"></td>
-                                                                <td id="sq10"></td>
-                                                            </tr>
-                                                            <tr style="display: none;" id="user-militaryPress"
-                                                                class="overhead-press">
-                                                                <td id="mp" title="Military Press">Военна преса</td>
-                                                                <td id="mp1"></td>
-                                                                <td id="mp2"></td>
-                                                                <td id="mp3"></td>
-                                                                <td id="mp4"></td>
-                                                                <td id="mp5"></td>
-                                                                <td id="mp6"></td>
-                                                                <td id="mp7"></td>
-                                                                <td id="mp8"></td>
-                                                                <td id="mp9"></td>
-                                                                <td id="mp10"></td>
-                                                            </tr>
-                                                            <tr style="display: none;" id="barbellLunge" class="lunge">
-                                                                <td id="lng" title="Barbell Lunge">Напад</td>
-                                                                <td id="lng1"></td>
-                                                                <td id="lng2"></td>
-                                                                <td id="lng3"></td>
-                                                                <td id="lng4"></td>
-                                                                <td id="lng5"></td>
-                                                                <td id="lng6"></td>
-                                                                <td id="lng7"></td>
-                                                                <td id="lng8"></td>
-                                                                <td id="lng9"></td>
-                                                                <td id="lng10"></td>
-                                                            </tr>
-                                                            <tr style="display: none;" id="bodyPullUps"
-                                                                class="body-pull-up">
-                                                                <td id="bpup" title="Weighted Pull-Up">Набиране</td>
-                                                                <td id="bpup1"></td>
-                                                                <td id="bpup2"></td>
-                                                                <td id="bpup3"></td>
-                                                                <td id="bpup4"></td>
-                                                                <td id="bpup5"></td>
-                                                                <td id="bpup6"></td>
-                                                                <td id="bpup7"></td>
-                                                                <td id="bpup8"></td>
-                                                                <td id="bpup9"></td>
-                                                                <td id="bpup10"></td>
-                                                            </tr>
-                                                            <tr style="display: none;" id="weightedPullUps"
-                                                                class="pull-up">
-                                                                <td id="pup" title="Weighted Pull-Up">Набиране</td>
-                                                                <td id="pup1"></td>
-                                                                <td id="pup2"></td>
-                                                                <td id="pup3"></td>
-                                                                <td id="pup4"></td>
-                                                                <td id="pup5"></td>
-                                                                <td id="pup6"></td>
-                                                                <td id="pup7"></td>
-                                                                <td id="pup8"></td>
-                                                                <td id="pup9"></td>
-                                                                <td id="pup10"></td>
-                                                            </tr>
-                                                            <tr style="display: none;" id="bodyDips" class="body-dip">
+                                                    <div class="table-responsive" id="list">
+                                                        <div>
+                                                            <h4 id="user-info"></h4>
+                                                        </div>
+                                                        <table class="table table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Знак</th>
+                                                                    <th><img class="patches"
+                                                                            src="../static/images/1_2.png">
+                                                                    </th>
+                                                                    <th><img class="patches"
+                                                                            src="../static/images/2_2.png">
+                                                                    </th>
+                                                                    <th><img class="patches"
+                                                                            src="../static/images/3_2.png">
+                                                                    </th>
+                                                                    <th><img class="patches"
+                                                                            src="../static/images/4_2.png">
+                                                                    </th>
+                                                                    <th><img class="patches"
+                                                                            src="../static/images/5_2.png">
+                                                                    </th>
+                                                                    <th><img class="patches"
+                                                                            src="../static/images/6_2.png">
+                                                                    </th>
+                                                                    <th><img class="patches"
+                                                                            src="../static/images/8_2.png">
+                                                                    </th>
+                                                                    <th><img class="patches"
+                                                                            src="../static/images/7_2.png">
+                                                                    </th>
+                                                                    <th><img class="patches"
+                                                                            src="../static/images/9_2.png">
+                                                                    </th>
+                                                                    <th><img class="patches"
+                                                                            src="../static/images/10_2.png">
+                                                                    </th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Звание</th>
+                                                                    <th id="beginner">врб</th>
+                                                                    <th>нвб</th>
+                                                                    <th>рк</th>
+                                                                    <th>ефр</th>
+                                                                    <th id="trained">срж</th>
+                                                                    <th>лт</th>
+                                                                    <th>кпт</th>
+                                                                    <th id="skilled">мр</th>
+                                                                    <th>плк</th>
+                                                                    <th id="master">ген</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Дивизия</th>
+                                                                    <th id="beginner" colspan="4">Зулу</th>
+                                                                    <th id="trained"></th>
+                                                                    <th>Лима</th>
+                                                                    <th></th>
+                                                                    <th id="skilled" colspan="2">Делта</th>
+                                                                    <th id="master">Алфа</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr style="display: none;" id="user-deadlift"
+                                                                    class="deadlift">
+                                                                    <td id="dl" title="Deadlift">Мъртва тяга</td>
+                                                                    <td id="dl1"></td>
+                                                                    <td id="dl2"></td>
+                                                                    <td id="dl3"></td>
+                                                                    <td id="dl4"></td>
+                                                                    <td id="dl5"></td>
+                                                                    <td id="dl6"></td>
+                                                                    <td id="dl7"></td>
+                                                                    <td id="dl8"></td>
+                                                                    <td id="dl9"></td>
+                                                                    <td id="dl10"></td>
+                                                                </tr>
+                                                                <tr style="display: none;" id="user-squat"
+                                                                    class="squat">
+                                                                    <td id="sq" title="High-bar Squat">Клек</td>
+                                                                    <td id="sq1"></td>
+                                                                    <td id="sq2"></td>
+                                                                    <td id="sq3"></td>
+                                                                    <td id="sq4"></td>
+                                                                    <td id="sq5"></td>
+                                                                    <td id="sq6"></td>
+                                                                    <td id="sq7"></td>
+                                                                    <td id="sq8"></td>
+                                                                    <td id="sq9"></td>
+                                                                    <td id="sq10"></td>
+                                                                </tr>
+                                                                <tr style="display: none;" id="user-militaryPress"
+                                                                    class="overhead-press">
+                                                                    <td id="mp" title="Military Press">Военна преса</td>
+                                                                    <td id="mp1"></td>
+                                                                    <td id="mp2"></td>
+                                                                    <td id="mp3"></td>
+                                                                    <td id="mp4"></td>
+                                                                    <td id="mp5"></td>
+                                                                    <td id="mp6"></td>
+                                                                    <td id="mp7"></td>
+                                                                    <td id="mp8"></td>
+                                                                    <td id="mp9"></td>
+                                                                    <td id="mp10"></td>
+                                                                </tr>
+                                                                <tr style="display: none;" id="barbellLunge"
+                                                                    class="lunge">
+                                                                    <td id="lng" title="Barbell Lunge">Напад</td>
+                                                                    <td id="lng1"></td>
+                                                                    <td id="lng2"></td>
+                                                                    <td id="lng3"></td>
+                                                                    <td id="lng4"></td>
+                                                                    <td id="lng5"></td>
+                                                                    <td id="lng6"></td>
+                                                                    <td id="lng7"></td>
+                                                                    <td id="lng8"></td>
+                                                                    <td id="lng9"></td>
+                                                                    <td id="lng10"></td>
+                                                                </tr>
+                                                                <tr style="display: none;" id="renegadeRow"
+                                                                    class="renegade-row">
+                                                                    <td id="rr" title="Renegade Row">Ренегатско гребане
+                                                                    </td>
+                                                                    <td id="rr1"></td>
+                                                                    <td id="rr2"></td>
+                                                                    <td id="rr3"></td>
+                                                                    <td id="rr4"></td>
+                                                                    <td id="rr5"></td>
+                                                                    <td id="rr6"></td>
+                                                                    <td id="rr7"></td>
+                                                                    <td id="rr8"></td>
+                                                                    <td id="rr9"></td>
+                                                                    <td id="rr10"></td>
+                                                                </tr>
+                                                                <tr style="display: none;" id="bodyPullUps"
+                                                                    class="body-pull-up">
+                                                                    <td id="bpup" title="Weighted Pull-Up">Набиране</td>
+                                                                    <td id="bpup1"></td>
+                                                                    <td id="bpup2"></td>
+                                                                    <td id="bpup3"></td>
+                                                                    <td id="bpup4"></td>
+                                                                    <td id="bpup5"></td>
+                                                                    <td id="bpup6"></td>
+                                                                    <td id="bpup7"></td>
+                                                                    <td id="bpup8"></td>
+                                                                    <td id="bpup9"></td>
+                                                                    <td id="bpup10"></td>
+                                                                </tr>
+                                                                <tr style="display: none;" id="weightedPullUps"
+                                                                    class="pull-up">
+                                                                    <td id="pup" title="Weighted Pull-Up">Набиране</td>
+                                                                    <td id="pup1"></td>
+                                                                    <td id="pup2"></td>
+                                                                    <td id="pup3"></td>
+                                                                    <td id="pup4"></td>
+                                                                    <td id="pup5"></td>
+                                                                    <td id="pup6"></td>
+                                                                    <td id="pup7"></td>
+                                                                    <td id="pup8"></td>
+                                                                    <td id="pup9"></td>
+                                                                    <td id="pup10"></td>
+                                                                </tr>
+                                                                <tr style="display: none;" id="bodyDips"
+                                                                    class="body-dip">
                                                                     <td id="bdip" title="Weighted Dip">Кофи</td>
                                                                     <td id="bdip1"></td>
                                                                     <td id="bdip2"></td>
@@ -2535,95 +2978,126 @@
                                                                     <td id="bdip9"></td>
                                                                     <td id="bdip10"></td>
                                                                 </tr>
-                                                            <tr style="display: none;" id="weightedDips" class="dip">
-                                                                <td id="dip" title="Weighted Dip">Кофи</td>
-                                                                <td id="dip1"></td>
-                                                                <td id="dip2"></td>
-                                                                <td id="dip3"></td>
-                                                                <td id="dip4"></td>
-                                                                <td id="dip5"></td>
-                                                                <td id="dip6"></td>
-                                                                <td id="dip7"></td>
-                                                                <td id="dip8"></td>
-                                                                <td id="dip9"></td>
-                                                                <td id="dip10"></td>
-                                                            </tr>
-                                                            <tr style="display: none;" id="frontSquat"
-                                                                class="front-squat">
-                                                                <td id="fsq" title="Barbell Front Squat">Преден клек
-                                                                </td>
-                                                                <td id="fsq1"></td>
-                                                                <td id="fsq2"></td>
-                                                                <td id="fsq3"></td>
-                                                                <td id="fsq4"></td>
-                                                                <td id="fsq5"></td>
-                                                                <td id="fsq6"></td>
-                                                                <td id="fsq7"></td>
-                                                                <td id="fsq8"></td>
-                                                                <td id="fsq9"></td>
-                                                                <td id="fsq10"></td>
-                                                            </tr>
-                                                            <tr style="display: none;" id="sumoDeadlift"
-                                                                class="sumo-deadlift">
-                                                                <td id="sdl" title="Sumo Deadlift">
-                                                                    Сумо Тяга</td>
-                                                                <td id="sdl1"></td>
-                                                                <td id="sdl2"></td>
-                                                                <td id="sdl3"></td>
-                                                                <td id="sdl4"></td>
-                                                                <td id="sdl5"></td>
-                                                                <td id="sdl6"></td>
-                                                                <td id="sdl7"></td>
-                                                                <td id="sdl8"></td>
-                                                                <td id="sdl9"></td>
-                                                                <td id="sdl10"></td>
-                                                            </tr>
-                                                            <tr style="display: none;" id="pushPress"
-                                                                class="push-press">
-                                                                <td id="pp" title="Push Press">Пуш преса</td>
-                                                                <td id="pp1"></td>
-                                                                <td id="pp2"></td>
-                                                                <td id="pp3"></td>
-                                                                <td id="pp4"></td>
-                                                                <td id="pp5"></td>
-                                                                <td id="pp6"></td>
-                                                                <td id="pp7"></td>
-                                                                <td id="pp8"></td>
-                                                                <td id="pp9"></td>
-                                                                <td id="pp10"></td>
-                                                            </tr>
-                                                            <tr style="display: none;" id="bentOverRow"
-                                                                class="bent-over-row">
-                                                                <td id="bor" title="Bent Over Row">Гребане с щанга</td>
-                                                                <td id="bor1"></td>
-                                                                <td id="bor2"></td>
-                                                                <td id="bor3"></td>
-                                                                <td id="bor4"></td>
-                                                                <td id="bor5"></td>
-                                                                <td id="bor6"></td>
-                                                                <td id="bor7"></td>
-                                                                <td id="bor8"></td>
-                                                                <td id="bor9"></td>
-                                                                <td id="bor10"></td>
-                                                            </tr>
-                                                            <tr style="display: none;" id="goodMorning"
-                                                                class="good-morning">
-                                                                <td id="gm" title="Barbell Good Morning">Гуд морнинг
-                                                                </td>
-                                                                <td id="gm1"></td>
-                                                                <td id="gm2"></td>
-                                                                <td id="gm3"></td>
-                                                                <td id="gm4"></td>
-                                                                <td id="gm5"></td>
-                                                                <td id="gm6"></td>
-                                                                <td id="gm7"></td>
-                                                                <td id="gm8"></td>
-                                                                <td id="gm9"></td>
-                                                                <td id="gm10"></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                    <div id="ifbodyweight"></div>
+                                                                <tr style="display: none;" id="weightedDips"
+                                                                    class="dip">
+                                                                    <td id="dip" title="Weighted Dip">Кофи</td>
+                                                                    <td id="dip1"></td>
+                                                                    <td id="dip2"></td>
+                                                                    <td id="dip3"></td>
+                                                                    <td id="dip4"></td>
+                                                                    <td id="dip5"></td>
+                                                                    <td id="dip6"></td>
+                                                                    <td id="dip7"></td>
+                                                                    <td id="dip8"></td>
+                                                                    <td id="dip9"></td>
+                                                                    <td id="dip10"></td>
+                                                                </tr>
+                                                                <tr style="display: none;" id="frontSquat"
+                                                                    class="front-squat">
+                                                                    <td id="fsq" title="Barbell Front Squat">Преден клек
+                                                                    </td>
+                                                                    <td id="fsq1"></td>
+                                                                    <td id="fsq2"></td>
+                                                                    <td id="fsq3"></td>
+                                                                    <td id="fsq4"></td>
+                                                                    <td id="fsq5"></td>
+                                                                    <td id="fsq6"></td>
+                                                                    <td id="fsq7"></td>
+                                                                    <td id="fsq8"></td>
+                                                                    <td id="fsq9"></td>
+                                                                    <td id="fsq10"></td>
+                                                                </tr>
+                                                                <tr style="display: none;" id="sumoDeadlift"
+                                                                    class="sumo-deadlift">
+                                                                    <td id="sdl" title="Sumo Deadlift">
+                                                                        Сумо Тяга</td>
+                                                                    <td id="sdl1"></td>
+                                                                    <td id="sdl2"></td>
+                                                                    <td id="sdl3"></td>
+                                                                    <td id="sdl4"></td>
+                                                                    <td id="sdl5"></td>
+                                                                    <td id="sdl6"></td>
+                                                                    <td id="sdl7"></td>
+                                                                    <td id="sdl8"></td>
+                                                                    <td id="sdl9"></td>
+                                                                    <td id="sdl10"></td>
+                                                                </tr>
+                                                                <tr style="display: none;" id="Swing" class="swing">
+                                                                    <td id="sw" title="Swing">Суинг</td>
+                                                                    <td id="sw1"></td>
+                                                                    <td id="sw2"></td>
+                                                                    <td id="sw3"></td>
+                                                                    <td id="sw4"></td>
+                                                                    <td id="sw5"></td>
+                                                                    <td id="sw6"></td>
+                                                                    <td id="sw7"></td>
+                                                                    <td id="sw8"></td>
+                                                                    <td id="sw9"></td>
+                                                                    <td id="sw10"></td>
+                                                                </tr>
+                                                                <tr style="display: none;" id="pushPress"
+                                                                    class="push-press">
+                                                                    <td id="pp" title="Push Press">Пуш преса</td>
+                                                                    <td id="pp1"></td>
+                                                                    <td id="pp2"></td>
+                                                                    <td id="pp3"></td>
+                                                                    <td id="pp4"></td>
+                                                                    <td id="pp5"></td>
+                                                                    <td id="pp6"></td>
+                                                                    <td id="pp7"></td>
+                                                                    <td id="pp8"></td>
+                                                                    <td id="pp9"></td>
+                                                                    <td id="pp10"></td>
+                                                                </tr>
+                                                                <tr style="display: none;" id="bentOverRow"
+                                                                    class="bent-over-row">
+                                                                    <td id="bor" title="Bent Over Row">Гребане с щанга
+                                                                    </td>
+                                                                    <td id="bor1"></td>
+                                                                    <td id="bor2"></td>
+                                                                    <td id="bor3"></td>
+                                                                    <td id="bor4"></td>
+                                                                    <td id="bor5"></td>
+                                                                    <td id="bor6"></td>
+                                                                    <td id="bor7"></td>
+                                                                    <td id="bor8"></td>
+                                                                    <td id="bor9"></td>
+                                                                    <td id="bor10"></td>
+                                                                </tr>
+                                                                <tr style="display: none;" id="goodMorning"
+                                                                    class="good-morning">
+                                                                    <td id="gm" title="Barbell Good Morning">Добро утро
+                                                                    </td>
+                                                                    <td id="gm1"></td>
+                                                                    <td id="gm2"></td>
+                                                                    <td id="gm3"></td>
+                                                                    <td id="gm4"></td>
+                                                                    <td id="gm5"></td>
+                                                                    <td id="gm6"></td>
+                                                                    <td id="gm7"></td>
+                                                                    <td id="gm8"></td>
+                                                                    <td id="gm9"></td>
+                                                                    <td id="gm10"></td>
+                                                                </tr>
+                                                                <tr style="display: none;" id="overheadSquat"
+                                                                    class="overhead-squat">
+                                                                    <td id="ohsq" title="Barbell Overhead Squat">Клек с
+                                                                        щанга над глава</td>
+                                                                    <td id="ohsq1"></td>
+                                                                    <td id="ohsq2"></td>
+                                                                    <td id="ohsq3"></td>
+                                                                    <td id="ohsq4"></td>
+                                                                    <td id="ohsq5"></td>
+                                                                    <td id="ohsq6"></td>
+                                                                    <td id="ohsq7"></td>
+                                                                    <td id="ohsq8"></td>
+                                                                    <td id="ohsq9"></td>
+                                                                    <td id="ohsq10"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div id="ifbodyweight"></div>
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div>
@@ -2633,7 +3107,7 @@
                                                         <h4>Войници</h4>
                                                         <ul class="list-group">
                                                             <li class="bg-transparent"><img class="legend"
-                                                                    src="../static/images/1_2.png"> Вербован</li>
+                                                                    src="../static/images/1_2.png"> Вербуван</li>
                                                             <li class="bg-transparent"><img class="legend"
                                                                     src="../static/images/2_2.png"> Новобранец</li>
                                                             <li class="bg-transparent"><img class="legend"

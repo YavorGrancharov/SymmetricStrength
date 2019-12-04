@@ -82,25 +82,31 @@ let strengthController = (() => {
             let squat = document.getElementById("squat").value;
             let overhead_press = document.getElementById("overhead-press").value;
             let lunge = document.getElementById("lunge").value;
+            let renegade_row = document.getElementById("renegade-row").value;
             let pull_up = document.getElementById("pull-up").value;
             let dip = document.getElementById("dip").value;
             let front_squat = document.getElementById("front-squat").value;
             let sumo_deadlift = document.getElementById("sumo-deadlift").value;
+            let swing = document.getElementById("swing").value;
             let push_press = document.getElementById("push-press").value;
             let bent_over_row = document.getElementById("bent-over-row").value;
             let good_morning = document.getElementById("good-morning").value;
+            let overhead_squat = document.getElementById("overhead-squat").value;
 
             let deadlift_reps = document.getElementById("deadlift-reps").value;
             let squat_reps = document.getElementById("squat-reps").value;
             let overhead_press_reps = document.getElementById("overhead-press-reps").value;
             let lunge_reps = document.getElementById("lunge-reps").value;
+            let renegade_row_reps = document.getElementById("renegade-row-reps").value;
             let pull_up_reps = document.getElementById("pull-up-reps").value;
             let dip_reps = document.getElementById("dip-reps").value;
             let front_squat_reps = document.getElementById("front-squat-reps").value;
             let sumo_deadlift_reps = document.getElementById("sumo-deadlift-reps").value;
+            let swing_reps = document.getElementById("swing-reps").value;
             let push_press_reps = document.getElementById("push-press-reps").value;
             let bent_over_row_reps = document.getElementById("bent-over-row-reps").value;
             let good_morning_reps = document.getElementById("good-morning-reps").value;
+            let overhead_squat_reps = document.getElementById("overhead-squat-reps").value;
 
             let hidden = document.getElementById("hidden");
             let rank = document.getElementById("rank");
@@ -120,16 +126,19 @@ let strengthController = (() => {
             let sq = document.getElementById("user-squat").children;
             let mp = document.getElementById("user-militaryPress").children;
             let lng = document.getElementById("barbellLunge").children;
+            let frr = document.getElementById("renegadeRow").children;
             let pup = document.getElementById("weightedPullUps").children;
             let dips = document.getElementById("weightedDips").children;
             let fsq = document.getElementById("frontSquat").children;
             let sdl = document.getElementById("sumoDeadlift").children;
+            let sw = document.getElementById("Swing").children;
             let pp = document.getElementById("pushPress").children;
             let bor = document.getElementById("bentOverRow").children;
             let gm = document.getElementById("goodMorning").children;
+            let ohsq = document.getElementById("overheadSquat").children;
 
             let strengthIndexes = [0.25, 0.33, 0.42, 0.51, 0.6, 0.68, 0.76, 0.85, 0.92, 1];
-            let ranks = ["Вербован", "Новобранец", "Редник", "Ефрейтор", "Сержант", "Лейтенант", "Капитан", "Майор", "Полковник", "Генерал"];
+            let ranks = ["Вербуван", "Новобранец", "Редник", "Ефрейтор", "Сержант", "Лейтенант", "Капитан", "Майор", "Полковник", "Генерал"];
             let divisions = ["Зулу", "Зулу", "Зулу", "Зулу", "Лима", "Лима", "Лима", "Делта", "Делта", "Алфа"];
             let shoulder_mark = [
                 '../static/images/1_2.png', '../static/images/2_2.png', '../static/images/3_2.png',
@@ -143,25 +152,31 @@ let strengthController = (() => {
                 { name: "Клек", value: document.getElementById("squat"), reps: document.getElementById("squat-reps") },
                 { name: "Военна преса", value: document.getElementById("overhead-press"), reps: document.getElementById("overhead-press-reps") },
                 { name: "Напад", value: document.getElementById("lunge"), reps: document.getElementById("lunge-reps") },
+                { name: "Ренегатско гребане", value: document.getElementById("renegade-row"), reps: document.getElementById("renegade-row-reps") },
                 { name: "Набиране с тежест", value: document.getElementById("pull-up"), reps: document.getElementById("pull-up-reps") },
                 { name: "Кофи с тежест", value: document.getElementById("dip"), reps: document.getElementById("dip-reps") },
                 { name: "Преден клек", value: document.getElementById("front-squat"), reps: document.getElementById("front-squat-reps") },
                 { name: "Сумо тяга", value: document.getElementById("sumo-deadlift"), reps: document.getElementById("sumo-deadlift-reps") },
+                { name: "Суинг", value: document.getElementById("swing"), reps: document.getElementById("swing-reps") },
                 { name: "Пуш преса", value: document.getElementById("push-press"), reps: document.getElementById("push-press-reps") },
                 { name: "Гребане с щанга", value: document.getElementById("bent-over-row"), reps: document.getElementById("bent-over-row-reps") },
-                { name: "Гуд морнинг", value: document.getElementById("good-morning"), reps: document.getElementById("good-morning-reps") }
+                { name: "Добро утро", value: document.getElementById("good-morning"), reps: document.getElementById("good-morning-reps") },
+                { name: "Клек с щанга над глава", value: document.getElementById("overhead-squat"), reps: document.getElementById("overhead-squat-reps") },
             ];
 
-            let userChoice = ["Мъртва тяга", "Клек", "Военна преса", "Напад", "Набиране с тежест", "Кофи с тежест", "Преден клек", "Сумо тяга", "Пуш преса", "Гребане с щанга", "Гуд морнинг"]
+            let userChoice = ["Мъртва тяга", "Клек", "Военна преса", "Напад", "Ренегатско гребане", "Набиране с тежест", "Кофи с тежест", "Преден клек", "Сумо тяга", "Суинг", "Пуш преса", "Гребане с щанга", "Добро утро", "Клек с щанга над глава"]
 
             let movementsIndexes = [
                 { name: "Мъртва тяга", value: 1 }, { name: "Клек", value: 0.83 },
                 { name: "Военна преса", value: sex === 'male' ? 0.4 : 0.37 },
-                { name: "Напад", value: 0.7 }, { name: "Набиране с тежест", value: sex === 'male' ? 0.65 : 0.56 },
+                { name: "Напад", value: 0.7 }, { name: "Ренегатско гребане", value: 0.2 }, 
+                { name: "Набиране с тежест", value: sex === 'male' ? 0.65 : 0.56 },
                 { name: "Кофи с тежест", value: sex === 'male' ? 0.79 : 0.63 },
                 { name: "Преден клек", value: sex === 'male' ? 0.68 : 0.67 },
-                { name: "Сумо тяга", value: 0.95 }, { name: "Пуш преса", value: sex === 'male' ? 0.56 : 0.49 },
-                { name: "Гребане с щанга", value: 0.53 }, { name: "Гуд морнинг", value: 0.44 }
+                { name: "Сумо тяга", value: 0.95 }, { name: "Суинг", value: sex === 'male' ? 0.32 : 0.25 },
+                { name: "Пуш преса", value: sex === 'male' ? 0.56 : 0.49 },
+                { name: "Гребане с щанга", value: 0.53 }, { name: "Добро утро", value: 0.44 },
+                { name: "Клек с щанга над глава", value: sex === 'male' ? 0.56 : 0.51 }
             ];
 
             let realSet = [
@@ -169,13 +184,16 @@ let strengthController = (() => {
                 { name: "Клек", value: document.getElementById("real-squat"), reps: document.getElementById("real-squat-reps"), max: document.getElementById("real-squat-max") },
                 { name: "Военна преса", value: document.getElementById("real-overhead-press"), reps: document.getElementById("real-overhead-press-reps"), max: document.getElementById("real-overhead-press-max") },
                 { name: "Напад", value: document.getElementById("real-lunge"), reps: document.getElementById("real-lunge-reps"), max: document.getElementById("real-lunge-max") },
+                { name: "Ренегатско гребане", value: document.getElementById("real-renegade-row"), reps: document.getElementById("real-renegade-row-reps"), max: document.getElementById("real-renegade-row-max") },
                 { name: "Набиране с тежест", value: document.getElementById("real-pull-up"), reps: document.getElementById("real-pull-up-reps"), max: document.getElementById("real-pull-up-max") },
                 { name: "Кофи с тежест", value: document.getElementById("real-dip"), reps: document.getElementById("real-dip-reps"), max: document.getElementById("real-dip-max") },
                 { name: "Преден клек", value: document.getElementById("real-front-squat"), reps: document.getElementById("real-front-squat-reps"), max: document.getElementById("real-front-squat-max") },
                 { name: "Сумо тяга", value: document.getElementById("real-sumo-deadlift"), reps: document.getElementById("real-sumo-deadlift-reps"), max: document.getElementById("real-sumo-deadlift-max") },
+                { name: "Суинг", value: document.getElementById("real-swing"), reps: document.getElementById("real-swing-reps"), max: document.getElementById("real-swing-max") },
                 { name: "Пуш преса", value: document.getElementById("real-push-press"), reps: document.getElementById("real-push-press-reps"), max: document.getElementById("real-push-press-max") },
                 { name: "Гребане с щанга", value: document.getElementById("real-bent-over-row"), reps: document.getElementById("real-bent-over-row-reps"), max: document.getElementById("real-bent-over-row-max") },
-                { name: "Гуд морнинг", value: document.getElementById("real-good-morning"), reps: document.getElementById("real-good-morning-reps"), max: document.getElementById("real-good-morning-max") }
+                { name: "Добро утро", value: document.getElementById("real-good-morning"), reps: document.getElementById("real-good-morning-reps"), max: document.getElementById("real-good-morning-max") },
+                { name: "Клек с щанга над глава", value: document.getElementById("real-overhead-squat"), reps: document.getElementById("real-overhead-squat-reps"), max: document.getElementById("real-overhead-squat-max") },
             ];
 
             let idealSet = [
@@ -183,13 +201,16 @@ let strengthController = (() => {
                 { name: "Клек", value: document.getElementById("ideal-squat"), reps: document.getElementById("ideal-squat-reps"), max: document.getElementById("ideal-squat-max") },
                 { name: "Военна преса", value: document.getElementById("ideal-overhead-press"), reps: document.getElementById("ideal-overhead-press-reps"), max: document.getElementById("ideal-overhead-press-max") },
                 { name: "Напад", value: document.getElementById("ideal-lunge"), reps: document.getElementById("ideal-lunge-reps"), max: document.getElementById("ideal-lunge-max") },
+                { name: "Ренегатско гребане", value: document.getElementById("ideal-renegade-row"), reps: document.getElementById("ideal-renegade-row-reps"), max: document.getElementById("ideal-renegade-row-max") },
                 { name: "Набиране с тежест", value: document.getElementById("ideal-pull-up"), reps: document.getElementById("ideal-pull-up-reps"), max: document.getElementById("ideal-pull-up-max") },
                 { name: "Кофи с тежест", value: document.getElementById("ideal-dip"), reps: document.getElementById("ideal-dip-reps"), max: document.getElementById("ideal-dip-max") },
                 { name: "Преден клек", value: document.getElementById("ideal-front-squat"), reps: document.getElementById("ideal-front-squat-reps"), max: document.getElementById("ideal-front-squat-max") },
                 { name: "Сумо тяга", value: document.getElementById("ideal-sumo-deadlift"), reps: document.getElementById("ideal-sumo-deadlift-reps"), max: document.getElementById("ideal-sumo-deadlift-max") },
+                { name: "Суинг", value: document.getElementById("ideal-swing"), reps: document.getElementById("ideal-swing-reps"), max: document.getElementById("ideal-swing-max") },
                 { name: "Пуш преса", value: document.getElementById("ideal-push-press"), reps: document.getElementById("ideal-push-press-reps"), max: document.getElementById("ideal-push-press-max") },
                 { name: "Гребане с щанга", value: document.getElementById("ideal-bent-over-row"), reps: document.getElementById("ideal-bent-over-row-reps"), max: document.getElementById("ideal-bent-over-row-max") },
-                { name: "Гуд морнинг", value: document.getElementById("ideal-good-morning"), reps: document.getElementById("ideal-good-morning-reps"), max: document.getElementById("ideal-good-morning-max") }
+                { name: "Добро утро", value: document.getElementById("ideal-good-morning"), reps: document.getElementById("ideal-good-morning-reps"), max: document.getElementById("ideal-good-morning-max") },
+                { name: "Клек с щанга над глава", value: document.getElementById("ideal-overhead-squat"), reps: document.getElementById("ideal-overhead-squat-reps"), max: document.getElementById("ideal-overhead-squat-max") },
             ];
 
             let nextLevelSet = [
@@ -197,13 +218,16 @@ let strengthController = (() => {
                 { name: "Клек", value: document.getElementById("next-level-squat"), reps: document.getElementById("next-level-squat-reps"), max: document.getElementById("next-level-squat-max") },
                 { name: "Военна преса", value: document.getElementById("next-level-overhead-press"), reps: document.getElementById("next-level-overhead-press-reps"), max: document.getElementById("next-level-overhead-press-max") },
                 { name: "Напад", value: document.getElementById("next-level-lunge"), reps: document.getElementById("next-level-lunge-reps"), max: document.getElementById("next-level-lunge-max") },
+                { name: "Ренегатско гребане", value: document.getElementById("next-level-renegade-row"), reps: document.getElementById("next-level-renegade-row-reps"), max: document.getElementById("next-level-renegade-row-max") },
                 { name: "Набиране с тежест", value: document.getElementById("next-level-pull-up"), reps: document.getElementById("next-level-pull-up-reps"), max: document.getElementById("next-level-pull-up-max") },
                 { name: "Кофи с тежест", value: document.getElementById("next-level-dip"), reps: document.getElementById("next-level-dip-reps"), max: document.getElementById("next-level-dip-max") },
                 { name: "Преден клек", value: document.getElementById("next-level-front-squat"), reps: document.getElementById("next-level-front-squat-reps"), max: document.getElementById("next-level-front-squat-max") },
                 { name: "Сумо тяга", value: document.getElementById("next-level-sumo-deadlift"), reps: document.getElementById("next-level-sumo-deadlift-reps"), max: document.getElementById("next-level-sumo-deadlift-max") },
+                { name: "Суинг", value: document.getElementById("next-level-swing"), reps: document.getElementById("next-level-swing-reps"), max: document.getElementById("next-level-swing-max") },
                 { name: "Пуш преса", value: document.getElementById("next-level-push-press"), reps: document.getElementById("next-level-push-press-reps"), max: document.getElementById("next-level-push-press-max") },
                 { name: "Гребане с щанга", value: document.getElementById("next-level-bent-over-row"), reps: document.getElementById("next-level-bent-over-row-reps"), max: document.getElementById("next-level-bent-over-row-max") },
-                { name: "Гуд морнинг", value: document.getElementById("next-level-good-morning"), reps: document.getElementById("next-level-good-morning-reps"), max: document.getElementById("next-level-good-morning-max") }
+                { name: "Добро утро", value: document.getElementById("next-level-good-morning"), reps: document.getElementById("next-level-good-morning-reps"), max: document.getElementById("next-level-good-morning-max") },
+                { name: "Клек с щанга над глава", value: document.getElementById("next-level-overhead-squat"), reps: document.getElementById("next-level-overhead-squat-reps"), max: document.getElementById("next-level-overhead-squat-max") },
             ];
 
             let perfectSet = [
@@ -211,13 +235,16 @@ let strengthController = (() => {
                 { name: "Клек", value: document.getElementById("perfect-level-squat"), reps: document.getElementById("perfect-level-squat-reps"), max: document.getElementById("perfect-level-squat-max") },
                 { name: "Военна преса", value: document.getElementById("perfect-level-overhead-press"), reps: document.getElementById("perfect-level-overhead-press-reps"), max: document.getElementById("perfect-level-overhead-press-max") },
                 { name: "Напад", value: document.getElementById("perfect-level-lunge"), reps: document.getElementById("perfect-level-lunge-reps"), max: document.getElementById("perfect-level-lunge-max") },
+                { name: "Ренегатско гребане", value: document.getElementById("perfect-level-renegade-row"), reps: document.getElementById("perfect-level-renegade-row-reps"), max: document.getElementById("perfect-level-renegade-row-max") },
                 { name: "Набиране с тежест", value: document.getElementById("perfect-level-pull-up"), reps: document.getElementById("perfect-level-pull-up-reps"), max: document.getElementById("perfect-level-pull-up-max") },
                 { name: "Кофи с тежест", value: document.getElementById("perfect-level-dip"), reps: document.getElementById("perfect-level-dip-reps"), max: document.getElementById("perfect-level-dip-max") },
                 { name: "Преден клек", value: document.getElementById("perfect-level-front-squat"), reps: document.getElementById("perfect-level-front-squat-reps"), max: document.getElementById("perfect-level-front-squat-max") },
                 { name: "Сумо тяга", value: document.getElementById("perfect-level-sumo-deadlift"), reps: document.getElementById("perfect-level-sumo-deadlift-reps"), max: document.getElementById("perfect-level-sumo-deadlift-max") },
+                { name: "Суинг", value: document.getElementById("perfect-level-swing"), reps: document.getElementById("perfect-level-swing-reps"), max: document.getElementById("perfect-level-swing-max") },
                 { name: "Пуш преса", value: document.getElementById("perfect-level-push-press"), reps: document.getElementById("perfect-level-push-press-reps"), max: document.getElementById("perfect-level-push-press-max") },
                 { name: "Гребане с щанга", value: document.getElementById("perfect-level-bent-over-row"), reps: document.getElementById("perfect-level-bent-over-row-reps"), max: document.getElementById("perfect-level-bent-over-row-max") },
-                { name: "Гуд морнинг", value: document.getElementById("perfect-level-good-morning"), reps: document.getElementById("perfect-level-good-morning-reps"), max: document.getElementById("perfect-level-good-morning-max") }
+                { name: "Добро утро", value: document.getElementById("perfect-level-good-morning"), reps: document.getElementById("perfect-level-good-morning-reps"), max: document.getElementById("perfect-level-good-morning-max") },
+                { name: "Клек с щанга над глава", value: document.getElementById("perfect-level-overhead-squat"), reps: document.getElementById("perfect-level-overhead-squat-reps"), max: document.getElementById("perfect-level-overhead-squat-max") },
             ];
 
             let ideal_moves = [
@@ -230,6 +257,7 @@ let strengthController = (() => {
                         : (overhead_press / getIntensity(overhead_press_reps)) / 0.37
                 },
                 { name: "Напад", value: (lunge / getIntensity(lunge_reps)) / 0.7 },
+                { name: "Ренегатско гребане", value: (renegade_row / getIntensity(renegade_row_reps)) / 0.2 },
                 {
                     name: "Набиране с тежест",
                     value: sex === 'male'
@@ -250,6 +278,12 @@ let strengthController = (() => {
                 },
                 { name: "Сумо тяга", value: (sumo_deadlift / getIntensity(sumo_deadlift_reps)) / 0.95 },
                 {
+                    name: "Суинг",
+                    value: sex === 'male'
+                        ? (swing / getIntensity(swing_reps)) / 0.32
+                        : (swing / getIntensity(swing_reps)) / 0.25
+                },
+                {
                     name: "Пуш преса",
                     value: sex === 'male'
                         ? (push_press / getIntensity(push_press_reps)) / 0.56
@@ -261,7 +295,13 @@ let strengthController = (() => {
                         ? (bent_over_row / getIntensity(bent_over_row_reps)) / 0.53
                         : (bent_over_row / getIntensity(bent_over_row_reps)) / 0.53
                 },
-                { name: "Гуд морнинг", value: (good_morning / getIntensity(good_morning_reps)) / 0.44 }
+                { name: "Добро утро", value: (good_morning / getIntensity(good_morning_reps)) / 0.44 },
+                {
+                    name: "Клек с щанга над глава",
+                    value: sex === 'male'
+                        ? (overhead_squat / getIntensity(overhead_squat_reps)) / 0.56
+                        : (overhead_squat / getIntensity(overhead_squat_reps)) / 0.51
+                }
             ];
 
             let perfect_moves = [
@@ -290,6 +330,12 @@ let strengthController = (() => {
                         : (femaleRealDeadlift * 0.7 * getIntensity(lunge_reps))
                 },
                 {
+                    name: "Ренегатско гребане",
+                    value: sex === 'male'
+                        ? (maleRealDeadlift * 0.2 * getIntensity(renegade_row_reps))
+                        : (femaleRealDeadlift * 0.2 * getIntensity(renegade_row_reps))
+                },
+                {
                     name: "Набиране с тежест",
                     value: sex === 'male'
                         ? (maleRealDeadlift * 0.65 * getIntensity(pull_up_reps))
@@ -314,6 +360,12 @@ let strengthController = (() => {
                         : (femaleRealDeadlift * 0.95 * getIntensity(sumo_deadlift_reps))
                 },
                 {
+                    name: "Суинг",
+                    value: sex === 'male'
+                        ? (maleRealDeadlift * 0.32 * getIntensity(swing_reps))
+                        : (femaleRealDeadlift * 0.25 * getIntensity(swing_reps))
+                },
+                {
                     name: "Пуш преса",
                     value: sex === 'male'
                         ? (maleRealDeadlift * 0.56 * getIntensity(push_press_reps))
@@ -326,11 +378,17 @@ let strengthController = (() => {
                         : (femaleRealDeadlift * 0.53 * getIntensity(bent_over_row_reps))
                 },
                 {
-                    name: "Гуд морнинг",
+                    name: "Добро утро",
                     value: sex === 'male'
                         ? (maleRealDeadlift * 0.44 * getIntensity(good_morning_reps))
                         : (femaleRealDeadlift * 0.44 * getIntensity(good_morning_reps))
-                }
+                },
+                {
+                    name: "Клек с щанга над глава",
+                    value: sex === 'male'
+                        ? (maleRealDeadlift * 0.56 * getIntensity(overhead_squat_reps))
+                        : (femaleRealDeadlift * 0.51 * getIntensity(overhead_squat_reps))
+                },
             ];
 
             let realTRows = document.getElementById("real-hidden-div").querySelectorAll("tr");
@@ -459,7 +517,7 @@ let strengthController = (() => {
             for (let i = 0; i < strengthIndexes.length; i++) {
                 if (sex === 'male') {
                     if (currentLevel.toFixed(2) < strengthIndexes[i].toFixed(2)) {
-                        if ((maleRealDeadlift * strengthIndexes[i]) <= idealMax) {
+                        if ((maleRealDeadlift * strengthIndexes[i]) < idealMax) {
                             nextLevelDeadlift = maleRealDeadlift * strengthIndexes[counter];
                             nextLevelRank = ranks[counter];
                             nextLevelDivision = divisions[counter];
@@ -515,8 +573,6 @@ let strengthController = (() => {
                     }
                 }
             }
-            console.log(nextLevelDeadlift)
-            console.log(idealMax)
 
             let relativeDeadlift = 0;
             if (idealMax > (deadlift / getIntensity(deadlift_reps))) {
@@ -524,9 +580,9 @@ let strengthController = (() => {
             } else {
                 relativeDeadlift = deadlift / getIntensity(deadlift_reps);
             }
-            console.log(relativeDeadlift)
-            let fill = document.getElementById("fill");
-            let fill2 = document.getElementById("fill2");
+
+            // let fill = document.getElementById("fill");
+            // let fill2 = document.getElementById("fill2");
             for (let i = 0; i < userChoice.length; i++) {
                 for (let j = 0; j < labels.length; j++) {
                     if (userChoice[i] === labels[j]) {
@@ -594,6 +650,7 @@ let strengthController = (() => {
                     sq[i].innerHTML = (Math.round((maleRealDeadlift * 0.83 * strengthIndexes[i - 1]) * getIntensity(squat_reps))).toString();
                     mp[i].innerHTML = (Math.round((maleRealDeadlift * 0.4 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
                     lng[i].innerHTML = (Math.round((maleRealDeadlift * 0.7 * strengthIndexes[i - 1]) * getIntensity(lunge_reps))).toString();
+                    frr[i].innerHTML = (Math.round((maleRealDeadlift * 0.2 * strengthIndexes[i - 1]) * getIntensity(renegade_row_reps))).toString();
                     if((Math.round((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))) > 0) {
                         pup[i].innerHTML = (Math.round((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
                         if(pull_up) {
@@ -609,14 +666,17 @@ let strengthController = (() => {
                     }                   
                     fsq[i].innerHTML = (Math.round((maleRealDeadlift * 0.68 * strengthIndexes[i - 1]) * getIntensity(front_squat_reps))).toString();
                     sdl[i].innerHTML = (Math.round((maleRealDeadlift * 0.95 * strengthIndexes[i - 1]) * getIntensity(sumo_deadlift_reps))).toString();
+                    sw[i].innerHTML = (Math.round((maleRealDeadlift * 0.32 * strengthIndexes[i - 1]) * getIntensity(swing_reps))).toString();
                     pp[i].innerHTML = (Math.round((maleRealDeadlift * 0.56 * strengthIndexes[i - 1]) * getIntensity(push_press_reps))).toString();
                     bor[i].innerHTML = (Math.round((maleRealDeadlift * 0.53 * strengthIndexes[i - 1]) * getIntensity(bent_over_row_reps))).toString();
                     gm[i].innerHTML = (Math.round((maleRealDeadlift * 0.44 * strengthIndexes[i - 1]) * getIntensity(good_morning_reps))).toString();
+                    ohsq[i].innerHTML = (Math.round((maleRealDeadlift * 0.56 * strengthIndexes[i - 1]) * getIntensity(overhead_squat_reps))).toString();
                 } else {
                     dl[i].innerHTML = (Math.round((femaleRealDeadlift * strengthIndexes[i - 1]) * getIntensity(deadlift_reps))).toString();
                     sq[i].innerHTML = (Math.round((femaleRealDeadlift * 0.83 * strengthIndexes[i - 1]) * getIntensity(squat_reps))).toString();
                     mp[i].innerHTML = (Math.round((femaleRealDeadlift * 0.37 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
                     lng[i].innerHTML = (Math.round((femaleRealDeadlift * 0.7 * strengthIndexes[i - 1]) * getIntensity(lunge_reps))).toString();
+                    frr[i].innerHTML = (Math.round((femaleRealDeadlift * 0.2 * strengthIndexes[i - 1]) * getIntensity(renegade_row_reps))).toString();
                     if((Math.round((((femaleRealDeadlift * 0.56 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))) > 0) {
                         pup[i].innerHTML = (Math.round((((femaleRealDeadlift * 0.56 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
                         if(pull_up) {
@@ -632,9 +692,11 @@ let strengthController = (() => {
                     }  
                     fsq[i].innerHTML = (Math.round((femaleRealDeadlift * 0.67 * strengthIndexes[i - 1]) * getIntensity(front_squat_reps))).toString();
                     sdl[i].innerHTML = (Math.round((femaleRealDeadlift * 0.95 * strengthIndexes[i - 1]) * getIntensity(sumo_deadlift_reps))).toString();
+                    sw[i].innerHTML = (Math.round((femaleRealDeadlift * 0.25 * strengthIndexes[i - 1]) * getIntensity(swing_reps))).toString();
                     pp[i].innerHTML = (Math.round((femaleRealDeadlift * 0.49 * strengthIndexes[i - 1]) * getIntensity(push_press_reps))).toString();
                     bor[i].innerHTML = (Math.round((femaleRealDeadlift * 0.53 * strengthIndexes[i - 1]) * getIntensity(bent_over_row_reps))).toString();
                     gm[i].innerHTML = (Math.round((femaleRealDeadlift * 0.44 * strengthIndexes[i - 1]) * getIntensity(good_morning_reps))).toString();
+                    ohsq[i].innerHTML = (Math.round((femaleRealDeadlift * 0.51 * strengthIndexes[i - 1]) * getIntensity(overhead_squat_reps))).toString();
                 }
             }
             // for (let i = 0; i < userInput.length; i++) {
@@ -679,7 +741,7 @@ let strengthController = (() => {
                             datasets: [
                                 {
                                     label: "",
-                                    backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                    backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
                                     data: idealData,
                                     color: "#ffffff"
                                 }
@@ -728,7 +790,7 @@ let strengthController = (() => {
                             datasets: [
                                 {
                                     label: "",
-                                    backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                    backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
                                     data: nextLevelData,
                                     color: "#ffffff"
                                 }
@@ -777,7 +839,7 @@ let strengthController = (() => {
                             datasets: [
                                 {
                                     label: "",
-                                    backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                    backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
                                     data: perfectLevelData,
                                     color: "#ffffff"
                                 }

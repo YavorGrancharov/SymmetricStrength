@@ -23,7 +23,7 @@
     <title>Strength Hall</title>
     <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
     <link rel="canonical" href="https://www.athleticstandard.org/views/strength_hall.html" />
-    <link rel="stylesheet" href="../styles/styles.min.css" media="all">
+    <link rel="stylesheet" href="../styles/styles.css" media="all">
     <link rel="stylesheet" href="../styles/libs/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="../styles/libs/font-awesome.min.css" type="text/css" media="all">
     <link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
@@ -289,17 +289,6 @@
                                                                     aria-hidden="true"></i></button>
                                                         </td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>7</td>
-                                                        <td>М. Томас</td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td style="border: none">
-                                                            <button type="button" data-toggle="modal"
-                                                                data-target="#markThomas"><i class="fa fa-bar-chart"
-                                                                    aria-hidden="true"></i></button>
-                                                        </td>
-                                                    </tr>
                                                 </tbody>
                                                 <tfoot>
                                                     <tr>
@@ -328,23 +317,23 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>1</td>
-                                                        <td>М. Василева</td>
-                                                        <td>капитан</td>
+                                                        <td>М. Райчева</td>
+                                                        <td>Редник</td>
                                                         <td></td>
                                                         <td style="border: none">
                                                             <button type="button" data-toggle="modal"
-                                                                data-target="#emilBogdanov"><i class="fa fa-bar-chart"
+                                                                data-target="#magiRaicheva"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>2</td>
-                                                        <td>М. Райчева</td>
-                                                        <td>Сержант</td>
-                                                        <td></td>
+                                                        <td>М. Василева</td>
+                                                        <td>Новобранец</td>
+                                                        <td>Зулу</td>
                                                         <td style="border: none">
                                                             <button type="button" data-toggle="modal"
-                                                                data-target="#emilBogdanov"><i class="fa fa-bar-chart"
+                                                                data-target="#mariaVasileva"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
                                                     </tr>
@@ -355,7 +344,7 @@
                                                         <td></td>
                                                         <td style="border: none">
                                                             <button type="button" data-toggle="modal"
-                                                                data-target="#emilBogdanov"><i class="fa fa-bar-chart"
+                                                                data-target="#lusiKostova"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
                                                     </tr>
@@ -366,18 +355,18 @@
                                                         <td></td>
                                                         <td style="border: none;">
                                                             <button type="button" data-toggle="modal"
-                                                                data-target="#emilBogdanov"><i class="fa fa-bar-chart"
+                                                                data-target="#loraMarkova"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>5</td>
                                                         <td>И. Георгиева</td>
-                                                        <td></td>
-                                                        <td></td>
+                                                        <td>Вербуван</td>
+                                                        <td>Зулу</td>
                                                         <td style="border: none;">
                                                             <button type="button" data-toggle="modal"
-                                                                data-target="#emilBogdanov"><i class="fa fa-bar-chart"
+                                                                data-target="#irinaGeorgieva"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
                                                     </tr>
@@ -399,7 +388,7 @@
                                                         <td></td>
                                                         <td style="border: none;">
                                                             <button type="button" data-toggle="modal"
-                                                                data-target="#emilBogdanov"><i class="fa fa-bar-chart"
+                                                                data-target="#bogiVateva"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
                                                     </tr>
@@ -860,12 +849,12 @@
                         new Chart((chartIvan), {
                             type: 'horizontalBar',
                             data: {
-                                labels: ["Мъртва тяга", "Клек", "Военна преса", "Напади", "Набиране", "Преден клек", "Пуш преса", "Гребане с щанга", "Добро утро"],
+                                labels: ["Мъртва тяга", "Клек", "Военна преса", "Напади", "Сумо тяга", "Гребане с щанга", "Добро утро"],
                                 datasets: [
                                     {
                                         label: "",
                                         backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
-                                        data: [-52, -57, -36, -65, 0, -131, -70, -80, -67],
+                                        data: [-4, -22, 0, -22, -11, -2, -27],
                                         color: "#ffffff"
                                     }
                                 ]
@@ -899,6 +888,243 @@
             </div>
         </div>
     </div>
+
+    <!-- Krasi Kostov Modal -->
+    <div class="modal" id="krasiKostov">
+        <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">К. Костов
+                        <small> (176см. 70кг. 55г.)</small>
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <canvas style="display: block" class="text-center"
+                                    id="bar-chart-horizontal-krasi"></canvas>
+                            </div>
+                        </div>
+                        <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения
+                            спрямо
+                            текущото най-силно
+                        </small>
+                    </div>
+                    <script type="text/javascript">
+                        let chartKrasi = document.getElementById("bar-chart-horizontal-krasi");
+                        let f = window.matchMedia("(max-width: 480px)");
+                        myFunction(f);
+                        f.addListener(myFunction);
+                        new Chart((chartKrasi), {
+                            type: 'horizontalBar',
+                            data: {
+                                labels: ["Мъртва тяга", "Клек", "Военна преса", "Напади", "Добро утро"],
+                                datasets: [
+                                    {
+                                        label: "",
+                                        backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                        data: [-3, -4, 0, -76, -35],
+                                        color: "#ffffff"
+                                    }
+                                ]
+                            },
+                            options: {
+                                responsive: true,
+                                legend: {
+                                    display: false
+                                },
+                                title: {
+                                    display: true,
+                                    text: "графика на равновесието"
+                                }
+                            }
+                        });
+
+                        function myFunction(f) {
+                            if (f.matches) {
+                                chartKrasi.height = window.innerHeight;
+                                chartKrasi.width = window.innerWidth;
+                            }
+                        }
+                    </script>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Затвори</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Maria Vasileva Modal -->
+    <div class="modal" id="mariaVasileva">
+        <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">М. Василева
+                        <small> (170см. 59кг. 22г.)</small>
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <canvas style="display: block" class="text-center"
+                                    id="bar-chart-horizontal-mvasileva"></canvas>
+                            </div>
+                        </div>
+                        <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения
+                            спрямо
+                            текущото най-силно
+                        </small>
+                    </div>
+                    <script type="text/javascript">
+                        let chartMVasileva = document.getElementById("bar-chart-horizontal-mvasileva");
+                        let m = window.matchMedia("(max-width: 480px)");
+                        myFunction(m);
+                        m.addListener(myFunction);
+                        new Chart((chartMVasileva), {
+                            type: 'horizontalBar',
+                            data: {
+                                labels: ["Мъртва тяга", "Клек", "Военна преса", "Напади", "Преден клек", "Сумо тяга", "Пуш преса", "Гребане с щанга", "Добро утро"],
+                                datasets: [
+                                    {
+                                        label: "",
+                                        backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                        data: [-24, -42, 0, -37, -31, -35, -32, -44, 0],
+                                        color: "#ffffff"
+                                    }
+                                ]
+                            },
+                            options: {
+                                responsive: true,
+                                legend: {
+                                    display: false
+                                },
+                                title: {
+                                    display: true,
+                                    text: "графика на равновесието"
+                                }
+                            }
+                        });
+
+                        function myFunction(m) {
+                            if (m.matches) {
+                                chartMVasileva.height = window.innerHeight;
+                                chartMVasileva.width = window.innerWidth;
+                            }
+                        }
+                    </script>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Затвори</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Magi Raicheva Modal -->
+    <div class="modal" id="magiRaicheva">
+        <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">М. Райчева
+                        <small> (174см. 74кг. 15г.)</small>
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <canvas style="display: block" class="text-center"
+                                    id="bar-chart-horizontal-mraicheva"></canvas>
+                            </div>
+                        </div>
+                        <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения
+                            спрямо
+                            текущото най-силно
+                        </small>
+                    </div>
+                    <script type="text/javascript">
+                        let chartMagi = document.getElementById("bar-chart-horizontal-mraicheva");
+                        let l = window.matchMedia("(max-width: 480px)");
+                        myFunction(l);
+                        l.addListener(myFunction);
+                        new Chart((chartMagi), {
+                            type: 'horizontalBar',
+                            data: {
+                                labels: ["Мъртва тяга", "Клек", "Военна преса", "Напади", "Добро утро"],
+                                datasets: [
+                                    {
+                                        label: "",
+                                        backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                        data: [-3, -4, 0, -76, -35],
+                                        color: "#ffffff"
+                                    }
+                                ]
+                            },
+                            options: {
+                                responsive: true,
+                                legend: {
+                                    display: false
+                                },
+                                title: {
+                                    display: true,
+                                    text: "графика на равновесието"
+                                }
+                            }
+                        });
+
+                        function myFunction(l) {
+                            if (l.matches) {
+                                chartMagi.height = window.innerHeight;
+                                chartMagi.width = window.innerWidth;
+                            }
+                        }
+                    </script>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Затвори</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <!-- Scripts -->
     <script src="../js/libs/jquery-1.12.4.min.js"></script>
     <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
@@ -915,7 +1141,7 @@
         $(document).ready(function () {
             $('#men, #women').DataTable({
                 "language": {
-                    "search": "Търси по име:",
+                    "search": "Търси по фамилия:",
                     "lengthMenu": 'Покажи: <select>' +
                         '<option value="10">10</option>' +
                         '<option value="25">25</option>' +
