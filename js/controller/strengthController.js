@@ -644,6 +644,8 @@ let strengthController = (() => {
             }
             // pup[i].innerHTML = Math.round((maleRealDeadlift * strengthIndexes[i - 1] * 0.65) - (Number(body_weight) + ((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight))))).toString() + 'п'
             let onlyReps = document.getElementById("ifbodyweight");
+            let userLevel = document.getElementById("user-info");
+            userLevel.innerHTML = `Силов показател: ${(((currentLevel * 100) / 2.5) * 2.5).toFixed(1)} / 100`;
             for (let i = 1; i < 11; i++) {
                 if (sex === "male") {
                     dl[i].innerHTML = (Math.round((maleRealDeadlift * strengthIndexes[i - 1]) * getIntensity(deadlift_reps))).toString();
