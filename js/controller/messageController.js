@@ -45,7 +45,7 @@ let messageController = (() => {
                     alert( "Удостоверете с тикче квадратчето 'Не съм робот'" );
                     return;
                 } else {
-                    messageService.sendMessage(author, date, email, phone, message).then(() => {
+                    messageService.sendMessage(author, date, email, message).then(() => {
                         alert("Благодарим Ви за изпратеното съобщение! Ще се свържем с Вас при първа възможност!");
                     });
                 }
