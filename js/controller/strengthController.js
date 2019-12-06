@@ -169,7 +169,7 @@ let strengthController = (() => {
             let movementsIndexes = [
                 { name: "Мъртва тяга", value: 1 }, { name: "Клек", value: 0.83 },
                 { name: "Военна преса", value: sex === 'male' ? 0.4 : 0.37 },
-                { name: "Напад", value: 0.7 }, { name: "Ренегатско гребане", value: 0.2 }, 
+                { name: "Напад", value: 0.7 }, { name: "Ренегатско гребане", value: 0.2 },
                 { name: "Набиране с тежест", value: sex === 'male' ? 0.65 : 0.56 },
                 { name: "Кофи с тежест", value: sex === 'male' ? 0.79 : 0.63 },
                 { name: "Преден клек", value: sex === 'male' ? 0.68 : 0.67 },
@@ -465,6 +465,7 @@ let strengthController = (() => {
             }
 
             let currentLevel = 0;
+            let nextLevel = 0;
             let idealMax = Number.MIN_SAFE_INTEGER;
             let idealMaxName = '';
             let idealMin = Number.MAX_SAFE_INTEGER;
@@ -473,7 +474,7 @@ let strengthController = (() => {
                 for (let j = 0; j < labels.length; j++) {
                     if (userChoice[i] === labels[j]) {
                         if (labels[j] === 'Набиране с тежест' || labels[j] === 'Кофи с тежест') {
-                            currentLevel += (Number(userInput[i].value.value) + Number(body_weight)) / perfect_moves[i].value
+                            currentLevel += (Number(userInput[i].value.value) + Number(body_weight)) / perfect_moves[i].value;
                             if (ideal_moves[i].value > idealMax) {
                                 idealMax = ideal_moves[i].value;
                                 idealMaxName = ideal_moves[i].name;
@@ -484,7 +485,7 @@ let strengthController = (() => {
                             }
                             continue
                         }
-                        currentLevel += userInput[i].value.value / perfect_moves[i].value
+                        currentLevel += userInput[i].value.value / perfect_moves[i].value;
                         if (ideal_moves[i].value > idealMax) {
                             idealMax = ideal_moves[i].value;
                             idealMaxName = ideal_moves[i].name;
@@ -497,7 +498,7 @@ let strengthController = (() => {
                 }
             }
             currentLevel /= labels.length;
-            console.log(currentLevel.toFixed(2))
+            console.log(roundUpIfDotNine(currentLevel * 100))
 
             let counter = 0;
             strengthIndexes.forEach(function (el) {
@@ -516,7 +517,7 @@ let strengthController = (() => {
             let imgPosNext;
             for (let i = 0; i < strengthIndexes.length; i++) {
                 if (sex === 'male') {
-                    if (currentLevel.toFixed(2) < strengthIndexes[i].toFixed(2)) {
+                    if (roundUpIfDotNine(currentLevel * 100) < strengthIndexes[i] * 100) {
                         if ((maleRealDeadlift * strengthIndexes[i]) < idealMax) {
                             nextLevelDeadlift = maleRealDeadlift * strengthIndexes[counter];
                             nextLevelRank = ranks[counter];
@@ -544,7 +545,7 @@ let strengthController = (() => {
                         nextLevelDivision = divisions[strengthIndexes.length - 1];
                     }
                 } else {
-                    if (currentLevel.toFixed(2) < strengthIndexes[i].toFixed(2)) {
+                    if (roundUpIfDotNine(currentLevel * 100) < strengthIndexes[i] * 100) {
                         if ((femaleRealDeadlift * strengthIndexes[i]) < idealMax) {
                             nextLevelDeadlift = femaleRealDeadlift * strengthIndexes[i + 1];
                             nextLevelRank = ranks[i + 1];
@@ -582,7 +583,7 @@ let strengthController = (() => {
             }
 
             // let fill = document.getElementById("fill");
-            // let fill2 = document.getElementById("fill2");
+            let fill2 = document.getElementById("fill2");
             for (let i = 0; i < userChoice.length; i++) {
                 for (let j = 0; j < labels.length; j++) {
                     if (userChoice[i] === labels[j]) {
@@ -645,7 +646,16 @@ let strengthController = (() => {
             // pup[i].innerHTML = Math.round((maleRealDeadlift * strengthIndexes[i - 1] * 0.65) - (Number(body_weight) + ((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight))))).toString() + 'п'
             let onlyReps = document.getElementById("ifbodyweight");
             let userLevel = document.getElementById("user-info");
-            userLevel.innerHTML = `Силов показател: ${(((currentLevel * 100) / 2.5) * 2.5).toFixed(1)} / 100`;
+            let userNextLevel = document.getElementById("user-info2")
+            userLevel.innerHTML = `Сила: ${Math.trunc(roundUpIfDotNine(currentLevel * 100))} точки от 100`;
+            let nextIndex = 0;
+            for (let i = 0; i < strengthIndexes.length; i++) {
+                if (strengthIndexes[i] * 100 >= currentLevel * 100) {
+                    nextIndex = strengthIndexes[i];
+                    break;
+                }
+            }
+            userNextLevel.innerHTML = `Точки за следващо ниво: ${nextIndex * 100}`;
             for (let i = 1; i < 11; i++) {
                 if (sex === "male") {
                     dl[i].innerHTML = (Math.round((maleRealDeadlift * strengthIndexes[i - 1]) * getIntensity(deadlift_reps))).toString();
@@ -653,19 +663,19 @@ let strengthController = (() => {
                     mp[i].innerHTML = (Math.round((maleRealDeadlift * 0.4 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
                     lng[i].innerHTML = (Math.round((maleRealDeadlift * 0.7 * strengthIndexes[i - 1]) * getIntensity(lunge_reps))).toString();
                     frr[i].innerHTML = (Math.round((maleRealDeadlift * 0.2 * strengthIndexes[i - 1]) * getIntensity(renegade_row_reps))).toString();
-                    if((Math.round((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))) > 0) {
+                    if ((Math.round((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))) > 0) {
                         pup[i].innerHTML = (Math.round((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
-                        if(pull_up) {
+                        if (pull_up) {
                             onlyReps.innerHTML = '* добавена тежест за горен скрипец'
                         }
                     } else {
                         pup[i].innerHTML = (Math.round((((maleRealDeadlift * 0.65 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)) + Number(body_weight) * 0.93)).toString() + "*";
                     }
-                    if((Math.round((((maleRealDeadlift * 0.79 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))) > 0) {
+                    if ((Math.round((((maleRealDeadlift * 0.79 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))) > 0) {
                         dips[i].innerHTML = (Math.round((((maleRealDeadlift * 0.79 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
                     } else {
                         dips[i].innerHTML = '';
-                    }                   
+                    }
                     fsq[i].innerHTML = (Math.round((maleRealDeadlift * 0.68 * strengthIndexes[i - 1]) * getIntensity(front_squat_reps))).toString();
                     sdl[i].innerHTML = (Math.round((maleRealDeadlift * 0.95 * strengthIndexes[i - 1]) * getIntensity(sumo_deadlift_reps))).toString();
                     sw[i].innerHTML = (Math.round((maleRealDeadlift * 0.32 * strengthIndexes[i - 1]) * getIntensity(swing_reps))).toString();
@@ -679,19 +689,19 @@ let strengthController = (() => {
                     mp[i].innerHTML = (Math.round((femaleRealDeadlift * 0.37 * strengthIndexes[i - 1]) * getIntensity(overhead_press_reps))).toString();
                     lng[i].innerHTML = (Math.round((femaleRealDeadlift * 0.7 * strengthIndexes[i - 1]) * getIntensity(lunge_reps))).toString();
                     frr[i].innerHTML = (Math.round((femaleRealDeadlift * 0.2 * strengthIndexes[i - 1]) * getIntensity(renegade_row_reps))).toString();
-                    if((Math.round((((femaleRealDeadlift * 0.56 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))) > 0) {
+                    if ((Math.round((((femaleRealDeadlift * 0.56 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))) > 0) {
                         pup[i].innerHTML = (Math.round((((femaleRealDeadlift * 0.56 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
-                        if(pull_up) {
+                        if (pull_up) {
                             onlyReps.innerHTML = '* добавена тежест за горен скрипец'
                         }
                     } else {
                         pup[i].innerHTML = (Math.round((((femaleRealDeadlift * 0.56 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)) + Number(body_weight) * 0.93)).toString() + "*";
                     }
-                    if((Math.round((((femaleRealDeadlift * 0.63 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))) > 0) {
+                    if ((Math.round((((femaleRealDeadlift * 0.63 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))) > 0) {
                         dips[i].innerHTML = (Math.round((((femaleRealDeadlift * 0.63 * strengthIndexes[i - 1]) * getIntensity(pull_up_reps)) - Number(body_weight)))).toString();
                     } else {
                         dips[i].innerHTML = '';
-                    }  
+                    }
                     fsq[i].innerHTML = (Math.round((femaleRealDeadlift * 0.67 * strengthIndexes[i - 1]) * getIntensity(front_squat_reps))).toString();
                     sdl[i].innerHTML = (Math.round((femaleRealDeadlift * 0.95 * strengthIndexes[i - 1]) * getIntensity(sumo_deadlift_reps))).toString();
                     sw[i].innerHTML = (Math.round((femaleRealDeadlift * 0.25 * strengthIndexes[i - 1]) * getIntensity(swing_reps))).toString();
@@ -701,18 +711,18 @@ let strengthController = (() => {
                     ohsq[i].innerHTML = (Math.round((femaleRealDeadlift * 0.51 * strengthIndexes[i - 1]) * getIntensity(overhead_squat_reps))).toString();
                 }
             }
-            // for (let i = 0; i < userInput.length; i++) {
-            //     if (userInput[i].value.value) {
-            //         fill.addEventListener("click", function (event) {
-            //             event.preventDefault();
-            //             userInput[i].value.value = Math.round(((relativeDeadlift * getIntensity(idealSet[i].reps.value)) * movementsIndexes[i].value));
-            //         })
-            //         fill2.addEventListener("click", function (event) {
-            //             event.preventDefault();
-            //             userInput[i].value.value = Math.round((nextLevelDeadlift * getIntensity(userInput[i].reps.value)) * movementsIndexes[i].value);
-            //         })
-            //     }
-            // }
+            for (let i = 0; i < userInput.length; i++) {
+                if (userInput[i].value.value) {
+                    // fill.addEventListener("click", function (event) {
+                    //     event.preventDefault();
+                    //     userInput[i].value.value = Math.round(((relativeDeadlift * getIntensity(idealSet[i].reps.value)) * movementsIndexes[i].value));
+                    // })
+                    // fill2.addEventListener("click", function (event) {
+                    //     event.preventDefault();
+                    //     userInput[i].value.value = Math.round((nextLevelDeadlift * getIntensity(userInput[i].reps.value)) * movementsIndexes[i].value);
+                    // })
+                }
+            }
             console.log(labels)
 
             let idealChartBtn = document.getElementById("idealChartBtn");
@@ -914,6 +924,17 @@ let strengthController = (() => {
             77: 1.918, 78: 1.961, 79: 2.005, 80: 2.05, "default": 1
         };
         return (ageIndex[age] || ageIndex["default"]);
+    }
+
+    function roundUpIfDotNine(number) {
+
+        let radix = number % 1.0;
+        if( radix > 0.675 && radix < 1.0 ) {
+            return Math.round(number);
+        }
+        else {
+            return number;
+        }
     }
 
     return {
