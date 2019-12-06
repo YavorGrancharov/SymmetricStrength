@@ -1813,8 +1813,8 @@ td:nth-child(5){
     height: auto;
     width: 20px;
 }
-.selectpicker {
-    font-size: 100px;
+.option {
+    font-size: 15px !important;
 }
 #real-balance > tbody > tr:nth-child(1) > td:nth-child(2), 
 #real-balance > tbody > tr:nth-child(1) > td:nth-child(3),
