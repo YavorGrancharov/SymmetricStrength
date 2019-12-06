@@ -523,7 +523,7 @@ let strengthController = (() => {
                             nextLevelRank = ranks[counter];
                             nextLevelDivision = divisions[counter];
                             imgPosNext = counter;
-                            info.innerHTML = `Тъй като стойността на текущото най-силно движение е по-голяма от изискванията за следващо ниво, в таблицата "Следващо ниво" вместо за ${ranks[i]}, са изведени стойностите за ${ranks[counter]}!`
+                            // info.innerHTML = `Тъй като стойността на текущото най-силно движение е по-голяма от изискванията за следващо ниво, в таблицата "Следващо ниво" вместо за ${ranks[i]}, са изведени стойностите за ${ranks[counter]}!`
                         } else {
                             nextLevelDeadlift = maleRealDeadlift * strengthIndexes[i]
                             nextLevelRank = ranks[i];
@@ -551,7 +551,7 @@ let strengthController = (() => {
                             nextLevelRank = ranks[i + 1];
                             nextLevelDivision = divisions[i + 1];
                             imgPosNext = i + 1;
-                            info.innerHTML = `Тъй като стойността на текущото най-силно движение е по-голяма от изискванията за следващо ниво, в таблицата "Следващо ниво" вместо за ${ranks[i]}, са изведени стойностите за ${ranks[counter]}!`
+                            // info.innerHTML = `Тъй като стойността на текущото най-силно движение е по-голяма от изискванията за следващо ниво, в таблицата "Следващо ниво" вместо за ${ranks[i]}, са изведени стойностите за ${ranks[counter]}!`
                         } else {
                             nextLevelDeadlift = femaleRealDeadlift * strengthIndexes[i]
                             nextLevelRank = ranks[i];
@@ -647,10 +647,10 @@ let strengthController = (() => {
             let onlyReps = document.getElementById("ifbodyweight");
             let userLevel = document.getElementById("user-info");
             let userNextLevel = document.getElementById("user-info2")
-            userLevel.innerHTML = `Сила: ${Math.trunc(roundUpIfDotNine(currentLevel * 100))} точки от 100`;
+            userLevel.innerHTML = `Сила: ${Math.trunc(roundUpIfDotNine(currentLevel * 100))} от 100 точки`;
             let nextIndex = 0;
             for (let i = 0; i < strengthIndexes.length; i++) {
-                if (strengthIndexes[i] * 100 >= currentLevel * 100) {
+                if (strengthIndexes[i] * 100 > roundUpIfDotNine(currentLevel * 100)) {
                     nextIndex = strengthIndexes[i];
                     break;
                 }
@@ -717,10 +717,10 @@ let strengthController = (() => {
                     //     event.preventDefault();
                     //     userInput[i].value.value = Math.round(((relativeDeadlift * getIntensity(idealSet[i].reps.value)) * movementsIndexes[i].value));
                     // })
-                    // fill2.addEventListener("click", function (event) {
-                    //     event.preventDefault();
-                    //     userInput[i].value.value = Math.round((nextLevelDeadlift * getIntensity(userInput[i].reps.value)) * movementsIndexes[i].value);
-                    // })
+                    fill2.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        userInput[i].value.value = Math.round((nextLevelDeadlift * getIntensity(userInput[i].reps.value)) * movementsIndexes[i].value);
+                    })
                 }
             }
             console.log(labels)
