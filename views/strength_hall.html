@@ -291,6 +291,36 @@
                                                     </tr>
                                                     <tr>
                                                         <td>5</td>
+                                                        <td>М. Томас</td>
+                                                        <td>Редник</td>
+                                                        <td>Зулу</td>
+                                                        <td>45/100</td>
+                                                        <td>Кофи</td>
+                                                        <td>Ренегатско гребане</td>
+                                                        <td>
+                                                            <button type="button" data-toggle="modal"
+                                                                data-target="#markThomas"><i class="fa fa-bar-chart"
+                                                                    aria-hidden="true"></i></button>
+                                                        </td>
+                                                        <td>Неактивен</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Д. Василев</td>
+                                                        <td>Редник</td>
+                                                        <td>Зулу</td>
+                                                        <td>42/100</td>
+                                                        <td>Кофи</td>
+                                                        <td>Ренегатско гребане</td>
+                                                        <td>
+                                                            <button type="button" data-toggle="modal"
+                                                                data-target="#deyanVasilev"><i class="fa fa-bar-chart"
+                                                                    aria-hidden="true"></i></button>
+                                                        </td>
+                                                        <td>Неактивен</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
                                                         <td>И. Стоянов</td>
                                                         <td>Редник</td>
                                                         <td>Зулу</td>
@@ -305,7 +335,7 @@
                                                         <td>Активен</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>6</td>
+                                                        <td>8</td>
                                                         <td>К. Костов</td>
                                                         <td>Новобранец</td>
                                                         <td>Зулу</td>
@@ -447,6 +477,21 @@
                                                     </tr>
                                                     <tr>
                                                         <td>7</td>
+                                                        <td>Л. Петрова</td>
+                                                        <td>Новобранец</td>
+                                                        <td>Зулу</td>
+                                                        <td>37/100</td>
+                                                        <td>Суинг</td>
+                                                        <td>Преден клек</td>
+                                                        <td>
+                                                            <button type="button" data-toggle="modal"
+                                                                data-target="#lusiPetrova"><i class="fa fa-bar-chart"
+                                                                    aria-hidden="true"></i></button>
+                                                        </td>
+                                                        <td>Неактивен</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
                                                         <td>М. Вълова</td>
                                                         <td>Новобранец</td>
                                                         <td>Зулу</td>
@@ -461,7 +506,22 @@
                                                         <td>Активен</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>8</td>
+                                                        <td>9</td>
+                                                        <td>М. Георгиева</td>
+                                                        <td>Новобранец</td>
+                                                        <td>Зулу</td>
+                                                        <td>36/100</td>
+                                                        <td>Суинг</td>
+                                                        <td>Сумо тяга</td>
+                                                        <td>
+                                                            <button type="button" data-toggle="modal"
+                                                                data-target="#mariaGeorgieva"><i class="fa fa-bar-chart"
+                                                                    aria-hidden="true"></i></button>
+                                                        </td>
+                                                        <td>Неактивен</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
                                                         <td>Л. Костова</td>
                                                         <td>Новобранец</td>
                                                         <td>Зулу</td>
@@ -476,7 +536,7 @@
                                                         <td>Активен</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>9</td>
+                                                        <td>11</td>
                                                         <td>Л. Начкова</td>
                                                         <td>Новобранец</td>
                                                         <td>Зулу</td>
@@ -491,7 +551,7 @@
                                                         <td>Активен</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>10</td>
+                                                        <td>12</td>
                                                         <td>Л. Вълова</td>
                                                         <td>Вербуван</td>
                                                         <td>Зулу</td>
@@ -903,6 +963,164 @@
                             if (d.matches) {
                                 chartDani.height = window.innerHeight;
                                 chartDani.width = window.innerWidth;
+                            }
+                        }
+                    </script>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Затвори</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Mark Thomas Modal -->
+    <div class="modal" id="markThomas">
+        <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">М. Томас
+                        <small> (175см. 80кг. 57г.)</small>
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <canvas style="display: block" class="text-center"
+                                    id="bar-chart-horizontal-mark"></canvas>
+                            </div>
+                        </div>
+                        <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения
+                            спрямо
+                            текущото най-силно
+                        </small>
+                    </div>
+                    <script type="text/javascript">
+                        let chartMark = document.getElementById("bar-chart-horizontal-mark");
+                        let s = window.matchMedia("(max-width: 480px)");
+                        myFunction(s);
+                        s.addListener(myFunction);
+                        new Chart((chartMark), {
+                            type: 'horizontalBar',
+                            data: {
+                                labels: ["Напади", "Ренегатско гребане", "Кофи с тежест", "Сумо тяга", "Суинг"],
+                                datasets: [
+                                    {
+                                        label: "",
+                                        backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                        data: [-150, -175, 0, -20, -21],
+                                        color: "#ffffff"
+                                    }
+                                ]
+                            },
+                            options: {
+                                responsive: true,
+                                legend: {
+                                    display: false
+                                },
+                                title: {
+                                    display: true,
+                                    text: "графика на равновесието"
+                                }
+                            }
+                        });
+
+                        function myFunction(s) {
+                            if (s.matches) {
+                                chartMark.height = window.innerHeight;
+                                chartMark.width = window.innerWidth;
+                            }
+                        }
+                    </script>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Затвори</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Deyan Vasilev Modal -->
+    <div class="modal" id="deyanVasilev">
+        <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Д. Василев
+                        <small> (178см. 75кг. 32г.)</small>
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <canvas style="display: block" class="text-center"
+                                    id="bar-chart-horizontal-dvasilev"></canvas>
+                            </div>
+                        </div>
+                        <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения
+                            спрямо
+                            текущото най-силно
+                        </small>
+                    </div>
+                    <script type="text/javascript">
+                        let chartDVasilev = document.getElementById("bar-chart-horizontal-dvasilev");
+                        let u = window.matchMedia("(max-width: 480px)");
+                        myFunction(u);
+                        u.addListener(myFunction);
+                        new Chart((chartDVasilev), {
+                            type: 'horizontalBar',
+                            data: {
+                                labels: ["Мъртва тяга", "Клек", "Военна преса", "Напади", "Ренегатско гребане", "Кофи с тежест", "Преден клек", "Сумо тяга", "Суинг", "Пуш преса", "Гребане с щанга", "Добро утро"],
+                                datasets: [
+                                    {
+                                        label: "",
+                                        backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                        data: [-24, -24, -20, -23, -110, 0, -29, -11, -42, -47, -60, -53],
+                                        color: "#ffffff"
+                                    }
+                                ]
+                            },
+                            options: {
+                                responsive: true,
+                                legend: {
+                                    display: false
+                                },
+                                title: {
+                                    display: true,
+                                    text: "графика на равновесието"
+                                }
+                            }
+                        });
+
+                        function myFunction(u) {
+                            if (u.matches) {
+                                chartDVasilev.height = window.innerHeight;
+                                chartDVasilev.width = window.innerWidth;
                             }
                         }
                     </script>
@@ -1549,6 +1767,85 @@
         </div>
     </div>
 
+    <!-- Ludmila Petrova Modal -->
+    <div class="modal" id="lusiPetrova">
+        <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Л. Петрова
+                        <small> (163см. 48кг. 22г.)</small>
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <canvas style="display: block" class="text-center"
+                                    id="bar-chart-horizontal-lpetrova"></canvas>
+                            </div>
+                        </div>
+                        <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения
+                            спрямо
+                            текущото най-силно
+                        </small>
+                    </div>
+                    <script type="text/javascript">
+                        let chartLPetrova = document.getElementById("bar-chart-horizontal-lpetrova");
+                        let o = window.matchMedia("(max-width: 480px)");
+                        myFunction(o);
+                        o.addListener(myFunction);
+                        new Chart((chartLPetrova), {
+                            type: 'horizontalBar',
+                            data: {
+                                labels: ["Мъртва тяга", "Клек", "Военна преса", "Преден клек", "Суинг", "Добро утро"],
+                                datasets: [
+                                    {
+                                        label: "",
+                                        backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                        data: [-26, -14, -20, -21, -28, 0, -5],
+                                        color: "#ffffff"
+                                    }
+                                ]
+                            },
+                            options: {
+                                responsive: true,
+                                legend: {
+                                    display: false
+                                },
+                                title: {
+                                    display: true,
+                                    text: "графика на равновесието"
+                                }
+                            }
+                        });
+
+                        function myFunction(o) {
+                            if (o.matches) {
+                                chartLPetrova.height = window.innerHeight;
+                                chartLPetrova.width = window.innerWidth;
+                            }
+                        }
+                    </script>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Затвори</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <!-- Maria Valova Modal -->
     <div class="modal" id="mariaValova">
         <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
@@ -1614,6 +1911,85 @@
                             if (w.matches) {
                                 chartValova.height = window.innerHeight;
                                 chartValova.width = window.innerWidth;
+                            }
+                        }
+                    </script>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Затвори</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Maria Georgieva Modal -->
+    <div class="modal" id="mariaGeorgieva">
+        <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Л. Костова
+                        <small> (170см. 57кг. 52г.)</small>
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <canvas style="display: block" class="text-center"
+                                    id="bar-chart-horizontal-mgeorgieva"></canvas>
+                            </div>
+                        </div>
+                        <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения
+                            спрямо
+                            текущото най-силно
+                        </small>
+                    </div>
+                    <script type="text/javascript">
+                        let chartMGeorgieva = document.getElementById("bar-chart-horizontal-mgeorgieva");
+                        let v = window.matchMedia("(max-width: 480px)");
+                        myFunction(v);
+                        v.addListener(myFunction);
+                        new Chart((chartMGeorgieva), {
+                            type: 'horizontalBar',
+                            data: {
+                                labels: ["Мъртва тяга", "Клек", "Напади", "Сумо тяга", "Суинг", "Добро утро"],
+                                datasets: [
+                                    {
+                                        label: "",
+                                        backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                        data: [-33, -39, -36, -52, 0, -12],
+                                        color: "#ffffff"
+                                    }
+                                ]
+                            },
+                            options: {
+                                responsive: true,
+                                legend: {
+                                    display: false
+                                },
+                                title: {
+                                    display: true,
+                                    text: "графика на равновесието"
+                                }
+                            }
+                        });
+
+                        function myFunction(v) {
+                            if (v.matches) {
+                                chartMGeorgieva.height = window.innerHeight;
+                                chartMGeorgieva.width = window.innerWidth;
                             }
                         }
                     </script>
