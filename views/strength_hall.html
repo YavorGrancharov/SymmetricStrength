@@ -23,10 +23,12 @@
     <title>Strength Hall</title>
     <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
     <link rel="canonical" href="https://www.athleticstandard.org/views/strength_hall.html" />
-    <link rel="stylesheet" href="../styles/styles.min.css" media="all">
+    <link rel="stylesheet" href="../styles/styles.css" media="all">
     <link rel="stylesheet" href="../styles/libs/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="../styles/libs/font-awesome.min.css" type="text/css" media="all">
     <link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+    <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
     </style>
     <style id="antiClickjack">
         body {
@@ -211,18 +213,19 @@
 
                                         <h3>Класиране мъже</h3>
                                         <div class="table-responsive" style="border: none">
-                                            <table id="men" class="table table-bordered table-striped">
-                                                <caption hidden>показани са първите 10</caption>
+                                            <table id="men" class="table borderless table-striped">
+                                                <caption hidden>показани са първите 5</caption>
                                                 <thead>
                                                     <tr>
                                                         <th>Място</th>
                                                         <th>Име</th>
                                                         <th>Звание</th>
                                                         <th>Дивизия</th>
-                                                        <th>Сила</th>
+                                                        <th>Баланс</th>
                                                         <th>Най-силно</th>
                                                         <th>Най-слабо</th>
-                                                        <th type="hidden"></th>
+                                                        <th>Графика</th>
+                                                        <th>Статус</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -234,11 +237,12 @@
                                                         <td>67/100</td>
                                                         <td>Напади</td>
                                                         <td>Клек с щанга над глава</td>
-                                                        <td style="border: none">
+                                                        <td>
                                                             <button type="button" data-toggle="modal"
                                                                 data-target="#luboKrustev"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
+                                                        <td>Активен</td>
                                                     </tr>
                                                     <tr>
                                                         <td>2</td>
@@ -248,11 +252,12 @@
                                                         <td>61/100</td>
                                                         <td>Набиране</td>
                                                         <td>Клек с щанга над глава</td>
-                                                        <td style="border: none">
+                                                        <td>
                                                             <button type="button" data-toggle="modal"
                                                                 data-target="#emilBogdanov"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
+                                                        <td>Активен</td>
                                                     </tr>
                                                     <tr>
                                                         <td>3</td>
@@ -262,11 +267,12 @@
                                                         <td>49/100</td>
                                                         <td>Кофи</td>
                                                         <td>Ренегатско гребане</td>
-                                                        <td style="border: none">
+                                                        <td>
                                                             <button type="button" data-toggle="modal"
                                                                 data-target="#zdravkoRaichev"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
+                                                        <td>Активен</td>
                                                     </tr>
                                                     <tr>
                                                         <td>4</td>
@@ -276,11 +282,12 @@
                                                         <td>47/100</td>
                                                         <td>Набиране</td>
                                                         <td>Ренегатско гребане</td>
-                                                        <td style="border: none">
+                                                        <td>
                                                             <button type="button" data-toggle="modal"
                                                                 data-target="#daniVatkov"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
+                                                        <td>Активен</td>
                                                     </tr>
                                                     <tr>
                                                         <td>5</td>
@@ -290,25 +297,27 @@
                                                         <td>42/100</td>
                                                         <td>Военна преса</td>
                                                         <td>Напад</td>
-                                                        <td style="border: none">
+                                                        <td>
                                                             <button type="button" data-toggle="modal"
                                                                 data-target="#ivanStoyanov"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
+                                                        <td>Активен</td>
                                                     </tr>
                                                     <tr>
                                                         <td>6</td>
                                                         <td>К. Костов</td>
                                                         <td>Новобранец</td>
                                                         <td>Зулу</td>
-                                                        <td>67/100</td>
-                                                        <td>Зулу</td>
-                                                        <td>67/100</td>
-                                                        <td style="border: none">
+                                                        <td>39/100</td>
+                                                        <td>Военна преса</td>
+                                                        <td>Напад</td>
+                                                        <td>
                                                             <button type="button" data-toggle="modal"
                                                                 data-target="#krasiKostov"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
+                                                        <td>Активен</td>
                                                     </tr>
                                                 </tbody>
                                                 <tfoot>
@@ -317,9 +326,11 @@
                                                         <th>Име</th>
                                                         <th>Звание</th>
                                                         <th>Дивизия</th>
-                                                        <th>Сила</th>
+                                                        <th>Баланс</th>
                                                         <th>Най-силно</th>
                                                         <th>Най-слабо</th>
+                                                        <th>Графика</th>
+                                                        <th>Статус</th>
                                                     </tr>
                                                 </tfoot>
                                             </table>
@@ -327,119 +338,172 @@
 
                                         <h3>Класиране жени</h3>
                                         <div class="table-responsive" style="border: none">
-                                            <table id="women" class="table table-bordered table-striped">
-                                                <caption hidden>показани са първите 10</caption>
+                                            <table id="women" class="table borderless table-striped">
+                                                <caption hidden>показани са първите 5</caption>
                                                 <thead>
                                                     <tr>
                                                         <th>Място</th>
                                                         <th>Име</th>
                                                         <th>Звание</th>
                                                         <th>Дивизия</th>
-                                                        <th>Силов баланс</th>
+                                                        <th>Баланс</th>
                                                         <th>Най-силно</th>
                                                         <th>Най-слабо</th>
-                                                        <th type="hidden"></th>
+                                                        <th>Графика</th>
+                                                        <th>Статус</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td>1</td>
+                                                        <td>С. Андреева</td>
+                                                        <td>Редник</td>
+                                                        <td>Зулу</td>
+                                                        <td>50/100</td>
+                                                        <td>Военна преса</td>
+                                                        <td>Напад</td>
+                                                        <td>
+                                                            <button type="button" data-toggle="modal"
+                                                                data-target="#stasiAndreeva"><i class="fa fa-bar-chart"
+                                                                    aria-hidden="true"></i></button>
+                                                        </td>
+                                                        <td>Неактивен</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
                                                         <td>Б. Вътева</td>
                                                         <td>Редник</td>
                                                         <td>Зулу</td>
                                                         <td>44/100</td>
                                                         <td>Суинг</td>
                                                         <td>Клек с щанга над глава</td>
-                                                        <td style="border: none;">
+                                                        <td>
                                                             <button type="button" data-toggle="modal"
                                                                 data-target="#bogiVateva"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
+                                                        <td>Активен</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>2</td>
+                                                        <td>3</td>
                                                         <td>М. Райчева</td>
                                                         <td>Редник</td>
                                                         <td>Зулу</td>
                                                         <td>43/100</td>
                                                         <td>Пуш преса</td>
                                                         <td>Ренегатско гребане</td>
-                                                        <td style="border: none">
+                                                        <td>
                                                             <button type="button" data-toggle="modal"
                                                                 data-target="#magiRaicheva"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
+                                                        <td>Активен</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>3</td>
+                                                        <td>4</td>
                                                         <td>М. Василева</td>
                                                         <td>Новобранец</td>
                                                         <td>Зулу</td>
                                                         <td>40/100</td>
                                                         <td>Добро утро</td>
                                                         <td>Клек с щанга над глава</td>
-                                                        <td style="border: none">
+                                                        <td>
                                                             <button type="button" data-toggle="modal"
                                                                 data-target="#mariaVasileva"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
+                                                        <td>Активен</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>4</td>
+                                                        <td>5</td>
                                                         <td>В. Захариева</td>
                                                         <td>Новобранец</td>
                                                         <td>Зулу</td>
                                                         <td>39/100</td>
                                                         <td>Военна преса</td>
                                                         <td>Напад</td>
-                                                        <td style="border: none;">
+                                                        <td>
                                                             <button type="button" data-toggle="modal"
                                                                 data-target="#veselaZaharieva"><i
                                                                     class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
+                                                        <td>Активен</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>5</td>
+                                                        <td>6</td>
                                                         <td>И. Георгиева</td>
                                                         <td>Новобранец</td>
                                                         <td>Зулу</td>
                                                         <td>38/100</td>
                                                         <td>Суинг</td>
                                                         <td>Клек</td>
-                                                        <td style="border: none;">
+                                                        <td>
                                                             <button type="button" data-toggle="modal"
                                                                 data-target="#irinaGeorgieva"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
+                                                        <td>Активен</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>6</td>
+                                                        <td>7</td>
+                                                        <td>М. Вълова</td>
+                                                        <td>Новобранец</td>
+                                                        <td>Зулу</td>
+                                                        <td>36/100</td>
+                                                        <td>Суинг</td>
+                                                        <td>Напад</td>
+                                                        <td>
+                                                            <button type="button" data-toggle="modal"
+                                                                data-target="#mariaValova"><i class="fa fa-bar-chart"
+                                                                    aria-hidden="true"></i></button>
+                                                        </td>
+                                                        <td>Активен</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
                                                         <td>Л. Костова</td>
                                                         <td>Новобранец</td>
                                                         <td>Зулу</td>
                                                         <td>33/100</td>
                                                         <td>Суинг</td>
                                                         <td>Напад</td>
-                                                        <td style="border: none">
+                                                        <td>
                                                             <button type="button" data-toggle="modal"
                                                                 data-target="#lusiKostova"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
+                                                        <td>Активен</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>7</td>
+                                                        <td>9</td>
                                                         <td>Л. Начкова</td>
                                                         <td>Новобранец</td>
                                                         <td>Зулу</td>
                                                         <td>33/100</td>
                                                         <td>Добро утро</td>
                                                         <td>Напад</td>
-                                                        <td style="border: none;">
+                                                        <td>
                                                             <button type="button" data-toggle="modal"
                                                                 data-target="#loraNachkova"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
+                                                        <td>Активен</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>Л. Вълова</td>
+                                                        <td>Вербуван</td>
+                                                        <td>Зулу</td>
+                                                        <td>25/100</td>
+                                                        <td>Суинг</td>
+                                                        <td>Напад</td>
+                                                        <td>
+                                                            <button type="button" data-toggle="modal"
+                                                                data-target="#lubaValova"><i class="fa fa-bar-chart"
+                                                                    aria-hidden="true"></i></button>
+                                                        </td>
+                                                        <td>Активен</td>
                                                     </tr>
                                                 </tbody>
                                                 <tfoot>
@@ -448,9 +512,11 @@
                                                         <th>Име</th>
                                                         <th>Звание</th>
                                                         <th>Дивизия</th>
-                                                        <th>Силов баланс</th>
+                                                        <th>Баланс</th>
                                                         <th>Най-силно</th>
                                                         <th>Най-слабо</th>
+                                                        <th>Графика</th>
+                                                        <th>Статус</th>
                                                     </tr>
                                                 </tfoot>
                                             </table>
@@ -969,12 +1035,12 @@
                         new Chart((chartKrasi), {
                             type: 'horizontalBar',
                             data: {
-                                labels: ["Мъртва тяга", "Клек", "Военна преса", "Напади", "Добро утро"],
+                                labels: ["Мъртва тяга", "Клек", "Военна преса", "Напади", "Суинг", "Добро утро"],
                                 datasets: [
                                     {
                                         label: "",
                                         backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
-                                        data: [-3, -4, 0, -76, -35],
+                                        data: [-3, -4, 0, -47, 0, -8],
                                         color: "#ffffff"
                                     }
                                 ]
@@ -995,6 +1061,85 @@
                             if (f.matches) {
                                 chartKrasi.height = window.innerHeight;
                                 chartKrasi.width = window.innerWidth;
+                            }
+                        }
+                    </script>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Затвори</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Stasi Andreeva Modal -->
+    <div class="modal" id="stasiAndreeva">
+        <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">С. Андреева
+                        <small> (170см. 63кг. 25г.)</small>
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <canvas style="display: block" class="text-center"
+                                    id="bar-chart-horizontal-stasi"></canvas>
+                            </div>
+                        </div>
+                        <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения
+                            спрямо
+                            текущото най-силно
+                        </small>
+                    </div>
+                    <script type="text/javascript">
+                        let chartStasi = document.getElementById("bar-chart-horizontal-stasi");
+                        let z = window.matchMedia("(max-width: 480px)");
+                        myFunction(z);
+                        z.addListener(myFunction);
+                        new Chart((chartStasi), {
+                            type: 'horizontalBar',
+                            data: {
+                                labels: ["Мъртва тяга", "Клек", "Военна преса", "Напади", "Суинг", "Пуш преса", "Гребане с щанга", "Добро утро"],
+                                datasets: [
+                                    {
+                                        label: "",
+                                        backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                        data: [-16, -22, 0, -33, 0, -14, -23, -3],
+                                        color: "#ffffff"
+                                    }
+                                ]
+                            },
+                            options: {
+                                responsive: true,
+                                legend: {
+                                    display: false
+                                },
+                                title: {
+                                    display: true,
+                                    text: "графика на равновесието"
+                                }
+                            }
+                        });
+
+                        function myFunction(z) {
+                            if (z.matches) {
+                                chartStasi.height = window.innerHeight;
+                                chartStasi.width = window.innerWidth;
                             }
                         }
                     </script>
@@ -1404,6 +1549,85 @@
         </div>
     </div>
 
+    <!-- Maria Valova Modal -->
+    <div class="modal" id="mariaValova">
+        <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">М. Вълова
+                        <small> (165см. 61кг. 49г.)</small>
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <canvas style="display: block" class="text-center"
+                                    id="bar-chart-horizontal-valova"></canvas>
+                            </div>
+                        </div>
+                        <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения
+                            спрямо
+                            текущото най-силно
+                        </small>
+                    </div>
+                    <script type="text/javascript">
+                        let chartValova = document.getElementById("bar-chart-horizontal-valova");
+                        let w = window.matchMedia("(max-width: 480px)");
+                        myFunction(w);
+                        w.addListener(myFunction);
+                        new Chart((chartValova), {
+                            type: 'horizontalBar',
+                            data: {
+                                labels: ["Мъртва тяга", "Клек", "Военна преса", "Напади", "Суинг", "Гребане с щанга", "Добро утро"],
+                                datasets: [
+                                    {
+                                        label: "",
+                                        backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                        data: [-42, -77, -20, -80, -52, 0, -70, -12],
+                                        color: "#ffffff"
+                                    }
+                                ]
+                            },
+                            options: {
+                                responsive: true,
+                                legend: {
+                                    display: false
+                                },
+                                title: {
+                                    display: true,
+                                    text: "графика на равновесието"
+                                }
+                            }
+                        });
+
+                        function myFunction(w) {
+                            if (w.matches) {
+                                chartValova.height = window.innerHeight;
+                                chartValova.width = window.innerWidth;
+                            }
+                        }
+                    </script>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Затвори</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <!-- Ludmila Kostova Modal -->
     <div class="modal" id="lusiKostova">
         <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
@@ -1561,11 +1785,91 @@
             </div>
         </div>
     </div>
+
+    <!-- Luba Valova Modal -->
+    <div class="modal" id="lubaValova">
+        <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Л. Вълова
+                        <small> (165см. 56кг. 26г.)</small>
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <canvas style="display: block" class="text-center"
+                                    id="bar-chart-horizontal-luba"></canvas>
+                            </div>
+                        </div>
+                        <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения
+                            спрямо
+                            текущото най-силно
+                        </small>
+                    </div>
+                    <script type="text/javascript">
+                        let chartLuba = document.getElementById("bar-chart-horizontal-luba");
+                        let j = window.matchMedia("(max-width: 480px)");
+                        myFunction(j);
+                        j.addListener(myFunction);
+                        new Chart((chartLuba), {
+                            type: 'horizontalBar',
+                            data: {
+                                labels: ["Мъртва тяга", "Клек", "Военна преса", "Напади", "Преден клек", "Сумо тяга", "Суинг", "Гребане с щанга", "Добро утро"],
+                                datasets: [
+                                    {
+                                        label: "",
+                                        backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                        data: [-37, -82, -20, -127, -88, -84, 0, -25, -24],
+                                        color: "#ffffff"
+                                    }
+                                ]
+                            },
+                            options: {
+                                responsive: true,
+                                legend: {
+                                    display: false
+                                },
+                                title: {
+                                    display: true,
+                                    text: "графика на равновесието"
+                                }
+                            }
+                        });
+
+                        function myFunction(j) {
+                            if (j.matches) {
+                                chartLuba.height = window.innerHeight;
+                                chartLuba.width = window.innerWidth;
+                            }
+                        }
+                    </script>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Затвори</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <!-- Scripts -->
     <script src="../js/libs/jquery-1.12.4.min.js"></script>
     <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="../js/libs/jquery.dataTables.min.js"></script>
     <script src="../js/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
     <script src="../js/libs/masonry.pkgd.min.js"></script>
     <script src="../js/libs/imagesloaded.pkgd.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
@@ -1578,7 +1882,8 @@
             $('#men, #women').DataTable({
                 "language": {
                     "search": "Търси по фамилия:",
-                    "lengthMenu": 'Покажи: <select>' +
+                    "lengthMenu": 'Покажи: <select class="form-control selectpicker">' +
+                        '<option value="5">5</option>' +
                         '<option value="10">10</option>' +
                         '<option value="25">25</option>' +
                         '<option value="50">50</option>' +
@@ -1594,7 +1899,9 @@
                         "next": "Следваща",
                         "previous": "Предишна"
                     }
-                }
+                },
+                "pageLength": 5,
+                "autoWidth": false
             });
         });
     </script>

@@ -2028,6 +2028,15 @@ ul.list-group {
 #men, #women {
     text-align: center !important;
 }
+table.dataTable tbody td {
+    vertical-align: middle !important;
+  }
+#men > thead > tr > th:nth-child(6),
+#men > thead > tr > th:nth-child(7),
+#women > thead > tr > th:nth-child(6),
+#women > thead > tr > th:nth-child(7) {
+    min-width: 80px !important;
+}
   /* CSS used here will be applied after bootstrap.css */
 
     /* START TREE MENU */
