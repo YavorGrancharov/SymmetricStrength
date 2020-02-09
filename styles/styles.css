@@ -2027,6 +2027,8 @@ ul.list-group {
 
 #men, #women {
     text-align: center !important;
+    white-space: nowrap;
+    max-width: 100%;
 }
 table.dataTable tbody td {
     vertical-align: middle !important;
