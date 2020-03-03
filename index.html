@@ -20,17 +20,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="description"
-        content="Oбщо силова подготовка с цел развиване на първостепенни физически качества чрез упражнения, както с външно съпротивление така и собственосилови.">
-    <meta name="keywords"
-        content="личен треньор, фитнес инструктор, свободни тежести, спорт, атлетизъм, сила, издръжливост">
-    <meta name="author" content="Yavor Grancharov">
+    <meta name="description" content="Oбщо силова подготовка с цел развиване на първостепенни физически качества чрез упражнения, както с външно съпротивление така и собственосилови.">
+    <meta name="keywords" content="личен треньор, фитнес инструктор, свободни тежести, спорт, атлетизъм, сила, издръжливост">
+    <meta name="author" content="Явор Грънчаров">
     <title>ATHLETIC STANDARD</title>
     <link rel="icon" type="image/x-icon" href="static/images/logo.png">
     <link rel="canonical" href="https://www.athleticstandard.org" />
-    <link rel="stylesheet" href="styles/styles.min.css" media="all">
+    <link rel="stylesheet" href="styles/styles.css" media="all">
     <link rel="stylesheet" href="styles/libs/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="styles/libs/font-awesome.min.css" type="text/css" media="all">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Recipe",
+            "name": "Grandma's Holiday Apple Pie",
+            "author": "Elaine Smith",
+            "image": "http://images.edge-generalmills.com/56459281-6fe6-4d9d-984f-385c9488d824.jpg",
+            "description": "A classic apple pie.",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4",
+                "reviewCount": "276",
+                "bestRating": "5",
+                "worstRating": "1"
+            },
+            "prepTime": "PT30M",
+            "totalTime": "PT1H",
+            "recipeYield": "8",
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "servingSize": "1 medium slice",
+                "calories": "230 calories",
+                "fatContent": "1 g",
+                "carbohydrateContent": "43 g"
+            },
+            "recipeIngredient": [
+                "1 box refrigerated pie crusts, softened as directed on box",
+                "6 cups thinly sliced, peeled apples (6 medium)",
+                "..."
+            ],
+            "recipeInstructions": [
+                "1...",
+                "2..."
+            ]
+        }
+    </script>
     <style id="antiClickjack">
         body {
             display: none !important;
@@ -92,8 +126,7 @@
                                 <!-- Logo -->
                                 <div class="logo">
                                     <a href="index.html">
-                                        <img src="static/images/logo_american_flag.png" width="60" height="auto"
-                                            alt="main-logo">
+                                        <img src="static/images/logo_american_flag.png" width="60" height="auto" alt="main-logo">
                                     </a>
                                 </div>
                                 <!-- End Logo -->
@@ -121,6 +154,9 @@
                                                 <a href="#/">Документация</a>
                                                 <ul class="sub-menu">
                                                     <li>
+                                                        <a href="views/identity.html">Мисия и ценности</a>
+                                                    </li>
+                                                    <li>
                                                         <a href="views/rules.html">Устав</a>
                                                     </li>
                                                     <li>
@@ -141,12 +177,10 @@
 
                                 <!-- Socials -->
                                 <div class="socials">
-                                    <a target="_blank" href="https://www.facebook.com/athleticstandard.org/"
-                                        title="Facebook">
+                                    <a target="_blank" href="https://www.facebook.com/athleticstandard.org/" title="Facebook">
                                         <i class="fa fa-facebook"></i>
                                     </a>
-                                    <a target="_blank" href="https://www.youtube.com/channel/UC3jhBZbeXDzwad6o2yrttSA"
-                                        title="You Tube">
+                                    <a target="_blank" href="https://www.youtube.com/channel/UC3jhBZbeXDzwad6o2yrttSA" title="You Tube">
                                         <i class="fa fa-youtube-play"></i>
                                     </a>
                                     <a target="_blank" href="http://leanonfat.blogspot.com/" title="Blogger">
@@ -165,8 +199,7 @@
                                 <!-- End Socials -->
 
                                 <div class="box-search">
-                                    <form role="search" id="searchform" action="https://search.freefind.com/find.html"
-                                        method="get" accept-charset="utf-8" target="_self">
+                                    <form role="search" id="searchform" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
                                         <input type="text" placeholder="Търсене ..." name="query" />
                                         <input type="hidden" name="si" value="30222917">
                                         <input type="hidden" name="pid" value="r">
@@ -177,15 +210,11 @@
                                 </div>
 
                                 <div class="box-subscribe">
-                                    <input name="email" type="text" placeholder="Абонирай се с е-поща"
-                                        id="subscribe_email" autofocus>
+                                    <input name="email" type="text" placeholder="Абонирай се с е-поща" id="subscribe_email" autofocus>
                                 </div>
                                 <div class="box-subscribe">
-                                    <div style="transform:scale(0.594);transform-origin:0 0; margin-top: 0.1px"
-                                        class="g-recaptcha" data-sitekey="6Ldg2pYUAAAAAJAvcm5rIdhZaU3kpydbkoDHm5uP"
-                                        id="subscribe_captcha"></div>
-                                    <input type="hidden" class="hiddenRecaptcha" name="subscribe_hiddenRecaptcha"
-                                        id="subscribe_hiddenRecaptcha">
+                                    <div style="transform:scale(0.594);transform-origin:0 0; margin-top: 0.1px" class="g-recaptcha" data-sitekey="6Ldg2pYUAAAAAJAvcm5rIdhZaU3kpydbkoDHm5uP" id="subscribe_captcha"></div>
+                                    <input type="hidden" class="hiddenRecaptcha" name="subscribe_hiddenRecaptcha" id="subscribe_hiddenRecaptcha">
                                 </div>
                                 <div class="copyright">
 
@@ -205,68 +234,67 @@
                                     <hr>
                                 </div>
                                 <div class="post-media">
+                                    <img src="static/images/us_2.png" alt="Явор и Ели">
+                                    <figcaption>Явор и Ели</figcaption>
                                 </div>
                                 <div class="post-content">
                                     <!-- The Content -->
                                     <div class="the-excerpt">
-                                        <h2>Философия</h2>
-                                        <p>Атлетичната сила на един лидер, според гледната точка на времето, отразява
-                                            способността му да води. Спортът се
-                                            разглежда като методологичен процес, чрез който
-                                            да научим обективната истина за атлетичния потенциал на даден човек, като я
-                                            актуализираме в спортната конкуренция. Атлетизмът като мярка за индивидуална
-                                            стойност се разглежда като лек за социалното неравенство, а спортът се
-                                            възприема като морално образование.</p>
-                                        <p>Важни въпроси във философията на
-                                            спорта са
-                                            неговите социални предимства, естетиката на спортното
-                                            представяне, произхода, обхвата и особеностите на индивидуалната и екипната
-                                            стратегия,
-                                            спортната етика, логиката на правилата в спорта, метафизиката на спорта като
-                                            компонент на човешката природа или инстинкт.</p>
-                                        <p><a target="_blank"
-                                                href="https://en.wikipedia.org/wiki/Philosophy_of_sport">Wikipedia</a>
+                                        <h2>Концепция</h2>
+                                        <p>АTHLETIC STANDARD е спортен клуб предлагащ услуга в сферата на общо силовата подготовка използвайки система от движения и комбинация от тях насочена към развиването, на първостепенни физически качества като координация,
+                                            баланс, стабилност, мобилност, експлозивност и сила. Системата ни включва както ссобствено-силови така и движения с външно съпротивление включващи работа с щанги, дъмбели, пудовки, халки и скрипци.
                                         </p>
-                                        <h2>Визия</h2>
-                                        <p>Да бъдем признати за един от водещите стандарти в развитието и
-                                            популяризирането
-                                            на физическата култура в лицето на общата силова подготовка.</p>
+                                        <p>
+                                            Използваме разработена от нас система за оценка и класификация на текущите възможности на трениращия, чрез която можем да определим неговия теоретичен силов потенциал, да набележим изоставащите движения, да наблегнем върху слабостите, измеримо да повишим
+                                            работоспособността и постепенно да го докараме до едно по-високо ниво на комлексен атлетизъм.
+                                        </p>
+                                        <p>
+                                            За всички упражняващи любимият си спорт тези тренировки ще бъдат едно пълноценно допълнение, което ще им помогне да изпитат още по-голямо удосвослтвеи в упражняваните от тях спортни дейности, а на всички останали ще повиши тонуса, самочувствието, ще подобри
+                                            стойката, концентрацията и работоспособността.
+                                        </p>
+                                        <p>
+                                            Нашите тренировки покриват доста голяма част от изицкванията за високо ниво на кондиция като част от тях са:
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                покачване на активна телесна маса
+                                            </li>
+                                            <li>
+                                                загуба на мазнини
+                                            </li>
+                                            <li>
+                                                покачване на силата и силовата издръжливост
+                                            </li>
+                                            <li>
+                                                развиване на умения като експлозивност, скорост и смяна на посоката
+                                            </li>
+                                            <li>
+                                                подобряване на координацията, баланса и концентрацията
+                                            </li>
+                                        </ul>
+
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/vEekvTcEvSE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                        <!-- <h2>Визия</h2>
+                                        <p>Да бъдем признати за един от водещите стандарти в развитието и популяризирането на физическата култура в лицето на общата силова подготовка.</p>
                                         <h2>Мисия</h2>
-                                        <p>Ежевневно и по достъпен начин, да образоваме и насърчаваме обществото да
-                                            предприема
-                                            действия, към спазването на здравословен и активен начин на живот.
+                                        <p>Ежевневно и по достъпен начин, да образоваме и насърчаваме обществото да предприема действия, към спазването на здравословен и активен начин на живот.
                                         </p>
                                         <h2>Ценности</h2>
                                         <p class="lead">Отговорност</p>
-                                        <p>Осъзнаваме, че носим отговорност за използването и развитието
-                                            нашите индивидуални и колективни способности с цел постигане на високи
-                                            резултати
-                                            в сферата на физическото здраве и спортно дълголетие, както за отделния
-                                            човек
-                                            така и за общността.</p>
+                                        <p>Осъзнаваме, че носим отговорност за използването и развитието нашите индивидуални и колективни способности с цел постигане на високи резултати в сферата на физическото здраве и спортно дълголетие, както за отделния
+                                            човек така и за общността.</p>
                                         <p class="lead">Взаимодействие</p>
-                                        <p>Работим съвместно с други в сферата на физическото здраве и спорта, в
-                                            изпълнение на
-                                            стратегията за доставяне и непрестанно подобряване на услугата ни, в дух на
-                                            сътрудничество и подкрепа, признавайки уменията и приноса на другите.</p>
+                                        <p>Работим съвместно с други в сферата на физическото здраве и спорта, в изпълнение на стратегията за доставяне и непрестанно подобряване на услугата ни, в дух на сътрудничество и подкрепа, признавайки уменията и приноса
+                                            на другите.</p>
                                         <p class="lead">Професионализъм</p>
-                                        <p>Изпълняваме отговорността си да бъдем лидери в нашата професионална
-                                            дисциплина
-                                            чрез налагането и прилагането на най-добрите практики, както по научен, така
-                                            и
-                                            по грижовен и ангажиран начин.</p>
+                                        <p>Изпълняваме отговорността си да бъдем лидери в нашата професионална дисциплина чрез налагането и прилагането на най-добрите практики, както по научен, така и по грижовен и ангажиран начин.</p>
                                         <p class="lead">Почтеност</p>
-                                        <p>Изграждаме доверие чрез поддържането на високо ниво на изпълнение, както и
-                                            чрез
-                                            лоялност, честност, етични стандарти и справедливост.</p>
+                                        <p>Изграждаме доверие чрез поддържането на високо ниво на изпълнение, както и чрез лоялност, честност, етични стандарти и справедливост.</p>
                                         <p class="lead">Зачитане</p>
-                                        <p>Почитаме ценностите, правата и нуждите на другите и възприемаме
-                                            разнообразието,
-                                            предоставено от всеки човек, независимо от културата, ориентацията, расата,
-                                            класа или пола.</p>
+                                        <p>Почитаме ценностите, правата и нуждите на другите и възприемаме разнообразието, предоставено от всеки човек, независимо от културата, ориентацията, расата, класа или пола.</p>
                                         <p class="lead">Усъвършенстване</p>
-                                        <p>Непрекъснато проучваме, създаваме и разработваме нови решения за постигане на
-                                            изключителни резултати за нашите клиенти, партньори и общество.</p>
+                                        <p>Непрекъснато проучваме, създаваме и разработваме нови решения за постигане на изключителни резултати за нашите клиенти, партньори и общество.</p> -->
                                     </div>
                                     <!-- End The Content -->
                                 </div>
@@ -293,8 +321,7 @@
                                         <h2 class="title"><span>Контакти</span></h2>
                                         <ul>
                                             <li>
-                                                Тел: +359 876 10 00 39 - Явор
-                                                Тел: +359 888 03 04 24 - Ели
+                                                Тел: +359 876 10 00 39 - Явор Тел: +359 888 03 04 24 - Ели
                                             </li>
                                             <li>
                                                 Е-Поща: mail@athleticstandard.org
@@ -334,9 +361,7 @@
                         </div>
                         всички права запазени |
                         <a href="views/terms.html">условия за ползване</a> |
-                        <a href="views/policy.html">политика за поверителност</a> |
-                        &copy;protected by <a target="_blank" href="http://www.copyscape.com/"
-                            title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page.">Copyscape</a>
+                        <a href="views/policy.html">политика за поверителност</a> | &copy;protected by <a target="_blank" href="http://www.copyscape.com/" title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page.">Copyscape</a>
                     </div>
                 </div>
             </div>
@@ -354,9 +379,12 @@
     <script src="js/services/subscribeService.min.js"></script>
     <script src="js/services/remoteService.min.js"></script>
     <script>
-        document.getElementById("lang").addEventListener("click", function (e) {
+        document.getElementById("lang").addEventListener("click", function(e) {
             e.preventDefault();
             window.location.href = ("../en/views/art_index_en.html");
+        });
+        $('.carousel').carousel({
+            interval: false
         });
     </script>
     <script>

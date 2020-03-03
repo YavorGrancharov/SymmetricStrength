@@ -20,9 +20,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>Свържи се с нас</title>
+    <meta name="description" content="Oбщо силова подготовка с цел развиване на първостепенни физически качества чрез упражнения, както с външно съпротивление така и собственосилови.">
+    <meta name="keywords" content="личен треньор, фитнес инструктор, свободни тежести, спорт, атлетизъм, сила, издръжливост">
+    <meta name="author" content="Явор Грънчаров">
+    <title>ATHLETIC STANDARD</title>
     <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
-    <link rel="canonical" href="https://www.athleticstandard.org/views/contact.html" />
+    <link rel="canonical" href="https://www.athleticstandard.org" />
     <link rel="stylesheet" href="../styles/styles.min.css" media="all">
     <link rel="stylesheet" href="../styles/libs/bootstrap.min.css" media="all">
     <link rel="stylesheet" href="../styles/libs/font-awesome.min.css" type="text/css" media="all">
@@ -41,8 +44,7 @@
     </script>
 </head>
 
-<body class="single">
-
+<body>
     <!-- Wrapper Site -->
     <div id="main-content">
 
@@ -88,8 +90,7 @@
                                 <!-- Logo -->
                                 <div class="logo">
                                     <a href="../index.html">
-                                        <img src="../static/images/print_ready_logo_vertical.png" width="60"
-                                            height="auto" alt="main-logo">
+                                        <img src="../static/images/logo_american_flag.png" width="60" height="auto" alt="main-logo">
                                     </a>
                                 </div>
                                 <!-- End Logo -->
@@ -99,39 +100,39 @@
                                     <nav>
                                         <ul class="menu-list">
                                             <li>
-                                                <a href="blog_grid.html">Блог</a>
+                                                <a href="../views/blog_grid.html">Блог</a>
                                             </li>
                                             <li>
-                                                <a href="price.html">Цени</a>
+                                                <a href="../views/price.html">Цени</a>
                                             </li>
                                             <li>
-                                                <a href="video_grid.html">Видео</a>
+                                                <a href="../views/video_grid.html">Видео</a>
                                             </li>
                                             <li>
-                                                <a href="about.html">За нас</a>
+                                                <a href="../views/about.html">За нас</a>
                                             </li>
                                             <li>
-                                                <a href="contact.html">Контакти</a>
+                                                <a href="../views/contact.html">Контакти</a>
                                             </li>
                                             <li class="menu-item-has-children">
                                                 <a href="#/">Документация</a>
                                                 <ul class="sub-menu">
                                                     <li>
-                                                        <a href="identity.html">Идентичност</a>
+                                                        <a href="../views/identity.html">Мисия и ценности</a>
                                                     </li>
                                                     <li>
-                                                        <a href="rules.html">Правила</a>
+                                                        <a href="../views/rules.html">Устав</a>
                                                     </li>
                                                     <li>
-                                                        <a href="code_of_ethics.html">Етичен кодекс</a>
+                                                        <a href="../views/code_of_ethics.html">Етичен кодекс</a>
                                                     </li>
                                                     <li>
-                                                        <a href="404.html">Стандарт</a>
+                                                        <a href="../views/standards.html">Стандарт</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="testimonials.html">Атестати</a>
+                                                <a href="../views/testimonials.html">Отзиви</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -140,17 +141,17 @@
 
                                 <!-- Socials -->
                                 <div class="socials">
-                                    <a target="_blank"
-                                        href="https://web.facebook.com/Athletic-Standard-155676468649069/"
-                                        title="Facebook">
+                                    <a target="_blank" href="https://www.facebook.com/athleticstandard.org/" title="Facebook">
                                         <i class="fa fa-facebook"></i>
                                     </a>
-                                    <a target="_blank" href="https://www.youtube.com/channel/UC3jhBZbeXDzwad6o2yrttSA"
-                                        title="You Tube">
+                                    <a target="_blank" href="https://www.youtube.com/channel/UC3jhBZbeXDzwad6o2yrttSA" title="You Tube">
                                         <i class="fa fa-youtube-play"></i>
                                     </a>
                                     <a target="_blank" href="http://leanonfat.blogspot.com/" title="Blogger">
                                         <i class="fa fa-cutlery"></i>
+                                    </a>
+                                    <a href="#/" title="Subscribe">
+                                        <i class="fa fa-newspaper-o"></i>
                                     </a>
                                     <a href="#/" title="Language">
                                         <i id="lang" class="fa fa-globe"></i>
@@ -162,8 +163,7 @@
                                 <!-- End Socials -->
 
                                 <div class="box-search">
-                                    <form role="search" id="searchform" action="https://search.freefind.com/find.html"
-                                        method="get" accept-charset="utf-8" target="_self">
+                                    <form role="search" id="searchform" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
                                         <input type="text" placeholder="Търсене ..." name="query" />
                                         <input type="hidden" name="si" value="30222917">
                                         <input type="hidden" name="pid" value="r">
@@ -173,10 +173,15 @@
                                     </form>
                                 </div>
 
+                                <div class="box-subscribe">
+                                    <input name="email" type="text" placeholder="Абонирай се с е-поща" id="subscribe_email" autofocus>
+                                </div>
+                                <div class="box-subscribe">
+                                    <div style="transform:scale(0.594);transform-origin:0 0; margin-top: 0.1px" class="g-recaptcha" data-sitekey="6Ldg2pYUAAAAAJAvcm5rIdhZaU3kpydbkoDHm5uP" id="subscribe_captcha"></div>
+                                    <input type="hidden" class="hiddenRecaptcha" name="subscribe_hiddenRecaptcha" id="subscribe_hiddenRecaptcha">
+                                </div>
                                 <div class="copyright">
-                                    <p>
-                                        &copy;2015-2019 athleticstandard.org
-                                    </p>
+
                                 </div>
 
                             </div>
@@ -189,19 +194,43 @@
                         <div class="posts-inner">
                             <article class="post">
                                 <div class="post-header">
-                                    <h2 class="title"><span>Стандарти за идентичност</span></h2>
+                                    <h2 class="title"><span>Визия, Мисия и Ценности</span></h2>
                                     <hr>
                                 </div>
-                                <div class="post-media"></div>
+                                <div class="post-media">
+                                </div>
                                 <div class="post-content">
-
                                     <!-- The Content -->
                                     <div class="the-excerpt">
-
+                                        <h2>Философия</h2>
+                                        <p>Атлетичната сила на един лидер, според гледната точка на времето, отразява способността му да води. Спортът се разглежда като методологичен процес, чрез който да научим обективната истина за атлетичния потенциал
+                                            на даден човек, като я актуализираме в спортната конкуренция. Атлетизмът като мярка за индивидуална стойност се разглежда като лек за социалното неравенство, а спортът се възприема като морално образование.</p>
+                                        <p><a target="_blank" href="https://en.wikipedia.org/wiki/Philosophy_of_sport">Wikipedia</a>
+                                        </p>
+                                        <h2>Визия</h2>
+                                        <p>Да бъдем признати за един от водещите стандарти в развитието и популяризирането на физическата култура в лицето на общата силова подготовка.</p>
+                                        <h2>Мисия</h2>
+                                        <p>Ежевневно и по достъпен начин, да образоваме и насърчаваме обществото да предприема действия, към спазването на здравословен и активен начин на живот.
+                                        </p>
+                                        <h2>Ценности</h2>
+                                        <p class="lead">Отговорност</p>
+                                        <p>Осъзнаваме, че носим отговорност за използването и развитието нашите индивидуални и колективни способности с цел постигане на високи резултати в сферата на физическото здраве и спортно дълголетие, както за отделния
+                                            човек така и за общността.</p>
+                                        <p class="lead">Взаимодействие</p>
+                                        <p>Работим съвместно с други в сферата на физическото здраве и спорта, в изпълнение на стратегията за доставяне и непрестанно подобряване на услугата ни, в дух на сътрудничество и подкрепа, признавайки уменията и приноса
+                                            на другите.</p>
+                                        <p class="lead">Професионализъм</p>
+                                        <p>Изпълняваме отговорността си да бъдем лидери в нашата професионална дисциплина чрез налагането и прилагането на най-добрите практики, както по научен, така и по грижовен и ангажиран начин.</p>
+                                        <p class="lead">Почтеност</p>
+                                        <p>Изграждаме доверие чрез поддържането на високо ниво на изпълнение, както и чрез лоялност, честност, етични стандарти и справедливост.</p>
+                                        <p class="lead">Зачитане</p>
+                                        <p>Почитаме ценностите, правата и нуждите на другите и възприемаме разнообразието, предоставено от всеки човек, независимо от културата, ориентацията, расата, класа или пола.</p>
+                                        <p class="lead">Усъвършенстване</p>
+                                        <p>Непрекъснато проучваме, създаваме и разработваме нови решения за постигане на изключителни резултати за нашите клиенти, партньори и общество.</p>
                                     </div>
                                     <!-- End The Content -->
                                 </div>
-
+                                <h3>GO STRONG</h3>
                             </article>
                         </div>
                     </div>
@@ -224,8 +253,7 @@
                                         <h2 class="title"><span>Контакти</span></h2>
                                         <ul>
                                             <li>
-                                                Тел: +359 876 10 00 39 - Явор
-                                                Тел: +359 888 03 04 24 - Ели
+                                                Тел: +359 876 10 00 39 - Явор Тел: +359 888 03 04 24 - Ели
                                             </li>
                                             <li>
                                                 Е-Поща: mail@athleticstandard.org
@@ -240,10 +268,9 @@
                                     <div class="widget">
                                         <h2 class="title"><span>Занималня</span></h2>
                                         <ul>
-                                            <li><a href="404.html">Движения</a></li>
-                                            <li><a href="strength_hall.html">Зала на Силата</a></li>
-                                            <li><a href="gallery.html">Галерия</a></li>
-                                            <li><a href="sitemap.html">Карта на сайта</a></li>
+                                            <li><a href="../views/strength_hall.html">Зала на Силата</a></li>
+                                            <li><a href="../views/gallery.html">Галерия</a></li>
+                                            <li><a href="../views/sitemap.html">Карта на сайта</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -251,9 +278,9 @@
                                     <div class="widget">
                                         <h2 class="title"><span>Ресурси</span></h2>
                                         <ul>
-                                            <li><a href="calculators.html">Калкулатори</a></li>
-                                            <li><a href="404.html">Брошура</a></li>
-                                            <li><a href="404.html">Униформа</a></li>
+                                            <li><a href="../views/drills.html">Движения</a></li>
+                                            <li><a href="../views/calculators.html">Калкулатори</a></li>
+                                            <li><a href="../views/gear.html">Униформа</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -265,41 +292,33 @@
                             </div>
                         </div>
                         всички права запазени |
-                        <a href="terms.html">условия за ползване</a> |
-                        <a href="policy.html">политика за поверителност</a> |
-                        &copy;protected by <a target="_blank" href="http://www.copyscape.com/"
-                            title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page.">Copyscape</a>
+                        <a href="../views/terms.html">условия за ползване</a> |
+                        <a href="../views/policy.html">политика за поверителност</a> | &copy;protected by <a target="_blank" href="http://www.copyscape.com/" title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page.">Copyscape</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
     <!-- End Footer -->
-
-    <!-- Scripts -->
     <script src="../js/libs/jquery-1.12.4.min.js"></script>
     <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="../js/js/bootstrap.min.js"></script>
     <script src="../js/libs/masonry.pkgd.min.js"></script>
     <script src="../js/libs/imagesloaded.pkgd.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script src="../js/models/magnificPopup.js"></script>
-    <script src="../js/controller/messageController.js"></script>
-    <script src="../js/services/messageService.js"></script>
-    <script src="../js/controller/subscribeController.js"></script>
-    <script src="../js/services/subscribeService.js"></script>
-    <script src="../js/services/remoteService.js"></script>
+    <script src="../js/models/magnificPopup.min.js"></script>
+    <script src="../js/controller/subscribeController.min.js"></script>
+    <script src="../js/services/subscribeService.min.js"></script>
+    <script src="../js/services/remoteService.min.js"></script>
     <script>
-        document.getElementById("lang").addEventListener("click", function (e) {
+        document.getElementById("lang").addEventListener("click", function(e) {
             e.preventDefault();
             window.location.href = ("../en/views/art_index_en.html");
         });
     </script>
     <script>
-        messageController.sendMessage();
+        subscribeController.subscribe();
     </script>
-    <!-- End Scripts -->
-
 </body>
 
 </html>
