@@ -1,865 +1,1016 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131327406-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-131327406-1"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+      function gtag() {
+        dataLayer.push(arguments);
+      }
 
-        gtag('js', new Date());
+      gtag('js', new Date());
 
-        gtag('config', 'UA-131327406-1');
+      gtag('config', 'UA-131327406-1');
     </script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>ATHLETIC STANDARD</title>
-    <link rel="icon" type="image/x-icon" href="../static/images/logo.png">
-    <link rel="canonical" href="https://www.athleticstandard.org/views/video_grid.html" />
-    <link rel="stylesheet" href="../styles/styles.min.css" media="all">
-    <link rel="stylesheet" href="../styles/libs/bootstrap.min.css" media="all">
-    <link rel="stylesheet" href="../styles/libs/font-awesome.min.css" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="../static/images/logo.png" />
+    <link
+      rel="canonical"
+      href="https://www.athleticstandard.org/views/video_grid.html"
+    />
+    <link rel="stylesheet" href="../styles/styles.min.css" media="all" />
+    <link
+      rel="stylesheet"
+      href="../styles/libs/bootstrap.min.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="../styles/libs/font-awesome.min.css"
+      type="text/css"
+      media="all"
+    />
     <style id="antiClickjack">
-        body {
-            display: none !important;
-        }
+      body {
+        display: none !important;
+      }
     </style>
     <script type="text/javascript">
-        if (self === top) {
-            let antiClickjack = document.getElementById("antiClickjack");
-            antiClickjack.parentNode.removeChild(antiClickjack);
-        } else {
-            top.location = self.location;
-        }
+      if (self === top) {
+        let antiClickjack = document.getElementById('antiClickjack');
+        antiClickjack.parentNode.removeChild(antiClickjack);
+      } else {
+        top.location = self.location;
+      }
     </script>
-</head>
+  </head>
 
-<body class="home">
-
+  <body class="home">
     <!-- Wrapper Site -->
     <div id="main-content">
-
-        <!-- Preload -->
-        <div id="preload">
-            <div class="kd-bounce">
-                <div></div>
-                <div></div>
-            </div>
+      <!-- Preload -->
+      <div id="preload">
+        <div class="kd-bounce">
+          <div></div>
+          <div></div>
         </div>
-        <!-- Preload -->
+      </div>
+      <!-- Preload -->
 
-        <!-- Mobile Menu -->
-        <div class="mobile">
-            <div class="container">
-                <!-- Mobile -->
-                <div class="menu-mobile">
-                    <span class="item item-1"></span>
-                    <span class="item item-2"></span>
-                    <span class="item item-3"></span>
-                </div>
-                <!-- End Mobile -->
-
-                <!-- Logo -->
-                <div class="logo">
-                    <a href="../index.html">
-                        <h1>GO STRONG</h1>
-                    </a>
-                </div>
-                <!-- End Logo -->
-            </div>
-        </div>
-        <div class="hide-menu"></div>
-        <!-- End Mobile Menu -->
-
+      <!-- Mobile Menu -->
+      <div class="mobile">
         <div class="container">
-            <div class="row">
+          <!-- Mobile -->
+          <div class="menu-mobile">
+            <span class="item item-1"></span>
+            <span class="item item-2"></span>
+            <span class="item item-3"></span>
+          </div>
+          <!-- End Mobile -->
 
-                <div class="col-md-3">
-                    <div class="header affix">
-                        <div class="table">
-                            <div class="table-cell">
-                                <!-- Logo -->
-                                <div class="logo">
-                                    <a href="../index.html">
-                                        <img src="../static/images/logo_american_flag.png" width="60"
-                                            height="auto" alt="main-logo">
-                                    </a>
-                                </div>
-                                <!-- End Logo -->
+          <!-- Logo -->
+          <div class="logo">
+            <a href="../index.html">
+              <h1>GO STRONG</h1>
+            </a>
+          </div>
+          <!-- End Logo -->
+        </div>
+      </div>
+      <div class="hide-menu"></div>
+      <!-- End Mobile Menu -->
 
-                                <!-- Navigation -->
-                                <div class="main-menu">
-                                    <nav>
-                                        <ul class="menu-list">
-                                            <li class="menu-item-has-children">
-                                            <li>
-                                                <a href="blog_grid.html">Блог</a>
-                                            </li>
-                                            <li>
-                                                <a href="price.html">Цени</a>
-                                            </li>
-                                            <li>
-                                                <a href="video_grid.html">Видео</a>
-                                            </li>
-                                            <li>
-                                                <a href="about.html">За нас</a>
-                                            </li>
-                                            <li>
-                                                <a href="contact.html">Контакти</a>
-                                            </li>
-                                            <li class="menu-item-has-children">
-                                                <a href="#/">Документация</a>
-                                                <ul class="sub-menu">
-                                                    <li>
-                                                        <a href="rules.html">Устав</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="code_of_ethics.html">Етичен кодекс</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="standards.html">Стандарт</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="testimonials.html">Отзиви</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <!-- End Navigation -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="header affix">
+              <div class="table">
+                <div class="table-cell">
+                  <!-- Logo -->
+                  <div class="logo">
+                    <a href="../index.html">
+                      <img
+                        src="../static/images/logo_american_flag.png"
+                        width="60"
+                        height="auto"
+                        alt="main-logo"
+                      />
+                    </a>
+                  </div>
+                  <!-- End Logo -->
 
-                                <!-- Socials -->
-                                <div class="socials">
-                                    <a target="_blank"
-                                        href="https://web.facebook.com/Athletic-Standard-155676468649069/"
-                                        title="Facebook">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                    <a target="_blank" href="https://www.youtube.com/channel/UC3jhBZbeXDzwad6o2yrttSA"
-                                        title="You Tube">
-                                        <i class="fa fa-youtube-play"></i>
-                                    </a>
-                                    <a target="_blank" href="http://leanonfat.blogspot.com/" title="Blogger">
-                                        <i class="fa fa-cutlery"></i>
-                                    </a>
-                                    <a href="#/" title="Subscribe">
-                                        <i class="fa fa-newspaper-o"></i>
-                                    </a>
-                                    <a href="#/" title="Language">
-                                        <i id="lang" class="fa fa-globe"></i>
-                                    </a>
-                                    <a href="#/" title="Search this site">
-                                        <i class="fa fa-search"></i>
-                                    </a>
-                                </div>
-                                <!-- End Socials -->
+                  <!-- Navigation -->
+                  <div class="main-menu">
+                    <nav>
+                      <ul class="menu-list">
+                        <li>
+                          <a href="blog_grid.html">Блог</a>
+                        </li>
+                        <li>
+                          <a href="price.html">Цени</a>
+                        </li>
+                        <li>
+                          <a href="video_grid.html">Видео</a>
+                        </li>
+                        <li>
+                          <a href="about.html">За нас</a>
+                        </li>
+                        <li>
+                          <a href="testimonials.html">Отзиви</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                          <a href="#/">Ресурси</a>
+                          <ul class="sub-menu">
+                            <li><a href="drills.html">Движения</a></li>
+                            <li>
+                              <a href="calculators.html">Калкулатори</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="contact.html">Контакти</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                          <a href="#/">Документация</a>
+                          <ul class="sub-menu">
+                            <li>
+                              <a href="identity.html">Мисия и ценности</a>
+                            </li>
+                            <li>
+                              <a href="rules.html">Устав</a>
+                            </li>
+                            <li>
+                              <a href="code_of_ethics.html">Етичен кодекс</a>
+                            </li>
+                            <li>
+                              <a href="standards.html">Стандарт</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <!-- End Navigation -->
 
-                                <div class="box-search">
-                                    <form role="search" id="searchform" action="https://search.freefind.com/find.html"
-                                        method="get" accept-charset="utf-8" target="_self">
-                                        <input type="text" placeholder="Търсене ..." name="query" />
-                                        <input type="hidden" name="si" value="30222917">
-                                        <input type="hidden" name="pid" value="r">
-                                        <input type="hidden" name="n" value="0">
-                                        <input type="hidden" name="_charset_" value="">
-                                        <input type="hidden" name="bcd" value="&#247;">
-                                    </form>
-                                </div>
+                  <!-- Socials -->
+                  <div class="socials">
+                    <a
+                      target="_blank"
+                      href="https://web.facebook.com/Athletic-Standard-155676468649069/"
+                      title="Facebook"
+                    >
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                    <a
+                      target="_blank"
+                      href="https://www.youtube.com/channel/UC3jhBZbeXDzwad6o2yrttSA"
+                      title="You Tube"
+                    >
+                      <i class="fa fa-youtube-play"></i>
+                    </a>
+                    <a
+                      target="_blank"
+                      href="http://leanonfat.blogspot.com/"
+                      title="Blogger"
+                    >
+                      <i class="fa fa-cutlery"></i>
+                    </a>
+                    <a href="#/" title="Subscribe">
+                      <i class="fa fa-newspaper-o"></i>
+                    </a>
+                    <a href="#/" title="Language">
+                      <i id="lang" class="fa fa-globe"></i>
+                    </a>
+                    <a href="#/" title="Search this site">
+                      <i class="fa fa-search"></i>
+                    </a>
+                  </div>
+                  <!-- End Socials -->
 
-                                <div class="box-subscribe">
-                                    <input name="email" type="text" placeholder="Абонирай се с е-поща"
-                                        id="subscribe_email">
-                                </div>
-                                <div class="box-subscribe">
-                                    <div style="transform:scale(0.594);transform-origin:0 0; margin-top: 0.1px"
-                                        class="g-recaptcha" data-sitekey="6Ldg2pYUAAAAAJAvcm5rIdhZaU3kpydbkoDHm5uP">
-                                    </div>
-                                </div>
+                  <div class="box-search">
+                    <form
+                      role="search"
+                      id="searchform"
+                      action="https://search.freefind.com/find.html"
+                      method="get"
+                      accept-charset="utf-8"
+                      target="_self"
+                    >
+                      <input
+                        type="text"
+                        placeholder="Търсене ..."
+                        name="query"
+                      />
+                      <input type="hidden" name="si" value="30222917" />
+                      <input type="hidden" name="pid" value="r" />
+                      <input type="hidden" name="n" value="0" />
+                      <input type="hidden" name="_charset_" value="" />
+                      <input type="hidden" name="bcd" value="&#247;" />
+                    </form>
+                  </div>
 
-                                <!--<div class="copyright">-->
-                                <!--<p>-->
-                                <!--&copy;2015-2019 athleticstandard.org-->
-                                <!--</p>-->
-                                <!--</div>-->
+                  <div class="box-subscribe">
+                    <input
+                      name="email"
+                      type="text"
+                      placeholder="Абонирай се с е-поща"
+                      id="subscribe_email"
+                    />
+                  </div>
+                  <div class="box-subscribe">
+                    <div
+                      style="
+                        transform: scale(0.594);
+                        transform-origin: 0 0;
+                        margin-top: 0.1px;
+                      "
+                      class="g-recaptcha"
+                      data-sitekey="6Ldg2pYUAAAAAJAvcm5rIdhZaU3kpydbkoDHm5uP"
+                    ></div>
+                  </div>
 
-                            </div>
-                        </div>
-                    </div>
+                  <!--<div class="copyright">-->
+                  <!--<p>-->
+                  <!--&copy;2015-2019 athleticstandard.org-->
+                  <!--</p>-->
+                  <!--</div>-->
                 </div>
-
-                <div class="col-md-9 col-md-offset-3">
-                    <div class="posts">
-                        <div class="posts-inner grid-layout">
-                            <article class="post">
-                                <div class="post-header">
-                                    <h2 class="title">
-                                        <a href="#/">Мъртва Тяга @70кг.</a>
-                                    </h2>
-
-                                    <!-- Post Details -->
-                                    <div class="post-details">
-                                        <div class="post-cat">
-                                            <a href="#video">Видео</a>
-                                        </div>
-                                        <a href="#/" class="post-date"><span>28 Януари, 2019</span></a>
-                                    </div>
-                                    <!-- End Post Details -->
-                                </div>
-
-                                <div class="post-content">
-
-                                    <!-- The Content -->
-                                    <div class="the-excerpt">
-                                        <!--Modal: Name-->
-                                        <div class="modal fade" id="modal1" tabindex="-1" role="dialog"
-                                            aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-
-                                                <!--Content-->
-                                                <div class="modal-content">
-
-                                                    <!--Body-->
-                                                    <div class="modal-body mb-0 p-0">
-
-                                                        <div
-                                                            class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                                                            <iframe class="embed-responsive-item"
-                                                                src="https://www.youtube.com/embed/_uWcyJmUefA"
-                                                                allowfullscreen></iframe>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!--Footer-->
-                                                    <div class="modal-footer justify-content-center">
-                                                        <button type="button"
-                                                            class="btn btn-outline-primary btn-rounded btn-md ml-4"
-                                                            data-dismiss="modal">Затвори</button>
-                                                    </div>
-
-                                                </div>
-                                                <!--/.Content-->
-
-                                            </div>
-                                        </div>
-                                        <!--Modal: Name-->
-
-                                        <a><img class="img-fluid z-depth-1"
-                                                src="http://i3.ytimg.com/vi/_uWcyJmUefA/maxresdefault.jpg" alt="video"
-                                                data-toggle="modal" data-target="#modal1"></a>
-
-                                    </div>
-                                    <!-- End The Content -->
-                                </div>
-
-                            </article>
-
-                            <article class="post">
-                                <div class="post-header">
-                                    <h2 class="title">
-                                        <a href="#/">Сумо Гуд Морнинг @30кг.</a>
-                                    </h2>
-                                    <!-- Post Details -->
-                                    <div class="post-details">
-                                        <div class="post-cat">
-                                            <a href="#video">Видео</a>
-                                        </div>
-                                        <a href="#/" class="post-date"><span>Януари 28, 2019</span></a>
-                                    </div>
-                                    <!-- End Post Details -->
-                                </div>
-
-                                <div class="post-content">
-
-                                    <!-- The Content -->
-                                    <div class="the-excerpt">
-
-                                        <!--Modal: Name-->
-                                        <div class="modal fade" id="modal2" tabindex="-1" role="dialog"
-                                            aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-
-                                                <!--Content-->
-                                                <div class="modal-content">
-
-                                                    <!--Body-->
-                                                    <div class="modal-body mb-0 p-0">
-
-                                                        <div
-                                                            class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                                                            <iframe class="embed-responsive-item"
-                                                                src="https://www.youtube.com/embed/M6F-NXv-dFI"
-                                                                allowfullscreen></iframe>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!--Footer-->
-                                                    <div class="modal-footer justify-content-center">
-                                                        <button type="button"
-                                                            class="btn btn-outline-primary btn-rounded btn-md ml-4"
-                                                            data-dismiss="modal">Затвори</button>
-                                                    </div>
-
-                                                </div>
-                                                <!--/.Content-->
-
-                                            </div>
-                                        </div>
-                                        <!--Modal: Name-->
-
-                                        <a><img class="img-fluid z-depth-1"
-                                                src="http://i3.ytimg.com/vi/M6F-NXv-dFI/maxresdefault.jpg" alt="video"
-                                                data-toggle="modal" data-target="#modal2"></a>
-
-                                    </div>
-                                    <!-- End The Content -->
-                                </div>
-
-                            </article>
-
-                            <article class="post">
-                                <div class="post-header">
-                                    <h2 class="title">
-                                        <a href="#/">Лежанката на Мърфи</a>
-                                    </h2>
-                                    <!-- Post Details -->
-                                    <div class="post-details">
-                                        <div class="post-cat">
-                                            <a href="#video">Видео</a>
-                                        </div>
-                                        <a href="#/" class="post-date"><span>Февруари 20, 2019</span></a>
-                                    </div>
-                                    <!-- End Post Details -->
-                                </div>
-
-                                <div class="post-content">
-
-                                    <!-- The Content -->
-                                    <div class="the-excerpt">
-
-                                        <!--Modal: Name-->
-                                        <div class="modal fade" id="modal3" tabindex="-1" role="dialog"
-                                            aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-
-                                                <!--Content-->
-                                                <div class="modal-content">
-
-                                                    <!--Body-->
-                                                    <div class="modal-body mb-0 p-0">
-
-                                                        <div
-                                                            class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                                                            <iframe class="embed-responsive-item"
-                                                                src="https://www.youtube.com/embed/1ffF1pgeg0U"
-                                                                allowfullscreen></iframe>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!--Footer-->
-                                                    <div class="modal-footer justify-content-center">
-                                                        <button type="button"
-                                                            class="btn btn-outline-primary btn-rounded btn-md ml-4"
-                                                            data-dismiss="modal">Затвори</button>
-                                                    </div>
-
-                                                </div>
-                                                <!--/.Content-->
-
-                                            </div>
-                                        </div>
-                                        <!--Modal: Name-->
-
-                                        <a><img class="img-fluid z-depth-1"
-                                                src="http://i3.ytimg.com/vi/1ffF1pgeg0U/maxresdefault.jpg" alt="video"
-                                                data-toggle="modal" data-target="#modal3"></a>
-
-                                    </div>
-                                    <!-- End The Content -->
-                                </div>
-
-                            </article>
-
-                            <article class="post">
-                                <div class="post-header">
-                                    <h2 class="title">
-                                        <a href="#/">Летящо ренегатско</a>
-                                    </h2>
-                                    <!-- Post Details -->
-                                    <div class="post-details">
-                                        <div class="post-cat">
-                                            <a href="#video">Видео</a>
-                                        </div>
-                                        <a href="#/" class="post-date"><span>Март 17, 2019</span></a>
-                                    </div>
-                                    <!-- End Post Details -->
-                                </div>
-
-                                <div class="post-content">
-
-                                    <!-- The Content -->
-                                    <div class="the-excerpt">
-
-                                        <!--Modal: Name-->
-                                        <div class="modal fade" id="modal4" tabindex="-1" role="dialog"
-                                            aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-
-                                                <!--Content-->
-                                                <div class="modal-content">
-
-                                                    <!--Body-->
-                                                    <div class="modal-body mb-0 p-0">
-
-                                                        <div
-                                                            class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                                                            <iframe class="embed-responsive-item"
-                                                                src="https://www.youtube.com/embed/rEiZln-C_n0"
-                                                                allowfullscreen></iframe>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!--Footer-->
-                                                    <div class="modal-footer justify-content-center">
-                                                        <button type="button"
-                                                            class="btn btn-outline-primary btn-rounded btn-md ml-4"
-                                                            data-dismiss="modal">Затвори</button>
-                                                    </div>
-
-                                                </div>
-                                                <!--/.Content-->
-
-                                            </div>
-                                        </div>
-                                        <!--Modal: Name-->
-
-                                        <a><img class="img-fluid z-depth-1"
-                                                src="http://i3.ytimg.com/vi/rEiZln-C_n0/maxresdefault.jpg" alt="video"
-                                                data-toggle="modal" data-target="#modal4"></a>
-
-                                    </div>
-                                    <!-- End The Content -->
-                                </div>
-
-                            </article>
-
-                            <article class="post">
-                                <div class="post-header">
-                                    <h2 class="title">
-                                        <a href="#/">Клек на един крак @50кг</a>
-                                    </h2>
-                                    <!-- Post Details -->
-                                    <div class="post-details">
-                                        <div class="post-cat">
-                                            <a href="#video">Видео</a>
-                                        </div>
-                                        <a href="#/" class="post-date"><span>Март 17, 2019</span></a>
-                                    </div>
-                                    <!-- End Post Details -->
-                                </div>
-
-                                <div class="post-content">
-
-                                    <!-- The Content -->
-                                    <div class="the-excerpt">
-
-                                        <!--Modal: Name-->
-                                        <div class="modal fade" id="modal5" tabindex="-1" role="dialog"
-                                            aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-
-                                                <!--Content-->
-                                                <div class="modal-content">
-
-                                                    <!--Body-->
-                                                    <div class="modal-body mb-0 p-0">
-
-                                                        <div
-                                                            class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                                                            <iframe class="embed-responsive-item"
-                                                                src="https://www.youtube.com/embed/P7S92KzIhfY"
-                                                                allowfullscreen></iframe>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!--Footer-->
-                                                    <div class="modal-footer justify-content-center">
-                                                        <button type="button"
-                                                            class="btn btn-outline-primary btn-rounded btn-md ml-4"
-                                                            data-dismiss="modal">Затвори</button>
-                                                    </div>
-
-                                                </div>
-                                                <!--/.Content-->
-
-                                            </div>
-                                        </div>
-                                        <!--Modal: Name-->
-
-                                        <a><img class="img-fluid z-depth-1"
-                                                src="http://i3.ytimg.com/vi/P7S92KzIhfY/maxresdefault.jpg" alt="video"
-                                                data-toggle="modal" data-target="#modal5"></a>
-
-                                    </div>
-                                    <!-- End The Content -->
-                                </div>
-
-                            </article>
-
-                            <article class="post">
-                                <div class="post-header">
-                                    <h2 class="title">
-                                        <a href="#/">Усукващо ренегатско</a>
-                                    </h2>
-                                    <!-- Post Details -->
-                                    <div class="post-details">
-                                        <div class="post-cat">
-                                            <a href="#video">Видео</a>
-                                        </div>
-                                        <a href="#/" class="post-date"><span>Април 10, 2019</span></a>
-                                    </div>
-                                    <!-- End Post Details -->
-                                </div>
-
-                                <div class="post-content">
-
-                                    <!-- The Content -->
-                                    <div class="the-excerpt">
-
-                                        <!--Modal: Name-->
-                                        <div class="modal fade" id="modal6" tabindex="-1" role="dialog"
-                                            aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-
-                                                <!--Content-->
-                                                <div class="modal-content">
-
-                                                    <!--Body-->
-                                                    <div class="modal-body mb-0 p-0">
-
-                                                        <div
-                                                            class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                                                            <iframe class="embed-responsive-item"
-                                                                src="https://www.youtube.com/embed/23yaGtA3mek"
-                                                                allowfullscreen></iframe>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!--Footer-->
-                                                    <div class="modal-footer justify-content-center">
-                                                        <button type="button"
-                                                            class="btn btn-outline-primary btn-rounded btn-md ml-4"
-                                                            data-dismiss="modal">Затвори</button>
-                                                    </div>
-
-                                                </div>
-                                                <!--/.Content-->
-
-                                            </div>
-                                        </div>
-                                        <!--Modal: Name-->
-
-                                        <a><img class="img-fluid z-depth-1"
-                                                src="http://i3.ytimg.com/vi/23yaGtA3mek/maxresdefault.jpg" alt="video"
-                                                data-toggle="modal" data-target="#modal6"></a>
-
-                                    </div>
-                                    <!-- End The Content -->
-                                </div>
-
-                            </article>
-
-                            <article class="post">
-                                <div class="post-header">
-                                    <h2 class="title">
-                                        <a href="#/">Седнала преса</a>
-                                    </h2>
-                                    <!-- Post Details -->
-                                    <div class="post-details">
-                                        <div class="post-cat">
-                                            <a href="#video">Видео</a>
-                                        </div>
-                                        <a href="#/" class="post-date"><span>Април 10, 2019</span></a>
-                                    </div>
-                                    <!-- End Post Details -->
-                                </div>
-
-                                <div class="post-content">
-
-                                    <!-- The Content -->
-                                    <div class="the-excerpt">
-
-                                        <!--Modal: Name-->
-                                        <div class="modal fade" id="modal7" tabindex="-1" role="dialog"
-                                            aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-
-                                                <!--Content-->
-                                                <div class="modal-content">
-
-                                                    <!--Body-->
-                                                    <div class="modal-body mb-0 p-0">
-
-                                                        <div
-                                                            class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                                                            <iframe class="embed-responsive-item"
-                                                                src="https://www.youtube.com/embed/8eJsN0zLX9A"
-                                                                allowfullscreen></iframe>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!--Footer-->
-                                                    <div class="modal-footer justify-content-center">
-                                                        <button type="button"
-                                                            class="btn btn-outline-primary btn-rounded btn-md ml-4"
-                                                            data-dismiss="modal">Затвори</button>
-                                                    </div>
-
-                                                </div>
-                                                <!--/.Content-->
-
-                                            </div>
-                                        </div>
-                                        <!--Modal: Name-->
-
-                                        <a><img class="img-fluid z-depth-1"
-                                                src="http://i3.ytimg.com/vi/8eJsN0zLX9A/maxresdefault.jpg" alt="video"
-                                                data-toggle="modal" data-target="#modal7"></a>
-
-                                    </div>
-                                    <!-- End The Content -->
-                                </div>
-
-                            </article>
-
-                            <article class="post">
-                                <div class="post-header">
-                                    <h2 class="title">
-                                        <a href="#/">Висящо ренегатско</a>
-                                    </h2>
-                                    <!-- Post Details -->
-                                    <div class="post-details">
-                                        <div class="post-cat">
-                                            <a href="#video">Видео</a>
-                                        </div>
-                                        <a href="#/" class="post-date"><span>Април 22, 2019</span></a>
-                                    </div>
-                                    <!-- End Post Details -->
-                                </div>
-
-                                <div class="post-content">
-
-                                    <!-- The Content -->
-                                    <div class="the-excerpt">
-
-                                        <!--Modal: Name-->
-                                        <div class="modal fade" id="modal8" tabindex="-1" role="dialog"
-                                            aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-
-                                                <!--Content-->
-                                                <div class="modal-content">
-
-                                                    <!--Body-->
-                                                    <div class="modal-body mb-0 p-0">
-
-                                                        <div
-                                                            class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                                                            <iframe class="embed-responsive-item"
-                                                                src="https://www.youtube.com/embed/azTlrYcSLgQ"
-                                                                allowfullscreen></iframe>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!--Footer-->
-                                                    <div class="modal-footer justify-content-center">
-                                                        <button type="button"
-                                                            class="btn btn-outline-primary btn-rounded btn-md ml-4"
-                                                            data-dismiss="modal">Затвори</button>
-                                                    </div>
-
-                                                </div>
-                                                <!--/.Content-->
-
-                                            </div>
-                                        </div>
-                                        <!--Modal: Name-->
-
-                                        <a><img class="img-fluid z-depth-1"
-                                                src="http://i3.ytimg.com/vi/azTlrYcSLgQ/maxresdefault.jpg" alt="video"
-                                                data-toggle="modal" data-target="#modal8"></a>
-
-                                    </div>
-                                    <!-- End The Content -->
-                                </div>
-
-                            </article>
-
-                            <article class="post">
-                                <div class="post-header">
-                                    <h2 class="title">
-                                        <a href="#/">Странични наклони</a>
-                                    </h2>
-                                    <!-- Post Details -->
-                                    <div class="post-details">
-                                        <div class="post-cat">
-                                            <a href="#video">Видео</a>
-                                        </div>
-                                        <a href="#/" class="post-date"><span>Април 22, 2019</span></a>
-                                    </div>
-                                    <!-- End Post Details -->
-                                </div>
-
-                                <div class="post-content">
-
-                                    <!-- The Content -->
-                                    <div class="the-excerpt">
-
-                                        <!--Modal: Name-->
-                                        <div class="modal fade" id="modal9" tabindex="-1" role="dialog"
-                                            aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-
-                                                <!--Content-->
-                                                <div class="modal-content">
-
-                                                    <!--Body-->
-                                                    <div class="modal-body mb-0 p-0">
-
-                                                        <div
-                                                            class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                                                            <iframe class="embed-responsive-item"
-                                                                src="https://www.youtube.com/embed/HSyuXxGBClc"
-                                                                allowfullscreen></iframe>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!--Footer-->
-                                                    <div class="modal-footer justify-content-center">
-                                                        <button type="button"
-                                                            class="btn btn-outline-primary btn-rounded btn-md ml-4"
-                                                            data-dismiss="modal">Затвори</button>
-                                                    </div>
-
-                                                </div>
-                                                <!--/.Content-->
-
-                                            </div>
-                                        </div>
-                                        <!--Modal: Name-->
-
-                                        <a><img class="img-fluid z-depth-1"
-                                                src="http://i3.ytimg.com/vi/HSyuXxGBClc/maxresdefault.jpg" alt="video"
-                                                data-toggle="modal" data-target="#modal9"></a>
-
-                                    </div>
-                                    <!-- End The Content -->
-                                </div>
-
-                            </article>
-
-                            <article class="post">
-                                <div class="post-header">
-                                    <h2 class="title">
-                                        <a href="#/">Мъртва тяга</a>
-                                    </h2>
-                                    <!-- Post Details -->
-                                    <div class="post-details">
-                                        <div class="post-cat">
-                                            <a href="#video">Видео</a>
-                                        </div>
-                                        <a href="#/" class="post-date"><span>Април 22, 2019</span></a>
-                                    </div>
-                                    <!-- End Post Details -->
-                                </div>
-
-                                <div class="post-content">
-
-                                    <!-- The Content -->
-                                    <div class="the-excerpt">
-
-                                        <!--Modal: Name-->
-                                        <div class="modal fade" id="modal10" tabindex="-1" role="dialog"
-                                            aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-
-                                                <!--Content-->
-                                                <div class="modal-content">
-
-                                                    <!--Body-->
-                                                    <div class="modal-body mb-0 p-0">
-
-                                                        <div
-                                                            class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                                                            <iframe class="embed-responsive-item"
-                                                                src="https://www.youtube.com/embed/_SMldcdT1Jg"
-                                                                allowfullscreen></iframe>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!--Footer-->
-                                                    <div class="modal-footer justify-content-center">
-                                                        <button type="button"
-                                                            class="btn btn-outline-primary btn-rounded btn-md ml-4"
-                                                            data-dismiss="modal">Затвори</button>
-                                                    </div>
-
-                                                </div>
-                                                <!--/.Content-->
-
-                                            </div>
-                                        </div>
-                                        <!--Modal: Name-->
-
-                                        <a><img class="img-fluid z-depth-1"
-                                                src="http://i3.ytimg.com/vi/_SMldcdT1Jg/maxresdefault.jpg" alt="video"
-                                                data-toggle="modal" data-target="#modal10"></a>
-
-                                    </div>
-                                    <!-- End The Content -->
-                                </div>
-
-                            </article>
-
-                        </div>
-
-                        <!-- Pagination -->
-
-                        <div class="pagination-wrap">
-
-                            <div class="newer">
-
-                            </div>
-                            <div class="older">
-                                <a href="#/" title="They have originality ">Следваща <i
-                                        class="fa fa-angle-double-right"></i></a>
-                                <h2 class="title">
-                                    <a href="/#"></a>
-                                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-9 col-md-offset-3">
+            <div class="posts">
+              <div class="posts-inner grid-layout">
+                <article class="post">
+                  <div class="post-header">
+                    <h2 class="title">
+                      <a href="#/">Мъртва Тяга @70кг.</a>
+                    </h2>
+
+                    <!-- Post Details -->
+                    <div class="post-details">
+                      <div class="post-cat">
+                        <a href="#video">Видео</a>
+                      </div>
+                      <a href="#/" class="post-date"
+                        ><span>28 Януари, 2019</span></a
+                      >
+                    </div>
+                    <!-- End Post Details -->
+                  </div>
+
+                  <div class="post-content">
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                      <!--Modal: Name-->
+                      <div
+                        class="modal fade"
+                        id="modal1"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="myModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-lg" role="document">
+                          <!--Content-->
+                          <div class="modal-content">
+                            <!--Body-->
+                            <div class="modal-body mb-0 p-0">
+                              <div
+                                class="embed-responsive embed-responsive-16by9 z-depth-1-half"
+                              >
+                                <iframe
+                                  class="embed-responsive-item"
+                                  src="https://www.youtube.com/embed/_uWcyJmUefA"
+                                  allowfullscreen
+                                ></iframe>
+                              </div>
                             </div>
 
+                            <!--Footer-->
+                            <div class="modal-footer justify-content-center">
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary btn-rounded btn-md ml-4"
+                                data-dismiss="modal"
+                              >
+                                Затвори
+                              </button>
+                            </div>
+                          </div>
+                          <!--/.Content-->
                         </div>
-                        <!-- End Pagination -->
+                      </div>
+                      <!--Modal: Name-->
 
-                        <!-- Pagination -->
-                        <!-- <div class="pagination-wrap">
+                      <a
+                        ><img
+                          class="img-fluid z-depth-1"
+                          src="http://i3.ytimg.com/vi/_uWcyJmUefA/maxresdefault.jpg"
+                          alt="video"
+                          data-toggle="modal"
+                          data-target="#modal1"
+                      /></a>
+                    </div>
+                    <!-- End The Content -->
+                  </div>
+                </article>
+
+                <article class="post">
+                  <div class="post-header">
+                    <h2 class="title">
+                      <a href="#/">Сумо Гуд Морнинг @30кг.</a>
+                    </h2>
+                    <!-- Post Details -->
+                    <div class="post-details">
+                      <div class="post-cat">
+                        <a href="#video">Видео</a>
+                      </div>
+                      <a href="#/" class="post-date"
+                        ><span>Януари 28, 2019</span></a
+                      >
+                    </div>
+                    <!-- End Post Details -->
+                  </div>
+
+                  <div class="post-content">
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                      <!--Modal: Name-->
+                      <div
+                        class="modal fade"
+                        id="modal2"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="myModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-lg" role="document">
+                          <!--Content-->
+                          <div class="modal-content">
+                            <!--Body-->
+                            <div class="modal-body mb-0 p-0">
+                              <div
+                                class="embed-responsive embed-responsive-16by9 z-depth-1-half"
+                              >
+                                <iframe
+                                  class="embed-responsive-item"
+                                  src="https://www.youtube.com/embed/M6F-NXv-dFI"
+                                  allowfullscreen
+                                ></iframe>
+                              </div>
+                            </div>
+
+                            <!--Footer-->
+                            <div class="modal-footer justify-content-center">
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary btn-rounded btn-md ml-4"
+                                data-dismiss="modal"
+                              >
+                                Затвори
+                              </button>
+                            </div>
+                          </div>
+                          <!--/.Content-->
+                        </div>
+                      </div>
+                      <!--Modal: Name-->
+
+                      <a
+                        ><img
+                          class="img-fluid z-depth-1"
+                          src="http://i3.ytimg.com/vi/M6F-NXv-dFI/maxresdefault.jpg"
+                          alt="video"
+                          data-toggle="modal"
+                          data-target="#modal2"
+                      /></a>
+                    </div>
+                    <!-- End The Content -->
+                  </div>
+                </article>
+
+                <article class="post">
+                  <div class="post-header">
+                    <h2 class="title">
+                      <a href="#/">Лежанката на Мърфи</a>
+                    </h2>
+                    <!-- Post Details -->
+                    <div class="post-details">
+                      <div class="post-cat">
+                        <a href="#video">Видео</a>
+                      </div>
+                      <a href="#/" class="post-date"
+                        ><span>Февруари 20, 2019</span></a
+                      >
+                    </div>
+                    <!-- End Post Details -->
+                  </div>
+
+                  <div class="post-content">
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                      <!--Modal: Name-->
+                      <div
+                        class="modal fade"
+                        id="modal3"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="myModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-lg" role="document">
+                          <!--Content-->
+                          <div class="modal-content">
+                            <!--Body-->
+                            <div class="modal-body mb-0 p-0">
+                              <div
+                                class="embed-responsive embed-responsive-16by9 z-depth-1-half"
+                              >
+                                <iframe
+                                  class="embed-responsive-item"
+                                  src="https://www.youtube.com/embed/1ffF1pgeg0U"
+                                  allowfullscreen
+                                ></iframe>
+                              </div>
+                            </div>
+
+                            <!--Footer-->
+                            <div class="modal-footer justify-content-center">
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary btn-rounded btn-md ml-4"
+                                data-dismiss="modal"
+                              >
+                                Затвори
+                              </button>
+                            </div>
+                          </div>
+                          <!--/.Content-->
+                        </div>
+                      </div>
+                      <!--Modal: Name-->
+
+                      <a
+                        ><img
+                          class="img-fluid z-depth-1"
+                          src="http://i3.ytimg.com/vi/1ffF1pgeg0U/maxresdefault.jpg"
+                          alt="video"
+                          data-toggle="modal"
+                          data-target="#modal3"
+                      /></a>
+                    </div>
+                    <!-- End The Content -->
+                  </div>
+                </article>
+
+                <article class="post">
+                  <div class="post-header">
+                    <h2 class="title">
+                      <a href="#/">Летящо ренегатско</a>
+                    </h2>
+                    <!-- Post Details -->
+                    <div class="post-details">
+                      <div class="post-cat">
+                        <a href="#video">Видео</a>
+                      </div>
+                      <a href="#/" class="post-date"
+                        ><span>Март 17, 2019</span></a
+                      >
+                    </div>
+                    <!-- End Post Details -->
+                  </div>
+
+                  <div class="post-content">
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                      <!--Modal: Name-->
+                      <div
+                        class="modal fade"
+                        id="modal4"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="myModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-lg" role="document">
+                          <!--Content-->
+                          <div class="modal-content">
+                            <!--Body-->
+                            <div class="modal-body mb-0 p-0">
+                              <div
+                                class="embed-responsive embed-responsive-16by9 z-depth-1-half"
+                              >
+                                <iframe
+                                  class="embed-responsive-item"
+                                  src="https://www.youtube.com/embed/rEiZln-C_n0"
+                                  allowfullscreen
+                                ></iframe>
+                              </div>
+                            </div>
+
+                            <!--Footer-->
+                            <div class="modal-footer justify-content-center">
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary btn-rounded btn-md ml-4"
+                                data-dismiss="modal"
+                              >
+                                Затвори
+                              </button>
+                            </div>
+                          </div>
+                          <!--/.Content-->
+                        </div>
+                      </div>
+                      <!--Modal: Name-->
+
+                      <a
+                        ><img
+                          class="img-fluid z-depth-1"
+                          src="http://i3.ytimg.com/vi/rEiZln-C_n0/maxresdefault.jpg"
+                          alt="video"
+                          data-toggle="modal"
+                          data-target="#modal4"
+                      /></a>
+                    </div>
+                    <!-- End The Content -->
+                  </div>
+                </article>
+
+                <article class="post">
+                  <div class="post-header">
+                    <h2 class="title">
+                      <a href="#/">Клек на един крак @50кг</a>
+                    </h2>
+                    <!-- Post Details -->
+                    <div class="post-details">
+                      <div class="post-cat">
+                        <a href="#video">Видео</a>
+                      </div>
+                      <a href="#/" class="post-date"
+                        ><span>Март 17, 2019</span></a
+                      >
+                    </div>
+                    <!-- End Post Details -->
+                  </div>
+
+                  <div class="post-content">
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                      <!--Modal: Name-->
+                      <div
+                        class="modal fade"
+                        id="modal5"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="myModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-lg" role="document">
+                          <!--Content-->
+                          <div class="modal-content">
+                            <!--Body-->
+                            <div class="modal-body mb-0 p-0">
+                              <div
+                                class="embed-responsive embed-responsive-16by9 z-depth-1-half"
+                              >
+                                <iframe
+                                  class="embed-responsive-item"
+                                  src="https://www.youtube.com/embed/P7S92KzIhfY"
+                                  allowfullscreen
+                                ></iframe>
+                              </div>
+                            </div>
+
+                            <!--Footer-->
+                            <div class="modal-footer justify-content-center">
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary btn-rounded btn-md ml-4"
+                                data-dismiss="modal"
+                              >
+                                Затвори
+                              </button>
+                            </div>
+                          </div>
+                          <!--/.Content-->
+                        </div>
+                      </div>
+                      <!--Modal: Name-->
+
+                      <a
+                        ><img
+                          class="img-fluid z-depth-1"
+                          src="http://i3.ytimg.com/vi/P7S92KzIhfY/maxresdefault.jpg"
+                          alt="video"
+                          data-toggle="modal"
+                          data-target="#modal5"
+                      /></a>
+                    </div>
+                    <!-- End The Content -->
+                  </div>
+                </article>
+
+                <article class="post">
+                  <div class="post-header">
+                    <h2 class="title">
+                      <a href="#/">Усукващо ренегатско</a>
+                    </h2>
+                    <!-- Post Details -->
+                    <div class="post-details">
+                      <div class="post-cat">
+                        <a href="#video">Видео</a>
+                      </div>
+                      <a href="#/" class="post-date"
+                        ><span>Април 10, 2019</span></a
+                      >
+                    </div>
+                    <!-- End Post Details -->
+                  </div>
+
+                  <div class="post-content">
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                      <!--Modal: Name-->
+                      <div
+                        class="modal fade"
+                        id="modal6"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="myModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-lg" role="document">
+                          <!--Content-->
+                          <div class="modal-content">
+                            <!--Body-->
+                            <div class="modal-body mb-0 p-0">
+                              <div
+                                class="embed-responsive embed-responsive-16by9 z-depth-1-half"
+                              >
+                                <iframe
+                                  class="embed-responsive-item"
+                                  src="https://www.youtube.com/embed/23yaGtA3mek"
+                                  allowfullscreen
+                                ></iframe>
+                              </div>
+                            </div>
+
+                            <!--Footer-->
+                            <div class="modal-footer justify-content-center">
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary btn-rounded btn-md ml-4"
+                                data-dismiss="modal"
+                              >
+                                Затвори
+                              </button>
+                            </div>
+                          </div>
+                          <!--/.Content-->
+                        </div>
+                      </div>
+                      <!--Modal: Name-->
+
+                      <a
+                        ><img
+                          class="img-fluid z-depth-1"
+                          src="http://i3.ytimg.com/vi/23yaGtA3mek/maxresdefault.jpg"
+                          alt="video"
+                          data-toggle="modal"
+                          data-target="#modal6"
+                      /></a>
+                    </div>
+                    <!-- End The Content -->
+                  </div>
+                </article>
+
+                <article class="post">
+                  <div class="post-header">
+                    <h2 class="title">
+                      <a href="#/">Седнала преса</a>
+                    </h2>
+                    <!-- Post Details -->
+                    <div class="post-details">
+                      <div class="post-cat">
+                        <a href="#video">Видео</a>
+                      </div>
+                      <a href="#/" class="post-date"
+                        ><span>Април 10, 2019</span></a
+                      >
+                    </div>
+                    <!-- End Post Details -->
+                  </div>
+
+                  <div class="post-content">
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                      <!--Modal: Name-->
+                      <div
+                        class="modal fade"
+                        id="modal7"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="myModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-lg" role="document">
+                          <!--Content-->
+                          <div class="modal-content">
+                            <!--Body-->
+                            <div class="modal-body mb-0 p-0">
+                              <div
+                                class="embed-responsive embed-responsive-16by9 z-depth-1-half"
+                              >
+                                <iframe
+                                  class="embed-responsive-item"
+                                  src="https://www.youtube.com/embed/8eJsN0zLX9A"
+                                  allowfullscreen
+                                ></iframe>
+                              </div>
+                            </div>
+
+                            <!--Footer-->
+                            <div class="modal-footer justify-content-center">
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary btn-rounded btn-md ml-4"
+                                data-dismiss="modal"
+                              >
+                                Затвори
+                              </button>
+                            </div>
+                          </div>
+                          <!--/.Content-->
+                        </div>
+                      </div>
+                      <!--Modal: Name-->
+
+                      <a
+                        ><img
+                          class="img-fluid z-depth-1"
+                          src="http://i3.ytimg.com/vi/8eJsN0zLX9A/maxresdefault.jpg"
+                          alt="video"
+                          data-toggle="modal"
+                          data-target="#modal7"
+                      /></a>
+                    </div>
+                    <!-- End The Content -->
+                  </div>
+                </article>
+
+                <article class="post">
+                  <div class="post-header">
+                    <h2 class="title">
+                      <a href="#/">Висящо ренегатско</a>
+                    </h2>
+                    <!-- Post Details -->
+                    <div class="post-details">
+                      <div class="post-cat">
+                        <a href="#video">Видео</a>
+                      </div>
+                      <a href="#/" class="post-date"
+                        ><span>Април 22, 2019</span></a
+                      >
+                    </div>
+                    <!-- End Post Details -->
+                  </div>
+
+                  <div class="post-content">
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                      <!--Modal: Name-->
+                      <div
+                        class="modal fade"
+                        id="modal8"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="myModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-lg" role="document">
+                          <!--Content-->
+                          <div class="modal-content">
+                            <!--Body-->
+                            <div class="modal-body mb-0 p-0">
+                              <div
+                                class="embed-responsive embed-responsive-16by9 z-depth-1-half"
+                              >
+                                <iframe
+                                  class="embed-responsive-item"
+                                  src="https://www.youtube.com/embed/azTlrYcSLgQ"
+                                  allowfullscreen
+                                ></iframe>
+                              </div>
+                            </div>
+
+                            <!--Footer-->
+                            <div class="modal-footer justify-content-center">
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary btn-rounded btn-md ml-4"
+                                data-dismiss="modal"
+                              >
+                                Затвори
+                              </button>
+                            </div>
+                          </div>
+                          <!--/.Content-->
+                        </div>
+                      </div>
+                      <!--Modal: Name-->
+
+                      <a
+                        ><img
+                          class="img-fluid z-depth-1"
+                          src="http://i3.ytimg.com/vi/azTlrYcSLgQ/maxresdefault.jpg"
+                          alt="video"
+                          data-toggle="modal"
+                          data-target="#modal8"
+                      /></a>
+                    </div>
+                    <!-- End The Content -->
+                  </div>
+                </article>
+
+                <article class="post">
+                  <div class="post-header">
+                    <h2 class="title">
+                      <a href="#/">Странични наклони</a>
+                    </h2>
+                    <!-- Post Details -->
+                    <div class="post-details">
+                      <div class="post-cat">
+                        <a href="#video">Видео</a>
+                      </div>
+                      <a href="#/" class="post-date"
+                        ><span>Април 22, 2019</span></a
+                      >
+                    </div>
+                    <!-- End Post Details -->
+                  </div>
+
+                  <div class="post-content">
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                      <!--Modal: Name-->
+                      <div
+                        class="modal fade"
+                        id="modal9"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="myModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-lg" role="document">
+                          <!--Content-->
+                          <div class="modal-content">
+                            <!--Body-->
+                            <div class="modal-body mb-0 p-0">
+                              <div
+                                class="embed-responsive embed-responsive-16by9 z-depth-1-half"
+                              >
+                                <iframe
+                                  class="embed-responsive-item"
+                                  src="https://www.youtube.com/embed/HSyuXxGBClc"
+                                  allowfullscreen
+                                ></iframe>
+                              </div>
+                            </div>
+
+                            <!--Footer-->
+                            <div class="modal-footer justify-content-center">
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary btn-rounded btn-md ml-4"
+                                data-dismiss="modal"
+                              >
+                                Затвори
+                              </button>
+                            </div>
+                          </div>
+                          <!--/.Content-->
+                        </div>
+                      </div>
+                      <!--Modal: Name-->
+
+                      <a
+                        ><img
+                          class="img-fluid z-depth-1"
+                          src="http://i3.ytimg.com/vi/HSyuXxGBClc/maxresdefault.jpg"
+                          alt="video"
+                          data-toggle="modal"
+                          data-target="#modal9"
+                      /></a>
+                    </div>
+                    <!-- End The Content -->
+                  </div>
+                </article>
+
+                <article class="post">
+                  <div class="post-header">
+                    <h2 class="title">
+                      <a href="#/">Мъртва тяга</a>
+                    </h2>
+                    <!-- Post Details -->
+                    <div class="post-details">
+                      <div class="post-cat">
+                        <a href="#video">Видео</a>
+                      </div>
+                      <a href="#/" class="post-date"
+                        ><span>Април 22, 2019</span></a
+                      >
+                    </div>
+                    <!-- End Post Details -->
+                  </div>
+
+                  <div class="post-content">
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                      <!--Modal: Name-->
+                      <div
+                        class="modal fade"
+                        id="modal10"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="myModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-lg" role="document">
+                          <!--Content-->
+                          <div class="modal-content">
+                            <!--Body-->
+                            <div class="modal-body mb-0 p-0">
+                              <div
+                                class="embed-responsive embed-responsive-16by9 z-depth-1-half"
+                              >
+                                <iframe
+                                  class="embed-responsive-item"
+                                  src="https://www.youtube.com/embed/_SMldcdT1Jg"
+                                  allowfullscreen
+                                ></iframe>
+                              </div>
+                            </div>
+
+                            <!--Footer-->
+                            <div class="modal-footer justify-content-center">
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary btn-rounded btn-md ml-4"
+                                data-dismiss="modal"
+                              >
+                                Затвори
+                              </button>
+                            </div>
+                          </div>
+                          <!--/.Content-->
+                        </div>
+                      </div>
+                      <!--Modal: Name-->
+
+                      <a
+                        ><img
+                          class="img-fluid z-depth-1"
+                          src="http://i3.ytimg.com/vi/_SMldcdT1Jg/maxresdefault.jpg"
+                          alt="video"
+                          data-toggle="modal"
+                          data-target="#modal10"
+                      /></a>
+                    </div>
+                    <!-- End The Content -->
+                  </div>
+                </article>
+              </div>
+
+              <!-- Pagination -->
+
+              <div class="pagination-wrap">
+                <div class="newer"></div>
+                <div class="older">
+                  <a href="#/" title="They have originality "
+                    >Следваща <i class="fa fa-angle-double-right"></i
+                  ></a>
+                  <h2 class="title">
+                    <a href="/#"></a>
+                  </h2>
+                </div>
+              </div>
+              <!-- End Pagination -->
+
+              <!-- Pagination -->
+              <!-- <div class="pagination-wrap">
 
                             <div class="older">
                                 <a href="#"></a>
@@ -868,85 +1019,90 @@
                                 <a class="pagination__next" href="blog_page2.html"></a>
                             </div>
                         </div> -->
-                        <!-- End Pagination -->
-                    </div>
+              <!-- End Pagination -->
+            </div>
 
-                    <!-- <div class="scroller-status text-center">
+            <!-- <div class="scroller-status text-center">
                         <div class="infinite-scroll-request loader-ellips">
                             ....
                         </div>
                         <p class="infinite-scroll-last">Край на съдържанието</p>
                         <p class="infinite-scroll-error">Няма повече страници за зареждане</p>
                     </div> -->
-
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- End Wrapper Site -->
 
     <!-- Footer -->
     <footer id="footer" class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-md-9 col-md-offset-3">
-                    <div class="footer-inner">
-                        <div class="footer-widgets">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="widget">
-                                        <h2 class="title"><span>Контакти</span></h2>
-                                        <ul>
-                                            <li>
-                                                Тел: +359 876 10 00 39 - Явор
-                                                Тел: +359 888 03 04 24 - Ели
-                                            </li>
-                                            <li>
-                                                Е-Поща: mail@athleticstandard.org
-                                            </li>
-                                            <li>
-                                                Адрес: ул. „Проф. д-р Иван Странски“ 61, 1700 Студентски Комплекс, София
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="widget">
-                                        <h2 class="title"><span>Занималня</span></h2>
-                                        <ul>
-                                            <li><a href="strength_hall.html">Зала на Силата</a></li>
-                                            <li><a href="gallery.html">Галерия</a></li>
-                                            <li><a href="sitemap.html">Карта на сайта</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="widget">
-                                        <h2 class="title"><span>Ресурси</span></h2>
-                                        <ul>
-                                            <li><a href="drills.html">Движения</a></li>
-                                            <li><a href="calculators.html">Калкулатори</a></li>
-                                            <li><a href="gear.html">Униформа</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="copyright">
-                                        <p>&copy;2015-2019 <br>athleticstandard.org</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        всички права запазени |
-                        <a href="terms.html">условия за ползване</a> |
-                        <a href="policy.html">политика за поверителност</a> |
-                        &copy;protected by <a target="_blank" href="http://www.copyscape.com/"
-                            title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page.">Copyscape</a>
+          <div class="row">
+            <div class="col-md-9 col-md-offset-3">
+              <div class="footer-inner">
+                <div class="footer-widgets">
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="widget">
+                        <h2 class="title"><span>Контакти</span></h2>
+                        <ul>
+                          <li>
+                            Тел: +359 876 10 00 39 - Явор Тел: +359 888 03 04 24 -
+                            Ели
+                          </li>
+                          <li>
+                            Е-Поща: mail@athleticstandard.org
+                          </li>
+                          <li>
+                            Адрес: ул. „Проф. д-р Иван Странски“ 61, 1700
+                            Студентски Комплекс, София
+                          </li>
+                        </ul>
+                      </div>
                     </div>
+                    <div class="col-sm-4">
+                      <div class="widget">
+                        <h2 class="title"><span>Занималня</span></h2>
+                        <ul>
+                          <li><a href="gallery.html">Галерия</a></li>
+                          <li><a href="sitemap.html">Карта на сайта</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="widget">
+                        <h2 class="title"><span>Идентичност</span></h2>
+                        <ul>
+                          <li><a href="gear.html">Униформа</a></li>
+                          <li>
+                            <a href="strength_hall.html">Зала на Силата</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="copyright">
+                        <p>&copy;2015-2020 <br />athleticstandard.org</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                всички права запазени |
+                <a href="terms.html">условия за ползване</a> |
+                <a href="policy.html">политика за поверителност</a> |
+                &copy;protected by
+                <a
+                  target="_blank"
+                  href="http://www.copyscape.com/"
+                  title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page."
+                  >Copyscape</a
+                >
+              </div>
             </div>
+          </div>
         </div>
-    </footer>
+      </footer>
     <!-- End Footer -->
 
     <!-- Scripts -->
@@ -961,42 +1117,42 @@
     <script src="../js/services/subscribeService.min.js"></script>
     <script src="../js/services/remoteService.min.js"></script>
     <script>
-        document.getElementById("lang").addEventListener("click", function (e) {
-            e.preventDefault();
-            window.location.href = ("../en/views/art_index_en.html");
-        });
+      document.getElementById('lang').addEventListener('click', function (e) {
+        e.preventDefault();
+        window.location.href = '../en/views/art_index_en.html';
+      });
     </script>
     <script>
-        $('#modal1').on('hidden.bs.modal', function (e) {
-            $('#modal1 iframe').attr("src", $("#modal1 iframe").attr("src"));
-        });
-        $('#modal2').on('hidden.bs.modal', function (e) {
-            $('#modal2 iframe').attr("src", $("#modal2 iframe").attr("src"));
-        });
-        $('#modal3').on('hidden.bs.modal', function (e) {
-            $('#modal3 iframe').attr("src", $("#modal3 iframe").attr("src"));
-        });
-        $('#modal4').on('hidden.bs.modal', function (e) {
-            $('#modal4 iframe').attr("src", $("#modal4 iframe").attr("src"));
-        });
-        $('#modal5').on('hidden.bs.modal', function (e) {
-            $('#modal5 iframe').attr("src", $("#modal5 iframe").attr("src"));
-        });
-        $('#modal6').on('hidden.bs.modal', function (e) {
-            $('#modal6 iframe').attr("src", $("#modal6 iframe").attr("src"));
-        });
-        $('#modal7').on('hidden.bs.modal', function (e) {
-            $('#modal7 iframe').attr("src", $("#modal7 iframe").attr("src"));
-        });
-        $('#modal8').on('hidden.bs.modal', function (e) {
-            $('#modal8 iframe').attr("src", $("#modal8 iframe").attr("src"));
-        });
-        $('#modal9').on('hidden.bs.modal', function (e) {
-            $('#modal9 iframe').attr("src", $("#modal9 iframe").attr("src"));
-        });
-        $('#modal10').on('hidden.bs.modal', function (e) {
-            $('#modal10 iframe').attr("src", $("#modal10 iframe").attr("src"));
-        });
+      $('#modal1').on('hidden.bs.modal', function (e) {
+        $('#modal1 iframe').attr('src', $('#modal1 iframe').attr('src'));
+      });
+      $('#modal2').on('hidden.bs.modal', function (e) {
+        $('#modal2 iframe').attr('src', $('#modal2 iframe').attr('src'));
+      });
+      $('#modal3').on('hidden.bs.modal', function (e) {
+        $('#modal3 iframe').attr('src', $('#modal3 iframe').attr('src'));
+      });
+      $('#modal4').on('hidden.bs.modal', function (e) {
+        $('#modal4 iframe').attr('src', $('#modal4 iframe').attr('src'));
+      });
+      $('#modal5').on('hidden.bs.modal', function (e) {
+        $('#modal5 iframe').attr('src', $('#modal5 iframe').attr('src'));
+      });
+      $('#modal6').on('hidden.bs.modal', function (e) {
+        $('#modal6 iframe').attr('src', $('#modal6 iframe').attr('src'));
+      });
+      $('#modal7').on('hidden.bs.modal', function (e) {
+        $('#modal7 iframe').attr('src', $('#modal7 iframe').attr('src'));
+      });
+      $('#modal8').on('hidden.bs.modal', function (e) {
+        $('#modal8 iframe').attr('src', $('#modal8 iframe').attr('src'));
+      });
+      $('#modal9').on('hidden.bs.modal', function (e) {
+        $('#modal9 iframe').attr('src', $('#modal9 iframe').attr('src'));
+      });
+      $('#modal10').on('hidden.bs.modal', function (e) {
+        $('#modal10 iframe').attr('src', $('#modal10 iframe').attr('src'));
+      });
     </script>
     <!-- <script>
         $('.posts').infiniteScroll({
@@ -1008,22 +1164,26 @@
         });
     </script> -->
     <script>
-        $(function ($) {
-            let pathName = document.location.pathname;
-            window.onbeforeunload = function () {
-                let scrollPosition = $(document).scrollTop();
-                sessionStorage.setItem("scrollPosition_" + pathName, scrollPosition.toString());
-            }
-            if (sessionStorage["scrollPosition_" + pathName]) {
-                $(document).scrollTop(sessionStorage.getItem("scrollPosition_" + pathName));
-            }
-        });
+      $(function ($) {
+        let pathName = document.location.pathname;
+        window.onbeforeunload = function () {
+          let scrollPosition = $(document).scrollTop();
+          sessionStorage.setItem(
+            'scrollPosition_' + pathName,
+            scrollPosition.toString()
+          );
+        };
+        if (sessionStorage['scrollPosition_' + pathName]) {
+          $(document).scrollTop(
+            sessionStorage.getItem('scrollPosition_' + pathName)
+          );
+        }
+      });
     </script>
     <script>
-        subscribeController.subscribe();
+      subscribeController.subscribe();
     </script>
     <!-- End Scripts -->
-
-</body>
-
+  </body>
 </html>
+c

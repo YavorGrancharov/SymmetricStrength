@@ -80,7 +80,11 @@ let lbmController = (() => {
                     }
                 } else {
                     if (wristLBM() < ankleLBM()) {
-                        user.lbm.innerHTML = Math.round((wristLBM() + ankleLBM()) / 2);
+                        if(user.sex.value === 'male') {
+                            user.lbm.innerHTML = (((wristLBM() * 0.6028) + (ankleLBM() * 0.3972))).toFixed(1);
+                        } else {
+                            user.lbm.innerHTML = (((wristLBM() * 0.5824) + (ankleLBM() * 0.4176))).toFixed(1);
+                        }
                         user.lbmLowerBound.innerHTML = Math.round(wristLBM());
                         user.lbmHigherBound.innerHTML = Math.round(ankleLBM());
                         if (user.fat.value) {
@@ -88,7 +92,11 @@ let lbmController = (() => {
                             user.weightHigherBound.innerHTML = Math.round(bodyAnkle());
                         }
                     } else if (wristLBM() > ankleLBM()) {
-                        user.lbm.innerHTML = Math.round((wristLBM() + ankleLBM()) / 2);
+                        if(user.sex.value === 'male') {
+                            user.lbm.innerHTML = (((wristLBM() * 0.6028) + (ankleLBM() * 0.3972))).toFixed(1);
+                        } else {
+                            user.lbm.innerHTML = (((wristLBM() * 0.5824) + (ankleLBM() * 0.4176))).toFixed(1);
+                        }
                         user.lbmLowerBound.innerHTML = Math.round(ankleLBM());
                         user.lbmHigherBound.innerHTML = Math.round(wristLBM());
                         if (user.fat.value) {

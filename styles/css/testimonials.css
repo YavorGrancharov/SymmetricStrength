@@ -77,3 +77,12 @@
     border: none;
     background: #888;
 }
+
+.list-inline .list-inline-item i {
+    font-size: 12px;
+    color: #FFCB05;
+}
+
+.legend {
+    color: #d42729;
+}
