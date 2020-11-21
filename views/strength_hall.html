@@ -392,6 +392,45 @@
                                                     </tr>
                                                     <tr>
                                                         <td>5</td>
+                                                        <td>З. Райчев</td>
+                                                        <td>Ефрейтор
+                                                            <ul class="list-inline">
+                                                                <li class="list-inline-item"><i class="fa fa-star"></i>
+                                                                </li>
+                                                                <li class="list-inline-item"><i class="fa fa-star"></i>
+                                                                </li>
+                                                                <li class="list-inline-item"><i class="fa fa-star"></i>
+                                                                </li>
+                                                                <li class="list-inline-item"><i class="fa fa-star"></i>
+                                                                </li>
+                                                                <li class="list-inline-item"><i
+                                                                        class="fa fa-star-o"></i>
+                                                                </li>
+                                                                <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                                </li>
+                                                                <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                                </li>
+                                                                <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                                </li>
+                                                                <li class="list-inline-item"><i class="fa fa-star-o"></i>
+                                                                </li>
+                                                                <li class="list-inline-item"><i
+                                                                        class="fa fa-star-o"></i>
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                        <td><img class="legend" src="../static/images/4_2.png"></td>
+                                                        <td>51/100</td>
+                                                        <td>Кофи</td>
+                                                        <td>Ренегатско гребане</td>
+                                                        <td>
+                                                            <button type="button" data-toggle="modal" data-target="#zdravkoRaichev"><i class="fa fa-bar-chart"
+                                                                    aria-hidden="true"></i></button>
+                                                        </td>
+                                                        <td>Активен</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
                                                         <td>Й. Тошев</td>
                                                         <td>Редник
                                                             <ul class="list-inline">
@@ -425,45 +464,6 @@
                                                         <td>Напад</td>
                                                         <td>
                                                             <button type="button" data-toggle="modal" data-target="#yordanToshev"><i class="fa fa-bar-chart"
-                                                                    aria-hidden="true"></i></button>
-                                                        </td>
-                                                        <td>Активен</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>6</td>
-                                                        <td>З. Райчев</td>
-                                                        <td>Редник
-                                                            <ul class="list-inline">
-                                                                <li class="list-inline-item"><i class="fa fa-star"></i>
-                                                                </li>
-                                                                <li class="list-inline-item"><i class="fa fa-star"></i>
-                                                                </li>
-                                                                <li class="list-inline-item"><i class="fa fa-star"></i>
-                                                                </li>
-                                                                <li class="list-inline-item"><i class="fa fa-star-o"></i>
-                                                                </li>
-                                                                <li class="list-inline-item"><i
-                                                                        class="fa fa-star-o"></i>
-                                                                </li>
-                                                                <li class="list-inline-item"><i class="fa fa-star-o"></i>
-                                                                </li>
-                                                                <li class="list-inline-item"><i class="fa fa-star-o"></i>
-                                                                </li>
-                                                                <li class="list-inline-item"><i class="fa fa-star-o"></i>
-                                                                </li>
-                                                                <li class="list-inline-item"><i class="fa fa-star-o"></i>
-                                                                </li>
-                                                                <li class="list-inline-item"><i
-                                                                        class="fa fa-star-o"></i>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                        <td><img class="legend" src="../static/images/3_2.png"></td>
-                                                        <td>49/100</td>
-                                                        <td>Кофи</td>
-                                                        <td>Ренегатско гребане</td>
-                                                        <td>
-                                                            <button type="button" data-toggle="modal" data-target="#zdravkoRaichev"><i class="fa fa-bar-chart"
                                                                     aria-hidden="true"></i></button>
                                                         </td>
                                                         <td>Активен</td>
@@ -1517,7 +1517,7 @@
                                 labels: ["Мъртва тяга", "Клек", "Военна преса", "Напади", "Ренегатско гребане", "Набиране", "Кофи", "Преден клек", "Сумо тяга", "Суинг", "Пуш преса", "Гребане с щанга", "Добро утро"],
                                 datasets: [{
                                     label: "",
-                                    backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                    backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
                                     data: [-4, -4, -3, -18, -50, 0, -2, -14, -10, -50, -40, -14, -32],
                                     color: "#ffffff"
                                 }]
@@ -1589,11 +1589,11 @@
                         new Chart((chartZdravko), {
                             type: 'horizontalBar',
                             data: {
-                                labels: ["Мъртва тяга", "Клек", "Военна преса", "Напади", "Ренегатско гребане", "Кофи", "Преден клек", "Сумо тяга", "Суинг", "Гребане с щанга", "Добро утро"],
+                                labels: ["Мъртва тяга", "Клек", "Военна преса", "Напади", "Ренегатско гребане", "Кофи", "Сумо тяга", "Суинг", "Добро утро"],
                                 datasets: [{
                                     label: "",
-                                    backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
-                                    data: [-25, -21, -10, -29, -133, 0, -34, -25, -37, -46, -74],
+                                    backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                    data: [-31, -37, -15, -83, -172, 0, -35, -56, -72],
                                     color: "#ffffff"
                                 }]
                             },
@@ -1993,6 +1993,82 @@
                             if (u.matches) {
                                 chartDVasilev.height = window.innerHeight;
                                 chartDVasilev.width = window.innerWidth;
+                            }
+                        }
+                    </script>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Затвори</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Plamen Stoykov Modal -->
+    <div class="modal" id="plamenStoykov">
+        <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">И. Стоянов
+                        <small> (174см. 65кг. 34г.)</small>
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <canvas style="display: block" class="text-center" id="bar-chart-horizontal-plamen"></canvas>
+                            </div>
+                        </div>
+                        <small class="text-center">всички стойности са израз на изоставащите в проценти сила движения
+                            спрямо
+                            текущото най-силно
+                        </small>
+                    </div>
+                    <script type="text/javascript">
+                        let chartPlamen = document.getElementById("bar-chart-horizontal-plamen");
+                        let pl = window.matchMedia("(max-width: 480px)");
+                        myFunction(pl);
+                        pl.addListener(myFunction);
+                        new Chart((chartPlamen), {
+                            type: 'horizontalBar',
+                            data: {
+                                labels: ["Мъртва тяга", "Клек", "Военна преса", "Напади", "Суинг", "Добро утро"],
+                                datasets: [{
+                                    label: "",
+                                    backgroundColor: ["#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff", "#e5e5ff"],
+                                    data: [0, -8, -4, -29, -5, -16],
+                                    color: "#ffffff"
+                                }]
+                            },
+                            options: {
+                                responsive: true,
+                                legend: {
+                                    display: false
+                                },
+                                title: {
+                                    display: true,
+                                    text: "графика на равновесието"
+                                }
+                            }
+                        });
+
+                        function myFunction(pl) {
+                            if (pl.matches) {
+                                chartPlamen.height = window.innerHeight;
+                                chartPlamen.width = window.innerWidth;
                             }
                         }
                     </script>
