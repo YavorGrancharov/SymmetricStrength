@@ -125,7 +125,7 @@
                                     <nav>
                                         <ul class="menu-list">
                                           <li>
-                                            <a href="../views/">Блог</a>
+                                            <a href="../views/blog_grid.html">Блог</a>
                                           </li>
                                           <li>
                                             <a href="../views/price.html">Цени</a>
@@ -960,7 +960,6 @@
     <script src="../js/libs/masonry.pkgd.min.js"></script>
     <script src="../js/libs/md5.min.js"></script>
     <script src="../js/libs/imagesloaded.pkgd.min.js"></script>
-    <script src="../js/libs/jquery.lazyload.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="../js/models/magnificPopup.min.js"></script>
     <script src="../js/models/visitCounter.js"></script>
@@ -972,14 +971,6 @@
             e.preventDefault();
             window.location.href = ("../en/views/art_index_en.html");
         });
-    </script>
-    <script>
-        $("img.lazy").lazyload();
-    </script>
-    <script>
-        visitCounter.visitCounter();
-        commentController.getComments();
-        commentController.postComment();
     </script>
 </body>
 
