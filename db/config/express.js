@@ -22,23 +22,8 @@ module.exports = (app) => {
     })
   );
   app.use(compression());
-//   app.use(passport.initialize());
-//   app.use(passport.session());
-
-  app.use(express.static(path.join(__dirname)));
-  app.use('/styles', express.static(__dirname));
-  app.use('/images', express.static(__dirname + '/images'));
-  app.use('/scripts', express.static(__dirname + '/scripts'));
-
-  // viewed at based directory http://localhost:8080/
-  app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + 'views/symmetric_strength.html'));
-  });
-
-  // add other routes below
-  app.get('/about', function (req, res) {
-    res.sendFile(path.join(__dirname + 'views/index.html'));
-  });
+  //   app.use(passport.initialize());
+  //   app.use(passport.session());
 
   app.use((req, res, next) => {
     if (req.user) {
