@@ -2,6 +2,7 @@ require('dotenv').config();
 let env = process.env.NODE_ENV || 'development';
 var express = require('express');
 var app = express();
+var path = require('path');
 
 let settings = require('./db/config/settings')[env];
 
@@ -27,17 +28,17 @@ app.get('/about', function (req, res) {
   res.sendFile(path.join(__dirname + 'views/index.html'));
 });
 
-// app.all('/*', function (req, res, next) {
-//   res.setHeader(
-//     'Access-Control-Allow-Methods',
-//     'GET,POST,PUT,HEAD,DELETE,OPTIONS'
-//   );
-//   res.setHeader('Access-Control-Allow-Origin', '*');
-//   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With');
-//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-//   res.setHeader('Access-Control-Allow-Credentials', true);
-//   res.sendStatus(200);
-//   return next();
-// });
+app.all('/*', function (req, res, next) {
+  res.setHeader(
+    'Access-Control-Allow-Methods',
+    'GET,POST,PUT,HEAD,DELETE,OPTIONS'
+  );
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  res.sendStatus(200);
+  return next();
+});
 
 app.listen(process.env.PORT || 8080);
