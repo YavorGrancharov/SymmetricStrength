@@ -2,9 +2,9 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const session = require('express-session');
+const passport = require("passport");
 const compression = require('compression');
 const cors = require('cors');
-const path = require('path');
 
 module.exports = (app) => {
   app.use(cookieParser());
@@ -22,8 +22,8 @@ module.exports = (app) => {
     })
   );
   app.use(compression());
-  //   app.use(passport.initialize());
-  //   app.use(passport.session());
+  app.use(passport.initialize());
+  app.use(passport.session());
 
   app.use((req, res, next) => {
     if (req.user) {

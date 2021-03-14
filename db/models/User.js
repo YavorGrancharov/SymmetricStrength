@@ -61,12 +61,12 @@ module.exports.seedAdminUser = () => {
     }
 
     let salt = ecnryption.generalSalt();
-    let hashedPass = ecnryption.generateHashPassword(salt, "123456");
+    let hashedPass = ecnryption.generateHashPassword(salt, "12345678");
 
     User.create({
-      name: "Admin",
-      username: "Admin",
-      email: "admin@symmetric.co",
+      name: "noname",
+      username: "user",
+      email: "user@symmetric.co",
       salt: salt,
       hashedPass: hashedPass,
       roles: ["Admin"],
